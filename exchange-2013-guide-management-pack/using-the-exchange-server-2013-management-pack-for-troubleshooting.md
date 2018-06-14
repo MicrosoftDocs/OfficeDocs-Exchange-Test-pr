@@ -4,7 +4,7 @@ TOCTitle: Using the Exchange Server 2013 Management Pack for troubleshooting
 ms:assetid: c9672dad-1e67-4f07-bad9-539a67f2ac70
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn195913(v=EXCHG.150)
 ms:contentKeyID: 53181780
-ms.author:dstrome
+ms.author: dstrome
 ms.date: 05/14/2016
 mtps_version: v=EXCHG.150
 ---
