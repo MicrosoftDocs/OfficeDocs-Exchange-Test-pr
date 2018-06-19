@@ -49,8 +49,9 @@
                                          "extendBreadcrumb":  true,
                                          "ms.topic":  "conceptual",
                                          "author":  "",
-                                         "ms.author":  "",
-                                         "ms.prod":  "Exchange"
+                                         "ms.author":  "dstrome",
+                                         "ms.prod":  "Exchange-2013",
+                                         "ms.technology":  "Exchange-2013"
                                      },
                   "fileMetadata":  {
 
