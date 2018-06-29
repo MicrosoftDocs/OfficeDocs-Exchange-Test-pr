@@ -45,13 +45,14 @@
                                         ],
                   "globalMetadata":  {
                                          "ROBOTS":  "INDEX,FOLLOW",
-                                         "uhfHeaderId":  "MSDocsHeader-Office",
+                                         "breadcrumb_path":  "/office/exchange-2013-health-management-pack/breadcrumb/toc.json",
                                          "extendBreadcrumb":  true,
                                          "ms.topic":  "conceptual",
                                          "author":  "dstrome",
                                          "ms.author":  "dstrome",
                                          "ms.prod":  "Exchange-2013",
                                          "ms.technology":  "Exchange-2013"
+
                                      },
                   "fileMetadata":  {
 

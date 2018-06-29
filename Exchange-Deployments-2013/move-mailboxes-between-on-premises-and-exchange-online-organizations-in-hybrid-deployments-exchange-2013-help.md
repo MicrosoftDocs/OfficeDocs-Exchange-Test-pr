@@ -47,7 +47,7 @@ For more information about migrating on-premises Exchange organizations to Excha
 
 Prior to performing on-boarding and off-boarding remote move migrations in an Exchange hybrid deployment, we recommend that you create Exchange remote migration endpoints. The migration endpoint contains the connection settings for an on-premises Exchange server that is running the MRS proxy service, which is required to perform remote move migrations to and from Exchange Online.
 
-For step-by-step procedures, see [Create migration endpoints](https://technet.microsoft.com/en-us/library/jj874458\(v=exchg.150\)).
+For step-by-step procedures, see Create migration endpoints.
 
 ## Step 2: Enable the MRSProxy service
 
