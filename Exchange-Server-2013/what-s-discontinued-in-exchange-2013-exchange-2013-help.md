@@ -379,7 +379,7 @@ This section lists the Exchange Server 2007 features that are no longer availabl
 </tr>
 <tr class="odd">
 <td><p>User Datagram Protocol (UDP) notifications</p></td>
-<td><p>Support for User Datagram Protocol (UDP) notifications is removed from Exchange 2013. This affects the user experience when Outlook 2003 clients connect to their mailboxes on an Exchange 2013 server. For more information, see Microsoft Knowledge Base article 2009942, <a href="http://go.microsoft.com/fwlink/?linkid=3052%26kbid=2009942">Folders take a long time to update when an Exchange Server 2010 user uses Outlook 2003 in online mode</a>.</p></td>
+<td><p>Support for User Datagram Protocol (UDP) notifications is removed from Exchange 2013. This affects the user experience when Outlook 2003 clients connect to their mailboxes on an Exchange 2013 server. For more information, see Microsoft Knowledge Base article 2009942, <a href="http://go.microsoft.com/fwlink/?linkid=3052&kbid=2009942">Folders take a long time to update when an Exchange Server 2010 user uses Outlook 2003 in online mode</a>.</p></td>
 </tr>
 </tbody>
 </table>

@@ -77,7 +77,7 @@ Exchange 2007 reached end of support on April 11, 2017, per the [Microsoft Lifec
 The following table identifies the operating system platforms on which each version of Exchange can run. Supported platforms are identified by an X character.
 
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Releases of Windows Server and Windows client that aren't listed in the table below are not supported for use with any version or release of Exchange.
 
 
@@ -437,7 +437,7 @@ The following table identifies the Web browsers supported for use together with 
 The following table identifies the Web browsers supported for use together with the light (basic) version of Outlook Web App or Outlook on the web. . Supported browsers are identified by an X character.
 
 
-> [!NOTE]
+> [!NOTE]  
 > Outlook Web App Basic (Outlook Web App Light) is supported for use in mobile browsers. However, if rendering or authentication issues occur in a mobile browser, determine whether the issue can be reproduced by using Outlook Web App Light in the full client of a supported browser. For example, test the use of Outlook Web App Light in Safari, Chrome, or Internet Explorer. If the issue can’t be reproduced in the full client, we recommend that you contact the mobile device vendor for help. In these cases, we collaborate with the vendor as appropriate.
 
 
@@ -731,13 +731,13 @@ The following table identifies the version of Microsoft Exchange that can be use
 The following table identifies the version of the Microsoft .NET Framework that can be used together with each version of Exchange. Supported versions are identified by an X character.
 
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > <STRONG>Releases of .NET Framework that aren't listed in the table below are not supported on any version or release of Exchange.</STRONG> This includes minor and patch-level releases of .NET Framework.
 
 
 
 
-> [!NOTE]
+> [!NOTE]  
 > When upgrading Exchange from an unsupported CU to the current CU and no intermediate CUs are available, you should upgrade to the latest version of .NET that's supported by Exchange first and then immediately upgrade to the current CU. This method doesn't replace the need to keep your Exchange servers up to date and on the latest, supported, CU.<BR>Microsoft makes no claim that an upgrade failure will not occur using this method, which may result in the need to contact Microsoft Support Services.
 
 

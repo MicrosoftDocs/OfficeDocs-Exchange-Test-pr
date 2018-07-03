@@ -29,7 +29,7 @@ The UM Troubleshooting tool can be installed on a local Unified Messaging server
     
       - If the tool will be run on a Windows Vista or Windows Server 2008 computer, see [Microsoft .NET Framework 3.5 Family Update for Windows Vista x64, and Windows Server 2008 x64](https://go.microsoft.com/fwlink/p/?linkid=178998).
     
-      - Windows Remote Management (WinRM) 2.0 and Windows PowerShell V2 (Windows6.0-KB968930.msu). See Microsoft Knowledge Base article 968930, [Windows Management Framework Core package (Windows PowerShell 2.0 and WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=968930).
+      - Windows Remote Management (WinRM) 2.0 and Windows PowerShell V2 (Windows6.0-KB968930.msu). See Microsoft Knowledge Base article 968930, [Windows Management Framework Core package (Windows PowerShell 2.0 and WinRM 2.0)](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=968930).
     
       - Microsoft Unified Communications Managed API 2.0 Core Runtime (UcmaRuntimeWebDownloadX64.msi). See [Unified Communications Managed API 2.0, Core Runtime (64-bit)](https://go.microsoft.com/fwlink/p/?linkid=198175).
 

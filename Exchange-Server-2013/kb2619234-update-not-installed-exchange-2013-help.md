@@ -27,7 +27,7 @@ Download and install the 64-bit update from the following URL, and then click **
 
 
 
-Microsoft Knowledge Base article KB2619234, [A hotfix is available to enable the Association Cookie/GUID that is used by RPC over HTTP to also be used at the RPC layer in Windows 7 and in Windows Server 2008 R2)](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=2619234)
+Microsoft Knowledge Base article KB2619234, [A hotfix is available to enable the Association Cookie/GUID that is used by RPC over HTTP to also be used at the RPC layer in Windows 7 and in Windows Server 2008 R2)](https://go.microsoft.com/fwlink/?linkid=3052&kbid=2619234)
 
 Having problems? Ask for help in the Exchange forums. Visit the forums at [Exchange Server](https://go.microsoft.com/fwlink/p/?linkid=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkid=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkid=285351).
 

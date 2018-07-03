@@ -75,7 +75,7 @@ You can’t migrate public folders directly from Exchange 2003. If you’re runn
 
   - In Exchange 2007, you need to be assigned the Exchange Organization Administrator role or the Exchange Server Administrator role. In addition, you need to be assigned the Public Folder Administrator role and local Administrators group for the target server. For details, see [How to Add a User or Group to an Administrator Role](https://go.microsoft.com/fwlink/p/?linkid=81779).
 
-  - On the Exchange 2007 server, upgrade to [Windows PowerShell 2.0 and WinRM 2.0 for Windows Server 2008 x64 Edition](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=968930).
+  - On the Exchange 2007 server, upgrade to [Windows PowerShell 2.0 and WinRM 2.0 for Windows Server 2008 x64 Edition](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=968930).
 
   - Before migration, if any public folder in your organization is greater than 2 GB, we recommend either deleting content from that folder or splitting it up into multiple public folders. If either of these options isn’t feasible, we recommend that you do not move your public folders to Office 365 and Exchange Online.
 
