@@ -115,6 +115,7 @@ The following tables show the message limits, including information about how to
 </tr>
 <tr class="odd">
 <td><p>Maximum number of recipients per message</p>
+
 <table>
 <thead>
 <tr class="header">

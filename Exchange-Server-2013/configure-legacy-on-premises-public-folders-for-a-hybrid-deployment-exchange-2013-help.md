@@ -102,7 +102,7 @@ A hybrid configuration with Exchange 2003 public folders is not supported. If yo
 
 7.  In Exchange 2007, you need to be assigned the Exchange Organization Administrator role or the Exchange Server Administrator role. In addition, you must be assigned the Public Folder Administrator role and local Administrators group for the target server. For details, see [How to Add a User or Group to an Administrator Role](https://go.microsoft.com/fwlink/p/?linkid=81779)
 
-8.  If you have Exchange Server 2007 running on Windows Server 2008 x64, then you must upgrade to [Windows PowerShell 2.0 and WinRM 2.0 for Windows Server 2008 x64 Edition](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=968930). If you have Exchange Server 2007 running on Windows Server 2003 x64, then you must upgrade to Windows PowerShell 2.0. For more information, see [Update for Windows Server 2003 x64 Edition](https://www.microsoft.com/en-us/download/details.aspx?id=10512)..
+8.  If you have Exchange Server 2007 running on Windows Server 2008 x64, then you must upgrade to [Windows PowerShell 2.0 and WinRM 2.0 for Windows Server 2008 x64 Edition](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=968930). If you have Exchange Server 2007 running on Windows Server 2003 x64, then you must upgrade to Windows PowerShell 2.0. For more information, see [Update for Windows Server 2003 x64 Edition](https://www.microsoft.com/en-us/download/details.aspx?id=10512)..
 
 9.  In order to access public folders cross-premises, users must upgrade their Outlook clients to the November 2012 Outlook public update or later.
     

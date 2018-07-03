@@ -58,7 +58,7 @@ The following table contains links to Exchange Team blog posts ("What's New" inf
 </tr>
 <tr class="even">
 <td><p>Exchange 2013 CU18</p></td>
-<td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=858936%0d%0a">Released: September 2017 Quarterly Exchange Updates</a></p></td>
+<td><p><a href="https://go.microsoft.com/fwlink/p/?LinkId=858936">Released: September 2017 Quarterly Exchange Updates</a></p></td>
 </tr>
 <tr class="odd">
 <td><p>Exchange 2013 CU17</p></td>
