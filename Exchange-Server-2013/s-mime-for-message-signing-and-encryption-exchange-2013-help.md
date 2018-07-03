@@ -57,14 +57,11 @@ Setting up S/MIME for Exchange 2013 SP1 or Exchange Online with Outlook Web App 
 
 As message security becomes more important, administrators need to understand the principles and concepts of secure messaging. This understanding is especially important because of the growing variety of protection-related technologies, such as S/MIME, that have become available. To understand more about S/MIME and how it works in context of email, see [Understanding S/MIME](https://go.microsoft.com/fwlink/?linkid=393948). A variety of encryption technologies work together to provide protection for messages at rest and in-transit. S/MIME can work simultaneously with the following technologies but is not dependent on them:
 
-  -  
-    **Transport Layer Security (TLS)** encrypts the tunnel or the route between email servers in order to help prevent snooping and eavesdropping.
+  -  **Transport Layer Security (TLS)** encrypts the tunnel or the route between email servers in order to help prevent snooping and eavesdropping.
 
-  -  
-    **Secure Sockets Layer (SSL)** encrypts the connection between email clients and Office 365 servers.
+  -  **Secure Sockets Layer (SSL)** encrypts the connection between email clients and Office 365 servers.
 
-  -  
-    **BitLocker** encrypts the data on a hard drive in a datacenter so that if someone gets unauthorized access, they can’t read it.
+  -  **BitLocker** encrypts the data on a hard drive in a datacenter so that if someone gets unauthorized access, they can’t read it.
 
 ## S/MIME compared with Office 365 Message Encryption
 

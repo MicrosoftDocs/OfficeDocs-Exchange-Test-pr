@@ -28,8 +28,6 @@ Protocol logging records the SMTP conversations that occur on Send Connectors an
   - Protocol logging is enabled or disabled on each individual connector. All the Receive connectors on the Exchange server share the same protocol log files and protocol log options. These protocol log settings are separate from the Send connector protocol log files and protocol log options that are on the same server.
 
   - 
-    
-
     > [!WARNING]
     > Don't perform this procedure on an Edge Transport server that has been subscribed to the Exchange organization by using EdgeSync. Instead, make the changes in the Transport service on the Mailbox server. The changes are then replicated to the Edge Transport server next time EdgeSync synchronization occurs.
 
@@ -153,17 +151,13 @@ To configure the protocol log settings, run the following command:
 
 This example sets the following protocol log settings in the Transport service on the Mailbox server named Mailbox01:
 
-  -  
-    Sets the location of all Receive connector protocol logs to D:\\Hub Receive SMTP Log and all Send connector protocol logs to D:\\Hub Send SMTP Log. Note that if the folder doesn't exist, it will be created for you.
+  -  Sets the location of all Receive connector protocol logs to D:\\Hub Receive SMTP Log and all Send connector protocol logs to D:\\Hub Send SMTP Log. Note that if the folder doesn't exist, it will be created for you.
 
-  -  
-    Sets the maximum size of a Receive connector protocol log file and a Send connector protocol log file to 20 MB.
+  -  Sets the maximum size of a Receive connector protocol log file and a Send connector protocol log file to 20 MB.
 
-  -  
-    Sets the maximum size of the Receive connector protocol log folder and the Send connector protocol log folder to 400 MB.
+  -  Sets the maximum size of the Receive connector protocol log folder and the Send connector protocol log folder to 400 MB.
 
-  -  
-    Sets the maximum age of a Receive connector protocol log file and a Send Connector protocol log file to 45 days.
+  -  Sets the maximum age of a Receive connector protocol log file and a Send Connector protocol log file to 45 days.
 
 <!-- end list -->
 

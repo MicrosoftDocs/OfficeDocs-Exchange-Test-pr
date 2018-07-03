@@ -17,17 +17,13 @@ _**Applies to:** Exchange Online, Exchange Online Protection, Exchange Server 20
 
 Your organization might require that certain types of messages be blocked or rejected in order to meet legal or compliance requirements, or to implement specific business needs. Here are some examples of common scenarios for blocking all attachments that you can set up using transport rules in Exchange:
 
-  -  
-    Example 1: Block messages with attachments, and notify the sender
+  -  Example 1: Block messages with attachments, and notify the sender
 
-  -  
-    Example 2: Notify intended recipients when an inbound message is blocked
+  -  Example 2: Notify intended recipients when an inbound message is blocked
 
-  -  
-    Example 3: Modify the subject line for notifications
+  -  Example 3: Modify the subject line for notifications
 
-  -  
-    Example 4: Apply a rule with a time limit
+  -  Example 4: Apply a rule with a time limit
 
 For additional examples showing how to block specific attachments, see:
 
