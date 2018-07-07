@@ -1,0 +1,111 @@
+﻿---
+title: 'Create a shared mailbox: Exchange 2013 Help'
+TOCTitle: Create a shared mailbox
+ms:assetid: d34bc827-1e83-4a7f-a219-8ba9c19fe24b
+ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ150570(v=EXCHG.150)
+ms:contentKeyID: 47560108
+ms.date: 12/10/2017
+mtps_version: v=EXCHG.150
+---
+
+# Create a shared mailbox
+
+ 
+
+_**Applies to:** Exchange Online, Exchange Server 2013, Office 365 Enterprise_
+
+
+**Estimated time to complete: 5 minutes**
+
+Shared mailboxes makes it easy for a group of people in your company to monitor and send email from a common account, such as info@contoso.com or support@contoso.com. When a person in the group replies to a message sent to the shared mailbox, the email looks like it was sent by the shared mailbox, not from the individual user.
+
+
+> [!IMPORTANT]
+> If you're using Office 365 for business, you should create your shared mailbox in the Office 365 admin center. 
+> <UL>
+> <LI>
+> <P><A href="https://go.microsoft.com/fwlink/p/?linkid=834766">Create shared mailboxes in Office 365</A></P></LI></UL>
+
+
+
+If your organization uses a hybrid Exchange environment, you should use the on-premises Exchange admin center (EAC) to create and manage shared mailboxes. To learn more about shared mailboxes, see [Shared mailboxes](shared-mailboxes-exchange-2013-help.md).
+
+## Use the EAC to create a shared mailbox
+
+You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "User mailboxes" entry in the [Recipients Permissions](recipients-permissions-exchange-2013-help.md) topic.
+
+1.  Go to **Recipients** \> **Shared** \> **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon").
+
+2.  Fill-in the required fields:
+    
+      - **Display name**
+    
+      - **Email address**
+
+3.  To grant Full Access or Send As permissions, click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon"), and then select the users you want to grant permissions to. You can use the **CTRL** key to select multiple users. Confused about which permission to use? See Which permission should you use? later in this topic.
+    
+
+    > [!NOTE]
+    > The Full Access permission allows a user to open the mailbox as well as create and modify items in it. The Send As permission allows anyone other than the mailbox owner to send email from this shared mailbox. Both permissions are required for successful shared mailbox operation.
+
+
+
+4.  Click **Save** to save your changes and create the shared mailbox.
+
+## Use the EAC to edit shared mailbox delegation
+
+1.  Go to **Recipients** \> **Shared** \> **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
+
+2.  Click **Mailbox delegation**
+
+3.  To grant or remove Full Access and Send As permissions, click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") or **Remove** ![Remove icon](images/Dd362328.479b6ced-8d64-4277-a725-f17fea202b28(EXCHG.150).gif "Remove icon") and then select the users you want to grant permissions to.
+    
+
+    > [!NOTE]
+    > The Full Access permission allows a user to open the mailbox as well as create and modify items in it. The Send As permission allows anyone other than the mailbox owner to send email from this shared mailbox. Both permissions are required for successful shared mailbox operation.
+
+
+
+4.  Click **Save** to save your changes.
+
+## Use a shared mailbox
+
+To learn how users can access and use shared mailboxes, check out the following:
+
+  - [Open and use a shared mailbox in Outlook 2016 and Outlook 2013](https://go.microsoft.com/fwlink/p/?linkid=834764)
+
+  - [Open and use a shared mailbox in Outlook on the web for business](https://go.microsoft.com/fwlink/p/?linkid=834766)
+
+## Use the Shell to create a shared mailbox
+
+This example creates the shared mailbox Sales Department and grants Full Access and Send on Behalf permissions for the security group MarketingSG. Users who are members of the security group will be granted the permissions to the mailbox.
+
+
+> [!NOTE]
+> This example assumes that you’ve already created the security group MarketingSG and that security group is mail-enabled. See <A href="manage-mail-enabled-security-groups-exchange-2013-help.md">Manage mail-enabled security groups</A>.
+
+
+
+    New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales | Set-Mailbox -GrantSendOnBehalfTo MarketingSG | Add-MailboxPermission -User MarketingSG -AccessRights FullAccess -InheritanceType All
+
+For detailed syntax and parameter information, see [New-Mailbox](https://technet.microsoft.com/en-us/library/aa997663\(v=exchg.150\)).
+
+## Which permissions should you use?
+
+You can use the following permissions with a shared mailbox.
+
+  - **Full Access**   The Full Access permission lets a user open the shared mailbox and act as the owner of that mailbox. After accessing the shared mailbox, a user can create calendar items; read, view, delete, and change email messages; create tasks and calendar contacts. However, a user with Full Access permission can’t send email from the shared mailbox unless they also have Send As or Send on Behalf permission.
+
+  - **Send As**   The Send As permission lets a user impersonate the shared mailbox when sending mail. For example, if Kweku logs into the shared mailbox Marketing Department and sends an email, it will look like the Marketing Department sent the email.
+
+  - **Send on Behalf**   The Send on Behalf permission lets a user send email on behalf of the shared mailbox. For example, if John logs into the shared mailbox Reception Building 32 and sends an email, it look like the mail was sent by “John on behalf of Reception Building 32”. You can’t use the EAC to grant Send on Behalf permissions, you must use [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)) cmdlet with the *GrantSendonBehalf* parameter.
+
+## More information
+
+For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
+
+
+> [!TIP]
+> Having problems? Ask for help in the Exchange forums. Visit the forums at <A href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</A>, <A href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</A>, or <A href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</A>.
+
+

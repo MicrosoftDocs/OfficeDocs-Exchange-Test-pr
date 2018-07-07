@@ -1,0 +1,59 @@
+﻿---
+title: 'Allow or prevent a user from creating call answering rules: Exchange 2013 Help'
+TOCTitle: Allow or prevent a user from creating call answering rules
+ms:assetid: 81863440-8b21-4523-bdab-6a2311889a0d
+ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dd298097(v=EXCHG.150)
+ms:contentKeyID: 49317360
+ms.date: 12/10/2017
+mtps_version: v=EXCHG.150
+---
+
+# Allow or prevent a user from creating call answering rules
+
+ 
+
+_**Applies to:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
+
+
+You can specify whether you want individual users to be able to create and manage their own call answering rules by configuring their mailbox properties. By default, they can create call answering rules.
+
+You can enable or disable Call Answering Rules for multiple users that are enabled for Unified Messaging (UM) by configuring Call Answering Rules on a UM dial plan or UM mailbox policy.
+
+
+> [!NOTE]
+> You can’t use the EAC to configure this feature. You must use the Shell to enable or disable Call Answering Rules for a voice mail user.
+
+
+
+For additional management tasks related to allowing users to forward calls, see [Forwarding calls procedures](forwarding-calls-procedures-exchange-2013-help.md).
+
+## What do you need to know before you begin?
+
+  - Estimated time to complete: Less than 1 minute.
+
+  - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "UM mailboxes" entry in the [Unified Messaging permissions](unified-messaging-permissions-exchange-2013-help.md) topic.
+
+  - Before you perform this procedure, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md).
+
+  - Before you perform this procedure, confirm that a UM mailbox policy has been created. For detailed steps, see [Create a UM mailbox policy](create-a-um-mailbox-policy-exchange-2013-help.md).
+
+  - Before you perform this procedure, confirm that the user's mailbox has been UM-enabled. For detailed steps, see [Enable a user for voice mail](enable-a-user-for-voice-mail-exchange-2013-help.md).
+
+  - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
+
+
+> [!TIP]
+> Having problems? Ask for help in the Exchange forums. Visit the forums at <A href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</A>, <A href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</A>, or <A href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</A>..
+
+
+
+## Use the Shell to enable or disable call answering rules for a UM-enabled user
+
+This example enables Call Answering Rules for the user tony@contoso.com.
+
+    Set-UMMailbox -Identity tony@contoso.com -CallAnsweringRulesEnabled $true
+
+This example disables Call Answering Rules for the user tony@contoso.com.
+
+    Set-UMMailbox -Identity tony@contoso.com -CallAnsweringRulesEnabled $false
+
