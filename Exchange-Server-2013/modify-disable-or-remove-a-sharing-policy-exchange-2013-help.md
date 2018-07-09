@@ -101,9 +101,13 @@ For details about how to create a sharing policy, see [Create a sharing policy](
 
   - The first example removes the sharing policy Contoso. The second example removes the sharing policy Contoso and suppresses the confirmation that you want to remove the policy.
     
-        Remove-SharingPolicy -Identity Contoso
-    
-        Remove-SharingPolicy -Identity Contoso -Confirm
+      ```
+      Remove-SharingPolicy -Identity Contoso
+      ```
+
+      ```
+      Remove-SharingPolicy -Identity Contoso -Confirm
+      ```
 
 For detailed syntax and parameter information, see [Set-SharingPolicy](https://technet.microsoft.com/en-us/library/dd297931\(v=exchg.150\)) and [Remove-SharingPolicy](https://technet.microsoft.com/en-us/library/dd351071\(v=exchg.150\)).
 

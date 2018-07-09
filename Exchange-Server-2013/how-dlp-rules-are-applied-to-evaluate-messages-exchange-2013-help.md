@@ -145,9 +145,13 @@ You can use a custom rule that defines a pattern without extra evidence, as show
 
 The illustration of credit cards in this article can be extended to other sensitive information rules as well. To see the complete list of the Microsoft-supplied rules in Exchange, use the [Get-ClassificationRuleCollection](https://technet.microsoft.com/en-us/library/jj218696\(v=exchg.150\)) cmdlet in the Exchange Management Shell in the following manner:
 
-    $rule_collection = Get-ClassificationRuleCollection
+```
+$rule_collection = Get-ClassificationRuleCollection
+```
 
-    $rule_collection[0].SerializedClassificationRuleCollection | Set-Content oob_classifications.xml -Encoding byte
+```
+$rule_collection[0].SerializedClassificationRuleCollection | Set-Content oob_classifications.xml -Encoding byte
+```
 
 ## For more information
 

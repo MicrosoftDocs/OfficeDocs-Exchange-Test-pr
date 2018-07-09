@@ -105,9 +105,13 @@ log in to the EAC and perform the following steps:
 
 This example creates a migration batch for a local move, where the mailboxes in the specified .csv file are moved to a different mailbox database. This .csv file contains a single column that contains the email address for each of the mailboxes that will be moved. The header for this column must be named **EmailAddress**. The migration batch in this example must be started manually by using the **Start-MigrationBatch** cmdlet or the Exchange Administration Center (EAC). Alternatively, you can use the *AutoStart* parameter to start the migration batch automatically.
 
-    New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2 -TimeZone "Pacific Standard Time"
+```
+New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2 -TimeZone "Pacific Standard Time"
+```
 
-    Start-MigrationBatch -Identity LocalMove1
+```
+Start-MigrationBatch -Identity LocalMove1
+```
 
 For detailed syntax and parameter information, see [New-MigrationBatch](https://technet.microsoft.com/en-us/library/jj219166\(v=exchg.150\)) and [Start-MigrationBatch](https://technet.microsoft.com/en-us/library/jj219165\(v=exchg.150\)).
 
@@ -161,10 +165,14 @@ For more information, see [Get-MigrationUserStatistics](https://technet.microsof
 
 This example configures the migration endpoint, and then creates a cross-forest batch move from the source forest to the target forest using a .csv file.
 
-    New-MigrationEndpoint -Name Fabrikam -ExchangeRemote -Autodiscover -EmailAddress tonysmith@fabrikam.com -Credentials (Get-Credential fabrikam\tonysmith) 
-    
-    $csvData=[System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\batch.csv")
-    New-MigrationBatch -CSVData $csvData -Timezone "Pacific Standard Time" -Name FabrikamMerger -SourceEndpoint Fabrikam -TargetDeliveryDomain "mail.contoso.com"
+```
+New-MigrationEndpoint -Name Fabrikam -ExchangeRemote -Autodiscover -EmailAddress tonysmith@fabrikam.com -Credentials (Get-Credential fabrikam\tonysmith) 
+```
+
+```
+$csvData=[System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\batch.csv")
+New-MigrationBatch -CSVData $csvData -Timezone "Pacific Standard Time" -Name FabrikamMerger -SourceEndpoint Fabrikam -TargetDeliveryDomain "mail.contoso.com"
+```
 
 For more information about preparing your forest for cross-forest moves, see the following topics:
 

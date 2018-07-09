@@ -83,9 +83,13 @@ If you used the *EstimateOnly* switch to get an estimate of the search results, 
 
 To copy the results of this search to a discovery mailbox, you would run the following commands:
 
-    Set-MailboxSearch "FY13 Q2 Financial Results" -EstimateOnly $false -TargetMailbox "Discovery Search Mailbox"
+  ```
+  Set-MailboxSearch "FY13 Q2 Financial Results" -EstimateOnly $false -TargetMailbox "Discovery Search Mailbox"
+  ```
 
-    Start-MailboxSearch "FY13 Q2 Financial Results"
+  ```
+  Start-MailboxSearch "FY13 Q2 Financial Results"
+  ```
 
 ## More information about copying search results
 

@@ -215,9 +215,13 @@ For detailed syntax and parameter information, see the following topics:
         > All information contained in the public folders will be permanently deleted when you remove them.
 
         
-            Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+        ```
+        Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+        ```
         
-            Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+        ```
+        Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+        ```
 
 For detailed syntax and parameter information, see the following topics:
 
@@ -253,7 +257,7 @@ For detailed syntax and parameter information, see the following topics:
     
 
     > [!NOTE]
-    > If the name of a public folder contains a backslash <STRONG>\</STRONG>, the public folders will be created in the parent public folder. We recommend that you review the .csv file and edit any names that contain a backslash.
+    > If the name of a public folder contains a backslash **\\**, the public folders will be created in the parent public folder. We recommend that you review the .csv file and edit any names that contain a backslash.
 
     
         .\PublicFolderToMailboxMapGenerator.ps1 <Maximum mailbox size in bytes> <Folder to size map path> <Folder to mailbox map path>
@@ -454,9 +458,13 @@ If you run into issues with the migration and need to reactivate your legacy Exc
 
 2.  On the Exchange 2013 server, run the following commands to remove the public folder mailboxes.
     
-        Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
-        
-        Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+    ```
+    Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+    ```
+
+    ```
+    Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+    ```
 
 3.  On the legacy Exchange server, run the following command to set the `PublicFolderMigrationComplete` flag to `$false`.
     

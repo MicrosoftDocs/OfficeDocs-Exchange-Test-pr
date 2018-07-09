@@ -37,9 +37,13 @@ Dynamic distribution groups are distribution groups whose membership is based on
 
 This example returns the list of members for the dynamic distribution group named Full Time Employees. The first command stores the dynamic distribution group object in the variable `$FTE`. The second command uses the **Get-Recipient** cmdlet to list the recipients that match the criteria defined for the dynamic distribution group.
 
-    $FTE = Get-DynamicDistributionGroup "Full Time Employees"
+  ```
+  $FTE = Get-DynamicDistributionGroup "Full Time Employees"
+  ```
 
-    Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
+  ```
+  Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
+  ```
 
 For detailed syntax and parameter information, see [Get-DynamicDistributionGroup](https://technet.microsoft.com/en-us/library/bb124762\(v=exchg.150\)) and [Get-Recipient](https://technet.microsoft.com/en-us/library/aa996921\(v=exchg.150\)).
 

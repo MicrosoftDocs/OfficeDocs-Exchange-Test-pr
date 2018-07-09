@@ -53,9 +53,7 @@ You can also create user mailboxes for existing users that have an Active Direct
 
 
 
-4.  
-    
-    Select one of the following options:
+4.  Select one of the following options:
     
       - **Existing user**   Select to mail-enable and create a mailbox for an existing user.
         
@@ -69,9 +67,7 @@ You can also create user mailboxes for existing users that have an Active Direct
 
 
 
-5.  
-    
-    If you selected **New user** in Step 4, complete the following boxes on the **New user mailbox** page. Otherwise skip to Step 7.
+5.  If you selected **New user** in Step 4, complete the following boxes on the **New user mailbox** page. Otherwise skip to Step 7.
     
       - **First name**   Use this box to type the first name of the user.
     
@@ -107,9 +103,7 @@ You can also create user mailboxes for existing users that have an Active Direct
         
         If you select this check box, at first sign-in, the new user will be prompted with a dialog box in which to change the password. The user won't be allowed to perform any tasks until the password is successfully changed.
 
-6.  
-    
-    Click **More options** to configure the following boxes. Otherwise, skip to Step 7 to save the new user mailbox.
+6.  Click **More options** to configure the following boxes. Otherwise, skip to Step 7 to save the new user mailbox.
     
       - **Specify the mailbox database**   Use this option to specify a mailbox database instead of allowing Exchange to select a database for you. Click **Browse** to open the **Select Mailbox Database** dialog box. This dialog box lists all the mailbox databases in your Exchange organization. By default, the mailbox databases are sorted by name. You can also click the title of the corresponding column to sort the databases by server name or version. Select the mailbox database you want to use, and then click **OK**.
     
@@ -123,9 +117,7 @@ You can also create user mailboxes for existing users that have an Active Direct
         
         In the drop-down list, select the policy that you want associated with this mailbox.
 
-7.  
-    
-    When you're finished, click **Save** to create the mailbox.
+7.  When you're finished, click **Save** to create the mailbox.
 
 ## Use the Shell to create a user mailbox
 

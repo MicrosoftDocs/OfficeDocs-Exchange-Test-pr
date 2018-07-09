@@ -99,9 +99,13 @@ Another way to verify that the MRS Proxy endpoint is enabled is to use the **Tes
 
 The following example tests the connection to a server in the corp.contoso.com forest.
 
-    $Credentials = Get-Credential
+```
+$Credentials = Get-Credential
+```
 
-    Test-MigrationServerAvailability -ExchangeRemoteMove -Autodiscover -EmailAddress administrator@corp.contoso.com -Credentials $Credentials
+```
+Test-MigrationServerAvailability -ExchangeRemoteMove -Autodiscover -EmailAddress administrator@corp.contoso.com -Credentials $Credentials
+```
 
 To run this command successfully, the MRS Proxy endpoint must be enabled.
 

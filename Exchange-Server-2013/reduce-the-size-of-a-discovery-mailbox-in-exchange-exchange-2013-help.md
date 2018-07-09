@@ -110,9 +110,13 @@ The next step is to use the **New-MailboxSearch** cmdlet to copy the search resu
     
       - **Using the Shell:** Run the following commands to copy the search results. You have to remove the *EstimateOnly* switch before you can copy the search results.
         
-            Set-MailboxSearch "Search results from 2010" -EstimateOnly $false
-        
-            Start-MailboxSearch "Search results from 2010"
+      ```
+      Set-MailboxSearch "Search results from 2010" -EstimateOnly $false
+      ```
+      
+      ```
+      Start-MailboxSearch "Search results from 2010"
+      ```
     
       - **Using the EAC:** Go to **Compliance management** \> **In-Place eDiscovery & hold**. Select the search, click **Search** ![Search icon](images/Dn624163.773574d0-9b92-4cab-9f6b-81532c7418b9(EXCHG.150).gif "Search icon"), and then click **Copy search results**.
     

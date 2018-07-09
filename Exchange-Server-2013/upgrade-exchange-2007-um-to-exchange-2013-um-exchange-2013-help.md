@@ -353,9 +353,7 @@ In smaller deployments, you may only want to deploy UM so that callers can leave
 
 If required, you can create a UM auto attendant by using the EAC, as follows:
 
-1.  
-    
-    In the EAC, navigate to **Unified Messaging** \> **UM dial plans**. Select the UM dial plan for which you want to add an auto attendant, and then click **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
+1.  In the EAC, navigate to **Unified Messaging** \> **UM dial plans**. Select the UM dial plan for which you want to add an auto attendant, and then click **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
 
 2.  On the **UM dial plan** page, under **UM Auto Attendants**, click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon").
 
