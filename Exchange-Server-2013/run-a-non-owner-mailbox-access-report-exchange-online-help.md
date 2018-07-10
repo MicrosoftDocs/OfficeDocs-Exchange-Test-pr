@@ -47,9 +47,13 @@ For example, to enable mailbox auditing for a user named Florence Flipo, run the
 
 To enable mailbox auditing for all user mailboxes in your organization, run the following commands.
 
-    $UserMailboxes = Get-mailbox -Filter {(RecipientTypeDetails -eq 'UserMailbox')}
+```
+$UserMailboxes = Get-mailbox -Filter {(RecipientTypeDetails -eq 'UserMailbox')}
+```
 
-    $UserMailboxes | ForEach {Set-Mailbox $_.Identity -AuditEnabled $true}
+```
+$UserMailboxes | ForEach {Set-Mailbox $_.Identity -AuditEnabled $true}
+```
 
 ## How do you know this worked?
 

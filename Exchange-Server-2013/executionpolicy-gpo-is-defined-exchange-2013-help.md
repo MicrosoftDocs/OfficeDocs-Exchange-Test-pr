@@ -27,7 +27,7 @@ When you run Exchange 2013 Setup, Exchange stops and disables the Windows Manage
 
 To allow Setup to continue, you need to temporarily remove any definition of **MachinePolicy** or **UserPolicy** in the **ExecutionPolicy** GPO.
 
-For information on how to remove any definitions of **MachinePolicy** or **UserPolicy** in the **ExecutionPolicy** GPO, see [Knowledge Base article KB981474](https://go.microsoft.com/fwlink/?linkid=3052%26kbid=981474).
+For information on how to remove any definitions of **MachinePolicy** or **UserPolicy** in the **ExecutionPolicy** GPO, see [Knowledge Base article KB981474](https://go.microsoft.com/fwlink/?linkid=3052&kbid=981474).
 
 
 > [!NOTE]

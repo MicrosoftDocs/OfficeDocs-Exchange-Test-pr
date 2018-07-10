@@ -99,7 +99,7 @@ In addition, to make sure that the DNS suffix search list contains all DNS names
 
   - [Group Policy Frequently Asked Questions (FAQ)](https://go.microsoft.com/fwlink/p/?linkid=100128)
 
-  - [New group policies for DNS in Windows Server 2003](http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=294785)
+  - [New group policies for DNS in Windows Server 2003](http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=294785)
 
   - [Group Policy](https://go.microsoft.com/fwlink/p/?linkid=268043)
 

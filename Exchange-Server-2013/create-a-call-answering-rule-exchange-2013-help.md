@@ -69,14 +69,11 @@ This example creates the call answering rule `MyCallAnsweringRule` in the mailbo
 
 This example creates the call answering rule `MyCallAnsweringRule` in the mailbox for Tony Smith and performs the following actions:
 
-  -  
-    Sets the priority of the call answering rule to 2.
+  -  Sets the priority of the call answering rule to 2.
 
-  -  
-    Creates key mappings for the call answering rule.
+  -  Creates key mappings for the call answering rule.
 
-  -  
-    If the caller reaches the voice mail for the user and the status of the user is set to Busy, the caller can:
+  -  If the caller reaches the voice mail for the user and the status of the user is set to Busy, the caller can:
     
       - Press the 1 key and be transferred to a receptionist at extension 45678.
     

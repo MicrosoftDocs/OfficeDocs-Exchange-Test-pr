@@ -56,9 +56,7 @@ Mail users are similar to mail contacts. Both have external email addresses and 
 
 4.  In the **\* External email address** box, type the mail user’s external email address. Email sent to this mail user is forwarded to this email address. This box is required.
 
-5.  
-    
-    Select one of the following options:
+5.  Select one of the following options:
     
       - **Existing user**   Select to mail-enable an existing user.
         
@@ -66,9 +64,7 @@ Mail users are similar to mail contacts. Both have external email addresses and 
     
       - **New user**   Select to create a new user account in Active Directory and mail-enable the user. If you select this option, you'll have to provide the required user account information.
 
-6.  
-    
-    If you selected **New User** in Step 5, complete the following boxes on the **New mail user** page. Otherwise skip to Step 7.
+6.  If you selected **New User** in Step 5, complete the following boxes on the **New mail user** page. Otherwise skip to Step 7.
     
       - **First name**   Use this box to type the first name of the mail user.
     
@@ -114,9 +110,7 @@ Mail users are similar to mail contacts. Both have external email addresses and 
         
         If you select this check box, at first logon, the new mail user will be prompted with a dialog box in which to change the password. The mail user won't be allowed to perform any tasks until the password is changed successfully.
 
-7.  
-    
-    When you've finished, click **Save** to create the mail user.
+7.  When you've finished, click **Save** to create the mail user.
 
 ## Use the Shell to create a mail user
 
@@ -246,7 +240,7 @@ Use the **Organization** section to record detailed information about the user'
 
 Use the **Email Addresses** section to view or change the email addresses associated with the mail user. This includes the mail user’s primary SMTP address, their external email address, and any associated proxy addresses. The primary SMTP address (also known as the *default reply address*) is displayed in bold text in the address list, with the uppercase **SMTP** value in the **Type** column. By default, after the mail user is created, the primary SMTP address and the external email address are the same.
 
-  - **Add **   Click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add a new email address for this mailbox. Select one of following address types:
+  - **Add**   Click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add a new email address for this mailbox. Select one of following address types:
     
       - **SMTP**   This is the default address type. Click this button and then type the new SMTP address in the **\* Email address** box.
     

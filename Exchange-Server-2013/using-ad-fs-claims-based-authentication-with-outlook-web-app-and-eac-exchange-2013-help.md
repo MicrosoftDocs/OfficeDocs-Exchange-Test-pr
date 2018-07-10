@@ -270,9 +270,13 @@ To configure Active Directory Federation Services:
 
 The following Windows PowerShell commands do the same thing as the preceding steps.
 
-    Import-Module ADFS
+```
+Import-Module ADFS
+```
 
-    Install-AdfsFarm -CertificateThumbprint 0E0C205D252002D535F6D32026B6AB074FB840E7 -FederationServiceDisplayName "Contoso Corporation" -FederationServiceName adfs.contoso.com -GroupServiceAccountIdentifier "contoso\FSgmsa`$"
+```
+Install-AdfsFarm -CertificateThumbprint 0E0C205D252002D535F6D32026B6AB074FB840E7 -FederationServiceDisplayName "Contoso Corporation" -FederationServiceName adfs.contoso.com -GroupServiceAccountIdentifier "contoso\FSgmsa`$"
+```
 
 For details and syntax, see [Install-AdfsFarm](https://go.microsoft.com/fwlink/?linkid=392704).
 

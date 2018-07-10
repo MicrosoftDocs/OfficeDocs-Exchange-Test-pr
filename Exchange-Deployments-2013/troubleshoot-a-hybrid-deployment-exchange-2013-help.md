@@ -122,10 +122,9 @@ If you receive an error while running the Hybrid Configuration wizard, you can f
 
   - **Message: “Default Receive Connector cannot be found on server \<Server Name\>”**   This message appears if the Receive connector on any Exchange server listed in the following attribute isn’t listening on TCP port 25 for both the IPv4 and IPv6 protocols: `(Get-HybridConfiguration).ReceivingTransportServers.`
     
-      -  
-        To verify that the Receive connectors on the Exchange servers listed when you run the `(Get-HybridConfiguration).ReceivingTransportServers.` have the correct bindings, run the following command in the Exchange Management Shell.
+      - To verify that the Receive connectors on the Exchange servers listed when you run the `(Get-HybridConfiguration).ReceivingTransportServers.` have the correct bindings, run the following command in the Exchange Management Shell.
         
-            Get-ReceiveConnector -Server <Server Name> | FT Identity, Bindings
+        Get-ReceiveConnector -Server <Server Name> | FT Identity, Bindings
         
         You should see the following entry listed for your Exchange servers: `{[::]:25, 0.0.0.0:25}`
         

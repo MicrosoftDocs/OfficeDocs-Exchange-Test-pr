@@ -137,11 +137,17 @@ When you run this command, a message is displayed that asks you to confirm that 
 
 Here are some examples of commands for disabling mailboxes.
 
-    Disable-Mailbox danj
+```
+Disable-Mailbox danj
+```
 
-    Disable-Mailbox "Conf Room 31/1234 (12)"
+```
+Disable-Mailbox "Conf Room 31/1234 (12)"
+```
 
-    Disable-Mailbox sharedmbx@contoso.com
+```
+Disable-Mailbox sharedmbx@contoso.com
+```
 
 ## How do you know this worked?
 
@@ -195,11 +201,17 @@ When you run this command, a message is displayed that asks you to confirm that 
 
 Here are some examples of commands for deleting mailboxes.
 
-    Remove-Mailbox pilarp@contoso.com
+```
+Remove-Mailbox pilarp@contoso.com
+```
 
-    Remove-Mailbox "Fleet Van (16)"
+```
+Remove-Mailbox "Fleet Van (16)"
+```
 
-    Remove-Mailbox corpprint
+```
+Remove-Mailbox corpprint
+```
 
 ## How do you know this worked?
 

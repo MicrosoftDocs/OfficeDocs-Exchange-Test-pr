@@ -86,9 +86,13 @@ If there is only one copy of the mailbox database, you have to manually reseed t
 
 1.  Run the following commands to stop the Microsoft Exchange Search and Microsoft Exchange Search Host Controller services.
     
-        Stop-Service MSExchangeFastSearch
-    
-        Stop-Service HostControllerService
+    ```
+    Stop-Service MSExchangeFastSearch
+    ```
+
+    ```
+    Stop-Service HostControllerService
+    ```
 
 2.  Delete, move, or rename the folder that contains the Exchange content index catalog. This folder is named `%ExchangeInstallPath\Mailbox\<name of mailbox database>_Catalog\<GUID>12.1.Single`. For example, you might rename the folder `C:\Program Files\Microsoft\Exchange Server\V15\Mailbox\Mailbox Database 0657134726_Catalog\F0627A72-9F1D-494A-839A-D7C915C279DB12.1.Single_OLD`.
     
@@ -100,9 +104,13 @@ If there is only one copy of the mailbox database, you have to manually reseed t
 
 3.  Run the following commands to restart the Microsoft Exchange Search and Microsoft Exchange Search Host Controller services.
     
-        Start-Service MSExchangeFastSearch
-    
-        Start-Service HostControllerService
+    ```
+    Start-Service MSExchangeFastSearch
+    ```
+
+    ```
+    Start-Service HostControllerService
+    ```
     
     After you restart these services, Exchange Search will rebuild the content index catalog.
 

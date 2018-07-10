@@ -53,5 +53,5 @@ To resolve this issue, rename the local computer or remove or rename the recipie
 
 4.  Click the **E-Mail Addresses** tab, and then change the appropriate SMTP address
 
-For more information about Recipient Policy naming issues, see Microsoft Knowledge Base article 288175, "XCON: Recipient Policy Cannot Match the FQDN of Any Server in the Organization, 5.4.8 NDRs" ([http://go.microsoft.com/fwlink/?linkid=3052\&kbid=288175](http://go.microsoft.com/fwlink/?linkid=3052%26kbid=288175)).
+For more information about Recipient Policy naming issues, see Microsoft Knowledge Base article 288175, "XCON: Recipient Policy Cannot Match the FQDN of Any Server in the Organization, 5.4.8 NDRs" ([http://go.microsoft.com/fwlink/?linkid=3052\&kbid=288175](http://go.microsoft.com/fwlink/?linkid=3052&kbid=288175)).
 

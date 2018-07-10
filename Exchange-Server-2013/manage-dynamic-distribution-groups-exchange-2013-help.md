@@ -49,9 +49,7 @@ Unlike regular distribution groups that contain a defined set of members, the me
 
 1.  In the EAC, navigate to **Recipients**  \> **Groups** \> **New** \> **Dynamic distribution group**.
 
-2.  
-    
-    On the **New dynamic distribution group** page, complete the following boxes:
+2.  On the **New dynamic distribution group** page, complete the following boxes:
     
       - **\* Display name**   Use this box to type the display name. This name appears in the shared address book, on the To: line when email is sent to this group, and in the Groups list in the EAC. The display name is required and should be user-friendly so people recognize what it is. It also must be unique in the forest.
         
@@ -70,9 +68,7 @@ Unlike regular distribution groups that contain a defined set of members, the me
     
       - **Owner**  An owner for a dynamic distribution group is optional. You can add owners by clicking **Browse** and then selecting users from the list.
 
-3.  
-    
-    Use the **Members** section to specify the types of recipients for the group and set up rules that will determine membership. Select one of the following boxes:
+3.  Use the **Members** section to specify the types of recipients for the group and set up rules that will determine membership. Select one of the following boxes:
     
       - **All recipient types**   Choose this option to send messages that meet the criteria defined for this group to all recipient types.
     
@@ -88,9 +84,7 @@ Unlike regular distribution groups that contain a defined set of members, the me
         
           - **Mail-enabled groups**   Select this check box if you want to include security groups or distribution groups that have been mail-enabled. Mail-enabled groups are similar to distribution groups. Email messages that are sent to a mail-enabled group account will be delivered to several recipients.
 
-4.  
-    
-    Click **Add a rule** to define the criteria for membership in this group.
+4.  Click **Add a rule** to define the criteria for membership in this group.
 
 5.  Select one of the following recipient attributes from the drop-down list and provide a value. If the value for the selected attribute matches that value you define, the recipient receives a message sent to this group.
     
@@ -270,7 +264,7 @@ Use this section to set options for moderating the group. Moderators approve or 
 
 Use this section to view or change the email addresses associated with the group. This includes the group’s primary SMTP addresses and any associated proxy addresses. The primary SMTP address (also known as the *reply address*) is displayed in bold text in the address list, with the uppercase **SMTP** value in the **Type** column.
 
-  - **Add **  Click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add a new email address for this mailbox. Select one of following address types:
+  - **Add**  Click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add a new email address for this mailbox. Select one of following address types:
     
       - **SMTP**   This is the default address type. Click this button and then type the new SMTP address in the **\* Email address** box.
         
@@ -297,7 +291,7 @@ Use this section to view or change the email addresses associated with the group
 
   - **Remove**   To delete an email address associated with the group, select it from the list, and then click **Remove** ![Remove icon](images/Dd362328.479b6ced-8d64-4277-a725-f17fea202b28(EXCHG.150).gif "Remove icon").
 
-  - **Automatically update email addresses based on the email address policy applied to this recipient   **Select this check box to have the recipient's email addresses automatically updated based on changes made to email address policies in your organization. This box is selected by default.
+  - **Automatically update email addresses based on the email address policy applied to this recipient**   Select this check box to have the recipient's email addresses automatically updated based on changes made to email address policies in your organization. This box is selected by default.
 
 ## MailTip
 

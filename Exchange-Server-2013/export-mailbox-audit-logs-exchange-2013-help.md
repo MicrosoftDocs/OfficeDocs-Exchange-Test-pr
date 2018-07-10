@@ -63,9 +63,13 @@ To enable mailbox audit logging for a single mailbox, run the command in the She
 
 To enable mailbox audit logging for all user mailboxes in your organization, run the following commands.
 
-    $UserMailboxes = Get-mailbox -Filter {(RecipientTypeDetails -eq 'UserMailbox')}
+```
+$UserMailboxes = Get-mailbox -Filter {(RecipientTypeDetails -eq 'UserMailbox')}
+```
 
-    $UserMailboxes | ForEach {Set-Mailbox $_.Identity -AuditEnabled $true}
+```
+$UserMailboxes | ForEach {Set-Mailbox $_.Identity -AuditEnabled $true}
+```
 
 ## Step 2: Configure Outlook Web App to allow XML attachments
 

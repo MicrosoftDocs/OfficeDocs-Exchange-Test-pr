@@ -17,18 +17,7 @@ _**Applies to:** Exchange Server 2013_
 
 Use this checklist to install and deploy Unified Messaging (UM) and Microsoft Lync Server 2013. In this topic, “Lync Server” also refers to Lync Server 2010. However, Microsoft Office Communications Server 2007 R2 can also be deployed together with Unified Messaging.
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126650.note(EXCHG.150).gif" title="Note" alt="Note" />Note:</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-</tr>
-</tbody>
-</table>
+> [!NOTE]
 
 
 Before you start working with this checklist, make sure you're familiar with the concepts in:

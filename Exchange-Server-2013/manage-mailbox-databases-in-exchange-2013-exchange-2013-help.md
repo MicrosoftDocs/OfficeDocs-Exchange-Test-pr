@@ -83,9 +83,7 @@ From the Shell, verify that all your mailbox database information is represented
 
 3.  Click **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon")to configure the attributes of a mailbox database.
 
-4.  
-    
-    Use the **General** tab to view status about the mailbox database, including the mailbox database path, last backup, and mailbox database status:
+4.  Use the **General** tab to view status about the mailbox database, including the mailbox database path, last backup, and mailbox database status:
     
       - **Database path**   This read-only field displays the full path to the Exchange 2013 database (.edb) file for the selected mailbox database. To view the entire path, you may have to click the path and use the Right Arrow key. You can't use this field to change the path. To change the location of the database files, use the [Move-DatabasePath](https://technet.microsoft.com/en-us/library/bb124742\(v=exchg.150\)) cmdlet.
     
