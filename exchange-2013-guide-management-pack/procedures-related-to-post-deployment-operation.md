@@ -22,7 +22,7 @@ mtps_version: v=EXCHG.150
 
 <div id="mainBody">
 
-<span> </span>
+<span> </span>
 
 _**Topic Last Modified:** 2016-12-09_
 
@@ -103,21 +103,21 @@ Let’s say that you don’t use the POP3 feature in your organization. You may 
 1.  Start the Exchange Management Shell
 
 2.  First, you need to determine the list of monitors associated with the POP3 service on a Mailbox server. The list in [Appendix A: Exchange health sets](appendix-a-exchange-health-sets.md) shows that the health set associated with POP3 service on a mailbox server is POP.Protocol. You need to run the [Get-MonitoringItemIdentity](https://technet.microsoft.com/en-us/library/jj218668\(v=exchg.150\)) cmdlet to get a list of all monitors associated with the POP.Protocol healthset. The following command returns all monitoring items for POP.Protocol health set and stores them in the temporary variable `$POPMonitoringItems`. Note that the command uses a mailbox server to get this list as the POP.Protocol health set won’t be present on a server that doesn’t have the Mailbox role installed.
-    
+    ```Poweshel
         $POPMonitoringItems = Get-MonitoringItemIdentity -Identity POP.Protocol -Server Mailbox1
-
+	```
 3.  The `$POPMonitoringItems` contains all monitoring items including probes, monitors and responders. Let’s separate just the monitors and store them in the temporary variable `$POPMonitors`by running the following command:
-    
+    ```Poweshel
         $POPMonitors = $POPMonitoringItems | Where {$_.ItemType -eq "Monitor"}
-
+	```
 4.  For each of the monitors for POP.Protocol, you will need to create a global override using the **Add-GlobalMonitoringOverride** cmdlet. Instead of doing them one by one, you can just pipe each monitor in the `$POPMonitors` variable to the **Add-GlobalMonitoringOverride** cmdlet by running the following command.
-    
+    ```Poweshel
         $POPMonitors | Where {Add-GlobalMonitoringOverride -Item Monitor -Identity $($_.HealthSetName+"\"+$_.Name) -PropertyName Enabled -PropertyValue 0 -Duration 60
-
+	```
 5.  To verify that you have correctly created the global overrides, run the following command:
-    
+    ```Poweshel
         Get-GlobalMonitoringOverride | Where {$_.Identity -like "*POP.Protocol*"} | Format-Table Identity, ItemType, PropertyName, PropertyValue
-
+	```
 </div>
 
 </div>
@@ -131,18 +131,18 @@ You also may need to modify specific thresholds for various monitor properties. 
 1.  Start the Exchange Management Shell.
 
 2.  The delivery queues are monitored by the HubTransport health set. First you need to get the list of monitors associated with this healthset that are responsible for internal delivery queues.
-    
+    ```Poweshel
         Get-MonitoringItemIdentity -Identity HubTransport -Server Mailbox1 | Where {$_.Name -like "*InternalAggregateDeliveryQueue*" -and $_.ItemType -eq "Monitor"} | Format-Table Name
-
+	```
 3.  You will see that there are two monitors for internal aggregate delivery queues: InternalAggregateDeliveryQueueLengthLowPriorityMonitor and InternalAggregateDeliveryQueueLengthHighPriorityMonitor. You then add global overrides for each monitor using the commands below:
-    
+    ```Poweshel
         Add-GlobalMonitoringOverride -Item Monitor -Identity HubTransport\InternalAggregateDeliveryQueueLengthLowPriorityMonitor -PropertyName MonitoringThreshold -PropertyValue 150 -Duration 60
         Add-GlobalMonitoringOverride -Item Monitor -Identity HubTransport\InternalAggregateDeliveryQueueLengthHighPriorityMonitor -PropertyName MonitoringThreshold -PropertyValue 50 -Duration 60
-
+	```
 4.  To verify that you have correctly created the global overrides, run the following command:
-    
+    ```Poweshel
         Get-GlobalMonitoringOverride | Where {$_.Identity -like "*HubTransport*"} | Format-Table Identity, ItemType, PropertyName, PropertyValue
-
+	```
 </div>
 
 <div>
@@ -169,7 +169,7 @@ See the following topics for more information about the cmdlets you can use to c
 
 </div>
 
-<span> </span>
+<span> </span>
 
 </div>
 
