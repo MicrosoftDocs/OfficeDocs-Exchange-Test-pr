@@ -51,42 +51,42 @@ Looking for management tasks related to Administrator audit logs? See [Manage ad
 </tr>
 <tr class="odd">
 <td><p><code>Event</code></p></td>
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p>This tag contains the audit log entry for an individual cmdlet. This tag contains the <code>Caller</code>, <code>Cmdlet</code>, <code>ObjectModified</code>, <code>RunDate</code>, <code>Succeeded</code>, <code>Error</code>, and <code>OriginatingServer</code> attributes. The <code>CmdletParameters</code> and <code>ModifiedProperties</code> tags are children of this tag.</p>
 <p>There is one <code>Event</code> tag per audit log entry.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Caller</code></p></td>
 <td><p>This attribute contains the user account of the user who ran the cmdlet in the <code>Cmdlet</code> attribute.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Cmdlet</code></p></td>
 <td><p>This attribute contains the name of the cmdlet that was run by the user in the <code>Caller</code> attribute.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>ObjectModified</code></p></td>
 <td><p>This attribute contains the object that was modified by the cmdlet specified in the <code>Cmdlet</code> attribute. The <code>ModifiedProperties</code> tag shows which properties were modified on this object.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>RunDate</code></p></td>
 <td><p>This attribute contains the date and time when the cmdlet in the <code>Cmdlet</code> attribute was run.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Succeeded</code></p></td>
 <td><p>This attribute specifies whether the cmdlet in the <code>Cmdlet</code> attribute ran successfully. The value is either <code>True</code> or <code>False</code>.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Error</code></p></td>
 <td><p>This attribute contains the error message generated if the cmdlet in the <code>Cmdlet</code> attribute failed to complete successfully. If no error was encountered, the value is set to <code>None</code>.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>OriginatingServer</code></p></td>
 <td><p>This attribute contains the server on which the cmdlet specified in the <code>Cmdlet</code> attribute was run.</p></td>
 </tr>
@@ -98,17 +98,17 @@ Looking for management tasks related to Administrator audit logs? See [Manage ad
 </tr>
 <tr class="even">
 <td><p><code>Parameter</code></p></td>
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p>This tag contains an individual parameter that was specified when the cmdlet was run. This tag contains the <code>Name</code> and <code>Value</code> attributes.</p>
 <p>There can be multiple <code>Parameter</code> tags per <code>CmdletParameters</code> tag.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Name</code></p></td>
 <td><p>This attribute contains the name of the parameter that was specified on the cmdlet that was run.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Value</code></p></td>
 <td><p>This attribute contains the value that was provided on the parameter specified in the <code>Name</code> attribute.</p></td>
 </tr>
@@ -126,22 +126,22 @@ Looking for management tasks related to Administrator audit logs? See [Manage ad
 </tr>
 <tr class="even">
 <td><p><code>Property</code></p></td>
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p>This tag contains an individual property that was specified when the cmdlet was run. This tag contains the <code>Name</code>, <code>OldValue</code>, and <code>NewValue</code> attributes.</p>
 <p>There can be multiple <code>Property</code> tags per <code>ModifiedProperties</code> tag.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>Name</code></p></td>
 <td><p>This attribute contains the name of the property that was modified when the cmdlet was run.</p></td>
 </tr>
 <tr class="even">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>OldValue</code></p></td>
 <td><p>This attribute contains the value that was contained in the property specified in the <code>Name</code> attribute before it was changed.</p></td>
 </tr>
 <tr class="odd">
-<td><p><code> </code></p></td>
+<td><p></p></td>
 <td><p><code>NewValue</code></p></td>
 <td><p>This attribute contains the value that the property in the <code>Name</code> attribute was changed to.</p></td>
 </tr>
