@@ -116,9 +116,7 @@ To enable SSL offloading for EAC, you need to remove the SSL requirement on the 
       - Using the command line, type the following and then press Enter.
         
             appcmd set config "Default Web Site/ecp" /section:access /sslFlags:None /commit:APPHOST
-        
-        ``` 
-        ```
+
 
   - **Step 2**   You need to recycle the correct application pool or restart Internet Information Services by using one of the following methods:
     
