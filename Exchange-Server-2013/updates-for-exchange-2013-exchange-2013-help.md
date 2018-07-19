@@ -45,89 +45,93 @@ The following table contains links to Exchange Team blog posts ("What's New" inf
 </thead>
 <tbody>
 <tr class="odd">
+<td><p>Exchange 2013 CU21</p></td>
+<td><p><a href="https://go.microsoft.com/fwlink/p/?LinkId=2003013">Released: June 2018 Quarterly Exchange Updates</a></p></td>
+</tr>
+<tr class="even">
 <td><p>Exchange 2013 CU20</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=870404">Released: March 2018 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU19</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=865293">Released: December 2017 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="odd">
-<td><p>Exchange 2013 CU18</p></td>
-<td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=858936%0d%0a">Released: September 2017 Quarterly Exchange Updates</a></p></td>
-</tr>
 <tr class="even">
+<td><p>Exchange 2013 CU18</p></td>
+<td><p><a href="https://go.microsoft.com/fwlink/p/?LinkId=858936">Released: September 2017 Quarterly Exchange Updates</a></p></td>
+</tr>
+<tr class="odd">
 <td><p>Exchange 2013 CU17</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=852170">Released: June 2017 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 CU16</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=845203">Released: March 2017 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU15</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=837801">Released: December 2016 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 CU14</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=827208">Released: September 2016 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU13</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=808655">Released: June 2016 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 CU12</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=747752">Released: March 2016 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU11</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=717701">Released: December 2015 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 CU10</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=624569">Released: September 2015 Quarterly Exchange Updates</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU9</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/?linkid=616334">Released: June 2015 Exchange Cumulative Update and Update Rollups</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 CU8</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/?linkid=526303">Released: Exchange Server 2013 Cumulative Update 8</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU7</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/?linkid=518202">Released: Exchange Server 2013 Cumulative Update 7</a></p>
 <p><a href="https://go.microsoft.com/fwlink/p/?linkid=518373">OAB Improvements in Exchange 2013 Cumulative Update 7</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 CU6</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/?linkid=507530">Released: Exchange Server 2013 Cumulative Update 6</a></p>
 <p><a href="https://go.microsoft.com/fwlink/p/?linkid=510954">Public Folder Updates in Exchange 2013 CU6: Improving Scale and More</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU5</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=398006">Released: Exchange Server 2013 Cumulative Update 5</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 SP1</p></td>
 <td><p>New features and improvements included in Exchange 2013 SP1</p>
 <p><a href="https://go.microsoft.com/fwlink/p/?linkid=390170">Released: Exchange Server 2013 Service Pack 1</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU3</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=330380">Released: Exchange Server 2013 Cumulative Update 3</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 CU2</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=313613">Released: Exchange Server 2013 Cumulative Update 2</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p>Exchange 2013 CU1</p></td>
 <td><p><a href="https://go.microsoft.com/fwlink/p/?linkid=293710">Released: Exchange Server 2013 Cumulative Update 1</a></p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p>Exchange 2013 RTM</p></td>
 <td><p><a href="what-s-new-in-exchange-2013-exchange-2013-help.md">What's new in Exchange 2013</a></p>
 <p><a href="https://go.microsoft.com/fwlink/p/?linkid=507700">Exchange Server 2013 Reaches General Availability</a></p></td>

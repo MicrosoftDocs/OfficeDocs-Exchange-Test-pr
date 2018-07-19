@@ -61,9 +61,7 @@ For additional management tasks related to archives, see:
 
 
 
-3.  
-    
-    In **Retention Tag**, view or modify the following settings, and then click **Save**:
+3.  In **Retention Tag**, view or modify the following settings, and then click **Save**:
     
       - **Name**   Use this box at the top of the page to view or change the tag name.
     

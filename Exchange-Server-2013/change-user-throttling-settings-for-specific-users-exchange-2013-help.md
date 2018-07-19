@@ -49,9 +49,13 @@ This example associates a user with the user name tonysmith with the throttling 
 
 You don't need to use the **Set-ThrottlingPolicyAssociation** cmdlet to associate a user with a policy. The following commands show another way to associate tonysmith with the throttling policy ITStaffPolicy.
 
-    $b = Get-ThrottlingPolicy ITStaffPolicy
+```
+$b = Get-ThrottlingPolicy ITStaffPolicy
+```
 
-    Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
+```
+Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
+```
 
 For more information about syntax and parameters, see [New-ThrottlingPolicy](https://technet.microsoft.com/en-us/library/dd351045\(v=exchg.150\)) and [Set-ThrottlingPolicyAssociation](https://technet.microsoft.com/en-us/library/ff459231\(v=exchg.150\)).
 

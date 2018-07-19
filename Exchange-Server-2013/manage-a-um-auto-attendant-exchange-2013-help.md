@@ -47,9 +47,7 @@ For additional management tasks related to UM auto attendants, see [UM auto atte
 
 2.  On the **UM Dial Plan** page, under **UM Auto Attendants**, select the UM auto attendant you want to view or configure, and then on the toolbar, click **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
 
-3.  
-    
-    On the **UM Auto Attendant** page, click **General** to view display-only information about the UM auto attendant and to perform management tasks on the UM auto attendant, as follows:
+3.  On the **UM Auto Attendant** page, click **General** to view display-only information about the UM auto attendant and to perform management tasks on the UM auto attendant, as follows:
     
       - **UM dial plan**   This box displays the UM dial plan associated with the auto attendant. After you create an auto attendant, the dial plan associated with the auto attendant can't be changed. If you need to associate an auto attendant with a different dial plan, you must delete the dial plan and then associate the auto attendant with the correct dial plan after you re-create it.
     
@@ -57,7 +55,7 @@ For additional management tasks related to UM auto attendants, see [UM auto atte
     
       - **Status**   This box shows whether the UM auto attendant is enabled or disabled. To enable or disable the auto attendant, close the **UM Auto Attendant** page and use the toolbar under **UM Auto Attendants** on the **UM Dial Plan** page.
     
-      - **Access numbers   **Use this box to enter an extension number or access number that leads callers to the auto attendant. By default, no extension or access numbers are configured when you create an auto attendant.
+      - **Access numbers**   Use this box to enter an extension number or access number that leads callers to the auto attendant. By default, no extension or access numbers are configured when you create an auto attendant.
         
         The number of digits in the extension numbers or access numbers you provide must match the number of digits for an extension number configured on the UM dial plan associated with the UM auto attendant. You can also add a Session Initiation Protocol (SIP) address to this box. A SIP address is used by some IP Private Branch eXchanges (PBXs), SIP-enabled PBXs, and Microsoft Office Communications Server 2007 R2 or Microsoft Lync Server.
         
@@ -79,13 +77,11 @@ For additional management tasks related to UM auto attendants, see [UM auto atte
         
         Although you can select a language other than the language selected on the UM dial plan associated with the auto attendant, we recommend that the language settings on the dial plan and the auto attendant match. If language settings don't match, when callers call an extension number defined on the dial plan, they will be presented with prompts in one language, and when they dial an extension number associated with an auto attendant, they will be presented with prompts in a different language.
     
-      - **Business name   **Use this box to enter the name of the business. By default, no business name is entered. If you enter a business name in this box, a prompt with the business name will be played to callers instead of the default greeting.
+      - **Business name**   Use this box to enter the name of the business. By default, no business name is entered. If you enter a business name in this box, a prompt with the business name will be played to callers instead of the default greeting.
     
-      - **Business location   **Use this box to enter the location of the business. By default, no business location is entered. If you enter the location of the business in this box, the business location will be played for callers.
+      - **Business location**   Use this box to enter the location of the business. By default, no business location is entered. If you enter the location of the business in this box, the business location will be played for callers.
 
-4.  
-    
-    Use **Greetings** on the auto attendant to manage recorded greetings. You can select default greetings or previously recorded custom greetings for business hours and non-business hours. You can configure the following:
+4.  Use **Greetings** on the auto attendant to manage recorded greetings. You can select default greetings or previously recorded custom greetings for business hours and non-business hours. You can configure the following:
     
       - **Business hours greeting**   This is the initial greeting that is played when a caller calls the auto attendant during your organization's business hours. By default, business hours are from 12:00 A.M. to 12:00 A.M. and no non-business hours are set. If you don’t specify a custom greeting, a system prompt that says, "Welcome to the Exchange auto attendant" is played for callers. The business and non-business hours are configured on the auto attendant **Business hours**.
         
@@ -248,9 +244,7 @@ For additional management tasks related to UM auto attendants, see [UM auto atte
         
         It's useful to enable this option so that when a caller is unsuccessful at using the menu prompts or directory search to locate the required person after business hours, the caller can leave a voice message or connect to a human operator. After you enable this option, you can configure the operator extension number configured on a UM-enabled mailbox that's monitored. The caller can leave a voice message, or a human operator who has the extension number can help the caller.
 
-9.  
-    
-    Use **Dialing authorization** to configure dialing rules for callers who call in to a UM auto attendant. You can use these settings to control the extension numbers that can be reached from an auto attendant or control the telephone numbers that can be dialed by callers that have dialed into the auto attendant. You can configure the following:
+9.  Use **Dialing authorization** to configure dialing rules for callers who call in to a UM auto attendant. You can use these settings to control the extension numbers that can be reached from an auto attendant or control the telephone numbers that can be dialed by callers that have dialed into the auto attendant. You can configure the following:
     
       - **Calls in the same UM dial plan**   Select this check box to allow users who call in to an auto attendant to place or transfer calls to an extension number associated with a UM-enabled user who is associated with the same dial plan as the auto attendant. By default, this setting is enabled.
         

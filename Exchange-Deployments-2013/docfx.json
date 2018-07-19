@@ -48,11 +48,11 @@
                                          "extendBreadcrumb":  true,
                                          "feedback_system":  "None",
                                          "ROBOTS":  "INDEX,FOLLOW",
-                                         "uhfHeaderId":  "MSDocsHeader-Office",
                                          "ms.topic":  "conceptual",
-                                         "author":  "",
-                                         "ms.author":  "",
-                                         "ms.prod":  "exchange-2013"
+                                         "author":  "dstrome",
+                                         "ms.author":  "dstrome",
+                                         "ms.prod":  "exchange-server-2013",
+                                         "ms.technology": "server-general"
                                      },
                   "fileMetadata":  {
 

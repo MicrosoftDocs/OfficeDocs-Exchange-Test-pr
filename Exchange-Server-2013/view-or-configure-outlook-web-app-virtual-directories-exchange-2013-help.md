@@ -59,9 +59,7 @@ If you use the EAC to view the properties of an Outlook Web App virtual director
 
 2.  In the result pane, click to select the virtual directory you want to view or edit, then click **Edit**.
 
-3.  
-    
-    On the **General** tab, you can view the properties of the Outlook Web App default website and specify an external URL and an internal URL. View or select the following options:
+3.  On the **General** tab, you can view the properties of the Outlook Web App default website and specify an external URL and an internal URL. View or select the following options:
     
       - **Server**   (Read-only.) **Server** displays the name of the server that hosts the Outlook Web App virtual directory.
     
@@ -77,9 +75,7 @@ If you use the EAC to view the properties of an Outlook Web App virtual director
     
       - **External URL**   In this text box, specify the URL used to access the website from the Internet. By default, **External URL** is blank. For Internet-facing Client Access servers, **External URL** should be set to the value published in DNS for that Active Directory site. For Exchange 2013 servers that don't have an Internet presence, the **External URL** setting should remain blank.
 
-4.  
-    
-    On the **Authentication** tab, specify the authentication methods, sign-in format, and sign-in domain.
+4.  On the **Authentication** tab, specify the authentication methods, sign-in format, and sign-in domain.
     
       - **Use one or more standard authentication methods**   Select this option to use one or more of the following standard authentication methods:
         
@@ -104,9 +100,7 @@ If you use the EAC to view the properties of an Outlook Web App virtual director
         
         **User name only** The user enters their user name only, without the domain name, for example, Kweku. If you use the **User name only** sign-in prompt for forms-based authentication, you must also specify the **Logon Domain** property. The **Logon Domain** property determines the default domain to use when a user tries to sign in to Outlook Web App. For example, if the default domain is Contoso, and a domain user named Kweku signs in to Outlook Web App, only Kweku must be entered as the user name. The server will use the default domain Contoso. If the user isn't a member of the Contoso domain, the domain and user name must be entered.
 
-5.  
-    
-    On the **Features** tab, specify the features that you want to enable or disable for Outlook Web App users on a virtual directory.
+5.  On the **Features** tab, specify the features that you want to enable or disable for Outlook Web App users on a virtual directory.
     
 
     > [!NOTE]
@@ -121,9 +115,7 @@ If you use the EAC to view the properties of an Outlook Web App virtual director
 
 
 
-6.  
-    
-    On the **File access** tab, use the check boxes to configure the file access and viewing options for users. File access lets a user open or view the contents of files attached to an email message.
+6.  On the **File access** tab, use the check boxes to configure the file access and viewing options for users. File access lets a user open or view the contents of files attached to an email message.
     
     File access can be controlled based on whether a user has signed in on a public or private computer. The option for users to select private computer access or public computer access are available only when you’re using forms-based authentication. All other forms of authentication default to private computer access.
     

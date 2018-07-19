@@ -321,7 +321,7 @@ To implement IRM in your Exchange 2013 organization, your deployment must meet t
 <tr class="odd">
 <td><p>AD RMS cluster</p></td>
 <td><ul>
-<li><p><strong>Operating system</strong>   Windows Server 2012, Windows Server 2008 R2 or Windows Server 2008 SP2 with the hotfix <a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=973247">Active Directory Rights Management Services role in Windows Server 2008</a> is required.</p></li>
+<li><p><strong>Operating system</strong>   Windows Server 2012, Windows Server 2008 R2 or Windows Server 2008 SP2 with the hotfix <a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=973247">Active Directory Rights Management Services role in Windows Server 2008</a> is required.</p></li>
 <li><p><strong>Service connection point</strong>   Exchange 2010 and AD RMS-aware applications use the service connection point registered in Active Directory to discover an AD RMS cluster and URLs. AD RMS allows you to register the service connection point from within AD RMS Setup. If the account used to set up AD RMS isn't a member of the Enterprise Admins security group, service connection point registration can be performed after setup is complete. There is only one service connection point for AD RMS in an Active Directory forest.</p></li>
 <li><p><strong>Permissions</strong>   Read and Execute permissions to the AD RMS server certification pipeline (<code>ServerCertification.asmx</code> file on AD RMS servers) must be assigned to the following:</p>
 <ul>
@@ -336,7 +336,7 @@ To implement IRM in your Exchange 2013 organization, your deployment must meet t
 <td><p>Exchange</p></td>
 <td><ul>
 <li><p>Exchange 2010 or later is required.</p></li>
-<li><p>The hotfix <a href="http://go.microsoft.com/fwlink/p/?linkid=3052%26kbid=973136">FIX: ArgumentNullException exception error message when a .NET Framework 2.0 SP2-based application tries to process a response with zero-length content to an asynchronous ASP.NET Web service request: &quot;Value cannot be null&quot;</a> is recommended for Microsoft .NET Framework 2.0 SP2.</p></li>
+<li><p>The hotfix <a href="http://go.microsoft.com/fwlink/p/?linkid=3052&kbid=973136">FIX: ArgumentNullException exception error message when a .NET Framework 2.0 SP2-based application tries to process a response with zero-length content to an asynchronous ASP.NET Web service request: &quot;Value cannot be null&quot;</a> is recommended for Microsoft .NET Framework 2.0 SP2.</p></li>
 </ul></td>
 </tr>
 <tr class="odd">

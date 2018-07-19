@@ -51,9 +51,7 @@ In-Place Archiving helps you regain control of your organization’s messaging d
 
 
 
-4.  
-    
-    Select one of the following options:
+4.  Select one of the following options:
     
       - **Existing user**   Click this button and then click **Browse** to open the **Select User – Entire Forest** dialog box. This dialog box displays a list of Active Directory user accounts in the forest that aren't mail-enabled or don't have Exchange mailboxes. Select the user account you want to mail-enable, and then click **OK**. If you select this option, you don’t have to provide user account information because this information already exists in Active Directory.
     
@@ -65,9 +63,7 @@ In-Place Archiving helps you regain control of your organization’s messaging d
 
 
 
-5.  
-    
-    Click **More options** to configure the following settings.
+5.  Click **More options** to configure the following settings.
     
       - **Mailbox database**   Click **Browse** to select a mailbox database in which to store the mailbox. If you don’t select a database, Exchange will automatically assign one.
     
@@ -79,9 +75,7 @@ In-Place Archiving helps you regain control of your organization’s messaging d
     
       - **Address book policy**   Use this list to select an address book policy (ABP) for the mailbox. ABPs contain a global address list (GAL), an offline address book (OAB), a room list, and a set of address lists. When assigned to mailbox users, an ABP provides them with access to a customized GAL in Outlook and Outlook Web App. To learn more, see [Address book policies](address-book-policies-exchange-2013-help.md).
 
-6.  
-    
-    When you're finished, click **Save** to create the mailbox.
+6.  When you're finished, click **Save** to create the mailbox.
 
 ## Use the Shell
 

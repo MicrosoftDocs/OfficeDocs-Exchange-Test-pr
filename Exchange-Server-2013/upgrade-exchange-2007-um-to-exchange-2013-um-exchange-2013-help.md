@@ -353,9 +353,7 @@ In smaller deployments, you may only want to deploy UM so that callers can leave
 
 If required, you can create a UM auto attendant by using the EAC, as follows:
 
-1.  
-    
-    In the EAC, navigate to **Unified Messaging** \> **UM dial plans**. Select the UM dial plan for which you want to add an auto attendant, and then click **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
+1.  In the EAC, navigate to **Unified Messaging** \> **UM dial plans**. Select the UM dial plan for which you want to add an auto attendant, and then click **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
 
 2.  On the **UM dial plan** page, under **UM Auto Attendants**, click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon").
 
@@ -535,14 +533,11 @@ When you’re upgrading to Exchange 2013 UM, you should have already installed a
 
 The last step in the process of upgrading to Exchange 2013 UM is to configure the VoIP gateways, IP PBXs, or SIP-enabled PBXs to send incoming calls—including callers who want to leave voice mail for a user, calls from UM-enabled users calling in to Outlook Voice Access, and calls from callers that dial in to a UM auto attendant—to your Exchange 2013 Client Access servers. All these calls are received first by a VoIP gateway, IP PBX, or SIP-enabled PBX and then forwarded on to the Exchange 2013 Client Access servers in your Exchange 2013 organization. For more information, see the following resources:
 
-  -  
-    [UM services](um-services-exchange-2013-help.md)
+  -  [UM services](um-services-exchange-2013-help.md)
 
-  -  
-    [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)
+  -  [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)
 
-  -  
-    [Telephony advisor for Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md)
+  -  [Telephony advisor for Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md)
 
 ## Step 14: Disable call answering on an Exchange 2007 Unified Messaging server
 

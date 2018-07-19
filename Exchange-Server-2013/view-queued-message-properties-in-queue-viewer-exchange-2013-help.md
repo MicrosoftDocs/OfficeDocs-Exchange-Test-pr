@@ -47,9 +47,7 @@ You can use the Queue Viewer in the Exchange Toolbox to view the properties of a
 
 4.  Right-click the message whose properties you want to view and then select **Properties**.
 
-5.  
-    
-    The **General** tab displays the following detailed information about the message:
+5.  The **General** tab displays the following detailed information about the message:
     
       - **Identity**   This field shows the integer that represents a particular message. The message identity is assigned by the queuing database when the message is received for processing. You can include an optional server and queue identity to identify a unique instance of the message.
     
@@ -93,9 +91,7 @@ You can use the Queue Viewer in the Exchange Toolbox to view the properties of a
     
       - **Retry Count**   This field shows the number of times that delivery of a message to a destination was tried.
 
-6.  
-    
-    The **Recipient Information** tab displays the following information about the message recipients:
+6.  The **Recipient Information** tab displays the following information about the message recipients:
     
       - **Address**   This field shows the SMTP address of the recipient of the message. This value is taken from `RCPT TO:` in the message envelope.
     

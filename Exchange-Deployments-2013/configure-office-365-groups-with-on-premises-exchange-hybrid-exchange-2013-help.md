@@ -116,8 +116,8 @@ The primary SMTP domain of an Office 365 Group is called a *group domain*. By de
     </table>
     
 
-    > [!WARNING]
-    > If the MX DNS record for the group domain is set to the on-premises Exchange server, mail flow won't work correctly between users in the on-premises Exchange organization and the Office 365 Group.
+   > [!WARNING]  
+   > If the MX DNS record for the group domain is set to the on-premises Exchange server, mail flow won't work correctly between users in the on-premises Exchange organization and the Office 365 Group.
 
 
 
@@ -126,7 +126,7 @@ The primary SMTP domain of an Office 365 Group is called a *group domain*. By de
         Set-SendConnector -Identity "Outbound to Office 365" -AddressSpaces "contoso.mail.onmicrosoft.com","groups.contoso.com"
     
 
-    > [!NOTE]
+    > [!NOTE]  
     > If the Send connector isn't updated, or if the group domain isn't added as an accepted domain in the on-premises Exchange organization, mail sent from an on-premises mailbox won't be delivered to the group unless the group is configured to receive mail from external senders.
 
 

@@ -92,11 +92,17 @@ To verify that you’ve successfully created a public folder, do the following:
 
   - In the Shell, run any of the following commands:
     
-        Get-PublicFolder -Identity \Marketing\2013\Reports | Format-List
+    ```
+    Get-PublicFolder -Identity \Marketing\2013\Reports | Format-List
+    ```
     
-        Get-PublicFolder -Identity \Marketing\2013 -GetChildren
+    ```
+    Get-PublicFolder -Identity \Marketing\2013 -GetChildren
+    ```
     
-        Get-PublicFolder -Recurse
+    ```
+    Get-PublicFolder -Recurse
+    ```
 
 
 > [!TIP]
