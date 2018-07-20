@@ -116,18 +116,8 @@ The following tables show the message limits, including information about how to
 <tr class="odd">
 <td><p>Maximum number of recipients per message</p>
 
-<table>
-<thead>
-<tr class="header">
-<th><img src="images/JJ126650.note(EXCHG.150).gif" title="Note" alt="Note" />Note:</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-</tr>
-</tbody>
-</table>
+> [!Tip]  
+> <p></p>
 
 </td>
 <td><p>5000</p></td>
