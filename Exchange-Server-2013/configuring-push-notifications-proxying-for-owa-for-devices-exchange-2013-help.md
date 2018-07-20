@@ -52,10 +52,8 @@ Using a single, standardized method for server-to-server authentication is the a
 OAuth authentication typically involves three components: a single authorization server and the two realms that need to communicate with one another. Security tokens are issued by the authorization server (also known as a security token server) to the two realms that need to communicate; these tokens verify that communications originating from one realm should be trusted by the other realm. For example, the authorization server might issue tokens that verify that users from a specific Lync Server 2013 realm are able to access a specified Exchange 2013 realm, and vice versa.
 
 
-> [!TIP]
+> [!TIP]  
 > A realm is a security container.
-
-
 
 However, for on-premises server-to-server authentication there is no need to use a third-party token server. Server products such as Lync Server 2013 and Exchange 2013 each have a built-in token server that can be used for authentication purposes with other Microsoft servers (such as SharePoint Server) that support server-to-server authentication. For example, Lync Server 2013 can issue and sign a security token by itself, then use that token to communicate with Exchange 2013. In a case like this, there is no need for a third-party token server.
 
@@ -131,12 +129,14 @@ In order to configure server-to-server authentication for an on-premises impleme
     
 The expected result should be similar to the following output.
 
+   ``` 
     Configured Certificate Thumbprint is: 7595DBDEA83DACB5757441D44899BCDB9911253C
     Exporting certificate...
     Complete.
+   ```
     
 
-> [!WARNING]
+> [!WARNING]  
 > Before you continue, the Azure Active Directory Module for Windows PowerShell cmdlets is required. If the Azure Active Directory Module for Windows PowerShell cmdlets (previously known as the Microsoft Online Services Module for Windows PowerShell) hasn’t been installed, you can install it from <A href="https://aka.ms/aadposh">Manage Azure AD using Windows PowerShell</A>.
 
 
@@ -188,8 +188,10 @@ Complete.
 
 After OAuth authentication has been successfully set up following the preceding steps, an on-premises admin must enable push notification proxying by using the following script. Make sure to update the value of *$tenantDomain* to be the name of your domain. To do this, copy and paste the following code.
 
-    $tenantDomain = "Fabrikam.com"
-    Enable-PushNotificationProxy -Organization:$tenantDomain
+```
+$tenantDomain = "Fabrikam.com"
+Enable-PushNotificationProxy -Organization:$tenantDomain
+```
 
 The expected result should be similar to the following output.
 
