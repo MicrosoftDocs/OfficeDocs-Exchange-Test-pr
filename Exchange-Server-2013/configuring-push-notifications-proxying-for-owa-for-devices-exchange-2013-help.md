@@ -129,14 +129,14 @@ In order to configure server-to-server authentication for an on-premises impleme
     
 		The expected result should be similar to the following output.
 
-        ```    
-        Configured Certificate Thumbprint is: 7595DBDEA83DACB5757441D44899BCDB9911253C
-        Exporting certificate...
-        Complete.
-        ```
-
-        > [!WARNING]  
-        > Before you continue, the Azure Active Directory Module for Windows PowerShell cmdlets is required. If the Azure Active Directory Module for Windows PowerShell cmdlets (previously known as the Microsoft Online Services Module for Windows PowerShell) hasn’t been installed, you can install it from <A href="https://aka.ms/aadposh">Manage Azure AD using Windows PowerShell</A>.
+``` 
+Configured Certificate Thumbprint is: 7595DBDEA83DACB5757441D44899BCDB9911253C
+Exporting certificate...
+Complete.
+```
+    
+> [!WARNING]  
+> Before you continue, the Azure Active Directory Module for Windows PowerShell cmdlets is required. If the Azure Active Directory Module for Windows PowerShell cmdlets (previously known as the Microsoft Online Services Module for Windows PowerShell) hasn’t been installed, you can install it from <A href="https://aka.ms/aadposh">Manage Azure AD using Windows PowerShell</A>.
 
 
 
@@ -182,53 +182,15 @@ Please enter the administrator user name and password of the Office 365 tenant d
 Adding a key to Service Principal...
 Complete.
 ```
-        ```
-        # Make sure to update the following $CertFile with the path to the cert if not using the previous script.
-        
-        $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
-        
-        If (Test-Path $CertFile)
-        {
-            $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
-        
-            $objFSO = New-Object -ComObject Scripting.FileSystemObject;
-            $CertFile = $objFSO.GetAbsolutePathName($CertFile);
-        
-            $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate
-            $cer.Import($CertFile);
-            $binCert = $cer.GetRawCertData();
-            $credValue = [System.Convert]::ToBase64String($binCert);
-        
-            Write-Host "Please enter the administrator user name and password of the Office 365 tenant domain..."
-        
-            Connect-MsolService;
-            Import-Module msonlineextended;
-        
-            Write-Host "Adding a key to Service Principal..."
-        
-            $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
-            New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
-        }
-        Else
-        {
-            Write-Error "Cannot find certificate."
-        } 
-        ```
-
-        The expected result should be as follows.
-
-        ```
-        Please enter the administrator user name and password of the Office 365 tenant domain...
-        Adding a key to Service Principal...
-        Complete.
-        ```
-
+       
 ## Enable push notifications proxying
 
 After OAuth authentication has been successfully set up following the preceding steps, an on-premises admin must enable push notification proxying by using the following script. Make sure to update the value of *$tenantDomain* to be the name of your domain. To do this, copy and paste the following code.
 
-    $tenantDomain = "Fabrikam.com"
-    Enable-PushNotificationProxy -Organization:$tenantDomain
+```
+$tenantDomain = "Fabrikam.com"
+Enable-PushNotificationProxy -Organization:$tenantDomain
+```
 
 The expected result should be similar to the following output.
 
