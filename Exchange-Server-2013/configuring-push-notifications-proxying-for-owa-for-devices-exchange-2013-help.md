@@ -55,6 +55,8 @@ OAuth authentication typically involves three components: a single authorization
 > [!TIP]  
 > A realm is a security container.
 
+
+
 However, for on-premises server-to-server authentication there is no need to use a third-party token server. Server products such as Lync Server 2013 and Exchange 2013 each have a built-in token server that can be used for authentication purposes with other Microsoft servers (such as SharePoint Server) that support server-to-server authentication. For example, Lync Server 2013 can issue and sign a security token by itself, then use that token to communicate with Exchange 2013. In a case like this, there is no need for a third-party token server.
 
 In order to configure server-to-server authentication for an on-premises implementation of Exchange Server 2013 to Office 365, you must complete two steps:
@@ -63,7 +65,6 @@ In order to configure server-to-server authentication for an on-premises impleme
    
         > [!WARNING]  
         > Copying and pasting the code into a text editor like Notepad and saving it with a .ps1 extension makes it easier to run Shell scripts.
-
 
         ```
         # Make sure to update the following $tenantDomain with your Office 365 tenant domain.
@@ -126,8 +127,8 @@ In order to configure server-to-server authentication for an on-premises impleme
         }
         Write-Host "Complete."
         ```
-    
-		The expected result should be similar to the following output.
+
+        The expected result should be similar to the following output.
 
 ``` 
 Configured Certificate Thumbprint is: 7595DBDEA83DACB5757441D44899BCDB9911253C
@@ -142,47 +143,49 @@ Complete.
 
   -  **Step 2 – Configure Office 365 to communicate with Exchange 2013 on-premises.** Configure the Office 365 server that Exchange Server 2013 will communicate with to be a partner application. For example, if Exchange Server 2013 on-premises needs to communicate with Office 365, you need to configure Exchange on-premises to be a partner application. A partner application is any application that Exchange 2013 can directly exchange security tokens with, without having to go through a third-party security token server. An on-premises Exchange 2013 administrator must use the following Exchange Management Shell script to configure the Office 365 tenant that Exchange 2013 will communicate with to be a partner application. During execution, there will be a prompt to enter the administrator user name and password of the Office 365 tenant domain—for example, administrator@fabrikam.com. Make sure to update the value of *$CertFile* to the location of the certificate if not created from the previous script. To do this, copy and paste the following code.
     
-```
-# Make sure to update the following $CertFile with the path to the cert if not using the previous script.
-    
-    $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
-    
-    If (Test-Path $CertFile)
-    {
-        $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
-    
-        $objFSO = New-Object -ComObject Scripting.FileSystemObject;
-        $CertFile = $objFSO.GetAbsolutePathName($CertFile);
-    
-        $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate
-        $cer.Import($CertFile);
-        $binCert = $cer.GetRawCertData();
-        $credValue = [System.Convert]::ToBase64String($binCert);
-    
-        Write-Host "Please enter the administrator user name and password of the Office 365 tenant domain..."
-    
-        Connect-MsolService;
-        Import-Module msonlineextended;
-    
-        Write-Host "Adding a key to Service Principal..."
-    
-        $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
-        New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
-    }
-    Else
-    {
-        Write-Error "Cannot find certificate."
-    }
-``` 
-    
-The expected result should be as follows.
 
-```
-Please enter the administrator user name and password of the Office 365 tenant domain...
-Adding a key to Service Principal...
-Complete.
-```
-       
+        ```
+        # Make sure to update the following $CertFile with the path to the cert if not using the previous script.
+        
+        $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
+        
+        If (Test-Path $CertFile)
+        {
+            $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
+        
+            $objFSO = New-Object -ComObject Scripting.FileSystemObject;
+            $CertFile = $objFSO.GetAbsolutePathName($CertFile);
+        
+            $cer = New-Object System.Security.Cryptography.X509Certificates.X509Certificate
+            $cer.Import($CertFile);
+            $binCert = $cer.GetRawCertData();
+            $credValue = [System.Convert]::ToBase64String($binCert);
+        
+            Write-Host "Please enter the administrator user name and password of the Office 365 tenant domain..."
+        
+            Connect-MsolService;
+            Import-Module msonlineextended;
+        
+            Write-Host "Adding a key to Service Principal..."
+        
+            $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
+            New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue -StartDate $cer.GetEffectiveDateString() -EndDate $cer.GetExpirationDateString()
+        }
+        Else
+        {
+            Write-Error "Cannot find certificate."
+        } 
+        ```
+
+        The expected result should be as follows.
+
+        ```
+        Please enter the administrator user name and password of the Office 365 tenant domain...
+        Adding a key to Service Principal...
+        Complete.
+        ```
+
+
 ## Enable push notifications proxying
 
 After OAuth authentication has been successfully set up following the preceding steps, an on-premises admin must enable push notification proxying by using the following script. Make sure to update the value of *$tenantDomain* to be the name of your domain. To do this, copy and paste the following code.
@@ -232,29 +235,27 @@ After the preceding steps have been completed, push notifications can be tested 
 
   - **Enabling monitoring.** An alternate method to test push notifications, or to investigate why notifications are failing, is to enable monitoring on a mailbox server in your organization. An on-premises Exchange 2013 server admin must invoke push notification proxy monitoring by using the following script. To do this, copy and paste the following code.
     
-    ```
-    # Send a push notification to verify connectivity.
-    
-    $s = Get-ExchangeServer | ?{$_.ServerRole -match "Mailbox"}
-    If ($s.Count -gt 1)
-    {
-        $s = $s[0]
-    }
-    If ($s.Count -ne 0)
-    {
-        # Restart the monitoring service to clear the cache from when push was previously disabled.
-        Restart-Service MSExchangeHM
-    
-        # Give the monitoring service enough time to load.
-        Start-Sleep -Seconds:120
-    
-        Invoke-MonitoringProbe PushNotifications.Proxy\PushNotificationsEnterpriseConnectivityProbe -Server:$s.Fqdn | fl ResultType, Error, Exception
-    }
-    Else
-    {
-        Write-Error "Cannot find a Mailbox server in the current site."
-    }
-    ```
+        # Send a push notification to verify connectivity.
+        
+        $s = Get-ExchangeServer | ?{$_.ServerRole -match "Mailbox"}
+        If ($s.Count -gt 1)
+        {
+            $s = $s[0]
+        }
+        If ($s.Count -ne 0)
+        {
+            # Restart the monitoring service to clear the cache from when push was previously disabled.
+            Restart-Service MSExchangeHM
+        
+            # Give the monitoring service enough time to load.
+            Start-Sleep -Seconds:120
+        
+            Invoke-MonitoringProbe PushNotifications.Proxy\PushNotificationsEnterpriseConnectivityProbe -Server:$s.Fqdn | fl ResultType, Error, Exception
+        }
+        Else
+        {
+            Write-Error "Cannot find a Mailbox server in the current site."
+        }
     
     The expected result should be similar to the following output.
     
