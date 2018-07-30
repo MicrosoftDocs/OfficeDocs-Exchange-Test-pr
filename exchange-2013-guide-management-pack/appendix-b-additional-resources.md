@@ -78,15 +78,10 @@ The following resources provide information about common tasks associated with S
 
   - [Operations Manager 2007 Management Pack and Report Authoring Resources](https://go.microsoft.com/fwlink/?linkid=246388)
 
-<div class="alert">
-
 
 > [!IMPORTANT]
 > All information and content on non-Microsoft sites is provided by the owner or the users of the website. Microsoft makes no warranties, express, implied, or statutory, as to the information on these websites.
 
-
-
-</div>
 
 </div>
 

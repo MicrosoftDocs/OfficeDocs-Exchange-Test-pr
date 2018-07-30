@@ -77,9 +77,13 @@ This example does the following:
 
 <!-- end list -->
 
-    $file = Get-ExchangeCertificate -DomainName umcorp.northwindtraders.com | Export-ExchangeCertificate -BinaryEncoded:$true -Password (Get-Credential).password
+  ```
+  $file = Get-ExchangeCertificate -DomainName umcorp.northwindtraders.com | Export-ExchangeCertificate -BinaryEncoded:$true -Password (Get-Credential).password
+  ```
 
-    Set-Content -Path "d:\umcerts\selfsigned.pfx" -Value $file.FileData =Encoding Byte
+  ```
+  Set-Content -Path "d:\umcerts\selfsigned.pfx" -Value $file.FileData =Encoding Byte
+  ```
 
 ## Use the EAC to import a certificate
 
@@ -94,4 +98,3 @@ This example does the following:
 This example imports a certificate from the d:\\certificates\\exchange\\SelfSignedUMCert.pfx certificate file after you enter a user name and password.
 
     Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path d:\certificates\exchange\SelfSignedUMCert.pfx -Encoding Byte -ReadCount 0)) -Password:(Get-Credential).password
-

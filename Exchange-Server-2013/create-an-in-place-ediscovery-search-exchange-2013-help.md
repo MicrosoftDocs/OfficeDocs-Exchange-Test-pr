@@ -166,11 +166,17 @@ You can use the *EstimateOnly* switch to return only get an estimate of the sear
 
 For example, you would run the following commands to create a new eDiscovery search and then display an estimate of the search results:
 
-    New-MailboxSearch "FY13 Q2 Financial Results" -StartDate "04/01/2013" -EndDate "06/30/2013" -SourceMailboxes "DG-Finance" -SearchQuery '"Financial" AND "Fabrikam"' -EstimateOnly -IncludeKeywordStatistics
+```
+New-MailboxSearch "FY13 Q2 Financial Results" -StartDate "04/01/2013" -EndDate "06/30/2013" -SourceMailboxes "DG-Finance" -SearchQuery '"Financial" AND "Fabrikam"' -EstimateOnly -IncludeKeywordStatistics
+```
 
-    Start-MailboxSearch "FY13 Q2 Financial Results"
+```
+Start-MailboxSearch "FY13 Q2 Financial Results"
+```
 
-    Get-MailboxSearch "FY13 Q2 Financial Results"
+```
+Get-MailboxSearch "FY13 Q2 Financial Results"
+```
 
 To display specific information about the estimated search results from the previous example, you could run the following command:
 

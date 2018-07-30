@@ -43,17 +43,13 @@ Run the following command:
 
 This example sets the following agent log settings on the Mailbox server named Mailbox01:
 
-  -  
-    Sets the location of the agent log files to D:\\Anti-Spam Agent Log. Note that if the folder doesn't exist, it will be created for you.
+  -  Sets the location of the agent log files to D:\\Anti-Spam Agent Log. Note that if the folder doesn't exist, it will be created for you.
 
-  -  
-    Sets the maximum size of an agent log file to 20 MB.
+  -  Sets the maximum size of an agent log file to 20 MB.
 
-  -  
-    Sets the maximum size of the agent log directory to 400 MB.
+  -  Sets the maximum size of the agent log directory to 400 MB.
 
-  -  
-    Sets the maximum age of an agent log file to 14 days.
+  -  Sets the maximum age of an agent log file to 14 days.
 
 <!-- end list -->
 

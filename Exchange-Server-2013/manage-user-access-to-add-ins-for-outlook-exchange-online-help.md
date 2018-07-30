@@ -109,9 +109,13 @@ Or
 
 If you want only members of your Marketing team distribution group to be able to use the LinkedIn add-in, run the following commands.
 
-    $a = Get-DistributionGroupMember Marketing
+```
+$a = Get-DistributionGroupMember Marketing
+```
 
-    Set-app <add-in ID for the LinkedIn add-in> -Organizationadd-in -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled}
+```
+Set-app <add-in ID for the LinkedIn add-in> -Organizationadd-in -ProvidedTo SpecificUsers -UserList $a.Identity -DefaultStateForUser Enabled}
+```
 
 For detailed syntax and parameters, see [Set-App](https://technet.microsoft.com/en-us/library/jj218630\(v=exchg.150\)).
 

@@ -63,9 +63,7 @@ Looking for other management tasks related to DAGs? Check out [Managing database
 
 2.  Click ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to create a DAG.
 
-3.  
-    
-    On the **new database availability group** page, provide the following information for the DAG:
+3.  On the **new database availability group** page, provide the following information for the DAG:
     
       - **Database availability group name**   Use this field to type a valid and unique name for the DAG of up to 15 characters. The name is equivalent to a computer name, and a corresponding CNO will be created in Active Directory with that name. This name will be both the name of the DAG and the name of the underlying cluster.
     

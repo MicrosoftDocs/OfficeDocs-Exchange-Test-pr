@@ -77,7 +77,7 @@ Exchange 2007 reached end of support on April 11, 2017, per the [Microsoft Lifec
 The following table identifies the operating system platforms on which each version of Exchange can run. Supported platforms are identified by an X character.
 
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Releases of Windows Server and Windows client that aren't listed in the table below are not supported for use with any version or release of Exchange.
 
 
@@ -437,7 +437,7 @@ The following table identifies the Web browsers supported for use together with 
 The following table identifies the Web browsers supported for use together with the light (basic) version of Outlook Web App or Outlook on the web. . Supported browsers are identified by an X character.
 
 
-> [!NOTE]
+> [!NOTE]  
 > Outlook Web App Basic (Outlook Web App Light) is supported for use in mobile browsers. However, if rendering or authentication issues occur in a mobile browser, determine whether the issue can be reproduced by using Outlook Web App Light in the full client of a supported browser. For example, test the use of Outlook Web App Light in Safari, Chrome, or Internet Explorer. If the issue can’t be reproduced in the full client, we recommend that you contact the mobile device vendor for help. In these cases, we collaborate with the vendor as appropriate.
 
 
@@ -731,13 +731,13 @@ The following table identifies the version of Microsoft Exchange that can be use
 The following table identifies the version of the Microsoft .NET Framework that can be used together with each version of Exchange. Supported versions are identified by an X character.
 
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > <STRONG>Releases of .NET Framework that aren't listed in the table below are not supported on any version or release of Exchange.</STRONG> This includes minor and patch-level releases of .NET Framework.
 
 
 
 
-> [!NOTE]
+> [!NOTE]  
 > When upgrading Exchange from an unsupported CU to the current CU and no intermediate CUs are available, you should upgrade to the latest version of .NET that's supported by Exchange first and then immediately upgrade to the current CU. This method doesn't replace the need to keep your Exchange servers up to date and on the latest, supported, CU.<BR>Microsoft makes no claim that an upgrade failure will not occur using this method, which may result in the need to contact Microsoft Support Services.
 
 
@@ -819,44 +819,9 @@ The following table identifies the version of the Microsoft .NET Framework that
 
 2 Exchange 2010 uses only the .NET .NET Framework 3.5 and .NET .NET Framework 3.5 SP1 libraries. It doesn't use the .NET .NET Framework 4.5 libraries if they're installed on the computer. We support the installation of any major or minor version of .NET .NET Framework 4.5 (for example, .NET .NET Framework 4.5.1, .NET .NET Framework 4.5.2, and so on) as long as .NET .NET Framework 3.5 or .NET .NET Framework 3.5 SP1 are also installed on the computer.
 
-## Windows Management Framework
+## Windows PowerShell
 
-The following table identifies the version of the Windows Management Framework, which contains the Windows PowerShell command-line interface, that can be used together with each version of Exchange. Supported versions are identified by an X character.
-
-
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Windows PowerShell</th>
-<th>Exchange 2016</th>
-<th>Exchange 2013</th>
-<th>Exchange 2010</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Windows PowerShell 2.0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="even">
-<td><p>Windows Management Framework</p></td>
-<td><p>Version of Windows Management Framework built into the release of Windows Server you're installing Exchange on.</p></td>
-<td><p>Version of Windows Management Framework built into the release of Windows Server you're installing Exchange on.</p></td>
-<td><p>Version of Windows Management Framework built into the release of Windows Server you're installing Exchange on.1</p></td>
-</tr>
-</tbody>
-</table>
-
-
-1 Windows Management Framework 3.0 and Windows Management Framework 4.0 can be used to perform operating system-related management tasks on a computer that's running Exchange 2010 SP3 RU5 or later. However, Exchange 2010 cmdlets and Exchange 2010 scripts require Windows PowerShell 2.0. Using Exchange 2010 cmdlets and scripts with Windows Management Framework 3.0 or Windows Management Framework 4.0 isn't supported.
+Exchange 2010 requires Windows PowerShell 2.0 on all supported operating systems. Exchange 2013 and later versions require the version of PowerShell that is shipped together with the system, unless otherwise specified by a Setup-enforced prerequisite rule. Exchange does not support the use of the Windows Management Framework add-ons on any version of PowerShell or operating system. If there are other installed versions of PowerShell that support side-by-side operation, Exchange will use only the version that it requires.
 
 ## Microsoft Management Console
 

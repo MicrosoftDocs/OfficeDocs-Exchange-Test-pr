@@ -70,11 +70,9 @@ You can use the transport rule conditions in the following table to examine the 
 
 The Exchange Management Shell names for the conditions listed here are parameters that require the `TransportRule` cmdlet.
 
-  -  
-    Learn more about the cmdlet at [New-TransportRule](https://technet.microsoft.com/en-us/library/bb125138\(v=exchg.150\)).
+  -  Learn more about the cmdlet at [New-TransportRule](https://technet.microsoft.com/en-us/library/bb125138\(v=exchg.150\)).
 
-  -  
-    Learn more about property types for these conditions at [Conditions and Condition Properties for a Mailbox Server](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md).
+  -  Learn more about property types for these conditions at [Conditions and Condition Properties for a Mailbox Server](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md).
 
 Transport rules can inspect only the content of supported file types. If the transport rules agent encounters an attachment that isn't in the list of supported file types, the `AttachmentIsUnsupported` condition is triggered. The supported file types are listed in the following section. Any file not listed will trigger the `AttachmentIsUnsupported` condition.
 
@@ -211,11 +209,9 @@ The following transport rule conditions inspect the properties of a file that is
 
 The Exchange Management Shell names for the conditions listed here are parameters that require the `TransportRule` cmdlet.
 
-  -  
-    Learn more about the cmdlet at [New-TransportRule](https://technet.microsoft.com/en-us/library/bb125138\(v=exchg.150\)).
+  -  Learn more about the cmdlet at [New-TransportRule](https://technet.microsoft.com/en-us/library/bb125138\(v=exchg.150\)).
 
-  -  
-    Learn more about property types for these conditions at [Conditions and Condition Properties for a Mailbox Server](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md).
+  -  Learn more about property types for these conditions at [Conditions and Condition Properties for a Mailbox Server](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md).
 
 ## Supported executable file types for transport rule inspection
 

@@ -565,14 +565,11 @@ When you’re upgrading to Exchange 2013 UM, you should have already installed a
 
 The last step in the process of upgrading to Exchange 2013 UM is to configure the VoIP gateways, IP PBXs, or SIP-enabled PBXs to send incoming calls—including callers who want to leave voice mail for a user, calls from UM-enabled users calling in to Outlook Voice Access, and calls from callers that dial in to a UM auto attendant—to your Exchange 2013 Client Access servers. All these calls are received first by a VoIP gateway, IP PBX, or SIP-enabled PBX and then forwarded on to the Exchange 2013 Client Access servers in your Exchange 2013 organization. For more information, see the following resources:
 
-  -  
-    [UM services](um-services-exchange-2013-help.md)
+  -  [UM services](um-services-exchange-2013-help.md)
 
-  -  
-    [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)
+  -  [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)
 
-  -  
-    [Telephony advisor for Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md)
+  -  [Telephony advisor for Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md)
 
 ## Step 15: Disable call answering on an Exchange 2010 Unified Messaging server
 

@@ -49,27 +49,22 @@ It's important to note the terminology differences between Active Directory and 
 
 2.  Click **New** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") \> **Distribution group**.
 
-3.  
-    
-
-    > [!TIP]
+3.  > [!TIP]  
     > <IMG title="New Try Office 365 Groups" alt="New Try Office 365 Groups" src="images/Bb124513.3ea82c95-9dda-450f-823b-cd0772249d81(EXCHG.150).png"><BR>You can now create an Office 365 group instead of a distribution group, if you have an Office 365 for business plan or an Exchange Online plan. Office 365 groups have the features of a distribution group and much more. With Office 365 groups, you can send email to a group, share a common calendar, have a library for storing and working on group files and folders. Click <STRONG>New</STRONG> <IMG title="Add Icon" alt="Add Icon" src="images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif">&nbsp;&gt;&nbsp;<STRONG>Office 365 group</STRONG> to get started and check out <A href="https://go.microsoft.com/fwlink/p/?linkid=800653">Office 365 Groups - Admin help</A>.<BR>If you have existing distribution groups that you want to migrate to Office 365 groups, check out <A href="https://go.microsoft.com/fwlink/p/?linkid=824756">Migrate distribution lists to Office 365 Groups - Admin help</A>.<BR>If you still want to create a distribution group, click or tap the <STRONG>New distribution group</STRONG> wizard.
 
 
 
-4.  
+4.  On the **New distribution group** page, complete the following boxes:
     
-    On the **New distribution group** page, complete the following boxes:
+      - \* **Display name**   Use this box to type the display name. This name appears in your organization’s address book, on the To: line when email is sent to this group, and in the Groups list in the EAC. The display name is required and should be user-friendly so people recognize what it is. It also must be unique in the forest.
     
-      - **\* Display name**   Use this box to type the display name. This name appears in your organization’s address book, on the To: line when email is sent to this group, and in the Groups list in the EAC. The display name is required and should be user-friendly so people recognize what it is. It also must be unique in the forest.
-    
-      - **\* Alias**   Use this box to type the name of the alias for the group. The alias can’t exceed 64 characters and must be unique in the forest. When a user types the alias in the To: line of an email message, it resolves to the group's display name.
+      - \* **Alias**   Use this box to type the name of the alias for the group. The alias can’t exceed 64 characters and must be unique in the forest. When a user types the alias in the To: line of an email message, it resolves to the group's display name.
     
       - **Organizational unit**   (You'll only see this option in Exchange 2013 on-premises) You can select an organizational unit (OU) other than the default (which is the recipient scope). If the recipient scope is set to the forest, the default value is set to the Users container in the Active Directory domain that contains the computer on which the EAC is running. If the recipient scope is set to a specific domain, the Users container in that domain is selected by default. If the recipient scope is set to a specific OU, that OU is selected by default.
         
         To select a different OU, click **Browse**. The dialog box displays all OUs in the forest that are within the specified scope. Select the OU you want, and then click **OK**.
     
-      - **\* Owners**   By default, the person who creates a group is the owner. All groups must have at least one owner. You can add owners by clicking **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon").
+      - \* **Owners**   By default, the person who creates a group is the owner. All groups must have at least one owner. You can add owners by clicking **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon").
     
       - **Members**   Use this section to add members and to specify whether approval is required for people to join or leave the group.
         
@@ -87,9 +82,9 @@ It's important to note the terminology differences between Active Directory and 
         
         Under **Choose whether the group is open to leave**, specify whether approval is required for people to leave the group. Select one of the following settings:
         
-          - **Open: Anyone can leave this group without being approved by the group owners   **This is the default setting.
+          - **Open: Anyone can leave this group without being approved by the group owners**  This is the default setting.
         
-          - **Closed: Members can be removed only by the group owners. All requests to leave will be rejected automatically   **
+          - **Closed: Members can be removed only by the group owners. All requests to leave will be rejected automatically**
 
 5.  When you've finished, click **Save** to create the distribution group.
 
@@ -155,11 +150,11 @@ To verify that you’ve successfully created a distribution group, do one of the
 
 Use this section to view or change basic information about the group.
 
-  - **\* Display name**   This name appears in the address book, on the To: line when email is sent to this group, and in the Groups list. The display name is required and should be user-friendly so people recognize what it is. It also has to be unique in your domain.
+  - \* **Display name**   This name appears in the address book, on the To: line when email is sent to this group, and in the Groups list. The display name is required and should be user-friendly so people recognize what it is. It also has to be unique in your domain.
     
     If you've implemented a group naming policy, the display name has to conform to the naming format defined by the policy.
 
-  - **\* Alias**   This is the portion of the email address that appears to the left of the at (@) symbol. If you change the alias, the primary SMTP address for the group will also be changed, and contain the new alias. Also, the email address with the previous alias will be kept as a proxy address for the group.
+  - \* **Alias**   This is the portion of the email address that appears to the left of the at (@) symbol. If you change the alias, the primary SMTP address for the group will also be changed, and contain the new alias. Also, the email address with the previous alias will be kept as a proxy address for the group.
 
   - **Description**   Use this box to describe the group so people know what the purpose of the group is. This description appears in the address book and in the Details pane in the EAC.
 
@@ -195,11 +190,11 @@ Use this section to specify whether approval is required for users to join or le
     
       - **Owner Approval: All requests are approved or rejected by the group owners**   If you select this option, the group owner or owners receive an email requesting approval to join the group.
 
-  - **Choose whether the group is open to leave   **Select one of the following settings:
+  - **Choose whether the group is open to leave**   Select one of the following settings:
     
-      - **Open: Anyone can leave this group without being approved by the group owners   **
+      - **Open: Anyone can leave this group without being approved by the group owners**   
     
-      - **Closed: Members can be removed only by the group owners. All requests to leave will be rejected automatically   **
+      - **Closed: Members can be removed only by the group owners. All requests to leave will be rejected automatically**   
 
 ## Delivery management
 
@@ -241,16 +236,16 @@ Use this section to set options for moderating the group. Moderators approve or 
 
 Use this section to view or change the email addresses associated with the group. This includes the group’s primary SMTP addresses and any associated proxy addresses. The primary SMTP address (also known as the *reply address*) is displayed in bold text in the address list, with the uppercase **SMTP** value in the **Type** column.
 
-  - **Add **  Click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add a new email address for this mailbox. Select one of following address types:
+  - **Add**  Click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add a new email address for this mailbox. Select one of following address types:
     
-      - **SMTP**   This is the default address type. Click this button and then type the new SMTP address in the **\* Email address** box.
+      - **SMTP**   This is the default address type. Click this button and then type the new SMTP address in the \* **Email address** box.
         
 
         > [!NOTE]
         > To make the new address the primary SMTP address for the group, select the <STRONG>Make this the reply address</STRONG> check box.
 
     
-      - **Custom address type**   Click this button and type one of the supported non-SMTP email address types in the **\* Email address** box.
+      - **Custom address type**   Click this button and type one of the supported non-SMTP email address types in the \* **Email address** box.
         
 
         > [!NOTE]
@@ -268,7 +263,7 @@ Use this section to view or change the email addresses associated with the group
 
   - **Remove**   To delete an email address associated with the group, select it in the list, and then click **Remove** ![Remove icon](images/Dd362328.479b6ced-8d64-4277-a725-f17fea202b28(EXCHG.150).gif "Remove icon").
 
-  - **Automatically update email addresses based on the email address policy applied to this recipient   **Select this check box to have the recipient's email addresses automatically updated based on changes made to email address policies in your organization. This box is selected by default.
+  - **Automatically update email addresses based on the email address policy applied to this recipient**   Select this check box to have the recipient's email addresses automatically updated based on changes made to email address policies in your organization. This box is selected by default.
 
 ## MailTip
 

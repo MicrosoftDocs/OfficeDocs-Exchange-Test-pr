@@ -29,14 +29,11 @@ For more information about the Exchange Management Shell, see [Using PowerShell 
 
   - For any DLP policy, you can select one of three modes:
     
-      -  
-        **Enforce**   Rules within the policy are evaluated for all messages and supported file types. Mail flow can be disrupted if data is detected that meets the conditions of the policy. All actions described within the policy are taken.
+      -    **Enforce**   Rules within the policy are evaluated for all messages and supported file types. Mail flow can be disrupted if data is detected that meets the conditions of the policy. All actions described within the policy are taken.
     
-      -  
-        **Test DLP policy with Policy Tips**   Rules within the policy are evaluated for all messages and supported file types. Mail flow will not be disrupted if data is detected that meets the conditions of the policy. That is, messages are not blocked. If Policy Tips are configured, they are shown to users.
+      -    **Test DLP policy with Policy Tips**   Rules within the policy are evaluated for all messages and supported file types. Mail flow will not be disrupted if data is detected that meets the conditions of the policy. That is, messages are not blocked. If Policy Tips are configured, they are shown to users.
     
-      -  
-        **Test DLP policy without Policy Tips**   Rules within the policy are evaluated for all messages and supported file types. Mail flow will not be disrupted if data is detected that meets the conditions of the policy. That is, messages are not blocked. If Policy Tips are configured, they are not shown to users.
+      -    **Test DLP policy without Policy Tips**   Rules within the policy are evaluated for all messages and supported file types. Mail flow will not be disrupted if data is detected that meets the conditions of the policy. That is, messages are not blocked. If Policy Tips are configured, they are not shown to users.
 
   - An individual rule within a DLP policy can have its own mode settings. When the mode of a policy is different than the mode of a rule within that policy, the rule setting has priority and will be evaluated according to its mode.
 

@@ -49,9 +49,7 @@ You can use the EAC or the Shell to configure the properties of a database avail
 
 2.  Select the DAG you want to configure and click ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
 
-3.  
-    
-    Use the **General** page to view DAG membership and operational status, and to configure the DAG's witness server, witness directory, and automatic network configuration:
+3.  Use the **General** page to view DAG membership and operational status, and to configure the DAG's witness server, witness directory, and automatic network configuration:
     
       - **Witness server**   The host name or fully qualified domain name (FQDN) of the witness server for the DAG. Although this is a required property for all DAGs, the witness server is used when there is an even number of DAG members and the quorum model in use by the cluster is Node and File Share Majority.
     
@@ -61,9 +59,7 @@ You can use the EAC or the Shell to configure the properties of a database avail
     
       - **Configure the database group network manually**   A check box that you select when you want to configure all DAG networks manually. When you leave the check box clear, the system configures DAG networks automatically based on network interface configuration. If the check box is clear, the **Set-DatabaseAvailabilityGroupNetwork** and **New-DatabaseAvailabilityGroupNetwork** cmdlets are disabled for administrative use against the DAG.
 
-4.  
-    
-    Use the **IP Addresses** page to view and modify the IP addresses assigned to the DAG:
+4.  Use the **IP Addresses** page to view and modify the IP addresses assigned to the DAG:
     
       - Select an existing IP address and click ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon") to modify it.
     
@@ -71,9 +67,7 @@ You can use the EAC or the Shell to configure the properties of a database avail
     
       - Enter an IP address and click ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add it to the DAG.
 
-5.  
-    
-    Click **Save** to save any changes that were made.
+5.  Click **Save** to save any changes that were made.
 
 ## Use the Shell to configure database availability group properties
 

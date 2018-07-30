@@ -92,7 +92,7 @@ Items in the Deleted Items folder and items which may have a start and end date,
 <ol>
 <li><p>A non-recurring task expires according to its <code>message-received date</code>, if one exists.</p></li>
 <li><p>If a non-recurring task doesn't have a <code>message-received date</code>, it expires according to its <code>message-creation date</code>.</p></li>
-<li><p>If a non-recurring task has neither a <code>message-received date</code> nor a<code> </code><code>message-creation date</code>, it doesn't expire.</p></li>
+<li><p>If a non-recurring task has neither a <code>message-received date</code> nor a <code>message-creation date</code>, it doesn't expire.</p></li>
 </ol></li>
 <li><p>A recurring task expires according to the <code>end date</code> of its last occurrence. If a recurring task doesn't have an <code>end date</code>, it doesn't expire.</p></li>
 <li><p>A regenerating task (which is a recurring task that regenerates a specified time after the preceding instance of the task is completed) doesn't expire.</p></li>

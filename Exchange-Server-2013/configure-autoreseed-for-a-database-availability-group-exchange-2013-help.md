@@ -120,13 +120,21 @@ The mounted volumes should appear in the output list.
 
 Next, create the database directories under the root path C:\\ExchangeDatabases. This example illustrates how to create directories for a storage configuration with 4 databases on each volume.
 
-    md c:\ExchangeDatabases\db001
+```
+md c:\ExchangeDatabases\db001
+```
 
-    md c:\ExchangeDatabases\db002
+```
+md c:\ExchangeDatabases\db002
+```
 
-    md c:\ExchangeDatabases\db003
+```
+md c:\ExchangeDatabases\db003
+```
 
-    md c:\ExchangeDatabases\db004
+```
+md c:\ExchangeDatabases\db004
+```
 
 ## How do you know this step worked?
 
@@ -160,21 +168,37 @@ C:\\\< *DatabaseFolderName*\>\\*DatabaseName*\\\<*DatabaseName*\>.log
 
 This example illustrates how to create directories for 4 databases that will be stored on Volume 1:
 
-    md c:\ExchangeDatabases\db001\db001.db
+```
+md c:\ExchangeDatabases\db001\db001.db
+```
 
-    md c:\ExchangeDatabases\db001\db001.log
+```
+md c:\ExchangeDatabases\db001\db001.log
+```
 
-    md c:\ExchangeDatabases\db002\db002.db
+```
+md c:\ExchangeDatabases\db002\db002.db
+```
 
-    md c:\ExchangeDatabases\db002\db002.log
+```
+md c:\ExchangeDatabases\db002\db002.log
+```
 
-    md c:\ExchangeDatabases\db003\db003.db
+```
+md c:\ExchangeDatabases\db003\db003.db
+```
 
-    md c:\ExchangeDatabases\db003\db003.log
+```
+md c:\ExchangeDatabases\db003\db003.log
+```
 
-    md c:\ExchangeDatabases\db004\db004.db
+```
+md c:\ExchangeDatabases\db004\db004.db
+```
 
-    md c:\ExchangeDatabases\db004\db004.log
+```
+md c:\ExchangeDatabases\db004\db004.log
+```
 
 Repeat the preceding commands for databases on every volume.
 
@@ -210,7 +234,11 @@ To verify that you've configured AutoReseed for a DAG, do the following:
 
 2.  Run the following command to verify the directory structure is configured correctly (below are the default paths; if necessary, substitute the paths for the paths you're using).
     
-        Dir c:\ExchangeDatabases /s
-    
-        Dir c:\ExchangeVolumes /s
+    ```
+    Dir c:\ExchangeDatabases /s
+    ```
+
+    ```
+    Dir c:\ExchangeVolumes /s
+    ```
 

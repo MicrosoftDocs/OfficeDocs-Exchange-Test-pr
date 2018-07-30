@@ -26,7 +26,7 @@ To find out what permissions you need to perform the procedure or run the cmdlet
 3.  Now, run the **Get-ManagementRoleAssignment** cmdlet to look at the role groups or management roles assigned to you to see if you have the permissions that are necessary to manage the feature.
     
 
-    > [!NOTE]
+    > [!NOTE]  
     > You must be assigned the Role Management management role to run the <STRONG>Get-ManagementRoleAssignment</STRONG> cmdlet. If you don't have permissions to run the <STRONG>Get-ManagementRoleAssignment</STRONG> cmdlet, ask your Exchange administrator to retrieve the role groups or management roles assigned to you.
 
 
@@ -76,7 +76,7 @@ Users who are assigned the View-Only Management role group can view the configur
 <p><a href="view-only-organization-management-exchange-2013-help.md">View-only Organization Management</a></p>
 <p>Support Diagnostics role</p>
 
-> [!NOTE]
+> [!NOTE]  
 > The Support Diagnostics role isn't assigned to a role group. For more information, see <A href="add-a-role-to-a-user-or-usg-exchange-2013-help.md">Add a role to a user or USG</A>.
 
 
@@ -91,7 +91,7 @@ Users who are assigned the View-Only Management role group can view the configur
 <td><p>Import Export</p></td>
 <td><p>Mailbox Import Export role</p>
 
-> [!NOTE]
+> [!NOTE]  
 > The Mailbox Import Export role isn't assigned to a role group. For more information, see <A href="mailbox-import-export-role-exchange-2013-help.md">Mailbox Import Export role</A>.
 
 

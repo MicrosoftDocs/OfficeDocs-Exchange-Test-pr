@@ -45,9 +45,7 @@ For additional management tasks related to UM IP gateways, see [UM IP gateway pr
 
 1.  In the EAC, navigate to **Unified Messaging** \> **UM IP Gateways**. In the list view, select the UM IP gateway that you want to manage, and then click **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
 
-2.  
-    
-    Use the **UM IP Gateway** page to view and configure settings for the UM IP gateway. You can view or configure the following settings:
+2.  Use the **UM IP Gateway** page to view and configure settings for the UM IP gateway. You can view or configure the following settings:
     
       - **Status**   This display-only field shows the status of the UM IP gateway.
     

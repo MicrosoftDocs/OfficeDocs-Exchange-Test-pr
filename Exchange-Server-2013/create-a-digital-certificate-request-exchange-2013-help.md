@@ -61,9 +61,13 @@ If you didn’t select a self-signed certificate, you’ll need to send the cert
 
 Run the following commands.
 
-    $reqfile = New-ExchangeCertificate -GenerateRequest -SubjectName "C=US,o=Contoso,cn=contosotocert" -DomainName "contoso.com" -PrivateKeyExportable $true
+  ```
+  $reqfile = New-ExchangeCertificate -GenerateRequest -SubjectName "C=US,o=Contoso,cn=contosotocert" -DomainName "contoso.com" -PrivateKeyExportable $true
+  ```
 
-    $reqfile | out-file c:\certreq.txt
+  ```
+  $reqfile | out-file c:\certreq.txt
+  ```
 
 ## How do you know this worked?
 
