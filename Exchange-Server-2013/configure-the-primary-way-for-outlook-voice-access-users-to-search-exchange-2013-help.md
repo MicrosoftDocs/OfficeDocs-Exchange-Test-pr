@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure the primary way for Outlook Voice Access users to search: Exchange 2013 Help'
+title: 'Configure the primary way for Outlook Voice Access users to search'
 TOCTitle: Configure the primary way for Outlook Voice Access users to search
 ms:assetid: 3d93a037-5820-41d3-9206-69f534414daf
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Aa997563(v=EXCHG.150)

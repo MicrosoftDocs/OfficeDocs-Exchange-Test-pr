@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configuration notes for supported VoIP gateways, IP PBXs, and PBXs: Exchange 2013 Help'
+title: 'Configuration notes for supported VoIP gateways, IP PBXs, and PBX'
 TOCTitle: Configuration notes for supported VoIP gateways, IP PBXs, and PBXs
 ms:assetid: 1583674f-5a57-45fd-8125-087d1624e686
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee681657(v=EXCHG.150)

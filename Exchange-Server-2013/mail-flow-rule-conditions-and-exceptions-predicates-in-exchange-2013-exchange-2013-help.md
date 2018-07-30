@@ -1,5 +1,5 @@
 ﻿---
-title: 'Mail flow rule conditions and exceptions (predicates) in Exchange 2013: Exchange 2013 Help'
+title: 'Mail flow rule conditions and exceptions (predicates) in Exchange 2013'
 TOCTitle: Mail flow rule conditions and exceptions (predicates)
 ms:assetid: c918ea00-1e68-4b8b-8d51-6966b4432e2d
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dd638183(v=EXCHG.150)

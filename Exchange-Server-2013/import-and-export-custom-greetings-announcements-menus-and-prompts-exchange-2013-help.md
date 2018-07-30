@@ -1,5 +1,5 @@
 ﻿---
-title: 'Import and export custom greetings, announcements, menus, and prompts: Exchange 2013 Help'
+title: 'Import and export custom greetings, announcements, menus, and prompts'
 TOCTitle: Import and export custom greetings, announcements, menus, and prompts
 ms:assetid: e82da5d5-625f-4d8b-8d31-ac45513aacfd
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee681667(v=EXCHG.150)

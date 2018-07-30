@@ -1,5 +1,5 @@
 ﻿---
-title: 'Create a Receive connector to receive messages from an internal Exchange server: Exchange 2013 Help'
+title: 'Create a Receive connector to receive messages from an internal Exchange server'
 TOCTitle: Create a Receive connector to receive messages from an internal Exchange server
 ms:assetid: 546cead9-7a2d-4332-a5f6-35343d56c619
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ657448(v=EXCHG.150)

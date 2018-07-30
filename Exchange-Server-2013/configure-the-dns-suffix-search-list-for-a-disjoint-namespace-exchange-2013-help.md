@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure the DNS suffix search list for a disjoint namespace: Exchange 2013 Help'
+title: 'Configure the DNS suffix search list for a disjoint namespace'
 TOCTitle: Configure the DNS suffix search list for a disjoint namespace
 ms:assetid: cfa715ac-7b69-47c3-b206-933ec2cf677b
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Bb847901(v=EXCHG.150)

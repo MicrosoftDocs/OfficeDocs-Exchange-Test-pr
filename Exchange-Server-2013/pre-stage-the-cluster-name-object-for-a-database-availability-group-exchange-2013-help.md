@@ -1,5 +1,5 @@
 ﻿---
-title: 'Pre-stage the cluster name object for a database availability group: Exchange 2013 Help'
+title: 'Pre-stage the cluster name object for a database availability group'
 TOCTitle: Pre-stage the cluster name object for a database availability group
 ms:assetid: 51ebf2f6-8a02-44ef-a489-ca361cb0f63a
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ff367878(v=EXCHG.150)

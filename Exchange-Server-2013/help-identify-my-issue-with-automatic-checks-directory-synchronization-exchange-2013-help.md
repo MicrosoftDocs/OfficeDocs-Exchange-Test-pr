@@ -1,5 +1,5 @@
 ﻿---
-title: 'Help Identify My Issue with Automatic Checks - Directory Synchronization: Exchange 2013 Help'
+title: 'Help identify issue with automatic checks -directory synchronization'
 TOCTitle: Help Identify My Issue with Automatic Checks - Directory Synchronization
 ms:assetid: e6ea900a-c382-444c-a8ce-54d392bfeca3
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn793977(v=EXCHG.150)

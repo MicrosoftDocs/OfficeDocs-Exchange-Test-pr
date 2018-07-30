@@ -1,5 +1,5 @@
 ﻿---
-title: 'Using hybrid Modern Authentication with Outlook for iOS and Android: Exchange 2013 Help'
+title: 'Using hybrid Modern Authentication with Outlook for iOS and Android'
 TOCTitle: Using hybrid Modern Authentication with Outlook for iOS and Android
 ms:assetid: 0e701643-1f18-4cc3-8595-4fd4b15caf6c
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Mt846639(v=EXCHG.150)

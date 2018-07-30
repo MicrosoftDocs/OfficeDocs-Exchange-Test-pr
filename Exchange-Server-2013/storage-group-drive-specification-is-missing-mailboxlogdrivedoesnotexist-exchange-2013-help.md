@@ -1,5 +1,5 @@
 ﻿---
-title: 'Storage group drive specification is missing_MailboxLogDriveDoesNotExist: Exchange 2013 Help'
+title: 'Storage group drive specification is missing'
 TOCTitle: Storage group drive specification is missing_MailboxLogDriveDoesNotExist
 ms:assetid: fe210f29-60cb-4d34-877e-1356a21dc02a
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.mailboxlogdrivedoesnotexist(v=EXCHG.150)

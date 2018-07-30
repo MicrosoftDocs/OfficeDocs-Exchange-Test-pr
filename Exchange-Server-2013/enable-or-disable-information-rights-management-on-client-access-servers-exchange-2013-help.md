@@ -1,5 +1,5 @@
 ﻿---
-title: 'Enable or Disable Information Rights Management on Client Access Servers: Exchange 2013 Help'
+title: 'Enable or disable Information Rights Management on Client Access servers'
 TOCTitle: Enable or Disable Information Rights Management on Client Access Servers
 ms:assetid: c7ce069b-a572-4755-90a3-7105472e4c83
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dd876938(v=EXCHG.150)

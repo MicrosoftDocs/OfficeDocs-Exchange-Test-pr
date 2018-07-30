@@ -1,5 +1,5 @@
 ﻿---
-title: 'Mailbox database drive specification is missing_MailboxEDBDriveDoesNotExist: Exchange 2013 Help'
+title: 'Mailbox database drive specification is missing'
 TOCTitle: Mailbox database drive specification is missing_MailboxEDBDriveDoesNotExist
 ms:assetid: 0e487aa1-3194-4a14-b255-a8b9f9afbf0e
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.mailboxedbdrivedoesnotexist(v=EXCHG.150)

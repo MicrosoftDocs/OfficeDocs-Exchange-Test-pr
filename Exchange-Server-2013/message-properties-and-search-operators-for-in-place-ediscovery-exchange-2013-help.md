@@ -1,5 +1,5 @@
 ﻿---
-title: 'Message properties and search operators for In-Place eDiscovery: Exchange 2013 Help'
+title: 'Message properties and search operators for In-Place eDiscovery'
 TOCTitle: Message properties and search operators for In-Place eDiscovery
 ms:assetid: 402b74e4-8853-4c51-9737-1a9c19f8e3dd
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn774955(v=EXCHG.150)

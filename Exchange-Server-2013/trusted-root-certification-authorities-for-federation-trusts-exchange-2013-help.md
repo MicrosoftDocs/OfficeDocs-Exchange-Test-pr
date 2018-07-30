@@ -1,5 +1,5 @@
 ﻿---
-title: 'Trusted root certification authorities for federation trusts: Exchange 2013 Help'
+title: 'Trusted root certification authorities for federation trusts'
 TOCTitle: Trusted root certification authorities for federation trusts
 ms:assetid: d4224bf5-69b3-484c-8a70-4f230d3dbdd9
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee332350(v=EXCHG.150)

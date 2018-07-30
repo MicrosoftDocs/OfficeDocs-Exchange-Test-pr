@@ -1,5 +1,5 @@
 ﻿---
-title: 'Testing and troubleshooting with the Test-UMConnectivity cmdlet: Exchange 2013 Help'
+title: 'Test and troubleshoot with the Test-UMConnectivity cmdlet'
 TOCTitle: Testing and troubleshooting with the Test-UMConnectivity cmdlet
 ms:assetid: 08e67a99-e37f-4afd-bd58-455b62580af7
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Aa995978(v=EXCHG.150)

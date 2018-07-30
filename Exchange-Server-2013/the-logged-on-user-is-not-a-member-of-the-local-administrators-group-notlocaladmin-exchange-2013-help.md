@@ -1,5 +1,5 @@
 ﻿---
-title: 'The logged-on user is not a member of the local Administrators group_NotLocalAdmin: Exchange 2013 Help'
+title: 'Logged-on user is not a member of the local Administrators group'
 TOCTitle: The logged-on user is not a member of the local Administrators group_NotLocalAdmin
 ms:assetid: d06f0894-b139-49ba-afe3-f58d3bd28e32
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.notlocaladmin(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Help Identify My Issue with Sending/Receiving Email on a Mobile Device (Automatic Checks): Exchange 2013 Help'
+title: 'Can't send or receive email on my mobile device (automatic checks)'
 TOCTitle: Help Identify My Issue with Sending/Receiving Email on a Mobile Device (Automatic Checks)
 ms:assetid: 7400a7c8-1e45-4e73-a642-b7d79d997462
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn793610(v=EXCHG.150)
