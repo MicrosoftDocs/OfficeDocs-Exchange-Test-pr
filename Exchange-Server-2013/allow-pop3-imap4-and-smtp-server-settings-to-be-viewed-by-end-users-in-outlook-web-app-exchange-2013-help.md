@@ -1,5 +1,5 @@
 ﻿---
-title: 'Allow POP3, IMAP4, and SMTP server settings to be viewed by end users in Outlook Web App: Exchange 2013 Help'
+title: 'Allow POP3, IMAP4, and SMTP server settings to be viewed by end users in Outlook Web App'
 TOCTitle: Allow POP3, IMAP4, and SMTP server settings to be viewed by end users in Outlook Web App
 ms:assetid: bd22bf7e-3bf7-45e6-8790-919b780166f6
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Gg298947(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Help Identify My Issue with Sending/Receiving Email in Office Outlook (Automatic Checks): Exchange 2013 Help'
+title: 'Help identify issue with sending/receiving email in Outlook - automatic checks'
 TOCTitle: Help Identify My Issue with Sending/Receiving Email in Office Outlook (Automatic Checks)
 ms:assetid: 0de16c79-807a-4cae-9097-22dd61a157b4
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn793609(v=EXCHG.150)

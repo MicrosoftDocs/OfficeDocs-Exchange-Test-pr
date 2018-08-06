@@ -1,5 +1,5 @@
 ﻿---
-title: 'Scenario: Configure Exchange to support WAN Optimization Controllers: Exchange 2013 Help'
+title: 'Scenario: configure Exchange to support WAN Optimization Controllers'
 TOCTitle: 'Scenario: Configure Exchange to support WAN Optimization Controllers'
 ms:assetid: 1f407698-0b71-45a3-867a-640ccf7351da
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee633456(v=EXCHG.150)

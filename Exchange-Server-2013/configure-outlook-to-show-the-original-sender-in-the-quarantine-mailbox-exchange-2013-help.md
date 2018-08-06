@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure Outlook to show the original sender in the quarantine mailbox: Exchange 2013 Help'
+title: 'Configure Outlook to show the original sender in the quarantine mailbox'
 TOCTitle: Configure Outlook to show the original sender in the quarantine mailbox
 ms:assetid: 9249425d-1b06-48a0-ad95-c4eefb641ff4
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee861109(v=EXCHG.150)

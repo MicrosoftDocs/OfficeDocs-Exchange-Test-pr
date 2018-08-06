@@ -1,5 +1,5 @@
 ﻿---
-title: 'Exchange 2007 servers must be upgraded to Service Pack 3, Update Rollup 10: Exchange 2013 Help'
+title: 'Exchange 2007 servers must be upgraded to Service Pack 3, Update Rollup 10'
 TOCTitle: Exchange 2007 servers must be upgraded to Service Pack 3, Update Rollup 10
 ms:assetid: b8028a00-c451-412e-86f2-1669f6eee8fc
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.e15e12coexistenceminversionrequirement(v=EXCHG.150)

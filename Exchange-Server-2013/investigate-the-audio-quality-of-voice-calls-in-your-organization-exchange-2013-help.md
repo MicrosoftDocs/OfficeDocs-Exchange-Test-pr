@@ -1,5 +1,5 @@
 ﻿---
-title: 'Investigate the audio quality of voice calls in your organization: Exchange 2013 Help'
+title: 'Investigate the audio quality of voice calls in your organization'
 TOCTitle: Investigate the audio quality of voice calls in your organization
 ms:assetid: 8a87694b-1678-4a01-859f-5ad3b2c73db5
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ659069(v=EXCHG.150)

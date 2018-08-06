@@ -1,5 +1,5 @@
 ﻿---
-title: 'Account setup in Outlook for iOS and Android using Basic authentication: Exchange 2013 Help'
+title: 'Account setup in Outlook for iOS and Android using Basic authentication'
 TOCTitle: Account setup in Outlook for iOS and Android using Basic authentication
 ms:assetid: 013dbe8c-30de-4c9c-baa9-75081b9229e8
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Mt829322(v=EXCHG.150)

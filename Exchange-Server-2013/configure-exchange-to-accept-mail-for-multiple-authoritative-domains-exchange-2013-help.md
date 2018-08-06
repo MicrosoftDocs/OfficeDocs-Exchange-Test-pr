@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure Exchange to accept mail for multiple authoritative domains: Exchange 2013 Help'
+title: 'Configure Exchange to accept mail for multiple authoritative domains'
 TOCTitle: Configure Exchange to accept mail for multiple authoritative domains
 ms:assetid: 11801f73-4934-4025-a1c1-3935dada7e9b
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Aa996314(v=EXCHG.150)

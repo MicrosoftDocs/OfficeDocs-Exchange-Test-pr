@@ -1,5 +1,5 @@
 ﻿---
-title: 'Create a secure Receive connector to receive email from a partner: Exchange 2013 Help'
+title: 'Create a secure Receive connector to receive email from a partner'
 TOCTitle: Create a secure Receive connector to receive email from a partner
 ms:assetid: 06aa692c-7940-4a14-a722-058c47440f85
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ673037(v=EXCHG.150)

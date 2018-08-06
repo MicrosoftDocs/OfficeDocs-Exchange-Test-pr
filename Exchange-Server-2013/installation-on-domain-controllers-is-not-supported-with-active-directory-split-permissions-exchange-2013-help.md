@@ -1,5 +1,5 @@
 ﻿---
-title: 'Installation on domain controllers is not supported with Active Directory split permissions: Exchange 2013 Help'
+title: 'Installation on domain controllers is not supported with Active Directory split permissions'
 TOCTitle: Installation on domain controllers is not supported with Active Directory split permissions
 ms:assetid: 977e3758-5e09-40a2-80c1-fe344b1d8a2a
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.installondcinadsplitpermissionmode(v=EXCHG.150)

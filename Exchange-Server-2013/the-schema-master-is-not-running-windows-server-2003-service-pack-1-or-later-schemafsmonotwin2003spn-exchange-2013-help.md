@@ -1,5 +1,5 @@
 ﻿---
-title: 'The schema master is not running Windows Server 2003 Service Pack 1 or later_SchemaFSMONotWin2003SPn: Exchange 2013 Help'
+title: 'Schema master is not running Windows Server 2003 Service Pack 1 or later'
 TOCTitle: The schema master is not running Windows Server 2003 Service Pack 1 or later_SchemaFSMONotWin2003SPn
 ms:assetid: 644a85ca-7b36-4ed0-bd21-c64f2742df70
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.schemafsmonotwin2003spn(v=EXCHG.150)

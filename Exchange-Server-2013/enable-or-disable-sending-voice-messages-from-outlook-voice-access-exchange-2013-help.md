@@ -1,5 +1,5 @@
 ﻿---
-title: 'Enable or disable sending voice messages from Outlook Voice Access: Exchange 2013 Help'
+title: 'Enable or disable sending voice messages from Outlook Voice Access'
 TOCTitle: Enable or disable sending voice messages from Outlook Voice Access
 ms:assetid: 63544ae2-6a28-40b2-82fc-3df83e93ee56
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee423546(v=EXCHG.150)

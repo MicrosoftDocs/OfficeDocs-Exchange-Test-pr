@@ -1,5 +1,5 @@
 ﻿---
-title: 'Use batch migration to migrate Exchange 2013 public folders to Exchange Online: Exchange Online Help'
+title: 'Use batch migration to migrate Exchange 2013 public folders to Exchange Online'
 TOCTitle: Use batch migration to migrate Exchange 2013 public folders to Exchange Online
 ms:assetid: 25a5234c-dd2c-487b-8541-3655fbeb030a
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Mt798260(v=EXCHG.150)

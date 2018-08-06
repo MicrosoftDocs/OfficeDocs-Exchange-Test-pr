@@ -1,5 +1,5 @@
 ﻿---
-title: 'Add an address list to or remove an address list from an offline address book: Exchange 2013 Help'
+title: 'Add an address list to or remove an address list from an offline address book'
 TOCTitle: Add an address list to or remove an address list from an offline address book
 ms:assetid: 86bd5651-ad41-4516-bf23-6579f4e4da03
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Bb123563(v=EXCHG.150)

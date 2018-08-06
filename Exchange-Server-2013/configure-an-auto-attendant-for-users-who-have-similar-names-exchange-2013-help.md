@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure an auto attendant for users who have similar names: Exchange 2013 Help'
+title: 'Configure an auto attendant for users who have similar names'
 TOCTitle: Configure an auto attendant for users who have similar names
 ms:assetid: 2e7318a0-67f9-4d7b-8300-5f0ef77656a8
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Aa997135(v=EXCHG.150)

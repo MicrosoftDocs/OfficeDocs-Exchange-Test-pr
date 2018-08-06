@@ -1,5 +1,5 @@
 ﻿---
-title: 'Run the Exchange UM Troubleshooting Tool on Windows 7 or Windows 8: Exchange 2013 Help'
+title: 'Run the Exchange UM Troubleshooting Tool on Windows 7 or Windows 8'
 TOCTitle: Run the Exchange UM Troubleshooting Tool on Windows 7 or Windows 8
 ms:assetid: 98d6869d-ee4a-4088-849d-ef75b0f5d932
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ff851872(v=EXCHG.150)

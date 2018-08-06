@@ -1,5 +1,5 @@
 ﻿---
-title: 'Move a public folder mailbox to a different mailbox database: Exchange 2013 Help'
+title: 'Move a public folder mailbox to a different mailbox database'
 TOCTitle: Move a public folder mailbox to a different mailbox database
 ms:assetid: 67601d45-4824-4ae6-9a7e-b645ec3af4d3
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ906434(v=EXCHG.150)

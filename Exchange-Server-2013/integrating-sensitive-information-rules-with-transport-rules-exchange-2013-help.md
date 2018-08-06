@@ -1,5 +1,5 @@
 ﻿---
-title: 'Integrating sensitive information rules with transport rules: Exchange 2013 Help'
+title: 'Integrating sensitive information rules with transport rules'
 TOCTitle: Integrating sensitive information rules with transport rules
 ms:assetid: feb014a7-89dd-4f2d-a06d-52806ce435d4
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ150583(v=EXCHG.150)

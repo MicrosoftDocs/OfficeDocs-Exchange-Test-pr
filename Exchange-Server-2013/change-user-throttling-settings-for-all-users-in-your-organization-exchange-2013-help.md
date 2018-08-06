@@ -1,5 +1,5 @@
 ﻿---
-title: 'Change user throttling settings for all users in your organization: Exchange 2013 Help'
+title: 'Change user throttling settings for all users in your organization'
 TOCTitle: Change user throttling settings for all users in your organization
 ms:assetid: c45cacfc-768d-4605-9bb0-53e30273fe4d
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ863578(v=EXCHG.150)

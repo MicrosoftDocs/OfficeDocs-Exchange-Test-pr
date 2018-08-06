@@ -1,5 +1,5 @@
 ﻿---
-title: 'Install or remove add-ins for Outlook for your organization: Exchange 2013 Help'
+title: 'Install or remove add-ins for Outlook for your organization'
 TOCTitle: Install or remove add-ins for Outlook for your organization
 ms:assetid: 112f3ef7-9943-4a1e-8a42-e08e8e9f67f4
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ943752(v=EXCHG.150)

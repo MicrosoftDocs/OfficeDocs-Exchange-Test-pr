@@ -1,5 +1,5 @@
 ﻿---
-title: 'Enable or prevent transferring calls from an auto attendant: Exchange 2013 Help'
+title: 'Enable or prevent transferring calls from an auto attendant'
 TOCTitle: Enable or prevent transferring calls from an auto attendant
 ms:assetid: ca961cc8-cc24-4e05-b72d-79979c155cf9
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee423558(v=EXCHG.150)

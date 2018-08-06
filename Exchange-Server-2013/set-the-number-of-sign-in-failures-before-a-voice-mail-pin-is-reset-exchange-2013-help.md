@@ -1,5 +1,5 @@
 ﻿---
-title: 'Set the number of sign-in failures before a voice mail PIN is reset: Exchange 2013 Help'
+title: 'Set the number of sign-in failures before a voice mail PIN is reset'
 TOCTitle: Set the number of sign-in failures before a voice mail PIN is reset
 ms:assetid: 4de38499-0a6f-4f00-8697-eeff805d7266
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Aa997939(v=EXCHG.150)

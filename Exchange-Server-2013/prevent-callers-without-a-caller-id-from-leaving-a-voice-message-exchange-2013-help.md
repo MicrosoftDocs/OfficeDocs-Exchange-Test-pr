@@ -1,5 +1,5 @@
 ﻿---
-title: 'Prevent callers without a caller ID from leaving a voice message: Exchange 2013 Help'
+title: 'Prevent callers without a caller ID from leaving a voice message'
 TOCTitle: Prevent callers without a caller ID from leaving a voice message
 ms:assetid: dd5dad32-2f69-4bf4-8ff0-545c413d395a
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ673571(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Benefits of anti-spam features in Exchange Online Protection over Exchange Server 2013: Exchange 2013 Help'
+title: 'Benefits of anti-spam features in Exchange Online Protection over Exchange Server 2013'
 TOCTitle: Benefits of anti-spam features in Exchange Online Protection over Exchange Server 2013
 ms:assetid: 00e37a3c-3fbc-488f-bdad-d52a3c80fd72
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ673032(v=EXCHG.150)

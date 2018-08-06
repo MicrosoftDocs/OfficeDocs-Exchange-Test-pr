@@ -1,5 +1,5 @@
 ﻿---
-title: 'Failover Cluster Command Interface Windows feature not installed: Exchange 2013 Help'
+title: 'Failover Cluster Command Interface Windows feature not installed'
 TOCTitle: Failover Cluster Command Interface Windows feature not installed
 ms:assetid: 0d839514-5ab7-497d-8945-41392b4c3980
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.rsatclusteringcmdinterfaceinstalled(v=EXCHG.150)

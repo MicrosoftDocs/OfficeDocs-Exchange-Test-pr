@@ -1,5 +1,5 @@
 ﻿---
-title: 'The fully-qualified domain name of the computer matches a recipient policy_ServerFQDNMatchesSMTPPolicy: Exchange 2013 Help'
+title: 'Fully-qualified domain name of the computer matches a recipient policy'
 TOCTitle: The fully-qualified domain name of the computer matches a recipient policy_ServerFQDNMatchesSMTPPolicy
 ms:assetid: f3ea61f8-1788-4cbf-814e-f7c088c1ac47
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.serverfqdnmatchessmtppolicy(v=EXCHG.150)
