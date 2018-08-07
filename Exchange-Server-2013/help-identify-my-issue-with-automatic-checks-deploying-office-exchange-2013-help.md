@@ -1,5 +1,5 @@
 ﻿---
-title: 'Help Identify My Issue with Automatic Checks - Deploying Office: Exchange 2013 Help'
+title: 'Help identify issue with automatic checks - deploying Office'
 TOCTitle: Help Identify My Issue with Automatic Checks - Deploying Office
 ms:assetid: 77d4587c-7fd5-4231-931e-3d6608e622f4
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn793978(v=EXCHG.150)

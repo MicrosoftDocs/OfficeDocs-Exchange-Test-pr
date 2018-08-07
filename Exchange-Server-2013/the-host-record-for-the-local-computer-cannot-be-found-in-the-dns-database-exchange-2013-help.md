@@ -1,5 +1,5 @@
 ﻿---
-title: 'The Host record for the local computer cannot be found in the DNS database: Exchange 2013 Help'
+title: 'Can't find Host record for local computer in the DNS database'
 TOCTitle: The Host record for the local computer cannot be found in the DNS database
 ms:assetid: 2f18cb65-29fe-4b72-8d68-52fd503d5673
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.hostrecordmissing(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Using Basic authentication with Outlook for iOS and Android: Exchange 2013 Help'
+title: 'Using Basic authentication with Outlook for iOS and Android'
 TOCTitle: Using Basic authentication with Outlook for iOS and Android
 ms:assetid: 3a66817c-30da-4965-a6db-2955b5365b0f
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Mt465744(v=EXCHG.150)

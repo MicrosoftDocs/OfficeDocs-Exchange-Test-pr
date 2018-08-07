@@ -1,5 +1,5 @@
 ﻿---
-title: 'Setup failure occurred while uninstalling a server role_InterruptedUninstallNotContinued: Exchange 2013 Help'
+title: 'Setup failure occurred while uninstalling a server role'
 TOCTitle: Setup failure occurred while uninstalling a server role_InterruptedUninstallNotContinued
 ms:assetid: 187967b2-cb28-45d7-8858-2a083c1ebe58
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.interrupteduninstallnotcontinued(v=EXCHG.150)

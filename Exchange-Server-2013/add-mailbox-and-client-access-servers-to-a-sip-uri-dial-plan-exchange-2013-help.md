@@ -1,5 +1,5 @@
 ﻿---
-title: 'Add Mailbox and Client Access servers to a SIP URI dial plan: Exchange 2013 Help'
+title: 'Add Mailbox and Client Access servers to a SIP URI dial plan'
 TOCTitle: Add Mailbox and Client Access servers to a SIP URI dial plan
 ms:assetid: 17fed308-ff0d-4e61-b9f9-e6680b6eccaa
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Aa996399(v=EXCHG.150)

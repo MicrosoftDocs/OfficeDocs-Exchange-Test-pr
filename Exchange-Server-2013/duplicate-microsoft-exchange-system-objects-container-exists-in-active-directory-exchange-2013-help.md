@@ -1,5 +1,5 @@
 ﻿---
-title: 'Duplicate Microsoft Exchange System Objects container exists in Active Directory: Exchange 2013 Help'
+title: 'Duplicate Exchange System Objects container exists in Active Directory'
 TOCTitle: Duplicate Microsoft Exchange System Objects container exists in Active Directory
 ms:assetid: cd0f45ab-89de-4653-b50d-c1157c2329d5
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.adiniterrorrule(v=EXCHG.150)

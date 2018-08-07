@@ -1,5 +1,5 @@
 ﻿---
-title: 'Azure: Help Identify My issue with Automatic Checks - DNS Records: Exchange 2013 Help'
+title: 'Azure: help identify issue with automatic checks - DNS Records'
 TOCTitle: 'Azure: Help Identify My issue with Automatic Checks - DNS Records'
 ms:assetid: 1ef42cde-4df4-401a-b8f2-494630996ca8
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn793619(v=EXCHG.150)

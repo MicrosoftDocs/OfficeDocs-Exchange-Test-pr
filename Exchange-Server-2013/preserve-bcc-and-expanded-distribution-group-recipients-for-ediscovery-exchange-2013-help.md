@@ -1,5 +1,5 @@
 ﻿---
-title: 'Preserve Bcc and expanded distribution group recipients for eDiscovery: Exchange 2013 Help'
+title: 'Preserve Bcc and expanded distribution group recipients for eDiscovery'
 TOCTitle: Preserve Bcc and expanded distribution group recipients for eDiscovery
 ms:assetid: eb8ddf15-0080-457e-9d83-e73e193da334
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn770225(v=EXCHG.150)

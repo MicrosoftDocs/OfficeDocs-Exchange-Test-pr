@@ -1,5 +1,5 @@
 ﻿---
-title: 'Update your Exchange organization when Daylight Saving Time or the time zone changes: Exchange 2013 Help'
+title: 'Update Exchange organization when Daylight Saving Time or time zone changes'
 TOCTitle: Update your Exchange organization when Daylight Saving Time or the time zone changes
 ms:assetid: 5b12615c-24cf-4f46-bf3c-2334dc734ef8
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Hh530051(v=EXCHG.150)

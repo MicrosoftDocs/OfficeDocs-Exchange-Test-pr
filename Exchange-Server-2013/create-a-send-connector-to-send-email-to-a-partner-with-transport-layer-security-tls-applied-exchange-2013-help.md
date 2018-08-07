@@ -1,5 +1,5 @@
 ﻿---
-title: 'Create a Send connector to send email to a partner, with Transport Layer Security (TLS) applied: Exchange 2013 Help'
+title: 'Create a Send connector to send email to a partner, with Transport Layer Security applied'
 TOCTitle: Create a Send connector to send email to a partner, with Transport Layer Security (TLS) applied
 ms:assetid: ff2abefc-dd3e-4431-b947-df942fbf82d9
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ657514(v=EXCHG.150)

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Set the number of sign-in failures before a voice mail user Is locked out: Exchange 2013 Help'
+title: 'Set the number of sign-in failures before a voice mail user Is locked out'
 TOCTitle: Set the number of sign-in failures before a voice mail user Is locked out
 ms:assetid: 855e1980-2868-4983-b097-0b5f63f202b8
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Bb123544(v=EXCHG.150)

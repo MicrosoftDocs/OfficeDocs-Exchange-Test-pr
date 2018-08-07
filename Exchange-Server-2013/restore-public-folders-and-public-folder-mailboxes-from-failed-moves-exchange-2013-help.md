@@ -1,5 +1,5 @@
 ﻿---
-title: 'Restore public folders and public folder mailboxes from failed moves: Exchange 2013 Help'
+title: 'Restore public folders and public folder mailboxes from failed moves'
 TOCTitle: Restore public folders and public folder mailboxes from failed moves
 ms:assetid: 2ade83c9-5f9b-4945-bf32-48fa8185b515
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ983802(v=EXCHG.150)

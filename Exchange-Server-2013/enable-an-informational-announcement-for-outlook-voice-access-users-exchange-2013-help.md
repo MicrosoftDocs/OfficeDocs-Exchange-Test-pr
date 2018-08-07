@@ -1,5 +1,5 @@
 ﻿---
-title: 'Enable an informational announcement for Outlook Voice Access users: Exchange 2013 Help'
+title: 'Enable an informational announcement for Outlook Voice Access users'
 TOCTitle: Enable an informational announcement for Outlook Voice Access users
 ms:assetid: b69ed0e1-f978-498a-963e-42a047678db4
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Bb124344(v=EXCHG.150)

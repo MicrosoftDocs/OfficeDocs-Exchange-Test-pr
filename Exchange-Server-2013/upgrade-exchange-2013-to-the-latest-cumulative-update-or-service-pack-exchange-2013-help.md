@@ -1,5 +1,5 @@
 ﻿---
-title: 'Upgrade Exchange 2013 to the latest cumulative update or service pack: Exchange 2013 Help'
+title: 'Upgrade Exchange 2013 to the latest cumulative update or service pack'
 TOCTitle: Upgrade Exchange 2013 to the latest cumulative update or service pack
 ms:assetid: 928a4a0b-0082-4d50-a696-bfaf2782f42d
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ983803(v=EXCHG.150)

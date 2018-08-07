@@ -1,5 +1,5 @@
 ﻿---
-title: 'Changes to high availability and site resilience over previous versions: Exchange 2013 Help'
+title: 'Changes to high availability and site resilience over previous versions'
 TOCTitle: Changes to high availability and site resilience over previous versions
 ms:assetid: de53c00b-091c-4a31-aacc-1bd40c756ce2
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn789066(v=EXCHG.150)

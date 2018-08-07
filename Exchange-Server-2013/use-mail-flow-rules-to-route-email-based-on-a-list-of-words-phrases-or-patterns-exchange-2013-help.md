@@ -1,5 +1,5 @@
 ﻿---
-title: 'Use mail flow rules to route email based on a list of words, phrases, or patterns: Exchange 2013 Help'
+title: 'Use mail flow rules to route email based on a list of words, phrases, or patterns'
 TOCTitle: Use mail flow rules to route email based on a list of words, phrases, or patterns
 ms:assetid: 4c5bee1b-58b5-4152-baef-86fa103050ae
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn951131(v=EXCHG.150)

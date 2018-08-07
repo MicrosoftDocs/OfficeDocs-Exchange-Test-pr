@@ -1,5 +1,5 @@
 ﻿---
-title: 'Testing and troubleshooting with the UM Troubleshooting Tool: Exchange 2013 Help'
+title: 'Test and troubleshoot with the UM Troubleshooting Tool'
 TOCTitle: Testing and troubleshooting with the UM Troubleshooting Tool
 ms:assetid: 1fab2e52-bd2d-4e46-b222-53fee9d34cba
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Gg621148(v=EXCHG.150)

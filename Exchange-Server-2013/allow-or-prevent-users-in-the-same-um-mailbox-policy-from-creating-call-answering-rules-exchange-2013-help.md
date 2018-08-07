@@ -1,5 +1,5 @@
 ﻿---
-title: 'Allow or prevent users in the same UM mailbox policy from creating call answering rules: Exchange 2013 Help'
+title: 'Allow or prevent users in the same UM mailbox policy from creating call answering rules'
 TOCTitle: Allow or prevent users in the same UM mailbox policy from creating call answering rules
 ms:assetid: e44acaa6-d5a8-41e8-94aa-100be0bd6391
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dd351209(v=EXCHG.150)

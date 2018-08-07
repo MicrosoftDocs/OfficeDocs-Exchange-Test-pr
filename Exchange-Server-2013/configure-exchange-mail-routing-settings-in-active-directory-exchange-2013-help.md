@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure Exchange mail routing settings in Active Directory: Exchange 2013 Help'
+title: 'Configure Exchange mail routing settings in Active Directory'
 TOCTitle: Configure Exchange mail routing settings in Active Directory
 ms:assetid: d01f8545-c201-4a96-be39-ed4c7008afcf
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ674705(v=EXCHG.150)

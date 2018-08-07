@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure Deleted Item retention and Recoverable Items quotas: Exchange 2013 Help'
+title: 'Configure Deleted Item retention and Recoverable Items quotas'
 TOCTitle: Configure Deleted Item retention and Recoverable Items quotas
 ms:assetid: de7d667a-1c93-4364-a4f9-2aa5e3678b12
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee364752(v=EXCHG.150)

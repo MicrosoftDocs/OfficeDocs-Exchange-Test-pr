@@ -1,5 +1,5 @@
 ﻿---
-title: "The current account isn't logged into an Active Directory domain: Exchange 2013 Help"
+title: 'Current account isn't logged into an Active Directory domain'
 TOCTitle: The current account isn't logged into an Active Directory domain
 ms:assetid: 0e229d10-605a-420f-bf8b-58a7fcb5b259
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.loggedontodomain(v=EXCHG.150)
