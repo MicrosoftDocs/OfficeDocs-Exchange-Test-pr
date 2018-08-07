@@ -1,5 +1,5 @@
 ﻿---
-title: 'Can't delegate installation of the first Exchange server in the organization'
+title: "Can't delegate installation of the first Exchange server in the organization"
 TOCTitle: Installation of the first Exchange server in the organization can't be delegated
 ms:assetid: 286b82ee-bddf-493c-b6ea-21aced6dbbad
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.delegatedunifiedmessagingfirstinstall(v=EXCHG.150)

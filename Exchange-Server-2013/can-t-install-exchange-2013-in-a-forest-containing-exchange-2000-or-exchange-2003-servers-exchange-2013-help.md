@@ -1,5 +1,5 @@
 ﻿---
-title: 'Can't install Exchange 2013 in a forest containing Exchange 2000 or Exchange 2003 servers'
+title: "Can't install Exchange 2013 in a forest containing Exchange 2000 or Exchange 2003 servers"
 TOCTitle: Can't install Exchange 2013 in a forest containing Exchange 2000 or Exchange 2003 servers.
 ms:assetid: a115b182-cbd2-4d31-aa0e-375240939301
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.exchange2000or2003presentinorg(v=EXCHG.150)
