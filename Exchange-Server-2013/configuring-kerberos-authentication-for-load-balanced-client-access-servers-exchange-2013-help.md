@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configuring Kerberos authentication for load-balanced Client Access servers: Exchange 2013 Help'
+title: 'Configure Kerberos authentication for load-balanced Client Access servers'
 TOCTitle: Configuring Kerberos authentication for load-balanced Client Access servers
 ms:assetid: 8f4faeea-a825-438d-97dc-1c398ce7aba5
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ff808312(v=EXCHG.150)

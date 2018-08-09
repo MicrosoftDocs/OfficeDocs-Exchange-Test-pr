@@ -1,5 +1,5 @@
 ﻿---
-title: 'Include text with the email message sent when a PIN Is reset: Exchange 2013 Help'
+title: 'Include text with the email message sent when a PIN Is reset'
 TOCTitle: Include text with the email message sent when a PIN Is reset
 ms:assetid: f7a4d775-a588-412f-ac2c-11ab1a5c67eb
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Bb201750(v=EXCHG.150)

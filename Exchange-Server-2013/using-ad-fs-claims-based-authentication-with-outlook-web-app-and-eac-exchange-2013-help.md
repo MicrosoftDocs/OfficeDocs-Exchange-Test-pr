@@ -1,5 +1,5 @@
 ﻿---
-title: 'Using AD FS claims-based authentication with Outlook Web App and EAC: Exchange 2013 Help'
+title: 'Using AD FS claims-based authentication with Outlook Web App and EAC'
 TOCTitle: Using AD FS claims-based authentication with Outlook Web App and EAC
 ms:assetid: 919a9bfb-c6df-490a-b2c4-51796b0f0596
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn635116(v=EXCHG.150)

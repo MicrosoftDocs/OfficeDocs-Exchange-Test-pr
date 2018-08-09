@@ -1,5 +1,5 @@
 ﻿---
-title: 'Start the Microsoft Exchange Unified Messaging Call Router service: Exchange 2013 Help'
+title: 'Start the Exchange Unified Messaging Call Router service'
 TOCTitle: Start the Microsoft Exchange Unified Messaging Call Router service
 ms:assetid: 8b7e1a4c-87b3-4477-a95f-6b41cf2d38f0
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ673542(v=EXCHG.150)

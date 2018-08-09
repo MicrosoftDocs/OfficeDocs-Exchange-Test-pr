@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure Exchange Online public folders for a hybrid deployment: Exchange 2013 Help'
+title: 'Configure Exchange Online public folders for a hybrid deployment'
 TOCTitle: Configure Exchange Online public folders for a hybrid deployment
 ms:assetid: d979edb3-967b-4431-8beb-0c236bf7f56d
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Mt729076(v=EXCHG.150)

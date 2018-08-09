@@ -1,5 +1,5 @@
 ﻿---
-title: 'Create a Receive connector to receive email from a system not running Exchange: Exchange 2013 Help'
+title: 'Create a Receive connector to receive email from a system not running Exchange'
 TOCTitle: Create a Receive connector to receive email from a system not running Exchange
 ms:assetid: 85f0864a-6502-49db-8804-16755a7292b4
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ657467(v=EXCHG.150)

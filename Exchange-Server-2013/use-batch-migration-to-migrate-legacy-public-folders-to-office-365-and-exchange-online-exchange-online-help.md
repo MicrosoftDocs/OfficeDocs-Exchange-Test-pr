@@ -1,5 +1,5 @@
 ﻿---
-title: 'Use batch migration to migrate legacy public folders to Office 365 and Exchange Online: Exchange Online Help'
+title: 'Use batch migration to migrate legacy public folders to Office 365 and Exchange Online'
 TOCTitle: Use batch migration to migrate legacy public folders to Office 365 and Exchange Online
 ms:assetid: e8ab9309-7d12-4f02-bfc4-14e61a373958
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Dn874017(v=EXCHG.150)

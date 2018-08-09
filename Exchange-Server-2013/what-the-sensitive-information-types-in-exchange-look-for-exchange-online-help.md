@@ -1,5 +1,5 @@
 ﻿---
-title: 'What the sensitive information types in Exchange look for: Exchange Online Help'
+title: 'What the sensitive information types in Exchange look for'
 TOCTitle: What the sensitive information types look for
 ms:assetid: 98b81f9c-87bb-4905-8e53-04621c3ae74d
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ150541(v=EXCHG.150)

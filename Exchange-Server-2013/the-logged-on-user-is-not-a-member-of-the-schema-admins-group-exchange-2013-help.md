@@ -1,5 +1,5 @@
 ﻿---
-title: 'The logged-on user is not a member of the Schema Admins group: Exchange 2013 Help'
+title: 'Logged-on user is not a member of the Schema Admins group'
 TOCTitle: The logged-on user is not a member of the Schema Admins group
 ms:assetid: a4a3f293-afb9-4c00-aa07-c438238b6a98
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/ms.exch.setupreadiness.schemaupdaterequired(v=EXCHG.150)

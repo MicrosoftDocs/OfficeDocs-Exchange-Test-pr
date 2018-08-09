@@ -1,5 +1,5 @@
 ﻿---
-title: 'Exchange Management Shell quick reference for Exchange 2013: Exchange 2013 Help'
+title: 'Exchange Management Shell quick reference for Exchange 2013'
 TOCTitle: Exchange Management Shell quick reference for Exchange 2013
 ms:assetid: 3ea4a105-a93c-48ba-96ce-6170125354e1
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ619302(v=EXCHG.150)

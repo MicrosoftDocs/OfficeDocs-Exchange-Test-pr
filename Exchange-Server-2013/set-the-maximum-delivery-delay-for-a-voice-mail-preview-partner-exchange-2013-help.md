@@ -1,5 +1,5 @@
 ﻿---
-title: 'Set the maximum delivery delay for a Voice Mail Preview partner: Exchange 2013 Help'
+title: 'Set maximum delivery delay for a Voice Mail Preview partner'
 TOCTitle: Set the maximum delivery delay for a Voice Mail Preview partner
 ms:assetid: c9a07f6d-6f7f-4036-9a4a-d668d21e2c76
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ff630928(v=EXCHG.150)

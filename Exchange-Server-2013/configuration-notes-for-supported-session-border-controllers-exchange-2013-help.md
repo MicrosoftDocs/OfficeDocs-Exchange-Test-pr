@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configuration notes for supported session border controllers: Exchange 2013 Help'
+title: 'Configuration notes for supported session border controllers'
 TOCTitle: Configuration notes for supported session border controllers
 ms:assetid: d161f94a-a243-4294-93b3-2bf1dc17b59f
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/JJ673565(v=EXCHG.150)

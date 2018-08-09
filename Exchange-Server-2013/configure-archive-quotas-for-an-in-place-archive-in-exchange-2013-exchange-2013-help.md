@@ -1,5 +1,5 @@
 ﻿---
-title: 'Configure archive quotas for an In-Place Archive in Exchange 2013: Exchange 2013 Help'
+title: 'Configure archive quotas for an In-Place Archive in Exchange 2013'
 TOCTitle: Configure archive quotas for an In-Place Archive in Exchange 2013
 ms:assetid: f10e77c7-e1d4-415a-bef9-cb3f00e74c34
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ee633489(v=EXCHG.150)
