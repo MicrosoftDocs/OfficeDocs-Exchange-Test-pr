@@ -59,7 +59,7 @@ You can incorporate DLP detection capabilities with traditional transport rules 
 
   -  [Manage mail flow rules](manage-mail-flow-rules-exchange-2013-help.md)
     
-    [Policy and compliance cmdlets](https://technet.microsoft.com/en-us/library/dd298082\(v=exchg.150\))
+  -  [Policy and compliance cmdlets](https://technet.microsoft.com/en-us/library/dd298082\(v=exchg.150\))
 
 ## Use DLP policies created by Microsoft
 
