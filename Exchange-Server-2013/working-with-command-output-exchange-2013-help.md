@@ -228,14 +228,16 @@ Because of the flexibility and ease of scripting in the Exchange Management Shel
 
 The following example shows how you can use a simple script to output the data that is returned by a command and display it in Internet Explorer. This script takes the objects that are passed through the pipeline, opens an Internet Explorer window, and then displays the data in Internet Explorer:
 
+```
     $Ie = New-Object -Com InternetExplorer.Application
     $Ie.Navigate("about:blank")
     While ($Ie.Busy) { Sleep 1 }
     $Ie.Visible = $True
     $Ie.Document.Write("$Input")
     # If the previous line doesn't work on your system, uncomment the line below.
-    # $Ie.Document.IHtmlDocument2_Write(\"$Input\")
+    # $Ie.Document.IHtmlDocument2_Write("$Input")
     $Ie
+```
 
 To use this script, save it to the `C:\Program Files\Microsoft\Exchange Server\V15\Scripts` directory on the computer where the script will be run. Name the file `Out-Ie.ps1`. After you save the file, you can then use the script as a regular cmdlet.
 
