@@ -166,6 +166,9 @@ Exchange supports the following mailbox types:
   - **Shared mailboxes**   Shared mailboxes aren't primarily associated with individual users and are generally configured to allow access by multiple users.
     
     Although it's possible to assign additional users the logon access permissions to any mailbox type, shared mailboxes are dedicated for this functionality. The Active Directory user associated with a shared mailbox must be a disabled account. After you create a shared mailbox, you must assign permissions to all users that require access to the shared mailbox.
+    
+> [!NOTE] 
+> A shared mailbox is not designed for direct logon. The user account for the shared mailbox itself should stay in a **Disabled** (or “disconnected”) state.
 
   - **Resource mailboxes**   Resource mailboxes are special mailboxes designed to be used for scheduling resources. Like all mailbox types, a resource mailbox has an associated Active Directory user account, but it must be a disabled account. The following are the types of resource mailboxes:
     
