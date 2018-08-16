@@ -19,7 +19,7 @@ Learn how the update process for Microsoft Exchange Server 2013 has changed. Thi
 
 With Microsoft Exchange Server 2013, we changed the way we deliver hotfixes and service packs. Instead of the priority-driven hotfix release and rollup update model used by previous versions of Microsoft Exchange, Exchange 2013 now follows a scheduled delivery model. In this model, cumulative updates (CU), which address customer-reported issues and may include new functionality and/or features, are released quarterly. Critical product updates, which are packages that address a Microsoft-released security bulletin or contain a change in time zone definitions, are released as needed on a monthly basis for the most recently released CU and the immediately previous CU.
 
-To get the latest version of Exchange 2013, download and install [Microsoft Exchange Server 2013 Cumulative Update 20](https://go.microsoft.com/fwlink/p/?linkid=870406). Because each CU is a full installation of Exchange and includes updates and changes from all previous CU's, you don't need to install any previous CU's or service packs first.
+To get the latest version of Exchange 2013, download and install [Microsoft Exchange Server 2013 Cumulative Update 21](https://go.microsoft.com/fwlink/p/?LinkId=2003011). Because each CU is a full installation of Exchange and includes updates and changes from all previous CU's, you don't need to install any previous CU's or service packs first.
 
 For more information about updates as they relate to Exchange 2013, including an extensive FAQ, see [Servicing Exchange 2013](https://go.microsoft.com/fwlink/p/?linkid=282528) and “Servicing Model Update” in [Released: Exchange Server 2013 Cumulative Update 2](https://go.microsoft.com/fwlink/p/?linkid=313613).
 
