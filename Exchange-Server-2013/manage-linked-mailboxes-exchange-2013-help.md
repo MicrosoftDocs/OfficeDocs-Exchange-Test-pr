@@ -77,13 +77,13 @@ The following figure illustrates the relationship between the linked user accoun
 
 6.  Click **Next** and complete the following boxes on the **Enter general information** page.
     
-      - **\* Name**   Use this box to type a name for the user. This is the name used as the display name in the EAC and your organization’s address book, and the name that's listed in Active Directory. This name is required.
+      - **&#42; Name**   Use this box to type a name for the user. This is the name used as the display name in the EAC and your organization’s address book, and the name that's listed in Active Directory. This name is required.
     
       - **Organizational unit**   You can select an organizational unit (OU) other than the default (which is the recipient scope). If the recipient scope is set to the forest, the default value is set to the Users container in the Active Directory domain that contains the computer on which the EAC is running. If the recipient scope is set to a specific domain, the Users container in that domain is selected by default. If the recipient scope is set to a specific OU, that OU is selected by default.
         
         To select a different OU, click **Browse**. The dialog box displays all OUs in the Exchange forest that are within the specified scope. Select the OU you want, and then click **OK**.
     
-      - **\* User logon name**   Use this box to type the user logon name, which is required to create a linked mailbox. Type the user name here. This name will be used in the left portion of the email address for the linked mailbox if you don't specify an alias.
+      - **&#42; User logon name**   Use this box to type the user logon name, which is required to create a linked mailbox. Type the user name here. This name will be used in the left portion of the email address for the linked mailbox if you don't specify an alias.
         
 
         > [!NOTE]
@@ -226,7 +226,7 @@ Click **More options** to view or change the mailbox storage quota and the delet
 
 Use the **Email address** section to view or change the email addresses associated with the linked mailbox. This includes the user’s primary SMTP addresses and any associated proxy addresses. The primary SMTP address (also known as the *default reply address*) is displayed in bold text in the address list, with the uppercase **SMTP** value in the **Type** column.
 
-  - **Add **  Click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add a new email address for this mailbox. Select one of following address types:
+  - **Add**  Click **Add** ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon") to add a new email address for this mailbox. Select one of following address types:
     
       - **SMTP**   This is the default address type. Click this radio button and then type the new SMTP address in the **\* Email address** box.
     
@@ -240,7 +240,7 @@ Use the **Email address** section to view or change the email addresses associat
 
 
 
-  - **Automatically update email addresses based on the email address policy applied to this recipient   **Select this check box if you want the recipient's email addresses to be updated automatically when changes are made to email address policies in your organization. This box is selected by default.
+  - **Automatically update email addresses based on the email address policy applied to this recipient** Select this check box if you want the recipient's email addresses to be updated automatically when changes are made to email address policies in your organization. This box is selected by default.
 
 ## Mailbox Features
 
