@@ -169,7 +169,7 @@ The following examples show how to directly access common Outlook Web App views:
 
   - **Inbox:** https://*\<server name\>*/owa/?cmd=contents\&module=inbox
 
-  - **Calendar (today):**https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&exsvurl=1
+  - **Calendar (today):** https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&exsvurl=1
 
   - **Calendar (weekly):** https://*\<server name\>*/owa/?cmd=contents\&module=calendar\&view=weekly\&exsvurl=1
 
