@@ -125,7 +125,7 @@ When you're ready, do the following to prepare Active Directory for Exchange. If
     ```
 
 > [!IMPORTANT]
-> If you've configured a hybrid deployment between your on-premises organization and Exchange Online, you need to include the /TenantOrganizationConfig switch when you run the above command.
+> If you've configured a hybrid deployment between your on-premises organization and Exchange Online, you need to include the `/TenantOrganizationConfig` switch when you run the above command.
 
 After Setup finishes preparing Active Directory for Exchange, you'll need to wait while Active Directory replicates the changes to all of your domain controllers. If you want to check on how replication is going, you can use the `repadmin` tool. `repadmin` is included as part of the Active Directory Domain Services Tools feature in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2. For more information about how to use the tool, see [Repadmin](https://go.microsoft.com/fwlink/p/?linkid=257879).
 
