@@ -57,27 +57,27 @@ The cross-premises navigation allows you to easily switch between your Exchange 
 
 This is the first level of navigation for most of the tasks that you’ll perform in the EAC. The feature pane is similar to the console tree from the EMC in Exchange 2010. However, in Exchange 2013 the feature pane is organized by feature areas as opposed to server roles, and there are fewer clicks to find what you need.
 
-  - **Recipients   **This is where you’ll manage mailboxes, groups, resource mailboxes, contacts, shared mailboxes, and mailbox migrations and moves.
+  - **Recipients** This is where you’ll manage mailboxes, groups, resource mailboxes, contacts, shared mailboxes, and mailbox migrations and moves.
 
-  - **Permissions   **This is where you’ll manage administrator roles, user roles, and Outlook Web App policies.
+  - **Permissions** This is where you’ll manage administrator roles, user roles, and Outlook Web App policies.
 
-  - **Compliance management   **This is where you’ll manage In-Place eDiscovery, In-Place Hold, auditing, data loss prevention (DLP), retention policies, retention tags, and journal rules.
+  - **Compliance management** This is where you’ll manage In-Place eDiscovery, In-Place Hold, auditing, data loss prevention (DLP), retention policies, retention tags, and journal rules.
 
-  - **Organization   **This is where you’ll manage the tasks that pertain to your Exchange Organization, including federated sharing, Outlook Apps, and address lists.
+  - **Organization** This is where you’ll manage the tasks that pertain to your Exchange Organization, including federated sharing, Outlook Apps, and address lists.
 
-  - **Protection   **This is where you’ll manage anti-malware protection for your organization.
+  - **Protection** This is where you’ll manage anti-malware protection for your organization.
 
-  - **Mail flow   **This is where you’ll manage rules, delivery reports, accepted domains, email address policies, and send and receive connectors.
+  - **Mail flow** This is where you’ll manage rules, delivery reports, accepted domains, email address policies, and send and receive connectors.
 
-  - **Mobile   **This is where you’ll manage the mobile devices that you allow to connect to your organization. You can manage mobile device access and mobile device mailbox policies.
+  - **Mobile** This is where you’ll manage the mobile devices that you allow to connect to your organization. You can manage mobile device access and mobile device mailbox policies.
 
-  - **Public folders   **In Exchange 2010, you had to manage public folders by using the Public Folder Management Console, which was located outside of the EMC in the Toolbox. In Exchange 2013, public folders can be managed from within the **public folders** feature area.
+  - **Public folders** In Exchange 2010, you had to manage public folders by using the Public Folder Management Console, which was located outside of the EMC in the Toolbox. In Exchange 2013, public folders can be managed from within the **public folders** feature area.
 
-  - **Unified Messaging   **This is where you’ll manage UM dial plans and UM IP gateways.
+  - **Unified Messaging** This is where you’ll manage UM dial plans and UM IP gateways.
 
-  - **Servers   **This is where you’ll manage your Mailbox and Client Access servers, databases, database availability groups (DAGs), virtual directories, and certificates.
+  - **Servers** This is where you’ll manage your Mailbox and Client Access servers, databases, database availability groups (DAGs), virtual directories, and certificates.
 
-  - **Hybrid   **This is where you’ll set up and configure a Hybrid organization.
+  - **Hybrid** This is where you’ll set up and configure a Hybrid organization.
 
 ## Tabs
 
