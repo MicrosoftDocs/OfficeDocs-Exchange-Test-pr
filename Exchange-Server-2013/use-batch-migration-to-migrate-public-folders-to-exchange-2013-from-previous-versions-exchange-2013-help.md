@@ -460,9 +460,7 @@ If you run into issues with the migration and need to reactivate your legacy Exc
     
     ```
     Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
-    ```
 
-    ```
     Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
     ```
 
