@@ -232,11 +232,11 @@ You can apply the dialing rule groups that you created on a UM dial plan to the 
     
         Set-UMDialPlan -Identity MyUMDialPlan -AllowedInCountryOrRegionGroups MyAllowedDialRuleGroup
 
-  - **Single or multiple UM mailbox policies   **The settings that are configured on a UM mailbox policy will apply to all users who are linked with that UM mailbox policy. The settings configured on a UM mailbox policy apply to users who call in to an Outlook Voice Access number and sign in to their mailbox. To apply an in-country/region dialing rule group named `MyAllowedDialRuleGroup` to a single UM mailbox policy, use the **Dialing authorization** page on the UM mailbox policy in the EAC or use the **Set-UMMailboxPolicy** cmdlet in the Shell, as follows.
+  - **Single or multiple UM mailbox policies** The settings that are configured on a UM mailbox policy will apply to all users who are linked with that UM mailbox policy. The settings configured on a UM mailbox policy apply to users who call in to an Outlook Voice Access number and sign in to their mailbox. To apply an in-country/region dialing rule group named `MyAllowedDialRuleGroup` to a single UM mailbox policy, use the **Dialing authorization** page on the UM mailbox policy in the EAC or use the **Set-UMMailboxPolicy** cmdlet in the Shell, as follows.
     
         Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -AllowedInCountryOrRegionGroups MyAllowedDialRuleGroup
 
-  - **Single or multiple auto attendants associated with the UM dial plan   **This will apply to all users who call in to a UM auto attendant. To apply the in-country/region dialing rule group named `MyAllowedDialRuleGroup` to a single UM auto attendant, use the **Dialing authorization** page on the auto attendant in the EAC or the **Set-UMAutoAttendant** cmdlet in the Shell, as follows.
+  - **Single or multiple auto attendants associated with the UM dial plan** This will apply to all users who call in to a UM auto attendant. To apply the in-country/region dialing rule group named `MyAllowedDialRuleGroup` to a single UM auto attendant, use the **Dialing authorization** page on the auto attendant in the EAC or the **Set-UMAutoAttendant** cmdlet in the Shell, as follows.
     
         Set-UMAutoAttendant -Identity MyUMAutoAttendant -AllowedInCountryOrRegionGroups MyAllowedDialRuleGroup
 
