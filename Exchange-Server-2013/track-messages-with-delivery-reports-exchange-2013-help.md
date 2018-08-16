@@ -49,11 +49,11 @@ Use the EAC to review a delivery report
     
       - Select one of the following:
         
-          - **Search for messages sent to   **Use this option to search for messages sent to specific users. Click **Select users** and then pick users from the address book by selecting a user from the list and clicking **Add**. You can select more than one user here. When you're finished selecting users, click **OK** to return to the **Delivery Reports** page. If you select this option, you can also leave the field blank to find messages sent to anyone.
+          - **Search for messages sent to** Use this option to search for messages sent to specific users. Click **Select users** and then pick users from the address book by selecting a user from the list and clicking **Add**. You can select more than one user here. When you're finished selecting users, click **OK** to return to the **Delivery Reports** page. If you select this option, you can also leave the field blank to find messages sent to anyone.
         
-          - **Search for messages received from   ** Use this option to search for messages received from a specific user. Again, just select the user from the address book and click **OK** to return to the **Delivery Reports** page. If you select this option, you have to specify a sender.
+          - **Search for messages received from** Use this option to search for messages received from a specific user. Again, just select the user from the address book and click **OK** to return to the **Delivery Reports** page. If you select this option, you have to specify a sender.
     
-      - **Search for these words in the subject line   **Enter subject line information here, or leave it blank to expand your search.
+      - **Search for these words in the subject line** Enter subject line information here, or leave it blank to expand your search.
 
 3.  When you are finished, click **Search**. If you want to start over, click **Clear**.
 
