@@ -45,7 +45,7 @@ Use the EAC to review a delivery report
 
 2.  Enter the following information:
     
-      - **\* Mailbox to search:** Click **Browse** to select the mailbox from the address book and then click **OK**. Selecting the mailbox to search is required.
+      - **&#42; Mailbox to search:** Click **Browse** to select the mailbox from the address book and then click **OK**. Selecting the mailbox to search is required.
     
       - Select one of the following:
         
@@ -63,25 +63,25 @@ To view delivery information, select a message in the **Search results** pane an
 
 The delivery report shows delivery status and detailed delivery information for the message you have selected from the **Search results** pane. At the top of the report, you'll see the following fields:
 
-  - **Subject   **The subject line of the message appears as the heading of the report.
+  - **Subject** The subject line of the message appears as the heading of the report.
 
-  - **From   **Alias, display name, or email address of the person who sent the message.
+  - **From** Alias, display name, or email address of the person who sent the message.
 
   - **To**   Alias, display name, or email address for each recipient of the message.
 
-  - **Sent   **Date and time the message was sent.
+  - **Sent** Date and time the message was sent.
 
 ## Summary to date section
 
 This section appears in the delivery report if a message was sent to more than one person or recipient. The top of this section tells you the total number of recipients that the message was sent to and gives brief delivery information for each recipient.
 
-  - **Summary to date   **Displays total number of recipients, and if there are messages Pending, Delivered, or Unsuccessful. Click the hyperlinks to sort by status.
+  - **Summary to date** Displays total number of recipients, and if there are messages Pending, Delivered, or Unsuccessful. Click the hyperlinks to sort by status.
 
   - **Search box**   The search box is useful if you sent the message to a group of more than 30 recipients. In the search box, type an email address that you want to get delivery information about and click the magnifying glass.
 
-  - **To   **Shows the email address of the recipient.
+  - **To** Shows the email address of the recipient.
 
-  - **Status   **This column displays the status of the message for each recipient.
+  - **Status** This column displays the status of the message for each recipient.
 
 ## Detailed report information
 
@@ -93,15 +93,15 @@ This section contains detailed delivery information for a message sent to the re
 
 Depending on the delivery status of the message, you may see a variety of status states, including:
 
-  - **Delivered   **Indicates successful delivery.
+  - **Delivered** Indicates successful delivery.
 
-  - **Deferred   **Indicates that a message is delayed.
+  - **Deferred** Indicates that a message is delayed.
 
-  - **Pending   **If message delivery is pending because a message meets the criteria for an organization-wide rule or policy or because it’s subject to message approval, the status message explains what action a rule is performing or that the message must be approved by a moderator before delivery.
+  - **Pending** If message delivery is pending because a message meets the criteria for an organization-wide rule or policy or because it’s subject to message approval, the status message explains what action a rule is performing or that the message must be approved by a moderator before delivery.
 
   - **Moderator**   The status indicates whether the message was approved or rejected by the moderator.
 
-  - **Groups Expanded   **If a message was sent to a group, the individual users are shown in the **Summary to date** section so you can see the delivery status for each recipient. If you need to remove or add a user to a group during a delivery report investigation, you can modify a group by clicking **Edit Groups**.
+  - **Groups Expanded** If a message was sent to a group, the individual users are shown in the **Summary to date** section so you can see the delivery status for each recipient. If you need to remove or add a user to a group during a delivery report investigation, you can modify a group by clicking **Edit Groups**.
 
   - **Failed**   Shows the date, time, and reason for a message delivery failure. For example, an organization-wide rule may be blocking message delivery or the message couldn't be delivered.
 
