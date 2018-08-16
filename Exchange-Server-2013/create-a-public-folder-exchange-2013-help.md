@@ -62,7 +62,7 @@ When using the EAC to create a public folder, you’ll only be able to set the n
     
 
     > [!IMPORTANT]
-    > Don't use a backslash (\) in the name when creating a public folder.
+    > Don't use a backslash (&#92;) in the name when creating a public folder.
 
 
 
@@ -78,7 +78,7 @@ This example creates a public folder named Reports in the path Marketing\\2013.
 
 
 > [!IMPORTANT]
-> Don't use a backslash (\) in the name when creating a public folder.
+> Don't use a backslash (&#92;) in the name when creating a public folder.
 
 
 
