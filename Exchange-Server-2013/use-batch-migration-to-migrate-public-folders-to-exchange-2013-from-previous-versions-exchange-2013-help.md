@@ -289,11 +289,13 @@ The steps for migrating Exchange 2007 public folders are different from the step
 **Migrate Exchange 2007 public folders**
 
 1.  Legacy system public folders such as OWAScratchPad and the schema-root folder subtree in Exchange 2007 won’t be recognized by Exchange 2013 and will therefore be treated as "bad" items. This will cause the migration to fail. As part of the migration request, you must specify a value for the `BadItemLimit` parameter. This value will vary depending on the number of public folder databases you have. The following commands will determine how many public folder databases you have and compute the `BadItemLimit` for the migration request.
-    
+    ```
         $PublicFolderDatabasesInOrg = @(Get-PublicFolderDatabase)
-    
+    ```
+    ```
         $BadItemLimitCount = 5 + ($PublicFolderDatabasesInOrg.Count -1)
-
+    ```
+    
 2.  On the Exchange 2013 server, run the following command:
     
         New-MigrationBatch -Name PFMigration -SourcePublicFolderDatabase (Get-PublicFolderDatabase -Server <Source server name>) -CSVData (Get-Content <Folder to mailbox map path> -Encoding Byte) -NotificationEmails <email addresses for migration notifications> -BadItemLimit $BadItemLimitCount 
