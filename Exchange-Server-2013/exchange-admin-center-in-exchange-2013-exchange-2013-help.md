@@ -171,7 +171,7 @@ The *Me tile* allows you to sign out of the EAC and sign in as a different user.
 
   - **Disable Help bubble**   The Help bubble displays contextual help for fields when you create or edit and object. You can turn off the Help bubble help or turn it on if it has been disabled.
 
-  - **Copyright and Privacy   **Click the privacy or copyright link to read the copyright and privacy information for Exchange 2013.
+  - **Copyright and Privacy** Click the privacy or copyright link to read the copyright and privacy information for Exchange 2013.
 
 ## Supported browsers
 
