@@ -29,7 +29,7 @@ The **Test-UMConnectivity** cmdlet can be used to check connectivity to Client A
     
       - *–PIN*   This parameter must contain the PIN of the UM-enabled mailbox.
     
-      - *–UMDialPlan   *This parameter must contain the dial plan linked with the test mailbox.
+      - *–UMDialPlan*   This parameter must contain the dial plan linked with the test mailbox.
 
   - **Remote**   The **Test-UMConnectivity** cmdlet tries to connect to a remote Client Access server by placing a call through a VoIP gateway. After it connects, it performs connectivity checks on the remote Client Access server and the media paths.
     
