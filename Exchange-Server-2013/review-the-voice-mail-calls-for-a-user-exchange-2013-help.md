@@ -25,7 +25,7 @@ For additional tasks related to UM reporting, see [UM reports procedures](um-rep
 
 ## How do I get call logs for a UM-enabled user?
 
-1.  In the Exchange Administration Center (EAC), select **Unified messaging **\> **More options** ![More Options Icon](images/JJ150550.5381819e-3b21-4873-8714-e9b956290b28(EXCHG.150).gif "More Options Icon") \> **User call logs**.
+1.  In the Exchange Administration Center (EAC), select **Unified messaging** \> **More options** ![More Options Icon](images/JJ150550.5381819e-3b21-4873-8714-e9b956290b28(EXCHG.150).gif "More Options Icon") \> **User call logs**.
 
 2.  Click **Select a user**, and then select the user you want data for.
 
@@ -41,7 +41,7 @@ The user call log includes the following information for each call:
 
   - **DURATION** How long the call lasted in minutes (MM) and seconds (SS), in the following format: MM:SS.
 
-  - **CALL TYPE   **The type of call:
+  - **CALL TYPE**   The type of call:
     
       - **Call Answering**   The call wasn't answered and was forwarded to the Mailbox servers, and the caller left a voice message.
     

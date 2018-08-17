@@ -23,7 +23,7 @@ This topic describes how to synchronize mail-enabled public folders when your us
 
 
 > [!NOTE]
-> This topic refers to the Exchange 2010 SP3 and Exchange 2007 SP3 RU10 servers as the <EM>legacy Exchange server</EM>.
+> This topic refers to the Exchange Server 2010 SP3 and Exchange Server 2007 SP3 RU10 servers as the <EM>legacy Exchange server</EM>.
 
 
 
@@ -88,7 +88,7 @@ A hybrid configuration with Exchange 2003 public folders is not supported. If yo
 
 ## Step 1: What do you need to know before you begin?
 
-1.  These instructions assume that you have used the Hybrid Configuration Wizard to configure and synchronize your on-premises and Exchange Online environments and that the DNS records used for most users’ AutoDiscover references an on-premises end-point. For more information, see [Hybrid Configuration wizard](https://technet.microsoft.com/en-us/library/hh529921\(v=exchg.150\)).
+1.  These instructions assume that you have used the Hybrid Configuration Wizard to configure and synchronize your on-premises and Exchange Online environments, and that the DNS records that are used for the Autodiscover service for most users reference an on-premises end point. For more information, see [Hybrid Configuration wizard](https://technet.microsoft.com/en-us/library/hh529921\(v=exchg.150\)).
 
 2.  These instructions assume that Outlook Anywhere is enabled and functional on the on-premises legacy Exchange server(s). For information on how to enable Outlook Anywhere, see [Outlook Anywhere](outlook-anywhere-exchange-2013-help.md).
 
@@ -116,7 +116,7 @@ A hybrid configuration with Exchange 2003 public folders is not supported. If yo
 
 ## Step 2: Make remote public folders discoverable
 
-1.  If your public folders are on Exchange 2010 or later servers, then you need to install the Client Access Server role on all mailbox servers that have a public folder database. This allows the Microsoft Exchange RpcClientAccess service to be running, which allows for all clients to access public folders. The client access role isn’t required for Exchange 2007 public folder servers, and this step isn’t necessary. For more information, see [Install Exchange Server 2010](install-exchange-2013-using-the-setup-wizard-exchange-2013-help.md). This step isn’t necessary for Exchange 2007 public folders.
+1.  If your public folders are on Exchange 2010 or later servers, you must install the Client Access server (CAS) role on all mailbox servers that have a public folder database. This allows the Microsoft Exchange RpcClientAccess service to be running so that all clients can access public folders. For Exchange 2007 public folder servers, the CAS role isn’t required, and this step isn’t necessary. For more information, see [Install Exchange Server 2010](install-exchange-2013-using-the-setup-wizard-exchange-2013-help.md).
     
 
     > [!NOTE]
@@ -141,10 +141,12 @@ A hybrid configuration with Exchange 2003 public folders is not supported. If yo
 
 
 3.  Create a proxy mailbox within the new mailbox database and hide the mailbox from the address book. The SMTP of this mailbox will be returned by AutoDiscover as the *DefaultPublicFolderMailbox* SMTP, so that by resolving this SMTP the client can reach the legacy exchange server for public folder access.
-    
+    ```
         New-Mailbox -Name <PFMailbox1> -Database <NewMDBforPFs>
-    
+    ```
+    ```
         Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
+    ```
 
 4.  For Exchange 2010, enable AutoDiscover to return the proxy public folder mailboxes. This step isn’t necessary for Exchange 2007.
     
@@ -204,7 +206,7 @@ You must wait until ActiveDirectory synchronization has completed to see the cha
 
 ## How do I know this worked?
 
-1.  Log on to Outlook for a user who is in Exchange Online and perform the following public folder tests:
+1.  Log on to Outlook for a user who is in Exchange Online, and then run the following public folder tests:
     
       - View the hierarchy.
     

@@ -182,133 +182,112 @@ The following table identifies the operating system platforms on which each vers
 The following table identifies the Active Directory environments with which each version of Exchange can communicate. Supported environments are identified by an X character. An Active Directory server refers to both writable global catalog servers and to writable domain controllers. Read-only global catalog servers and read-only domain controllers aren't supported.
 
 
+<table summary="table" responsive="true"> <tbody>
+<tr responsive="true">
+<th scope="col">Operating system environment</th>
+<th scope="col">Exchange 2016 CU3 and later</th>
+<th scope="col">Exchange 2016 CU2 and earlier</th>
+<th scope="col">Exchange 2013 SP1 and later</th>
+<th scope="col">Exchange 2010 SP3 RU22 or later</th>
+<th scope="col">Exchange 2010 SP3 RU5 - RU21</th>
+</tr>  
+<tr>
+ <td><p>Windows Server 2003 SP2 Active Directory servers</p></td>
+<td> <p></p> </td>
+<td> <p></p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> </tr> 
+<tr>
+ <td> <p>Windows Server 2008 SP2 Active Directory servers</p> </td>
+<td> <p></p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> </tr> 
+<tr>
+ <td> <p>Windows Server 2008 R2 SP1 Active Directory servers</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> </tr> 
+<tr>
+ <td> <p>Windows Server 2012 Active Directory servers</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> </tr> 
+<tr>
+ <td> <p>Windows Server 2012 R2 Active Directory servers</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> </tr> 
+<tr>
+ <td> <p>Windows Server 2016 Active Directory servers</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p></p> </td> </tr> </tbody></table>
+
+
 <table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Operating system environment</th>
-<th>Exchange 2016 CU3 and later</th>
-<th>Exchange 2016 CU2 and earlier</th>
-<th>Exchange 2013 SP1 and later</th>
-<th>Exchange 2010 SP3 RU5 or later</th>
-</tr>
-</thead>
 <tbody>
-<tr class="odd">
-<td><p>Windows Server 2003 SP2 Active Directory servers</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="even">
-<td><p>Windows Server 2008 SP2 Active Directory servers</p></td>
-<td><p></p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="odd">
-<td><p>Windows Server 2008 R2 SP1 Active Directory servers</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="even">
-<td><p>Windows Server 2012 Active Directory servers</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="odd">
-<td><p>Windows Server 2012 R2 Active Directory servers</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="even">
-<td><p>Windows Server 2016 Active Directory servers</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
+<tr>
 <th>Forest functional level</th>
 <th>Exchange 2016 CU3 and later</th>
 <th>Exchange 2016 CU2 and earlier</th>
 <th>Exchange 2013 SP1 and later</th>
-<th>Exchange 2010 SP3 RU5 or later</th>
+<th>Exchange 2010 SP3 RU22 or later</th>
+<th>Exchange 2010 SP3 RU5 - RU21</th> 
+</tr>  
+<tr> <td> <p>Windows Server 2003 forest functional level</p> </td>
+<td> <p></p> </td>
+<td> <p></p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> 
+</tr> 
+<tr> <td> <p>Windows Server 2008 forest functional level</p> </td>
+<td> <p></p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> 
+</tr> 
+<tr> <td> <p>Windows Server 2008 R2 SP1 forest functional level</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> 
+</tr> 
+<tr> <td> <p>Windows Server 2012 forest functional level </p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> 
+</tr> 
+<tr> <td> <p>Windows Server 2012 R2 forest functional level </p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td> 
+</tr> 
+<tr> <td> <p>Windows Server 2016 forest functional level </p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p>X</p> </td>
+<td> <p></p> </td> 
 </tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Windows Server 2003 forest functional level</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="even">
-<td><p>Windows Server 2008 forest functional level</p></td>
-<td><p></p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="odd">
-<td><p>Windows Server 2008 R2 SP1 forest functional level</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="even">
-<td><p>Windows Server 2012 forest functional level</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="odd">
-<td><p>Windows Server 2012 R2 forest functional level</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-</tr>
-<tr class="even">
-<td><p>Windows Server 2016 forest functional level</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p>X</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
+</tbody></table>
 
 
 ## Web browsers supported for use with the premium version of Outlook Web App or Outlook on the web

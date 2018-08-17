@@ -69,7 +69,7 @@ The UM Call Statistics report includes the following information:
 
   - **DATE**   The UTC date for the call data. The date format depends on the type of report you've chosen and your locale settings. You can choose from the following options:
     
-      - **--- **  All calls are shown.
+      - **---**  All calls are shown.
     
       - **MMM/YY**   The month of the calls. For example, Jan/13.
     
