@@ -49,7 +49,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn about how users can access their Exchange 2013 email by using email programs that use POP3 or IMAP4.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="https://technet.microsoft.com/en-us/library/jj150495(v=exchg.150)">Office Web Apps Server integration</a></p></td>
+<td><p>Office Web Apps Server integration</p></td>
 <td><p>Learn about how the integration of Microsoft Office Web Apps Server helps provide rich attachment preview functionality in Outlook Web App.</p></td>
 </tr>
 <tr class="odd">

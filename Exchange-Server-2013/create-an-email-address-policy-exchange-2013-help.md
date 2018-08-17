@@ -137,7 +137,7 @@ For detailed instructions about how to create an email address policy, see the f
     Click **Add a rule** to further restrict the recipients that this policy will apply to. This creates a Boolean **And** statement.
     
 
-    > [!WARNING]
+    > [!CAUTION]
     > If you apply too many rules, it’s possible to restrict the email address policy to the point that it doesn’t contain any users.
 
 

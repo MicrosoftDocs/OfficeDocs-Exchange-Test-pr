@@ -174,7 +174,7 @@ The following limitations apply when sharing free/busy information between Excha
     1.  On all your Exchange 2007 CAS servers, open the following file with a text editor such as Notepad: \<Exchange Installation Path\>\\V14\\ClientAccess\\ExchWeb\\EWS\\web.config
         
 
-        > [!WARNING]
+        > [!CAUTION]
         > Before you make any changes to the web.config file, make a copy of the file and store it in a safe location.
 
     

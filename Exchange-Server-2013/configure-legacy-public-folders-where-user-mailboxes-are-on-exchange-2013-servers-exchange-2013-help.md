@@ -29,7 +29,7 @@ Users whose mailboxes are on Exchange Server 2013 or Exchange Server 2016 won’
 
 ## Step 1: Make the Exchange 2010 public folders discoverable
 
-1.  If your public folders are on Exchange 2010 or later servers, then you need to install the Client Access Server role on all mailbox servers that have a public folder database. This allows the Microsoft Exchange RpcClientAccess service to be running, which allows for all clients to access public folders. The client access role isn’t required for Exchange 2007 public folder servers, and this step isn’t necessary. For more information, see [Install Exchange Server 2010](install-exchange-2013-using-the-setup-wizard-exchange-2013-help.md).
+1.  If your public folders are on servers that are running Exchange Server 2010 or a later version, you must install the Client Access server (CAS) role on all mailbox servers that have a public folder database. You must also enable Outlook Anywhere on all public folder servers. This allows the Microsoft Exchange RpcClientAccess service to run so that all clients can access public folders. For Exchange Server 2007 public folder servers, the CAS role isn’t required, and this step isn’t necessary. For more information, see [Install Exchange Server 2010](install-exchange-2013-using-the-setup-wizard-exchange-2013-help.md).
     
 
     > [!NOTE]
