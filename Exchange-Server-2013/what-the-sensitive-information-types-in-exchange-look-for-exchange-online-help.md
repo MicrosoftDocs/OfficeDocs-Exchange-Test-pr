@@ -4568,6 +4568,7 @@ A sensitive information type is defined by a pattern that can be identified by a
 </dd>
 </dl>
 <p>New format (1 Jan 2013 and after)</p>
+<p>Seven digits followed by two letters</p>
 <dl>
 </dd>
 </dl></td>
