@@ -158,7 +158,7 @@ This role has been configured to provide a role assignee with all necessary cmdl
 If you decide that you need to create a customized version of this role, you must create a role as a child of this role, and customize the new role.
 
 
-> [!WARNING]
+> [!CAUTION]
 > The following information enables you to perform advanced management of permissions. Customizing management roles can significantly increase the complexity of your permissions model. You could cause certain features to stop functioning if you replace a built-in management role with an incorrectly configured custom role.
 
 
