@@ -1103,13 +1103,11 @@ A sensitive information type is defined by a pattern that can be identified by a
 <td><p>Format</p></td>
 <td><p>Registro Geral (old format)</p>
 <dl>
-<dt><span></span></dt>
 <dd><p>Nine digits</p>
 </dd>
 </dl>
 <p>Registro de Identidade (RIC) (new format)</p>
 <dl>
-<dt><span></span></dt>
 <dd><p>11 digits</p>
 </dd>
 </dl></td>
@@ -3795,13 +3793,11 @@ A sensitive information type is defined by a pattern that can be identified by a
 <td><p>Format</p></td>
 <td><p>Since 1 November 2010</p>
 <dl>
-<dt><span></span></dt>
 <dd><p>Nine letters and digits</p>
 </dd>
 </dl>
 <p>From 1 April 1987 until 31 October 2010</p>
 <dl>
-<dt><span></span></dt>
 <dd><p>10 digits</p>
 </dd>
 </dl></td>
@@ -4421,7 +4417,6 @@ A sensitive information type is defined by a pattern that can be identified by a
 </ul>
 <p>The format for each country is slightly different. The IBAN sensitive information type covers these 60 countries:</p>
 <dl>
-<dt><span></span></dt>
 <dd><p>ad, ae, al, at, az, ba, be, bg, bh, ch, cr, cy, cz, de, dk, do, ee, es, fi, fo, fr, gb, ge, gi, gl, gr, hr, hu, ie, il, is, it, kw, kz, lb, li, lt, lu, lv, mc, md, me, mk, mr, mt, mu, nl, no, pl, pt, ro, rs, sa, se, si, sk, sm, tn, tr, vg</p>
 </dd>
 </dl></td>
@@ -4569,14 +4564,11 @@ A sensitive information type is defined by a pattern that can be identified by a
 <td><p>Format</p></td>
 <td><p>Old format (until 31 Dec 2012)</p>
 <dl>
-<dt><span></span></dt>
 <dd><p>Seven digits followed by 1-2 letters</p>
 </dd>
 </dl>
 <p>New format (1 Jan 2013 and after)</p>
 <dl>
-<dt><span></span></dt>
-<dd><p>Seven digits followed by two letters</p>
 </dd>
 </dl></td>
 </tr>
@@ -6779,13 +6771,11 @@ A sensitive information type is defined by a pattern that can be identified by a
 <td><p>Format</p></td>
 <td><p>Biometric passport number</p>
 <dl>
-<dt><span></span></dt>
 <dd><p>Nine digits</p>
 </dd>
 </dl>
 <p>Non-biometric passport number</p>
 <dl>
-<dt><span></span></dt>
 <dd><p>Nine digits</p>
 </dd>
 </dl></td>
