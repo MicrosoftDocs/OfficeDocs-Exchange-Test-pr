@@ -112,7 +112,7 @@ Users who are assigned the View-Only Management role group can view the configur
 <td><p><a href="discovery-management-exchange-2013-help.md">Discovery Management</a></p>
 
 > [!NOTE]
-> By default, the Discovery Management role group doesn't have any members. No users, including administrators, have the required permissions to search mailboxes. For more information, see <A href="assign-ediscovery-permissions-in-exchange-exchange-2013-help.md">Assign eDiscovery permissions in Exchange</A>.
+> By default, the Discovery Management role group doesn't have any members. No users, including administrators, have the required permissions to search mailboxes. For more information, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/assign-ediscovery-permissions">Assign eDiscovery permissions in Exchange</A>.
 
 
 </td>

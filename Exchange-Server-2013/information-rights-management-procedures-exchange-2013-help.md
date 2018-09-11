@@ -27,7 +27,7 @@ _**Applies to:** Exchange Server 2013_
 
 [Enable or Disable Transport Decryption](enable-or-disable-transport-decryption-exchange-2013-help.md)
 
-[Configure IRM for Exchange Search and In-Place eDiscovery](configure-irm-for-exchange-search-and-in-place-ediscovery-exchange-2013-help.md)
+[Configure IRM for Exchange Search and In-Place eDiscovery](configure-irm-for-exchange-search-and-https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
 [Enable or Disable Journal Report Decryption](enable-or-disable-journal-report-decryption-exchange-2013-help.md)
 

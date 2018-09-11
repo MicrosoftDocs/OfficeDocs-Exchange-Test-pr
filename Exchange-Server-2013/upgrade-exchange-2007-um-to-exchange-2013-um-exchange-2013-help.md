@@ -212,7 +212,7 @@ Configure the UM startup mode on an Exchange 2013 Mailbox server by running the 
 
 Depending on your existing Exchange 2007 deployment, you may be required to create new UM dial plans or configure your existing dial plans. A UM dial plan represents a set of traditional or SIP-enabled Private Branch eXchanges (PBXs), IP PBXs, or SIP-enabled PBXs that share common user extension numbers. All users' extensions hosted on traditional or SIP-enabled PBXs or IP PBXs within a dial plan contain the same number of digits. Users can dial one another’s telephone extensions without appending a special number to the extension or dialing a full telephone number.
 
-UM dial plans are used in Unified Messaging to make sure that user telephone extensions are unique. In some telephony networks, multiple IP PBXs, traditional PBXs, or SIP-enabled PBXs exist. In these telephony networks, there could be two users who have the same telephone extension number. UM dial plans resolve this situation. Putting the two users into two separate UM dial plans makes their extensions unique. For more information, see [UM dial plans](um-dial-plans-exchange-2013-help.md).
+UM dial plans are used in Unified Messaging to make sure that user telephone extensions are unique. In some telephony networks, multiple IP PBXs, traditional PBXs, or SIP-enabled PBXs exist. In these telephony networks, there could be two users who have the same telephone extension number. UM dial plans resolve this situation. Putting the two users into two separate UM dial plans makes their extensions unique. For more information, see [UM dial plans](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-dial-plans).
 
 If required, you can create a UM dial plan by using the EAC:
 
@@ -279,7 +279,7 @@ Depending on your existing Exchange 2007 deployment, you may be required to crea
 
 A UM IP gateway represents a physical Voice over IP (VoIP) gateway, IP PBX, or SIP-enabled PBX. Before a VoIP gateway, IP PBX, or SIP-enabled PBX can be used to answer incoming calls and send outgoing calls for voice mail users, a UM IP gateway must be created in the directory service.
 
-The combination of the UM IP gateway and a UM hunt group establishes a link between a VoIP gateway, IP PBX, or SIP-enabled PBX and a UM dial plan. By creating multiple UM hunt groups, you can associate a single UM IP gateway with multiple UM dial plans. For more information, see [UM IP gateways](um-ip-gateways-exchange-2013-help.md).
+The combination of the UM IP gateway and a UM hunt group establishes a link between a VoIP gateway, IP PBX, or SIP-enabled PBX and a UM dial plan. By creating multiple UM hunt groups, you can associate a single UM IP gateway with multiple UM dial plans. For more information, see [UM IP gateways](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways).
 
 If required, you can create a UM IP gateway by using the EAC, as follows:
 
@@ -347,7 +347,7 @@ If required, you can create a UM hunt group by running the following command in 
 
 ## Step 9: Create or configure UM auto attendants
 
-Depending on your existing Exchange 2007 deployment, you may be required to create new UM auto attendants. You can use UM auto attendants to create a voice menu system that lets external and internal callers use the UM auto attendant menu system to locate people and place or transfer calls to company users or departments in an organization. For more information, see [Automatically answer and route incoming calls](automatically-answer-and-route-incoming-calls-exchange-2013-help.md).
+Depending on your existing Exchange 2007 deployment, you may be required to create new UM auto attendants. You can use UM auto attendants to create a voice menu system that lets external and internal callers use the UM auto attendant menu system to locate people and place or transfer calls to company users or departments in an organization. For more information, see [Automatically answer and route incoming calls](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/automatically-answer-and-route-calls).
 
 In smaller deployments, you may only want to deploy UM so that callers can leave voice mail for users. In these deployments, creating an auto attendant isn’t required. However, in most cases, using auto attendants is very useful for external callers when they call in to your organization.
 
@@ -389,7 +389,7 @@ If required, you can configure an existing auto attendant by running the followi
 
 ## Step 10: Create or configure UM mailbox policies
 
-Depending on your existing Exchange 2007 deployment, you may be required to create new UM mailbox policies or configure existing UM mailbox policies. UM mailbox policies are required when you enable users for Unified Messaging. The mailbox of each UM-enabled user must be linked to a single UM mailbox policy. After you create a UM mailbox policy, you link one or more UM-enabled mailboxes to the UM mailbox policy. This lets you control PIN security settings such as the minimum number of digits in a PIN or the maximum number of logon attempts for the UM-enabled users who are linked to the UM mailbox policy. For more information, see [UM mailbox policies](um-mailbox-policies-exchange-2013-help.md).
+Depending on your existing Exchange 2007 deployment, you may be required to create new UM mailbox policies or configure existing UM mailbox policies. UM mailbox policies are required when you enable users for Unified Messaging. The mailbox of each UM-enabled user must be linked to a single UM mailbox policy. After you create a UM mailbox policy, you link one or more UM-enabled mailboxes to the UM mailbox policy. This lets you control PIN security settings such as the minimum number of digits in a PIN or the maximum number of logon attempts for the UM-enabled users who are linked to the UM mailbox policy. For more information, see [UM mailbox policies](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policies).
 
 If required, you can create a UM mailbox policy by using the EAC:
 
@@ -459,7 +459,7 @@ To move an Exchange 2007 mailbox to an Exchange 2013 Mailbox server by using the
 
 A user must have a mailbox before they can be enabled for Unified Messaging. But, by default, a user who has a mailbox isn't enabled for UM. After the user is UM-enabled, you can manage, modify, and configure the UM properties and voice mail features for them. You can enable a user for UM by using the EAC or the Shell. Learn more at [Voice mail for users](voice-mail-for-users-exchange-2013-help.md).
 
-When you enable a user for UM, you must define at least one extension number that UM will use when voice mail is submitted to the user's mailbox and to allow the user to use Outlook Voice Access. After you enable the user for UM, you can add secondary extension numbers to the user's mailbox, modify or remove them by configuring the Exchange Unified Messaging (EUM) proxy address on the user's mailbox, or add or remove additional or secondary extensions for the user in the EAC. To add, modify, or remove extension numbers, E.164 numbers, or SIP addresses, see [Voice mail-enabled user procedures](voice-mail-enabled-user-procedures-exchange-2013-help.md).
+When you enable a user for UM, you must define at least one extension number that UM will use when voice mail is submitted to the user's mailbox and to allow the user to use Outlook Voice Access. After you enable the user for UM, you can add secondary extension numbers to the user's mailbox, modify or remove them by configuring the Exchange Unified Messaging (EUM) proxy address on the user's mailbox, or add or remove additional or secondary extensions for the user in the EAC. To add, modify, or remove extension numbers, E.164 numbers, or SIP addresses, see [Voice mail-enabled user procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-enabled-user-procedures).
 
 To enable a user for Unified Messaging by using the EAC:
 
@@ -535,9 +535,9 @@ The last step in the process of upgrading to Exchange 2013 UM is to configure th
 
   -  [UM services](um-services-exchange-2013-help.md)
 
-  -  [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)
+  -  [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways)
 
-  -  [Telephony advisor for Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md)
+  -  [Telephony advisor for Exchange 2013](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephony-advisor-for-exchange-2013)
 
 ## Step 14: Disable call answering on an Exchange 2007 Unified Messaging server
 

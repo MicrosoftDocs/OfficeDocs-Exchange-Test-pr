@@ -83,7 +83,7 @@ Exchange 2013 provides the following journaling options:
 
   - **Premium journaling**   Premium journaling enables the Journaling agent to perform more granular journaling by using journal rules. Instead of journaling all mailboxes residing on a mailbox database, you can configure journal rules to match your organization's needs by journaling individual recipients or members of distribution groups. You must have an Exchange Enterprise client access license (CAL) to use premium journaling.
 
-When you enable standard journaling on a mailbox database, this information is saved in Active Directory and is read by the Journaling agent. Similarly, journal rules configured with premium journaling are also saved in Active Directory and applied by the Journaling agent. For more information about how to configure standard and premium journaling, see [Manage journaling](manage-journaling-exchange-2013-help.md).
+When you enable standard journaling on a mailbox database, this information is saved in Active Directory and is read by the Journaling agent. Similarly, journal rules configured with premium journaling are also saved in Active Directory and applied by the Journaling agent. For more information about how to configure standard and premium journaling, see [Manage journaling](https://docs.microsoft.com/en-us/exchange/security-and-compliance/journaling/manage-journaling).
 
 Return to top
 

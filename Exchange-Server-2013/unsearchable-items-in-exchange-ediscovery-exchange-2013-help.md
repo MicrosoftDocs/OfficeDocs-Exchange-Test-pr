@@ -61,7 +61,7 @@ Keep the following in mind when copying or exporting unsearchable items:
 
 For more information about including unsearchable items in search results, see:
 
-  - [Create an In-Place eDiscovery search](create-an-in-place-ediscovery-search-exchange-2013-help.md)
+  - [Create an In-Place eDiscovery search](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/create-in-place-ediscovery-search)
 
   - [Export eDiscovery search results to a PST file](export-ediscovery-search-results-to-a-pst-file-exchange-2013-help.md)
 

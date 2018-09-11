@@ -15,7 +15,7 @@ mtps_version: v=EXCHG.150
 _**Applies to:** Exchange Online, Exchange Server 2013_
 
 
-You can add retention tags to a retention policy when the policy is created or any time thereafter. For details about how to create a retention policy, including how to simultaneously add retention tags, see [Create a Retention Policy](create-a-retention-policy-exchange-2013-help.md).
+You can add retention tags to a retention policy when the policy is created or any time thereafter. For details about how to create a retention policy, including how to simultaneously add retention tags, see [Create a Retention Policy](https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy).
 
 A retention policy can contain the following retention tags:
 
@@ -29,7 +29,7 @@ A retention policy can contain the following retention tags:
 
   - Any number of personal tags
 
-For more information about retention tags, see [Retention tags and retention policies](retention-tags-and-retention-policies-exchange-2013-help.md).
+For more information about retention tags, see [Retention tags and retention policies](https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies).
 
 ## What do you need to know before you begin?
 

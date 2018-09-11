@@ -57,7 +57,7 @@ You can incorporate DLP detection capabilities with traditional transport rules 
 
   -  [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/en-us/library/jj919238\(v=exchg.150\)) (Exchange Online)
 
-  -  [Manage mail flow rules](manage-mail-flow-rules-exchange-2013-help.md)
+  -  [Manage mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
     
   -  [Policy and compliance cmdlets](https://technet.microsoft.com/en-us/library/dd298082\(v=exchg.150\))
 
@@ -67,9 +67,9 @@ Numerous DLP policies are supplied by Microsoft. This is the easiest way to get 
 
   - [DLP policy templates supplied in Exchange](dlp-policy-templates-supplied-in-exchange-exchange-2013-help.md)
 
-  - [Create a DLP policy from a template](how-to-new-dlp-data-loss-prevention-policy-template.md)
+  - [Create a DLP policy from a template](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/create-dlp-policy-from-template)
 
 ## For more information
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 

@@ -15,13 +15,13 @@ mtps_version: v=EXCHG.150
 _**Applies to:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
 
-[Review the voice mail calls in your organization](review-the-voice-mail-calls-in-your-organization-exchange-2013-help.md)
+[Review the voice mail calls in your organization](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/run-voice-mail-call-reports/review-voice-mail-calls-for-organization)
 
-[Review the voice mail calls for a user](review-the-voice-mail-calls-for-a-user-exchange-2013-help.md)
+[Review the voice mail calls for a user](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/run-voice-mail-call-reports/review-voice-mail-calls-for-user)
 
 [Investigate the audio quality of voice calls in your organization](investigate-the-audio-quality-of-voice-calls-in-your-organization-exchange-2013-help.md)
 
 [Investigate the audio quality of voice calls for a user](investigate-the-audio-quality-of-voice-calls-for-a-user-exchange-2013-help.md)
 
-[Interpret voice mail call records](interpret-voice-mail-call-records-exchange-2013-help.md)
+[Interpret voice mail call records](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/run-voice-mail-call-reports/interpret-voice-mail-call-records)
 

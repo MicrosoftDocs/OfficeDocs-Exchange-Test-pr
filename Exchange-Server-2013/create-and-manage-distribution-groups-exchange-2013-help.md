@@ -23,7 +23,7 @@ There are two types of groups that can be used to distribute messages:
 
   - *Mail-enabled universal distribution groups* (also called *distribution groups*) can be used only to distribute messages.
 
-  - *Mail-enabled universal security groups* (also called *security groups*) can be used to distribute messages as well as to grant access permissions to resources in Active Directory. For more information, see [Manage mail-enabled security groups](manage-mail-enabled-security-groups-exchange-2013-help.md).
+  - *Mail-enabled universal security groups* (also called *security groups*) can be used to distribute messages as well as to grant access permissions to resources in Active Directory. For more information, see [Manage mail-enabled security groups](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups).
 
 It's important to note the terminology differences between Active Directory and Exchange. In Active Directory, a distribution group refers to any group that doesn't have a security context, whether it's mail-enabled or not. In contrast, in Exchange, all mail-enabled groups are referred to as distribution groups, whether they have a security context or not.
 
@@ -35,7 +35,7 @@ It's important to note the terminology differences between Active Directory and 
 
   - If your organization has configured a group naming policy, it’s applied only to groups created by users. When you or other administrators use the EAC to create distribution groups, the group naming policy is ignored and isn’t applied to the group name. However, if you use the Shell to create or rename a distribution group, the policy is applied unless you use the *IgnoreNamingPolicy* parameter to override the group naming policy. For more information, see:
     
-      - [Create a distribution group naming policy](create-a-distribution-group-naming-policy-exchange-2013-help.md)
+      - [Create a distribution group naming policy](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-distribution-groups/create-group-naming-policy)
     
       - [Override the distribution group naming policy](override-the-distribution-group-naming-policy-exchange-2013-help.md)
 

@@ -334,7 +334,7 @@ The following table describes the fields logged in a mailbox audit log entry.
 
   - **Administrator access to mailboxes**   Mailboxes are considered to be accessed by an administrator only in the following scenarios:
     
-      - [In-Place eDiscovery](in-place-ediscovery-exchange-2013-help.md) is used to search a mailbox.
+      - [In-Place eDiscovery](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery) is used to search a mailbox.
     
       - The [New-MailboxExportRequest](https://technet.microsoft.com/en-us/library/ff607299\(v=exchg.150\)) cmdlet is used to export a mailbox.
     

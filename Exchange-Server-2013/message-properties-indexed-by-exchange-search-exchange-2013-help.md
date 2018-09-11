@@ -501,7 +501,7 @@ The following table includes a list of all item properties indexed by Exchange S
 
 **Notes about indexed properties**:
 
-  - **Queryable properties** can be used in AQS queries by search clients such as Outlook Web App in `property:value` pairs, for example, `from:bsuneja@cotoso.com`. A subset of the queryable properties listed in the previous table can also be used in search queries for In-Place eDiscovery. For a list of these properties, see [Message properties and search operators for In-Place eDiscovery](message-properties-and-search-operators-for-in-place-ediscovery-exchange-2013-help.md).
+  - **Queryable properties** can be used in AQS queries by search clients such as Outlook Web App in `property:value` pairs, for example, `from:bsuneja@cotoso.com`. A subset of the queryable properties listed in the previous table can also be used in search queries for In-Place eDiscovery. For a list of these properties, see [Message properties and search operators for In-Place eDiscovery](message-properties-and-search-operators-for-https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery).
 
   - **Searchable properties** are properties that can’t be specified in `property:value` pairs, but a keyword search returns the value if found in any searchable property. For example, you can’t use `body:Contoso` to search for the string `contoso` in the message body only. However, a search for that string will return all items where the property is found in any searchable property.
 

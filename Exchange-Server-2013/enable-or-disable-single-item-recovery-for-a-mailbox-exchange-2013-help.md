@@ -71,7 +71,7 @@ You can use this same command to verify that single item recovery is disabled fo
 
 ## More information
 
-  - To learn more about single item recovery, see [Recoverable Items folder](recoverable-items-folder-exchange-2013-help.md). To recover messages purged by the user before the deleted item retention period expires, see [Recover deleted messages in a user's mailbox](recover-deleted-messages-in-a-user-s-mailbox-exchange-2013-help.md).
+  - To learn more about single item recovery, see [Recoverable Items folder](recoverable-items-folder-exchange-2013-help.md). To recover messages purged by the user before the deleted item retention period expires, see [Recover deleted messages in a user's mailbox](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages).
 
   - If a mailbox is placed on In-Place Hold or Litigation Hold, messages in the Recoverable Items folder are retained until the hold duration expires. If the hold duration is unlimited, then items are retained until the hold is removed or the hold duration is changed.
 

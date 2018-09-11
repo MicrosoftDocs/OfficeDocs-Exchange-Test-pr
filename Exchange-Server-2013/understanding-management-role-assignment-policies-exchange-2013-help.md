@@ -105,7 +105,7 @@ The following table lists the role assignment policy layer and the procedural to
 <tbody>
 <tr class="odd">
 <td><p>Mailbox</p></td>
-<td><p><a href="manage-user-mailboxes-exchange-2013-help.md">Manage user mailboxes</a></p>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes">Manage user mailboxes</a></p>
 <p><a href="change-the-assignment-policy-on-a-mailbox-exchange-2013-help.md">Change the assignment policy on a mailbox</a></p></td>
 </tr>
 <tr class="even">

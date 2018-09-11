@@ -137,5 +137,5 @@ The following is a complete list of the line names in the incident report templa
 
 [View DLP policy detection reports](view-dlp-policy-detection-reports-exchange-2013-help.md)
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 

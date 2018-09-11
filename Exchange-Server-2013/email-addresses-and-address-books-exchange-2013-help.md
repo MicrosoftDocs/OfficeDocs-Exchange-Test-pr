@@ -62,11 +62,11 @@ The following table contains links to topics that will help you learn about and 
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><a href="address-lists-exchange-2013-help.md">Address lists</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/address-books/address-lists/address-lists">Address lists</a></p></td>
 <td><p>Learn more about address lists and GALs as methods for organizing your recipients for easy end user access.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="address-book-policies-exchange-2013-help.md">Address book policies</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/address-books/address-book-policies/address-book-policies">Address book policies</a></p></td>
 <td><p>Learn more about how to separate your address lists and GALs into separate virtual organizations.</p></td>
 </tr>
 <tr class="odd">
@@ -78,7 +78,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn more about proxy email addresses to make recipients more discoverable.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="hierarchical-address-books-exchange-2013-help.md">Hierarchical address books</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/address-books/hierarchical-address-books/hierarchical-address-books">Hierarchical address books</a></p></td>
 <td><p>Learn more about how to customize the GAL and address lists to meet your organization’s unique business structure.</p></td>
 </tr>
 <tr class="even">

@@ -29,7 +29,7 @@ To specify the types of outgoing calls you want to allow for a UM dial plan, you
 
 
 
-For other management tasks for outdialing, see [Allowing users to make calls procedures](allowing-users-to-make-calls-procedures-exchange-2013-help.md).
+For other management tasks for outdialing, see [Allowing users to make calls procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-to-make-calls-procedures).
 
 ## Examples of commonly used dialing rules
 
@@ -76,11 +76,11 @@ For other management tasks for outdialing, see [Allowing users to make calls pro
 
   - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "UM dial plans" entry in the [Unified Messaging permissions](unified-messaging-permissions-exchange-2013-help.md) topic.
 
-  - Before you perform these procedures, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md).
+  - Before you perform these procedures, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan).
 
-  - If you will be applying dialing rule groups to UM mailbox policies, you will need to confirm that a UM mailbox policy is created. For detailed steps, see [Create a UM mailbox policy](create-a-um-mailbox-policy-exchange-2013-help.md).
+  - If you will be applying dialing rule groups to UM mailbox policies, you will need to confirm that a UM mailbox policy is created. For detailed steps, see [Create a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy).
 
-  - If you will be applying dialing rule groups to UM auto attendants, you will need to confirm that a UM auto attendant is created. For detailed steps, see [Create a UM auto attendant](create-a-um-auto-attendant-exchange-2013-help.md).
+  - If you will be applying dialing rule groups to UM auto attendants, you will need to confirm that a UM auto attendant is created. For detailed steps, see [Create a UM auto attendant](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-a-um-auto-attendant).
 
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 

@@ -25,7 +25,7 @@ _**Applies to:** Exchange Online, Exchange Server 2013_
 
   - Open a message from the Drafts folder that's already addressed to recipients
 
-In addition to the built-in MailTips that are available, you can create custom MailTips for all types of recipients. For more information about the built-in MailTips, see [MailTips](mailtips-exchange-2013-help.md).
+In addition to the built-in MailTips that are available, you can create custom MailTips for all types of recipients. For more information about the built-in MailTips, see [MailTips](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/mailtips/mailtips).
 
 ## What do you need to know before you begin?
 

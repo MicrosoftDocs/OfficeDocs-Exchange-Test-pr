@@ -94,7 +94,7 @@ The Help content for Exchange 2013 consists of the following top-level categorie
 
   - [Server health and performance](server-health-and-performance-exchange-2013-help.md)
 
-  - [About Exchange documentation](about-exchange-documentation-exchange-2013-help.md)
+  - [About Exchange documentation](https://docs.microsoft.com/en-us/exchange/about-exchange-documentation)
 
 
 > [!NOTE]

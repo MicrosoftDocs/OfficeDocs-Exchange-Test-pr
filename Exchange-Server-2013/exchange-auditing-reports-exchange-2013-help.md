@@ -63,19 +63,19 @@ When you run any of the following reports on the **Auditing** page in the EAC, t
 
   - **Run an in-place discovery and hold report**   Use this report to find mailboxes that have been put on, or removed from, In-Place Hold. For more information, see:
     
-      - [In-Place Hold and Litigation Hold](in-place-hold-and-litigation-hold-exchange-2013-help.md)
+      - [In-Place Hold and Litigation Hold](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-and-litigation-holds)
     
-      - [In-Place eDiscovery](in-place-ediscovery-exchange-2013-help.md)
+      - [In-Place eDiscovery](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
   - **Run a per-mailbox litigation hold report**   Use this report to find mailboxes that were put on, or removed from, litigation hold. For more information, see.
     
-      - [Run a per-mailbox litigation hold report](run-a-per-mailbox-litigation-hold-report-exchange-2013-help.md)
+      - [Run a per-mailbox litigation hold report](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/per-mailbox-litigation-hold-report)
     
-      - [Place a mailbox on Litigation Hold](place-a-mailbox-on-litigation-hold-exchange-2013-help.md)
+      - [Place a mailbox on Litigation Hold](https://docs.microsoft.com/en-us/office365/SecurityCompliance/place-a-mailbox-on-litigation-hold)
 
   - **Run the admin audit log report**   Use this report to view entries from the administrator audit log. Instead of exporting the administrator audit log, which can take up to 24 hours to receive in an email message, you can run this report in the EAC. This report records configuration changes made by administrators in your organization. Up to 5000 entries will be displayed on multiple pages. To narrow the search, you can specify a date range. For more information, see:
     
-      - [View the administrator audit log](view-the-administrator-audit-log-exchange-2013-help.md)
+      - [View the administrator audit log](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log)
     
       - [Administrator audit logging](administrator-audit-logging-exchange-2013-help.md)
 

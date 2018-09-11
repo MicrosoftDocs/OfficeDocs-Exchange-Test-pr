@@ -45,7 +45,7 @@ You can place mailboxes on retention hold to turn off MRM temporarily (for examp
 
 For details about how to place a mailbox on retention hold, see [Place a mailbox on retention hold](place-a-mailbox-on-retention-hold-exchange-2013-help.md).
 
-To learn more about In-Place Hold and litigation hold, see [In-Place Hold and Litigation Hold](in-place-hold-and-litigation-hold-exchange-2013-help.md).
+To learn more about In-Place Hold and litigation hold, see [In-Place Hold and Litigation Hold](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-and-litigation-holds).
 
 ## Remove retention tags from mailboxes
 

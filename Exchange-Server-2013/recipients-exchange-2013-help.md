@@ -278,7 +278,7 @@ To help you create recipient filters for dynamic distribution groups, you can us
 
   - Recipient container
 
-You can also specify conditions based on recipient properties other than those previously listed. To do this, you must use the Shell to create a custom query for the dynamic distribution group. Remember that the filter and condition settings for dynamic distribution groups that have custom recipient filters can be managed only by using the Shell. For an example of how to create a dynamic distribution group by using a custom query, see [Manage dynamic distribution groups](manage-dynamic-distribution-groups-exchange-2013-help.md).
+You can also specify conditions based on recipient properties other than those previously listed. To do this, you must use the Shell to create a custom query for the dynamic distribution group. Remember that the filter and condition settings for dynamic distribution groups that have custom recipient filters can be managed only by using the Shell. For an example of how to create a dynamic distribution group by using a custom query, see [Manage dynamic distribution groups](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-dynamic-distribution-groups/manage-dynamic-distribution-groups).
 
 ## Mail contacts
 
@@ -342,7 +342,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn how to create user mailboxes using the Exchange admin center or the Exchange Management Shell.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-user-mailboxes-exchange-2013-help.md">Manage user mailboxes</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes">Manage user mailboxes</a></p></td>
 <td><p>Learn how to create user mailboxes, change mailbox properties, and bulk-edit selected properties for multiple mailboxes.</p></td>
 </tr>
 <tr class="odd">
@@ -354,19 +354,19 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn how to create and manage distribution groups, and create a group naming policy for your organization.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="manage-mail-enabled-security-groups-exchange-2013-help.md">Manage mail-enabled security groups</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups">Manage mail-enabled security groups</a></p></td>
 <td><p>Learn how to create and manage mail-enabled security groups.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-dynamic-distribution-groups-exchange-2013-help.md">Manage dynamic distribution groups</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-dynamic-distribution-groups/manage-dynamic-distribution-groups">Manage dynamic distribution groups</a></p></td>
 <td><p>Learn how to create dynamic distribution groups and manage dynamic distribution group properties, such as using custom attributes and other properties to determine group membership.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="manage-mail-contacts-exchange-2013-help.md">Manage mail contacts</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-contacts">Manage mail contacts</a></p></td>
 <td><p>Learn how to create and manage mail contacts.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-mail-users-exchange-2013-help.md">Manage mail users</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-users">Manage mail users</a></p></td>
 <td><p>Learn how to create and manage mail users.</p></td>
 </tr>
 <tr class="odd">

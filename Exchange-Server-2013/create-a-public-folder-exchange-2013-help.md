@@ -42,7 +42,7 @@ For additional management tasks related to public folders, see [Public folder pr
 
   - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Public folders" entry in the [Sharing and collaboration permissions](sharing-and-collaboration-permissions-exchange-2013-help.md) topic.
 
-  - You can’t create a public folder unless you’ve first created a public folder mailbox. For more information about how to create a public folder mailbox, see [Create a public folder mailbox](create-a-public-folder-mailbox-exchange-2013-help.md).
+  - You can’t create a public folder unless you’ve first created a public folder mailbox. For more information about how to create a public folder mailbox, see [Create a public folder mailbox](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder-mailbox).
 
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 

@@ -85,7 +85,7 @@ There are two ways you can manage public folder mailboxes:
 
   - In the Exchange Management Shell, use the **\*-Mailbox** set of cmdlets. The following parameters have been added to the [New-Mailbox](https://technet.microsoft.com/en-us/library/aa997663\(v=exchg.150\)) cmdlet to support public folder mailboxes:
     
-      - *PublicFolder*   This parameter is used with the **New-Mailbox** cmdlet to create a public folder mailbox. When you create a public folder mailbox, a new mailbox is created with the mailbox type of `PublicFolder`. For more information, see [Create a public folder mailbox](create-a-public-folder-mailbox-exchange-2013-help.md).
+      - *PublicFolder*   This parameter is used with the **New-Mailbox** cmdlet to create a public folder mailbox. When you create a public folder mailbox, a new mailbox is created with the mailbox type of `PublicFolder`. For more information, see [Create a public folder mailbox](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder-mailbox).
     
       - *HoldForMigration*   This parameter is used only if you are migrating public folders from a previous version to Exchange 2013. For more information, see Migrate Public folders from previous versions later in this topic.
     

@@ -104,7 +104,7 @@ The following figure illustrates the relationship between the linked user accoun
     
       - **Mailbox database**   Use this option to specify a mailbox database instead of allowing Exchange to choose a database for you. Click **Browse** to open the **Select Mailbox Database** dialog box. This dialog box lists all the mailbox databases in your Exchange organization. By default, the mailbox databases are sorted by name. You can also click the title of the corresponding column to sort the databases by server name or version. Select the mailbox database you want to use, and then click **OK**.
     
-      - **Address book policy**   Use this option to specify an address book policy (ABP) for the linked mailbox. ABPs contain a global address list (GAL), an offline address book (OAB), a room list, and a set of address lists. When assigned to users, an ABP provides them with access to a customized GAL in Outlook and Outlook Web App. To learn more, see [Address book policies](address-book-policies-exchange-2013-help.md).
+      - **Address book policy**   Use this option to specify an address book policy (ABP) for the linked mailbox. ABPs contain a global address list (GAL), an offline address book (OAB), a room list, and a set of address lists. When assigned to users, an ABP provides them with access to a customized GAL in Outlook and Outlook Web App. To learn more, see [Address book policies](https://docs.microsoft.com/en-us/exchange/address-books/address-book-policies/address-book-policies).
         
         In the drop-down list, select the policy that you want associated with this mailbox.
 
@@ -132,7 +132,7 @@ To verify that you’ve successfully created a linked mailbox, do one of the fol
 
 After you create a linked mailbox, you can make changes and set additional properties by using the Exchange Administration Center (EAC) or the Exchange Management Shell.
 
-You can also change properties for multiple linked mailboxes at the same time. For more information, see the section, "Bulk edit user mailboxes" section in the [Manage user mailboxes](manage-user-mailboxes-exchange-2013-help.md) topic.
+You can also change properties for multiple linked mailboxes at the same time. For more information, see the section, "Bulk edit user mailboxes" section in the [Manage user mailboxes](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes) topic.
 
 
 > [!IMPORTANT]

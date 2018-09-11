@@ -23,9 +23,9 @@ When you configure a VoIP gateway, you must consider whether the VoIP gateway de
 
 The following suggested resources in the Exchange TechCenter provide information that can help you correctly configure your VoIP gateways and PBXs:
 
-  - **Supported VoIP gateway, IP PBX, and PBX documentation**   [Telephony advisor for Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md) includes configuration files and setup information that you can use when you configure VoIP gateways and PBXs.
+  - **Supported VoIP gateway, IP PBX, and PBX documentation**   [Telephony advisor for Exchange 2013](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephony-advisor-for-exchange-2013) includes configuration files and setup information that you can use when you configure VoIP gateways and PBXs.
 
-  - **Configuration and technical notes**   [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md) includes configuration files and setup information that you can use when you configure VoIP gateways and PBXs.
+  - **Configuration and technical notes**   [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways) includes configuration files and setup information that you can use when you configure VoIP gateways and PBXs.
 
   - **Configuring an AudioCodes-based VoIP gateway**  The [Microsoft Exchange Server Resource page](https://www.audiocodes.com/solutions/microsoft/exchange-server) provides the latest support and configuration information to help you configure AudioCodes-based VoIP gateways for use with Unified Messaging.
 
@@ -35,7 +35,7 @@ We recommend that all customers who plan to deploy Unified Messaging obtain the 
 
 ## For more information
 
-[Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)
+[Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways)
 
 [Connect UM to a supported VoIP gateway](connect-um-to-a-supported-voip-gateway-exchange-2013-help.md)
 

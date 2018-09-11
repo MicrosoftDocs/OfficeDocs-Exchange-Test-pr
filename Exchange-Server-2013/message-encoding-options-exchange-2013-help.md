@@ -397,9 +397,9 @@ Return to top
 
 [Remote domains in Exchange Online](https://technet.microsoft.com/en-us/library/jj966211\(v=exchg.150\))
 
-[Manage mail users](manage-mail-users-exchange-2013-help.md)
+[Manage mail users](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-users)
 
-[Manage mail contacts](manage-mail-contacts-exchange-2013-help.md)
+[Manage mail contacts](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-contacts)
 
 [Change the message format in Outlook](https://go.microsoft.com/fwlink/p/?linkid=397890)
 

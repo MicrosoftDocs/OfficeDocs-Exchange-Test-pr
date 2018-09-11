@@ -112,7 +112,7 @@ To plan and create a new UM auto attendant structure, you need to do the followi
 
 12. After you've planned your auto attendant settings, greetings and menu navigation, and created audio files that contain your recorded greetings, menu navigation prompts, and menu navigation responses, you're ready to create and configure your auto attendant. Here's how:
     
-      - [Create a UM auto attendant](create-a-um-auto-attendant-exchange-2013-help.md)
+      - [Create a UM auto attendant](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-a-um-auto-attendant)
     
       - [Manage a UM auto attendant](manage-a-um-auto-attendant-exchange-2013-help.md)
 

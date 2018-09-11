@@ -15,7 +15,7 @@ mtps_version: v=EXCHG.150
 _**Applies to:** Exchange Online, Exchange Server 2013_
 
 
-This overview explains the components of an XML schema definition for data loss prevention (DLP) policy template files and also provides an XML-format example policy file. It will be helpful to understand the overall DLP architecture and rule-development process before you begin. For more information, see [Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md) and [Define your own DLP templates and information types](define-your-own-dlp-templates-and-information-types-exchange-2013-help.md).
+This overview explains the components of an XML schema definition for data loss prevention (DLP) policy template files and also provides an XML-format example policy file. It will be helpful to understand the overall DLP architecture and rule-development process before you begin. For more information, see [Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) and [Define your own DLP templates and information types](define-your-own-dlp-templates-and-information-types-exchange-2013-help.md).
 
 In order to make data loss prevention solutions easy to adopt and manage, a conceptual model known as DLP policies and policy templates is introduced in Microsoft Exchange Server 2013. DLP policy templates provide a preliminary design for your intended DLP policy. In order to be valuable, a DLP policy template must encapsulate all the directives and data objects that are required to meet a specific policy objective, such as a regulation or business need. The template is not environment-specific. It is simply a definition or model of a policy that can be provided as part of the product configuration or supplied by independent software vendors and partners. DLP policies on the other hand, are run-time instantiations of the templates that are specific to the deployment environment. Your existing messaging policy framework can incorporate DLP policies through the use of transport rules. Transport rules provide great flexibility in adapting and expressing the richness of your DLP solutions.
 
@@ -313,7 +313,7 @@ Child elements include the following ordered sequence of elements.
 
 ## For more information
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [Define your own DLP templates and information types](define-your-own-dlp-templates-and-information-types-exchange-2013-help.md)
 

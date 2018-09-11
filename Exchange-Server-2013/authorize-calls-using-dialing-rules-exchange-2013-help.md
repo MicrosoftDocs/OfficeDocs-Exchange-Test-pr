@@ -46,7 +46,7 @@ Where you authorize dialing rule groups depends on the types of callers that you
 <tbody>
 <tr class="odd">
 <td><p>Unauthenticated callers who call in to an Outlook Voice Access number and don’t enter a PIN</p></td>
-<td><p>UM dial plan. For details, see <a href="authorize-calls-for-users-in-a-dial-plan-exchange-2013-help.md">Authorize calls for users in a dial plan</a>.</p></td>
+<td><p>UM dial plan. For details, see <a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-users-in-a-dial-plan">Authorize calls for users in a dial plan</a>.</p></td>
 </tr>
 <tr class="even">
 <td><p>Authenticated callers who call in to an Outlook Voice Access number and enter a PIN</p></td>
@@ -54,7 +54,7 @@ Where you authorize dialing rule groups depends on the types of callers that you
 </tr>
 <tr class="odd">
 <td><p>Unauthenticated callers who call in to a telephone number that’s configured on a UM auto attendant</p></td>
-<td><p>UM auto attendant. For details, see <a href="authorize-calls-for-auto-attendant-callers-exchange-2013-help.md">Authorize calls for auto attendant callers</a>.</p></td>
+<td><p>UM auto attendant. For details, see <a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-auto-attendant-callers">Authorize calls for auto attendant callers</a>.</p></td>
 </tr>
 </tbody>
 </table>

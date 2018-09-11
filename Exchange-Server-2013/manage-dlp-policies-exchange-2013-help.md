@@ -125,7 +125,7 @@ For syntax and parameter information, see [Remove-DlpPolicy](https://technet.mic
 
 ## For more information
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
-[Policy Tips](technical-overview-of-policy-tips-in-exchange-online-and-exchange-2013.md)
+[Policy Tips](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/policy-tips)
 

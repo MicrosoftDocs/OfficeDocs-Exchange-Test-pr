@@ -21,7 +21,7 @@ To help your users comply with your organization's email policies, you can use E
 
   - Example 2: Use a long list of unacceptable words
 
-If your organization uses Data Loss Prevention (DLP), see [Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md) for additional options for identifying and routing email that contains sensitive information.
+If your organization uses Data Loss Prevention (DLP), see [Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) for additional options for identifying and routing email that contains sensitive information.
 
 ## Example 1: Use a short list of unacceptable words
 

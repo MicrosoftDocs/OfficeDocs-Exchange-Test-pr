@@ -622,7 +622,7 @@ The rule schema supports storing of localized name and description for each of E
 
 ## For more information
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [Define your own DLP templates and information types](define-your-own-dlp-templates-and-information-types-exchange-2013-help.md)
 

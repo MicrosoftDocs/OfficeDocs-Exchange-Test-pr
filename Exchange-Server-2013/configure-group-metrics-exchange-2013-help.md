@@ -15,7 +15,7 @@ mtps_version: v=EXCHG.150
 _**Applies to:** Exchange Server 2013_
 
 
-MailTips that provide information about the size of distribution groups and dynamic distribution groups rely on group metrics data. Group metrics data is generated on designated Mailbox servers. For more information about group metrics, see [Group metrics and MailTips](group-metrics-and-mailtips-exchange-2013-help.md).
+MailTips that provide information about the size of distribution groups and dynamic distribution groups rely on group metrics data. Group metrics data is generated on designated Mailbox servers. For more information about group metrics, see [Group metrics and MailTips](group-metrics-and-https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/mailtips/mailtips).
 
 You can enable or disable group metrics generation on a Mailbox server.
 
@@ -25,7 +25,7 @@ You can enable or disable group metrics generation on a Mailbox server.
 
   - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Group metrics" entry in the [Recipients Permissions](recipients-permissions-exchange-2013-help.md) topic.
 
-  - Group metrics data is only used for MailTips. Make sure that group metrics MailTips are enabled in your organization. For detailed steps, see [Manage MailTips for organization relationships](manage-mailtips-for-organization-relationships-exchange-2013-help.md).
+  - Group metrics data is only used for MailTips. Make sure that group metrics MailTips are enabled in your organization. For detailed steps, see [Manage MailTips for organization relationships](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/mailtips/manage-mailtips-for-organization-relationships).
 
   - You can only use the Shell to perform this procedure.
 

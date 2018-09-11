@@ -23,7 +23,7 @@ You can configure a Voice Mail Preview partner on a Unified Messaging (UM) mailb
 
 
 
-For additional management tasks related to UM mailbox policies, see [UM mailbox policy procedures](um-mailbox-policy-procedures-exchange-2013-help.md).
+For additional management tasks related to UM mailbox policies, see [UM mailbox policy procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policy-procedures).
 
 ## What do you need to know before you begin?
 
@@ -31,9 +31,9 @@ For additional management tasks related to UM mailbox policies, see [UM mailbox 
 
   - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "UM mailbox policies" entry in the [Unified Messaging permissions](unified-messaging-permissions-exchange-2013-help.md) topic.
 
-  - Before you perform these procedures, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md).
+  - Before you perform these procedures, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan).
 
-  - Before you perform these procedures, confirm that a UM mailbox policy has been created. For detailed steps, see [Create a UM mailbox policy](create-a-um-mailbox-policy-exchange-2013-help.md).
+  - Before you perform these procedures, confirm that a UM mailbox policy has been created. For detailed steps, see [Create a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy).
 
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
@@ -47,7 +47,7 @@ For additional management tasks related to UM mailbox policies, see [UM mailbox 
 
 ## Step 1: Sign up with a partner service
 
-To find the list of certified partners and detailed instructions for how to sign up, see [Voice Mail Preview advisor](voice-mail-preview-advisor-exchange-2013-help.md) or see the [Microsoft PinPoint](https://go.microsoft.com/fwlink/p/?linkid=281966) website. After you've signed up, the Voice Mail Preview partner will provide you a partner ID and the SMTP address to use to forward the voice messages.
+To find the list of certified partners and detailed instructions for how to sign up, see [Voice Mail Preview advisor](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/voice-mail-preview-advisor) or see the [Microsoft PinPoint](https://go.microsoft.com/fwlink/p/?linkid=281966) website. After you've signed up, the Voice Mail Preview partner will provide you a partner ID and the SMTP address to use to forward the voice messages.
 
 In Step 2, you'll apply the Partner ID and SMTP address you acquired in Step 1 to the required UM mailbox policies.
 
@@ -74,9 +74,9 @@ This example sets the maximum message duration to 300 seconds (5 minutes) and 
 
 If you want to configure the Voice Mail Preview partner service for some, but not all, UM-enabled users in a UM dial plan, you must create a new UM mailbox policy and configure the partner settings. When you've finished, you can apply the new policy to selected UM-enabled users. For more information about how to assign a UM-enabled user to a UM mailbox policy, see the following topics:
 
-  - [Assign a UM mailbox policy](assign-a-um-mailbox-policy-exchange-2013-help.md)
+  - [Assign a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/assign-um-mailbox-policy)
 
   - [Set-UMMailbox](https://technet.microsoft.com/en-us/library/bb124893\(v=exchg.150\))
 
-For more information about the Voice Mail Preview partner program, see [Voice Mail Preview advisor](voice-mail-preview-advisor-exchange-2013-help.md).
+For more information about the Voice Mail Preview partner program, see [Voice Mail Preview advisor](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/voice-mail-preview-advisor).
 

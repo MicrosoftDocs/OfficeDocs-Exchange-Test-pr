@@ -33,7 +33,7 @@ How you clean up the Recoverable Items folder in a user's mailbox depends on whe
 
   - If the mailbox is placed on In-Place Hold or Litigation Hold or has single item recovery enabled, it's important to preserve the mailbox data until the hold is removed or single item recovery is disabled. In this case, you need to perform more detailed steps to clean up the Recoverable Items folder.
 
-To learn more about In-Place Hold and Litigation Hold, see [In-Place Hold and Litigation Hold](in-place-hold-and-litigation-hold-exchange-2013-help.md). To learn more about single item recovery, see "Single Item Recovery" in [Recoverable Items folder](recoverable-items-folder-exchange-2013-help.md).
+To learn more about In-Place Hold and Litigation Hold, see [In-Place Hold and Litigation Hold](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-and-litigation-holds). To learn more about single item recovery, see "Single Item Recovery" in [Recoverable Items folder](recoverable-items-folder-exchange-2013-help.md).
 
 To learn more about the Recoverable Items folder, see [Recoverable Items folder](recoverable-items-folder-exchange-2013-help.md).
 
@@ -43,7 +43,7 @@ To learn more about the Recoverable Items folder, see [Recoverable Items folder]
 
   - You need to be assigned the following management roles to use the **Search-Mailbox** cmdlet to search for and delete messages in a user's mailbox.
     
-      - **Mailbox Search**   This role allows you to search for messages across multiple mailboxes in your organization. Administrators aren't assigned this role by default. To assign yourself this role so that you can search mailboxes, add yourself as a member of the Discovery Management role group. See [Assign eDiscovery permissions in Exchange](assign-ediscovery-permissions-in-exchange-exchange-2013-help.md).
+      - **Mailbox Search**   This role allows you to search for messages across multiple mailboxes in your organization. Administrators aren't assigned this role by default. To assign yourself this role so that you can search mailboxes, add yourself as a member of the Discovery Management role group. See [Assign eDiscovery permissions in Exchange](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/assign-ediscovery-permissions).
     
       - **Mailbox Import Export**   This role allows you to delete messages from a user's mailbox. By default, this role isn't assigned to any role group. To delete messages from users' mailboxes, you can add the Mailbox Import Export role to the Organization Management role group. For more information, see the "Add a role to a role group" section in [Manage role groups](manage-role-groups-exchange-2013-help.md) .
 
@@ -150,7 +150,7 @@ This procedure copies items from Gurinder Singh's Recoverable Items folder to th
     
 
     > [!NOTE]
-    > It isn't required to copy items to the Discovery Search Mailbox. You can copy messages to any mailbox. However, to prevent access to potentially sensitive mailbox data, we recommend copying messages to a mailbox that has access restricted to authorized records managers. By default, access to the default Discovery Search Mailbox is restricted to members of the Discovery Management role group. For details, see <A href="in-place-ediscovery-exchange-2013-help.md">In-Place eDiscovery</A>.
+    > It isn't required to copy items to the Discovery Search Mailbox. You can copy messages to any mailbox. However, to prevent access to potentially sensitive mailbox data, we recommend copying messages to a mailbox that has access restricted to authorized records managers. By default, access to the default Discovery Search Mailbox is restricted to members of the Discovery Management role group. For details, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery">In-Place eDiscovery</A>.
 
 
 

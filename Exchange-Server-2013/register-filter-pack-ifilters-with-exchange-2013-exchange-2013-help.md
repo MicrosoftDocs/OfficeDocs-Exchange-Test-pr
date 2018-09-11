@@ -25,7 +25,7 @@ After you register an IFilter for a specific file type, transport rules with att
 
 
 
-For additional management tasks related to Transport rules, see [Manage mail flow rules](manage-mail-flow-rules-exchange-2013-help.md).
+For additional management tasks related to Transport rules, see [Manage mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules).
 
 ## What do you need to know before you begin?
 
@@ -137,7 +137,7 @@ Deploying the Office 2010 Filter Pack consists of two main steps:
 
 To verify that you have successfully registered the Microsoft Office 2010 Filter Pack IFilters, do the following:
 
-1.  Create a Transport rule with the following properties. For detailed instructions about how to create Transport rules, see [Manage mail flow rules](manage-mail-flow-rules-exchange-2013-help.md).
+1.  Create a Transport rule with the following properties. For detailed instructions about how to create Transport rules, see [Manage mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules).
     
       - The sender is your mailbox.
     

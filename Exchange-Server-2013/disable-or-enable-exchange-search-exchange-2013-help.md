@@ -19,7 +19,7 @@ By default, Exchange Search is enabled for all new mailbox databases and doesnâ€
 
 
 > [!WARNING]
-> Disabling Exchange Search impacts the functionality and performance of the full-text searches that are performed by your users using Outlook in online mode or on Windows mobile devices.<BR><A href="in-place-ediscovery-exchange-2013-help.md">In-Place eDiscovery</A> also relies on Exchange Search. If you disable Exchange Search for a mailbox database or for a Mailbox server, In-Place eDiscovery searches won't return any messages from the database or server.
+> Disabling Exchange Search impacts the functionality and performance of the full-text searches that are performed by your users using Outlook in online mode or on Windows mobile devices.<BR><A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery">In-Place eDiscovery</A> also relies on Exchange Search. If you disable Exchange Search for a mailbox database or for a Mailbox server, In-Place eDiscovery searches won't return any messages from the database or server.
 
 
 

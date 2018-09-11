@@ -19,13 +19,13 @@ _**Applies to:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
 [Set the Voice Mail Preview partner address](set-the-voice-mail-preview-partner-address-exchange-2013-help.md)
 
-[Set the Voice Mail Preview partner ID](set-the-voice-mail-preview-partner-id-exchange-2013-help.md)
+[Set the Voice Mail Preview partner ID](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-the-voice-mail-preview-partner-id)
 
 [Set the maximum message duration for a Voice Mail Preview partner](set-the-maximum-message-duration-for-a-voice-mail-preview-partner-exchange-2013-help.md)
 
-[Set the maximum delivery delay for a Voice Mail Preview partner](set-the-maximum-delivery-delay-for-a-voice-mail-preview-partner-exchange-2013-help.md)
+[Set the maximum delivery delay for a Voice Mail Preview partner](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-the-maximum-delivery-delay-for-a-voice-mail-preview-partner)
 
-[Enable Voice Mail Preview for users](enable-voice-mail-preview-for-users-exchange-2013-help.md)
+[Enable Voice Mail Preview for users](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-voice-mail-preview)
 
 [Disable Voice Mail Preview for users](disable-voice-mail-preview-for-users-exchange-2013-help.md)
 

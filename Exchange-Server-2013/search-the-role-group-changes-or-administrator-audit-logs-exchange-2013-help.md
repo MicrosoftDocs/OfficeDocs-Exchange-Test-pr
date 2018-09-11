@@ -21,7 +21,7 @@ If you want to search the mailbox audit log, see [Mailbox audit logging](mailbox
 
 
 > [!TIP]
-> In Exchange Online, you can use the EAC to view entries in the administrator audit log. For more information, see <A href="view-the-administrator-audit-log-exchange-2013-help.md">View the administrator audit log</A>.
+> In Exchange Online, you can use the EAC to view entries in the administrator audit log. For more information, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log">View the administrator audit log</A>.
 
 
 

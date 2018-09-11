@@ -572,13 +572,13 @@ If you still want to migrate your public folders by using PST files, follow thes
 
 2.  Follow step 2 of Step 3: Generate the .csv files to create the public folder-to-mailbox mapping file. This file is used to calculate the correct number of public folder mailboxes in Exchange Online.
 
-3.  Create the public folder mailboxes that you’ll need based on the mapping file. For more information, see [Create a public folder mailbox](create-a-public-folder-mailbox-exchange-2013-help.md).
+3.  Create the public folder mailboxes that you’ll need based on the mapping file. For more information, see [Create a public folder mailbox](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder-mailbox).
 
 4.  Use the New-PublicFolder cmdlet to create the top-most public folder in each of the public folder mailboxes by using the *Mailbox* parameter.
 
 5.  Export and import the PST files using Outlook.
 
-6.  Set the permissions on the public folders using the EAC. For more information, follow [Step 3: Assign permissions to the public folder](set-up-public-folders-in-a-new-organization-exchange-2013-help.md) in the [Set up public folders in a new organization](set-up-public-folders-in-a-new-organization-exchange-2013-help.md) topic.
+6.  Set the permissions on the public folders using the EAC. For more information, follow [Step 3: Assign permissions to the public folder](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-public-folders) in the [Set up public folders in a new organization](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-public-folders) topic.
 
 
 > [!WARNING]
@@ -587,7 +587,7 @@ If you still want to migrate your public folders by using PST files, follow thes
 > <LI>
 > <P>Wait for the auto-split to move the data from the primary mailbox. This may take up to two weeks. However, all the public folders in a completely filled public folder mailbox won’t be able to receive new content until the auto-split completes.</P>
 > <LI>
-> <P><A href="create-a-public-folder-mailbox-exchange-2013-help.md">Create a public folder mailbox</A> and then use the <STRONG>New-PublicFolder</STRONG> cmdlet with the <EM>Mailbox</EM> parameter to create the remaining public folders in the secondary public folder mailbox. This example creates a new public folder named PF201 in the secondary public folder mailbox.</P><PRE><CODE>New-PublicFolder -Name PF201 -Mailbox SecondaryPFMbx</CODE></PRE></LI></OL>
+> <P><A href="https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder-mailbox">Create a public folder mailbox</A> and then use the <STRONG>New-PublicFolder</STRONG> cmdlet with the <EM>Mailbox</EM> parameter to create the remaining public folders in the secondary public folder mailbox. This example creates a new public folder named PF201 in the secondary public folder mailbox.</P><PRE><CODE>New-PublicFolder -Name PF201 -Mailbox SecondaryPFMbx</CODE></PRE></LI></OL>
 
 
 

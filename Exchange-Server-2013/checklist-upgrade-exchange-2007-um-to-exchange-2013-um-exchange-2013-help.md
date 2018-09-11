@@ -21,7 +21,7 @@ Before you start working with this checklist, make sure you're familiar with the
 
   - [Planning for Unified Messaging](planning-for-unified-messaging-exchange-2013-help.md)
 
-  - [Telephone system integration with UM](telephone-system-integration-with-um-exchange-2013-help.md)
+  - [Telephone system integration with UM](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephone-system-integration-with-um)
 
   - [Connect your voice mail system to your telephone network](connect-your-voice-mail-system-to-your-telephone-network-exchange-2013-help.md)
 
@@ -97,13 +97,13 @@ For step-by-step guidance about how to upgrade from Exchange 2010 UM to Exchange
 <tr class="odd">
 <td><p></p></td>
 <td><p>Create or configure existing UM dial plans</p></td>
-<td><p><a href="create-a-um-dial-plan-exchange-2013-help.md">Create a UM dial plan</a></p>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan">Create a UM dial plan</a></p>
 <p><a href="manage-a-um-dial-plan-exchange-2013-help.md">Manage a UM dial plan</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
 <td><p>Create or configure existing UM IP gateways</p></td>
-<td><p><a href="create-a-um-ip-gateway-exchange-2013-help.md">Create a UM IP gateway</a></p>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-ip-gateway">Create a UM IP gateway</a></p>
 <p><a href="manage-a-um-ip-gateway-exchange-2013-help.md">Manage a UM IP gateway</a></p></td>
 </tr>
 <tr class="odd">
@@ -114,14 +114,14 @@ For step-by-step guidance about how to upgrade from Exchange 2010 UM to Exchange
 <tr class="even">
 <td><p></p></td>
 <td><p>Create or configure UM auto attendants</p></td>
-<td><p><a href="create-a-um-auto-attendant-exchange-2013-help.md">Create a UM auto attendant</a></p>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-a-um-auto-attendant">Create a UM auto attendant</a></p>
 <p><a href="manage-a-um-auto-attendant-exchange-2013-help.md">Manage a UM auto attendant</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>
 <td><p>Create or configure UM mailbox policies</p></td>
-<td><p><a href="create-a-um-mailbox-policy-exchange-2013-help.md">Create a UM mailbox policy</a></p>
-<p><a href="manage-a-um-mailbox-policy-exchange-2013-help.md">Manage a UM mailbox policy</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy">Create a UM mailbox policy</a></p>
+<p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-um-mailbox-policy">Manage a UM mailbox policy</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
@@ -132,12 +132,12 @@ For step-by-step guidance about how to upgrade from Exchange 2010 UM to Exchange
 <td><p></p></td>
 <td><p>Enable new users for UM or configure settings for an existing UM-enabled user</p></td>
 <td><p><a href="enable-a-user-for-voice-mail-exchange-2013-help.md">Enable a user for voice mail</a></p>
-<p><a href="manage-voice-mail-settings-for-a-user-exchange-2013-help.md">Manage voice mail settings for a user</a></p></td>
+<p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-voice-mail-settings">Manage voice mail settings for a user</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
 <td><p>Configure your VoIP gateways, IP PBXs, and SIP-enabled PBXs to send all incoming calls to the Exchange 2013 Client Access servers</p></td>
-<td><p><a href="configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md">Configuration notes for supported VoIP gateways, IP PBXs, and PBXs</a></p>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways">Configuration notes for supported VoIP gateways, IP PBXs, and PBXs</a></p>
 <p><a href="connect-a-voip-gateway-ip-pbx-or-session-border-controller-to-um-exchange-2013-help.md">Connect a VoIP gateway, IP PBX, or session border controller to UM</a></p></td>
 </tr>
 <tr class="odd">

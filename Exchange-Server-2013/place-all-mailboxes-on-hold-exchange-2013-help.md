@@ -21,7 +21,7 @@ _**Applies to:** Exchange Online, Exchange Server 2013_
 
 
 
-Your organization may require all mailbox data to be preserved for a specific period. You can use Litigation Hold or In-Place Hold to meet this requirement. After you place a mailbox on Litigation Hold or In-Place Hold, mailbox items that are modified or that are permanently deleted are preserved in the Recoverable Items folder. For more information, see [In-Place Hold and Litigation Hold](in-place-hold-and-litigation-hold-exchange-2013-help.md).
+Your organization may require all mailbox data to be preserved for a specific period. You can use Litigation Hold or In-Place Hold to meet this requirement. After you place a mailbox on Litigation Hold or In-Place Hold, mailbox items that are modified or that are permanently deleted are preserved in the Recoverable Items folder. For more information, see [In-Place Hold and Litigation Hold](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-and-litigation-holds).
 
 Before you place all mailboxes in an organization on Litigation Hold or In-Place Hold, consider the following:
 
@@ -105,11 +105,11 @@ You can easily and quickly place all mailboxes on hold indefinitely or for a spe
 
     Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | Set-Mailbox -LitigationHoldEnabled $true -LitigationHoldDuration 2555
 
-The example uses the [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)) cmdlet and a recipient filter to retrieve all user mailboxes in the organization, and then pipes the list of mailboxes to the [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)) cmdlet to enable the Litigation Hold and specify a hold duration. For more information, see [Place a mailbox on Litigation Hold](place-a-mailbox-on-litigation-hold-exchange-2013-help.md).
+The example uses the [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)) cmdlet and a recipient filter to retrieve all user mailboxes in the organization, and then pipes the list of mailboxes to the [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)) cmdlet to enable the Litigation Hold and specify a hold duration. For more information, see [Place a mailbox on Litigation Hold](https://docs.microsoft.com/en-us/office365/SecurityCompliance/place-a-mailbox-on-litigation-hold).
 
 ## Place all mailboxes on In-Place Hold
 
-You can use the EAC to select up to 500 mailboxes and place them on hold. For details, see [Create or remove an In-Place Hold](create-or-remove-an-in-place-hold-exchange-2013-help.md).
+You can use the EAC to select up to 500 mailboxes and place them on hold. For details, see [Create or remove an In-Place Hold](https://docs.microsoft.com/en-us/exchange/security-and-compliance/create-or-remove-in-place-holds).
 
 
 > [!TIP]
@@ -121,7 +121,7 @@ You can use the EAC to select up to 500 mailboxes and place them on hold. For de
 
   - When you place all mailboxes in your organization on hold, only the mailboxes that exist at the time you run the command are placed on hold. If you create new mailboxes later, run the command again to place them on hold. If you frequently create new mailboxes, you can run the command as a scheduled task as frequently as required.
 
-  - Placing mailboxes on hold preserves data by preventing deletion before the specified period and saving the original version of a message before it’s modified. It doesn’t automatically delete messages after the specified period. Combine Litigation Hold or In-Place Hold with a Retention Policy, which can automatically delete messages after the specified period, to meet your organization’s email retention requirements. See [Retention tags and retention policies](retention-tags-and-retention-policies-exchange-2013-help.md) for details.
+  - Placing mailboxes on hold preserves data by preventing deletion before the specified period and saving the original version of a message before it’s modified. It doesn’t automatically delete messages after the specified period. Combine Litigation Hold or In-Place Hold with a Retention Policy, which can automatically delete messages after the specified period, to meet your organization’s email retention requirements. See [Retention tags and retention policies](https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies) for details.
 
   - The PowerShell command used in this topic to place a Litigation Hold on all mailboxes uses a recipient filter that returns all user mailboxes. You can use other recipient properties to return a list of specific mailboxes that you can then pipe to the **Set-Mailbox** cmdlet to place a Litigation Hold on those mailboxes.
     

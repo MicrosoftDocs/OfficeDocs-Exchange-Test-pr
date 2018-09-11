@@ -19,5 +19,5 @@ Sending or replying to an S/MIME-encrypted message in Microsoft Outlook is very 
 
 ## For more information
 
-[S/MIME for message signing and encryption](s-mime-for-message-signing-and-encryption-exchange-2013-help.md)
+[S/MIME for message signing and encryption](https://docs.microsoft.com/en-us/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption)
 

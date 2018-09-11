@@ -21,15 +21,15 @@ The message delivery restrictions covered in this topic apply to all recipient t
 
 For additional management tasks related to recipients, see the following topics:
 
-  - [Manage user mailboxes](manage-user-mailboxes-exchange-2013-help.md)
+  - [Manage user mailboxes](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes)
 
   - [Create and manage distribution groups](create-and-manage-distribution-groups-exchange-2013-help.md)
 
-  - [Manage dynamic distribution groups](manage-dynamic-distribution-groups-exchange-2013-help.md)
+  - [Manage dynamic distribution groups](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-dynamic-distribution-groups/manage-dynamic-distribution-groups)
 
-  - [Manage mail users](manage-mail-users-exchange-2013-help.md)
+  - [Manage mail users](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-users)
 
-  - [Manage mail contacts](manage-mail-contacts-exchange-2013-help.md)
+  - [Manage mail contacts](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-contacts)
 
 ## What do you need to know before you begin?
 

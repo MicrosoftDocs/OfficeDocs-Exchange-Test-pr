@@ -83,12 +83,12 @@ For step-by-step guidance about how to deploy UM and Microsoft Lync Server, see 
 <tr class="odd">
 <td><p><strong> </strong></p></td>
 <td><p>Create the number of dial plans required for your organization.</p></td>
-<td><p><a href="create-a-um-dial-plan-exchange-2013-help.md">Create a UM dial plan</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan">Create a UM dial plan</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
 <td><p>Configure the dial plan security setting.</p></td>
-<td><p><a href="configure-the-voip-security-setting-exchange-2013-help.md">Configure the VoIP security setting</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-voip-security-setting">Configure the VoIP security setting</a></p></td>
 </tr>
 <tr class="odd">
 <td><p> </p></td>
@@ -110,13 +110,13 @@ For step-by-step guidance about how to deploy UM and Microsoft Lync Server, see 
 <td><p></p></td>
 <td><p>Configure outbound dialing for Unified Messaging.</p></td>
 <td><p><a href="authorize-calls-using-dialing-rules-exchange-2013-help.md">Authorize calls using dialing rules</a></p>
-<p><a href="authorize-calls-for-users-in-a-dial-plan-exchange-2013-help.md">Authorize calls for users in a dial plan</a></p>
+<p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/authorize-calls-for-users-in-a-dial-plan">Authorize calls for users in a dial plan</a></p>
 <p><a href="authorize-calls-for-a-group-of-users-exchange-2013-help.md">Authorize calls for a group of users</a></p></td>
 </tr>
 <tr class="odd">
 <td><p></p></td>
 <td><p>Create the required number of auto attendants.</p></td>
-<td><p><a href="create-a-um-auto-attendant-exchange-2013-help.md">Create a UM auto attendant</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/create-a-um-auto-attendant">Create a UM auto attendant</a></p></td>
 </tr>
 <tr class="even">
 <td><p></p></td>
@@ -139,8 +139,8 @@ For step-by-step guidance about how to deploy UM and Microsoft Lync Server, see 
 <tr class="odd">
 <td><p><strong> </strong></p></td>
 <td><p>Create a UM mailbox policy or configure the default UM mailbox policy.</p></td>
-<td><p><a href="create-a-um-mailbox-policy-exchange-2013-help.md">Create a UM mailbox policy</a></p>
-<p><a href="manage-a-um-mailbox-policy-exchange-2013-help.md">Manage a UM mailbox policy</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy">Create a UM mailbox policy</a></p>
+<p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-um-mailbox-policy">Manage a UM mailbox policy</a></p></td>
 </tr>
 <tr class="even">
 <td><p> </p></td>

@@ -104,7 +104,7 @@ If you use the EAC to view the properties of an Outlook Web App virtual director
     
 
     > [!NOTE]
-    > Features settings for individual users override virtual directory settings. You can change segmentation settings for individual users by using the <STRONG>Set-CASMailbox</STRONG> cmdlet or by using Outlook Web App mailbox policies. For more information, see <A href="outlook-web-app-mailbox-policies-exchange-2013-help.md">Outlook Web App mailbox policies</A>.
+    > Features settings for individual users override virtual directory settings. You can change segmentation settings for individual users by using the <STRONG>Set-CASMailbox</STRONG> cmdlet or by using Outlook Web App mailbox policies. For more information, see <A href="https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/outlook-web-app-mailbox-policies">Outlook Web App mailbox policies</A>.
 
     
     Use the check boxes to enable or disable features. By default, the most common features are displayed. To see all features that can be enabled or disabled, click **More options**.
