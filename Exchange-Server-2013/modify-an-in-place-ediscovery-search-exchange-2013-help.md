@@ -49,7 +49,7 @@ After you create an In-Place eDiscovery search, you can modify it to change the 
         
 
         > [!IMPORTANT]
-        > You can’t use the <STRONG>Search all mailboxes</STRONG> option to place all mailboxes on Exchange 2013 Mailbox servers on hold. To create an In-Place Hold, you must select <STRONG>Specify mailboxes to search</STRONG>. For more details, see <A href="create-or-remove-an-in-place-hold-exchange-2013-help.md">Create or remove an In-Place Hold</A>.
+        > You can’t use the <STRONG>Search all mailboxes</STRONG> option to place all mailboxes on Exchange 2013 Mailbox servers on hold. To create an In-Place Hold, you must select <STRONG>Specify mailboxes to search</STRONG>. For more details, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/create-or-remove-in-place-holds">Create or remove an In-Place Hold</A>.
 
     
       - On the **Search query** page, modify the following fields:

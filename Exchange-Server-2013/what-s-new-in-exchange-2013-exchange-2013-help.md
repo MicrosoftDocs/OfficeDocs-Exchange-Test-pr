@@ -173,7 +173,7 @@ The Microsoft Rights Management connector (RMS connector) is an optional applica
 
 To learn more about these features see:
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [Rights Management connector](https://go.microsoft.com/fwlink/p/?linkid=330432)
 
@@ -239,7 +239,7 @@ Exchange 2013 includes the following improvements to auditing:
 
   - **Auditing reports**   The EAC includes auditing functionality so that you can run reports or export entries from the mailbox audit log and the administrator audit log. The mailbox audit log records whenever a mailbox is accessed by someone other than the person who owns the mailbox. This can help you determine who has accessed a mailbox and what they have done. The administrator audit log records any action, based on an Exchange Management Shell cmdlet, performed by an administrator. This can help you troubleshoot configuration issues or identify the cause of problems related to security or compliance. For more information, see [Exchange auditing reports](exchange-auditing-reports-exchange-2013-help.md).
 
-  - **Viewing the administrator audit log**   Instead of exporting the administrator audit log, which can take up to 24 hours to receive in an email message, you can view administrator audit log entries in the EAC. To do this, go to **Compliance Management** \> **Auditing** and click **View the administrator audit log**. Up to 1000 entries will be displayed on multiple pages. To narrow the search, you can specify a date range. For more information, see [View the administrator audit log](view-the-administrator-audit-log-exchange-2013-help.md).
+  - **Viewing the administrator audit log**   Instead of exporting the administrator audit log, which can take up to 24 hours to receive in an email message, you can view administrator audit log entries in the EAC. To do this, go to **Compliance Management** \> **Auditing** and click **View the administrator audit log**. Up to 1000 entries will be displayed on multiple pages. To narrow the search, you can specify a date range. For more information, see [View the administrator audit log](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log).
 
 ## Anti-malware protection
 
@@ -267,7 +267,7 @@ This section describes the enhancements for managing recipients in Exchange 2013
 
   - **Group naming policy**   Administrators can now use the EAC to create a *group naming policy*, which lets you standardize and manage the names of distribution groups created by users in your organization. You can require a specific prefix and suffix be added to the name for a distribution group when it's created, and you can block specific words from being used. This capability helps you minimize the use of inappropriate words in group names.
     
-    For more information, see [Create a distribution group naming policy](create-a-distribution-group-naming-policy-exchange-2013-help.md).
+    For more information, see [Create a distribution group naming policy](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-distribution-groups/create-group-naming-policy).
 
   - **Message tracking**   Administrators can also use the EAC to track delivery information for email messages sent to or received by any user in your organization. You just select a mailbox, and then search for messages sent to or received by a different user. You can narrow the search by searching for specific words in the subject line. The resulting delivery report tracks a message through the delivery process and specifies if the message was successfully delivered, pending delivery, or if it wasn't delivered.
     

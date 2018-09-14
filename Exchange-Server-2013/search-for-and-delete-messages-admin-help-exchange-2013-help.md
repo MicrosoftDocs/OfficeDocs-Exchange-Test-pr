@@ -29,7 +29,7 @@ As an additional safeguard, you can first copy the messages to another mailbox b
 
   - You need to be assigned both of the following management roles to search for and delete messages in users' mailboxes:
     
-      - **Mailbox Search**   This role allows you to search for messages across multiple mailboxes in your organization. Administrators aren't assigned this role by default. To assign yourself this role so that you can search mailboxes, add yourself as a member of the Discovery Management role group. See [Assign eDiscovery permissions in Exchange](assign-ediscovery-permissions-in-exchange-exchange-2013-help.md).
+      - **Mailbox Search**   This role allows you to search for messages across multiple mailboxes in your organization. Administrators aren't assigned this role by default. To assign yourself this role so that you can search mailboxes, add yourself as a member of the Discovery Management role group. See [Assign eDiscovery permissions in Exchange](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/assign-ediscovery-permissions).
     
       - **Mailbox Import Export**   This role allows you to delete messages from a user's mailbox. By default, this role isn't assigned to any role group. To delete messages from users' mailboxes, you can add the Mailbox Import Export role to the Organization Management role group. For more information, see the "Add a role to a role group" section in [Manage role groups](manage-role-groups-exchange-2013-help.md) .
 

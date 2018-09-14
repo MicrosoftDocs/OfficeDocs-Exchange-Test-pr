@@ -261,9 +261,9 @@ These are the definitions for the terms you encountered during this procedure.
 
 ## For more information
 
-  - [How DLP rules are applied to evaluate messages](how-dlp-rules-are-applied-to-evaluate-messages-exchange-2013-help.md)
+  - [How DLP rules are applied to evaluate messages](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/dlp-rule-application)
 
-  - [Create a custom DLP policy](create-a-custom-dlp-policy-exchange-2013-help.md)
+  - [Create a custom DLP policy](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/create-custom-dlp-policy)
 
   - [What the sensitive information types in Exchange look for](what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help.md)
 

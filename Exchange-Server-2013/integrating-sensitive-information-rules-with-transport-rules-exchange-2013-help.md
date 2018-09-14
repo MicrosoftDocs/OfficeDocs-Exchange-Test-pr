@@ -43,7 +43,7 @@ The rules can also be used in the exception part of a rule definition. Their use
 
 ## For more information
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [What the sensitive information types in Exchange look for](what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help.md)
 
@@ -51,5 +51,5 @@ The rules can also be used in the exception part of a rule definition. Their use
 
 [Mail flow rules (transport rules) in Exchange Online](https://technet.microsoft.com/en-us/library/jj919238\(v=exchg.150\)) Exchange Online
 
-[Create a custom DLP policy](create-a-custom-dlp-policy-exchange-2013-help.md)
+[Create a custom DLP policy](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/create-custom-dlp-policy)
 

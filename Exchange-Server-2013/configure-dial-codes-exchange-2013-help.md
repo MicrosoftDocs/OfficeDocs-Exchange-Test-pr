@@ -19,7 +19,7 @@ You can configure dial codes, number prefixes, and number formats that are used 
 
 Dial codes and number prefixes are used to determine the correct number to dial for an outgoing call that's placed by a UM-enabled user. *Outdialing* is the term used to describe the process by which a user in a UM dial plan initiates an outgoing call. Number formats are used for incoming calls within a country or region, international calls, or calls that are placed within a dial plan. You can configure a dial plan to match the incoming call number format for both in-country/region and international numbers. When you configure the in-country/region and international number formats, you can restrict incoming calls for users linked with a dial plan.
 
-For additional management tasks related to outdialing, see [Allowing users to make calls procedures](allowing-users-to-make-calls-procedures-exchange-2013-help.md).
+For additional management tasks related to outdialing, see [Allowing users to make calls procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-to-make-calls-procedures).
 
 ## What do you need to know before you begin?
 
@@ -27,7 +27,7 @@ For additional management tasks related to outdialing, see [Allowing users to ma
 
   - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "UM dial plans" entry in the [Unified Messaging permissions](unified-messaging-permissions-exchange-2013-help.md) topic.
 
-  - Before you perform these procedures, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md).
+  - Before you perform these procedures, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan).
 
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 

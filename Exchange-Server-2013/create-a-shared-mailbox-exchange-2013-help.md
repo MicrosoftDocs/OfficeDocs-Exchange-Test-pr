@@ -82,7 +82,7 @@ This example creates the shared mailbox Sales Department and grants Full Access 
 
 
 > [!NOTE]
-> This example assumes that you’ve already created the security group MarketingSG and that security group is mail-enabled. See <A href="manage-mail-enabled-security-groups-exchange-2013-help.md">Manage mail-enabled security groups</A>.
+> This example assumes that you’ve already created the security group MarketingSG and that security group is mail-enabled. See <A href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups">Manage mail-enabled security groups</A>.
 
 
 

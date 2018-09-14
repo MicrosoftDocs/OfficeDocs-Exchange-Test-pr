@@ -75,7 +75,7 @@ The naming convention for log files in the message tracking log directory is `MS
 
   - **MSGTRK**   These logs are associated with the Transport service.
 
-  - **MSGTRKMA**   These logs are associated with the approvals and rejections used by moderated transport. For more information, see [Manage message approval](manage-message-approval-exchange-2013-help.md).
+  - **MSGTRKMA**   These logs are associated with the approvals and rejections used by moderated transport. For more information, see [Manage message approval](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-message-approval).
 
   - **MSGTRKMD**   These logs are associated with messages delivered to mailboxes by the Mailbox Transport Delivery service.
 
@@ -341,7 +341,7 @@ Various event types in the **event-id** field are used to classify the message e
 </tr>
 <tr class="even">
 <td><p><strong>INITMESSAGECREATED</strong></p></td>
-<td><p>A message was sent to a moderated recipient, so the message was sent to the arbitration mailbox for approval. For more information, see <a href="manage-message-approval-exchange-2013-help.md">Manage message approval</a>.</p></td>
+<td><p>A message was sent to a moderated recipient, so the message was sent to the arbitration mailbox for approval. For more information, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-message-approval">Manage message approval</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>LOAD</strong></p></td>
@@ -349,7 +349,7 @@ Various event types in the **event-id** field are used to classify the message e
 </tr>
 <tr class="even">
 <td><p><strong>MODERATIONEXPIRE</strong></p></td>
-<td><p>A moderator for a moderated recipient never approved or rejected the message, so the message expired. For more information about moderated recipients, see <a href="manage-message-approval-exchange-2013-help.md">Manage message approval</a>.</p></td>
+<td><p>A moderator for a moderated recipient never approved or rejected the message, so the message expired. For more information about moderated recipients, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-message-approval">Manage message approval</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>MODERATORAPPROVE</strong></p></td>
@@ -476,7 +476,7 @@ The values in the **source** field in the message tracking log indicate the tran
 </tr>
 <tr class="odd">
 <td><p><strong>APPROVAL</strong></p></td>
-<td><p>The event source was the approval framework that's used with moderated recipients. For more information, see <a href="manage-message-approval-exchange-2013-help.md">Manage message approval</a>.</p></td>
+<td><p>The event source was the approval framework that's used with moderated recipients. For more information, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-message-approval">Manage message approval</a>.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>BOOTLOADER</strong></p></td>

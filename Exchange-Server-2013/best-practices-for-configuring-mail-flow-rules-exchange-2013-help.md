@@ -19,7 +19,7 @@ Follow these best practice recommendations for Exchange transport rules in order
 
 ## Test your rules
 
-To make sure unexpected things don't happen to people's email, and to make sure you're really meeting the business, legal, or compliance intentions of your rule, be sure to test it thoroughly. There are many options, and rules can interact with each other, so it's important to test messages that you expect both will match the rule and won't match the rule in case you inadvertently made a rule too general. To learn all the options for testing rules, see [Test a mail flow rule](test-a-mail-flow-rule-exchange-2013-help.md).
+To make sure unexpected things don't happen to people's email, and to make sure you're really meeting the business, legal, or compliance intentions of your rule, be sure to test it thoroughly. There are many options, and rules can interact with each other, so it's important to test messages that you expect both will match the rule and won't match the rule in case you inadvertently made a rule too general. To learn all the options for testing rules, see [Test a mail flow rule](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/test-mail-flow-rules).
 
 ## Scope your rule
 
@@ -27,7 +27,7 @@ Make sure your rule applies only to the messages you intend it to. For example:
 
   - **Restrict a rule to messages either coming into or going out of the organization**
     
-    By default, a new rule applies to messages that are either sent or received by people in your organization. So if you want the rule to apply only one way, be sure to specify that in the conditions for the rule. For an example, see [Common attachment blocking scenarios for mail flow rules](common-attachment-blocking-scenarios-for-mail-flow-rules-exchange-2013-help.md).
+    By default, a new rule applies to messages that are either sent or received by people in your organization. So if you want the rule to apply only one way, be sure to specify that in the conditions for the rule. For an example, see [Common attachment blocking scenarios for mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/common-attachment-blocking-scenarios).
 
   - **Restrict a rule based on the sender's or receiver's domain**
     
@@ -45,7 +45,7 @@ For a complete list of all the conditions and exceptions that are available for 
 
 Sometimes it takes two rules to do what you want. Transport rules are processed in order, so multiple rules can apply to the same message. For example, if one of the actions is to block the message, and you also have another action you'd like to apply, such as copying the message to the sender's manager or changing the subject for the notification message, you would need two rules. The first rule could copy the message to the sender's manager and change the subject, and the second rule could block the message.
 
-If you use two rules like this, be sure that the conditions are identical. To see examples, look at example 3 in [Common message approval scenarios](common-message-approval-scenarios-exchange-2013-help.md), example 3 in [Common attachment blocking scenarios for mail flow rules](common-attachment-blocking-scenarios-for-mail-flow-rules-exchange-2013-help.md), and [Organization-wide disclaimers, signatures, footers, or headers in Exchange 2013](organization-wide-disclaimers-signatures-footers-or-headers-exchange-online-help.md).
+If you use two rules like this, be sure that the conditions are identical. To see examples, look at example 3 in [Common message approval scenarios](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/common-message-approval-scenarios), example 3 in [Common attachment blocking scenarios for mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/common-attachment-blocking-scenarios), and [Organization-wide disclaimers, signatures, footers, or headers in Exchange 2013](organization-wide-disclaimers-signatures-footers-or-headers-exchange-online-help.md).
 
 ## Don't repeat an action on every email in a conversation
 

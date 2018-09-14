@@ -23,7 +23,7 @@ In Microsoft Exchange Server 2013 and Exchange Online, Exchange Search includes
 
 
 
-When managing or using Exchange Search and the dependent features (such as [In-Place eDiscovery](in-place-ediscovery-exchange-2013-help.md)), consider the difference between unsearchable items and file formats that are disabled for indexing or contain content that can’t be indexed:
+When managing or using Exchange Search and the dependent features (such as [In-Place eDiscovery](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)), consider the difference between unsearchable items and file formats that are disabled for indexing or contain content that can’t be indexed:
 
   - **Unsearchable items**   When Exchange Search can't index a particular file type for any reason (for example, if a filter isn't installed), the search for the file type fails. Messages containing such attachments are marked as *partially indexed*. Unsearchable items can be retrieved using the [Get-FailedContentIndexDocuments](https://technet.microsoft.com/en-us/library/dd351154\(v=exchg.150\)) cmdlet. When copying In-Place eDiscovery search results to a discovery mailbox or exporting search results to a PST file, you can include unsearchable items. For more information, see [Unsearchable items in Exchange eDiscovery](unsearchable-items-in-exchange-ediscovery-exchange-2013-help.md).
 

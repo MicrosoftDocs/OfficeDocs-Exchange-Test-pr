@@ -21,23 +21,23 @@ This article explains the components of mail flow rules, and how they work.
 
 For information about mail flow rules in Exchange Online, see [Mail flow rules in Exchange Online](https://technet.microsoft.com/en-us/library/jj919238\(v=exchg.150\)). For information about mail flow rules in Exchange Online Protection, see [Mail flow rules in Exchange Online Protection](https://technet.microsoft.com/en-us/library/dn271424\(v=exchg.150\))
 
-You can use the Exchange admin center (EAC) or the Exchange Management Shell to manage mail flow rules. For instructions on how to manage transport rules, see [Manage mail flow rules](manage-mail-flow-rules-exchange-2013-help.md).
+You can use the Exchange admin center (EAC) or the Exchange Management Shell to manage mail flow rules. For instructions on how to manage transport rules, see [Manage mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules).
 
-For each rule, you have the option of enforcing it, testing it, or testing it and notifying the sender. To learn more about the testing options, see [Test a mail flow rule](test-a-mail-flow-rule-exchange-2013-help.md) and [Policy Tips](technical-overview-of-policy-tips-in-exchange-online-and-exchange-2013.md).
+For each rule, you have the option of enforcing it, testing it, or testing it and notifying the sender. To learn more about the testing options, see [Test a mail flow rule](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/test-mail-flow-rules) and [Policy Tips](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/policy-tips).
 
 To implement specific messaging policies by using mail flow rules, see these topics:
 
   - [Use transport rules to inspect message attachments in Exchange 2013](use-transport-rules-to-inspect-message-attachments-exchange-2013-help.md)
 
-  - [Common attachment blocking scenarios for mail flow rules](common-attachment-blocking-scenarios-for-mail-flow-rules-exchange-2013-help.md)
+  - [Common attachment blocking scenarios for mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/common-attachment-blocking-scenarios)
 
   - [Organization-wide disclaimers, signatures, footers, or headers in Exchange 2013](organization-wide-disclaimers-signatures-footers-or-headers-exchange-online-help.md)
 
-  - [Use mail flow rules so messages can bypass Clutter](use-mail-flow-rules-so-messages-can-bypass-clutter-exchange-2013-help.md)
+  - [Use mail flow rules so messages can bypass Clutter](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/use-rules-to-bypass-clutter)
 
   - [Use mail flow rules to route email based on a list of words, phrases, or patterns](use-mail-flow-rules-to-route-email-based-on-a-list-of-words-phrases-or-patterns-exchange-2013-help.md)
 
-  - [Common message approval scenarios](common-message-approval-scenarios-exchange-2013-help.md)
+  - [Common message approval scenarios](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/common-message-approval-scenarios)
 
 ## Mail flow rule components
 
@@ -129,14 +129,14 @@ The following table describes the rule properties that are available in mail flo
 <td><p>Indicates the order that the rules are applied to messages. The default priority is based on when the rule is created (older rules have a higher priority than newer rules, and higher priority rules are processed before lower priority rules).</p>
 <p>You change the rule priority in the EAC by moving the rule up or down in the list of rules. In the PowerShell, you set the priority number (0 is the highest priority).</p>
 <p>For example, if you have one rule to reject messages that include a credit card number, and another one requiring approval, you’ll want the reject rule to happen first, and stop applying other rules.</p>
-<p>For more information, see <a href="manage-mail-flow-rules-exchange-2013-help.md">Set the priority of mail flow rules</a>.</p></td>
+<p>For more information, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules">Set the priority of mail flow rules</a>.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Mode</strong></p></td>
 <td><p><em>Mode</em></p></td>
 <td><p>You can specify whether you want the rule to start processing messages immediately, or whether you want to test rules without affecting the delivery of the message (with or without Data Loss Prevention or DLP Policy Tips).</p>
-<p>Policy Tips present a brief note in Outlook or Outlook on the web that provides information about possible policy violations to the person that's creating the message. For more information, see <a href="technical-overview-of-policy-tips-in-exchange-online-and-exchange-2013.md">Policy Tips</a>.</p>
-<p>For more information about the modes, see <a href="test-a-mail-flow-rule-exchange-2013-help.md">Test a mail flow rule</a>.</p></td>
+<p>Policy Tips present a brief note in Outlook or Outlook on the web that provides information about possible policy violations to the person that's creating the message. For more information, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/policy-tips">Policy Tips</a>.</p>
+<p>For more information about the modes, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/test-mail-flow-rules">Test a mail flow rule</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>Activate this rule on the following date</strong></p>
@@ -255,7 +255,7 @@ Mail flow rules that you create and configure on Mailbox servers are stored in A
 
   - Each Mailbox server caches expanded distribution groups to avoid repeated Active Directory queries to determine a group's membership. By default, entries in the expanded groups cache expire every four hours. Therefore, changes to the group's membership aren't detected by mail flow rules until the expanded groups cache is updated. To force an immediate update of the cache on a Mailbox server, restart the Microsoft Exchange Transport service. You need to restart the service on each Mailbox server where you want to forcibly update the cache.
 
-Mail flow rules that you create and configure on Edge Transport servers are stored in the local instance of AD LDS on the server. No automated replication of mail flow rules occurs on Edge Transport servers. Rules on the Edge Transport server apply only to messages that flow through the local server. If you need to apply the same set of mail flow rules on multiple Edge Transport servers, you can clone the Edge Transport server configuration, or export and import the mail flow rules. For more information, see [Edge Transport server cloned configuration](edge-transport-server-cloned-configuration-exchange-2013-help.md) and [Import or export mail flow rule collections](manage-mail-flow-rules-exchange-2013-help.md).
+Mail flow rules that you create and configure on Edge Transport servers are stored in the local instance of AD LDS on the server. No automated replication of mail flow rules occurs on Edge Transport servers. Rules on the Edge Transport server apply only to messages that flow through the local server. If you need to apply the same set of mail flow rules on multiple Edge Transport servers, you can clone the Edge Transport server configuration, or export and import the mail flow rules. For more information, see [Edge Transport server cloned configuration](edge-transport-server-cloned-configuration-exchange-2013-help.md) and [Import or export mail flow rule collections](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules).
 
 Whenever the Transport service on a Mailbox server or Edge Transport server detects a modified mail flow rule, an event is logged in the Application log in the Event Viewer (Event ID 4002 on Mailbox servers, and Event ID 16028 on Edge Transport servers).
 
@@ -281,7 +281,7 @@ There are two mixed environment scenarios that are common in Exchange 2013:
 
 ## For more information
 
-[Manage mail flow rules](manage-mail-flow-rules-exchange-2013-help.md)
+[Manage mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
 
 [Mail flow rule conditions and exceptions (predicates) in Exchange 2013](mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md)
 

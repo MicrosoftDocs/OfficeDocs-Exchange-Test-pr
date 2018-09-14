@@ -19,11 +19,11 @@ _**Applies to:** Exchange Server 2013_
 
 In a hybrid deployment, your users can be in Exchange Online, on-premises, or both, and your public folders are either in Exchange Online or on-premises. Sometimes your online users may need to access public folders in your Exchange Server 2013 on-premises environment. Similarly, Exchange 2013 users may need to access public folders in Office 365 or Exchange Online.
 
-This article describes how to enable users in your Exchange 2013 on-premises environment to access Exchange Online/Office 365 public folders. To enable Exchange Online/Office 365 users to access on-premises Exchange 2013 public folders, see [Configure Exchange 2013 public folders for a hybrid deployment](configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md).
+This article describes how to enable users in your Exchange 2013 on-premises environment to access Exchange Online/Office 365 public folders. To enable Exchange Online/Office 365 users to access on-premises Exchange 2013 public folders, see [Configure Exchange 2013 public folders for a hybrid deployment](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-modern-hybrid-public-folders).
 
 
 > [!NOTE]
-> If you have Exchange 2010 or Exchange 2007 public folders, see <A href="configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md">Configure legacy on-premises public folders for a hybrid deployment</A>.
+> If you have Exchange 2010 or Exchange 2007 public folders, see <A href="https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders">Configure legacy on-premises public folders for a hybrid deployment</A>.
 
 
 
@@ -45,7 +45,7 @@ This article describes how to enable users in your Exchange 2013 on-premises env
     
 
     > [!NOTE]
-    > Outlook 2016 for Mac is supported for cross-premises public folders. If clients in your organization use Outlook 2016 for Mac, make sure they have installed the April 2016 update. Otherwise, those users will not be able to access public folders in a co-existence or hybrid topology. For more information, see <A href="accessing-public-folders-with-outlook-2016-for-mac-exchange-2013-help.md">Accessing public folders with Outlook 2016 for Mac</A>.
+    > Outlook 2016 for Mac is supported for cross-premises public folders. If clients in your organization use Outlook 2016 for Mac, make sure they have installed the April 2016 update. Otherwise, those users will not be able to access public folders in a co-existence or hybrid topology. For more information, see <A href="https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/access-public-folders-with-outlook-2016-for-mac">Accessing public folders with Outlook 2016 for Mac</A>.
 
 
 

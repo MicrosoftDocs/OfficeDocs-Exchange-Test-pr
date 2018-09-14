@@ -53,7 +53,7 @@ You can use the EAC or the Shell to enable or disable Microsoft Exchange ActiveS
 
 
 > [!NOTE]
-> You can enable and disable Exchange ActiveSync for multiple user mailboxes by using the EAC bulk edit feature. For more information about how to do this, see the "Bulk edit user mailboxes" section in <A href="manage-user-mailboxes-exchange-2013-help.md">Manage user mailboxes</A>.
+> You can enable and disable Exchange ActiveSync for multiple user mailboxes by using the EAC bulk edit feature. For more information about how to do this, see the "Bulk edit user mailboxes" section in <A href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes">Manage user mailboxes</A>.
 
 
 

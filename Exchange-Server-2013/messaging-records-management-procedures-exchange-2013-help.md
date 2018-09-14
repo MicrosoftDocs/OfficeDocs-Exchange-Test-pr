@@ -15,11 +15,11 @@ mtps_version: v=EXCHG.150
 _**Applies to:** Exchange Server 2013_
 
 
-[Create a Retention Policy](create-a-retention-policy-exchange-2013-help.md)
+[Create a Retention Policy](https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy)
 
 [Add retention tags to or remove retention tags from a retention policy](add-retention-tags-to-or-remove-retention-tags-from-a-retention-policy-exchange-2013-help.md)
 
-[Apply a retention policy to mailboxes](apply-a-retention-policy-to-mailboxes-exchange-2013-help.md)
+[Apply a retention policy to mailboxes](https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/apply-retention-policy)
 
 [Configure the Managed Folder Assistant](configure-the-managed-folder-assistant-exchange-2013-help.md)
 

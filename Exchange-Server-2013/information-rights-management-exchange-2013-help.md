@@ -221,11 +221,11 @@ To enforce messaging policies and for regulatory compliance, you must be able to
 
   - **Journal report decryption**   To meet compliance or business requirements, organizations can use journaling to preserve messaging content. The Journaling agent creates a journal report for messages subject to journaling and includes metadata about the message in the report. The original message is attached to the journal report. If the message in a journal report is IRM-protected, journal report decryption attaches a cleartext copy of the message to the journal report. For more information, see [Journal report decryption](journal-report-decryption-exchange-2013-help.md).
 
-  - **IRM decryption for Exchange Search**   With IRM decryption for Exchange Search, Exchange Search can index content in IRM-protected messages. When a discovery manager performs an In-Place eDiscovery search, IRM-protected messages that have been indexed are returned in search results. For more information, see [In-Place eDiscovery](in-place-ediscovery-exchange-2013-help.md).
+  - **IRM decryption for Exchange Search**   With IRM decryption for Exchange Search, Exchange Search can index content in IRM-protected messages. When a discovery manager performs an In-Place eDiscovery search, IRM-protected messages that have been indexed are returned in search results. For more information, see [In-Place eDiscovery](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery).
     
 
     > [!NOTE]
-    > In Exchange 2010 SP1 and later, members of the Discovery Management role group can access IRM-protected messages returned by a discovery search and residing in a discovery mailbox. To enable this functionality, use the <EM>EDiscoverySuperUserEnabled</EM> parameter with <A href="https://technet.microsoft.com/en-us/library/dd979792(v=exchg.150)">Set-IRMConfiguration</A> cmdlet. For more information, see <A href="configure-irm-for-exchange-search-and-in-place-ediscovery-exchange-2013-help.md">Configure IRM for Exchange Search and In-Place eDiscovery</A>.
+    > In Exchange 2010 SP1 and later, members of the Discovery Management role group can access IRM-protected messages returned by a discovery search and residing in a discovery mailbox. To enable this functionality, use the <EM>EDiscoverySuperUserEnabled</EM> parameter with <A href="https://technet.microsoft.com/en-us/library/dd979792(v=exchg.150)">Set-IRMConfiguration</A> cmdlet. For more information, see <A href="configure-irm-for-exchange-search-and-https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery">Configure IRM for Exchange Search and In-Place eDiscovery</A>.
 
 
 

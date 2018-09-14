@@ -19,7 +19,7 @@ _**Applies to:** Exchange Server 2013_
 
 [Set the default language on a dial plan](set-the-default-language-on-a-dial-plan-exchange-2013-help.md)
 
-[Select the language for an auto attendant](select-the-language-for-an-auto-attendant-exchange-2013-help.md)
+[Select the language for an auto attendant](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/select-auto-attendant-language)
 
 [Remove a UM language pack](remove-a-um-language-pack-exchange-2013-help.md)
 
@@ -27,5 +27,5 @@ _**Applies to:** Exchange Server 2013_
 
 [Import custom prompts from Exchange 2007 to Exchange 2013](import-custom-prompts-from-exchange-2007-to-exchange-2013-exchange-2013-help.md)
 
-[Enable custom prompt recording using the telephone user interface](enable-custom-prompt-recording-using-the-telephone-user-interface-exchange-2013-help.md)
+[Enable custom prompt recording using the telephone user interface](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/enable-custom-prompt-recording)
 

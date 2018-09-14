@@ -136,7 +136,7 @@ Click **More options** to view or change these additional properties:
 
   - **Company**   Use this box to specify a company that the resource is associated with. Like the Department property, you can use this property to create recipient conditions for dynamic distribution groups and address lists.
 
-  - **Address book policy**   Use this option to specify an address book policy (ABP) for the resource. ABPs contain a global address list (GAL), an offline address book (OAB), a room list, and a set of address lists. To learn more, see [Address book policies](address-book-policies-exchange-2013-help.md).
+  - **Address book policy**   Use this option to specify an address book policy (ABP) for the resource. ABPs contain a global address list (GAL), an offline address book (OAB), a room list, and a set of address lists. To learn more, see [Address book policies](https://docs.microsoft.com/en-us/exchange/address-books/address-book-policies/address-book-policies).
     
     In the drop-down list, select the policy that you want associated with this mailbox.
 

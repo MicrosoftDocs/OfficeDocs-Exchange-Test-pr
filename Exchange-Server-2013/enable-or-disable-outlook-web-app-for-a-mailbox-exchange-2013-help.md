@@ -25,7 +25,7 @@ You can use the EAC or the Shell to enable or disable Outlook Web App for a user
 
 For additional management tasks related to managing email client access to a mailbox, see the following topics:
 
-  - [Enable or disable MAPI for a mailbox](enable-or-disable-mapi-for-a-mailbox-exchange-online-help.md)
+  - [Enable or disable MAPI for a mailbox](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-mapi)
 
   - [Enable or disable IMAP4 access for a user](enable-or-disable-imap4-access-for-a-user-exchange-2013-help.md)
 
@@ -67,7 +67,7 @@ For additional management tasks related to managing email client access to a mai
 
 
 > [!NOTE]
-> You can enable and disable Outlook Web App for multiple user mailboxes by using the EAC bulk edit feature. For more information about how to do this, see the "Bulk edit user mailboxes" section in <A href="manage-user-mailboxes-exchange-2013-help.md">Manage user mailboxes</A>.
+> You can enable and disable Outlook Web App for multiple user mailboxes by using the EAC bulk edit feature. For more information about how to do this, see the "Bulk edit user mailboxes" section in <A href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes">Manage user mailboxes</A>.
 
 
 

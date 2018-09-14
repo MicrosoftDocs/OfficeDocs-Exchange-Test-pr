@@ -47,7 +47,7 @@ Managing custom templates and their related policies is similar to managing the 
 
 2.  Import your custom template. To learn more, see [Import a custom DLP policy template from a file](import-a-custom-dlp-policy-template-from-a-file-exchange-2013-help.md).
 
-3.  Create a DLP Policy based on your custom template. To learn more, see [Create a DLP policy from a template](how-to-new-dlp-data-loss-prevention-policy-template.md).
+3.  Create a DLP Policy based on your custom template. To learn more, see [Create a DLP policy from a template](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/create-dlp-policy-from-template).
 
 4.  Update your custom template by repeating steps 1 and 2.
 
@@ -69,7 +69,7 @@ You can write your own sensitive information definitions in a classification rul
 
 5.  Remove your custom template. To learn more, see [Remove-ClassificationRuleCollection](https://technet.microsoft.com/en-us/library/jj218670\(v=exchg.150\))
 
-For more information about the rule packages, see [Developing sensitive information rule packages](technical-description-of-xml-schema-for-dlp-rule-packages.md) and [Matching methods and techniques for rule packages](technical-description-of-xsd-rule-matching-for-dlp-rule-packages.md).
+For more information about the rule packages, see [Developing sensitive information rule packages](technical-description-of-xml-schema-for-dlp-rule-packages.md) and [Matching methods and techniques for rule packages](https://docs.microsoft.com/en-us/office365/securitycompliance/eop/exchange-online-protection-overview).
 
 ## Understanding rule types in rule packages
 
@@ -81,7 +81,7 @@ The rules within a rule package configure the process for detecting well-defined
 
 ## For more information
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 [Import a custom DLP policy template from a file](import-a-custom-dlp-policy-template-from-a-file-exchange-2013-help.md)
 

@@ -25,11 +25,11 @@ The Microsoft Exchange 2010 UM Troubleshooting Tool is an Exchange Management Sh
 
   - Make sure your Exchange 2010 or Exchange 2013 organization meets the following requirements:
     
-      - A UM dial plan has been created. For detailed steps, see [Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md).
+      - A UM dial plan has been created. For detailed steps, see [Create a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan).
     
-      - A UM mailbox policy has been created. For detailed steps, see [Create a UM mailbox policy](create-a-um-mailbox-policy-exchange-2013-help.md).
+      - A UM mailbox policy has been created. For detailed steps, see [Create a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy).
     
-      - A UM IP gateway has been created. For detailed steps, see [Create a UM IP gateway](create-a-um-ip-gateway-exchange-2013-help.md).
+      - A UM IP gateway has been created. For detailed steps, see [Create a UM IP gateway](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-ip-gateway).
     
       - An Exchange 2010 UM server has been added to UM dial plan. If you are using Exchange 2013 with Lync Server, add all Client Access and Mailbox servers to the SIP URI dial plans. For detailed steps, see [Add a UM Server to a Dial Plan](https://go.microsoft.com/fwlink/p/?linkid=313051) or [Add Mailbox and Client Access servers to a SIP URI dial plan](add-mailbox-and-client-access-servers-to-a-sip-uri-dial-plan-exchange-2013-help.md).
 

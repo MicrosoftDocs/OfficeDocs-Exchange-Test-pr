@@ -15,7 +15,7 @@ mtps_version: v=EXCHG.150
 _**Applies to:** Exchange Online, Exchange Server 2013_
 
 
-[Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md)
+[Create a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan)
 
 [Manage a UM dial plan](manage-a-um-dial-plan-exchange-2013-help.md)
 
@@ -25,15 +25,15 @@ _**Applies to:** Exchange Online, Exchange Server 2013_
 
 [Change the audio codec](change-the-audio-codec-exchange-2013-help.md)
 
-[Configure the maximum call duration](configure-the-maximum-call-duration-exchange-2013-help.md)
+[Configure the maximum call duration](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-maximum-call-duration)
 
 [Configure the maximum recording duration](configure-the-maximum-recording-duration-exchange-2013-help.md)
 
-[Configure the recording idle time-out value](configure-the-recording-idle-time-out-value-exchange-2013-help.md)
+[Configure the recording idle time-out value](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-recording-idle-time-out)
 
-[Configure the VoIP security setting](configure-the-voip-security-setting-exchange-2013-help.md)
+[Configure the VoIP security setting](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-voip-security-setting)
 
 [Configure a dial plan for users who have similar names](configure-a-dial-plan-for-users-who-have-similar-names-exchange-2013-help.md)
 
-[Delete a UM dial plan](delete-a-um-dial-plan-exchange-2013-help.md)
+[Delete a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/delete-um-dial-plan)
 

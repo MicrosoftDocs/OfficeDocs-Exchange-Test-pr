@@ -25,17 +25,17 @@ There's a tightly integrated and interconnected relationship between the UM comp
 
 For more information about the UM components, see:
 
-  - [UM dial plans](um-dial-plans-exchange-2013-help.md)
+  - [UM dial plans](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-dial-plans)
 
-  - [UM IP gateways](um-ip-gateways-exchange-2013-help.md)
+  - [UM IP gateways](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways)
 
   - [UM hunt groups](um-hunt-groups-exchange-2013-help.md)
 
-  - [Automatically answer and route incoming calls](automatically-answer-and-route-incoming-calls-exchange-2013-help.md)
+  - [Automatically answer and route incoming calls](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/automatically-answer-and-route-calls)
 
 For more information about setting up voice mail for users, see:
 
-  - [UM mailbox policies](um-mailbox-policies-exchange-2013-help.md)
+  - [UM mailbox policies](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policies)
 
   - [Voice mail for users](voice-mail-for-users-exchange-2013-help.md)
 

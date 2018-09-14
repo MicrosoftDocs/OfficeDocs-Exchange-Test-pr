@@ -111,7 +111,7 @@ Run this command to add a discovery mailbox named Ottawa Discovery Mailbox as a 
 
 
 > [!NOTE]
-> To open a discovery mailbox and view the search results, discovery managers must be assigned Full Access permissions for the discovery mailbox. For more information, see <A href="create-a-discovery-mailbox-exchange-2013-help.md">Create a discovery mailbox</A>.
+> To open a discovery mailbox and view the search results, discovery managers must be assigned Full Access permissions for the discovery mailbox. For more information, see <A href="https://docs.microsoft.com/en-us/Office365/SecurityCompliance/eop/exchange-online-protection-overview">Create a discovery mailbox</A>.
 
 
 

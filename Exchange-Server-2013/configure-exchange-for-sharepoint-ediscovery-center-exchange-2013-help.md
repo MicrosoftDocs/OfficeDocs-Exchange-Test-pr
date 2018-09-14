@@ -58,7 +58,7 @@ Run this command to configure the SharePoint partner application.
 
 ## Step 3: Add authorized users to the Discovery Management role group
 
-Add users who need to perform an eDiscovery search using SharePoint 2013 to the Discovery Management role group in Exchange 2013. For details, see [Assign eDiscovery permissions in Exchange](assign-ediscovery-permissions-in-exchange-exchange-2013-help.md).
+Add users who need to perform an eDiscovery search using SharePoint 2013 to the Discovery Management role group in Exchange 2013. For details, see [Assign eDiscovery permissions in Exchange](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/assign-ediscovery-permissions).
 
 
 > [!WARNING]

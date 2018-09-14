@@ -59,7 +59,7 @@ The actions that are available in mail flow rules on Mailbox servers are describ
 <p><strong>Forward the message for approval</strong> &gt; <strong>to these people</strong></p></td>
 <td><p><em>ModerateMessageByUser</em></p></td>
 <td><p><code>Addresses</code></p></td>
-<td><p>Forwards the message to the specified moderators as an attachment wrapped in an approval request. For more information, see <a href="common-message-approval-scenarios-exchange-2013-help.md">Common message approval scenarios</a>. You can't use a distribution group as a moderator.</p></td>
+<td><p>Forwards the message to the specified moderators as an attachment wrapped in an approval request. For more information, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/common-message-approval-scenarios">Common message approval scenarios</a>. You can't use a distribution group as a moderator.</p></td>
 <td><p>Exchange 2010 or later</p></td>
 </tr>
 <tr class="even">
@@ -630,7 +630,7 @@ Return to top
 
 ## For more information
 
-[Manage mail flow rules](manage-mail-flow-rules-exchange-2013-help.md)
+[Manage mail flow rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules)
 
 [Mail flow rules (transport rules) in Exchange 2013](mail-flow-rules-transport-rules-in-exchange-2013-exchange-2013-help.md)
 

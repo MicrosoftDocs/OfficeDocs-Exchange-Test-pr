@@ -43,7 +43,7 @@ When you’re deploying Exchange servers in your organization, you can install t
 
 ## Step 2: Create and configure a UM dial plan
 
-After you’ve installed the required servers, you must first create a UM dial plan. A UM dial plan contains the configuration settings that enable you to connect to your telephony network by linking to a single or multiple UM IP gateways. A UM IP gateway and UM hunt group are directly linked to a UM dial plan and are also required. For details, see [Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md).
+After you’ve installed the required servers, you must first create a UM dial plan. A UM dial plan contains the configuration settings that enable you to connect to your telephony network by linking to a single or multiple UM IP gateways. A UM IP gateway and UM hunt group are directly linked to a UM dial plan and are also required. For details, see [Create a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan).
 
 A UM dial plan establishes a link from the telephone extension number of a user to their UM-enabled mailbox. When you create a UM dial plan, you can configure the number of digits in the extension numbers, the Uniform Resource Identifier (URI) type, and the VoIP security setting for the dial plan.
 
@@ -63,9 +63,9 @@ Exchange Unified Messaging supports various VoIP gateway vendors and other vendo
 
 For detailed information about VoIP gateways, see the following topics:
 
-  - [Create a UM IP gateway](create-a-um-ip-gateway-exchange-2013-help.md)
+  - [Create a UM IP gateway](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-ip-gateway)
 
-  - [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)
+  - [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways)
 
   - [Connect a VoIP gateway, IP PBX, or session border controller to UM](connect-a-voip-gateway-ip-pbx-or-session-border-controller-to-um-exchange-2013-help.md)
 

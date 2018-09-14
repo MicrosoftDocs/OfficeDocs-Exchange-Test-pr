@@ -183,7 +183,7 @@ MWI can be administered by configuring settings on two UM components: UM mailbox
 
 ## UM mailbox policies and MWI
 
-You can create a UM mailbox policy to apply a common set of UM policy settings to a collection of UM-enabled mailboxes. For example, you can use a UM mailbox policy to apply PIN policy settings, dialing restrictions, and MWI notifications settings. If you enable or disable MWI on a UM mailbox policy, it will be enabled or disabled for all UM-enabled users who are linked with that UM mailbox policy. The MWI setting can also apply to a subset of the users who are linked with a UM dial plan. To learn more about UM mailbox policies, including how to enable or disable MWI for a group of UM-enabled users, see [UM mailbox policy procedures](um-mailbox-policy-procedures-exchange-2013-help.md).
+You can create a UM mailbox policy to apply a common set of UM policy settings to a collection of UM-enabled mailboxes. For example, you can use a UM mailbox policy to apply PIN policy settings, dialing restrictions, and MWI notifications settings. If you enable or disable MWI on a UM mailbox policy, it will be enabled or disabled for all UM-enabled users who are linked with that UM mailbox policy. The MWI setting can also apply to a subset of the users who are linked with a UM dial plan. To learn more about UM mailbox policies, including how to enable or disable MWI for a group of UM-enabled users, see [UM mailbox policy procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policy-procedures).
 
 You can use the EAC or the **Set-UMMailboxPolicy** cmdlet in the Shell to configure the MWI setting, as shown in the following table.
 
@@ -216,9 +216,9 @@ You can use the EAC or the **Set-UMMailboxPolicy** cmdlet in the Shell to config
 
 For more information about how to manage MWI settings on a UM mailbox policy, see the following topics:
 
-  - [Manage a UM mailbox policy](manage-a-um-mailbox-policy-exchange-2013-help.md)
+  - [Manage a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-um-mailbox-policy)
 
-  - [Enable Message Waiting Indicator (MWI) for users](enable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md)
+  - [Enable Message Waiting Indicator (MWI) for users](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-mwi-for-users)
 
   - [Disable Message Waiting Indicator (MWI) for users](disable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md)
 
@@ -226,7 +226,7 @@ For more information about how to manage MWI settings on a UM mailbox policy, se
 
 ## UM IP gateways and MWI
 
-If you disable MWI on a UM IP gateway, you'll disable MWI notifications for all users who connect to the VoIP gateway or IP PBX that's represented by the UM IP gateway. Disabling MWI on a single UM IP gateway that’s linked to a UM dial plan can disable MWI notifications for all UM-enabled users associated with a single or multiple UM dial plans or a single or multiple UM mailbox policies. To learn more about UM mailbox policies, including how to enable or disable MWI for a group of UM-enabled users, see [Manage a UM mailbox policy](manage-a-um-mailbox-policy-exchange-2013-help.md).
+If you disable MWI on a UM IP gateway, you'll disable MWI notifications for all users who connect to the VoIP gateway or IP PBX that's represented by the UM IP gateway. Disabling MWI on a single UM IP gateway that’s linked to a UM dial plan can disable MWI notifications for all UM-enabled users associated with a single or multiple UM dial plans or a single or multiple UM mailbox policies. To learn more about UM mailbox policies, including how to enable or disable MWI for a group of UM-enabled users, see [Manage a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-um-mailbox-policy).
 
 You can use the EAC or the **Set-UMMailboxPolicy** cmdlet in the Shell to configure the MWI setting, as shown in the following table.
 
@@ -260,9 +260,9 @@ For more information about how to manage MWI settings, see the following topics:
 
   - [Manage a UM IP gateway](manage-a-um-ip-gateway-exchange-2013-help.md)
 
-  - [Allow Message Waiting Indicator (MWI) on a UM IP gateway](allow-message-waiting-indicator-mwi-on-a-um-ip-gateway-exchange-2013-help.md)
+  - [Allow Message Waiting Indicator (MWI) on a UM IP gateway](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-mwi-on-um-ip-gateway)
 
-  - [Prevent Message Waiting Indicator (MWI) on a UM IP gateway](prevent-message-waiting-indicator-mwi-on-a-um-ip-gateway-exchange-2013-help.md)
+  - [Prevent Message Waiting Indicator (MWI) on a UM IP gateway](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/prevent-mwi-on-um-ip-gateway)
 
   - [Set-UMIPGateway](https://technet.microsoft.com/en-us/library/aa996577\(v=exchg.150\))
 
@@ -305,7 +305,7 @@ The following table shows the parameter on a UM mailbox that must be configured 
 
 For more information about how to manage text message notification settings on a user’s mailbox, see the following topics:
 
-  - [Manage voice mail settings for a user](manage-voice-mail-settings-for-a-user-exchange-2013-help.md)
+  - [Manage voice mail settings for a user](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-voice-mail-settings)
 
   - [Set-UMMailbox](https://technet.microsoft.com/en-us/library/bb124893\(v=exchg.150\))
 
@@ -339,7 +339,7 @@ The following table shows the parameter on a UM mailbox policy that must be conf
 
 For more information about how to manage text message notification settings, see the following topics:
 
-  - [Manage a UM mailbox policy](manage-a-um-mailbox-policy-exchange-2013-help.md)
+  - [Manage a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/manage-um-mailbox-policy)
 
   - [Set-UMMailboxPolicy](https://technet.microsoft.com/en-us/library/bb124903\(v=exchg.150\))
 

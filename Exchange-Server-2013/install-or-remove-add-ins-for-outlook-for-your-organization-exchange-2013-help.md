@@ -19,11 +19,11 @@ You can install or remove add-ins for Outlook for your organization by using the
 
 
 > [!NOTE]
-> By default, after you install an add-in for your organization, the add-in is available for all users in your organization. After installation, you can use the EAC or the Shell to make the add-in optional or required for your users, and to specify whether you want the add-in to be enabled or disabled. For information about how to change the default settings for an add-in, see <A href="manage-user-access-to-add-ins-for-outlook-exchange-online-help.md">Manage user access to add-ins for Outlook</A>. To limit availability of add-ins to specific users in your organization, you must use the Shell. For more information, see <A href="manage-user-access-to-add-ins-for-outlook-exchange-online-help.md">Manage user access to add-ins for Outlook</A>.
+> By default, after you install an add-in for your organization, the add-in is available for all users in your organization. After installation, you can use the EAC or the Shell to make the add-in optional or required for your users, and to specify whether you want the add-in to be enabled or disabled. For information about how to change the default settings for an add-in, see <A href="https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/manage-user-access-to-add-ins">Manage user access to add-ins for Outlook</A>. To limit availability of add-ins to specific users in your organization, you must use the Shell. For more information, see <A href="https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/manage-user-access-to-add-ins">Manage user access to add-ins for Outlook</A>.
 
 
 
-For additional management tasks, see [Add-ins for Outlook](add-ins-for-outlook-exchange-2013-help.md).
+For additional management tasks, see [Add-ins for Outlook](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook).
 
 ## What do you need to know before you begin?
 
@@ -31,7 +31,7 @@ For additional management tasks, see [Add-ins for Outlook](add-ins-for-outlook-e
 
   - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Apps for Outlook" entry in the [Recipients Permissions](recipients-permissions-exchange-2013-help.md) topic.
 
-  - You can assign administrators permission to install and manage add-ins for your organization. You can also assign users permission to install and manage add-ins for their own use. For more information, see [Specify the administrators and users who can install and manage add-ins for Outlook](specify-the-administrators-and-users-who-can-install-and-manage-add-ins-for-outlook-exchange-2013-help.md).
+  - You can assign administrators permission to install and manage add-ins for your organization. You can also assign users permission to install and manage add-ins for their own use. For more information, see [Specify the administrators and users who can install and manage add-ins for Outlook](specify-the-administrators-and-users-who-can-install-and-manage-https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook).
 
   - Access to the Office Store isn’t supported for mailboxes or organizations in specific regions. If you don’t see **Add from the Office Store** as an option in the **Exchange admin center** under **Organization** \> **Add-ins** \> ![Add Icon](images/JJ218640.c1e75329-d6d7-4073-a27d-498590bbb558(EXCHG.150).gif "Add Icon"), you may be able to install an add-in for Outlook from a URL or file location. For more information, contact your service provider.
 

@@ -25,7 +25,7 @@ The following information will help you set up and deploy UM and enable voice ma
 
   - [Connect a VoIP gateway, IP PBX, or session border controller to UM](connect-a-voip-gateway-ip-pbx-or-session-border-controller-to-um-exchange-2013-help.md)   Learn how to connect VoIP gateways or IP PBXs to UM.
 
-  - [Telephony advisor for Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md)   Learn about supported VoIP gateways, IP PBXs, and PBXs.
+  - [Telephony advisor for Exchange 2013](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephony-advisor-for-exchange-2013)   Learn about supported VoIP gateways, IP PBXs, and PBXs.
 
-  - [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](configuration-notes-for-supported-voip-gateways-ip-pbxs-and-pbxs-exchange-2013-help.md)  Learn how to set up your VoIP gateways, IP PBXs, and PBXs.
+  - [Configuration notes for supported VoIP gateways, IP PBXs, and PBXs](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-voip-gateways)  Learn how to set up your VoIP gateways, IP PBXs, and PBXs.
 

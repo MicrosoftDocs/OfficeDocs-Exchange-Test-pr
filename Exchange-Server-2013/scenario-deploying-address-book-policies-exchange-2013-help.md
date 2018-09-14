@@ -203,7 +203,7 @@ Consider the following when using ABPs in your organization:
 
   - Don’t run the Exchange 2010 Client Access server role on the global catalog server. Doing so results in Active Directory being used for Name Service Provider Interface (NSPI) instead of the Microsoft Exchange Address Book service. You can run Exchange 2013 server roles on a global catalog server and have ABPs work correctly, however we don’t recommend installing Exchange on a domain controller.
 
-  - You can't use hierarchical address books (HABs) and ABPs simultaneously. To learn more, see [Hierarchical address books](hierarchical-address-books-exchange-2013-help.md).
+  - You can't use hierarchical address books (HABs) and ABPs simultaneously. To learn more, see [Hierarchical address books](https://docs.microsoft.com/en-us/exchange/address-books/hierarchical-address-books/hierarchical-address-books).
 
   - Any user assigned an ABP should exist in their own GAL.
 
@@ -265,7 +265,7 @@ You'll need to develop a way to divide your organizations. We recommend using th
 
   - CustomAttributeX attributes are explicitly reserved for customization of an organization and are entirely under the control of the organization administrators.
 
-Another best practice to consider implementing when segregating your organization is to use company identifiers in the names of distribution groups and dynamic distribution groups. Exchange has a Group Naming policy feature that will automatically add a suffix or prefix to the name of the distribution group based on many attributes of the user creating the distribution group including the creator of the distribution group's Company, StateorProvince, Title, and CustomAttribute1 to CustomAttribute15. The group naming policy is especially important if you are allowing users to create their own distribution groups. For more information, see [Create a distribution group naming policy](create-a-distribution-group-naming-policy-exchange-2013-help.md).
+Another best practice to consider implementing when segregating your organization is to use company identifiers in the names of distribution groups and dynamic distribution groups. Exchange has a Group Naming policy feature that will automatically add a suffix or prefix to the name of the distribution group based on many attributes of the user creating the distribution group including the creator of the distribution group's Company, StateorProvince, Title, and CustomAttribute1 to CustomAttribute15. The group naming policy is especially important if you are allowing users to create their own distribution groups. For more information, see [Create a distribution group naming policy](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-distribution-groups/create-group-naming-policy).
 
 Group naming policies don't apply to dynamic distribution groups, so you will need to manually segregate them and manually apply a naming policy.
 
@@ -287,7 +287,7 @@ This example creates the address list AL\_TAIL\_Users\_DGs. The address list con
 
     New-AddressList -Name "AL_TAIL_Users_DGs" -RecipientFilter {((RecipientType -eq 'UserMailbox') -or (RecipientType -eq "MailUniversalDistributionGroup") -or (RecipientType -eq "DynamicDistributionGroup")) -and (CustomAttribute15 -eq "TAIL")}
 
-For more information about creating address lists by using recipient filters, see [Create an address list by using recipient filters](create-an-address-list-by-using-recipient-filters-exchange-2013-help.md).
+For more information about creating address lists by using recipient filters, see [Create an address list by using recipient filters](https://docs.microsoft.com/en-us/exchange/address-books/address-lists/use-recipient-filters-to-create-an-address-list).
 
 In order to create an ABP, you have to provide a room address list. If your organization doesn't have resource mailboxes such as room or equipment mailboxes, we suggest that you create a blank room address list. The following example creates a blank room address list because there are no room mailboxes in the organization.
 
@@ -301,7 +301,7 @@ The global address list used in an ABP must be a superset of the address lists. 
 
     New-GlobalAddressList -Name "GAL_TAIL" -RecipientFilter {(CustomAttribute15 -eq "TAIL")}
 
-For more information, see [Create a global address list](create-a-global-address-list-exchange-2013-help.md).
+For more information, see [Create a global address list](https://docs.microsoft.com/en-us/exchange/address-books/address-lists/create-global-address-list).
 
 When you create the OAB you should include the appropriate GAL when providing the *AddressLists* parameter of New- or Set-OfflineAddressBook to ensure no entry is unexpectedly missed. Basically, you can customize the set of entries that a user will see or reduce the download size of the OAB by specifying a list of AddressLists in AddressLists of New/Set-OfflineAddressBook. However, if you want users to see the full set of GAL entries in OAB, make sure that you include the GAL in the AddressLists.
 
@@ -309,7 +309,7 @@ This example creates the OAB for Fabrikam named OAB\_FAB.
 
     New-OfflineAddressBook -Name "OAB_FAB" -AddressLists "GAL_FAB"
 
-For more information, see [Create an offline address book](create-an-offline-address-book-exchange-2013-help.md).
+For more information, see [Create an offline address book](https://docs.microsoft.com/en-us/exchange/address-books/offline-address-books/create-offline-address-book).
 
 ## Step 4: Create the ABPs
 
@@ -317,7 +317,7 @@ After you've created all of the required objects you can then create the ABP. Th
 
     New-AddressBookPolicy -Name "ABP_TAIL" -AddressLists "AL_TAIL_Users_DGs"," AL_TAIL_Contacts" -OfflineAddressBook "\OAB_TAIL" -GlobalAddressList "\GAL_TAIL" -RoomList "\AL_TAIL_Rooms"
 
-For more information, see [Create an address book policy](create-an-address-book-policy-exchange-2013-help.md).
+For more information, see [Create an address book policy](https://docs.microsoft.com/en-us/exchange/address-books/address-book-policies/create-an-address-book-policy).
 
 ## Step 5: Assign the ABPs to the mailboxes
 
@@ -327,5 +327,5 @@ This example assigns ABP\_FAB to all mailboxes where CustomAttribute15 equals "F
 
     Get-Mailbox -resultsize unlimited | where {$_.CustomAttribute15 -eq "TAIL"} | Set-Mailbox -AddressBookPolicy "ABP_TAIL"
 
-For more information, see [Assign an address book policy to mail users](assign-an-address-book-policy-to-mail-users-exchange-2013-help.md).
+For more information, see [Assign an address book policy to mail users](https://docs.microsoft.com/en-us/exchange/address-books/address-book-policies/assign-an-address-book-policy-to-mail-users).
 

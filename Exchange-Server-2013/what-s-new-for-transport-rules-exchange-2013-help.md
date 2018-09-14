@@ -23,7 +23,7 @@ Data loss prevention (DLP) features in Exchange 2013 can help organizations redu
 
 [Integrating sensitive information rules with transport rules](integrating-sensitive-information-rules-with-transport-rules-exchange-2013-help.md)
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 ## New predicates and actions
 

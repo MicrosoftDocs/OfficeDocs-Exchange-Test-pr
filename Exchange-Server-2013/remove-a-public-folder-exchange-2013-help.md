@@ -15,7 +15,7 @@ mtps_version: v=EXCHG.150
 _**Applies to:** Exchange Online, Exchange Server 2013, Exchange Server 2016_
 
 
-You may need to remove public folders that are no longer being used in your organization. To help determine which public folders should be removed, see [View statistics for public folders and public folder items](view-statistics-for-public-folders-and-public-folder-items-exchange-2013-help.md).
+You may need to remove public folders that are no longer being used in your organization. To help determine which public folders should be removed, see [View statistics for public folders and public folder items](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/view-public-folder-statistics).
 
 For additional management tasks related to managing public folders, see [Public folder procedures](public-folder-procedures-exchange-2013-help.md).
 
