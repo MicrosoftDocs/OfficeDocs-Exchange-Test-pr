@@ -861,7 +861,7 @@
         href: overview-of-document-fingerprinting-in-exchange.md
         items:
         - name: Protect form data with document fingerprinting
-          href: protect-form-data-with-document-fingerprinting-exchange-2013-help.md
+          href: https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/protect-data-with-fingerprinting
     - name: Information Rights Management
       href: information-rights-management-exchange-2013-help.md
       items:
