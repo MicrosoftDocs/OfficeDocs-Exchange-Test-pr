@@ -19,7 +19,7 @@ In Exchange Server 2013, you can use retention policies or managed folders for m
 
 You can block users who are running older versions of Outlook from accessing their Exchange mailboxes. You can also block access on a per-mailbox or on a per-Client Access server basis.
 
-For other management tasks related to MRM, see [Messaging Records Management Procedures](messaging-records-management-procedures-exchange-2013-help.md).
+For other management tasks related to MRM, see [Messaging Records Management Procedures](https://docs.microsoft.com/en-us/office365/securitycompliance/inactive-mailboxes-in-office-365).
 
 ## MRM Feature Availability by Client Application and Version
 

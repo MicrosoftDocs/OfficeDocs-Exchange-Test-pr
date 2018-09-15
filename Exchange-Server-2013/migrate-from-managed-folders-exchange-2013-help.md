@@ -27,11 +27,11 @@ A mailbox that has a managed folder mailbox policy applied can be migrated to us
 
 
 > [!TIP]
-> You can place mailboxes on retention hold to halt processing of retention policies or managed folder mailbox policies. Placing mailboxes on retention hold can be helpful in migration scenarios to avoid deleting messages or moving them to archive until new policy settings have been tested on test mailboxes or a small number of production mailboxes. For details, see <A href="place-a-mailbox-on-retention-hold-exchange-2013-help.md">Place a mailbox on retention hold</A>.
+> You can place mailboxes on retention hold to halt processing of retention policies or managed folder mailbox policies. Placing mailboxes on retention hold can be helpful in migration scenarios to avoid deleting messages or moving them to archive until new policy settings have been tested on test mailboxes or a small number of production mailboxes. For details, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold">Place a mailbox on retention hold</A>.
 
 
 
-For other management tasks related to MRM, see [Messaging Records Management Procedures](messaging-records-management-procedures-exchange-2013-help.md).
+For other management tasks related to MRM, see [Messaging Records Management Procedures](https://docs.microsoft.com/en-us/office365/securitycompliance/inactive-mailboxes-in-office-365).
 
 ## Comparing retention tags to managed folders
 

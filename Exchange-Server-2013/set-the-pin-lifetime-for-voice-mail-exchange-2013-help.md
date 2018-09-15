@@ -25,7 +25,7 @@ Several PIN-related settings can be configured on a UM mailbox policy. The PIN l
 
 
 
-For additional tasks related to Outlook Voice Access PIN security, see [PIN security procedures](pin-security-procedures-exchange-2013-help.md).
+For additional tasks related to Outlook Voice Access PIN security, see [PIN security procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/pin-security-procedures).
 
 ## What do you need to know before you begin?
 

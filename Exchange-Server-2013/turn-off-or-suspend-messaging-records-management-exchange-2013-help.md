@@ -43,7 +43,7 @@ Having problems? Ask for help in the Exchange forums. Visit the forums at [Excha
 
 You can place mailboxes on retention hold to turn off MRM temporarily (for example when users are on vacation). This suspends the processing of retention policies for the mailbox until retention hold is disabled. This is different from placing mailboxes on In-Place Hold or litigation hold.
 
-For details about how to place a mailbox on retention hold, see [Place a mailbox on retention hold](place-a-mailbox-on-retention-hold-exchange-2013-help.md).
+For details about how to place a mailbox on retention hold, see [Place a mailbox on retention hold](https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold).
 
 To learn more about In-Place Hold and litigation hold, see [In-Place Hold and Litigation Hold](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-and-litigation-holds).
 

@@ -139,11 +139,11 @@ Each audit log entry contains the information described in the following table. 
 </tr>
 <tr class="even">
 <td><p><code>CmdletParameters</code></p></td>
-<td><p>This field contains the parameters that were specified when the cmdlet in the <code>CmdletName</code> field was run. Also stored in this field, but not visible in the default output, is the value specified with the parameter, if any. For more information about how to access the additional information in this field, see <a href="search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md">Search the role group changes or administrator audit logs</a>.</p></td>
+<td><p>This field contains the parameters that were specified when the cmdlet in the <code>CmdletName</code> field was run. Also stored in this field, but not visible in the default output, is the value specified with the parameter, if any. For more information about how to access the additional information in this field, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes">Search the role group changes or administrator audit logs</a>.</p></td>
 </tr>
 <tr class="odd">
 <td><p><code>ModifiedProperties</code></p></td>
-<td><p>This field contains the properties that were modified on the object in the <code>ObjectModified</code> field. Also stored in this field, but not visible in the default output, are the old value of the property and the new value that was stored. For more information about how to access the additional information in this field, see <a href="search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md">Search the role group changes or administrator audit logs</a>.</p>
+<td><p>This field contains the properties that were modified on the object in the <code>ObjectModified</code> field. Also stored in this field, but not visible in the default output, are the old value of the property and the new value that was stored. For more information about how to access the additional information in this field, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes">Search the role group changes or administrator audit logs</a>.</p>
 
 > [!IMPORTANT]
 > This field is only populated if the <EM>LogLevel</EM> parameter on the <STRONG>Set-AdminAuditLogConfig</STRONG> cmdlet is set to <CODE>Verbose</CODE>.
@@ -197,9 +197,9 @@ The **auditing** page in the EAC has several reports that provide information ab
 
   - **Administrator audit log**   This report enables you to export the audit log entries recorded within a specified timeframe to a XML file and then send the file via email to a recipient you specify. For more information about the contents of the XML file, see [Administrator audit log structure](administrator-audit-log-structure-exchange-2013-help.md).
 
-For information about how to use these reports, see [Search the role group changes or administrator audit logs](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
+For information about how to use these reports, see [Search the role group changes or administrator audit logs](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes).
 
-For information about the other reports included on the **auditing** page see [Exchange auditing reports](exchange-auditing-reports-exchange-2013-help.md).
+For information about the other reports included on the **auditing** page see [Exchange auditing reports](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/exchange-auditing-reports).
 
 ## Search-AdminAuditLog cmdlet
 
@@ -221,7 +221,7 @@ When you run the **Search-AdminAuditLog** cmdlet, all the audit log entries that
 
 Each audit log entry returned contains the information described in the table in Audit Log Contents. By default, only the first 1,000 log entries that match the criteria you specify are returned. However, you can override this default and return more or fewer entries using the *ResultSize* parameter. You can specify a value of `Unlimited` with the *ResultSize* parameter to return all log entries that match the specified criteria.
 
-For information about how to use the **Search-AdminAuditLog** cmdlet, see [Search the role group changes or administrator audit logs](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
+For information about how to use the **Search-AdminAuditLog** cmdlet, see [Search the role group changes or administrator audit logs](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes).
 
 ## New-AdminAuditLogSearch cmdlet
 
@@ -237,7 +237,7 @@ After you run the **New-AdminAuditLogSearch** cmdlet, Exchange may take up to 15
 
 
 
-For information about how to use the **New-AdminAuditLogSearch** cmdlet, see [Search the role group changes or administrator audit logs](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
+For information about how to use the **New-AdminAuditLogSearch** cmdlet, see [Search the role group changes or administrator audit logs](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes).
 
 Return to top
 
@@ -255,7 +255,7 @@ With the **Write-AdminAuditLog** cmdlet, you specify a string of text to include
 
 You can retrieve manual audit log entries the same way as any other log entry, using the EAC **auditing** page or using the **Search-AdminAuditLog** or **New-AdminAuditLogSearch** cmdlets.
 
-To view the contents of the *Comment* parameter on the **Write-AdminAuditLog** cmdlet in a manual audit log entry, see [Search the role group changes or administrator audit logs](search-the-role-group-changes-or-administrator-audit-logs-exchange-2013-help.md).
+To view the contents of the *Comment* parameter on the **Write-AdminAuditLog** cmdlet in a manual audit log entry, see [Search the role group changes or administrator audit logs](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes).
 
 ## Active Directory replication
 

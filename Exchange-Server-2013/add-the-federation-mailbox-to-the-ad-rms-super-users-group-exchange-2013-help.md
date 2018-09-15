@@ -59,7 +59,7 @@ For additional management tasks related to IRM, see [Information Rights Manageme
 
 If a distribution group has been created and configured as a super users group in the AD RMS cluster, you can add the Exchange 2013 Federation mailbox as a member of that group. If a super users group isn't configured, you must create a distribution group and add the Federation mailbox as a member.
 
-1.  Create a distribution group dedicated for use as an AD RMS super users group. For details, see [Create and manage distribution groups](create-and-manage-distribution-groups-exchange-2013-help.md).
+1.  Create a distribution group dedicated for use as an AD RMS super users group. For details, see [Create and manage distribution groups](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups).
 
 2.  Add the user **FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042** to the new distribution group. The Federation mailbox is a system mailbox, and therefore not visible in the EAC. To add it to a distribution group, you must use the [Add-DistributionGroupMember](https://technet.microsoft.com/en-us/library/bb124340\(v=exchg.150\)) cmdlet from the Shell.
     

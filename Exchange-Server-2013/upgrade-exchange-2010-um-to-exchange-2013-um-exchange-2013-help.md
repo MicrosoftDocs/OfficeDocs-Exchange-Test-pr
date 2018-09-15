@@ -349,7 +349,7 @@ To configure an existing UM IP gateway in the Shell, running the following comma
 
 Depending on your existing Exchange 2010 deployment, you may be required to create new UM hunt groups. A telephony hunt group provides a way to distribute telephone calls from a single number to multiple extensions or telephone numbers. In Unified Messaging, a UM hunt group is a logical representation of a telephony hunt group, and it links a UM IP gateway to a UM dial plan.
 
-You need to have at least one UM hunt group for every IP PBX or PBX hunt group. When you complete the following procedure, one UM hunt group is created by default. If you have more than one IP PBX or PBX hunt group, you need to create additional UM hunt groups. To learn more about UM hunt groups, see [UM hunt groups](um-hunt-groups-exchange-2013-help.md).
+You need to have at least one UM hunt group for every IP PBX or PBX hunt group. When you complete the following procedure, one UM hunt group is created by default. If you have more than one IP PBX or PBX hunt group, you need to create additional UM hunt groups. To learn more about UM hunt groups, see [UM hunt groups](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-hunt-groups).
 
 If required, you can To create a UM hunt group by using the EAC, as follows:
 
@@ -461,7 +461,7 @@ If required, you can configure an existing UM mailbox policy by running the foll
 
 ## Step 12: Move existing UM-enabled mailboxes to Exchange 2013
 
-In Exchange 2010 Unified Messaging, after you’ve enabled users within the organization to use voice mail, a default set of UM properties is applied to the user so they can use UM features. Learn more at [Voice mail for users](voice-mail-for-users-exchange-2013-help.md).
+In Exchange 2010 Unified Messaging, after you’ve enabled users within the organization to use voice mail, a default set of UM properties is applied to the user so they can use UM features. Learn more at [Voice mail for users](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-for-users).
 
 During the process of upgrading, there will be a period of time during which you’ll have mailboxes that are UM enabled both on Exchange 2010 Mailbox servers and on Exchange 2013 Mailbox servers. However, if you’re moving all UM-enabled users over to Exchange 2013 Mailbox servers, you must use the EAC or the **New-MoveRequest** cmdlet in the Shell from an Exchange 2013 server to retain all of the properties and settings, including the user’s PIN.
 
@@ -489,7 +489,7 @@ To move an Exchange 2010 mailbox to an Exchange 2013 Mailbox server by using the
 
 ## Step 13: Enable new users for UM or configure settings for an existing UM-enabled user
 
-A user must have a mailbox before they can be enabled for Unified Messaging. But, by default, a user who has a mailbox isn't enabled for UM. After the user is UM-enabled, you can manage, modify, and configure the UM properties and voice mail features for them. You can enable a user for UM by using the EAC or the Shell. Learn more at [Voice mail for users](voice-mail-for-users-exchange-2013-help.md).
+A user must have a mailbox before they can be enabled for Unified Messaging. But, by default, a user who has a mailbox isn't enabled for UM. After the user is UM-enabled, you can manage, modify, and configure the UM properties and voice mail features for them. You can enable a user for UM by using the EAC or the Shell. Learn more at [Voice mail for users](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-for-users).
 
 When you enable a user for UM, you must define at least one extension number that UM will use when voice mail is submitted to the user's mailbox and to allow the user to use Outlook Voice Access. After you enable the user for UM, you can add secondary extension numbers to the user's mailbox, modify or remove them by configuring the Exchange Unified Messaging (EUM) proxy address on the user's mailbox, or add or remove additional or secondary extensions for the user in the EAC. To add, modify, or remove extension numbers, E.164 numbers, or SIP addresses, see [Voice mail-enabled user procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-enabled-user-procedures).
 

@@ -257,7 +257,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn about integrating your telephony network with UM.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="connect-your-voice-mail-system-to-your-telephone-network-exchange-2013-help.md">Connect your voice mail system to your telephone network</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/connect-voice-mail-system">Connect your voice mail system to your telephone network</a></p></td>
 <td><p>Learn how to use and configure UM components to connect your telephony network to Exchange UM.</p></td>
 </tr>
 <tr class="odd">
@@ -265,7 +265,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn how to create UM auto attendants and manage settings for navigation menus, greetings, and business and non-business hours.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="set-up-voice-mail-for-users-exchange-2013-help.md">Set up voice mail for users</a></p></td>
+<td><p><a href="set-up-https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-for-users">Set up voice mail for users</a></p></td>
 <td><p>Learn how to create and manage UM mailbox policies and how to enable users for UM.</p></td>
 </tr>
 <tr class="odd">

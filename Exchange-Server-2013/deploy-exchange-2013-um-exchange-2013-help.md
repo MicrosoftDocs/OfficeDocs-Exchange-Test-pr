@@ -35,13 +35,13 @@ Before you deploy Unified Messaging, we recommend that you familiarize yourself 
 
   - [UM services](um-services-exchange-2013-help.md)
 
-  - [UM hunt groups](um-hunt-groups-exchange-2013-help.md)
+  - [UM hunt groups](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-hunt-groups)
 
   - [Automatically answer and route incoming calls](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/automatically-answer-and-route-calls)
 
   - [UM mailbox policies](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policies)
 
-  - [Voice mail for users](voice-mail-for-users-exchange-2013-help.md)
+  - [Voice mail for users](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-for-users)
 
 ## Deploying Unified Messaging
 
@@ -211,7 +211,7 @@ Perform the following procedure to create a new UM IP gateway.
 
 If you've created a UM IP gateway and associated the UM IP gateway with a UM dial plan, a default UM hunt group has been created. You can associate another UM hunt group with the same or a different UM IP gateway, depending on the number of UM IP gateways that you've created.
 
-When you create a UM hunt group, you enable all Mailbox servers that are specified within the UM dial plan to communicate with a VoIP gateway. For details, see [UM hunt groups](um-hunt-groups-exchange-2013-help.md).
+When you create a UM hunt group, you enable all Mailbox servers that are specified within the UM dial plan to communicate with a VoIP gateway. For details, see [UM hunt groups](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-hunt-groups).
 
 ## Create a UM hunt group
 
@@ -307,7 +307,7 @@ After you complete a new installation of the Client Access and Mailbox servers a
 
 ## Enable users for voice mail
 
-After you've deployed your VoIP gateways or IP PBXs, installed the Client Access and Mailbox servers, and created the components required for Unified Messaging, you need to enable your users for Unified Messaging. For details, see [Enable a user for voice mail](enable-a-user-for-voice-mail-exchange-2013-help.md).
+After you've deployed your VoIP gateways or IP PBXs, installed the Client Access and Mailbox servers, and created the components required for Unified Messaging, you need to enable your users for Unified Messaging. For details, see [Enable a user for voice mail](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-a-user-for-voice-mail).
 
 ## Protect voice mail
 

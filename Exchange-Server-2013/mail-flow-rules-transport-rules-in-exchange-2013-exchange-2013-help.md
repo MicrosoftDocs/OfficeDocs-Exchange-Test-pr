@@ -35,7 +35,7 @@ To implement specific messaging policies by using mail flow rules, see these top
 
   - [Use mail flow rules so messages can bypass Clutter](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/use-rules-to-bypass-clutter)
 
-  - [Use mail flow rules to route email based on a list of words, phrases, or patterns](use-mail-flow-rules-to-route-email-based-on-a-list-of-words-phrases-or-patterns-exchange-2013-help.md)
+  - [Use mail flow rules to route email based on a list of words, phrases, or patterns](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/use-rules-to-route-email)
 
   - [Common message approval scenarios](https://docs.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/common-message-approval-scenarios)
 

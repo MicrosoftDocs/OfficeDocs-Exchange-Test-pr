@@ -220,7 +220,7 @@ For more information about how to manage MWI settings on a UM mailbox policy, se
 
   - [Enable Message Waiting Indicator (MWI) for users](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/enable-mwi-for-users)
 
-  - [Disable Message Waiting Indicator (MWI) for users](disable-message-waiting-indicator-mwi-for-users-exchange-2013-help.md)
+  - [Disable Message Waiting Indicator (MWI) for users](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/disable-mwi-for-users)
 
   - [Set-UMMailboxPolicy](https://technet.microsoft.com/en-us/library/bb124903\(v=exchg.150\))
 
@@ -258,7 +258,7 @@ You can use the EAC or the **Set-UMMailboxPolicy** cmdlet in the Shell to config
 
 For more information about how to manage MWI settings, see the following topics:
 
-  - [Manage a UM IP gateway](manage-a-um-ip-gateway-exchange-2013-help.md)
+  - [Manage a UM IP gateway](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/manage-um-ip-gateway)
 
   - [Allow Message Waiting Indicator (MWI) on a UM IP gateway](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-mwi-on-um-ip-gateway)
 

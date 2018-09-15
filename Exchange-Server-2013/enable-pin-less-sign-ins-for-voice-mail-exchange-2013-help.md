@@ -55,7 +55,7 @@ For additional tasks related to UM mailboxes, see [Voice mail-enabled user proce
 
   - Before you perform these procedures, confirm that a UM mailbox policy has been created. For detailed steps, see [Create a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy).
 
-  - Before you perform these procedures, confirm that the user or users have been enabled for UM and voice mail. For detailed steps, see [Enable a user for voice mail](enable-a-user-for-voice-mail-exchange-2013-help.md).
+  - Before you perform these procedures, confirm that the user or users have been enabled for UM and voice mail. For detailed steps, see [Enable a user for voice mail](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-a-user-for-voice-mail).
 
 ## What do you want to do?
 

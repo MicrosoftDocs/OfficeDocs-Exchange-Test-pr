@@ -350,7 +350,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn about the requirements for linked mailboxes, how to create and link them to a master account, and change linked mailbox properties.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="create-and-manage-distribution-groups-exchange-2013-help.md">Create and manage distribution groups</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups">Create and manage distribution groups</a></p></td>
 <td><p>Learn how to create and manage distribution groups, and create a group naming policy for your organization.</p></td>
 </tr>
 <tr class="odd">
@@ -370,11 +370,11 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn how to create and manage mail users.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="create-and-manage-room-mailboxes-exchange-2013-help.md">Create and manage room mailboxes</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-room-mailboxes">Create and manage room mailboxes</a></p></td>
 <td><p>Learn how to create room mailboxes and manage room mailbox properties, such as enabling recurring meetings and configuring booking and scheduling options.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-equipment-mailboxes-exchange-2013-help.md">Manage equipment mailboxes</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-equipment-mailboxes">Manage equipment mailboxes</a></p></td>
 <td><p>Learn how to create equipment mailboxes, configure booking and scheduling options, and manage other mailbox properties.</p></td>
 </tr>
 <tr class="odd">
@@ -390,7 +390,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn how to use precanned or custom filters with commands to filter a set of recipients.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="manage-permissions-for-recipients-exchange-online-help.md">Manage permissions for recipients</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-permissions-for-recipients">Manage permissions for recipients</a></p></td>
 <td><p>Learn how to use the EAC or the Shell to assign permissions to users and groups.</p></td>
 </tr>
 <tr class="odd">

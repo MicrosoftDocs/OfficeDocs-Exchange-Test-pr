@@ -69,7 +69,7 @@ For detailed information about VoIP gateways, see the following topics:
 
   - [Connect a VoIP gateway, IP PBX, or session border controller to UM](connect-a-voip-gateway-ip-pbx-or-session-border-controller-to-um-exchange-2013-help.md)
 
-For details, see [Connect your voice mail system to your telephone network](connect-your-voice-mail-system-to-your-telephone-network-exchange-2013-help.md).
+For details, see [Connect your voice mail system to your telephone network](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/connect-voice-mail-system).
 
 ## Step 4: Create a new UM hunt group (if needed)
 
@@ -79,5 +79,5 @@ UM hunt groups mirror the hunt groups that are used on PBXs and IP PBXs. When yo
 
 Depending on how you create your UM IP gateway, you may have to create one or multiple new UM hunt groups. If you don’t link a UM IP gateway with a dial plan when you create the UM IP gateway, a single UM hunt group is created by default. If you link a UM IP gateway to a UM dial plan when you create the UM IP gateway, all incoming calls will be sent through the UM IP gateway and those calls will be accepted by Client Access and Mailbox servers. If you don’t link a UM IP gateway to a UM dial plan when you create the UM IP gateway, you’ll need to create a UM hunt group with the correct pilot identifier for incoming calls to be forwarded from an UM IP gateway to a dial plan.
 
-If you have multiple Outlook Voice Access and auto attendant numbers and have linked a UM IP gateway to a dial plan, you’ll need to delete the UM hunt group that was created by default and create multiple UM hunt groups. For details about how to create a UM hunt group, see [Create a UM hunt group](create-a-um-hunt-group-exchange-2013-help.md).
+If you have multiple Outlook Voice Access and auto attendant numbers and have linked a UM IP gateway to a dial plan, you’ll need to delete the UM hunt group that was created by default and create multiple UM hunt groups. For details about how to create a UM hunt group, see [Create a UM hunt group](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-hunt-group).
 

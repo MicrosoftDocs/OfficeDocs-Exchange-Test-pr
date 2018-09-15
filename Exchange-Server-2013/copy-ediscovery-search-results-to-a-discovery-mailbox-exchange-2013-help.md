@@ -93,7 +93,7 @@ To copy the results of this search to a discovery mailbox, you would run the fol
 
 ## More information about copying search results
 
-  - After you copy search results to the discovery mailbox, you can export those search results to a PST file. For more information, see [Export eDiscovery search results to a PST file](export-ediscovery-search-results-to-a-pst-file-exchange-2013-help.md).
+  - After you copy search results to the discovery mailbox, you can export those search results to a PST file. For more information, see [Export eDiscovery search results to a PST file](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/export-search-results).
 
   - For more information about unsearchable items, see [Unsearchable items in Exchange eDiscovery](unsearchable-items-in-exchange-ediscovery-exchange-2013-help.md).
 
