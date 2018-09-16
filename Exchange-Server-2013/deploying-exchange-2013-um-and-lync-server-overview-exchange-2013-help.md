@@ -186,9 +186,9 @@ You must complete the following steps to configure Unified Messaging to work wit
 
 5.  Set the startup mode and the TLS listening port on the Client Access and Mailbox servers that are added to the SIP URI dial plan to Dual and then restart the Microsoft Exchange Unified Messaging service on each Mailbox server and the Microsoft Exchange Unified Messaging Call Router service on each Client Access server.
 
-6.  Create and configure a UM auto attendant. For details, see [Set up a UM auto attendant](set-up-a-um-auto-attendant-exchange-2013-help.md).
+6.  Create and configure a UM auto attendant. For details, see [Set up a UM auto attendant](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/set-up-um-auto-attendant).
 
-7.  When you enable users for voice mail, create a SIP address for the users who will use Enterprise Voice. In most cases, this SIP address will be the same SIP address that will be used when a user is enabled for Enterprise Voice. For details, see [Enable a user for voice mail](enable-a-user-for-voice-mail-exchange-2013-help.md).
+7.  When you enable users for voice mail, create a SIP address for the users who will use Enterprise Voice. In most cases, this SIP address will be the same SIP address that will be used when a user is enabled for Enterprise Voice. For details, see [Enable a user for voice mail](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-a-user-for-voice-mail).
     
 
     > [!IMPORTANT]
@@ -204,7 +204,7 @@ You must complete the following steps to configure Unified Messaging to work wit
     
       - Create an Exchange UM hunt group for each UM IP gateway. The hunt group pilot identifier will be the name of the dial plan associated with the corresponding UM IP gateway. The hunt group must specify the UM SIP dial plan used with the UM IP gateway.
 
-9.  Enable users for voice mail. When you enable them, make sure you enter a valid SIP address for the user and link them to a SIP dial plan. For details, see [Enable a user for voice mail](enable-a-user-for-voice-mail-exchange-2013-help.md).
+9.  Enable users for voice mail. When you enable them, make sure you enter a valid SIP address for the user and link them to a SIP dial plan. For details, see [Enable a user for voice mail](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-a-user-for-voice-mail).
 
 You must also complete the following tasks to configure Lync Server to work with Exchange UM:
 

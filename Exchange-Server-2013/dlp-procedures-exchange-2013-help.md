@@ -21,9 +21,9 @@ You can begin using a data loss prevention (DLP) solution in your messaging envi
 
 [Create a custom DLP policy](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/create-custom-dlp-policy)   Information to help you configure policy rules to meet the specific needs of your organization which may not be covered in one of the pre-existing DLP templates. The rule conditions that are available to you in a single policy include all the traditional transport rules in addition to the new sensitive information types.
 
-[Import a custom DLP policy template from a file](import-a-custom-dlp-policy-template-from-a-file-exchange-2013-help.md)   Information to help you import a file that contains policy information settings. Policies that are created independent of Exchange as XML files must meet specific format requirements in order to work correctly.
+[Import a custom DLP policy template from a file](https://docs.microsoft.com/en-us/office365/securitycompliance/create-a-dlp-policy-from-a-template)   Information to help you import a file that contains policy information settings. Policies that are created independent of Exchange as XML files must meet specific format requirements in order to work correctly.
 
-[Manage DLP policies](manage-dlp-policies-exchange-2013-help.md)   Information to help you view, change, or remove existing data loss prevention policies.
+[Manage DLP policies](https://docs.microsoft.com/en-us/office365/securitycompliance/data-loss-prevention-policies)   Information to help you view, change, or remove existing data loss prevention policies.
 
 [View DLP policy detection reports](view-dlp-policy-detection-reports-exchange-2013-help.md)   Track policy violations.
 

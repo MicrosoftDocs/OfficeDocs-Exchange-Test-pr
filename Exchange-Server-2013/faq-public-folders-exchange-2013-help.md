@@ -21,7 +21,7 @@ Have questions about public folders that aren’t answered here? Send us an emai
 
 ## FAQs about public folder migration
 
-This section contains frequently asked questions about public folder migration. For more information, see [Use batch migration to migrate public folders to Exchange 2013 from previous versions](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md), [Use batch migration to migrate legacy public folders to Office 365 and Exchange Online](use-batch-migration-to-migrate-legacy-public-folders-to-office-365-and-exchange-online-exchange-online-help.md), or [Use batch migration to migrate Exchange 2013 public folders to Exchange Online](use-batch-migration-to-migrate-exchange-2013-public-folders-to-exchange-online-exchange-online-help.md).
+This section contains frequently asked questions about public folder migration. For more information, see [Use batch migration to migrate public folders to Exchange 2013 from previous versions](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md), [Use batch migration to migrate legacy public folders to Office 365 and Exchange Online](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/batch-migration-of-legacy-public-folders), or [Use batch migration to migrate Exchange 2013 public folders to Exchange Online](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/batch-migration-of-exchange-2013-public-folders).
 
 ## What are the supported public folder migration scenarios?
 
@@ -111,7 +111,7 @@ Run the following command to create the first master hierarchy public folder mai
 
     New-Mailbox -PublicFolder -Name <name of public folder>
 
-For more detail, see [Create a public folder](create-a-public-folder-exchange-2013-help.md).
+For more detail, see [Create a public folder](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder).
 
 ## In previous versions of Exchange, for each mailbox database there was an option to specify its public folder database. How will this work in Exchange 2013?
 

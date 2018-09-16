@@ -105,7 +105,7 @@ For more information about how to install Exchange 2013, see [Planning and deplo
     
     Starting with Exchange 2013 CU6, if you want external senders to send mail to a mail-enabled public folders, the **Anonymous** user needs to be granted at least the **Create Items** permission. If you've set up mail-enabled public folders and haven't done this, external senders will receive a delivery failure notification and the messages won't be delivered to the mail-enabled public folder.
     
-    You can use the Shell or Outlook to set the permissions on the Anonymous user. To read more about how to set permissions on the Anonymous user, see [Mail-enable or mail-disable a public folder](mail-enable-or-mail-disable-a-public-folder-exchange-2013-help.md).
+    You can use the Shell or Outlook to set the permissions on the Anonymous user. To read more about how to set permissions on the Anonymous user, see [Mail-enable or mail-disable a public folder](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/enable-or-disable-mail-for-public-folder).
 
   - The maximum number of public folders that can be migrated to Exchange 2013 from legacy Exchange servers is 500,000. For more information about public folder migration, see [Use batch migration to migrate public folders to Exchange 2013 from previous versions](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md).
 

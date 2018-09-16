@@ -17,7 +17,7 @@ _**Applies to:** Exchange Server 2013_
 
 [Install a UM language pack](install-a-um-language-pack-exchange-2013-help.md)
 
-[Set the default language on a dial plan](set-the-default-language-on-a-dial-plan-exchange-2013-help.md)
+[Set the default language on a dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/set-dial-plan-default-language)
 
 [Select the language for an auto attendant](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/greetings-announcements-menus-and-prompts/select-auto-attendant-language)
 

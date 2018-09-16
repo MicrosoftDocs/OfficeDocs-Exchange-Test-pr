@@ -61,12 +61,12 @@ Use this checklist to deploy retention policies in your Microsoft Exchange Serv
 <tr class="odd">
 <td><p> </p></td>
 <td><p>Add retention tags to retention policies.</p></td>
-<td><p><a href="add-retention-tags-to-or-remove-retention-tags-from-a-retention-policy-exchange-2013-help.md">Add retention tags to or remove retention tags from a retention policy</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/add-or-remove-retention-tags">Add retention tags to or remove retention tags from a retention policy</a></p></td>
 </tr>
 <tr class="even">
 <td><p><strong> </strong></p></td>
 <td><p>Place mailboxes on retention hold.</p></td>
-<td><p><a href="place-a-mailbox-on-retention-hold-exchange-2013-help.md">Place a mailbox on retention hold</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold">Place a mailbox on retention hold</a></p></td>
 </tr>
 <tr class="odd">
 <td><p> </p></td>
@@ -96,7 +96,7 @@ Use this checklist to deploy retention policies in your Microsoft Exchange Serv
 <tr class="even">
 <td><p><strong> </strong></p></td>
 <td><p>At the deadline, remove the retention hold from mailboxes.</p></td>
-<td><p><a href="place-a-mailbox-on-retention-hold-exchange-2013-help.md">Place a mailbox on retention hold</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold">Place a mailbox on retention hold</a></p></td>
 </tr>
 </tbody>
 </table>

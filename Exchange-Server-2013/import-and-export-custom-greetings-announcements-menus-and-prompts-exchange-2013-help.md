@@ -33,7 +33,7 @@ You import the audio files that are used by UM dial plans and auto attendants in
 
 For additional management tasks related to UM dial plans, see [UM dial plan procedures](um-dial-plan-procedures-exchange-2013-help.md).
 
-For additional management tasks related to UM auto attendants, see [UM auto attendant procedures](um-auto-attendant-procedures-exchange-2013-help.md).
+For additional management tasks related to UM auto attendants, see [UM auto attendant procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/um-auto-attendant-procedures).
 
 ## What do you need to know before you begin?
 

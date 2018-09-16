@@ -17,7 +17,7 @@ _**Applies to:** Exchange Server 2010, Exchange Server 2013_
 
 **Summary:** How to move your Exchange 2010 public folders to Office 365 Groups.
 
-Through a process known as *batch migration*, you can move some or all of your Exchange 2010 public folders to Office 365 Groups. Groups is a new collaboration offering from Microsoft that offers certain advantages over public folders. See [Migrate your public folders to Office 365 Groups](migrate-your-public-folders-to-office-365-groups-exchange-2013-help.md) for an overview of the differences between public folders and Groups, and reasons why your organization may or may not benefit from switching to Groups.
+Through a process known as *batch migration*, you can move some or all of your Exchange 2010 public folders to Office 365 Groups. Groups is a new collaboration offering from Microsoft that offers certain advantages over public folders. See [Migrate your public folders to Office 365 Groups](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/migrate-your-public-folders-to-office-365-groups) for an overview of the differences between public folders and Groups, and reasons why your organization may or may not benefit from switching to Groups.
 
 This article contains the step-by-step procedures for performing the actual batch migration of your Exchange 2010 public folders.
 

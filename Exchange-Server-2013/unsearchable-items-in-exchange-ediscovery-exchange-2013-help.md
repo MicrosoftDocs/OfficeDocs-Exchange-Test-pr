@@ -63,7 +63,7 @@ For more information about including unsearchable items in search results, see:
 
   - [Create an In-Place eDiscovery search](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/create-in-place-ediscovery-search)
 
-  - [Export eDiscovery search results to a PST file](export-ediscovery-search-results-to-a-pst-file-exchange-2013-help.md)
+  - [Export eDiscovery search results to a PST file](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/export-search-results)
 
   - [SharePoint: Export eDiscovery content and create reports](https://go.microsoft.com/fwlink/p/?linkid=324757)
 

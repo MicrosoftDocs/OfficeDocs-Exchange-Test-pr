@@ -31,7 +31,7 @@ In these scenarios, the Managed Folder Assistant can correctly process an item t
 
 
 
-For additional management tasks related to Messaging Records Management, see [Messaging Records Management Procedures](messaging-records-management-procedures-exchange-2013-help.md).
+For additional management tasks related to Messaging Records Management, see [Messaging Records Management Procedures](https://docs.microsoft.com/en-us/office365/securitycompliance/inactive-mailboxes-in-office-365).
 
 ## What do you need to know before you begin?
 

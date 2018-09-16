@@ -17,7 +17,7 @@ _**Applies to:** Exchange Server 2013_
 
 The *Managed Folder Assistant* is a Microsoft Exchange Mailbox Assistant that applies message retention settings configured in retention policies.
 
-For additional management tasks related to messaging records management (MRM), see [Messaging Records Management Procedures](messaging-records-management-procedures-exchange-2013-help.md).
+For additional management tasks related to messaging records management (MRM), see [Messaging Records Management Procedures](https://docs.microsoft.com/en-us/office365/securitycompliance/inactive-mailboxes-in-office-365).
 
 ## What do you need to know before you begin?
 

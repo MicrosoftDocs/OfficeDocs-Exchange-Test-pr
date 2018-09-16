@@ -122,7 +122,7 @@ If you need to change SIP addresses or E.164 numbers for UM-enabled users, see:
 
   - [Remove a SIP address](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/remove-sip-address)
 
-  - [Add an E.164 number](add-an-e-164-number-exchange-2013-help.md)
+  - [Add an E.164 number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-e-164-number)
 
   - [Change an E.164 number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-e-164-number)
 

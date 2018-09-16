@@ -95,7 +95,7 @@ The following table provides an overview of the messaging policy and compliance 
 <td><p>Mailbox audit logging</p></td>
 <td><p>Because mailboxes can potentially contain sensitive, high business impact (HBI) information and PII, it's important that you track who logs on to the mailboxes in your organization and what actions are taken. It's especially important to track access to mailboxes by users other than the mailbox owner (known as delegate users). Using mailbox audit logging, you can log mailbox access by mailbox owners, delegates (including administrators with full mailbox access permissions), and administrators.</p></td>
 <td><p><a href="mailbox-audit-logging-exchange-2013-help.md">Mailbox audit logging</a></p>
-<p><a href="exchange-auditing-reports-exchange-2013-help.md">Exchange auditing reports</a></p></td>
+<p><a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/exchange-auditing-reports">Exchange auditing reports</a></p></td>
 </tr>
 <tr class="odd">
 <td><p>Administrator audit logging</p></td>

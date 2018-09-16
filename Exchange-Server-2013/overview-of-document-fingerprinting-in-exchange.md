@@ -61,7 +61,7 @@ The Document Fingerprinting DLP agent won’t detect sensitive information in th
 
 [Protect form data with document fingerprinting](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/protect-data-with-fingerprinting)
 
-[Integrating sensitive information rules with transport rules](integrating-sensitive-information-rules-with-transport-rules-exchange-2013-help.md)
+[Integrating sensitive information rules with transport rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/integrate-sensitive-information-rules)
 
 [DLP procedures](https://technet.microsoft.com/en-us/library/jj938003\(v=exchg.150\))
 
