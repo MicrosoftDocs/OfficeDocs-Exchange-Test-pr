@@ -312,7 +312,9 @@ The filtering and sorting parameters that are available with the **Get-QueueDige
 
 This example returns all non-empty external queues on the Exchange 2013 Mailbox servers named Mailbox01,Mailbox02, and Mailbox03.
 
-    Get-QueueDigest -Server Mailbox01,Mailbox02,Mailbox03 -Include External -Exclude Empty
+```powershell
+Get-QueueDigest -Server Mailbox01,Mailbox02,Mailbox03 -Include External -Exclude Empty
+```
 
 Return to top
 

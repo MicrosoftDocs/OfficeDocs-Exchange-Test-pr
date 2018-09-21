@@ -55,7 +55,9 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 2.  **Check mailbox database configuration**   Is the *IndexEnabled* parameter set to true for the user's mailbox database? If yes, go to Step 3. If no, run the following command in the Shell to verify that the *IndexEnabled* flag is set to true.
     
-        Get-MailboxDatabase | Format-Table Name,IndexEnabled
+    ```powershell
+Get-MailboxDatabase | Format-Table Name,IndexEnabled
+```
     
     For detailed syntax and parameter information, see [Get-MailboxDatabase](https://technet.microsoft.com/en-us/library/bb124924\(v=exchg.150\)).
 
@@ -89,7 +91,9 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 5.  **Run the Test-ExchangeSearch cmdlet**   If the mailbox database has already been crawled, you can run the **Test-ExchangeSearch** cmdlet for the mailbox database or for a specific mailbox.
     
-        Test-ExchangeSearch -Identity AlanBrewer@contoso.com
+    ```powershell
+Test-ExchangeSearch -Identity AlanBrewer@contoso.com
+```
     
     For detailed syntax and parameter information, see [Test-ExchangeSearch](https://technet.microsoft.com/en-us/library/bb124733\(v=exchg.150\)).
 

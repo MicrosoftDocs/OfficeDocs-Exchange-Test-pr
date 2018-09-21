@@ -93,7 +93,9 @@ The following steps are necessary to prepare your organization for the migration
 
 4.  You need to have the migration feature **PAW** enabled for your Office 365 tenant. To verify this, run the following command in Exchange Online PowerShell:
     
-        Get-MigrationConfig
+    ```powershell
+Get-MigrationConfig
+```
     
     If the output under **Features** lists **PAW**, then the feature is enabled and you can continue to *Step 3: Crete the .csv file*.
     
@@ -109,7 +111,9 @@ The .csv file needs to contain the following columns:
 
   - **TargetGroupMailbox**. SMTP address of the target group in Office 365. You can run the following command to see the primary SMTP address.
     
-        Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
+    ```powershell
+Get-UnifiedGroup <alias of the group> | Format-Table PrimarySmtpAddress
+```
 
 An example .csv:
 
@@ -136,7 +140,9 @@ In this step, you gather information from your Exchange environment, and then yo
     
     2.  Use the MRS proxy server information from your Exchange 2013 environment that you noted in Step 1 above and pass that value into the variable `$Source_RemoteServer`.
         
-            $Source_RemoteServer = "<MRS proxy endpoint>"
+        ```powershell
+$Source_RemoteServer = "<MRS proxy endpoint>"
+```
 
 3.  In Exchange Online PowerShell, run the following command to create a migration endpoint:
     
@@ -158,7 +164,9 @@ In this step, you gather information from your Exchange environment, and then yo
 
 5.  Start the migration by running the following command in Exchange Online PowerShell. Note that this step is necessary only if the `-AutoStart` parameter was not used while creating the batch above in step 4.
     
-        Start-MigrationBatch PublicFolderToGroupMigration
+    ```powershell
+Start-MigrationBatch PublicFolderToGroupMigration
+```
 
 While batch migrations need to be created using the `New-MigrationBatch` cmdlet in Exchange Online PowerShell, the progress of the migration can be viewed and managed in Exchange admin center. You can also view the progress of the migration by running the [Get-MigrationBatch](https://technet.microsoft.com/en-us/library/jj219164\(v=exchg.150\)) and [Get-MigrationUser](https://technet.microsoft.com/en-us/library/jj218702\(v=exchg.150\)) cmdlets. The `New-MigrationBatch` cmdlet initiates a migration user for each Office 365 group mailbox, and you can view the status of these requests using the mailbox migration page.
 
@@ -220,7 +228,9 @@ In the following command:
 
 After you've made your public folders read-only, you'll need to perform the migration again. This is necessary for a final incremental copy of your data. Before you can run the migration again, you'll have to remove the existing batch, which you can do by running the following command:
 
-    Remove-MigrationBatch <name of migration batch>
+```powershell
+Remove-MigrationBatch <name of migration batch>
+```
 
 Next, create a new batch with the same .csv file by running the following command. In this command:
 
@@ -236,7 +246,9 @@ Next, create a new batch with the same .csv file by running the following comman
 
 After the new batch is created, start the migration by running the following command in Exchange Online PowerShell. Note that this step is only necessary if the `-AutoStart` parameter was not used in the preceding command.
 
-    Start-MigrationBatch PublicFolderToGroupMigration
+```powershell
+Start-MigrationBatch PublicFolderToGroupMigration
+```
 
 After you have finished this step (the batch status is **Completed**), verify that all data has been copied to Office 365 Groups. At that point, provided you are satisfied with the Groups experience, you can begin deleting the migrated public folders from your Exchange 2013 environment.
 

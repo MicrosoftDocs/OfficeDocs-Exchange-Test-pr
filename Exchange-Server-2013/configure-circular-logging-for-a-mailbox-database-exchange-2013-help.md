@@ -47,11 +47,15 @@ For more information about circular logging and CRCL, see [Exchange Native Data 
 
 This example enables circular logging for database DB1.
 
-    Set-MailboxDatabase DB1 -CircularLoggingEnabled $True
+```powershell
+Set-MailboxDatabase DB1 -CircularLoggingEnabled $True
+```
 
 This example disables circular logging for database DB1.
 
-    Set-MailboxDatabase DB1 -CircularLoggingEnabled $False
+```powershell
+Set-MailboxDatabase DB1 -CircularLoggingEnabled $False
+```
 
 See [Set-MailboxDatabase](https://technet.microsoft.com/en-us/library/bb123971\(v=exchg.150\)) for other mailbox database parameters you can configure.
 

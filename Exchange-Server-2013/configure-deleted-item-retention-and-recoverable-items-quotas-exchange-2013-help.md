@@ -65,7 +65,9 @@ To learn more about deleted item retention, the Recoverable Items folder, In-Pla
 
 This example configures April Stewart's mailbox to retain deleted items for 30 days.
 
-    Set-Mailbox -Identity - "April Stewart" -RetainDeletedItemsFor 30
+```powershell
+Set-Mailbox -Identity - "April Stewart" -RetainDeletedItemsFor 30
+```
 
 For detailed syntax and parameter information, see [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)).
 
@@ -99,7 +101,9 @@ For detailed syntax and parameter information, see [Set-Mailbox](https://technet
 
 This example configures a deleted item retention period of 10 days for the mailbox database MDB2.
 
-    Set-MailboxDatabase -Identity MDB2 -DeletedItemRetention 10
+```powershell
+Set-MailboxDatabase -Identity MDB2 -DeletedItemRetention 10
+```
 
 For detailed syntax and parameter information, see [Set-MailboxDatabase](https://technet.microsoft.com/en-us/library/bb123971\(v=exchg.150\)).
 
@@ -113,7 +117,9 @@ For detailed syntax and parameter information, see [Set-MailboxDatabase](https:/
 
 This example configures a recoverable items warning quota of 15 GB and a recoverable items quota of 20 GB on mailbox database MDB2.
 
-    Set-MailboxDatabase -Identity MDB2 -RecoverableItemsWarningQuota 15GB -RecoverableItemsQuota 20GB
+```powershell
+Set-MailboxDatabase -Identity MDB2 -RecoverableItemsWarningQuota 15GB -RecoverableItemsQuota 20GB
+```
 
 For detailed syntax and parameter information, see [Set-MailboxDatabase](https://technet.microsoft.com/en-us/library/bb123971\(v=exchg.150\)).
 

@@ -58,15 +58,21 @@ This example removes the Mailbox server named `MyMailboxServer` from a SIP URI d
 
 In this example, there are three SIP URI dial plans: SipDP1, SipDP2 and SipDP3. This example removes the Mailbox server named `MyMailboxServer` from the SipDP3 dial plan.
 
-    Set-UMService -id MyMailboxServer -DialPlans SipDP1,SipDP2
+```powershell
+Set-UMService -id MyMailboxServer -DialPlans SipDP1,SipDP2
+```
 
 In this example, there are two SIP URI dial plans: SipDP1 and SipDP2. This example removes the Mailbox server named `MyMailboxServer` from the SipDP2 dial plan.
 
-    Set-UMService -id MyMailboxServer -DialPlans SipDP1
+```powershell
+Set-UMService -id MyMailboxServer -DialPlans SipDP1
+```
 
 This example removes the Mailbox server named `MyMailboxServer` from all SIP dial plans.
 
-    Set-UMService -id MyUMServer -DialPlans $null
+```powershell
+Set-UMService -id MyUMServer -DialPlans $null
+```
 
 ## Use the EAC to remove a Client Access server from a SIP URI dial plan
 
@@ -89,13 +95,19 @@ This example removes the Client Access server named `MyClientAccessServer` from 
 
 In this example, there are three SIP URI dial plans: SipDP1, SipDP2 and SipDP3. This example removes the Client Access server named `MyClientAccessServer` from the SipDP3 dial plan.
 
-    Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans SipDP1,SipDP2
+```powershell
+Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans SipDP1,SipDP2
+```
 
 In this example, there are two SIP URI dial plans: SipDP1 and SipDP2. This example removes the Client Access server named `MyClientAccessServer` from the SipDP2 dial plan.
 
-    Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans SipDP1
+```powershell
+Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans SipDP1
+```
 
 This example removes the Client Access server named `MyClientAccessServer` from all SIP dial plans.
 
-    Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans $null
+```powershell
+Set-UMCallRouterSettings -id MyClientAccessServer -DialPlans $null
+```
 

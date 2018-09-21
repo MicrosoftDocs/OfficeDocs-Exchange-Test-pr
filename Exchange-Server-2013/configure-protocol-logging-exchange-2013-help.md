@@ -91,7 +91,9 @@ To enable or disable protocol logging on a Send connector or a Receive connector
 
 This example enables protocol logging for the Receive connector named Connection from Contoso.com.
 
-    Set-ReceiveConnector "Connection from Contoso.com" -ProtocolLoggingLevel Verbose
+```powershell
+Set-ReceiveConnector "Connection from Contoso.com" -ProtocolLoggingLevel Verbose
+```
 
 ## How do you know this worked?
 
@@ -99,7 +101,9 @@ To verify that you have successfully enabled or disabled protocol logging, do th
 
 1.  In the Shell, run the following command:
     
-        <Get-SendConnector |Get-ReceiveConnector> | Format-List Name,ProtocolLoggingLevel
+    ```command line
+<Get-SendConnector |Get-ReceiveConnector> | Format-List Name,ProtocolLoggingLevel
+```
 
 2.  Verify the values displayed are the values you configured.
 
@@ -111,7 +115,9 @@ To enable or disable protocol logging on the implicit and invisible intra-organi
 
 This example enables protocol logging on the intra-organization Send connector in the Transport service on a Mailbox server named Mailbox01.
 
-    Set-TransportService Mailbox01 -IntraOrgConnectorProtocolLoggingLevel Verbose
+```powershell
+Set-TransportService Mailbox01 -IntraOrgConnectorProtocolLoggingLevel Verbose
+```
 
 ## How do you know this worked?
 
@@ -127,11 +133,15 @@ To verify that you have successfully enabled or disabled protocol logging on the
 
 To enable or disable protocol logging on the implicit and invisible mailbox delivery Send connector that exists in the Mailbox Transport service on a Mailbox server, run the following command:
 
-    Set-MailboxTransportService -MailboxDeliveryConnectorProtocolLoggingLevel <Verbose | None>
+```powershell
+Set-MailboxTransportService -MailboxDeliveryConnectorProtocolLoggingLevel <Verbose | None>
+```
 
 This example enables protocol logging on the mailbox delivery Receive connector in the Mailbox Transport service on a Mailbox server named Mailbox01.
 
-    Set-MailboxTransportService Mailbox01 -MailboxDeliveryConnectorProtocolLoggingLevel Verbose
+```powershell
+Set-MailboxTransportService Mailbox01 -MailboxDeliveryConnectorProtocolLoggingLevel Verbose
+```
 
 ## How do you know this worked?
 

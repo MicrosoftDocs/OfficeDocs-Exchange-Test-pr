@@ -131,11 +131,15 @@ For example, suppose the email address policy in your organization uses the emai
 
 To apply the updated email address policy to recipients, use the following syntax.
 
-    Update-EmailAddressPolicy <EamilAddressPolicyIdentity>
+```powershell
+Update-EmailAddressPolicy <EamilAddressPolicyIdentity>
+```
 
 For example, to apply the updated email address policy named "Default Policy", run the following command:
 
-    Update-EmailAddressPolicy "Default Policy"
+```powershell
+Update-EmailAddressPolicy "Default Policy"
+```
 
 ## Replace the existing primary email address for a filtered set of recipients
 
@@ -195,7 +199,9 @@ This example creates an email address policy named "Fourth Coffee Recipients", a
 
 To apply the new email address policy to the affected recipients, run the following command:.
 
-    Update-EmailAddressPolicy "Fourth Coffee Recipients"
+```powershell
+Update-EmailAddressPolicy "Fourth Coffee Recipients"
+```
 
 ## How do you know this step worked?
 

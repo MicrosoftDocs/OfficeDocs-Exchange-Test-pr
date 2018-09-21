@@ -47,11 +47,15 @@ To set an Exchange-specific cost on an Active Directory site link, run the follo
 
 This example sets an Exchange-specific cost of 10 on the IP site link named IPSiteLinkAB.
 
-    Set-AdSiteLink IPSiteLinkAB -ExchangeCost 10
+```powershell
+Set-AdSiteLink IPSiteLinkAB -ExchangeCost 10
+```
 
 This example clears the Exchange cost from the IP site link named IPSiteLinkAB.
 
-    Set-AdSiteLink IPSiteLinkAB -ExchangeCost $null
+```powershell
+Set-AdSiteLink IPSiteLinkAB -ExchangeCost $null
+```
 
 ## How do you know this worked?
 
@@ -59,7 +63,9 @@ To verify that you have successfully set an Exchange cost on an Active Directory
 
 1.  Run the following command:
     
-        Get-AdSiteLink | Format-List Name,ExchangeCost
+    ```powershell
+Get-AdSiteLink | Format-List Name,ExchangeCost
+```
 
 2.  Verify the Exchange cost is configured on the Active Directory site link.
 
@@ -69,15 +75,21 @@ When a hub site exists along the least cost routing path for a message, the mess
 
 To configure an Active Directory site as a hub site, run the following command:
 
-    Set-AdSite <ADSiteIdentity> -HubSiteEnabled $true
+```powershell
+Set-AdSite <ADSiteIdentity> -HubSiteEnabled $true
+```
 
 This example configures the Active Directory site named Site A as a hub site.
 
-    Set-AdSite "Site A" -HubSiteEnabled $true
+```powershell
+Set-AdSite "Site A" -HubSiteEnabled $true
+```
 
 This example removes the hub site attribute from the Active Directory site named Site B.
 
-    Set-AdSite "Site B" -HubSiteEnabled $false
+```powershell
+Set-AdSite "Site B" -HubSiteEnabled $false
+```
 
 ## How do you know this worked?
 
@@ -85,7 +97,9 @@ To verify that you have successfully configured an Active Directory site as a hu
 
 1.  Run the following command:
     
-        Get-AdSite | Format-List Name,HubSiteEnabled
+    ```powershell
+Get-AdSite | Format-List Name,HubSiteEnabled
+```
 
 2.  Verify the *HubSiteEnabled* value is `True` for the Active Directory site.
 

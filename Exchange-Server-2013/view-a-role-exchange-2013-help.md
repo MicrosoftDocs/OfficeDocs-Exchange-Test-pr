@@ -51,11 +51,15 @@ You can view the details of a specific role by retrieving a specific role using 
 
 To view the details of a specific role, use the following syntax.
 
-    Get-ManagementRole <role name> | Format-List
+```powershell
+Get-ManagementRole <role name> | Format-List
+```
 
 This example retrieves the details about the Mail Recipients management role.
 
-    Get-ManagementRole "Mail Recipients" | Format-List
+```powershell
+Get-ManagementRole "Mail Recipients" | Format-List
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRole](https://technet.microsoft.com/en-us/library/dd351125\(v=exchg.150\)).
 
@@ -65,11 +69,15 @@ You can view a list of all the management roles in your organization by not spec
 
 This example returns a list of all roles in your organization.
 
-    Get-ManagementRole
+```powershell
+Get-ManagementRole
+```
 
 To return a list of specific properties for all the roles in your organization, you can pipe the results of the **Format-Table** cmdlet and specify the properties you want in the list of results. Use the following syntax.
 
-    Get-ManagementRole | Format-Table <property 1>, <property 2...>
+```powershell
+Get-ManagementRole | Format-Table <property 1>, <property 2...>
+```
 
 This example returns a list of all the roles in your organization and includes the **Name** property and any property with the word **Implicit** at the beginning of the property name.
 
@@ -83,11 +91,15 @@ You can return a list of roles that contain a cmdlet that you specify by using t
 
 To return a list of roles that contain the cmdlet you specify, use the following syntax.
 
-    Get-ManagementRole -Cmdlet <cmdlet>
+```powershell
+Get-ManagementRole -Cmdlet <cmdlet>
+```
 
 This example returns a list of roles that contain the **New-Mailbox** cmdlet.
 
-    Get-ManagementRole -Cmdlet New-Mailbox
+```powershell
+Get-ManagementRole -Cmdlet New-Mailbox
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRole](https://technet.microsoft.com/en-us/library/dd351125\(v=exchg.150\)).
 
@@ -103,11 +115,15 @@ To return a list of roles that contain the parameters you specify, use the follo
 
 This example returns a list of roles that contain the *Database* and *Server* parameters, regardless of the cmdlets they exist on.
 
-    Get-ManagementRole -CmdletParameters Database, Server
+```powershell
+Get-ManagementRole -CmdletParameters Database, Server
+```
 
 This example returns a list of roles where the *EmailAddresses* parameter exists only on the **Set-Mailbox** cmdlet.
 
-    Get-ManagementRole -Cmdlet Set-Mailbox -CmdletParameters EmailAddresses
+```powershell
+Get-ManagementRole -Cmdlet Set-Mailbox -CmdletParameters EmailAddresses
+```
 
 You can also use the wildcard character (\*) with either the *Cmdlet* or *CmdletParameters* parameters to match partial cmdlet or parameter names.
 
@@ -119,11 +135,15 @@ You can return a list of roles based on a specified role type by using the *Role
 
 To return a list of roles that match the role type you specify, use the following syntax.
 
-    Get-ManagementRole -RoleType <roletype>
+```powershell
+Get-ManagementRole -RoleType <roletype>
+```
 
 This example returns a list of roles based on the `UmMailboxes` role type.
 
-    Get-ManagementRole -RoleType UmMailboxes
+```powershell
+Get-ManagementRole -RoleType UmMailboxes
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRole](https://technet.microsoft.com/en-us/library/dd351125\(v=exchg.150\)).
 
@@ -133,11 +153,15 @@ You can return a list of roles that are the immediate children of the specified 
 
 To return a list of the immediate children roles of a parent role, use the following syntax.
 
-    Get-ManagementRole <parent role name> -GetChildren
+```powershell
+Get-ManagementRole <parent role name> -GetChildren
+```
 
 This example returns a list of immediate children of the Disaster Recovery role.
 
-    Get-ManagementRole "Disaster Recovery" -GetChildren
+```powershell
+Get-ManagementRole "Disaster Recovery" -GetChildren
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRole](https://technet.microsoft.com/en-us/library/dd351125\(v=exchg.150\)).
 
@@ -147,11 +171,15 @@ You can return a list of the entire chain of roles from a specified parent role 
 
 This example returns a list of all the child roles of a parent role.
 
-    Get-ManagementRole <parent role name> -Recurse
+```powershell
+Get-ManagementRole <parent role name> -Recurse
+```
 
 This example returns all the child roles of the Mail Recipients role.
 
-    Get-ManagementRole "Mail Recipients" -Recurse
+```powershell
+Get-ManagementRole "Mail Recipients" -Recurse
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRole](https://technet.microsoft.com/en-us/library/dd351125\(v=exchg.150\)).
 

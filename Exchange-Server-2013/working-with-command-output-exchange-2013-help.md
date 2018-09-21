@@ -210,11 +210,15 @@ In this example, the number of columns is forced to four by using the *Column* p
 
 The **Out-Host** cmdlet is an unseen default cmdlet at the end of the pipeline. After all formatting is applied, the **Out-Host** cmdlet sends the final output to the console window for display. You don't have to explicitly call the **Out-Host** cmdlet, because it's the default output. You can override sending the output to the console window by calling the **Out-File** cmdlet as the last cmdlet in the command. The **Out-File** cmdlet then writes the output to the file that you specify in the command as in the following example:
 
-    Get-ChildItem | Format-Wide -Column 4 | Out-File c:\OutputFile.txt
+```powershell
+Get-ChildItem | Format-Wide -Column 4 | Out-File c:\OutputFile.txt
+```
 
 In this example, the **Out-File** cmdlet writes the information that is displayed in the **Get-ChildItem | Format-Wide -Column 4** command to a file that is named `OutputFile.txt`. You can also redirect pipeline output to a file by using the redirection operator, which is the right-angle bracket ( `>` ). To append pipeline output of a command to an existing file without replacing the original file, use the double right-angle brackets ( `>>` ), as in the following example:
 
-    Get-ChildItem | Format-Wide -Column 4 >> C:\OutputFile.txt
+```powershell
+Get-ChildItem | Format-Wide -Column 4 >> C:\OutputFile.txt
+```
 
 In this example, the output from the **Get-Childitem** cmdlet is piped to the **Format-Wide** cmdlet for formatting and then is written to the end of the `OutputFile.txt` file. Notice that if the `OutputFile.txt` file didn't exist, use of the double right-angle brackets ( `>>` ) would create the file.
 
@@ -249,7 +253,9 @@ To use this script, save it to the `C:\Program Files\Microsoft\Exchange Server\V
 
 The `Out-Ie` script assumes that the data it receives is valid HTML. To convert the data that you want to view into HTML, you must pipe the results of your command to the **ConvertTo-Html** cmdlet. You can then pipe the results of that command to the `Out-Ie` script. The following example shows how to view a directory listing in an Internet Explorer window:
 
-    Get-ChildItem | Select Name,Length | ConvertTo-Html | Out-Ie
+```powershell
+Get-ChildItem | Select Name,Length | ConvertTo-Html | Out-Ie
+```
 
 ## How to filter data
 

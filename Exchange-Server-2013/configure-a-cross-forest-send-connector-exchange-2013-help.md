@@ -75,7 +75,9 @@ After you create your Send connector, create a Send connector in the second fore
 
 This example uses the Enable-CrossForestConnector.ps1 script in the Shell to set permissions on the Send connector for use in a cross-forest topology.
 
-    .\Enable-CrossForestConnector.ps1 -Connector "Cross-Forest" -user "ANONYMOUS LOGON"
+```powershell
+.\Enable-CrossForestConnector.ps1 -Connector "Cross-Forest" -user "ANONYMOUS LOGON"
+```
 
 ## How do you know this worked?
 

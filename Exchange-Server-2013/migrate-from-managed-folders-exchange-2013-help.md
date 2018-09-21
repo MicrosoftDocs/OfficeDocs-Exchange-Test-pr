@@ -312,7 +312,9 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 This example removes the managed folder mailbox policy and any managed folders from Ken Kwok's mailbox. Managed folders that have any messages are not removed.
 
-    Set-Mailbox -Identity Kwok -RemoveManagedFolderAndPolicy RP-Corp
+```powershell
+Set-Mailbox -Identity Kwok -RemoveManagedFolderAndPolicy RP-Corp
+```
 
 ## Step 4: Apply the retention policy to user mailboxes
 
@@ -326,7 +328,9 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 This example applies the newly created retention policy RP-Corp to the mailbox user Ken Kwok.
 
-    Set-Mailbox -Identity Kwok -RetentionPolicy RP-Corp
+```powershell
+Set-Mailbox -Identity Kwok -RetentionPolicy RP-Corp
+```
 
 For detailed syntax and parameter information, see [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)).
 
@@ -344,5 +348,7 @@ To verify that you have migrated from managed folders to retention policies, do 
     
     This command retrieves the retention tags actually applied to April Stewart's mailbox.
     
-        Get-RetentionPolicyTag -Mailbox astewart
+    ```powershell
+Get-RetentionPolicyTag -Mailbox astewart
+```
 

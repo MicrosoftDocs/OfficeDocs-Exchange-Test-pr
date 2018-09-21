@@ -83,11 +83,15 @@ After you've installed the software listed above, complete the following steps t
     
       - On a Windows Server 2012 R2 or Windows Server 2012 computer, run the following command.
         
-            Install-WindowsFeature RSAT-ADDS
+        ```powershell
+Install-WindowsFeature RSAT-ADDS
+```
     
       - On a Windows Server 2008 R2 SP1 computer, run the following command.
         
-            Add-WindowsFeature RSAT-ADDS
+        ```powershell
+Add-WindowsFeature RSAT-ADDS
+```
 
 ## Windows Server 2012 R2 and Windows Server 2012 prerequisites
 
@@ -135,7 +139,9 @@ Do the following to install the required Windows roles and features:
 
 2.  Run the following command to install the required Windows components.
     
-        Install-WindowsFeature ADLDS
+    ```powershell
+Install-WindowsFeature ADLDS
+```
 
 Install the version of Microsoft .NET Framework that corresponds to the version of Exchange 2013 you're installing:
 
@@ -169,7 +175,9 @@ Do the following to install the required Windows roles and features:
 
 2.  Run the following command to load the Server Manager module.
     
-        Import-Module ServerManager
+    ```powershell
+Import-Module ServerManager
+```
 
 3.  Run the following command to install the required Windows components.
     
@@ -211,11 +219,15 @@ Do the following to install the required Windows roles and features:
 
 2.  Run the following command to load the Server Manager module.
     
-        Import-Module ServerManager
+    ```powershell
+Import-Module ServerManager
+```
 
 3.  Run the following command to install the required Windows components.
     
-        Add-WindowsFeature NET-Framework, ADLDS
+    ```powershell
+Add-WindowsFeature NET-Framework, ADLDS
+```
 
 After you've installed the operating system roles and features, install the following software in the order shown:
 

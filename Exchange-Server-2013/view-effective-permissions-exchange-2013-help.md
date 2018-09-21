@@ -51,11 +51,15 @@ Looking for other management tasks related to managing permissions? Check out [P
 
 To list all the users that are granted the permissions provided by a management role, use the following syntax.
 
-    Get-ManagementRoleAssignment -Role <role name> -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment -Role <role name> -GetEffectiveUsers
+```
 
 This example lists all the users that are granted permissions provided by the Mail Recipients role.
 
-    Get-ManagementRoleAssignment -Role "Mail Recipients" -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment -Role "Mail Recipients" -GetEffectiveUsers
+```
 
 If you want to change what properties are returned in the list or export the list to a comma-separated value (.csv) file, see Use the Shell to customize output and display it later in this topic.
 
@@ -83,7 +87,9 @@ To know every role that a user receives permissions from, you must use the **Get
 
 This example finds all the role assignments that grant permissions to the user Kim Akers.
 
-    Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "Kim Akers" }
+```powershell
+Get-ManagementRoleAssignment -GetEffectiveUsers | Where {     Get-ManagementRoleAssignment -GetEffectiveUsers | Where { $_.EffectiveUserName -Eq "Kim Akers" }.EffectiveUserName -Eq "Kim Akers" }
+```
 
 If you want to change what properties are returned in the list or export the list to a CSV file, see Use the Shell to customize output and display it later in this topic.
 

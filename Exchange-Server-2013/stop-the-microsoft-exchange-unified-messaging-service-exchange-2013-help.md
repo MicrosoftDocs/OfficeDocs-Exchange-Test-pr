@@ -53,5 +53,7 @@ For additional management tasks related to Mailbox servers, see [UM services pro
 
 2.  In the **Open** box, type the following command, and then press Enter.
     
-        net stop MSExchangeUM
+    ```powershell
+net stop MSExchangeUM
+```
 

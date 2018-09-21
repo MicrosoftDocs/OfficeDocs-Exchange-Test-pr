@@ -125,7 +125,9 @@ This example subscribes an Edge Transport server to the specified site and autom
 
 This example exports an Edge Subscription file.
 
-    New-EdgeSubscription -FileName "C:\EdgeSubscriptionInfo.xml"
+```powershell
+New-EdgeSubscription -FileName "C:\EdgeSubscriptionInfo.xml"
+```
 
 
 > [!NOTE]

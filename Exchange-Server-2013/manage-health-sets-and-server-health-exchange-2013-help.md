@@ -47,7 +47,9 @@ You can use the Shell to get a summary of the health of a server running Exchang
 
 Run either of the following commands to view the health sets and health information on a server running Exchange 2013.
 ```
-    Get-HealthReport -Identity <ServerName>
+```powershell
+Get-HealthReport -Identity <ServerName>
+```
 ```
 ```
     Get-ServerHealth -Identity <ServerName> | Format-Table Server,CurrentHealthSetState,Name,HealthSetName,AlertValue,HealthGroupName -Auto
@@ -55,10 +57,14 @@ Run either of the following commands to view the health sets and health informat
 
 Run any of the following commands to view the health sets on a server or database availability group running Exchange 2013.
 ```
-    Get-ExchangeServer | Get-HealthReport -RollupGroup
+```powershell
+Get-ExchangeServer | Get-HealthReport -RollupGroup
 ```
 ```
-    Get-ExchangeServer | Get-HealthReport -RollupGroup -HealthSetName <HealthSet>
+```
+```powershell
+Get-ExchangeServer | Get-HealthReport -RollupGroup -HealthSetName <HealthSet>
+```
 ```
 ```
     (Get-DatabaseAvailabiltyGroup <DAGName>).Servers | Get-HealthReport -RollupGroup
@@ -72,7 +78,9 @@ A health set is a group of monitors, probes and responders for a component that 
 
 Run the following command to view the health sets on a server running Exchange 2013.
 
-    Get-HealthReport -Server <ServerName>
+```powershell
+Get-HealthReport -Server <ServerName>
+```
 
 ## View the Probes, Monitors and Responders for a Health Set
 

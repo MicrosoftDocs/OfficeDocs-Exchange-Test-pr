@@ -63,7 +63,9 @@ The mail user will be removed from the contacts list.
 
 This example disables email for the mail user Yan Li.
 
-    Disable-MailUser -Identity "Yan Li"
+```powershell
+Disable-MailUser -Identity "Yan Li"
+```
 
 For detailed syntax and parameter information, see [Disable-MailUser](https://technet.microsoft.com/en-us/library/aa998578\(v=exchg.150\)).
 
@@ -77,13 +79,17 @@ To verify that you've successfully disabled email for a mail user, do one of the
 
 3.  In the Shell, run the following command.
     
-        Get-MailUser
+    ```powershell
+Get-MailUser
+```
     
     The mail user that you disabled email for won't be returned in the results because this cmdlet only returns mail-enabled users.
 
 4.  In the Shell, run the following command.
     
-        Get-User
+    ```powershell
+Get-User
+```
     
     The mail user that you disabled email for is returned in the results because this cmdlet returns all Active Directory user objects.
 
@@ -95,7 +101,9 @@ You can use the **Enable-MailUser** cmdlet to mail-enable existing Active Direct
 
 This example mail-enables the user Sanjay Shah. You must provide an external email address.
 
-    Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys.com
+```powershell
+Enable-MailUser -Identity "Sanjay Shah" -ExternalEmailAddress renev@tailspintoys.com
+```
 
 ## Use the Shell and a CSV file to mail-enable multiple users
 
@@ -159,5 +167,7 @@ To verify that you’ve successfully mail-enabled Active Directory users, do one
 
   - In the Shell, run the following command to display information about new mail users.
     
-        Get-MailUser | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+    ```powershell
+Get-MailUser | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+```
 

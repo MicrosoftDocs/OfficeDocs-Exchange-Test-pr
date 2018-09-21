@@ -95,45 +95,63 @@ Looking for other management tasks related to mailbox database copies? Check out
 
 This example shows how to seed a copy of the database DB1 on MBX1.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1
+```
 
 This example shows how to seed a copy of the database DB1 on MBX1 using MBX2 as the source Mailbox server for the seed.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
+```
 
 This example shows how to seed a copy of the database DB1 on MBX1 without seeding the content index catalog.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
+```
 
 This example shows how to seed the content index catalog for the copy of the database DB1 on MBX1 without seeding the database file.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
+```
 
 ## Manually copy an offline database
 
 1.  If circular logging is enabled for the database, it must be disabled before proceeding. You can disable circular logging for a mailbox database by using the [Set-MailboxDatabase](https://technet.microsoft.com/en-us/library/bb123971\(v=exchg.150\)) cmdlet, as shown in this example.
     
-        Set-MailboxDatabase DB1 -CircularLoggingEnabled $false
+    ```powershell
+Set-MailboxDatabase DB1 -CircularLoggingEnabled $false
+```
 
 2.  Dismount the database. You can use the [Dismount-Database](https://technet.microsoft.com/en-us/library/bb124936\(v=exchg.150\)) cmdlet, as shown in this example.
     
-        Dismount-Database DB1 -Confirm $false
+    ```powershell
+Dismount-Database DB1 -Confirm $false
+```
 
 3.  Manually copy the database files (the database file and all log files) to a second location, such as an external disk drive or a network share.
 
 4.  Mount the database. You can use the [Mount-Database](https://technet.microsoft.com/en-us/library/aa998871\(v=exchg.150\)) cmdlet, as shown in this example.
     
-        Mount-Database DB1
+    ```powershell
+Mount-Database DB1
+```
 
 5.  On the server that will host the copy, copy the database files from the external drive or network share to the same path as the active database copy. For example, if the active copy database path is D:\\DB1\\DB1.edb and log file path is D:\\DB1, you would copy the database files to D:\\DB1 on the server that will host the copy.
 
 6.  Add the mailbox database copy by using the [Add-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd298105\(v=exchg.150\)) cmdlet with the *SeedingPostponed* parameter, as shown in this example.
     
-        Add-MailboxDatabaseCopy -Identity DB1 -MailboxServer MBX3 -SeedingPostponed
+    ```powershell
+Add-MailboxDatabaseCopy -Identity DB1 -MailboxServer MBX3 -SeedingPostponed
+```
 
 7.  If circular logging is enabled for the database, enable it again by using the [Set-MailboxDatabase](https://technet.microsoft.com/en-us/library/bb123971\(v=exchg.150\)) cmdlet, as shown in this example.
     
-        Set-MailboxDatabase DB1 -CircularLoggingEnabled $true
+    ```powershell
+Set-MailboxDatabase DB1 -CircularLoggingEnabled $true
+```
 
 ## How do you know this worked?
 
@@ -143,7 +161,9 @@ To verify that you've successfully seeded a mailbox database copy, do one of the
 
   - In the Shell, run the following command to verify the mailbox database copy was seeded successfully and is healthy.
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName>
+    ```powershell
+Get-MailboxDatabaseCopyStatus <DatabaseCopyName>
+```
     
     The Status and Content Index State should both be Healthy.
 

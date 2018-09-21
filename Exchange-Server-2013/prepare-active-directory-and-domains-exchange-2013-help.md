@@ -85,7 +85,9 @@ When you're ready, do the following to extend your Active Directory schema. If y
 
 3.  Run the following command to extend the schema.
     
-        Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
+    ```powershell
+Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
+```
 
 After Setup finishes extending the schema, you'll need to wait while Active Directory replicates the changes to all of your domain controllers. If you want to check on how replication is going, you can use the `repadmin` tool. `Repadmin` is included as part of the Active Directory Domain Services Tools feature in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2. For more information about how to use it, see [Repadmin](https://go.microsoft.com/fwlink/p/?linkid=257879).
 
@@ -151,7 +153,9 @@ When you're ready, do the following to prepare all of the domains in your Active
 
 2.  Run the following command:
     
-        Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
+    ```powershell
+Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
+```
 
 ## Let me choose which Active Directory domains I want to prepare
 

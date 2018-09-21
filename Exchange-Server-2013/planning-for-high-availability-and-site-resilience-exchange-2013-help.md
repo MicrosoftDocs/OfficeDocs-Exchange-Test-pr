@@ -313,7 +313,9 @@ As a best practice, you should minimize the number of certificates you use for y
 
 For Outlook Anywhere clients, we recommend that you use a single subject alternative name (SAN) certificate for each datacenter, and include multiple host names in the certificate. To ensure Outlook Anywhere connectivity after a database, server, or datacenter switchover, you must use the same Certificate Principal Name on each certificate, and configure the Outlook Provider Configuration object in Active Directory with the same Principal Name in Microsoft-Standard Form (msstd). For example, if you use a Certificate Principal Name of mail.contoso.com, you would configure the attribute as follows.
 
-    Set-OutlookProvider EXPR -CertPrincipalName "msstd:mail.contoso.com"
+```powershell
+Set-OutlookProvider EXPR -CertPrincipalName "msstd:mail.contoso.com"
+```
 
 Some applications that integrate with Exchange have specific certificate requirements that may require using additional certificates. Exchange 2013 can co-exist with Office Communications Server (OCS). OCS requires certificates with 1024-bit or greater certificates that use the OCS server name for the Certificate Principal Name. Because using an OCS server name for the Certificate Principal Name would prevent Outlook Anywhere from working properly, you would need to use an additional and separate certificate for the OCS environment.
 

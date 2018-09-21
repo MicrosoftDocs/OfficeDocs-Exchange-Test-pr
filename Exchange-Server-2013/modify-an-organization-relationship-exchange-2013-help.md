@@ -89,7 +89,9 @@ For additional management tasks related to federation, see [Federation procedure
 
   - This example disables the organization relationship Contoso.
     
-        Set-OrganizationRelationship -Identity Contoso -Enabled $false
+    ```powershell
+Set-OrganizationRelationship -Identity Contoso -Enabled $false
+```
 
   - This example enables calendar availability information access for the organization relationship WoodgroveBank and sets the access level to `AvailabilityOnly` (calendar free/busy information with time only).
     
@@ -101,7 +103,9 @@ For detailed syntax and parameter information, see [Get-OrganizationRelationship
 
 To verify that you have successfully updated the organization relationship, run the following Shell command and verify the organization relationship information.
 
-    Get-OrganizationRelationship | format-list
+```powershell
+Get-OrganizationRelationship | format-list
+```
 
 
 > [!TIP]

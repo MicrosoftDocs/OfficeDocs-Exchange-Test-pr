@@ -59,7 +59,9 @@ By default, delivery queues that have the status Active, Connecting, Ready, or R
 
 1.  In a Command Prompt window, open the EdgeTransport.exe.config file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Add one or both of the following keys in the `<appSettings>` section.
     
@@ -79,11 +81,15 @@ By default, delivery queues that have the status Active, Connecting, Ready, or R
 
 5.  To change the value of the *QueueDiagnosticsAggregationInterval* parameter in the Exchange Management Shell, use the following syntax:
     
-        Set-TransportConfig -QueueDiagnosticsAggregationInterval <hh:mm:ss>
+    ```powershell
+Set-TransportConfig -QueueDiagnosticsAggregationInterval <hh:mm:ss>
+```
     
     For example, to change the value to 30 seconds, run the following command:
     
-        Set-TransportConfig -QueueDiagnosticsAggregationInterval 00:00:30
+    ```powershell
+Set-TransportConfig -QueueDiagnosticsAggregationInterval 00:00:30
+```
 
 ## How do you know this worked?
 

@@ -81,11 +81,15 @@ For additional management tasks related to Federation, see [Federation procedure
 
 1.  This example removes the service.contoso.com domain from the federation trust.
     
-        Remove-FederatedDomain -DomainName service.contoso.com
+    ```powershell
+Remove-FederatedDomain -DomainName service.contoso.com
+```
 
 2.  This example adds the marketing.contoso.com domain to the federation trust.
     
-        Add-FederatedDomain -DomainName marketing.contoso.com
+    ```powershell
+Add-FederatedDomain -DomainName marketing.contoso.com
+```
 
 For detailed syntax and parameter information, see [Remove-FederatedDomain](https://technet.microsoft.com/en-us/library/dd298128\(v=exchg.150\)) and [Add-FederatedDomain](https://technet.microsoft.com/en-us/library/dd351208\(v=exchg.150\)).
 
@@ -95,7 +99,9 @@ Run the following Shell commands to manage other aspects of a federation trust:
     
     This example displays the Exchange organization's federated OrgID and related information, including federated domains and status.
     
-        Get-FederatedOrganizationIdentifier
+    ```powershell
+Get-FederatedOrganizationIdentifier
+```
 
 2.  **View federation trust certificates**
     
@@ -107,19 +113,25 @@ Run the following Shell commands to manage other aspects of a federation trust:
     
     This example displays the state of federation certificates on all Mailbox and Client Access servers in the organization.
     
-        Test-FederationTrustCertificate
+    ```powershell
+Test-FederationTrustCertificate
+```
 
 4.  **Configure the federation trust to use a certificate as the next certificate**
     
     This example configures the federation trust ”Azure AD authentication” to use the certificate with the provided thumbprint as the next certificate. After the certificate is deployed to all Exchange servers in the organization, you can use the *PublishCertificate* switch to configure the federation trust to use this certificate as the current certificate.
     
-        Set-FederationTrust "Azure AD authentication" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
+    ```powershell
+Set-FederationTrust "Azure AD authentication" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
+```
 
 5.  **Configure the federation trust to use the next certificate as the current certificate**
     
     This example configures the federation trust Azure AD authentication to use the next certificate as the current certificate and publishes it to the Azure AD authentication system.
     
-        Set-FederationTrust "Azure AD authentication" -PublishFederationCertificate
+    ```powershell
+Set-FederationTrust "Azure AD authentication" -PublishFederationCertificate
+```
     
 
     > [!WARNING]
@@ -131,7 +143,9 @@ Run the following Shell commands to manage other aspects of a federation trust:
     
     This example refreshes the federation metadata and certificate of the Azure AD authentication system for the federation trust Azure AD authentication.
     
-        Set-FederationTrust "Azure AD authentication" -RefreshMetadata
+    ```powershell
+Set-FederationTrust "Azure AD authentication" -RefreshMetadata
+```
 
 For detailed syntax and parameter information, see the following topics:
 
@@ -151,11 +165,15 @@ To further verify success, do the following:
 
 1.  Run the following Shell command to verify the federation trust information.
     
-        Get-FederationTrust | format-list
+    ```powershell
+Get-FederationTrust | format-list
+```
 
 2.  Run the following Shell command to verify that federation information can be retrieved from your organization. For example, verify that the sales.contoso.com and marketing.contoso.com domains are returned in the *DomainNames* parameter.
     
-        Get-FederationInformation -DomainName <your primary sharing domain>
+    ```powershell
+Get-FederationInformation -DomainName <your primary sharing domain>
+```
 
 
 > [!TIP]

@@ -57,7 +57,9 @@ To learn more about disconnected mailboxes and perform other related management 
 
 Run the following command to permanently delete an active mailbox and the associated Active Directory user account.
 
-    Remove-Mailbox -Identity <identity> -Permanent $true
+```powershell
+Remove-Mailbox -Identity <identity> -Permanent $true
+```
 
 
 > [!NOTE]
@@ -77,7 +79,9 @@ To verify that you’ve permanently deleted an active mailbox, do the following:
 
 3.  Run the following command to verify that the mailbox was successfully purged from the Exchange mailbox database.
     
-        Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }
+    ```powershell
+Get-MailboxDatabase | Get-MailboxStatistics | Where {         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }.DisplayName -eq "<display name>" }
+```
     
     If you successfully purged the mailbox, the command won’t return any results. If the mailbox wasn’t purged, the command will return information about the mailbox.
 
@@ -109,7 +113,9 @@ This example permanently deletes the disabled mailbox with the GUID 2ab32ce3-fae
 
 This example permanently deletes the soft-deleted mailbox for Dan Jump from mailbox database MBD01.
 
-    Remove-StoreMailbox -Database MBD01 -Identity "Dan Jump" -MailboxState SoftDeleted
+```powershell
+Remove-StoreMailbox -Database MBD01 -Identity "Dan Jump" -MailboxState SoftDeleted
+```
 
 This example permanently deletes all soft-deleted mailboxes from mailbox database MBD01.
 
@@ -121,7 +127,9 @@ For detailed syntax and parameter information, see [Remove-StoreMailbox](https:/
 
 To verify that you’ve permanently deleted a disconnected mailbox and that it was successfully purged from the Exchange mailbox database, run the following command.
 
-    Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }
+```powershell
+Get-MailboxDatabase | Get-MailboxStatistics | Where {     Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }.DisplayName -eq "<display name>" }
+```
 
 If you successfully purged the mailbox, the command won’t return any results. If the mailbox wasn’t purged, the command will return information about the mailbox.
 

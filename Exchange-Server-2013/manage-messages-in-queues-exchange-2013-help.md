@@ -63,11 +63,15 @@ To remove messages from queues, use the following syntax.
 
 This example removes messages in the queues that have a subject of "Win Big" without sending an NDR.
 
-    Remove-Message -Filter {Subject -eq "Win Big"} -WithNDR $false
+```powershell
+Remove-Message -Filter {Subject -eq "Win Big"} -WithNDR $false
+```
 
 This example removes the message with the message ID 3 from the unreachable queue on server named Mailbox01 and sends an NDR.
 
-    Remove-Message -Identity Mailbox01\Unreachable\3 -WithNDR $true
+```powershell
+Remove-Message -Identity Mailbox01\Unreachable\3 -WithNDR $true
+```
 
 ## How do you know this worked?
 
@@ -105,7 +109,9 @@ You can resume a message that currently has a status of Suspended. By resuming a
 
 To resume messages, use the following syntax:
 
-    Resume-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
+```powershell
+Resume-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
+```
 
 This example resumes all messages being sent from any sender in the Contoso.com domain.
 
@@ -113,7 +119,9 @@ This example resumes all messages being sent from any sender in the Contoso.com 
 
 This example resumes the message with the message ID 3 in the unreachable queue on server Hub01.
 
-    Resume-Message -Identity Hub01\Unreachable\3
+```powershell
+Resume-Message -Identity Hub01\Unreachable\3
+```
 
 To resubmit messages from the poison message queue, perform the following steps:
 
@@ -147,7 +155,9 @@ A message being sent to multiple recipients might be located in multiple queues.
 
 To suspend messages, use the following syntax:
 
-    Suspend-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
+```powershell
+Suspend-Message <-Identity MessageIdentity | -Filter {MessageFilter}>
+```
 
 This example suspends all messages in the queues that are from any sender in the domain contoso.com.
 
@@ -155,7 +165,9 @@ This example suspends all messages in the queues that are from any sender in the
 
 This example suspends the message with the message ID 3 in the unreachable queue on server named Mailbox01:
 
-    Suspend-Message -Identity Mailbox01\Unreachable\3
+```powershell
+Suspend-Message -Identity Mailbox01\Unreachable\3
+```
 
 ## How do you know this worked?
 

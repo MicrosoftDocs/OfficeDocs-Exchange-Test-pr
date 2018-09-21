@@ -67,7 +67,9 @@ For additional management tasks related to sharing policies, see [Sharing polici
 
 This example configures a Web proxy URL on Mailbox server MAIL01.
 
-    Set-ExchangeServer -Identity "MAIL01" -InternetWebProxy "<Webproxy URL>"
+```powershell
+Set-ExchangeServer -Identity "MAIL01" -InternetWebProxy "<Webproxy URL>"
+```
 
 For detailed syntax and parameter information, see [Set-ExchangeServer](https://technet.microsoft.com/en-us/library/bb123716\(v=exchg.150\)).
 
@@ -75,7 +77,9 @@ For detailed syntax and parameter information, see [Set-ExchangeServer](https://
 
 To verify that you have successfully configured the Web proxy URL, run the following Shell command and verify the *InternetWebProxy* parameter information.
 
-    Get-ExchangeServer | format-list
+```powershell
+Get-ExchangeServer | format-list
+```
 
 ## Step 2: Use the Shell to enable the publishing virtual directory
 
@@ -97,7 +101,9 @@ For detailed syntax and parameter information, see [Set-OwaVirtualDirectory](htt
 
 To verify that you have successfully enabled the publishing virtual directory, run the following Shell command and verify the *ExternalURL* parameter information.
 
-    Get-OwaVirtualDirectory | format-list
+```powershell
+Get-OwaVirtualDirectory | format-list
+```
 
 ## Step 3: Create or configure a sharing policy specifically for Internet calendar publishing
 
@@ -145,11 +151,15 @@ This example creates an Internet calendar publishing sharing policy named Intern
 
 This example adds the sharing policy Internet to a user mailbox.
 
-    Set-Mailbox -Identity <user name> -SharingPolicy "Internet"
+```powershell
+Set-Mailbox -Identity <user name> -SharingPolicy "Internet"
+```
 
 This example adds the sharing policy Internet to an organizational unit (OU).
 
-    Set-Mailbox -OrganizationalUnit <OU name> -SharingPolicy "Internet"
+```powershell
+Set-Mailbox -OrganizationalUnit <OU name> -SharingPolicy "Internet"
+```
 
 For detailed syntax and parameter information, see [New-SharingPolicy](https://technet.microsoft.com/en-us/library/dd298186\(v=exchg.150\)) and [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)).
 
@@ -157,7 +167,9 @@ For detailed syntax and parameter information, see [New-SharingPolicy](https://t
 
 To verify that you have successfully created the sharing policy, run the following Shell command to verify the sharing policy information.
 
-    Get-SharingPolicy <policy name> | format-list
+```powershell
+Get-SharingPolicy <policy name> | format-list
+```
 
 ## Option 2: Configure the default sharing policy for Internet calendar publishing
 
@@ -197,5 +209,7 @@ For detailed syntax and parameter information, see [Set-Mailbox](https://technet
 
 To verify that you have successfully updated the Default Sharing Policy, run the following Shell command to verify the sharing policy information.
 
-    Get-SharingPolicy <policy name> | format-list
+```powershell
+Get-SharingPolicy <policy name> | format-list
+```
 

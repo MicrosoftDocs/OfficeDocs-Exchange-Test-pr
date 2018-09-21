@@ -250,7 +250,9 @@ For all message size limits, you need to set values that are larger than the act
 
 4.  Restart IIS by running the following command:
     
-        IISReset /noforce
+    ```powershell
+IISReset /noforce
+```
 
 ## Configure client-specific message size limits from the command line
 

@@ -74,7 +74,9 @@ For additional management tasks related to Information Rights Management (IRM), 
 
   - To create a transport protection rule, you must have existing RMS templates in your AD RMS deployment. This example retrieves the available templates from your AD RMS cluster.
     
-        Get-RMSTemplate | format-list
+    ```powershell
+Get-RMSTemplate | format-list
+```
     
     For detailed syntax and parameter information, see [Get-RMSTemplate](https://technet.microsoft.com/en-us/library/dd297960\(v=exchg.150\)).
 

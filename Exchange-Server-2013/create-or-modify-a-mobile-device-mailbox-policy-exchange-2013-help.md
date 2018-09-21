@@ -133,5 +133,7 @@ To verify that you’ve successfully edited a mobile device mailbox policy, do o
 
 2.  In the Shell, run the following command.
     
-        Get-MobileDeviceMailboxPolicy -Identity <PolicyName>
+    ```powershell
+Get-MobileDeviceMailboxPolicy -Identity <PolicyName>
+```
 

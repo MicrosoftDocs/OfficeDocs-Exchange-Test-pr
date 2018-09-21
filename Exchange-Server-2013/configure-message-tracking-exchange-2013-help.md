@@ -85,11 +85,15 @@ This example sets the following message tracking log settings on the Mailbox ser
 
 This example disables message subject logging in the message tracking log on the Mailbox server named Mailbox01:
 
-    Set-TransportService Mailbox01 -MessageTrackingLogSubjectLoggingEnabled $false
+```powershell
+Set-TransportService Mailbox01 -MessageTrackingLogSubjectLoggingEnabled $false
+```
 
 This example disables message tracking on the Mailbox server named Mailbox01:
 
-    Set-TransportService Mailbox01 -MessageTrackingLogEnabled $false
+```powershell
+Set-TransportService Mailbox01 -MessageTrackingLogEnabled $false
+```
 
 ## How do you know this worked?
 

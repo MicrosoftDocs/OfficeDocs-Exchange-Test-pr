@@ -91,7 +91,9 @@ The location of the queue database and the queue database transaction logs is co
 
 2.  In a Command prompt window, open the EdgeTransport.exe.config file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 3.  Modify the following keys in the `<appSettings>` section.
     
@@ -135,7 +137,9 @@ Use the following procedure to move the existing queue database and transaction 
 
 2.  In a Command prompt window, open the EdgeTransport.exe.config file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 3.  Modify the following keys in the `<appSettings>` section:
     
@@ -151,7 +155,9 @@ Use the following procedure to move the existing queue database and transaction 
 
 5.  Stop the Microsoft Exchange Transport service by running the following command:
     
-        net stop MSExchangeTransport
+    ```powershell
+net stop MSExchangeTransport
+```
 
 6.  Move the existing database files Mail.que and Trn.chk from the original location to the new location.
 
@@ -159,7 +165,9 @@ Use the following procedure to move the existing queue database and transaction 
 
 8.  Start the Microsoft Exchange Transport service by running the following command:
     
-        net start MSExchangeTransport
+    ```powershell
+net start MSExchangeTransport
+```
 
 ## How do you know this worked?
 

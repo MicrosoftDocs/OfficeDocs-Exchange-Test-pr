@@ -49,15 +49,21 @@ By default, the value of the external postmaster address setting is blank. This 
 
 To configure the external postmaster address, use the following syntax.
 
-    Set-TransportConfig -ExternalPostmasterAddress <postmaster address>
+```powershell
+Set-TransportConfig -ExternalPostmasterAddress <postmaster address>
+```
 
 For example, to set the external postmaster address to the value `postmaster@contoso.com`, run the following command
 
-    Set-TransportConfig -ExternalPostmasterAddress postmaster@contoso.com
+```powershell
+Set-TransportConfig -ExternalPostmasterAddress postmaster@contoso.com
+```
 
 To return the external postmaster address to the default value, run the following command:
 
-    Set-TransportConfig -ExternalPostmasterAddress $null
+```powershell
+Set-TransportConfig -ExternalPostmasterAddress $null
+```
 
 ## How do you know this worked?
 
@@ -65,7 +71,9 @@ To verify that you have successfully configured the external postmaster address,
 
 1.  Run the following command on a Mailbox server to verify the external postmaster address value:
     
-        Get-TransportConfig | Format-List ExternalPostmasterAddress
+    ```powershell
+Get-TransportConfig | Format-List ExternalPostmasterAddress
+```
 
 2.  From an external email account, send a message to your Exchange organization that will generate a delivery status notification (DSN). For example, you can configure a transport rule to send a non-delivery report (NDR) for a message from that sender that contains specific keywords. Verify the sender's email address in the DSN matches the value you specified.
 

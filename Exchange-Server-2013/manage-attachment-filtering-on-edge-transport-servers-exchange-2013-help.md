@@ -45,15 +45,21 @@ When you enable or disable the Attachment Filtering agent, the change takes effe
 
 To disable attachment filtering, run the following command:
 
-    Disable-TransportAgent "Attachment Filtering Agent"
+```powershell
+Disable-TransportAgent "Attachment Filtering Agent"
+```
 
 To enable attachment filtering, run the following command:
 
-    Enable-TransportAgent "Attachment Filtering Agent"
+```powershell
+Enable-TransportAgent "Attachment Filtering Agent"
+```
 
 After you enable or disable attachment filtering, restart the Microsoft Exchange Transport service by running the following command:
 
-    Restart-Service MSExchangeTransport
+```powershell
+Restart-Service MSExchangeTransport
+```
 
 ## How do you know this worked?
 
@@ -61,7 +67,9 @@ To verify that you successfully enabled or disabled attachment filtering, do the
 
 1.  Run the following command:
     
-        Get-TransportAgent "Attachment Filtering Agent"
+    ```powershell
+Get-TransportAgent "Attachment Filtering Agent"
+```
 
 2.  If the value of **Enabled** is `True`, attachment filtering is enabled. If the value is `False`, attachment filtering is disabled.
 
@@ -69,19 +77,27 @@ To verify that you successfully enabled or disabled attachment filtering, do the
 
 Attachment filtering entries define the message attachments that you want to keep out of your organization. To view the attachment filtering entries that are used by the Attachment Filtering agent, run the following command:
 
-    Get-AttachmentFilterEntry | Format-Table
+```powershell
+Get-AttachmentFilterEntry | Format-Table
+```
 
 To view a specific MIME content type entry, use the following syntax:
 
-    Get-AttachmentFilteringEntry ContentType:<MIMEContentType>
+```powershell
+Get-AttachmentFilteringEntry ContentType:<MIMEContentType>
+```
 
 For example, to view the content type entry for JPEG images, run the following command:
 
-    Get-AttachmentFilteringEntry ContentType:image/jpeg
+```powershell
+Get-AttachmentFilteringEntry ContentType:image/jpeg
+```
 
 To view a specific file name or file name extension entry, use the following syntax:
 
-    Get-AttachmentFilteringEntry FileName:<FileName or FileNameExtension>
+```powershell
+Get-AttachmentFilteringEntry FileName:<FileName or FileNameExtension>
+```
 
 For example, to view the file name extension entry for JPEG attachments, run the following command:
 
@@ -91,15 +107,21 @@ For example, to view the file name extension entry for JPEG attachments, run the
 
 To add an attachment filtering entry that filters attachments by MIME content type, use the following syntax:
 
-    Add-AttachmentFilterEntry -Name <MIMEContentType> -Type ContentType
+```powershell
+Add-AttachmentFilterEntry -Name <MIMEContentType> -Type ContentType
+```
 
 The following example adds a MIME content type entry that filters JPEG images.
 
-    Add-AttachmentFilterEntry -Name image/jpeg -Type ContentType
+```powershell
+Add-AttachmentFilterEntry -Name image/jpeg -Type ContentType
+```
 
 To add an attachment filtering entry that filters attachments by file name or file name extension, use the following syntax:
 
-    Add-AttachmentFilterEntry -Name <FileName or FileNameExtension> -Type FileName
+```powershell
+Add-AttachmentFilterEntry -Name <FileName or FileNameExtension> -Type FileName
+```
 
 The following example filters attachments that have the .jpg file name extension.
 
@@ -111,7 +133,9 @@ To verify that you successfully added an attachment filtering entry, do the foll
 
 1.  Run the following command to verify that the filtering entry exists.
     
-        Get-AttachmentFilterEntry | Format-Table
+    ```powershell
+Get-AttachmentFilterEntry | Format-Table
+```
 
 2.  Send a test message that contains a prohibited attachment from an external mailbox to an internal recipient and verify that the message is rejected, stripped, or deleted.
 
@@ -119,15 +143,21 @@ To verify that you successfully added an attachment filtering entry, do the foll
 
 To remove an attachment filtering entry that filters attachments by MIME content type, use the following syntax:
 
-    Remove-AttachmentFilterEntry ContentType:<ContentType>
+```powershell
+Remove-AttachmentFilterEntry ContentType:<ContentType>
+```
 
 The following example removes the MIME content type entry for JPEG images.
 
-    Remove-AttachmentFilterEntry ContentType:image/jpeg
+```powershell
+Remove-AttachmentFilterEntry ContentType:image/jpeg
+```
 
 To remove an attachment filtering entry that filters attachments by file name or file name extension, use the following syntax:
 
-    Remove-AttachmentFilterEntry FileName:<FileName or FileNameExtension>
+```powershell
+Remove-AttachmentFilterEntry FileName:<FileName or FileNameExtension>
+```
 
 The following example removes the file name entry for the .jpg file name extension.
 
@@ -139,7 +169,9 @@ To verify that you successfully removed an attachment filtering entry, do the fo
 
 1.  Run the following command to verify that the filtering entry was removed.
     
-        Get-AttachmentFilterEntry | Format-Table
+    ```powershell
+Get-AttachmentFilterEntry | Format-Table
+```
 
 2.  Send a test message that contains an allowed attachment from an external mailbox to an internal recipient and verify that the message was successfully delivered with the attachment.
 
@@ -147,7 +179,9 @@ To verify that you successfully removed an attachment filtering entry, do the fo
 
 To view the attachment filtering action that's used when a prohibited attachment is detected in a message, run the following command:
 
-    Get-AttachmentFilterListConfig
+```powershell
+Get-AttachmentFilterListConfig
+```
 
 ## Use the Shell to configure the attachment filtering action
 

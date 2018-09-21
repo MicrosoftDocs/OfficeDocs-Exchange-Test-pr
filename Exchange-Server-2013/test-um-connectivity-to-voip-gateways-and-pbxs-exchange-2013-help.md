@@ -43,15 +43,21 @@ For additional management tasks related to troubleshooting UM, see [UM services 
 
 This example tests the ability of the UM IP gateway to listen on TCP port 5060 for incoming SIP requests.
 
-    Test-UMConnectivity -ListenPort 5060 -UMIPGateway MyIPGateway
+```powershell
+Test-UMConnectivity -ListenPort 5060 -UMIPGateway MyIPGateway
+```
 
 This example tests the ability of the local Mailbox server to use an unsecured TCP connection instead of a secured mutual TLS connection to place a call through a UM IP gateway named `MyUMIPGateway` by using the telephone number 56780.
 
-    Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
+```powershell
+Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
+```
 
 This example tests the Outlook Voice Access number on a dial plan by using a SIP URI. This example can be used in an environment that includes Lync Server.
 
-    Test-UMConnectivity -UMIPGateway OCSGateway1 -Phone "sip:SIPdialplan.contoso.com@contoso.com"
+```powershell
+Test-UMConnectivity -UMIPGateway OCSGateway1 -Phone "sip:SIPdialplan.contoso.com@contoso.com"
+```
 
 
 > [!NOTE]

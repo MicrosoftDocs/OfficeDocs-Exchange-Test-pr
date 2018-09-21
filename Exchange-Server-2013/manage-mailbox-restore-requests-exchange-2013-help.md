@@ -41,7 +41,9 @@ For additional management tasks related to disconnected mailboxes, see the follo
 
   - To display the value of the *Identity* property for all mailbox restore requests, run the following command.
     
-        Get-MailboxRestoreRequest | Format-Table Identity
+    ```powershell
+Get-MailboxRestoreRequest | Format-Table Identity
+```
     
     You can use this identity value to specify a specific mailbox restore request when you’re performing the procedures in this topic.
 
@@ -61,31 +63,43 @@ You can view the properties of a mailbox restore request, which provide you with
 
 To display a list and the value of the *Identity* property for all mailbox restore requests, run the following command.
 
-    Get-MailboxRestoreRequest | Format-Table Identity
+```powershell
+Get-MailboxRestoreRequest | Format-Table Identity
+```
 
 You can use the identity to get information about specific mailbox restore requests.
 
 This example returns the status of the restore request "Pilar Pinilla \\MailboxRestore" using the *Identity* parameter.
 
-    Get-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore"
+```powershell
+Get-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore"
+```
 
 This example returns all information for the second restore request for the Pilar Pinilla target mailbox.
 
-    Get-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1" | Format-List
+```powershell
+Get-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1" | Format-List
+```
 
 This example returns the status of restore requests being restored from the source database MBD01.
 
-    Get-MailboxRestoreRequest -SourceDatabase MBD01
+```powershell
+Get-MailboxRestoreRequest -SourceDatabase MBD01
+```
 
 This example returns all restore requests that are currently in progress.
 
-    Get-MailboxRestoreRequest -Status InProgress
+```powershell
+Get-MailboxRestoreRequest -Status InProgress
+```
 
 Other useful status states include `Queued`, `Completed`, `Suspended`, and `Failed`.
 
 This example returns all restore requests that have been suspended.
 
-    Get-MailboxRestoreRequest -Suspend $true
+```powershell
+Get-MailboxRestoreRequest -Suspend $true
+```
 
 For detailed syntax and parameter information, see [Get-MailboxRestoreRequest](https://technet.microsoft.com/en-us/library/ff829907\(v=exchg.150\)).
 
@@ -148,7 +162,9 @@ You can view the statistics of a mailbox restore request, which provide you with
 
 This example returns the default statistics for the restore request danp\\MailboxRestore1. By default, the information returned includes name, mailbox, status, and percentage complete.
 
-    Get-MailboxRestoreRequestStatistics -Identity danp\MailboxRestore1
+```powershell
+Get-MailboxRestoreRequestStatistics -Identity danp\MailboxRestore1
+```
 
 This example returns the statistics for Dan Park’s mailbox and exports the report to a .csv file.
 
@@ -399,7 +415,9 @@ If a mailbox restore request fails, you can use the **Set-MailboxRestoreRequest*
 
 This example specifies that the restore request MailboxRestore1 for Debra Garcia’s mailbox skips 10 corrupted mailbox items.
 
-    Set-MailboxRestoreRequest -Identity "Debra Garcia\MailboxRestore1" -BadItemLimit 10
+```powershell
+Set-MailboxRestoreRequest -Identity "Debra Garcia\MailboxRestore1" -BadItemLimit 10
+```
 
 This example specifies that the restore request MailboxRestore1 for Florence Flipo's mailbox skips 100 corrupted items. Because the *BadItemLimit* value is greater than 50, the *AcceptLargeDataLoss* parameter must be specified.
 
@@ -419,7 +437,9 @@ You can suspend a restore request any time after the request was created but bef
 
 This example suspends the restore request MailboxRestore1 for Pilar Pinilla’s mailbox.
 
-    Suspend-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```powershell
+Suspend-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```
 
 This example suspends all restore requests in progress by first retrieving all requests that have a status of `InProgress`, and then piping the output to the **Suspend-MailboxRestoreRequest** cmdlet and including the suspend comment "Resume after FY13Q2 Maintenance."
 
@@ -431,7 +451,9 @@ For detailed syntax and parameter information, see [Suspend-MailboxRestoreReques
 
 To verify that you’ve successfully suspended a mailbox restore request, run the following command.
 
-    Get-MailboxRestoreRequest <identity> | Format-List Suspend,Status
+```powershell
+Get-MailboxRestoreRequest <identity> | Format-List Suspend,Status
+```
 
 If the value of the *Suspend* property equals `True`, the restore request was successfully suspended. Also, a value of `Suspended` for the *Status* property indicates that the restore request was suspended.
 
@@ -441,11 +463,15 @@ Use the **Resume-MailboxRestoreRequest** cmdlet to resume a restore request that
 
 This example resumes the restore request Pilar Pinilla\\MailboxRestore1.
 
-    Resume-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```powershell
+Resume-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```
 
 This example resumes all restore requests that have a status of Failed.
 
-    Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
+```powershell
+Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
+```
 
 For detailed syntax and parameter information, see [Resume-MailboxRestoreRequest](https://technet.microsoft.com/en-us/library/ff829908\(v=exchg.150\)).
 
@@ -453,7 +479,9 @@ For detailed syntax and parameter information, see [Resume-MailboxRestoreRequest
 
 To verify that a restore request has resumed, run the following command.
 
-    Get-MailboxRestoreRequest <identity> | Format-List Suspend,Status
+```powershell
+Get-MailboxRestoreRequest <identity> | Format-List Suspend,Status
+```
 
 If the value of the *Suspend* property equals `False`, the restore request successfully resumed. Also, a value of `InProgress` for the *Status* property indicates that the restore request resumed.
 
@@ -469,15 +497,21 @@ You can use the **Remove-MailboxRestoreRequest** cmdlet to remove mailbox restor
 
 This example removes the restore request Pilar Pinilla\\MailboxRestore1.
 
-    Remove-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```powershell
+Remove-MailboxRestoreRequest -Identity "Pilar Pinilla\MailboxRestore1"
+```
 
 This example removes all restore requests that have the status of Completed.
 
-    Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+```powershell
+Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+```
 
 This example cancels the restore request by using the *RequestGuid* parameter for a request stored on MBXDB01. The parameter set that requires the *RequestGuid* and *RequestQueue* parameters is used only for Microsoft Replication Service debugging purposes. You should use this parameter set only if instructed by Microsoft Customer Service and Support.
 
-    Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
+```powershell
+Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
+```
 
 For detailed syntax and parameter information, see [Remove-MailboxRestoreRequest](https://technet.microsoft.com/en-us/library/ff829910\(v=exchg.150\)).
 
@@ -485,7 +519,9 @@ For detailed syntax and parameter information, see [Remove-MailboxRestoreRequest
 
 To verify that you’ve successfully removed a mailbox restore request, run the following command.
 
-    Get-MailboxRestoreRequest -Identity <identity of removed restore request>
+```powershell
+Get-MailboxRestoreRequest -Identity <identity of removed restore request>
+```
 
 The command will return an error stating that the restore request doesn't exist.
 

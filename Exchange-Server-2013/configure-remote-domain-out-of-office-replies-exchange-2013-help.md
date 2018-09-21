@@ -39,9 +39,13 @@ You can use the **Set-RemoteDomain** cmdlet to configure the properties of a rem
 
 This example disables out-of-office messages for the remote domain named Contoso.
 
-    Set-RemoteDomain Contoso -AllowedOOFType None
+```powershell
+Set-RemoteDomain Contoso -AllowedOOFType None
+```
 
 This example allows only external out-of-office messages.
 
-    Set-RemoteDomain Contoso -AllowedOOFType External
+```powershell
+Set-RemoteDomain Contoso -AllowedOOFType External
+```
 

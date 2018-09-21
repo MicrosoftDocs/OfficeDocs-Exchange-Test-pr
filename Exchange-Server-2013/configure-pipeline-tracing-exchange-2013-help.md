@@ -49,11 +49,15 @@ Use the following syntax to configure the pipeline tracing sender address.
 
 This example configures pipeline tracing to capture snapshots of all messages sent by the sender chris@contoso.com in the Transport service on the Mailbox server named Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingSenderAddress chris@contoso.com
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingSenderAddress chris@contoso.com
+```
 
 This example configures pipeline tracing to capture snapshots of all the system-generated messages received by the Transport service on the Mailbox server named Mailbox02.
 
-    Set-TransportService Mailbox02 -PipelineTracingSenderAddress "<>"
+```powershell
+Set-TransportService Mailbox02 -PipelineTracingSenderAddress "<>"
+```
 
 
 > [!WARNING]
@@ -71,7 +75,9 @@ Use the following syntax to configure the pipeline tracing folder.
 
 This example sets the pipeline tracing folder for the Transport service on the Mailbox server named Mailbox01 to D:\\Hub\\Pipeline Tracing.
 
-    Set-TransportService Mailbox01 -PipelineTracingPath "D:\Hub\Pipeline Tracing"
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingPath "D:\Hub\Pipeline Tracing"
+```
 
 ## Step 3: Use the Shell to enable pipeline tracing
 
@@ -83,7 +89,9 @@ Use the following syntax to enable pipeline tracing.
 
 This example enables pipeline tracing in the Transport service on the Mailbox server named Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingEnabled $true
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingEnabled $true
+```
 
 ## How do you know this worked?
 
@@ -107,7 +115,9 @@ Use the following syntax to disable pipeline tracing.
 
 This example disables pipeline tracing in the Transport service on the Mailbox server named Mailbox01.
 
-    Set-TransportService Mailbox01 -PipelineTracingEnabled $false
+```powershell
+Set-TransportService Mailbox01 -PipelineTracingEnabled $false
+```
 
 ## How do you know this worked?
 

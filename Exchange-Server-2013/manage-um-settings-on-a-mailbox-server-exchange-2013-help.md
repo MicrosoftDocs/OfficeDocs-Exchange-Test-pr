@@ -49,7 +49,9 @@ For additional management tasks related to Unified Messaging and Mailbox servers
 
 This example removes a Mailbox server named `MyMailboxServer` from all Session Initiation Protocol (SIP) dial plans.
 
-    Set-UMService -Identity MyMailboxServer -DialPlans $null
+```powershell
+Set-UMService -Identity MyMailboxServer -DialPlans $null
+```
 
 This example adds the Mailbox server named `MyMailboxServer` to a UM SIP dial plan named `MySIPDialPlanName` and also sets the maximum number of incoming voice calls.
 
@@ -63,9 +65,13 @@ This example sets the startup mode to Dual mode on a Mailbox server named `MyUMS
 
 This example displays a list of all the Mailbox servers.
 
-    Get-UMService
+```powershell
+Get-UMService
+```
 
 This example displays a formatted list of properties for the Mailbox server named `MyMailboxServer`.
 
-    Get-UMService -Identity MyMailboxServer | Format-List
+```powershell
+Get-UMService -Identity MyMailboxServer | Format-List
+```
 

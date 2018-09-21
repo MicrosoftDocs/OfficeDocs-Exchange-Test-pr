@@ -37,7 +37,9 @@ For additional information related to POP3, see [POP3 and IMAP4 in Exchange Serv
 
 This example enables POP3 users to use the iCalendar standard, a standard for exchanging calendar information.
 
-    Set-PopSettings -Identity CAS01 -CalendarItemRetrievalOption iCalendar
+```powershell
+Set-PopSettings -Identity CAS01 -CalendarItemRetrievalOption iCalendar
+```
 
 This example enables POP3 users to access calendar information from an internal server.
 
@@ -45,11 +47,15 @@ This example enables POP3 users to access calendar information from an internal 
 
 This example enables POP3 users to access calendar information from the Internet on an external server.
 
-    Set-PopSettings -CalendarItemRetrievalOption InternetUrl
+```powershell
+Set-PopSettings -CalendarItemRetrievalOption InternetUrl
+```
 
 This example enables POP3 users to access calendar information by using a direct Outlook Web App URL. If you’re using `Custom`, you must specify an Outlook Web App URL using the *OWAServerUrl* parameter.
 
-    Set-PopSettings -CalendarItemRetrievalOption Custom -OwaServerUrl "https://OwaServer01"
+```powershell
+Set-PopSettings -CalendarItemRetrievalOption Custom -OwaServerUrl "https://OwaServer01"
+```
 
 After you've specified the calendar options for POP3, you must restart the POP3 services. For information about how to restart the POP3 services, see [Start and stop the POP3 services](start-and-stop-the-pop3-services-exchange-2013-help.md).
 
@@ -61,7 +67,9 @@ To verify that you’ve successfully set calendar options, do the following:
 
 Run the following command in the Shell.
 
-    Get-PopSettings | format-list
+```powershell
+Get-PopSettings | format-list
+```
 
 Verify that the calendar settings are correct.
 

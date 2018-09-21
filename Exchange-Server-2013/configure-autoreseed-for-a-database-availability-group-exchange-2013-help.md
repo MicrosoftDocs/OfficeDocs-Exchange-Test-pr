@@ -51,11 +51,15 @@ The first step involves configuring the root directories for the databases (*Aut
 
 This example illustrates how to configure the root path for the databases.
 
-    Set-DatabaseAvailabilityGroup DAG1 -AutoDagDatabasesRootFolderPath "C:\ExchDbs"
+```powershell
+Set-DatabaseAvailabilityGroup DAG1 -AutoDagDatabasesRootFolderPath "C:\ExchDbs"
+```
 
 This example illustrates how to configure the root path for the storage volumes.
 
-    Set-DatabaseAvailabilityGroup DAG1 -AutoDagVolumesRootFolderPath "C:\ExchVols"
+```powershell
+Set-DatabaseAvailabilityGroup DAG1 -AutoDagVolumesRootFolderPath "C:\ExchVols"
+```
 
 ## How do you know this step worked?
 
@@ -71,7 +75,9 @@ Next, configure the number of databases per volume (*AutoDagDatabaseCopiesPerVol
 
 This example illustrates how to configure this AutoReseed setting for a DAG configured with 4 databases per volume.
 
-    Set-DatabaseAvailabilityGroup DAG1 -AutoDagDatabaseCopiesPerVolume 4
+```powershell
+Set-DatabaseAvailabilityGroup DAG1 -AutoDagDatabaseCopiesPerVolume 4
+```
 
 ## How do you know this step worked?
 
@@ -92,7 +98,9 @@ Next, create the directories that correspond to the root directories you configu
 
 To verify that you've successfully configured the root directories for databases and volumes, run the following command.
 
-    Dir C:\
+```powershell
+Dir C:\
+```
 
 The created directories should appear in the output list.
 
@@ -112,7 +120,9 @@ The names of the mounted folders can be any folder name, as long as the folders 
 
 To verify that you've successfully mounted the volume folders, run the following command.
 
-    Dir C:\
+```powershell
+Dir C:\
+```
 
 The mounted volumes should appear in the output list.
 
@@ -140,7 +150,9 @@ md c:\ExchangeDatabases\db004
 
 To verify that you've successfully mounted the database folders, run the following command.
 
-    Dir C:\ExchangeDatabases
+```powershell
+Dir C:\ExchangeDatabases
+```
 
 The created directories should appear in the output list.
 
@@ -154,7 +166,9 @@ Create the mount points for each database and link the mount point to the correc
 
 To verify that you've successfully created the mount points for the database, run the following command.
 
-    Mountvol.exe C:\ExchangeDatabases\db001 /L
+```powershell
+Mountvol.exe C:\ExchangeDatabases\db001 /L
+```
 
 The mounted volume should appear in the mount point list.
 
@@ -206,7 +220,9 @@ Repeat the preceding commands for databases on every volume.
 
 To verify that you've successfully created the database directory structure, run the following command.
 
-    Dir C:\ExchangeDatabases /s
+```powershell
+Dir C:\ExchangeDatabases /s
+```
 
 The created directories should appear in the output list.
 
@@ -235,10 +251,14 @@ To verify that you've configured AutoReseed for a DAG, do the following:
 2.  Run the following command to verify the directory structure is configured correctly (below are the default paths; if necessary, substitute the paths for the paths you're using).
     
     ```
-    Dir c:\ExchangeDatabases /s
+```powershell
+Dir C:\ExchangeDatabases /s
+```
     ```
 
     ```
-    Dir c:\ExchangeVolumes /s
+```powershell
+Dir c:\ExchangeVolumes /s
+```
     ```
 

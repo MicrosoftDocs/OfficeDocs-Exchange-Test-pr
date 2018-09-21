@@ -85,7 +85,9 @@ For details about how to create a sharing policy, see [Create a sharing policy](
 
   - This example modifies the sharing policy Contoso for contoso.com, which is a domain outside your organization. This policy allows users in the Contoso domain to see simple free/busy information.
     
-        Set-SharingPolicy -Identity Contoso -Domains 'sales.contoso.com: CalendarSharingFreeBusySimple'
+    ```powershell
+Set-SharingPolicy -Identity Contoso -Domains 'sales.contoso.com: CalendarSharingFreeBusySimple'
+```
 
   - This example adds a second domain to the sharing policy Contoso. When you're adding a domain to an existing policy, you must include any previously included domains.
     
@@ -93,20 +95,28 @@ For details about how to create a sharing policy, see [Create a sharing policy](
 
   - This example sets the sharing policy Contoso as the default sharing policy.
     
-        Set-SharingPolicy -Identity Contoso -Default $True
+    ```powershell
+Set-SharingPolicy -Identity Contoso -Default $True
+```
 
   - This example disables the sharing policy Contoso.
     
-        Set-SharingPolicy -Identity "Contoso" -Enabled $False
+    ```powershell
+Set-SharingPolicy -Identity "Contoso" -Enabled $False
+```
 
   - The first example removes the sharing policy Contoso. The second example removes the sharing policy Contoso and suppresses the confirmation that you want to remove the policy.
     
       ```
-      Remove-SharingPolicy -Identity Contoso
+  ```powershell
+Remove-SharingPolicy -Identity Contoso
+```
       ```
 
       ```
-      Remove-SharingPolicy -Identity Contoso -Confirm
+  ```powershell
+Remove-SharingPolicy -Identity Contoso -Confirm
+```
       ```
 
 For detailed syntax and parameter information, see [Set-SharingPolicy](https://technet.microsoft.com/en-us/library/dd297931\(v=exchg.150\)) and [Remove-SharingPolicy](https://technet.microsoft.com/en-us/library/dd351071\(v=exchg.150\)).

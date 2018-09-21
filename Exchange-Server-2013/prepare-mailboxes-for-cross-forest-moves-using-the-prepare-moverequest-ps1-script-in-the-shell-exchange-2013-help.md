@@ -185,7 +185,9 @@ This example supports pipelining if you supply a list of mailbox identities.
 
 1.  Run the following command.
     
-        $UserCredentials = Get-Credential
+    ```powershell
+$UserCredentials = Get-Credential
+```
 
 2.  Run the following command to pass the credential information to the *RemoteForestCredential* parameter in the Prepare-MoveRequest.ps1 script.
     
@@ -209,7 +211,9 @@ This example calls a .csv file to bulk create the target mail-enabled users.
 
 1.  Run the following command to get the remote forest credentials.
     
-        $UserCredentials = Get-Credential
+    ```powershell
+$UserCredentials = Get-Credential
+```
 
 2.  Run the following command to pass the credential information to the *RemoteForestCredential* parameter in the Prepare-MoveRequest.ps1 script.
     

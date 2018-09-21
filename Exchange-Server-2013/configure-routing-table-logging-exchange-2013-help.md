@@ -77,15 +77,21 @@ To verify that you have successfully configured routing table logging, do the fo
 
 1.  In a Command prompt window, open the EdgeTransport.exe.config application configuration file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Modify the following key in the `<appSettings>` section.
     
-        <add key="RoutingConfigReloadInterval" value="<hh:mm:ss>" />
+    ```command line
+<add key="RoutingConfigReloadInterval" value="<hh:mm:ss>" />
+```
     
     For example, to change the interval for automatic recalculation of the routing table to 10 hours, use the following value:
     
-        <add key="RoutingConfigReloadInterval" value="10:00:00" />
+    ```command line
+<add key="RoutingConfigReloadInterval" value="10:00:00" />
+```
 
 3.  When you are finished, save and close the EdgeTransport.exe.config file.
 

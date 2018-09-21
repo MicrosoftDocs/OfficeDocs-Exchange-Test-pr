@@ -59,7 +59,9 @@ After you've created the new assignment policy, you assign users to it. For more
 
 To create an explicit assignment policy that can be manually assigned to mailboxes, use the following syntax.
 
-    New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign>
+```powershell
+New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign>
+```
 
 This example creates the explicit assignment policy Limited Mailbox Configuration and assigns the `MyBaseOptions`, `MyAddressInformation`, and `MyDisplayName` roles to it.
 
@@ -71,7 +73,9 @@ For detailed syntax and parameter information, see [New-RoleAssignmentPolicy](ht
 
 To create a default assignment policy assigned to new mailboxes, use the following syntax.
 
-    New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign> -IsDefault
+```powershell
+New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign> -IsDefault
+```
 
 This example creates the default assignment policy Limited Mailbox Configuration and assigns the `MyBaseOptions`, `MyAddressInformation`, and `MyDisplayName` roles to it.
 
@@ -101,11 +105,15 @@ If you no longer need a management role assignment policy, you can remove it.
 
 To remove an assignment policy, use the following syntax.
 
-    Remove-RoleAssignmentPolicy <role assignment policy>
+```powershell
+Remove-RoleAssignmentPolicy <role assignment policy>
+```
 
 This example removes the New York Temporary Users assignment policy.
 
-    Remove-RoleAssignmentPolicy "New York Temporary Users"
+```powershell
+Remove-RoleAssignmentPolicy "New York Temporary Users"
+```
 
 For detailed syntax and parameter information, see [Remove-RoleAssignmentPolicy](https://technet.microsoft.com/en-us/library/dd638190\(v=exchg.150\)).
 
@@ -133,15 +141,21 @@ This procedure makes use of pipelining and the **Format-Table** cmdlet. For more
 
 To return a list of all assignment policies in your organization, use the following command.
 
-    Get-RoleAssignmentPolicy
+```powershell
+Get-RoleAssignmentPolicy
+```
 
 To return a list of specific properties for all the assignment policies in your organization, you can pipe the results to the **Format-Table** cmdlet and specify the properties you want in the list of results. Use the following syntax.
 
-    Get-RoleAssignmentPolicy | Format-Table <property 1>, <property 2...>
+```powershell
+Get-RoleAssignmentPolicy | Format-Table <property 1>, <property 2...>
+```
 
 This example returns a list of all the assignment policies in your organization and includes the **Name** and **IsDefault** properties.
 
-    Get-RoleAssignmentPolicy | Format-Table Name, IsDefault
+```powershell
+Get-RoleAssignmentPolicy | Format-Table Name, IsDefault
+```
 
 For detailed syntax and parameter information, see [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)) or [Get-RoleAssignmentPolicy](https://technet.microsoft.com/en-us/library/dd638195\(v=exchg.150\)).
 
@@ -157,11 +171,15 @@ This procedure makes use of pipelining and the **Format-List** cmdlet. For more 
 
 To view the details of a specific assignment policy, use the following syntax.
 
-    Get-RoleAssignmentPolicy <assignment policy name> | Format-List
+```powershell
+Get-RoleAssignmentPolicy <assignment policy name> | Format-List
+```
 
 This example views the details about the Redmond Users - no Text Messaging assignment policy.
 
-    Get-RoleAssignmentPolicy "Redmond Users - no Text Messaging" | Format-List
+```powershell
+Get-RoleAssignmentPolicy "Redmond Users - no Text Messaging" | Format-List
+```
 
 For detailed syntax and parameter information, see [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)) or [Get-RoleAssignmentPolicy](https://technet.microsoft.com/en-us/library/dd638195\(v=exchg.150\)).
 
@@ -177,7 +195,9 @@ This procedure makes use of pipelining and the **Where** cmdlet. For more inform
 
 This example returns the default assignment policy.
 
-    Get-RoleAssignmentPolicy | Where { $_.IsDefault -eq $True }
+```powershell
+Get-RoleAssignmentPolicy | Where {     Get-RoleAssignmentPolicy | Where { $_.IsDefault -eq $True }.IsDefault -eq $True }
+```
 
 For detailed syntax and parameter information, see [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)) or [Get-RoleAssignmentPolicy](https://technet.microsoft.com/en-us/library/dd638195\(v=exchg.150\)).
 
@@ -193,11 +213,15 @@ This procedure makes use of pipelining and the **Where** cmdlet. For more inform
 
 Use the following syntax.
 
-    Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "<role assignment policy>" }
+```powershell
+Get-Mailbox | Where {     Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "<role assignment policy>" }.RoleAssignmentPolicy -Eq "<role assignment policy>" }
+```
 
 This example finds all the mailboxes assigned the policy Vancouver End Users.
 
-    Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "Vancouver End Users" }
+```powershell
+Get-Mailbox | Where {     Get-Mailbox | Where { $_.RoleAssignmentPolicy -Eq "Vancouver End Users" }.RoleAssignmentPolicy -Eq "Vancouver End Users" }
+```
 
 For detailed syntax and parameter information, see [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)) or [Get-RoleAssignmentPolicy](https://technet.microsoft.com/en-us/library/dd638195\(v=exchg.150\)).
 
@@ -215,11 +239,15 @@ You can change the management role assignment policy assigned to new mailboxes t
 
 To change the default assignment policy, use the following syntax.
 
-    Set-RoleAssignmentPolicy <assignment policy name> -IsDefault
+```powershell
+Set-RoleAssignmentPolicy <assignment policy name> -IsDefault
+```
 
 This example sets the Vancouver End Users assignment policy as the default assignment policy.
 
-    Set-RoleAssignmentPolicy "Vancouver End Users" -IsDefault
+```powershell
+Set-RoleAssignmentPolicy "Vancouver End Users" -IsDefault
+```
 
 
 > [!IMPORTANT]

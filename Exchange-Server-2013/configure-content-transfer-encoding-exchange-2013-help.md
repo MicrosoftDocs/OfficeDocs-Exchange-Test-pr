@@ -105,21 +105,29 @@ For more information about remote domains, see [Remote domains](remote-domains-e
 
 To configure the content transfer encoding method for the organization, run the following command:
 
-    Set-OrganizationConfig -ByteEncoderTypeFor7BitCharsets <Integer>
+```powershell
+Set-OrganizationConfig -ByteEncoderTypeFor7BitCharsets <Integer>
+```
 
 For example, to set the content transfer encoding method to Base64, run the following command:
 
-    Set-OrganizationConfig -ByteEncoderTypeFor7BitCharsets 2
+```powershell
+Set-OrganizationConfig -ByteEncoderTypeFor7BitCharsets 2
+```
 
 ## Use the Shell to configure the content transfer encoding method for a remote domain
 
 To configure the content transfer encoding method for all the recipients in a remote domain, run the following command:
 
-    Set-RemoteDomain -ByteEncoderTypeFor7BitCharsets <Value>
+```powershell
+Set-RemoteDomain -ByteEncoderTypeFor7BitCharsets <Value>
+```
 
 For example, to set the content transfer encoding method to Base64, run the following command:
 
-    Set- RemoteDomain -ByteEncoderTypeFor7BitCharsets UseBase64
+```powershell
+Set- RemoteDomain -ByteEncoderTypeFor7BitCharsets UseBase64
+```
 
 ## How do you know this worked?
 

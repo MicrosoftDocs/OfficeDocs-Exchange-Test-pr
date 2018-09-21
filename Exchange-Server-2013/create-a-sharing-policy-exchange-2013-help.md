@@ -107,7 +107,9 @@ You can edit the default sharing policy to allow all of your users to share full
 
   - This example creates the sharing policy Contoso for the external federated domain contoso.com. This policy allows users in the contoso.com domain to see your user's detailed calendar availability (free/busy) information. By default, this policy is enabled.
     
-        New-SharingPolicy -Name "Contoso" -Domains contoso.com: CalendarSharingFreeBusyDetail
+    ```powershell
+New-SharingPolicy -Name "Contoso" -Domains contoso.com: CalendarSharingFreeBusyDetail
+```
 
   - This example creates the sharing policy ContosoWoodgrove for two different federated domains (contoso.com and woodgrovebank.com) with different sharing actions configured for each domain. The policy is disabled.
     
@@ -117,7 +119,9 @@ You can edit the default sharing policy to allow all of your users to share full
     
     1.  Set the Web proxy URL for MAIL01.
         
-            Set-ExchangeServer -Identity "Mail01" -InternetWebProxy "<Webproxy URL>"
+        ```powershell
+Set-ExchangeServer -Identity "Mail01" -InternetWebProxy "<Webproxy URL>"
+```
     
     2.  Enable the publishing virtual directory on CAS01.
         
@@ -139,7 +143,9 @@ For detailed syntax and parameter information, see the following topics:
 
 To verify that you have successfully created the sharing policy, run the following Shell command to verify the sharing policy information.
 
-    Get-SharingPolicy <policy name> | format-list
+```powershell
+Get-SharingPolicy <policy name> | format-list
+```
 
 
 > [!TIP]

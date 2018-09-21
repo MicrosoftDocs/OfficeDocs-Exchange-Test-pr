@@ -49,11 +49,15 @@ Looking for other management tasks related to role scopes? Check out [Advanced p
 
 To change the name of a scope, use the following syntax.
 
-    Set-ManagementScope <current scope name> -Name <new scope name>
+```powershell
+Set-ManagementScope <current scope name> -Name <new scope name>
+```
 
 This example changes the Seattle Servers scope to Seattle Exchange Servers.
 
-    Set-ManagementScope "Seattle Servers" -Name "Seattle Exchange Servers"
+```powershell
+Set-ManagementScope "Seattle Servers" -Name "Seattle Exchange Servers"
+```
 
 For detailed syntax and parameter information, see [Set-ManagementScope](https://technet.microsoft.com/en-us/library/dd297996\(v=exchg.150\)).
 
@@ -61,11 +65,15 @@ For detailed syntax and parameter information, see [Set-ManagementScope](https:/
 
 To change the recipient filter on a scope, use the following syntax.
 
-    Set-ManagementScope <scope name> -RecipientRestrictionFilter { <new recipient filter> }
+```powershell
+Set-ManagementScope <scope name> -RecipientRestrictionFilter { <new recipient filter> }
+```
 
 This example changes the recipient filter to match all the recipient objects where the **Company** property is set to contoso.
 
-    Set-ManagementScope "Company Scope" -RecipientRestrictionFilter { Company -eq 'contoso' }
+```powershell
+Set-ManagementScope "Company Scope" -RecipientRestrictionFilter { Company -eq 'contoso' }
+```
 
 For detailed syntax and parameter information, see [Set-ManagementScope](https://technet.microsoft.com/en-us/library/dd297996\(v=exchg.150\)).
 
@@ -75,11 +83,15 @@ For more information about recipient filters and to see a list of filterable rec
 
 To change the OU root on a scope, use the following syntax.
 
-    Set-ManagementScope <scope name> -RecipientRoot <OU>
+```powershell
+Set-ManagementScope <scope name> -RecipientRoot <OU>
+```
 
 This example changes the OU root to the North America/Sales Sales Users OU under the contoso.com domain.
 
-    Set-ManagementScope "Sales Users" -RecipientRoot "contoso.com/North America/Sales"
+```powershell
+Set-ManagementScope "Sales Users" -RecipientRoot "contoso.com/North America/Sales"
+```
 
 For detailed syntax and parameter information, see [Set-ManagementScope](https://technet.microsoft.com/en-us/library/dd297996\(v=exchg.150\)).
 
@@ -87,7 +99,9 @@ For detailed syntax and parameter information, see [Set-ManagementScope](https:/
 
 To change the server filter on a scope, use the following syntax.
 
-    Set-ManagementScope <scope name> -ServerRestrictionFilter { <new server filter> }
+```powershell
+Set-ManagementScope <scope name> -ServerRestrictionFilter { <new server filter> }
+```
 
 This example changes the server filter to match all the server objects where the **ServerSite** property is set to 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com'.
 
@@ -113,7 +127,9 @@ You can't change the list of servers on a scope. If you need to change the serve
 
 To change the database filter on a scope, use the following syntax.
 
-    Set-ManagementScope <scope name> -DatabaseRestrictionFilter { <new database filter> }
+```powershell
+Set-ManagementScope <scope name> -DatabaseRestrictionFilter { <new database filter> }
+```
 
 This example changes the database filter to match all the database objects where the **Name** property contains the string "Executive".
 

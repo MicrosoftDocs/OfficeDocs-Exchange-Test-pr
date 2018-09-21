@@ -41,7 +41,9 @@ This role may be assigned to one or more role assignment policies by default. Fo
 
 If you want to view a list of role groups, users, or USGs assigned to this role, use the following command.
 
-    Get-ManagementRoleAssignment -Role "<role name>"
+```powershell
+Get-ManagementRoleAssignment -Role "<role name>"
+```
 
 ## Regular and delegating role assignments
 

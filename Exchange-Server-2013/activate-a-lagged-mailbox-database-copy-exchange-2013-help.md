@@ -71,7 +71,9 @@ Looking for other information related to lagged mailbox database copies? Check o
 
 5.  This example uses Eseutil to perform the recovery operation.
     
-        Eseutil.exe /r eXX /a
+    ```powershell
+Eseutil.exe /r eXX /a
+```
     
 
     > [!NOTE]
@@ -88,7 +90,9 @@ Looking for other information related to lagged mailbox database copies? Check o
 
 7.  After the recovery process is complete, this example resumes replication for the database that was used as part of the recovery process.
     
-        Resume-MailboxDatabaseCopy DB1\EX3
+    ```powershell
+Resume-MailboxDatabaseCopy DB1\EX3
+```
 
 For detailed syntax and parameter information, see [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd351074\(v=exchg.150\)) or [Resume-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd335220\(v=exchg.150\)).
 
@@ -110,7 +114,9 @@ For detailed syntax and parameter information, see [Suspend-MailboxDatabaseCopy]
 
 2.  This example activates the lagged mailbox database copy using the [Move-ActiveMailboxDatabase](https://technet.microsoft.com/en-us/library/dd298068\(v=exchg.150\)) cmdlet with the *SkipLagChecks* parameter.
     
-        Move-ActiveMailboxDatabase DB1 -ActivateOnServer EX3 -SkipLagChecks
+    ```powershell
+Move-ActiveMailboxDatabase DB1 -ActivateOnServer EX3 -SkipLagChecks
+```
 
 ## Use the Shell to activate a lagged mailbox database copy by using SafetyNet recovery
 
@@ -130,7 +136,9 @@ For detailed syntax and parameter information, see [Suspend-MailboxDatabaseCopy]
 
 2.  Determine the required logs for the lagged database copy by looking for the “Log Required:” value in ESEUTIL database header output
     
-        Eseutil /mh <DBPath> | findstr /c:"Log Required"
+    ```powershell
+Eseutil /mh <DBPath> | findstr /c:"Log Required"
+```
     
     Take note of the hexadecimal numbers in parentheses. The first number is the lowest generation required (referred to as LowGeneration), and the second number is the highest generation required (referred to as HighGeneration). Move all log generation files that have a generation sequence greater than HighGeneration to a different location so that they are not replayed into the database.
 
@@ -150,5 +158,7 @@ To verify that you've successfully activated a lagged mailbox database copy, do 
 
   - In the Shell, run the following command to display status information for a database copy.
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+    ```powershell
+Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+```
 

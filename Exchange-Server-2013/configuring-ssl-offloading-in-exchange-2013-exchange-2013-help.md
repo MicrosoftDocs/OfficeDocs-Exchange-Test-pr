@@ -85,21 +85,29 @@ To enable SSL offloading for Outlook Web App, you need to remove the SSL require
     
       - Using the command line, type the following and then press Enter.
         
-            appcmd set config "Default Web Site/owa" /section:access /sslFlags:None /commit:APPHOST
+        ```powershell
+appcmd set config "Default Web Site/owa" /section:access /sslFlags:None /commit:APPHOST
+```
 
   - **Step 2**   You need to recycle the correct application pool or restart Internet Information Services by using one of the following methods:
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            appcmd Recycle AppPool MSExchangeOWAAppPool
+        ```powershell
+appcmd Recycle AppPool MSExchangeOWAAppPool
+```
     
       - Using a Windows PowerShell cmdlet, type the following and then press Enter.
         
-            IIS:\>Restart-WebAppPool MSExchangeOWAAppPool
+        ```powershell
+IIS:\>Restart-WebAppPool MSExchangeOWAAppPool
+```
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            iisreset /noforce
+        ```powershell
+iisreset /noforce
+```
     
       - Using Internet Information Services (IIS) Manager: In Internet Information Services (IIS) Manager, in the **Actions** pane, click **Restart**.
 
@@ -115,22 +123,30 @@ To enable SSL offloading for EAC, you need to remove the SSL requirement on the 
     
       - Using the command line, type the following and then press Enter.
         
-            appcmd set config "Default Web Site/ecp" /section:access /sslFlags:None /commit:APPHOST
+        ```powershell
+appcmd set config "Default Web Site/ecp" /section:access /sslFlags:None /commit:APPHOST
+```
 
 
   - **Step 2**   You need to recycle the correct application pool or restart Internet Information Services by using one of the following methods:
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            appcmd Recycle AppPool MSExchangeECPAppPool
+        ```powershell
+appcmd Recycle AppPool MSExchangeECPAppPool
+```
     
       - Using a Windows PowerShell cmdlet, type the following and then press Enter.
         
-            IIS:\>Restart-WebAppPool MSExchangeECPAppPool
+        ```powershell
+IIS:\>Restart-WebAppPool MSExchangeECPAppPool
+```
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            iisreset /noforce
+        ```powershell
+iisreset /noforce
+```
     
       - Using Internet Information Services (IIS) Manager: In Internet Information Services (IIS) Manager, in the **Actions** pane, click **Restart**.
 
@@ -164,15 +180,21 @@ SSL offloading for Outlook Anywhere is enabled by default. Outlook Anywhere clie
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            appcmd Recycle AppPool MSExchangeRpcProxyFrontEndAppPool
+        ```powershell
+appcmd Recycle AppPool MSExchangeRpcProxyFrontEndAppPool
+```
     
       - Using a Windows PowerShell cmdlet, type the following and then press Enter.
         
-            IIS:\>Restart-WebAppPool MSExchangeRpcProxyFrontEndAppPool
+        ```powershell
+IIS:\>Restart-WebAppPool MSExchangeRpcProxyFrontEndAppPool
+```
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            iisreset /noforce
+        ```powershell
+iisreset /noforce
+```
     
       - Using Internet Information Services (IIS) Manager: In Internet Information Services (IIS) Manager, in the **Actions** pane, click **Restart**.
 
@@ -194,21 +216,29 @@ To enable SSL offloading for the Offline Address Book (OAB), you need to remove 
     
       - Using the command line, type the following and then press Enter.
         
-            appcmd set config "Default Web Site/OAB" /section:access /sslFlags:None /commit:APPHOST
+        ```powershell
+appcmd set config "Default Web Site/OAB" /section:access /sslFlags:None /commit:APPHOST
+```
 
   - **Step 2**   You need to recycle the correct application pool or restart Internet Information Services by using one of the following methods:
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            appcmd Recycle AppPool MSExchangeOABAppPool
+        ```powershell
+appcmd Recycle AppPool MSExchangeOABAppPool
+```
     
       - Using a Windows PowerShell cmdlet, type the following and then press Enter.
         
-            IIS:\>Restart-WebAppPool MSExchangeOABAppPool
+        ```powershell
+IIS:\>Restart-WebAppPool MSExchangeOABAppPool
+```
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            iisreset /noforce
+        ```powershell
+iisreset /noforce
+```
     
       - Using Internet Information Services (IIS) Manager: In Internet Information Services (IIS) Manager, in the **Actions** pane, click **Restart**.
 
@@ -230,15 +260,21 @@ To enable SSL offloading for Exchange ActiveSync (EAS), you need to remove the S
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            appcmd Recycle AppPool MSExchangeSyncAppPool
+        ```powershell
+appcmd Recycle AppPool MSExchangeSyncAppPool
+```
     
       - Using a Windows PowerShell cmdlet, type the following and then press Enter.
         
-            IIS:\>Restart-WebAppPool MSExchangeSyncAppPool
+        ```powershell
+IIS:\>Restart-WebAppPool MSExchangeSyncAppPool
+```
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            iisreset /noforce
+        ```powershell
+iisreset /noforce
+```
     
       - Using Internet Information Services (IIS) Manager: In Internet Information Services (IIS) Manager, in the **Actions** pane, click **Restart**.
 
@@ -254,21 +290,29 @@ To enable SSL offloading for Exchange Web Services (EWS), you need to remove the
     
       - Using the command line, type the following and then press Enter.
         
-            appcmd set config "Default Web Site/EWS" /section:access /sslFlags:None /commit:APPHOST
+        ```powershell
+appcmd set config "Default Web Site/EWS" /section:access /sslFlags:None /commit:APPHOST
+```
 
   - **Step 2**   You need to recycle the correct application pool or restart Internet Information Services by using one of the following methods:
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            appcmd Recycle AppPool MSExchangeServicesAppPool
+        ```powershell
+appcmd Recycle AppPool MSExchangeServicesAppPool
+```
     
       - Using a Windows PowerShell cmdlet, type the following and then press Enter.
         
-            IIS:\>Restart-WebAppPool MSExchangeServicesAppPool
+        ```powershell
+IIS:\>Restart-WebAppPool MSExchangeServicesAppPool
+```
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            iisreset /noforce
+        ```powershell
+iisreset /noforce
+```
     
       - Using Internet Information Services (IIS) Manager: In Internet Information Services (IIS) Manager, in the **Actions** pane, click **Restart**.
 
@@ -284,21 +328,29 @@ To enable SSL offloading for the Autodiscover service, you need to remove the SS
     
       - Using the command line, type the following and then press Enter.
         
-            appcmd set config "Default Web Site/autodiscover" /section:access /sslFlags:None /commit:APPHOST
+        ```powershell
+appcmd set config "Default Web Site/autodiscover" /section:access /sslFlags:None /commit:APPHOST
+```
 
   - **Step 2**   You need to recycle the correct application pool or restart Internet Information Services by using one of the following methods:
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            appcmd Recycle AppPool MSExchangeAutodiscoverAppPool
+        ```powershell
+appcmd Recycle AppPool MSExchangeAutodiscoverAppPool
+```
     
       - Using a Windows PowerShell cmdlet, type the following and then press Enter.
         
-            IIS:\>Restart-WebAppPool MSExchangeAutodiscoverAppPool
+        ```powershell
+IIS:\>Restart-WebAppPool MSExchangeAutodiscoverAppPool
+```
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            iisreset /noforce
+        ```powershell
+iisreset /noforce
+```
     
       - Using Internet Information Services (IIS) Manager: In Internet Information Services (IIS) Manager, in the **Actions** pane, click **Restart**.
 
@@ -324,21 +376,29 @@ To enable SSL offloading for Outlook clients, you need to remove the SSL require
     
       - Using the command line, type the following and then press Enter.
         
-            appcmd set config "Default Web Site/MAPI" /section:access /sslFlags:None /commit:APPHOST
+        ```powershell
+appcmd set config "Default Web Site/MAPI" /section:access /sslFlags:None /commit:APPHOST
+```
 
   - **Step 2**   You need to recycle the correct application pool or restart the Internet Information Services by using one of the following methods:
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            appcmd Recycle AppPool MSExchangeMapiFrontEndAppPool
+        ```powershell
+appcmd Recycle AppPool MSExchangeMapiFrontEndAppPool
+```
     
       - Using a Windows PowerShell cmdlet, type the following and then press Enter.
         
-            IIS:\>Restart-WebAppPool MSExchangeMapiFrontEndAppPool
+        ```powershell
+IIS:\>Restart-WebAppPool MSExchangeMapiFrontEndAppPool
+```
     
       - Using a command line: Go to **Start** \> **Run**, type **cmd**, and then press Enter. In the Command Prompt window, type the following and then press Enter.
         
-            iisreset /noforce
+        ```powershell
+iisreset /noforce
+```
     
       - Using Internet Information Services (IIS) Manager: In Internet Information Services (IIS) Manager, in the **Actions** pane, click **Restart**.
 
@@ -365,7 +425,9 @@ If you're working with a large organization with multiple Exchange 2013 Client A
     Set-WebConfigurationProperty -Filter //security/access -name sslflags -Value "None" -PSPath IIS: -Location "Default Web Site/Microsoft-Server-ActiveSync"
     Set-WebConfigurationProperty -Filter //security/access -name sslflags -Value "None" -PSPath IIS: -Location "Default Web Site/OAB"
     Set-WebConfigurationProperty -Filter //security/access -name sslflags -Value "None" -PSPath IIS: -Location "Default Web Site/MAPI"
-    iisreset /noforce
+```powershell
+iisreset /noforce
+```
 
 **Using appcmd**
 
@@ -384,7 +446,9 @@ If you're working with a large organization with multiple Exchange 2013 Client A
     &$env:systemroot\system32\inetsrv\appcmd set config "Default Web Site/Microsoft-Server-ActiveSync" /section:access /sslFlags:None /commit:APPHOST
     &$env:systemroot\system32\inetsrv\appcmd set config "Default Web Site/OAB" /section:access /sslFlags:None /commit:APPHOST
     &$env:systemroot\system32\inetsrv\appcmd set config "Default Web Site/MAPI" /section:access /sslFlags:None /commit:APPHOST
-    iisreset /noforce
+```powershell
+iisreset /noforce
+```
 
 Return to top
 

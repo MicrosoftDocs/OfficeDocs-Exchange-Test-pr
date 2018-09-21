@@ -129,7 +129,9 @@ For more information about how to install Exchange 2013, see [Planning and deplo
     
     2.  Run the following command.
         
-            Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+        ```powershell
+Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+```
     
     3.  Perform transport agent management tasks as normal.
     

@@ -57,17 +57,23 @@ This example creates the default provisioning policy SM\_ProvisioningPolicy with
 
 This example returns detailed information about all site mailbox provisioning policies in your organization.
 
-    Get-SiteMailboxProvisioningPolicy | Format-List
+```powershell
+Get-SiteMailboxProvisioningPolicy | Format-List
+```
 
 This example returns all policies in your organization, but only displays the `IsDefault` information to identify which policy is the default policy.
 
-    Get-SiteMailboxProvisioningPolicy | Format-List IsDefault
+```powershell
+Get-SiteMailboxProvisioningPolicy | Format-List IsDefault
+```
 
 ## Make changes to an existing site mailbox provisioning policy
 
 This example changes the site mailbox provisioning policy named Default to allow the maximum size of email messages that can be received by the site mailbox to 25 MB. (When you install Exchange, a provisioning policy is created with the name **Default**.)
 
-    Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
+```powershell
+Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
+```
 
 This example changes the warning quota to 9.5 GB and the prohibit send and receive quota to 10 GB.
 
@@ -101,7 +107,9 @@ This example changes the default provisioning policy and sets the *AliasPrefix* 
 
 This example deletes the default site mailbox policy that was created during Exchange Setup.
 
-    Remove-SiteMailboxProvisioningPolicy -Identity Default
+```powershell
+Remove-SiteMailboxProvisioningPolicy -Identity Default
+```
 
 
 > [!IMPORTANT]

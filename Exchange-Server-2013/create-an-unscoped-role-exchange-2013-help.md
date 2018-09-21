@@ -65,11 +65,15 @@ Here are the steps to create an unscoped top-level role:
 
 Unscoped top-level roles don't have a parent role. You need to specify the *UnscopedTopLevel* switch to create a role without a parent. Use the following syntax to create the new role.
 
-    New-ManagementRole <name of new role> -UnscopedTopLevel
+```powershell
+New-ManagementRole <name of new role> -UnscopedTopLevel
+```
 
 This example creates the IT Scripts unscoped top-level role.
 
-    New-ManagementRole "IT Scripts" -UnscopedTopLevel
+```powershell
+New-ManagementRole "IT Scripts" -UnscopedTopLevel
+```
 
 After it's created, the role is empty until you add scripts or non-Exchange cmdlets to it.
 
@@ -157,7 +161,9 @@ Use the following syntax to create the new role.
 
 This example copies the IT Global Scripts role and its management role entries to the Diagnostic IT Scripts role.
 
-    New-ManagementRole -Parent "IT Global Scripts" -Name "Diagnostic IT Scripts"
+```powershell
+New-ManagementRole -Parent "IT Global Scripts" -Name "Diagnostic IT Scripts"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRole](https://technet.microsoft.com/en-us/library/dd298073\(v=exchg.150\)).
 

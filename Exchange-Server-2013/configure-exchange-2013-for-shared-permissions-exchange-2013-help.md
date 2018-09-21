@@ -139,7 +139,9 @@ To switch from Active Directory split permissions to shared permissions, do the 
 
 1.  From a Windows command shell, run the following command from the Exchange 2013 installation media to disable Active Directory split permissions.
     
-        setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+    ```powershell
+setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+```
 
 2.  From the Exchange Management Shell, run the following commands to add regular role assignments between the Mail Recipient Creation role and Security Group Creation and Management role and the Organization Management and Recipient Management role groups.
     

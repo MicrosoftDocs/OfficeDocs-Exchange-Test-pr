@@ -75,13 +75,17 @@ The Microsoft Exchange 2010 UM Troubleshooting Tool is an Exchange Management Sh
 
 4.  If you're running the UM Troubleshooting Tool on Windows Vista, Windows 7, or Windows 8, at the Windows PowerShell command prompt, run the following.
     
-        Set-ExecutionPolicy RemoteSigned
+    ```powershell
+Set-ExecutionPolicy RemoteSigned
+```
 
 5.  From the **Start** menu, open the **Microsoft Exchange 2010 UM Troubleshooting Tool**.
 
 6.  In the **Microsoft Exchange 2010 UM Troubleshooting Tool** window, at the prompt, type the following and press Enter.
     
-        $cred=Get-Credential
+    ```powershell
+$cred=Get-Credential
+```
 
 7.  In the **Windows PowerShell Credential Request** window, type the domain\\user name and password, and then click **OK**.
 

@@ -111,7 +111,9 @@ The successful completion of the **New organization relationship** wizard will b
 
 To further verify that you have successfully created the organization relationship, run the following Shell command to verify the organization relationship information:
 
-    Get-OrganizationRelationship | format-list
+```powershell
+Get-OrganizationRelationship | format-list
+```
 
 
 > [!TIP]

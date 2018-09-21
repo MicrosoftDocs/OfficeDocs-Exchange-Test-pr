@@ -69,7 +69,9 @@ To verify that you've successfully created a DAG network, do one of the followin
 
   - In the Shell, run the following command to verify the DAG network was created and to display DAG network configuration information.
     
-        Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+    ```powershell
+Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+```
 
 ## For more information
 

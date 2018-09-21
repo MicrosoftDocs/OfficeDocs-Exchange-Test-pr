@@ -122,7 +122,9 @@ You can also create archives for existing users that have a mailbox but aren’t
 
 This example enables the archive for Tony Smith's mailbox.
 
-    Enable-Mailbox "Tony Smith" -Archive
+```powershell
+Enable-Mailbox "Tony Smith" -Archive
+```
 
 This example retrieves mailboxes in database DB01 that don’t have an on-premises or cloud-based archive enabled and don’t have a name starting with DiscoverySearchMailbox. It pipes the result to the **Enable-Mailbox** cmdlet to enable the archive for all mailboxes on mailbox database DB01.
 
@@ -172,7 +174,9 @@ If you want to reconnect the on-premises archive to that mailbox, you can use th
 
 This example disables the archive for Chris Ashton's mailbox. It doesn't disable the mailbox.
 
-    Disable-Mailbox -Identity "Chris Ashton" -Archive
+```powershell
+Disable-Mailbox -Identity "Chris Ashton" -Archive
+```
 
 For detailed syntax and parameter information, see [Disable-Mailbox](https://technet.microsoft.com/en-us/library/aa997210\(v=exchg.150\)).
 

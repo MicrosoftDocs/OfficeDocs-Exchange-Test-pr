@@ -27,7 +27,9 @@ When you use the parameters *ToEntireForest* or *ToArrayMembers* with the script
 
 Verify the servers the script will target all required servers by using the **Get-ClientAccessArray** cmdlet, as shown in the following example.
 
-    Get-ClientAccessArray | fl members
+```powershell
+Get-ClientAccessArray | fl members
+```
 
 If the server that's failing to update is a member of the Client Access array and is still not updating correctly, rerun Exchange Setup and add the Client Access server role to the server again. You can also specify individual servers to target using the parameter *ToSpecificServers*.
 
@@ -53,7 +55,9 @@ To resolve this issue, remove the server from your deployment using Exchange Set
 
 If the server will only be down for a short time, and you don't want to permanently remove Exchange, you can adjust the script to run against specific servers using the parameter *ToSpecificServers* so that only active servers are targeted. Or, you can remove the RPC Client Access service from the non-responsive server’s Active Directory object by using the **Remove-ClientAccessArray** cmdlet, as shown in the following example.
 
-    Remove-RPCClientAccess -Server Server.Contoso.com
+```powershell
+Remove-RPCClientAccess -Server Server.Contoso.com
+```
 
 After the RPC Client Access service has been removed, the server won't be returned as an array member by [Get-ClientAccessArray](https://technet.microsoft.com/en-us/library/dd297976\(v=exchg.150\)) and the script won't target it. As soon as the server is functional again, you can re-add the RPC Client Access service by using the **New-RpcClientAccess** cmdlet. When the RPC Client Access service is re-added, be sure to restart the Microsoft Exchange Address Book service on the affected server.
 

@@ -65,7 +65,9 @@ For additional tasks related to UM languages, see [UM languages, prompts, and gr
 
 This example installs the Japanese (ja-JP) UM language pack that's been downloaded to the D:\\Exchange\\UMLanguagePacks folder on a Mailbox server.
 
-    setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```powershell
+setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```
 
 This example installs the Mexican Spanish (es-MX) and German (de-DE) UM language packs that have been downloaded to the D:\\Exchange\\UMLanguagePacks folder on a Mailbox server.
 

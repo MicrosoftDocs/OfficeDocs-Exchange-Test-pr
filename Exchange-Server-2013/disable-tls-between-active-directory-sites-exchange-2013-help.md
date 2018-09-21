@@ -47,11 +47,15 @@ This topic provides step-by-step instructions on how to configure the Transport 
 
 To configure the Transport service on a Mailbox server to use downgraded Exchange server authentication, run the following command:
 
-    Set-TransportService <ServerIdentity> -UseDowngradedExchangeServerAuth $true
+```powershell
+Set-TransportService <ServerIdentity> -UseDowngradedExchangeServerAuth $true
+```
 
 This example makes this configuration change on the server named Mailbox01.
 
-    Set-TransportService Mailbox01 -UseDowngradedExchangeServerAuth $true
+```powershell
+Set-TransportService Mailbox01 -UseDowngradedExchangeServerAuth $true
+```
 
 ## Step 2: Create a dedicated Receive connector on the Mailbox server for the target Active Directory site
 
@@ -83,39 +87,53 @@ This example creates the Receive connector named WAN on server named Mailbox01 w
 
 <!-- end list -->
 
-    New-ReceiveConnector -Name WAN -Server Hub01 -RemoteIPRanges 10.0.2.0/24 -Internal
+```powershell
+New-ReceiveConnector -Name WAN -Server Hub01 -RemoteIPRanges 10.0.2.0/24 -Internal
+```
 
 ## Step 3: Use the Shell to disable TLS on the dedicated Receive connector
 
 To disable TLS on the Receive connector, run the following command:
 
-    Set-ReceiveConnector <ReceiveConnectorIdentity> -SuppressXAnonymousTLS $true
+```powershell
+Set-ReceiveConnector <ReceiveConnectorIdentity> -SuppressXAnonymousTLS $true
+```
 
 This example disables TLS on the Receive connector named WAN on Mailbox server named Mailbox01.
 
-    Set-ReceiveConnector Mailbox01\WAN -SuppressXAnonymousTLS $true
+```powershell
+Set-ReceiveConnector Mailbox01\WAN -SuppressXAnonymousTLS $true
+```
 
 ## Step 4: Use the Shell to designate the Active Directory sites as hub sites
 
 To designate an Active Directory site as a hub site, run the following command:
 
-    Set-AdSite <ADSiteIdentity> -HubSiteEnabled $true
+```powershell
+Set-AdSite <ADSiteIdentity> -HubSiteEnabled $true
+```
 
 You need to perform this procedure once in each Active Directory site that has Mailbox servers that participate in non-encrypted traffic.
 
 This example configures the Active Directory site named Central Office Site 1 as a hub site.
 
-    Set-AdSite "Central Office Site 1" -HubSiteEnabled $true
+```powershell
+Set-AdSite "Central Office Site 1" -HubSiteEnabled $true
+```
 
 ## Step 5: Use the Shell to configure the least cost routing path through the WAN connection
 
 Depending on how the IP site link costs are configured in Active Directory, this step may not be necessary. You need to verify that the network link with the WOC devices deployed is in the leastcost routing path. To view the Active Directory site link costs, and the Exchange-specific site link costs, run the following command:
 
-    Get-AdSiteLink
+```powershell
+Get-AdSiteLink
+```
 
 If the network link with the WOC devices deployed isn't on the least cost routing path, you'll need to assign an Exchange-specific cost to the particular IP site link to ensure messages are routed correctly. To learn more about this particular issue, see the "Configure Exchange-specific Active Directory site link costs" section in [Scenario: Configure Exchange to support WAN Optimization Controllers](scenario-configure-exchange-to-support-wan-optimization-controllers-exchange-2013-help.md).
 
 This example configures an Exchange-specific cost of 15 on the IP site link named Branch Office 2-Branch Office 1.
 
-    Set-AdSiteLink "Branch Office 2-Branch Office 1" -ExchangeCost 15
+```powershell
+Set-AdSiteLink "Branch Office 2-Branch Office 1" -ExchangeCost 15
+```
 

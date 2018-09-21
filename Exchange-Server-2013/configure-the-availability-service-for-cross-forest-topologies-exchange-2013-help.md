@@ -92,7 +92,9 @@ For detailed information about syntax and parameters, see the following topics:
 
 This example sets the organization-wide account on the availability configuration object to configure the access level for free/busy information in the target forest.
 
-    Set-AvailabilityConfig -OrgWideAccount "Contoso.com\User"
+```powershell
+Set-AvailabilityConfig -OrgWideAccount "Contoso.com\User"
+```
 
 This example adds the Availability address space configuration object for the source forest.
 

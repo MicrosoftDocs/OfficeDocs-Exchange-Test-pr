@@ -61,7 +61,9 @@ In this step, decide which databases you want to include in the database scope. 
 
 Use a database list if you want to define a static list of mailbox databases that should be included in this scope. Use the following syntax to create a database list scope.
 
-    New-ManagementScope -Name <scope name> -DatabaseList <database 1>, <database 2...>
+```powershell
+New-ManagementScope -Name <scope name> -DatabaseList <database 1>, <database 2...>
+```
 
 This example creates a scope that applies only to the databases Database 1, Database 2, and Database 3.
 
@@ -77,7 +79,9 @@ For a list of filterable database properties, see [Understanding management role
 
 Use the following syntax to create a database filter scope.
 
-    New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
+```powershell
+New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
+```
 
 This example creates a scope that includes all the databases that contain the string "ACCT" in the **Name** property of the database.
 

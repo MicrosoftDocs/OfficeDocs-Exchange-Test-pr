@@ -41,11 +41,15 @@ Sender ID functionality is provided by the Sender ID agent. Sender ID validates 
 
 To disable Sender ID, run the following command:
 
-    Set-SenderIDConfig -Enabled $false
+```powershell
+Set-SenderIDConfig -Enabled $false
+```
 
 To enable Sender ID, run the following command:
 
-    Set-SenderIDConfig -Enabled $true
+```powershell
+Set-SenderIDConfig -Enabled $true
+```
 
 
 > [!NOTE]
@@ -59,7 +63,9 @@ To verify that you have successfully enabled or disabled Sender ID, do the follo
 
 1.  Run the following command:
     
-        Get-SenderIDConfig | Format-List Enabled
+    ```powershell
+Get-SenderIDConfig | Format-List Enabled
+```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -67,11 +73,15 @@ To verify that you have successfully enabled or disabled Sender ID, do the follo
 
 To configure the Sender ID action for spoofed messages, run the following command:
 
-    Set-SenderIDConfig -SpoofedDomainAction <StampStatus | Reject | Delete>
+```powershell
+Set-SenderIDConfig -SpoofedDomainAction <StampStatus | Reject | Delete>
+```
 
 This example configures the Sender ID agent to reject any messages where the IP address of the sending server isn't listed as an authoritative SMTP sending server in the DNS Sender Policy Framework (SPF) record for the sending domain.
 
-    Set-SenderIDConfig -SpoofedDomainAction Reject
+```powershell
+Set-SenderIDConfig -SpoofedDomainAction Reject
+```
 
 ## How do you know this worked?
 
@@ -79,7 +89,9 @@ To verify that you have successfully configured the Sender ID action for spoofed
 
 1.  Run the following command:
     
-        Get-SenderIDConfig | Format-List SpoofedDomainAction
+    ```powershell
+Get-SenderIDConfig | Format-List SpoofedDomainAction
+```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -87,11 +99,15 @@ To verify that you have successfully configured the Sender ID action for spoofed
 
 To configure the Sender ID action for transient errors, run the following command:
 
-    Set-SenderIDConfig -TempErrorAction <StampStatus | Reject | Delete>
+```powershell
+Set-SenderIDConfig -TempErrorAction <StampStatus | Reject | Delete>
+```
 
 This example configures the Sender ID agent to stamp the messages when the Sender ID status can't be determined due to a temporary DNS server error. The message will be processed by other anti-spam agents and the Content Filter agent will use the mark when determining the SCL value for the message.
 
-    Set-SenderIDConfig -TempErrorAction StampStatus
+```powershell
+Set-SenderIDConfig -TempErrorAction StampStatus
+```
 
 Note that `StampStatus` is the default value for the *TempErrorAction* parameter.
 
@@ -101,7 +117,9 @@ To verify that you have successfully configured the Sender ID action for transie
 
 1.  Run the following command:
     
-        Get-SenderIDConfig | Format-List TempErrorAction
+    ```powershell
+Get-SenderIDConfig | Format-List TempErrorAction
+```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -135,7 +153,9 @@ To verify that you have successfully configured recipient and sender domain exce
 
 1.  Run the following command:
     
-        Get-SenderIDConfig | Format-List BypassedRecipients,BypassedSenderDomains
+    ```powershell
+Get-SenderIDConfig | Format-List BypassedRecipients,BypassedSenderDomains
+```
 
 2.  Verify the values displayed are the values you configured.
 

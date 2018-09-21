@@ -87,7 +87,9 @@ In this step, you have to run a PowerShell script to export the on-premises auth
 
 2.  In Exchange PowerShell in your on-premises Exchange organization, run the PowerShell script that you created in the previous step. For example:
     
-        .\ExportAuthCert.ps1
+    ```powershell
+.\ExportAuthCert.ps1
+```
 
 ## Step 4: Upload the on-premises authorization certificate to Azure Active Directory ACS
 
@@ -117,7 +119,9 @@ Next, you have to use Windows PowerShell to upload the on-premises authorization
 
 3.  Run the PowerShell script that you created in the previous step. For example:
     
-        .\UploadAuthCert.ps1
+    ```powershell
+.\UploadAuthCert.ps1
+```
 
 4.  After you start the script, a credentials dialog box is displayed. Enter the credentials for the tenant administrator account in your Microsoft Online Azure AD organization. After running the script, leave the Windows PowerShell for Azure AD session open. You will use this to run a PowerShell script in the next step.
 
@@ -127,7 +131,9 @@ You have to run the script in this step for each endpoint in your on-premises Ex
 
 If you are not sure of the external Exchange endpoints in your on-premises Exchange organization, you can get a list of the external configured Web services endpoints by running the following command in Exchange PowerShell in your on-premises Exchange organization:
 
-    Get-WebServicesVirtualDirectory | FL ExternalUrl
+```powershell
+Get-WebServicesVirtualDirectory | FL ExternalUrl
+```
 
 
 > [!NOTE]
@@ -150,7 +156,9 @@ If you are not sure of the external Exchange endpoints in your on-premises Excha
 
 2.  In Windows PowerShell for Azure Active Directory, run the Windows PowerShell script that you created in the previous step. For example:
     
-        .\RegisterEndpoints.ps1
+    ```powershell
+.\RegisterEndpoints.ps1
+```
 
 ## Step 6: Create an IntraOrganizationConnector from your on-premises organization to Office 365
 
@@ -210,7 +218,9 @@ Before you complete the following step, make sure:
 
 An *AvailabilityAddressSpace* must be configured on pre-Exchange 2013 Client Access servers that points to the Exchange Web Services endpoint of your on-premises Exchange 2013 SP1 Client Access server(s). This endpoint is the same endpoint as previously outlined in Step 5 or can be determined by running the following cmdlet on your on-premises Exchange 2013 SP1 Client Access server:
 
-    Get-WebServicesVirtualDirectory | FL AdminDisplayVersion,ExternalUrl
+```powershell
+Get-WebServicesVirtualDirectory | FL AdminDisplayVersion,ExternalUrl
+```
 
 
 > [!NOTE]

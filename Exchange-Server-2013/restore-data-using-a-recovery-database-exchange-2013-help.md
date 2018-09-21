@@ -39,11 +39,15 @@ For additional management tasks related to RDBs, see [Recovery databases](recove
 
 2.  Use Eseutil to bring that database into a clean shutdown state. In the following example, EXX is the log generation prefix for the database (for example, E00, E01, E02, and so on).
     
-        Eseutil /R EXX /l <RDBLogFilePath> /d <RDBEdbFolder>
+    ```powershell
+Eseutil /R EXX /l <RDBLogFilePath> /d <RDBEdbFolder>
+```
     
     The following example illustrates a log generation prefix of E01 and a recovery database and log file path of E:\\Databases\\RDB1:
     
-        Eseutil /R E01 /l E:\Databases\RDB1 /d E:\Databases\RDB1
+    ```powershell
+Eseutil /R E01 /l E:\Databases\RDB1 /d E:\Databases\RDB1
+```
 
 3.  Create a recovery database. Give the recovery database a unique name, but use the name and path of the database file for the EdbFilePath parameter, and the location of the recovered log files for the LogFolderPath parameter.
     
@@ -55,15 +59,21 @@ For additional management tasks related to RDBs, see [Recovery databases](recove
 
 4.  Restart the Microsoft Exchange Information Store service:
     
-        Restart-Service MSExchangeIS
+    ```powershell
+Restart-Service MSExchangeIS
+```
 
 5.  Mount the recovery database:
     
-        Mount-database <RDBName>
+    ```powershell
+Mount-database <RDBName>
+```
 
 6.  Verify that the mounted database contains the mailbox(es) you want to restore:
     
-        Get-MailboxStatistics -Database <RDBName> | ft -auto
+    ```powershell
+Get-MailboxStatistics -Database <RDBName> | ft -auto
+```
 
 7.  Use the New-MailboxRestoreRequest cmdlet to restore a mailbox or items from the recovery database to a production mailbox.
     
@@ -79,7 +89,9 @@ For additional management tasks related to RDBs, see [Recovery databases](recove
     
     Once the restore has a status of Completed, remove the restore request using [Remove-MailboxRestoreRequest](https://technet.microsoft.com/en-us/library/ff829910\(v=exchg.150\)). For example:
     
-        Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+    ```powershell
+Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
+```
 
 ## How do you know this worked?
 

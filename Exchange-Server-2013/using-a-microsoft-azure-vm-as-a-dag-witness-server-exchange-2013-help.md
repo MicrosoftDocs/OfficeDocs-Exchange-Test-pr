@@ -327,7 +327,9 @@ Finally, you need to configure your DAG to use the new witness server. By defaul
 
 2.  Run the following command to configure the witness server for your DAGs.
     
-        Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessServer Azure-FSW
+    ```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessServer Azure-FSW
+```
 
 See the following topics for more information:
 
@@ -347,11 +349,15 @@ At this point, you have configured your DAG to use the file server on Azure as y
 
 2.  If the DAG has an even number of nodes, the file share witness will be configured. Validate the file share witness setting in cluster properties by running the following command. The value for the *SharePath* parameter should point to the file server and display the correct path.
     
-        Get-ClusterResource -Cluster MBX1 | Get-ClusterParameter | Format-List
+    ```powershell
+Get-ClusterResource -Cluster MBX1 | Get-ClusterParameter | Format-List
+```
 
 3.  Next, verify the status of the "File Share Witness" cluster resource by running the following command. The *State* of the cluster resource should display **Online**.
     
-        Get-ClusterResource -Cluster MBX1
+    ```powershell
+Get-ClusterResource -Cluster MBX1
+```
 
 4.  Lastly, verify that the share is successfully created on the file server by reviewing the folder in File Explorer and the shares in Server Manager.
 

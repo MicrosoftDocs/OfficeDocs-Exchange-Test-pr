@@ -47,11 +47,15 @@ Looking for other management tasks related to permissions? Check out [Permission
 
 To change the assignment policy that's assigned to a mailbox, use the following syntax.
 
-    Set-Mailbox <mailbox alias or name> -RoleAssignmentPolicy <assignment policy>
+```powershell
+Set-Mailbox <mailbox alias or name> -RoleAssignmentPolicy <assignment policy>
+```
 
 This example sets the assignment policy to Unified Messaging Users on the mailbox Brian.
 
-    Set-Mailbox Brian -RoleAssignmentPolicy "Unified Messaging Users"
+```powershell
+Set-Mailbox Brian -RoleAssignmentPolicy "Unified Messaging Users"
+```
 
 ## Use the Shell to change the assignment policy on a group of mailboxes assigned a specific assignment policy
 

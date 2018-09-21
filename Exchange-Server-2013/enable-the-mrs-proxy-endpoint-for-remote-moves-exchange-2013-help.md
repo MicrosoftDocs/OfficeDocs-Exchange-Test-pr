@@ -69,7 +69,9 @@ The following command enables the MRS Proxy endpoint on a Client Access server n
 
 The following command enables the MRS Proxy endpoint on all Client Access servers in your Exchange organization.
 
-    Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory -MRSProxyEnabled $true
+```powershell
+Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory -MRSProxyEnabled $true
+```
 
 
 > [!IMPORTANT]
@@ -91,7 +93,9 @@ Or
 
 Run the following command in the Shell:
 
-    Get-WebServicesVirtualDirectory | FL Identity,MRSProxyEnabled
+```powershell
+Get-WebServicesVirtualDirectory | FL Identity,MRSProxyEnabled
+```
 
 Verify that the *MRSProxyEnabled* parameter is set to `True`.
 

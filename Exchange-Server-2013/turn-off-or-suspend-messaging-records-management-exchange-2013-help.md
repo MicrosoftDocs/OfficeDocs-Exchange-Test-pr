@@ -69,7 +69,9 @@ You can stop a retention policy from applying to a mailbox by removing the polic
 
 This Shell example removes the retention policy from the mailbox jpeoples.
 
-    Set-Mailbox jpeoples -RetentionPolicy $null.
+```powershell
+Set-Mailbox jpeoples -RetentionPolicy $null.
+```
 
 This Shell example removes the retention policy from all mailboxes in the Exchange organization.
 
@@ -109,7 +111,9 @@ This example removes all retention tags except the Never Delete tag.
 
 This command removes the Corp-Users retention policy from an Exchange organization.
 
-    Remove-RetentionPolicy Corp-Users
+```powershell
+Remove-RetentionPolicy Corp-Users
+```
 
 For detailed syntax and parameter information, see the following topics:
 

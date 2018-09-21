@@ -51,11 +51,15 @@ New management roles are based on existing roles. When you create a role, an exi
 
 Use the following syntax to create the new role.
 
-    New-ManagementRole -Parent <existing role to copy> -Name <name of new role>
+```powershell
+New-ManagementRole -Parent <existing role to copy> -Name <name of new role>
+```
 
 This example copies the Mail Recipients role and its management role entries to the Seattle Mail Recipients role.
 
-    New-ManagementRole -Parent "Mail Recipients" -Name "Seattle Mail Recipients"
+```powershell
+New-ManagementRole -Parent "Mail Recipients" -Name "Seattle Mail Recipients"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRole](https://technet.microsoft.com/en-us/library/dd298073\(v=exchg.150\)).
 

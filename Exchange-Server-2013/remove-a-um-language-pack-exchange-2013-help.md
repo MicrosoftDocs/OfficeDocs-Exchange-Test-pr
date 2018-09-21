@@ -39,7 +39,9 @@ For additional tasks related to UM languages, see [UM languages, prompts, and gr
 
 At a command prompt, run the following command.
 
-    Setup.exe /RemoveUmLanguagePack:<UmLanguagePackName>
+```powershell
+Setup.exe /RemoveUmLanguagePack:<UmLanguagePackName>
+```
 
 In the previous command, *\<UmLanguagePackName\>* is the name of the UM language pack, for example, fr-FR.
 

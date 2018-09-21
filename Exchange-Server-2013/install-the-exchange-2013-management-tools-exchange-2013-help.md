@@ -137,7 +137,9 @@ For more information about managing Exchange 2013, see [Exchange admin center in
     > If you have User Access Control (UAC) enabled, you must run <CODE>Setup.exe</CODE> from an elevated command prompt.
 
     
-        Setup.exe /Role:ManagementTools /IAcceptExchangeServerLicenseTerms
+    ```powershell
+Setup.exe /Role:ManagementTools /IAcceptExchangeServerLicenseTerms
+```
 
 For more information, see [Install Exchange 2013 using unattended mode](install-exchange-2013-using-unattended-mode-exchange-2013-help.md).
 

@@ -63,7 +63,9 @@ For additional management tasks related to user mailboxes, see [Manage user mail
 
 This example sets the maximum size for sent messages to 25 MB and the maximum size for received messages to 35 MB for the mailbox of Debra Garcia.
 
-    Set-Mailbox "Debra Garcia" -MaxSendSize 25mb -MaxReceiveSize 35mb
+```powershell
+Set-Mailbox "Debra Garcia" -MaxSendSize 25mb -MaxReceiveSize 35mb
+```
 
 For detailed syntax and parameter information, see [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)).
 
@@ -83,5 +85,7 @@ Or
 
 Run the following command in the Shell.
 
-    Get-Mailbox <identity> | fl MaxSendSize,MaxReceiveSize
+```powershell
+Get-Mailbox <identity> | fl MaxSendSize,MaxReceiveSize
+```
 

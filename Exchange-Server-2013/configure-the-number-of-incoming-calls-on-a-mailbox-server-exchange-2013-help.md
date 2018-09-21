@@ -51,5 +51,7 @@ For additional tasks related to Unified Messaging and Mailbox servers, see [UM s
 
 This example sets the number of incoming voice, Outlook Voice Access, and fax calls that can be accepted by a Mailbox server named `MyMailboxServer1` to 50.
 
-    Set-UMService -Identity MyMailboxServer1 -MaxCallsAllowed 50
+```powershell
+Set-UMService -Identity MyMailboxServer1 -MaxCallsAllowed 50
+```
 

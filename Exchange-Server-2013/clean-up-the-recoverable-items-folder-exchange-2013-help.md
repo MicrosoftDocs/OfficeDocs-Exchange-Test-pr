@@ -110,7 +110,9 @@ This procedure copies items from Gurinder Singh's Recoverable Items folder to th
 
 4.  Retrieve the current Managed Folder Assistant work cycle configuration. Be sure to note the setting for later.
     
-        Get-MailboxServer "My Mailbox Server" | Format-List Name,ManagedFolderWorkCycle
+    ```powershell
+Get-MailboxServer "My Mailbox Server" | Format-List Name,ManagedFolderWorkCycle
+```
 
 5.  Disable client access to the mailbox to make sure no changes can be made to mailbox data for the duration of this procedure.
     
@@ -122,7 +124,9 @@ This procedure copies items from Gurinder Singh's Recoverable Items folder to th
 
 7.  Disable the Managed Folder Assistant on the Mailbox server.
     
-        Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle $null
+    ```powershell
+Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle $null
+```
     
 
     > [!IMPORTANT]
@@ -132,7 +136,9 @@ This procedure copies items from Gurinder Singh's Recoverable Items folder to th
 
 8.  Disable single item recovery and remove the mailbox from Litigation Hold.
     
-        Set-Mailbox "Gurinder Singh" -SingleItemRecoveryEnabled $false -LitigationHoldEnabled $false
+    ```powershell
+Set-Mailbox "Gurinder Singh" -SingleItemRecoveryEnabled $false -LitigationHoldEnabled $false
+```
     
 
     > [!IMPORTANT]
@@ -156,7 +162,9 @@ This procedure copies items from Gurinder Singh's Recoverable Items folder to th
 
 10. If the mailbox was placed on Litigation Hold or had single item recovery enabled earlier, enable these features again.
     
-        Set-Mailbox "Gurinder Singh" -SingleItemRecoveryEnabled $true -LitigationHoldEnabled $true
+    ```powershell
+Set-Mailbox "Gurinder Singh" -SingleItemRecoveryEnabled $true -LitigationHoldEnabled $true
+```
     
 
     > [!IMPORTANT]
@@ -186,7 +194,9 @@ This procedure copies items from Gurinder Singh's Recoverable Items folder to th
 
 12. Enable the Managed Folder Assistant by setting the work cycle back to the value you noted in Step 4. This example sets the work cycle to one day.
     
-        Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+    ```powershell
+Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+```
 
 13. Enable client access.
     

@@ -49,15 +49,21 @@ Role assignments are enabled by default, meaning that the associated role is app
 
 To enable a role assignment, use the following syntax.
 
-    Set-ManagementRoleAssignment <role assignment> -Enabled $true
+```powershell
+Set-ManagementRoleAssignment <role assignment> -Enabled $true
+```
 
 To disable a role assignment, use the following syntax.
 
-    Set-ManagementRoleAssignment <role assignment> -Enabled $false
+```powershell
+Set-ManagementRoleAssignment <role assignment> -Enabled $false
+```
 
 This example disables the Help Desk Assignment role assignment.
 
-    Set-ManagementRoleAssignment "Help Desk Assignment" -Enabled $false
+```powershell
+Set-ManagementRoleAssignment "Help Desk Assignment" -Enabled $false
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335173\(v=exchg.150\)).
 
@@ -81,7 +87,9 @@ To change or add a predefined scope on a role assignment, use the following synt
 
 This example changes the predefined scope on the John's Assignment role assignment to MyDistributionGroups.
 
-    Set-ManagementRoleAssignment "John's Assignment" - RecipientRelativeWriteScope MyDistributionGroups
+```powershell
+Set-ManagementRoleAssignment "John's Assignment" - RecipientRelativeWriteScope MyDistributionGroups
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335173\(v=exchg.150\)).
 
@@ -107,7 +115,9 @@ You can either specify a new server filter or list-based configuration scope, or
 
 To specify a new configuration scope or replace an existing one, use the following syntax.
 
-    Set-ManagementRoleAssignment <assignment name> -CustomConfigWriteScope <role scope name>
+```powershell
+Set-ManagementRoleAssignment <assignment name> -CustomConfigWriteScope <role scope name>
+```
 
 This example adds or changes the configuration scope to Redmond Servers.
 
@@ -123,11 +133,15 @@ You can either specify a new database filter or list-based configuration scope, 
 
 To specify a new configuration scope or replace an existing one, use the following syntax.
 
-    Set-ManagementRoleAssignment <assignment name> -CustomConfigWriteScope <role scope name>
+```powershell
+Set-ManagementRoleAssignment <assignment name> -CustomConfigWriteScope <role scope name>
+```
 
 This example adds or changes the configuration scope to Redmond Databases.
 
-    Set-ManagementRoleAssignment "Redmond Database Admins" -CustomConfigWriteScope "Redmond Databases"
+```powershell
+Set-ManagementRoleAssignment "Redmond Database Admins" -CustomConfigWriteScope "Redmond Databases"
+```
 
 If you want to keep the same configuration scope that's applied to the role assignment but change the database filter or database list on the scope, you need to change the configuration scope itself. For more information about how to change scopes, see [Change a role scope](change-a-role-scope-exchange-2013-help.md).
 
@@ -139,7 +153,9 @@ You can either add a new OU or change an OU that's already applied to the role a
 
 To change or add a new OU on a role assignment, use the following syntax.
 
-    Set-ManagementRoleAssignment <assignment name> -RecipientOrganizationalUnitScope <OU>
+```powershell
+Set-ManagementRoleAssignment <assignment name> -RecipientOrganizationalUnitScope <OU>
+```
 
 This example adds the Engineering\\Users OU in the contoso.com domain to the Engineering Help Desk role assignment.
 

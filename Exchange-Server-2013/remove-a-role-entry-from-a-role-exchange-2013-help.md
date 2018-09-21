@@ -43,11 +43,15 @@ When you remove a role entry from a role, you remove the ability for users assig
 
 Use the following syntax to remove an entire management role entry from a role.
 
-    Remove-ManagementRoleEntry <management role>\<management role entry>
+```powershell
+Remove-ManagementRoleEntry <management role>\<management role entry>
+```
 
 This example removes the **Enable-MailUser** cmdlet from the Seattle Server Administrators role.
 
-    Remove-ManagementRoleEntry "Seattle Server Administrators\Enable-MailUser"
+```powershell
+Remove-ManagementRoleEntry "Seattle Server Administrators\Enable-MailUser"
+```
 
 For detailed syntax and parameter information, see [Remove-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351187\(v=exchg.150\)).
 

@@ -95,7 +95,9 @@ To configure RBAC split permissions, do the following:
     
     1.  Disable Active Directory split permissions by running the following command from the Exchange 2013 installation media.
         
-            setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+        ```powershell
+setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+```
     
     2.  Restart the Exchange 2013 servers in your organization or wait for the Active Directory access token to replicate to all of your Exchange 2013 servers.
         
@@ -123,11 +125,15 @@ To configure RBAC split permissions, do the following:
     
     3.  Add members to the new role group using the following command.
         
-            Add-RoleGroupMember "Active Directory Administrators" -Member <user to add>
+        ```powershell
+Add-RoleGroupMember "Active Directory Administrators" -Member <user to add>
+```
     
     4.  Replace the delegate list on the new role group so that only members of the role group can add or remove members.
         
-            Set-RoleGroup "Active Directory Administrators" -ManagedBy "Active Directory Administrators"
+        ```powershell
+Set-RoleGroup "Active Directory Administrators" -ManagedBy "Active Directory Administrators"
+```
         
 
         > [!IMPORTANT]
@@ -140,7 +146,9 @@ To configure RBAC split permissions, do the following:
     
     6.  Remove all of the regular and delegating role assignments to the Mail Recipient Creation role that aren't associated with the new role group or any other role groups, USGs, or direct assignments you want to keep using the following command.
         
-            Remove-ManagementRoleAssignment <Mail Recipient Creation role assignment to remove>
+        ```powershell
+Remove-ManagementRoleAssignment <Mail Recipient Creation role assignment to remove>
+```
         
 
         > [!NOTE]
@@ -220,7 +228,9 @@ To switch from shared or RBAC split permissions to Active Directory split permis
 
 1.  From a Windows command shell, run the following command from the Exchange 2013 installation media to enable Active Directory split permissions.
     
-        setup.exe /PrepareAD /ActiveDirectorySplitPermissions:true
+    ```powershell
+setup.exe /PrepareAD /ActiveDirectorySplitPermissions:true
+```
 
 2.  If you have multiple Active Directory domains in your organization, you must either run `setup.exe /PrepareDomain` in each child domain that contains Exchange servers or objects or run `setup.exe /PrepareAllDomains` from a site that has an Active Directory server from every domain.
 

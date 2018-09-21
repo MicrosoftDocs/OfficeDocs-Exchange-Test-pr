@@ -68,7 +68,9 @@ Use one of the following procedures if the mailbox database is located on a serv
 
 This example reseeds the content index catalog for the database copy DB1 on Mailbox server MBX1 from any source server in the DAG that has a copy of the database.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
+```
 
 For detailed syntax and parameter information, see [Update-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd335201\(v=exchg.150\)).
 
@@ -76,7 +78,9 @@ For detailed syntax and parameter information, see [Update-MailboxDatabaseCopy](
 
 This example reseeds the content index catalog for the database copy DB1 on Mailbox server MBX1 from Mailbox server MBX2, which also has a copy of the database.
 
-    Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2 -CatalogOnly
+```powershell
+Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2 -CatalogOnly
+```
 
 For detailed syntax and parameter information, see [Update-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd335201\(v=exchg.150\)).
 
@@ -87,11 +91,15 @@ If there is only one copy of the mailbox database, you have to manually reseed t
 1.  Run the following commands to stop the Microsoft Exchange Search and Microsoft Exchange Search Host Controller services.
     
     ```
-    Stop-Service MSExchangeFastSearch
+```powershell
+Stop-Service MSExchangeFastSearch
+```
     ```
 
     ```
-    Stop-Service HostControllerService
+```powershell
+Stop-Service HostControllerService
+```
     ```
 
 2.  Delete, move, or rename the folder that contains the Exchange content index catalog. This folder is named `%ExchangeInstallPath\Mailbox\<name of mailbox database>_Catalog\<GUID>12.1.Single`. For example, you might rename the folder `C:\Program Files\Microsoft\Exchange Server\V15\Mailbox\Mailbox Database 0657134726_Catalog\F0627A72-9F1D-494A-839A-D7C915C279DB12.1.Single_OLD`.
@@ -105,11 +113,15 @@ If there is only one copy of the mailbox database, you have to manually reseed t
 3.  Run the following commands to restart the Microsoft Exchange Search and Microsoft Exchange Search Host Controller services.
     
     ```
-    Start-Service MSExchangeFastSearch
+```powershell
+Start-Service MSExchangeFastSearch
+```
     ```
 
     ```
-    Start-Service HostControllerService
+```powershell
+Start-Service HostControllerService
+```
     ```
     
     After you restart these services, Exchange Search will rebuild the content index catalog.

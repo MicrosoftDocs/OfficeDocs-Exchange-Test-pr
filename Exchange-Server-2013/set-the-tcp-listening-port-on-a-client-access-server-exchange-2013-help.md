@@ -55,5 +55,7 @@ For additional tasks related to Unified Messaging and Client Access servers, see
 
 This example sets the TCP listening port on a Client Access server named `MyClientAccessServer` to 5566.
 
-    Set-UMCallRouterSettings -Server MyClientAccessServer -SipTCPListeningPort 5566
+```powershell
+Set-UMCallRouterSettings -Server MyClientAccessServer -SipTCPListeningPort 5566
+```
 

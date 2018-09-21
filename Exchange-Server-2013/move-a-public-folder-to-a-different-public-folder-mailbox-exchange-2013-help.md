@@ -87,7 +87,9 @@ This example uses the `Move-PublicFolderBranch.ps1` script to move a branch of p
 
 To verify that the public folder move request was successful, run the following command:
 
-    Get-PublicFolderMoveRequest | Format-List Status
+```powershell
+Get-PublicFolderMoveRequest | Format-List Status
+```
 
 A status of `Completed` indicates that the move request was successful.
 

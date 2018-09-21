@@ -41,7 +41,9 @@ To configure the queue glitch retry count, the queue glitch retry interval, the 
 
 1.  In a Command prompt window on the Mailbox server or Edge Transport server, open the EdgeTransport.exe.config file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Locate the following keys in the `<appSettings>` section.
     
@@ -143,11 +145,15 @@ By default, the message retry interval is `00:15:00` or 15 minutes. We recommen
 
 Use the following syntax to set the message retry interval.
 
-    Set-TransportService <ServerIdentity> -MessageRetryInterval <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -MessageRetryInterval <dd.hh:mm:ss>
+```
 
 This example changes the message retry interval to 20 minutes on the Mailbox server named Mailbox01.
 
-    Set-TransportService Mailbox01 -MessageRetryInterval 00:20:00
+```powershell
+Set-TransportService Mailbox01 -MessageRetryInterval 00:20:00
+```
 
 ## Configure the delay DSN timeout settings
 
@@ -171,11 +177,15 @@ You can use the EAC or the Shell to configure the delay DSN notification timeout
 
 Use the following syntax to set the message retry interval.
 
-    Set-TransportService <ServerIdentity> -DelayNotificationTimeout <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -DelayNotificationTimeout <dd.hh:mm:ss>
+```
 
 This example changes the delay DSN message notification timeout interval to 6 hours on the Mailbox server named Mailbox01.
 
-    Set-TransportService Mailbox01 -DelayNotificationTimeout 06:00:00
+```powershell
+Set-TransportService Mailbox01 -DelayNotificationTimeout 06:00:00
+```
 
 ## Use the Shell to enable or disable the sending of delay DSN notifications to external or internal message senders
 
@@ -185,11 +195,15 @@ Use the following syntax to configure the delay DSN notification settings.
 
 This example prevents the sending of delay DSN notification messages to external senders.
 
-    Set-TransportConfig -ExternalDelayDSNEnabled $false
+```powershell
+Set-TransportConfig -ExternalDelayDSNEnabled $false
+```
 
 This example prevents the sending of delay DSN notification messages to internal senders.
 
-    Set-TransportConfig -InternalDelayDSNEnabled $false
+```powershell
+Set-TransportConfig -InternalDelayDSNEnabled $false
+```
 
 ## Configure the message expiration timeout interval
 
@@ -205,9 +219,13 @@ This example prevents the sending of delay DSN notification messages to internal
 
 To configure the message expiration timeout interval, use the following syntax.
 
-    Set-TransportService <ServerIdentity> -MessageExpirationTimeout <dd.hh:mm:ss>
+```powershell
+Set-TransportService <ServerIdentity> -MessageExpirationTimeout <dd.hh:mm:ss>
+```
 
 This example changes the message expiration timeout interval to 4 days on the Exchange server named Mailbox01.
 
-    Set-TransportService Mailbox01 -MessageExpirationTimeout 4.00:00:00
+```powershell
+Set-TransportService Mailbox01 -MessageExpirationTimeout 4.00:00:00
+```
 

@@ -39,11 +39,15 @@ Looking for other management tasks related to journaling? Check out [Manage jour
 
 This example disables journaling of voice mail and missed call notifications by setting the *VoicemailJournalingEnabled* parameter to `$false`.
 
-    Set-TransportConfig -VoicemailJournalingEnabled $false
+```powershell
+Set-TransportConfig -VoicemailJournalingEnabled $false
+```
 
 This example enables the journaling of voice mail and missed call notifications by setting the same parameter to `$true`.
 
-    Set-TransportConfig -VoicemailJournalingEnabled $true
+```powershell
+Set-TransportConfig -VoicemailJournalingEnabled $true
+```
 
 For detailed syntax and parameter information, see [Set-TransportConfig](https://technet.microsoft.com/en-us/library/bb124151\(v=exchg.150\)).
 

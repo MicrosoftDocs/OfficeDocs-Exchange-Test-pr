@@ -111,15 +111,21 @@ The following examples use the **Get-MailboxDatabaseCopyStatus** cmdlet. Each ex
 
 This example returns status information for all copies of the database DB2.
 
-    Get-MailboxDatabaseCopyStatus -Identity DB2 | Format-List
+```powershell
+Get-MailboxDatabaseCopyStatus -Identity DB2 | Format-List
+```
 
 This example returns the status for all database copies on the Mailbox server MBX2.
 
-    Get-MailboxDatabaseCopyStatus -Server MBX2 | Format-List
+```powershell
+Get-MailboxDatabaseCopyStatus -Server MBX2 | Format-List
+```
 
 This example returns the status for all database copies on the local Mailbox server.
 
-    Get-MailboxDatabaseCopyStatus -Local | Format-List
+```powershell
+Get-MailboxDatabaseCopyStatus -Local | Format-List
+```
 
 For more information about using the **Get-MailboxDatabaseCopyStatus** cmdlet, see [Get-MailboxDatabaseCopyStatus](https://technet.microsoft.com/en-us/library/dd298044\(v=exchg.150\)).
 
@@ -223,7 +229,9 @@ The **Test-ReplicationHealth** cmdlet is designed for the proactive monitoring o
 
 This example uses the **Test-ReplicationHealth** cmdlet to test the health of replication for the Mailbox server MBX1.
 
-    Test-ReplicationHealth -Identity MBX1
+```powershell
+Test-ReplicationHealth -Identity MBX1
+```
 
 ## Crimson channel event logging
 
@@ -446,7 +454,9 @@ The CollectReplicationMetrics.ps1 script supports parameters that allow you to c
 
 The following example gathers one hour's worth of data from all the servers in the DAG DAG1, sampled at one minute intervals, and then generates a summary report. In addition, the *ReportPath* parameter is used, which causes the script to place all the files in the current directory.
 
-    CollectReplicationMetrics.ps1 -DagName DAG1 -Duration "01:00:00" -Frequency "00:01:00" -ReportPath
+```powershell
+CollectReplicationMetrics.ps1 -DagName DAG1 -Duration "01:00:00" -Frequency "00:01:00" -ReportPath
+```
 
 The following example reads the data from all the files matching CounterData\* and then generates a summary report.
 

@@ -51,11 +51,15 @@ You can view the details of a scope by piping the output of the **Get-Management
 
 To view the details of a specific scope, use the following syntax.
 
-    Get-ManagementScope <scope name> | Format-List
+```powershell
+Get-ManagementScope <scope name> | Format-List
+```
 
 This example retrieves the details of the Seattle Servers scope.
 
-    Get-ManagementScope "Seattle Servers" | Format-List
+```powershell
+Get-ManagementScope "Seattle Servers" | Format-List
+```
 
 For detailed syntax and parameter information, see [Get-ManagementScope](https://technet.microsoft.com/en-us/library/dd298180\(v=exchg.150\)).
 
@@ -63,7 +67,9 @@ For detailed syntax and parameter information, see [Get-ManagementScope](https:/
 
 This example retrieves a list of scopes in your organization.
 
-    Get-ManagementScope
+```powershell
+Get-ManagementScope
+```
 
 This cmdlet retrieves both exclusive and regular scopes. If you only want to return exclusive scopes or regular scopes, see "List all exclusive or regular scopes only" later in this topic.
 
@@ -75,7 +81,9 @@ For detailed syntax and parameter information, see [Get-ManagementScope](https:/
 
 This examples retrieves a list of orphaned scopes.
 
-    Get-ManagementScope -Orphan
+```powershell
+Get-ManagementScope -Orphan
+```
 
 For detailed syntax and parameter information, see [Get-ManagementScope](https://technet.microsoft.com/en-us/library/dd298180\(v=exchg.150\)).
 
@@ -83,15 +91,21 @@ For detailed syntax and parameter information, see [Get-ManagementScope](https:/
 
 By default, the **Get-ManagementScope** cmdlet returns a list of scopes that contains both exclusive and regular scopes. If you want to return only exclusive scopes or only regular scopes use the following syntax.
 
-    Get-ManagementScope -Exclusive < $true | $false >
+```powershell
+Get-ManagementScope -Exclusive < $true | $false >
+```
 
 This example returns only exclusive scopes.
 
-    Get-ManagementScope -Exclusive $true
+```powershell
+Get-ManagementScope -Exclusive $true
+```
 
 This example returns a list of regular scopes only.
 
-    Get-ManagementScope -Exclusive $false
+```powershell
+Get-ManagementScope -Exclusive $false
+```
 
 For detailed syntax and parameter information, see [Get-ManagementScope](https://technet.microsoft.com/en-us/library/dd298180\(v=exchg.150\)).
 

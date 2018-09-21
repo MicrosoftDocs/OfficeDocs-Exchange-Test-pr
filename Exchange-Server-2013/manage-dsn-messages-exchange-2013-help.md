@@ -44,15 +44,21 @@ Microsoft Exchange Server 2013 uses delivery status notifications (DSN) to provi
 
 To view a summary list of all built-in DSN messages included with Exchange 2013, run the following command:
 
-    Get-SystemMessage -Original
+```powershell
+Get-SystemMessage -Original
+```
 
 To view a summary list of all custom DSN messages in your organization, run the following command:
 
-    Get-SystemMessage
+```powershell
+Get-SystemMessage
+```
 
 To view detailed information for the custom DSN message for DSN code 5.1.2 that's sent to internal senders in English, run the following command:
 
-    Get-SystemMessage En\Internal\5.1.2 | Format-List
+```powershell
+Get-SystemMessage En\Internal\5.1.2 | Format-List
+```
 
 ## Use the Shell to create a custom DSN message
 
@@ -78,7 +84,9 @@ To verify that you have successfully created a custom DNS message, do the follow
 
 1.  Run the following command:
     
-        Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
+    ```powershell
+Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
+```
 
 2.  Verify the values you see are the values you configured.
 
@@ -100,7 +108,9 @@ To verify that you have successfully changed the text of a custom DNS message, d
 
 1.  Run the following command: `Get-SystemMessage`.
     
-        Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> | Format-List -Text
+    ```powershell
+Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> | Format-List -Text
+```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -108,11 +118,15 @@ To verify that you have successfully changed the text of a custom DNS message, d
 
 Run the following command:
 
-    Remove-SystemMessage <Local>\<Internal | External>\<DSNcode>
+```powershell
+Remove-SystemMessage <Local>\<Internal | External>\<DSNcode>
+```
 
 This example removes the custom DSN message for the DSN code 5.1.2 that's sent to internal senders in English.
 
-    Remove-SystemMessage En\Internal\5.1.2
+```powershell
+Remove-SystemMessage En\Internal\5.1.2
+```
 
 ## How do you know this worked?
 
@@ -134,11 +148,15 @@ To assign a mailbox to the Exchange recipient, perform the following steps:
 
 2.  Run the following command:
     
-        Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient <MailboxIdentity>
+    ```powershell
+Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient <MailboxIdentity>
+```
     
     For example, to assign the existing mailbox named "Contoso System Mailbox" to the Exchange recipient, run the following command:
     
-        Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient "Contoso System Mailbox"
+    ```powershell
+Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient "Contoso System Mailbox"
+```
 
 ## Step 2: Specify the DSN codes you want to monitor
 
@@ -152,11 +170,15 @@ To assign a mailbox to the Exchange recipient, perform the following steps:
 
 To replace the existing values, run the following command:
 
-    Set-TransportConfig -GenerateCopyOfDSNFor <x.y.z>,<x.y.z>...
+```powershell
+Set-TransportConfig -GenerateCopyOfDSNFor <x.y.z>,<x.y.z>...
+```
 
 This example configures the Exchange organization to forward all DSN messages that have the DSN codes 5.7.1, 5.7.2, and 5.7.3 to the Exchange recipient.
 
-    Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
+```powershell
+Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
+```
 
 To add or remove entries without modifying any existing values, run the following command:
 
@@ -164,7 +186,9 @@ To add or remove entries without modifying any existing values, run the followin
 
 This example adds the DSN code 5.7.5 and removes the DSN code 5.7.1 from the existing list of DSN messages that are forwarded to the Exchange recipient.
 
-    Set-TransportConfig -GenerateCopyOfDSNFor @{Add="5.7.5"; Remove="5.7.1"}
+```powershell
+Set-TransportConfig -GenerateCopyOfDSNFor @{Add="5.7.5"; Remove="5.7.1"}
+```
 
 ## How do you know this worked?
 

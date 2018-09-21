@@ -45,15 +45,21 @@ For additional management tasks related to Client Access and Mailbox servers, se
 
 This example performs connectivity and operational tests on the local Mailbox server, and then displays the Voice over IP (VoIP) connectivity information.
 
-    Test-UMConnectivity
+```powershell
+Test-UMConnectivity
+```
 
 This example tests the ability for a local Client Access server to listen for incoming unencrypted SIP requests on TCP port 5060.
 
-    Test-UMConnectivity -ListenPort 5060
+```powershell
+Test-UMConnectivity -ListenPort 5060
+```
 
 This example tests the ability for a local Client Access server to listen for incoming encrypted SIP requests on TCP port 5061.
 
-    Test-UMConnectivity -ListenPort 5061
+```powershell
+Test-UMConnectivity -ListenPort 5061
+```
 
 
 > [!NOTE]

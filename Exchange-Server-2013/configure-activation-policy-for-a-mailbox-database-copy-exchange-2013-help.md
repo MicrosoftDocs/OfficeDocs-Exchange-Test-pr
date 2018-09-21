@@ -55,11 +55,15 @@ Looking for other management tasks related to mailbox database copies? Check out
 
 This example blocks the copy of the database DB1 on the server MBX2 for activation.
 
-    Suspend-MailboxDatabaseCopy -Identity DB1\MBX2 -ActivationOnly
+```powershell
+Suspend-MailboxDatabaseCopy -Identity DB1\MBX2 -ActivationOnly
+```
 
 This example resumes the copy of the database DB1 on the server MBX2 for activation.
 
-    Resume-MailboxDatabaseCopy -Identity DB1\MBX2
+```powershell
+Resume-MailboxDatabaseCopy -Identity DB1\MBX2
+```
 
 For detailed syntax and parameter information, see [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd351074\(v=exchg.150\)) or [Resume-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd335220\(v=exchg.150\)).
 
@@ -67,15 +71,21 @@ For detailed syntax and parameter information, see [Suspend-MailboxDatabaseCopy]
 
 This example configures the database copies on server MBX2 as blocked for activation.
 
-    Set-MailboxServer -Identity MBX2 -DatabaseCopyAutoActivationPolicy Blocked
+```powershell
+Set-MailboxServer -Identity MBX2 -DatabaseCopyAutoActivationPolicy Blocked
+```
 
 This example configures the database copies on server MBX3 as blocked for out-of-site activation.
 
-    Set-MailboxServer -Identity MBX3 -DatabaseCopyAutoActivationPolicy IntrasiteOnly
+```powershell
+Set-MailboxServer -Identity MBX3 -DatabaseCopyAutoActivationPolicy IntrasiteOnly
+```
 
 This example configures the database copies on server MBX4 as unblocked for activation.
 
-    Set-MailboxServer -Identity MBX4 -DatabaseCopyAutoActivationPolicy Unrestricted
+```powershell
+Set-MailboxServer -Identity MBX4 -DatabaseCopyAutoActivationPolicy Unrestricted
+```
 
 For detailed syntax and parameter information, see [Suspend-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd351074\(v=exchg.150\)), [Resume-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd335220\(v=exchg.150\)), or [Set-MailboxServer](https://technet.microsoft.com/en-us/library/aa998651\(v=exchg.150\)).
 
@@ -85,9 +95,13 @@ To verify that you've successfully configured the activation policy, do one of t
 
   - In the Shell, run the following command to verify activation settings for a database copy.
     
-        Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List ActivationSuspended
+    ```powershell
+Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List ActivationSuspended
+```
 
   - In the Shell, run the following command to verify activation settings for a DAG member.
     
-        Get-MailboxServer <ServerName> | Format-List DatabaseCopyAutoActivationPolicy
+    ```powershell
+Get-MailboxServer <ServerName> | Format-List DatabaseCopyAutoActivationPolicy
+```
 

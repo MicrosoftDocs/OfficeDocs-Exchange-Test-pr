@@ -45,11 +45,15 @@ You can view a list of all the enabled transport agents that have encountered me
 
 To use the Shell to view a list of transport agents in the transport pipeline on an Exchange server, run the following command:
 
-    Get-TransportPipeline | Format-List
+```powershell
+Get-TransportPipeline | Format-List
+```
 
 To export the results to a text file named C:\\My Documents\\Transport Agents.txt, run the following command:
 
-    Get-TransportPipeline | Format-List > "C:\My Documents\Transport Agents.txt"
+```powershell
+Get-TransportPipeline | Format-List > "C:\My Documents\Transport Agents.txt"
+```
 
 ## How do you know this worked?
 

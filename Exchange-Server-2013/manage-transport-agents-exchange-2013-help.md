@@ -51,13 +51,17 @@ To perform any of the Transport Agent procedures described in this topic in the 
 
 1.  On the Client Access server, open Windows PowerShell and run the following command:
     
-        Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+    ```powershell
+Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+```
 
 2.  Run the command as described, but add the following value to the command: `-TransportService FrontEnd`.
     
     For example, to view the transport agents in the Front End Transport service on a Client Access server, run the following command:
     
-        Get-TransportAgent -TransportService FrontEnd
+    ```powershell
+Get-TransportAgent -TransportService FrontEnd
+```
 
 ## Use the Shell to install a transport agent
 
@@ -83,11 +87,15 @@ To verify that you have successfully installed the transport agent, run the comm
 
 Use the following syntax to enable a transport agent.
 
-    Enable-TransportAgent <TransportAgentIdentity>
+```powershell
+Enable-TransportAgent <TransportAgentIdentity>
+```
 
 This example enables the transport agent named Contoso Transport Agent in the Transport service on a Mailbox server.
 
-    Enable-TransportAgent "Contoso Transport Agent"
+```powershell
+Enable-TransportAgent "Contoso Transport Agent"
+```
 
 ## How do you know this worked?
 
@@ -97,11 +105,15 @@ To verify that you have successfully enabled a transport agent, run the command 
 
 Use the following syntax to disable a transport agent:
 
-    Disable-TransportAgent <TransportAgentIdentity>
+```powershell
+Disable-TransportAgent <TransportAgentIdentity>
+```
 
 This example disables the transport agent named Fabirkam Transport Agent in the Transport service on a Mailbox server.
 
-    Disable-TransportAgent "Fabrikam Transport Agent"
+```powershell
+Disable-TransportAgent "Fabrikam Transport Agent"
+```
 
 ## How do you know this worked?
 
@@ -111,15 +123,21 @@ To verify that you have successfully disabled a transport agent, run the command
 
 To view a summary list of transport agents, run the following command:
 
-    Get-TransportAgent
+```powershell
+Get-TransportAgent
+```
 
 To view the detailed configuration of a specific transport agent, run the following command:
 
-    Get-TransportAgent <TransportAgentIdentity> | Format-List
+```powershell
+Get-TransportAgent <TransportAgentIdentity> | Format-List
+```
 
 This example provides detailed configuration of the transport agent named Transport Rule Agent.
 
-    Get-TransportAgent "Transport Rule Agent" | Format-List
+```powershell
+Get-TransportAgent "Transport Rule Agent" | Format-List
+```
 
 ## Use the Shell to configure the priority of a transport agent
 
@@ -127,11 +145,15 @@ Transport agents with a priority closest to 0 process email messages first. Howe
 
 To modify the priority of an existing transport agent, run the following command:
 
-    Set-TransportAgent <TransportAgentIdentity> -Priority <Integer>
+```powershell
+Set-TransportAgent <TransportAgentIdentity> -Priority <Integer>
+```
 
 This example sets the priority agent value of 3 for the existing transport agent named Contoso Transport Agent in the Transport service on a Mailbox server.
 
-    Set-TransportAgent "Contoso Transport Agent" -Priority 3
+```powershell
+Set-TransportAgent "Contoso Transport Agent" -Priority 3
+```
 
 ## How do you know this worked?
 
@@ -143,11 +165,15 @@ When the transport agent is uninstalled, Exchange unregisters the DLL files used
 
 To uninstall a transport agent, run the following command:
 
-    Uninstall-TransportAgent <TransportAgentIdentity>
+```powershell
+Uninstall-TransportAgent <TransportAgentIdentity>
+```
 
 This example uninstalls the transport agent named Fabrikam Transport Agent from the Transport service on a Mailbox server.
 
-    Uninstall-TransportAgent "Fabrikam Transport Agent"
+```powershell
+Uninstall-TransportAgent "Fabrikam Transport Agent"
+```
 
 ## How do you know this worked?
 

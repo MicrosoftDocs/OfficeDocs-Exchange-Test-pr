@@ -47,11 +47,15 @@ For additional tasks related to Unified Messaging and Client Access servers, see
 
 This example removes a Client Access server named `MyClientAccessServer` from all Session Initiation Protocol (SIP) dial plans.
 
-    Set-UMCallRouterSettings -DialPlans $null - Server MyClientAccessServer
+```powershell
+Set-UMCallRouterSettings -DialPlans $null - Server MyClientAccessServer
+```
 
 This example adds a Client Access server named `MyClientAccessServer` to a SIP dial plan named `MySIPDialPlan` and also sets the maximum number of incoming voice calls.
 
-    Set-UMCallRouterSettings -DialPlans MySIPDialPlan -MaxCalls 150 -Server MyClientAccessServer
+```powershell
+Set-UMCallRouterSettings -DialPlans MySIPDialPlan -MaxCalls 150 -Server MyClientAccessServer
+```
 
 This example sets the SIP TCP listening port to 5077 and the startup mode to Dual mode on a Client Access server named `MyClientAccessServer`.
 
@@ -61,9 +65,13 @@ This example sets the SIP TCP listening port to 5077 and the startup mode to Dua
 
 This example displays a list of all the Client Access servers.
 
-    Get-UMCallRouterSettings
+```powershell
+Get-UMCallRouterSettings
+```
 
 This example displays a formatted list of properties for the Client Access server.
 
-    Get-UMCallRouterSettings | Format-List
+```powershell
+Get-UMCallRouterSettings | Format-List
+```
 

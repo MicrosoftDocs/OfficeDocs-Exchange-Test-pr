@@ -43,11 +43,15 @@ We recommend that you don't modify the default setting in most cases. However, y
 
 1.  In the Command Prompt window, open the MSExchangeMailboxAssistants.exe.config file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\MSExchangeMailboxAssistants.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\MSExchangeMailboxAssistants.exe.config
+```
 
 2.  Locate the *\</appsettings\>* key at the end of the file, and paste the following key before the *\</appsettings\>* key:
     
-        <add key="IncludeSafeDomains" value="true" />
+    ```command line
+<add key="IncludeSafeDomains" value="true" />
+```
 
 3.  When you are finished, save and close the MSExchangeMailboxAssistants.exe.config file.
 

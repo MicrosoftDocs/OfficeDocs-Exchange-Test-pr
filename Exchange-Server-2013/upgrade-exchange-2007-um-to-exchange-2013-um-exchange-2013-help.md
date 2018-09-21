@@ -53,7 +53,9 @@ You can add UM language packs by using the setup.exe command or by running the *
 
 This example uses setup.exe to install the Japanese (ja-JP) UM language pack.
 
-    setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```powershell
+setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```
 
 ## Step 2: Move the Exchange 2007 custom greetings, announcements, menus, and prompts to the Exchange 2013 system mailbox
 
@@ -63,11 +65,15 @@ By default, system mailboxes aren't visible in the Exchange admin center (EAC). 
 
 This command returns a list of all the system mailboxes.
 
-    Get-Mailbox -Arbitration
+```powershell
+Get-Mailbox -Arbitration
+```
 
 This command returns a list of system mailboxes and their individual properties or settings.
 
-    Get-Mailbox -Arbitration |fl
+```powershell
+Get-Mailbox -Arbitration |fl
+```
 
 When you’re importing custom greetings, announcements, menus, and prompts from Exchange 2007 to Exchange 2013, you must use the MigrateUMCustomPrompts.ps1 script. You can’t use the EAC to import custom greetings, announcements, menus, and prompts. The MigrateUMCustomPrompts.ps1 script migrates a copy of all Exchange Server 2007 UM custom greetings, announcements, menus, and prompts to Exchange 2013 UM. By default, the MigrateUMCustomPrompts.ps1 script is located in the *\<Program Files\>*\\Microsoft\\Exchange Server\\V15\\Scripts folder on an Exchange 2013 Mailbox server and must be run from an Exchange 2013 Mailbox server. To run the script:
 
@@ -180,7 +186,9 @@ Configure the UM startup mode on an Exchange 2013 Client Access server by using 
 
 Configure the UM startup mode on an Exchange 2013 Client Access server by running the following command in the Shell.
 
-    Set-UMCallRouterSettings -Server MyUMCallRouter.northwindtraders.com -UMStartupMode Dual
+```powershell
+Set-UMCallRouterSettings -Server MyUMCallRouter.northwindtraders.com -UMStartupMode Dual
+```
 
 ## Step 5: Configure the UM startup mode on all Exchange 2013 Mailbox servers
 
@@ -257,7 +265,9 @@ If required, you can create a UM dial plan by using the EAC:
 
 If required, you can create a UM dial plan by running the following command in the Shell.
 
-    New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Secured
+```powershell
+New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Secured
+```
 
 If required, you can configure an existing UM dial plan by using the EAC:
 
@@ -301,7 +311,9 @@ If required, you can create a UM IP gateway by using the EAC, as follows:
 
 If required, you can create a UM IP gateway by running the following command in the Shell.
 
-    New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
+```powershell
+New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
+```
 
 If required, you can configure an existing UM IP gateway by using the EAC:
 
@@ -415,7 +427,9 @@ If required, you can create a UM mailbox policy by using the EAC:
 
 If required, you can create a UM mailbox policy in the Shell by running the following command.
 
-    New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
+```powershell
+New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
+```
 
 If required, you can configure an existing UM mailbox policy by using the EAC:
 
@@ -453,7 +467,9 @@ To move an Exchange 2007 mailbox to an Exchange 2013 Mailbox server by using the
 
 To move an Exchange 2007 mailbox to an Exchange 2013 Mailbox server by using the Shell, run the following command.
 
-    New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
+```powershell
+New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
+```
 
 ## Step 12: Enable new users for UM or configure settings for an existing UM-enabled user
 
@@ -559,7 +575,9 @@ To disable Unified Messaging on an Exchange 2007 UM server by using the Exchange
 
 To disable Unified Messaging on an Exchange 2007 UM server by using the Shell, run the following command.
 
-    Disable-UMServer -Identity MyUMServer -Immediate $true
+```powershell
+Disable-UMServer -Identity MyUMServer -Immediate $true
+```
 
 
 > [!TIP]
@@ -594,11 +612,15 @@ To remove an Exchange 2007 UM server from a dial plan by using the Shell, run th
 
 In this example, there are three SIP URI dial plans: SipDP1, SipDP2 and SipDP3. This example removes the UM server named `MyUMServer` from the SipDP3 dial plan.
 
-    Set-UMServer -id MyUMServer -DialPlans SipDP1,SipDP2
+```powershell
+Set-UMServer -id MyUMServer -DialPlans SipDP1,SipDP2
+```
 
 In this example, there are two SIP URI dial plans: SipDP1 and SipDP2. This example removes the UM server named `MyUMServer` from the SipDP2 dial plan.
 
-    Set-UMServer -id MyUMServer -DialPlans SipDP1
+```powershell
+Set-UMServer -id MyUMServer -DialPlans SipDP1
+```
 
 
 > [!TIP]

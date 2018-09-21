@@ -334,7 +334,9 @@ For more information about internal and external URLs on virtual directories, se
 
 2.  Store the host name of your Client Access server in a variable that will be used in the next step. For example, Ex2013CAS.
     
-        $HostName = "Ex2013CAS"
+    ```powershell
+$HostName = "Ex2013CAS"
+```
 
 3.  Run each of the following commands in the Shell to configure each internal URL to match the virtual directory’s external URL.
     

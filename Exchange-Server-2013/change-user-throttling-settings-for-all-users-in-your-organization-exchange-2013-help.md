@@ -41,7 +41,9 @@ To customize throttling settings that apply to all users in your organization, c
 
 This example creates a throttling policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy.
 
-    New-ThrottlingPolicy -Name AllUsersEWSPolicy EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
+```powershell
+New-ThrottlingPolicy -Name AllUsersEWSPolicy EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
+```
 
 For more information about syntax and parameters, see [New-ThrottlingPolicy](https://technet.microsoft.com/en-us/library/dd351045\(v=exchg.150\)).
 
@@ -51,13 +53,17 @@ To verify that you’ve successfully created the Organization throttling policy,
 
 1.  Run the following command.
     
-        Get-ThrottlingPolicy | Format-List
+    ```powershell
+Get-ThrottlingPolicy | Format-List
+```
 
 2.  Verify that the Organization throttling policy you just created is listed in the column that shows the GlobalThrottlingPolicy object.
 
 3.  Run the following command.
     
-        Get-ThrottlingPolicy | Format-List
+    ```powershell
+Get-ThrottlingPolicy | Format-List
+```
 
 4.  Verify that the properties for the new Organization policy match the value or values you configured.
 

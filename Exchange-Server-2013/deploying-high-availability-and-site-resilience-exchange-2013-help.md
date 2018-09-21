@@ -136,11 +136,15 @@ As shown in the preceding table, adapters used for Replication networks don't us
 
 To configure routing for the Replication network adapters on MBX1 and MBX2, the following command was run on each server.
 
-    netsh interface ipv4 add route 10.0.2.0/24 <NetworkName> 10.0.1.254
+```powershell
+netsh interface ipv4 add route 10.0.2.0/24 <NetworkName> 10.0.1.254
+```
 
 To configure routing for the Replication network adapters on MBX3 and MBX4, the following command was run on each server.
 
-    netsh interface ipv4 add route 10.0.1.0/24 <NetworkName> 10.0.2.254
+```powershell
+netsh interface ipv4 add route 10.0.1.0/24 <NetworkName> 10.0.2.254
+```
 
 The following additional network settings have also been configured:
 
@@ -187,7 +191,9 @@ The preceding command configures DAG1 to use an alternate witness server of CAS4
 
 The preceding commands add each of the Mailbox servers, one at a time, to the DAG. The commands also install the Windows Failover Clustering component on each Mailbox server (if it isn't already installed), create a failover cluster, and join each Mailbox server to the newly created cluster.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
+```
 
 The preceding command enables DAC mode for the DAG.
 

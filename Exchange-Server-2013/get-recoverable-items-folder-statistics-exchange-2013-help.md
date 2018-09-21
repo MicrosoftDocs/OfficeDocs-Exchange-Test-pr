@@ -45,7 +45,9 @@ Having problems? Ask for help in the Exchange forums. Visit the forums at [Excha
 
 This example gets folder statistics for Soumya Singhi's Recoverable Items folder and displays the output in a list format.
 
-    Get-MailboxFolderStatistics -Identity "Soumya Singhi" -FolderScope RecoverableItems | Format-List
+```powershell
+Get-MailboxFolderStatistics -Identity "Soumya Singhi" -FolderScope RecoverableItems | Format-List
+```
 
 This example gets folder statistics for Soumya Singhi's Recoverable Items folder and displays the folder name, folder path, number of items in the folder, and folder size in a table format.
 

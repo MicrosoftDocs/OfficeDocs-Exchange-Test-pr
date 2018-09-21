@@ -45,7 +45,9 @@ The **New-MoveRequest** cmdlet queues the public folder mailbox into the Microso
 
 This example begins the move request for the public folder mailbox PF\_SanFrancisco to the mailbox database MBX\_DB01.
 
-    New-MoveRequest -Identity "PF_SanFrancisco" -TargetDatabase MBX_DB01
+```powershell
+New-MoveRequest -Identity "PF_SanFrancisco" -TargetDatabase MBX_DB01
+```
 
 For detailed syntax and parameter information, see [New-MoveRequest](https://technet.microsoft.com/en-us/library/dd351123\(v=exchg.150\)).
 
@@ -55,19 +57,25 @@ During the final stage of the move request, when it’s in the `CompletionInProg
 
 This example begins the move request for the public folder mailbox PF\_SanFrancisco to the mailbox database MBX\_DB01, and suspends it when the move request is ready to complete.
 
-    New-MoveRequest -Identity "PF_SanFrancisco" -TargetDatabase MBX_DB01 -SuspendWhenReadyToComplete
+```powershell
+New-MoveRequest -Identity "PF_SanFrancisco" -TargetDatabase MBX_DB01 -SuspendWhenReadyToComplete
+```
 
 For detailed syntax and parameter information, see [New-MoveRequest](https://technet.microsoft.com/en-us/library/dd351123\(v=exchg.150\)).
 
 This example retrieves the status of the ongoing mailbox move for the public folder mailbox PF\_SanFrancisco.
 
-    Get-MoveRequest -Identity "PF_SanFrancisco"
+```powershell
+Get-MoveRequest -Identity "PF_SanFrancisco"
+```
 
 For detailed syntax and parameter information, see [Get-MoveRequest](https://technet.microsoft.com/en-us/library/dd335227\(v=exchg.150\)).
 
 When the move request reaches the status of Suspended, you can resume the request. This example resumes the move request for the public folder mailbox PF\_SanFrancisco.
 
-    Resume-MoveRequest -Identity "PF_SanFrancisco"
+```powershell
+Resume-MoveRequest -Identity "PF_SanFrancisco"
+```
 
 For detailed syntax and parameter information, see [Resume-MoveRequest](https://technet.microsoft.com/en-us/library/ee332320\(v=exchg.150\)).
 
@@ -75,7 +83,9 @@ For detailed syntax and parameter information, see [Resume-MoveRequest](https://
 
 To verify that the move request was successfully created, run the following command:
 
-    Get-MoveRequestStatistics -Identity PF_SanFrancisco | Format-List Status
+```powershell
+Get-MoveRequestStatistics -Identity PF_SanFrancisco | Format-List Status
+```
 
 A status of `Completed` indicates that the move request was successful.
 

@@ -47,7 +47,9 @@ This example updates a GAL for the Fourth Coffee company.
 
 
 
-    Update-GlobalAddressList -Identity "Fourth Coffee"
+```powershell
+Update-GlobalAddressList -Identity "Fourth Coffee"
+```
 
 For detailed syntax and parameter information, see [Update-GlobalAddressList](https://technet.microsoft.com/en-us/library/aa998806\(v=exchg.150\)).
 

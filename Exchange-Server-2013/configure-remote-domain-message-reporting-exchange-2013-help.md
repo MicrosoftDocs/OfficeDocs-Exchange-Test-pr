@@ -39,9 +39,13 @@ You can use the **Set-RemoteDomain** cmdlet to configure the properties of a rem
 
 This example disables delivery reports to the remote domain named Contoso. This setting is enabled by default.
 
-    Set-RemoteDomain Contoso -DeliveryReportEnabled $false
+```powershell
+Set-RemoteDomain Contoso -DeliveryReportEnabled $false
+```
 
 This example disables non-delivery reports to the remote domain. This setting is enabled by default.
 
-    Set-RemoteDomain Contoso -NDREnabled $false
+```powershell
+Set-RemoteDomain Contoso -NDREnabled $false
+```
 

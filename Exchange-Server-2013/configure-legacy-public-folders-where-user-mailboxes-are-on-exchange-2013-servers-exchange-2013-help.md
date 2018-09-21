@@ -45,7 +45,9 @@ Users whose mailboxes are on Exchange Server 2013 or Exchange Server 2016 won’
     
     For Exchange 2007, run the following command:
     
-        New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBforPFs>
+    ```powershell
+New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBforPFs>
+```
     
 
     > [!NOTE]
@@ -60,12 +62,16 @@ Users whose mailboxes are on Exchange Server 2013 or Exchange Server 2016 won’
     ```
 
     ```
-    Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
+```powershell
+Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
+```
     ```
 
 4.  For Exchange 2010, enable AutoDiscover to return the proxy public folder mailboxes. This step isn’t necessary for Exchange 2007.
     
-        Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CASRole>
+    ```powershell
+Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CASRole>
+```
 
 5.  Repeat the preceding steps for every public folder server in your organization.
 

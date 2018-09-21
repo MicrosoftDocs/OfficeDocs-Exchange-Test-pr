@@ -59,11 +59,15 @@ After you've set the connection time-out limits for IMAP4, you must restart the 
 
 This example sets the connection time-out limit for idle authenticated connections.
 
-    Set -ImapSettings -Identity CAS01 -AuthenticatedConnectionTimeout TimeValue
+```powershell
+Set -ImapSettings -Identity CAS01 -AuthenticatedConnectionTimeout TimeValue
+```
 
 This example sets the connection time-out limit for idle unauthenticated connections.
 
-    Set -ImapSettings -Identity CAS01 -PreAuthenticatedConnectionTimeout TimeValue
+```powershell
+Set -ImapSettings -Identity CAS01 -PreAuthenticatedConnectionTimeout TimeValue
+```
 
 After you've set the connection time-out limits for IMAP4, you must restart the IMAP4 services for the settings to take effect. For information about how to restart the IMAP4 services, see [Start and stop the IMAP4 services](start-and-stop-the-imap4-services-exchange-2013-help.md).
 
@@ -87,7 +91,9 @@ Or
 
 1.  Run the following command in the Shell.
     
-        Get-ImapSettings | format-list
+    ```powershell
+Get-ImapSettings | format-list
+```
 
 2.  Verify the connection settings are correct.
 

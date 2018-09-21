@@ -71,7 +71,9 @@ To verify that you have successfully enabled or disabled address rewriting, do t
 
 1.  Run the following command:
     
-        Get-TransportAgent
+    ```powershell
+Get-TransportAgent
+```
 
 2.  Verify the values of the **Enabled** property for the Address Rewriting Inbound Agent and the Address Rewriting Outbound Agent are the values you configured.
 
@@ -79,15 +81,21 @@ To verify that you have successfully enabled or disabled address rewriting, do t
 
 To view a summary list of all address rewrite entries, run the following command.
 
-    Get-AddressRewriteEntry
+```powershell
+Get-AddressRewriteEntry
+```
 
 To view details of an address rewrite entry, use the following syntax.
 
-    Get-AddressRewriteEntry <AddressRewriteEntryIdentity> | Format-List
+```powershell
+Get-AddressRewriteEntry <AddressRewriteEntryIdentity> | Format-List
+```
 
 The following example displays the details of the address rewrite entry named Rewrite Contoso.com to Northwindtraders.com:
 
-    Get-AddressRewriteEntry "Rewrite Contoso.com to Northwindtraders.com" | Format-List
+```powershell
+Get-AddressRewriteEntry "Rewrite Contoso.com to Northwindtraders.com" | Format-List
+```
 
 ## Use the Shell to create address rewrite entries
 
@@ -169,7 +177,9 @@ To modify an address rewrite entry that rewrites the email addresses of recipien
 
 The following example changes the internal address value of the single domain address rewrite entry named "Northwind Traders to Contoso".
 
-    Set-AddressRewriteEntry "Northwindtraders to Contoso" -InternalAddress northwindtraders.net
+```powershell
+Set-AddressRewriteEntry "Northwindtraders to Contoso" -InternalAddress northwindtraders.net
+```
 
 ## Modify address rewrite entries for recipients in multiple subdomains
 
@@ -207,11 +217,15 @@ To verify that you have successfully modified an address rewrite entry, do the f
 
 To remove a single address rewrite entry, use the following syntax:
 
-    Remove-AddressRewriteEntry <AddressRewriteEntryIdentity>
+```powershell
+Remove-AddressRewriteEntry <AddressRewriteEntryIdentity>
+```
 
 The following example removes the address rewrite entry named "Contoso.com to Northwindtraders.com":
 
-    Remove-AddressRewriteEntry "Contoso.com to Northwindtraders.com"
+```powershell
+Remove-AddressRewriteEntry "Contoso.com to Northwindtraders.com"
+```
 
 To remove multiple address rewrite entries, use the following syntax:
 
@@ -219,7 +233,9 @@ To remove multiple address rewrite entries, use the following syntax:
 
 The following example removes all address rewrite entries:
 
-    Get-AddressRewriteEntry | Remove-AddressRewriteEntry
+```powershell
+Get-AddressRewriteEntry | Remove-AddressRewriteEntry
+```
 
 The following example simulates the removal of address rewrite entries that contain the text "to contoso.com" in the name. The *WhatIf* switch allows you to preview the result without committing any changes.
 

@@ -126,7 +126,9 @@ To verify that you’ve successfully created a linked mailbox, do one of the fol
 
   - In the Shell, run the following command to display information about the new linked mailbox.
     
-        Get-Mailbox <Name> | FL Name,RecipientTypeDetails,IsLinked,LinkedMasterAccount
+    ```powershell
+Get-Mailbox <Name> | FL Name,RecipientTypeDetails,IsLinked,LinkedMasterAccount
+```
 
 ## Change linked mailbox properties
 
@@ -396,5 +398,7 @@ To verify that you have successfully changed properties for a linked mailbox, do
     
     For the example above where the linked master account was changed, run the following command to verify the new value.
     
-        Get-Mailbox "Ayla Kol" | fl LinkedMasterAccount
+    ```powershell
+Get-Mailbox "Ayla Kol" | fl LinkedMasterAccount
+```
 

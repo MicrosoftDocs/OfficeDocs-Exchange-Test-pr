@@ -113,7 +113,9 @@ You can specify the number of days, hours, minutes, and seconds that audit log e
 
 This example specifies an age limit of two years and six months.
 
-    Set-AdminAuditLogConfig -AdminAuditLogAgeLimit 913.00:00:00
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogAgeLimit 913.00:00:00
+```
 
 For detailed syntax and parameter information, see [Set-AdminAuditLogConfig](https://technet.microsoft.com/en-us/library/dd298169\(v=exchg.150\)).
 
@@ -123,11 +125,15 @@ Cmdlets that start with the verb **Test** aren't logged by default. This is beca
 
 This command enables the logging of **Test** cmdlets.
 
-    Set-AdminAuditLogConfig -TestCmdletLoggingEnabled $True
+```powershell
+Set-AdminAuditLogConfig -TestCmdletLoggingEnabled $True
+```
 
 This command disables the logging of **Test** cmdlets.
 
-    Set-AdminAuditLogConfig -TestCmdletLoggingEnabled $False
+```powershell
+Set-AdminAuditLogConfig -TestCmdletLoggingEnabled $False
+```
 
 For detailed syntax and parameter information, see [Set-AdminAuditLogConfig](https://technet.microsoft.com/en-us/library/dd298169\(v=exchg.150\)).
 
@@ -135,17 +141,23 @@ For detailed syntax and parameter information, see [Set-AdminAuditLogConfig](htt
 
 To disable administrator audit logging, use the following command.
 
-    Set-AdminAuditLogConfig -AdminAuditLogEnabled $False
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogEnabled $False
+```
 
 ## Enable administrator audit logging
 
 To enable administrator audit logging, use the following command.
 
-    Set-AdminAuditLogConfig -AdminAuditLogEnabled $True
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogEnabled $True
+```
 
 ## View administrator audit logging settings
 
 To view the administrator audit logging settings that you've configured for your organization, use the following command.
 
-    Get-AdminAuditLogConfig
+```powershell
+Get-AdminAuditLogConfig
+```
 

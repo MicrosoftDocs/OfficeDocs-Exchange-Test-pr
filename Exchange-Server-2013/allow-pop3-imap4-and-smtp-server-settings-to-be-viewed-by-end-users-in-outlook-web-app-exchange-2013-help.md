@@ -47,19 +47,25 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 This example allows external POP3 server settings to be viewed by end users.
 
-    Set-PopSettings -ExternalConnectionSettings {Dublin01.Contoso.com:995:SSL}
+```powershell
+Set-PopSettings -ExternalConnectionSettings {Dublin01.Contoso.com:995:SSL}
+```
 
 For detailed syntax and parameter information, see [Set-PopSettings](https://technet.microsoft.com/en-us/library/aa997154\(v=exchg.150\)).
 
 This example allows external IMAP4 server settings to be viewed by end users.
 
-    Set-ImapSettings -ExternalConnectionSettings {Dublin01.Contoso.com:993:SSL}
+```powershell
+Set-ImapSettings -ExternalConnectionSettings {Dublin01.Contoso.com:993:SSL}
+```
 
 For detailed syntax and parameter information, see [Set-ImapSettings](https://technet.microsoft.com/en-us/library/aa998252\(v=exchg.150\)).
 
 To apply these changes, you must restart IIS. You don’t need to restart the POP3 services. To restart IIS, from a command prompt, enter the following:
 
-    iisreset
+```powershell
+iisreset
+```
 
 ## How do you know this worked?
 
@@ -67,7 +73,9 @@ To verify that you’ve configured Exchange to allow users to view their POP3 se
 
 1.  Run the following command in the Shell.
     
-        Get-PopSettings | format-list
+    ```powershell
+Get-PopSettings | format-list
+```
 
 2.  Verify that the *ExternalConnectionSettings* property is set.
 
@@ -75,7 +83,9 @@ To verify that you’ve configured Exchange to allow users to view their IMAP4 s
 
 1.  Run the following command in the Shell.
     
-        Get-ImapSettings | format-list
+    ```powershell
+Get-ImapSettings | format-list
+```
 
 2.  Verify that the *ExternalConnectionSettings* property is set.
 
@@ -95,7 +105,9 @@ To verify that you’ve configured Exchange to allow users to view their SMTP se
 
 1.  Run the following command in the Shell.
     
-        Get-ReceiveConnector | format-list
+    ```powershell
+Get-ReceiveConnector | format-list
+```
 
 2.  If the *AdvertiseClientSettings* property is set to `true`, users can view their SMTP server settings in Outlook Web App. If *AdvertiseClientSettings* is set to `false`, users can’t view their SMTP sever settings in Outlook Web App.
 

@@ -43,7 +43,9 @@ For additional management tasks related to messaging records management (MRM), s
 
 This example configures the Managed Folder Assistant to process all mailboxes within one day.
 
-    Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+```powershell
+Set-MailboxServer MyMailboxServer -ManagedFolderWorkCycle 1
+```
 
 For detailed syntax and parameter information, see [Set-MailboxServer](https://technet.microsoft.com/en-us/library/aa998651\(v=exchg.150\)).
 
@@ -59,7 +61,9 @@ This command retrieves all Mailbox servers in the organization and outputs the M
 
 This example triggers the Managed Folder Assistant to immediately process Morris Cornejo's mailbox.
 
-    Start-ManagedFolderAssistant -Identity morris.cornejo@contoso.com
+```powershell
+Start-ManagedFolderAssistant -Identity morris.cornejo@contoso.com
+```
 
 For detailed syntax and parameter information, see [Start-ManagedFolderAssistant](https://technet.microsoft.com/en-us/library/aa998864\(v=exchg.150\)).
 

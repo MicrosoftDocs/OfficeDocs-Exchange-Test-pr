@@ -111,11 +111,15 @@ Perform the following prerequisite steps before you begin the migration.
     
       - Run the following command to take a snapshot of the original source folder structure:
         
-            Get-PublicFolder -Recurse | Export-CliXML C:\PFMigration\Legacy_PFStructure.xml
+        ```powershell
+Get-PublicFolder -Recurse | Export-CliXML C:\PFMigration\Legacy_PFStructure.xml
+```
     
       - Run the following command to take a snapshot of public folder statistics such as item count, size, and owner:
         
-            Get-PublicFolderStatistics | Export-CliXML C:\PFMigration\Legacy_PFStatistics.xml
+        ```powershell
+Get-PublicFolderStatistics | Export-CliXML C:\PFMigration\Legacy_PFStatistics.xml
+```
     
       - Run the following command to take a snapshot of the permissions:
         
@@ -135,19 +139,25 @@ Perform the following prerequisite steps before you begin the migration.
     
     3.  If any public folders are returned, you can rename them by running the following command:
         
-            Set-PublicFolder -Identity <public folder identity> -Name <new public folder name>
+        ```powershell
+Set-PublicFolder -Identity <public folder identity> -Name <new public folder name>
+```
 
 3.  Make sure there isn’t a previous record of a successful migration.
     
     1.  The following example checks the public folder migration status.
         
-            Get-OrganizationConfig | Format-List PublicFoldersLockedforMigration, PublicFolderMigrationComplete
+        ```powershell
+Get-OrganizationConfig | Format-List PublicFoldersLockedforMigration, PublicFolderMigrationComplete
+```
         
         If there has been a previous successful migration, the value of the *PublicFoldersLockedforMigration* or *PublicFolderMigrationComplete* properties is `$true`. Use the command in step 3b to set the value to `$false`. If the value is set to `$true`, your migration request will fail.
     
     2.  If the status of the *PublicFoldersLockedforMigration* or *PublicFolderMigrationComplete* properties is `$true`, run the following command to set the value to `$false`.
         
-            Set-OrganizationConfig -PublicFoldersLockedforMigration:$false -PublicFolderMigrationComplete:$false
+        ```powershell
+Set-OrganizationConfig -PublicFoldersLockedforMigration:$false -PublicFolderMigrationComplete:$false
+```
     
 
     > [!WARNING]
@@ -188,7 +198,9 @@ For detailed syntax and parameter information, see the following topics:
     
     The following example removes any existing public folder serial migration requests.
     
-        Get-PublicFolderMigrationRequest | Remove-PublicFolderMigrationRequest
+    ```powershell
+Get-PublicFolderMigrationRequest | Remove-PublicFolderMigrationRequest
+```
     
     The following example will discover any existing batch migration requests.
     
@@ -196,7 +208,9 @@ For detailed syntax and parameter information, see the following topics:
     
     The following example removes any existing public folder batch migration requests.
     
-        $batch | Remove-MigrationBatch -Confirm:$false
+    ```powershell
+$batch | Remove-MigrationBatch -Confirm:$false
+```
 
 2.  Make sure no public folders or public folder mailboxes exist on the Exchange 2013 servers.
     
@@ -206,7 +220,9 @@ For detailed syntax and parameter information, see the following topics:
     
     2.  If the command didn’t return any public folder mailboxes, continue to Step 3: Generate the .csv files. If the command returned any public folders, run the following command to see if any public folders exist:
         
-            Get-PublicFolder
+        ```powershell
+Get-PublicFolder
+```
     
     3.  If you have any public folders, run the following PowerShell commands to remove them. Make sure you've saved any information that was in the public folders.
         
@@ -220,7 +236,9 @@ For detailed syntax and parameter information, see the following topics:
         ```
         
         ```
-        Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+    ```powershell
+Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+```
         ```
 
 For detailed syntax and parameter information, see the following topics:
@@ -302,7 +320,9 @@ The steps for migrating Exchange 2007 public folders are different from the step
 
 3.  Start the migration using the following command:
     
-        Start-MigrationBatch PFMigration
+    ```powershell
+Start-MigrationBatch PFMigration
+```
 
 **Migrate Exchange 2010 public folders**
 
@@ -314,7 +334,9 @@ The steps for migrating Exchange 2007 public folders are different from the step
 
 2.  Start the migration using the following command:
     
-        Start-MigrationBatch PFMigration
+    ```powershell
+Start-MigrationBatch PFMigration
+```
     
     Or:
     
@@ -354,7 +376,9 @@ Before you run the `PublicFoldersLockedForMigration` command as described below,
 
 On the legacy Exchange server, run the following command to lock the legacy public folders for finalization.
 
-    Set-OrganizationConfig -PublicFoldersLockedForMigration:$true
+```powershell
+Set-OrganizationConfig -PublicFoldersLockedForMigration:$true
+```
 
 
 > [!NOTE]
@@ -370,11 +394,15 @@ If your organization has multiple public folder databases, you’ll need to wait
 
 First, run the following cmdlet to change the Exchange 2013 deployment type to **Remote**:
 
-    Set-OrganizationConfig -PublicFoldersEnabled Remote
+```powershell
+Set-OrganizationConfig -PublicFoldersEnabled Remote
+```
 
 Once that is done, you can complete the public folder migration by running the following command:
 
-    Complete-MigrationBatch PublicFolderMigration
+```powershell
+Complete-MigrationBatch PublicFolderMigration
+```
 
 Or, in EAC, you can complete the migration by clicking **Complete this migration batch**.
 
@@ -400,7 +428,9 @@ After you finalize the public folder migration, you should run the following tes
 
 3.  If you run into any issues, see Roll back the migration later in this topic. If the public folder content and hierarchy is acceptable and functions as expected, run the following command to unlock the public folders for all other users.
     
-        Get-Mailbox -PublicFolder | Set-Mailbox -PublicFolder -IsExcludedFromServingHierarchy $false
+    ```powershell
+Get-Mailbox -PublicFolder | Set-Mailbox -PublicFolder -IsExcludedFromServingHierarchy $false
+```
     
 
     > [!IMPORTANT]
@@ -410,11 +440,15 @@ After you finalize the public folder migration, you should run the following tes
 
 4.  On the legacy Exchange server, run the following command to indicate that the public folder migration is complete:
     
-        Set-OrganizationConfig -PublicFolderMigrationComplete:$true
+    ```powershell
+Set-OrganizationConfig -PublicFolderMigrationComplete:$true
+```
 
 5.  After you've verified that the migration is complete, run the following command:
     
-        Set-OrganizationConfig -PublicFoldersEnabled Local
+    ```powershell
+Set-OrganizationConfig -PublicFoldersEnabled Local
+```
 
 6.  Finally, if you want external senders to send mail to the migrated mail-enabled public folders, the **Anonymous** user needs to be granted at least the **Create Items** permission. If you don't do this, external senders will receive a delivery failure notification and the messages won't be delivered to the migrated mail-enabled public folder.
     
@@ -426,7 +460,9 @@ In Step 2: Prepare for the migration, you were instructed to take snapshots of t
 
 1.  Run the following command to take a snapshot of the new folder structure.
     
-        Get-PublicFolder -Recurse | Export-CliXML C:\PFMigration\Cloud_PFStructure.xml
+    ```powershell
+Get-PublicFolder -Recurse | Export-CliXML C:\PFMigration\Cloud_PFStructure.xml
+```
 
 2.  Run the following command to take a snapshot of the public folder statistics such as item count, size, and owner.
     
@@ -456,17 +492,23 @@ If you run into issues with the migration and need to reactivate your legacy Exc
 
 1.  On the legacy Exchange server, run the following command to unlock the legacy Exchange public folders. This process may take several hours.
     
-        Set-OrganizationConfig -PublicFoldersLockedForMigration:$False
+    ```powershell
+Set-OrganizationConfig -PublicFoldersLockedForMigration:$False
+```
 
 2.  On the Exchange 2013 server, run the following commands to remove the public folder mailboxes.
     
     ```
     Get-Mailbox -PublicFolder | Where{$_.IsRootPublicFolderMailbox -eq $false} | Remove-Mailbox -PublicFolder -Force -Confirm:$false
 
-    Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+```powershell
+Get-Mailbox -PublicFolder | Remove-Mailbox -PublicFolder -Force -Confirm:$false
+```
     ```
 
 3.  On the legacy Exchange server, run the following command to set the `PublicFolderMigrationComplete` flag to `$false`.
     
-        Set-OrganizationConfig -PublicFolderMigrationComplete:$False
+    ```powershell
+Set-OrganizationConfig -PublicFolderMigrationComplete:$False
+```
 

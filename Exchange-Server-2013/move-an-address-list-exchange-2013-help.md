@@ -39,7 +39,9 @@ For additional management tasks related to address lists, see [Address list proc
 
 This example uses the address list's GUID to move the address list to the Building 4 container, which is located in the All Users\\Sales container.
 
-    Move-AddressList -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -Target "\All Users\Sales\Building4"
+```powershell
+Move-AddressList -Identity c3fffd8e-026b-41b9-88c4-8c21697ac8ac -Target "\All Users\Sales\Building4"
+```
 
 Type **Y** to confirm that you want to move this address list, and then press ENTER.
 

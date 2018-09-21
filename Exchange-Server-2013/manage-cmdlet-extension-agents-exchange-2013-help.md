@@ -49,7 +49,9 @@ When you enable a cmdlet extension agent in Exchange 2013, the agent is run on e
 
 This example enables a cmdlet extension agent by using the **Enable-CmdletExtensionAgent** cmdlet. You must specify the name of the agent you want to enable when you run the cmdlet. Before you enable the `Scripting Agent`, you need to make sure that you've deployed the `ScriptingAgentConfig.xml` configuration file to all the servers in your organization. If you don't deploy the configuration file first and you enable the `Scripting ``Agent`, all non-**Get** cmdlets fail when they're run. This example enables the `Scripting Agent`.
 
-    Enable-CmdletExtensionAgent "Scripting Agent"
+```powershell
+Enable-CmdletExtensionAgent "Scripting Agent"
+```
 
 For detailed syntax and parameter information, see [Enable-CmdletExtensionAgent](https://technet.microsoft.com/en-us/library/dd335192\(v=exchg.150\)).
 
@@ -65,7 +67,9 @@ When you disable a cmdlet extension agent in Exchange 2013, the agent is disable
 
 To disable a cmdlet extension agent, use the **Disable-CmdletExtensionAgent** cmdlet. Specify the name of the agent you want to disable when you run the cmdlet. This example disables the `Scripting Agent`.
 
-    Disable-CmdletExtensionAgent "Scripting Agent"
+```powershell
+Disable-CmdletExtensionAgent "Scripting Agent"
+```
 
 For detailed syntax and parameter information, see [Disable-CmdletExtensionAgent](https://technet.microsoft.com/en-us/library/dd298132\(v=exchg.150\)).
 
@@ -79,11 +83,15 @@ Viewing cmdlet extension agents enables you to see which agents are run first an
 
 This example gets the details of a specific cmdlet extension agent by using the **Get-CmdletExtensionAgent** cmdlet. In this example, the details of the `Mailbox Permissions Agent` are returned.
 
-    Get-CmdletExtensionAgent "Mailbox Permissions Agent"
+```powershell
+Get-CmdletExtensionAgent "Mailbox Permissions Agent"
+```
 
 This example gets multiple cmdlet extension agents by using the **Get-CmdletExtensionAgent** cmdlet, and then pipes the output to the **Format-Table** cmdlet. This example displays a list of all of the cmdlet extension agents in the organization, and by using the **Format-Table** cmdlet, the **Name**, **Enabled**, and **Priority** properties of each agent are displayed in a table.
 
-    Get-CmdletExtensionAgent | Format-Table Name, Enabled, Priority
+```powershell
+Get-CmdletExtensionAgent | Format-Table Name, Enabled, Priority
+```
 
 For detailed syntax and parameter information, see [Get-CmdletExtensionAgent](https://technet.microsoft.com/en-us/library/dd297946\(v=exchg.150\)).
 
@@ -101,7 +109,9 @@ Agents are ordered from zero to the maximum number of agents. The closer to zero
 
 This example changes the priority of a cmdlet extension agent by using the **Set-CmdletExtensionAgent** cmdlet. In this example, the priority of the `Scripting Agent` is changed to 3.
 
-    Set-CmdletExtensionAgent "Scripting Agent" -Priority 3
+```powershell
+Set-CmdletExtensionAgent "Scripting Agent" -Priority 3
+```
 
 For detailed syntax and parameter information, see [Set-CmdletExtensionAgent](https://technet.microsoft.com/en-us/library/dd335175\(v=exchg.150\)).
 

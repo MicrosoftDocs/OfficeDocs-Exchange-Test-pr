@@ -61,7 +61,9 @@ To create a linked role group and assign management roles to the linked role gro
 
 1.  Store the foreign Active Directory forest credentials in a variable.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 2.  Create the linked role group using the following syntax.
     
@@ -81,7 +83,9 @@ This example does the following:
 
 <!-- end list -->
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     New-RoleGroup "Compliance Role Group" -LinkedForeignGroup "Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -Roles "Transport Rules", "Journaling"
 
 ## Use the Shell to create a linked role group with a custom management scope
@@ -90,7 +94,9 @@ You can create linked role groups with custom recipient management scopes, custo
 
 1.  Store the foreign Active Directory forest credentials in a variable.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 2.  Create the linked role group using the following syntax.
     
@@ -110,7 +116,9 @@ This example does the following:
 
 <!-- end list -->
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     New-RoleGroup "Seattle Compliance Role Group" -LinkedForeignGroup "Seattle Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -CustomRecipientWriteScope "Seattle Recipients" -Roles "Transport Rules", "Journaling"
 
 For more information about management scopes, see [Understanding management role scopes](understanding-management-role-scopes-exchange-2013-help.md).
@@ -121,7 +129,9 @@ You can create linked role groups that use an OU recipient scope. To create a li
 
 1.  Store the foreign Active Directory forest credentials in a variable.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 2.  Create the linked role group using the following syntax.
     
@@ -141,7 +151,9 @@ This example does the following:
 
 <!-- end list -->
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     New-RoleGroup "Executives Compliance Role Group" -LinkedForeignGroup "Executives Compliance Administrators" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential -RecipientOrganizationalUnitScope "Executives OU" -Roles "Transport Rules", "Journaling"
 
 For more information about management scopes, see [Understanding management role scopes](understanding-management-role-scopes-exchange-2013-help.md).
@@ -154,7 +166,9 @@ To change the foreign USG associated with a linked role group, do the following:
 
 1.  Store the foreign Active Directory forest credentials in a variable.
     
-        $ForeignCredential = Get-Credential
+    ```powershell
+$ForeignCredential = Get-Credential
+```
 
 2.  Change the foreign USG on the existing linked role group using the following syntax.
     
@@ -168,6 +182,8 @@ This example does the following:
 
 <!-- end list -->
 
-    $ForeignCredential = Get-Credential
+```powershell
+$ForeignCredential = Get-Credential
+```
     Set-RoleGroup "Compliance Role Group" -LinkedForeignGroup "Regulatory Compliance Officers" -LinkedDomainController DC01.users.contoso.com -LinkedCredential $ForeignCredential
 

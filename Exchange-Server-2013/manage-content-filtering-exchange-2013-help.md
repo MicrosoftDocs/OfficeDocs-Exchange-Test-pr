@@ -41,11 +41,15 @@ Content filtering is provided by the Content Filter agent. The Content Filter ag
 
 To disable content filtering, run the following command:
 
-    Set-ContentFilterConfig -Enabled $false
+```powershell
+Set-ContentFilterConfig -Enabled $false
+```
 
 To enable content filtering, run the following command:
 
-    Set-ContentFilterConfig -Enabled $true
+```powershell
+Set-ContentFilterConfig -Enabled $true
+```
 
 
 > [!NOTE]
@@ -59,7 +63,9 @@ To verify that you have successfully enabled or disabled content filtering, do t
 
 1.  Run the following command:
     
-        Get-ContentFilterConfig | Format-List Enabled
+    ```powershell
+Get-ContentFilterConfig | Format-List Enabled
+```
 
 2.  Verify the value of the *Enabled* property that's displayed.
 
@@ -69,11 +75,15 @@ By default, content filtering functionality is enabled for external messages.
 
 To disable content filtering for external messages, run the following command:
 
-    Set-ContentFilterConfig -ExternalMailEnabled $false
+```powershell
+Set-ContentFilterConfig -ExternalMailEnabled $false
+```
 
 To enable content filtering for external messages, run the following command:
 
-    Set-ContentFilterConfig -ExternalMailEnabled $true
+```powershell
+Set-ContentFilterConfig -ExternalMailEnabled $true
+```
 
 ## How do you know this worked?
 
@@ -81,7 +91,9 @@ To verify that you have successfully enabled or disabled content filtering for e
 
 1.  Run the following command:
     
-        Get-ContentFilterConfig | Format-List ExternalMailEnabled
+    ```powershell
+Get-ContentFilterConfig | Format-List ExternalMailEnabled
+```
 
 2.  Verify the value of the *ExternalMailEnabled* property that's displayed.
 
@@ -91,11 +103,15 @@ As a best practice, you should not filter messages from trusted partners or from
 
 To enable content filtering for internal messages, run the following command:
 
-    Set-ContentFilterConfig -InternalMailEnabled $true
+```powershell
+Set-ContentFilterConfig -InternalMailEnabled $true
+```
 
 To disable content filtering for internal messages, run the following command:
 
-    Set-ContentFilterConfig -InternalMailEnabled $false
+```powershell
+Set-ContentFilterConfig -InternalMailEnabled $false
+```
 
 ## How do you know this worked?
 
@@ -103,7 +119,9 @@ To verify that you have successfully enabled or disabled content filtering for i
 
 1.  Run the following command:
     
-        Get-ContentFilterConfig | Format-List InternalMailEnabled
+    ```powershell
+Get-ContentFilterConfig | Format-List InternalMailEnabled
+```
 
 2.  Verify the value of the *InternalMailEnabled* property that's displayed.
 
@@ -161,19 +179,27 @@ To add allowed and blocked words and phrases, run the following command:
 
 This example allows all messages that contain the phrase "customer feedback".
 
-    Add-ContentFilterPhrase -Influence GoodWord -Phrase "customer feedback"
+```powershell
+Add-ContentFilterPhrase -Influence GoodWord -Phrase "customer feedback"
+```
 
 This example blocks all messages that contain the phrase "stock tip".
 
-    Add-ContentFilterPhrase -Influence BadWord -Phrase "stock tip"
+```powershell
+Add-ContentFilterPhrase -Influence BadWord -Phrase "stock tip"
+```
 
 To remove allowed or blocked phrases, run the following command:
 
-    Remove-ContentFilterPhrase -Phrase <Phrase>
+```powershell
+Remove-ContentFilterPhrase -Phrase <Phrase>
+```
 
 This example removes the phrase "stock tip":
 
-    Remove-ContentFilterPhrase -Phrase "stock tip"
+```powershell
+Remove-ContentFilterPhrase -Phrase "stock tip"
+```
 
 ## How do you know this worked?
 
@@ -181,7 +207,9 @@ To verify that you have successfully configured the allowed and block phrases, d
 
 1.  Run the following command:
     
-        Get-ContentFilterPhrase | Format-List Influence,Phrase
+    ```powershell
+Get-ContentFilterPhrase | Format-List Influence,Phrase
+```
 
 2.  Verify the values displayed match the settings you specified.
 
@@ -225,7 +253,9 @@ When the Reject action is enabled, you can customize the rejection response that
 
 To configure a custom rejection response, run the following command:
 
-    Set-ContentFilterConfig -RejectionResponse "<Custom Text>"
+```powershell
+Set-ContentFilterConfig -RejectionResponse "<Custom Text>"
+```
 
 This example configures the Content Filter agent to send a customized rejection response.
 
@@ -247,11 +277,15 @@ To verify that you have successfully configured the rejection response, do the f
 
 To disable Outlook Email Postmarking, run the following command:
 
-    Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $false
+```powershell
+Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $false
+```
 
 To enable Outlook Email Postmarking, run the following command:
 
-    Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $true
+```powershell
+Set-ContentFilterConfig -OutlookEmailPostmarkValidationEnabled $true
+```
 
 ## How do you know this worked?
 
@@ -259,7 +293,9 @@ To verify that you have successfully configured Outlook Email Postmarking, do th
 
 1.  Run the following command:
     
-        Get-ContentFilterConfig | Format-List OutlookEmailPostmarkValidationEnabled
+    ```powershell
+Get-ContentFilterConfig | Format-List OutlookEmailPostmarkValidationEnabled
+```
 
 2.  Verify the value displayed matches the setting you specified.
 

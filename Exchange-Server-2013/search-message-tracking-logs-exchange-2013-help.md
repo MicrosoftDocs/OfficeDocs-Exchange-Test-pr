@@ -61,7 +61,9 @@ To search the message tracking log entries for specific events, use the followin
 
 To view the 1000 most recent message tracking log entries on the server, run the following command:
 
-    Get-MessageTrackingLog
+```powershell
+Get-MessageTrackingLog
+```
 
 This example searches the message tracking logs on the local server for all entries from 3/28/2013 8:00 AM to 3/28/2013 5:00 PM for all **FAIL** events where the message sender was pat@contoso.com.
 

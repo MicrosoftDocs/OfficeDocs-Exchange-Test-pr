@@ -85,7 +85,9 @@ To configure the proxy server settings for anti-malware updates, perform the fol
 
 1.  Run the following command:
     
-        Add-PsSnapin Microsoft.Forefront.Filtering.Management.Powershell
+    ```powershell
+Add-PsSnapin Microsoft.Forefront.Filtering.Management.Powershell
+```
 
 2.  Use the **Get-ProxySettings** and **Set-ProxySettings** cmdlets to view and configure the proxy server settings that are used to download anti-malware updates. The **Set-ProxySettings** cmdlet uses the following syntax:
     
@@ -93,7 +95,9 @@ To configure the proxy server settings for anti-malware updates, perform the fol
     
     For example, to configure anti-malware updates to use the proxy server at address 172.17.17.10 on TCP port 80, run the following command.
     
-        Set-ProxySettings -Enabled $true -Server 172.17.17.10 -Port 80
+    ```powershell
+Set-ProxySettings -Enabled $true -Server 172.17.17.10 -Port 80
+```
     
     To verify the proxy server settings, run the **Get-ProxySettings** cmdlet.
 

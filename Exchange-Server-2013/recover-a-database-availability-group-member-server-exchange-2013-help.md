@@ -53,11 +53,15 @@ Looking for other management tasks related to DAGs? Check out [Managing database
 
 2.  Remove any mailbox database copies that exist on the server being recovered by using the [Remove-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd335119\(v=exchg.150\)) cmdlet:
     
-        Remove-MailboxDatabaseCopy DB1\MBX1
+    ```powershell
+Remove-MailboxDatabaseCopy DB1\MBX1
+```
 
 3.  Remove the failed server's configuration from the DAG by using the [Remove-DatabaseAvailabilityGroupServer](https://technet.microsoft.com/en-us/library/dd297956\(v=exchg.150\)) cmdlet:
     
-        Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+    ```powershell
+Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```
     
 
     > [!NOTE]
@@ -69,11 +73,15 @@ Looking for other management tasks related to DAGs? Check out [Managing database
 
 5.  Open a Command Prompt window. Using the original Setup media, run the following command:
     
-        Setup /m:RecoverServer
+    ```powershell
+Setup /m:RecoverServer
+```
 
 6.  When the Setup recovery process is complete, add the recovered server to the DAG by using the [Add-DatabaseAvailabilityGroupServer](https://technet.microsoft.com/en-us/library/dd298049\(v=exchg.150\)) cmdlet:
     
-        Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+    ```powershell
+Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```
 
 7.  After the server has been added back to the DAG, you can reconfigure mailbox database copies by using the [Add-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd298105\(v=exchg.150\)) cmdlet. If any of the database copies being added previously had replay lag or truncation lag times greater than 0, you can use the *ReplayLagTime* and *TruncationLagTime* parameters of the [Add-MailboxDatabaseCopy](https://technet.microsoft.com/en-us/library/dd298105\(v=exchg.150\)) cmdlet to reconfigure those settings:
     
@@ -88,11 +96,15 @@ To verify that you've successfully recovered the DAG member, do the following:
   - In the Shell, run the following command to verify the health and status of the recovered DAG member.
     
     ```
-    Test-ReplicationHealth <ServerName>
+```powershell
+Test-ReplicationHealth <ServerName>
+```
     ```
 
     ```
-    Get-MailboxDatabaseCopyStatus -Server <ServerName>
+```powershell
+Get-MailboxDatabaseCopyStatus -Server <ServerName>
+```
     ```
     
     All of the replication health tests should pass successfully, and the status of databases and their content indexes should be healthy.

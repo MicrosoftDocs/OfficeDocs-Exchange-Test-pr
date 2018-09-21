@@ -125,7 +125,9 @@ In this example, the following values are used:
 
 8.  Type **DATA** and then press ENTER. You will receive a response that resembles the following:
     
-        354 Start mail input; end with <CLRF>.<CLRF>
+    ```powershell
+354 Start mail input; end with <CLRF>.<CLRF>
+```
 
 9.  Type **Subject: Test from Contoso** and then press ENTER.
 
@@ -135,11 +137,15 @@ In this example, the following values are used:
 
 12. Press ENTER, type a period ( **.** ) and then press ENTER. You will receive a response that resembles the following:
     
-        250 2.6.0 <GUID> Queued mail for delivery
+    ```powershell
+250 2.6.0 <GUID> Queued mail for delivery
+```
 
 13. To disconnect from the destination SMTP server, type **QUIT** and then press ENTER. You will receive a response that resembles the following:
     
-        221 2.0.0 Service closing transmission channel
+    ```powershell
+221 2.0.0 Service closing transmission channel
+```
 
 14. To close the Telnet session, type **quit** and then press ENTER.
 

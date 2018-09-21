@@ -57,7 +57,9 @@ The mail contact will be removed from the contacts list.
 
 This example disables email for the mail contact Neil Black.
 
-    Disable-MailContact -Identity "Neil Black"
+```powershell
+Disable-MailContact -Identity "Neil Black"
+```
 
 For detailed syntax and parameter information, see [Disable-MailContact](https://technet.microsoft.com/en-us/library/aa997465\(v=exchg.150\)).
 
@@ -71,13 +73,17 @@ To verify that you’ve successfully disabled email for a mail contact, do one o
 
 3.  In the Shell, run the following command.
     
-        Get-MailContact
+    ```powershell
+Get-MailContact
+```
     
     The contact that you disabled email for won't be returned in the results because this cmdlet only returns mail-enabled contacts.
 
 4.  In the Shell, run the following command.
     
-        Get-Contact
+    ```powershell
+Get-Contact
+```
     
     The contact that you disabled email for is returned in the results because this cmdlet returns all Active Directory contact objects.
 
@@ -89,7 +95,9 @@ You can use the **Enable-MailContact** cmdlet to mail-enable existing Active Dir
 
 This example mail-enables the contact Rene Valdes. You must provide an external email address.
 
-    Enable-MailContact -Identity "Rene Valdes" -ExternalEmailAddress renev@tailspintoys.com
+```powershell
+Enable-MailContact -Identity "Rene Valdes" -ExternalEmailAddress renev@tailspintoys.com
+```
 
 ## Use the Shell and a CSV file to mail-enable multiple contacts
 
@@ -139,5 +147,7 @@ To verify that you’ve successfully mail-enabled Active Directory contacts, do 
 
   - In the Shell, run the following command to display information about new mail contacts.
     
-        Get-MailContact | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+    ```powershell
+Get-MailContact | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+```
 

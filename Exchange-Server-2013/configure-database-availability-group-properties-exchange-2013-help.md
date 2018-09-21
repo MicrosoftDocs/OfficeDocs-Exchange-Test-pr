@@ -73,7 +73,9 @@ You can use the EAC or the Shell to configure the properties of a database avail
 
 This example sets the witness directory to C:\\DAG1DIR for the DAG DAG1.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessDirectory C:\DAG1DIR
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessDirectory C:\DAG1DIR
+```
 
 This example preconfigures an alternate witness server of CAS3 and an alternate witness directory of C:\\DAGFileShareWitnesses\\DAG1.contoso.com for the DAG DAG1.
 
@@ -81,23 +83,33 @@ This example preconfigures an alternate witness server of CAS3 and an alternate 
 
 This example configures the DAG DAG1 to use Dynamic Host Configuration Protocol (DHCP) to obtain an IP address.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 0.0.0.0
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 0.0.0.0
+```
 
 This example configures the DAG DAG1 to use a static IP address of 10.0.0.8.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8
+```
 
 This example configures the multi-subnet DAG DAG1 with multiple static IP addresses.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8,10.0.1.8
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIPAddresses 10.0.0.8,10.0.1.8
+```
 
 This example configures the DAG DAG1 for DAC mode.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
+```
 
 This example configures the replication port for the DAG DAG1 to be 63132.
 
-    Set-DatabaseAvailabilityGroup -Identity DAG1 -ReplicationPort 63132
+```powershell
+Set-DatabaseAvailabilityGroup -Identity DAG1 -ReplicationPort 63132
+```
 
 
 > [!NOTE]
@@ -111,7 +123,9 @@ To verify that you've successfully configured the DAG, do the following:
 
   - In the Shell, run the following command to display DAG configuration settings and verify the DAG was configured successfully.
     
-        Get-DatabaseAvailabilityGroup <DAGName> | Format-List
+    ```powershell
+Get-DatabaseAvailabilityGroup <DAGName> | Format-List
+```
 
 ## For more information
 

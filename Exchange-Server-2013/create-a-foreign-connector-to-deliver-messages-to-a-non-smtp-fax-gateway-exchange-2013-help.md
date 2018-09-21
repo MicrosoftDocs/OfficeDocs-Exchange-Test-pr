@@ -57,7 +57,9 @@ Once you have created the Foreign Connector, you can configure the Drop Pickup, 
 
 To verify that the Foreign connector was created successfully, run the following command:
 
-    Get-ForeignConnector | Format-List Name
+```powershell
+Get-ForeignConnector | Format-List Name
+```
 
 Verify that the name for the Foreign connector you created appears.
 
@@ -69,13 +71,17 @@ You create a directory to use as the Drop directory on your local file system. Y
 
 1.  Run the following script to specify the Drop directory for your Foreign connector (change the value for the *DropDirectory* parameter to a path appropriate for your environment):
     
-        Set-ForeignConnector "Contoso Foreign Connector" -DropDirectory "C:\Drop Directory"
+    ```powershell
+Set-ForeignConnector "Contoso Foreign Connector" -DropDirectory "C:\Drop Directory"
+```
 
 ## How do you know this step worked?
 
 To verify that you have set the Drop Directory correctly, you can run the following cmdlet script and verify the value for the *DropDirectory* parameter:
 
-    Get-ForeignConnector "Contoso Foreign Connector" | Format-List
+```powershell
+Get-ForeignConnector "Contoso Foreign Connector" | Format-List
+```
 
 Once you have created your Foreign connector and specified your Drop directory, you can send a message using the Mailbox server where you created your Foreign connector and verify that a file is delivered to the Drop directory.
 
@@ -89,7 +95,9 @@ For detailed instructions for configuring your Pickup directory, see [Configure 
 
 To verify that you have set the Pickup directory correctly, you can run the following command and verify the value for the *PickupDirectoryPath* parameter:
 
-    Get-TransportService | Format-List PickupDirectoryPath
+```powershell
+Get-TransportService | Format-List PickupDirectoryPath
+```
 
 ## Step 4: Use the Shell to configure the Replay directory for the Transport service on a Mailbox server
 
@@ -101,7 +109,9 @@ For detailed instructions for configuring your Pickup directory, see [Configure 
 
 To verify that you have set the Replay directory correctly, you can run the following command and verify the value for the *ReplayDirectoryPath* parameter:
 
-    Get-TransportService | Format-List ReplayDirectoryPath
+```powershell
+Get-TransportService | Format-List ReplayDirectoryPath
+```
 
 ## For more information
 

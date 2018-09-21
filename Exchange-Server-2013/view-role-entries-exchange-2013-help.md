@@ -93,11 +93,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleEntry](htt
 
 To view the details of a single role entry, use the following syntax.
 
-    Get-ManagementRoleEntry <role name>\<cmdlet name> | Format-List
+```powershell
+Get-ManagementRoleEntry <role name>\<cmdlet name> | Format-List
+```
 
 This example retrieves the details of the **Set-Mailbox** role entry on the `Recipient Administrators` role.
 
-    Get-ManagementRoleEntry "Recipient Administrators\Set-Mailbox" | Format-List
+```powershell
+Get-ManagementRoleEntry "Recipient Administrators\Set-Mailbox" | Format-List
+```
 
 If the role entry you view has too many parameters to list using the **Format-List** cmdlet, see "View the parameters on a single role entry" later in this topic.
 

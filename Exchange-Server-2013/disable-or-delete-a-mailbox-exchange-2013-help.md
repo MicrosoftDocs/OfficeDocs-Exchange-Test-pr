@@ -131,7 +131,9 @@ The mailbox is removed from the mailbox list.
 
 Use the following command to disable user mailboxes, linked mailboxes, resource mailboxes, and shared mailboxes.
 
-    Disable-Mailbox <identity>
+```powershell
+Disable-Mailbox <identity>
+```
 
 When you run this command, a message is displayed that asks you to confirm that you want to disable the mailbox.
 
@@ -171,7 +173,9 @@ To verify that you’ve successfully disabled a mailbox, do one of the following
 
   - In the Shell, run the following command.
     
-        Get-User <identity>
+    ```powershell
+Get-User <identity>
+```
     
     Note that that value for the *RecipientType* property is `User`, instead of `UserMailbox`, which is the value for users with enabled mailboxes. This also verifies that the mailbox is disabled, but the user account is retained.
 
@@ -195,7 +199,9 @@ The mailbox is removed from the mailbox list.
 
 Use the following command to delete user mailboxes, linked mailboxes, resource mailboxes, and shared mailboxes.
 
-    Remove-Mailbox <identity>
+```powershell
+Remove-Mailbox <identity>
+```
 
 When you run this command, a message is displayed that asks you to confirm that you want to remove the mailbox and the corresponding Active Directory user account.
 
@@ -237,7 +243,9 @@ Or
 
 2.  Run the following command to verify that Active Directory user account has been deleted.
     
-        Get-User <identity>
+    ```powershell
+Get-User <identity>
+```
     
     The command will return an error stating that user couldn’t be found, verifying that the account was deleted.
 

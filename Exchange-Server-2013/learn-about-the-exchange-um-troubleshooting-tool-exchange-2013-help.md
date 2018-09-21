@@ -189,7 +189,9 @@ The UM Troubleshooting Tool can help you troubleshoot, diagnose, and repair conf
 
 In the following example, Gateway mode is used to test call flow in an environment that doesn't include Office Communications Server 2007 R2 or Lync Server. This example tests the telephony equipment, including VoIP gateways, PBXs and IP PBXs, and the Unified Messaging components. This example sets the Voice over IP (VoIP) security mode to Unsecured, uses the IP address 10.1.1.1 as the next hop, and includes an extension number in the diversion information.
 
-    Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Unsecured -NextHop 10.1.1.1 -Diversion 12345
+```powershell
+Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Unsecured -NextHop 10.1.1.1 -Diversion 12345
+```
 
 Return to top
 

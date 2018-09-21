@@ -81,11 +81,15 @@ You can safely perform this step now, because the proof of domain ownership TXT 
 
 1.  Find the required values for the required TXT record by running the following command in the Exchange Management Shell:
     
-        Get-FederatedDomainProof -DomainName <Domain> | Format-List Thumbprint,Proof
+    ```powershell
+Get-FederatedDomainProof -DomainName <Domain> | Format-List Thumbprint,Proof
+```
     
     For example, if your federated domain is contoso.com, run the following command:
     
-        Get-FederatedDomainProof -DomainName contoso.com | Format-List Thumbprint,Proof
+    ```powershell
+Get-FederatedDomainProof -DomainName contoso.com | Format-List Thumbprint,Proof
+```
     
     The command output looks like this:
     
@@ -115,7 +119,9 @@ To use the Exchange Management Shell to verify the distribution of the new feder
 
 To use the Exchange Management Shell to activate the new federation certificate, run the following command:
 
-    Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
+```powershell
+Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
+```
 
 For detailed syntax and parameter information, see [Set-FederationTrust](https://technet.microsoft.com/en-us/library/dd298034\(v=exchg.150\)).
 
@@ -135,7 +141,9 @@ To verify that you've successfully updated the existing federation trust with a 
 
   - In the Exchange Management Shell, replace *\<user's email address\>* with the email address of a user in your org, and run the following command to verify that the federation trust is working:
     
-        Test-FederationTrust -UserIdentity <user's email address>
+    ```powershell
+Test-FederationTrust -UserIdentity <user's email address>
+```
 
 ## Replace an expired federation certificate
 
@@ -143,21 +151,29 @@ If the federation certificate has already expired, you need to remove all federa
 
 1.  If you have multiple federated domains, you need to identify the primary domain shared domain so you can remove it last. To use the Exchange Management Shell to identify the primary shared domain and all federated domains, run the following command:
     
-        Get-FederatedOrganizationIdentifier | Format-List AccountNamespace,Domains
+    ```powershell
+Get-FederatedOrganizationIdentifier | Format-List AccountNamespace,Domains
+```
     
     The value of the **AccountNamespace** property contains the primary shared domain in the format `FYDIBOHF25SPDLT<primary shared domain>`. For example, in the value `FYDIBOHF25SPDLT.contoso.com`, contoso.com is the primary shared domain.
 
 2.  Remove each federated domain that isn't the primary shared domain by running the following command in the Exchange Management Shell:
     
-        Remove-FederatedDomain -DomainName <domain> -Force
+    ```powershell
+Remove-FederatedDomain -DomainName <domain> -Force
+```
 
 3.  After you've removed all other federated domains, remove the primary shared domain by running the following command in the Exchange Management Shell:
     
-        Remove-FederatedDomain -DomainName <domain> -Force
+    ```powershell
+Remove-FederatedDomain -DomainName <domain> -Force
+```
 
 4.  Remove the federation trust by running the following command in the Exchange Management Shell:
     
-        Remove-FederationTrust "Microsoft Federation Gateway"
+    ```powershell
+Remove-FederationTrust "Microsoft Federation Gateway"
+```
 
 5.  Recreate the federation trust. For instructions, see [x-Create a Federation Trust](https://technet.microsoft.com/en-us/library/dd335198\(v=exchg.150\)).
 

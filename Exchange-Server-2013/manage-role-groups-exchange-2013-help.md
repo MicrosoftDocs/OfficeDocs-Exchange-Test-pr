@@ -95,7 +95,9 @@ If you have a role group that contains the permissions you want to grant to user
 
 1.  Store the role group that you want to copy in a variable using the following syntax.
     
-        $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```powershell
+$RoleGroup = Get-RoleGroup <name of role group to copy>
+```
 
 2.  Create the new role group, and also add members to the role group and specify who can delegate the new role group to other users, using the following syntax.
     
@@ -114,7 +116,9 @@ For detailed syntax and parameter information, see [Get-RoleGroup](https://techn
 
 1.  Store the role group that you want to copy in a variable using the following syntax.
     
-        $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```powershell
+$RoleGroup = Get-RoleGroup <name of role group to copy>
+```
 
 2.  Create the new role group with a custom scope using the following syntax.
     
@@ -135,7 +139,9 @@ For detailed syntax and parameter information, see [Get-RoleGroup](https://techn
 
 1.  Store the role group that you want to copy in a variable using the following syntax.
     
-        $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```powershell
+$RoleGroup = Get-RoleGroup <name of role group to copy>
+```
 
 2.  Create the new role group with a custom scope using the following syntax.
     
@@ -218,11 +224,15 @@ You can create a role assignment with no scope between a role and a role group. 
 
 Use the following syntax to assign a role without any scope to a role group. A role assignment name is created automatically if you don't specify one.
 
-    New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name>
+```powershell
+New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name>
+```
 
 This example assigns the Transport Rules management role to the Seattle Compliance role group.
 
-    New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transport Rules"
+```powershell
+New-ManagementRoleAssignment -SecurityGroup "Seattle Compliance" -Role "Transport Rules"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -448,7 +458,9 @@ To change the scope on a role assignment between a role group and a management r
 
 1.  To find the names of all the role assignments on a role group, use the following command. By piping the management role assignments to the **Format-List** cmdlet, you can view the full name of the assignment.
     
-        Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
+    ```powershell
+Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
+```
 
 2.  Find the name of the role assignment you want to change. Use the name of the role assignment in the next step.
 
@@ -504,7 +516,9 @@ To change the list of delegates on a role group, you use the *ManagedBy* paramet
 
 1.  Store the role group in a variable using the following command.
     
-        $RoleGroup = Get-RoleGroup <role group name>
+    ```powershell
+$RoleGroup = Get-RoleGroup <role group name>
+```
 
 2.  Add the delegate to the role group stored in the variable using the following command.
     
@@ -520,7 +534,9 @@ To change the list of delegates on a role group, you use the *ManagedBy* paramet
 
 4.  Apply the new list of delegates to the actual role group using the following command.
     
-        Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+    ```powershell
+Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+```
 
 This example adds the user David Strome as a delegate on the Organization Management role group.
 
@@ -536,7 +552,9 @@ To change the list of delegates on a role group, you use the *ManagedBy* paramet
 
 1.  Store the role group in a variable using the following command.
     
-        $RoleGroup = Get-RoleGroup <role group name>
+    ```powershell
+$RoleGroup = Get-RoleGroup <role group name>
+```
 
 2.  Remove the delegate from the role group stored in the variable using the following command.
     
@@ -552,7 +570,9 @@ To change the list of delegates on a role group, you use the *ManagedBy* paramet
 
 4.  Apply the new list of delegates to the actual role group using the following command.
     
-        Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+    ```powershell
+Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+```
 
 This example removes the user David Strome as a delegate on the Organization Management role group.
 
@@ -568,7 +588,9 @@ To verify that you have successfully changed the delegate list on a role group, 
 
 1.  In the Shell, run the following command.
     
-        Get-RoleGroup <role group name> | Format-List ManagedBy
+    ```powershell
+Get-RoleGroup <role group name> | Format-List ManagedBy
+```
 
 2.  Verify that the delegates listed on the *ManagedBy* property include only the delegates that should be able to manage the role group.
 

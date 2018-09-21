@@ -51,7 +51,9 @@ The .csv file is used to determine the mapping between the source hierarchy and 
 
 You can force a delta sync to occur before finalization (prior to locking the source) by running the following Shell command:
 
-    Resume-PublicFolderMigrationRequest \PublicFolderMigration
+```powershell
+Resume-PublicFolderMigrationRequest \PublicFolderMigration
+```
 
 For detailed syntax and parameter information, see [Resume-PublicFolderMigrationRequest](https://technet.microsoft.com/en-us/library/jj218689\(v=exchg.150\)).
 
@@ -101,7 +103,9 @@ For more information about public folder storage limits, see [Limits for public 
 
 Run the following command:
 
-    Get-OrganizationConfig | Format-List RootPublicFolderMailbox
+```powershell
+Get-OrganizationConfig | Format-List RootPublicFolderMailbox
+```
 
 For detailed syntax and parameter information, see [Get-OrganizationConfig](https://technet.microsoft.com/en-us/library/aa997571\(v=exchg.150\)).
 
@@ -109,7 +113,9 @@ For detailed syntax and parameter information, see [Get-OrganizationConfig](http
 
 Run the following command to create the first master hierarchy public folder mailbox and the secondary hierarchy mailboxes.
 
-    New-Mailbox -PublicFolder -Name <name of public folder>
+```powershell
+New-Mailbox -PublicFolder -Name <name of public folder>
+```
 
 For more detail, see [Create a public folder](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder).
 
@@ -145,7 +151,9 @@ Just like in previous versions of Exchange, you can set retention limits on item
 
 In Exchange 2007 and Exchange 2010, you could specify which users had access to specific public folders. In Exchange 2013, you can set the default public folder mailbox per user. To do so, run the [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)) cmdlet with the *DefaultPublicFolderMailbox* parameter.
 
-    Set-Mailbox -Identity kweku@contoso.com -DefaultPublicFolderMailbox "PF_Administration"
+```powershell
+Set-Mailbox -Identity kweku@contoso.com -DefaultPublicFolderMailbox "PF_Administration"
+```
 
 ## If the master hierarchy goes down, what’s the user impact?
 

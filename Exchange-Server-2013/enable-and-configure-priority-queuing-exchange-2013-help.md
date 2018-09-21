@@ -41,7 +41,9 @@ _**Applies to:** Exchange Server 2013_
 
 1.  In a Command prompt window, open the EdgeTransport.exe.config application configuration file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+```
 
 2.  Find the following keys in the `<appSettings>` section.
     
@@ -59,7 +61,9 @@ _**Applies to:** Exchange Server 2013_
     
     To enable priority queuing in the Transport service on the Mailbox server, use the following value:
     
-        <add key="PriorityQueuingEnabled" value="true" />
+    ```command line
+<add key="PriorityQueuingEnabled" value="true" />
+```
     
     Configure the remaining priority queuing values, or leave them at their default values.
 

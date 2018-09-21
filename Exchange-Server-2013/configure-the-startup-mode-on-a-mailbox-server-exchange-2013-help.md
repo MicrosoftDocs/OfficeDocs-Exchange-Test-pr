@@ -65,9 +65,13 @@ For additional management tasks related to Unified Messaging and Mailbox servers
 
 This example sets the startup mode for a Mailbox server named `MyUMServer1` to Dual mode.
 
-    Set-UMService -Identity MyUMServer1 -UMStartUpMode Dual
+```powershell
+Set-UMService -Identity MyUMServer1 -UMStartUpMode Dual
+```
 
 This example sets the startup mode for a Mailbox server named `MyUMServer1` to TLS mode.
 
-    Set-UMService -Identity MyUMServer1 -UMStartUpMode TLS
+```powershell
+Set-UMService -Identity MyUMServer1 -UMStartUpMode TLS
+```
 

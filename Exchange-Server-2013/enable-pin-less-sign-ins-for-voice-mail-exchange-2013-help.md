@@ -63,11 +63,15 @@ For additional tasks related to UM mailboxes, see [Voice mail-enabled user proce
 
 This example enables PIN-less voice mail access on a UM mailbox policy named `MyUMMailboxPolicy` for users associated with the mailbox policy who dial in to Outlook Voice Access.
 
-    Set-UMMailboxPolicy -id MyUMMailboxPolicy -AllowPinlessVoiceMailAccess $true
+```powershell
+Set-UMMailboxPolicy -id MyUMMailboxPolicy -AllowPinlessVoiceMailAccess $true
+```
 
 ## Use the Shell to enable PIN-less access to voice mail on a UM-enabled user's mailbox
 
 This example enables PIN-less voice mail access for the user who dials in to Outlook Voice Access to reach the mailbox named `tonys@contoso.com`.
 
-    Set-UMMailbox -id tonys@contoso.com -PinlessAccessToVoiceMailEnabled $true
+```powershell
+Set-UMMailbox -id tonys@contoso.com -PinlessAccessToVoiceMailEnabled $true
+```
 

@@ -99,7 +99,9 @@ Use the **Connect-Mailbox** cmdlet in the Shell to connect a deleted mailbox to 
 
 This example connects a user mailbox. The *Identity* parameter specifies the display name of the deleted mailbox retained in the mailbox database named MBXDB01. The *User* parameter specifies the Active Directory user account to connect the mailbox to.
 
-    Connect-Mailbox -Identity "Paul Cannon" -Database MBXDB01 -User "Robin Wood" -Alias robinw
+```powershell
+Connect-Mailbox -Identity "Paul Cannon" -Database MBXDB01 -User "Robin Wood" -Alias robinw
+```
 
 
 > [!NOTE]
@@ -141,7 +143,9 @@ To verify that you’ve successfully connected a deleted mailbox to a user accou
 
   - In the Shell, run the following command.
     
-        Get-User <identity>
+    ```powershell
+Get-User <identity>
+```
     
     The **UserMailbox** value for the *RecipientType* property indicates that the user account and the mailbox are connected. You can also run the **Get-Mailbox \<identity\>** command to verify that the mailbox was connected.
 
@@ -181,7 +185,9 @@ You will need the GUID of the deleted public folder mailbox, as well as the GUID
 
 1.  Get the Active Directory forest and domain controller fully-qualified domain name (FQDN) by running the following cmdlet:
     
-        Get-OrganizationConfig | fl OriginatingServer
+    ```powershell
+Get-OrganizationConfig | fl OriginatingServer
+```
 
 2.  With the information returned by Step 1, search the Deleted Objects container in Active Directory for the GUID of the public folder mailbox and for the GUID or name of the mailbox database that the deleted public folder mailbox was contained in.
     

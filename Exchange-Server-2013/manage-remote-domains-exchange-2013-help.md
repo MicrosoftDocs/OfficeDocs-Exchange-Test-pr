@@ -45,11 +45,15 @@ If you remove a remote domain entry, the settings for message transfer no longer
 
 To create a new remote domain entry, use the following syntax.
 
-    New-RemoteDomain -Name <Descriptive Name> -DomainName <SMTP address space>
+```powershell
+New-RemoteDomain -Name <Descriptive Name> -DomainName <SMTP address space>
+```
 
 This example creates a remote domain entry for messages sent to the contoso.com domain.
 
-    New-RemoteDomain -Name Contoso -DomainName contoso.com
+```powershell
+New-RemoteDomain -Name Contoso -DomainName contoso.com
+```
 
 This example creates a remote domain entry for messages sent to the fabrikam.com domain and all subdomains.
 
@@ -79,11 +83,15 @@ To configure remote domains for specific scenarios, see the following topics:
 
 To remove a remote domain entry, use the following syntax.
 
-    Remove-RemoteDomain <RemoteDomainName>
+```powershell
+Remove-RemoteDomain <RemoteDomainName>
+```
 
 This example removes the remote domain entry named Contoso
 
-    Remove-RemoteDomain Contoso
+```powershell
+Remove-RemoteDomain Contoso
+```
 
 ## How do you know this worked?
 

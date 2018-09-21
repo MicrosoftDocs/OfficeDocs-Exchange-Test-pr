@@ -43,11 +43,15 @@ Sender reputation is provided by the Protocol Analysis agent. Sender reputation 
 
 This example disables sender reputation.
 
-    Set-SenderReputationConfig -Enabled $false
+```powershell
+Set-SenderReputationConfig -Enabled $false
+```
 
 This example enables sender reputation.
 
-    Set-SenderReputationConfig -Enabled $true
+```powershell
+Set-SenderReputationConfig -Enabled $true
+```
 
 ## How do you know this worked?
 
@@ -55,7 +59,9 @@ To verify that you have successfully enabled or disabled sender reputation, do t
 
 1.  Verify the Protocol Analysis agent is installed and enabled by running the following command:
     
-        Get-TransportAgent
+    ```powershell
+Get-TransportAgent
+```
 
 2.  Verify the sender reputation values you configured by running the following command:
     
@@ -67,19 +73,27 @@ By default, sender reputation is enabled for external messages, and disabled for
 
 To disable sender reputation for external messages, run the following command:
 
-    Set-SenderReputationConfig -ExternalMailEnabled $false
+```powershell
+Set-SenderReputationConfig -ExternalMailEnabled $false
+```
 
 To enable sender reputation for external messages, run the following command:
 
-    Set-SenderReputationConfig -ExternalMailEnabled $true
+```powershell
+Set-SenderReputationConfig -ExternalMailEnabled $true
+```
 
 To disable sender reputation for internal messages, run the following command:
 
-    Set-SenderReputationConfig -InternalMailEnabled $false
+```powershell
+Set-SenderReputationConfig -InternalMailEnabled $false
+```
 
 To enable sender reputation for internal messages, run the following command:
 
-    Set-SenderReputationConfig -InternalMailEnabled $true
+```powershell
+Set-SenderReputationConfig -InternalMailEnabled $true
+```
 
 ## How do you know this worked?
 
@@ -95,11 +109,15 @@ To verify that you have successfully enabled or disabled sender reputation for i
 
 To configure the sender reputation properties, run the following command:
 
-    Set-SenderReputationConfig -SrlBlockThreshold <Value> -SenderBlockingPeriod <Hours>
+```powershell
+Set-SenderReputationConfig -SrlBlockThreshold <Value> -SenderBlockingPeriod <Hours>
+```
 
 This example sets the sender reputation level (SRL) block threshold to 6 and configures sender reputation to add offending senders to the IP Block List for 36 hours:
 
-    Set-SenderReputationConfig -SrlBlockThreshold 6 -SenderBlockingPeriod 36
+```powershell
+Set-SenderReputationConfig -SrlBlockThreshold 6 -SenderBlockingPeriod 36
+```
 
 ## How do you know this worked?
 
@@ -107,7 +125,9 @@ To verify that you have successfully configured the sender reputation properties
 
 1.  Run the following command:
     
-        Get-SenderReputationConfig
+    ```powershell
+Get-SenderReputationConfig
+```
 
 2.  Verify the values displayed match the values you configured.
 

@@ -430,7 +430,9 @@ To deploy Web Application Proxy, you must install the Remote Access server role 
 
 The following Windows PowerShell cmdlet does the same thing as the preceding steps.
 
-    Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
+```powershell
+Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
+```
 
 ## Step 5 – Configure the Web Application Proxy role service (optional)
 
@@ -563,7 +565,9 @@ After you have completed all of the required steps, including making changes to 
 
   - Using Windows PowerShell:
     
-        Restart-Service W3SVC,WAS -noforce
+    ```powershell
+Restart-Service W3SVC,WAS -noforce
+```
 
   - Using a command line: Click **Start**, click **Run**, type `IISReset /noforce`, and then click **OK**.
 

@@ -57,7 +57,9 @@ The *IsExcludedFromProvisioning* parameter has have two valid values, `$True` an
 
 To exclude a mailbox database from automatic distribution, use the following command:
 
-    Set-MailboxDatabase <database name> -IsExcludedFromProvisioning $True
+```powershell
+Set-MailboxDatabase <database name> -IsExcludedFromProvisioning $True
+```
 
 When a mailbox database is excluded from automatic distribution, the only way to create a mailbox in, or move a mailbox to, the database is to use the *Database* parameter on the **New-Mailbox** and **Enable-Mailbox** cmdlets or the *TargetDatabase* parameter on the **New-MoveRequest** cmdlet.
 

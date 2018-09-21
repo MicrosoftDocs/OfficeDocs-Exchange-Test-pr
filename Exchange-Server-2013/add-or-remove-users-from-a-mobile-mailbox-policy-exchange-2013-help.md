@@ -118,5 +118,7 @@ To verify that you’ve successfully changed a user’s mobile device mailbox po
 
 2.  In the Shell, run the following command.
     
-        Get-CASMailbox -Identity tony@contoso.com
+    ```powershell
+Get-CASMailbox -Identity tony@contoso.com
+```
 

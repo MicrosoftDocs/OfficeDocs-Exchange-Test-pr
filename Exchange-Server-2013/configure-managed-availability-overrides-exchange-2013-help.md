@@ -117,7 +117,9 @@ This example adds a global override that disables the `StorageLogicalDriveSpaceE
 
 To verify that you have successfully created a global override, use the **Get-GlobalMonitoringOverride** cmdlet to view the list of global overrides:
 
-    Get-GlobalMonitoringOverride
+```powershell
+Get-GlobalMonitoringOverride
+```
 
 The override should appear in the list.
 
@@ -135,7 +137,9 @@ This example removes the existing global override of the `ExtensionAttributes` p
 
 To verify that you have successfully removed a global override, use the **Get-GlobalMonitoringOverride** cmdlet to view the list of global overrides:
 
-    Get-GlobalMonitoringOverride
+```powershell
+Get-GlobalMonitoringOverride
+```
 
 The removed override should not appear in the list.
 

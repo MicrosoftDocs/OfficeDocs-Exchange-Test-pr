@@ -41,11 +41,15 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 1.  Run the following command to verify the Content Filter agent is installed and enabled on the Exchange server:
     
-        Get-TransportAgent "Content Filter Agent"
+    ```powershell
+Get-TransportAgent "Content Filter Agent"
+```
 
 2.  Run the following command to verify content filtering is enabled:
     
-        Get-ContentFilterConfig | Format-List Enabled
+    ```powershell
+Get-ContentFilterConfig | Format-List Enabled
+```
 
 For more information, see [Manage content filtering](manage-content-filtering-exchange-2013-help.md).
 
@@ -73,11 +77,15 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 Run the following command:
 
-    Set-ContentFilterConfig -QuarantineMailbox <SmtpAddress>
+```powershell
+Set-ContentFilterConfig -QuarantineMailbox <SmtpAddress>
+```
 
 This example sends all messages that exceed the spam quarantine threshold to spamQ@contoso.com.
 
-    Set-ContentFilterConfig -QuarantineMailbox spamQ@contoso.com
+```powershell
+Set-ContentFilterConfig -QuarantineMailbox spamQ@contoso.com
+```
 
 ## How do you know this step worked?
 
@@ -85,7 +93,9 @@ To verify that you have successfully specified the spam quarantine mailbox, do t
 
 1.  Run the following command:
     
-        Get-ContentFilterConfig | Format-List QuarantineMailbox
+    ```powershell
+Get-ContentFilterConfig | Format-List QuarantineMailbox
+```
 
 2.  Verify the value displayed is the value you configured.
 

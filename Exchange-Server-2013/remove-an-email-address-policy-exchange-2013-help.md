@@ -53,7 +53,9 @@ For additional management tasks related to e-mail address policies, see [Email a
 
 This example removes the e-mail address policy South East Offices.
 
-    Remove-EmailAddressPolicy -Identity "South East Offices"
+```powershell
+Remove-EmailAddressPolicy -Identity "South East Offices"
+```
 
 Type **Y** to confirm that you want to remove the policy, and then press ENTER.
 

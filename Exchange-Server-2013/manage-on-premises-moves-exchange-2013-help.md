@@ -49,7 +49,9 @@ For more information about mailbox moves, see [Mailbox moves in Exchange 2013](m
 
 This example uses the *WhatIf* switch to test whether Tony Smith's mailbox is ready to move to the new database DB01 and if there are any errors within the command. When you use the *WhatIf* switch, the system performs checks on the mailbox. If the mailbox isn't ready to move, you receive an error.
 
-    New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase DB01 -WhatIf
+```powershell
+New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase DB01 -WhatIf
+```
 
 For detailed syntax and parameter information, see [New-MigrationBatch](https://technet.microsoft.com/en-us/library/jj219166\(v=exchg.150\)) and [New-MoveRequest](https://technet.microsoft.com/en-us/library/dd351123\(v=exchg.150\)).
 
@@ -79,7 +81,9 @@ To verify that you have successfully completed your migration, do the following:
 
   - From the Shell, run the following command to retrieve mailbox move information.
     
-        Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```powershell
+Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -123,7 +127,9 @@ To verify that you have successfully completed your migration, do the following:
 
   - From the Shell, run the following command to retrieve mailbox move information.
     
-        Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```powershell
+Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -145,7 +151,9 @@ For an example of how to use the Shell to display a migration batch, see Example
 
 This example moves only Tony Smith's primary mailbox to DB01. The archive isn't moved.
 
-    New-MoveRequest -Identity 'tony@alpineskihouse.com' -PrimaryOnly -TargetDatabase "DB01"
+```powershell
+New-MoveRequest -Identity 'tony@alpineskihouse.com' -PrimaryOnly -TargetDatabase "DB01"
+```
 
 For detailed syntax and parameter information, see [New-MoveRequest](https://technet.microsoft.com/en-us/library/dd351123\(v=exchg.150\)).
 
@@ -157,7 +165,9 @@ To verify that you have successfully completed your migration, do the following:
 
   - From the Shell, run the following command to retrieve mailbox move information.
     
-        Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```powershell
+Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -188,7 +198,9 @@ To verify that you have successfully completed your migration, do the following:
 
   - From the Shell, run the following command to retrieve mailbox move information.
     
-        Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```powershell
+Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -206,7 +218,9 @@ For more information, see [Get-MigrationUserStatistics](https://technet.microsof
 
 This example moves only Tony Smith's archive mailbox to DB03. The primary mailbox isn't moved.
 
-    New-MoveRequest -Identity 'tony@alpineskihouse.com' -ArchiveOnly -ArchiveTargetDatabase "DB03"
+```powershell
+New-MoveRequest -Identity 'tony@alpineskihouse.com' -ArchiveOnly -ArchiveTargetDatabase "DB03"
+```
 
 For detailed syntax and parameter information, see [New-MigrationBatch](https://technet.microsoft.com/en-us/library/jj219166\(v=exchg.150\)) and [New-MoveRequest](https://technet.microsoft.com/en-us/library/dd351123\(v=exchg.150\)).
 
@@ -216,7 +230,9 @@ To verify that you have successfully completed your migration, do the following:
 
   - From the Shell, run the following command to retrieve mailbox move information.
     
-        Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```powershell
+Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -234,7 +250,9 @@ To verify that you have successfully completed your migration, do the following:
 
   - From the Shell, run the following command to retrieve mailbox move information.
     
-        Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```powershell
+Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -264,7 +282,9 @@ To verify that you have successfully completed your migration, do the following:
 
   - From the Shell, run the following command to retrieve mailbox move information.
     
-        Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```powershell
+Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
