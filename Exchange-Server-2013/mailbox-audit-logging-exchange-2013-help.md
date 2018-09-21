@@ -27,7 +27,7 @@ Mailbox audit logs are generated for each mailbox that has mailbox audit logging
 
 By default, mailbox audit log entries are retained in the mailbox for 90 days and then deleted. You can modify this retention period by using the *AuditLogAgeLimit* parameter with the [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)) cmdlet. If a mailbox is on In-Place Hold or Litigation Hold, audit log entries are only retained until the audit log retention period for the mailbox is reached. To retain audit log entries longer, you have to increase the retention period by changing the value for the *AuditLogAgeLimit* parameter. You can also export audit log entries before the retention period is reached. For more information, see:
 
-  - [Export mailbox audit logs](export-mailbox-audit-logs-exchange-2013-help.md)
+  - [Export mailbox audit logs](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/export-mailbox-audit-logs)
 
   - [Create a mailbox audit log search](create-a-mailbox-audit-log-search-exchange-2013-help.md)
 
@@ -157,9 +157,9 @@ You can use the following methods to search mailbox audit log entries:
 
   - **Use auditing reports in the Exchange Admin Center (EAC)**   You can use the **Auditing** tab in the EAC to run a non-owner mailbox access report or export entries from the mailbox audit log. For details, see:
     
-      - [Run a non-owner mailbox access report](run-a-non-owner-mailbox-access-report-exchange-online-help.md)
+      - [Run a non-owner mailbox access report](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/non-owner-mailbox-access-report)
     
-      - [Export mailbox audit logs](export-mailbox-audit-logs-exchange-2013-help.md)
+      - [Export mailbox audit logs](https://docs.microsoft.com/en-us/exchange/security-and-compliance/exchange-auditing-reports/export-mailbox-audit-logs)
 
 ## Mailbox audit log entries
 
@@ -334,7 +334,7 @@ The following table describes the fields logged in a mailbox audit log entry.
 
   - **Administrator access to mailboxes**   Mailboxes are considered to be accessed by an administrator only in the following scenarios:
     
-      - [In-Place eDiscovery](in-place-ediscovery-exchange-2013-help.md) is used to search a mailbox.
+      - [In-Place eDiscovery](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery) is used to search a mailbox.
     
       - The [New-MailboxExportRequest](https://technet.microsoft.com/en-us/library/ff607299\(v=exchg.150\)) cmdlet is used to export a mailbox.
     

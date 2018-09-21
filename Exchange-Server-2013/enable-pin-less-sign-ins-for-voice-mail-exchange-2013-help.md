@@ -39,9 +39,9 @@ To enable PIN-less sign-ins to voice mail for a user, the following conditions m
 
   - You can only use the Shell to perform this procedure. To learn how to open the Shell in your on-premises Exchange organization, see [Open the Shell](https://technet.microsoft.com/en-us/library/dd638134\(v=exchg.150\)). To learn how to use Windows PowerShell to connect to Exchange Online, see [Connect to Exchange Online using remote PowerShell](https://technet.microsoft.com/en-us/library/jj984289\(v=exchg.150\)).
 
-For additional tasks related to UM mailbox policies, see [UM mailbox policy procedures](um-mailbox-policy-procedures-exchange-2013-help.md).
+For additional tasks related to UM mailbox policies, see [UM mailbox policy procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policy-procedures).
 
-For additional tasks related to UM mailboxes, see [Voice mail-enabled user procedures](voice-mail-enabled-user-procedures-exchange-2013-help.md).
+For additional tasks related to UM mailboxes, see [Voice mail-enabled user procedures](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-enabled-user-procedures).
 
 ## What do you need to know before you begin?
 
@@ -51,11 +51,11 @@ For additional tasks related to UM mailboxes, see [Voice mail-enabled user proce
 
   - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "UM mailboxes" entry in the [Unified Messaging permissions](unified-messaging-permissions-exchange-2013-help.md) topic.
 
-  - Before you perform these procedures, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md).
+  - Before you perform these procedures, confirm that a UM dial plan has been created. For detailed steps, see [Create a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan).
 
-  - Before you perform these procedures, confirm that a UM mailbox policy has been created. For detailed steps, see [Create a UM mailbox policy](create-a-um-mailbox-policy-exchange-2013-help.md).
+  - Before you perform these procedures, confirm that a UM mailbox policy has been created. For detailed steps, see [Create a UM mailbox policy](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/create-um-mailbox-policy).
 
-  - Before you perform these procedures, confirm that the user or users have been enabled for UM and voice mail. For detailed steps, see [Enable a user for voice mail](enable-a-user-for-voice-mail-exchange-2013-help.md).
+  - Before you perform these procedures, confirm that the user or users have been enabled for UM and voice mail. For detailed steps, see [Enable a user for voice mail](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-a-user-for-voice-mail).
 
 ## What do you want to do?
 

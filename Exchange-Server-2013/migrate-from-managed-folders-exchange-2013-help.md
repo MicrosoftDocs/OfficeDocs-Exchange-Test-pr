@@ -15,7 +15,7 @@ mtps_version: v=EXCHG.150
 _**Applies to:** Exchange Server 2013_
 
 
-In Microsoft Exchange Server 2013, messaging records management (MRM) is performed by using retention tags and retention policies. A retention policy is a group of retention tags that can be applied to a mailbox. For more details, see [Retention tags and retention policies](retention-tags-and-retention-policies-exchange-2013-help.md). Managed folders, the MRM technology introduced in Exchange Server 2007, aren't supported.
+In Microsoft Exchange Server 2013, messaging records management (MRM) is performed by using retention tags and retention policies. A retention policy is a group of retention tags that can be applied to a mailbox. For more details, see [Retention tags and retention policies](https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies). Managed folders, the MRM technology introduced in Exchange Server 2007, aren't supported.
 
 A mailbox that has a managed folder mailbox policy applied can be migrated to use a retention policy. To do so, you must create retention tags that are equivalent to the managed folders linked to the user's managed folder mailbox policy.
 
@@ -27,11 +27,11 @@ A mailbox that has a managed folder mailbox policy applied can be migrated to us
 
 
 > [!TIP]
-> You can place mailboxes on retention hold to halt processing of retention policies or managed folder mailbox policies. Placing mailboxes on retention hold can be helpful in migration scenarios to avoid deleting messages or moving them to archive until new policy settings have been tested on test mailboxes or a small number of production mailboxes. For details, see <A href="place-a-mailbox-on-retention-hold-exchange-2013-help.md">Place a mailbox on retention hold</A>.
+> You can place mailboxes on retention hold to halt processing of retention policies or managed folder mailbox policies. Placing mailboxes on retention hold can be helpful in migration scenarios to avoid deleting messages or moving them to archive until new policy settings have been tested on test mailboxes or a small number of production mailboxes. For details, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold">Place a mailbox on retention hold</A>.
 
 
 
-For other management tasks related to MRM, see [Messaging Records Management Procedures](messaging-records-management-procedures-exchange-2013-help.md).
+For other management tasks related to MRM, see [Messaging Records Management Procedures](https://docs.microsoft.com/en-us/office365/securitycompliance/inactive-mailboxes-in-office-365).
 
 ## Comparing retention tags to managed folders
 
@@ -274,7 +274,7 @@ For detailed syntax and parameter information, see [New-RetentionPolicyTag](http
 
 
 > [!NOTE]
-> You can also use the EAC to create retention tags manually (not based on settings in managed folders). For details, see <A href="create-a-retention-policy-exchange-2013-help.md">Create a Retention Policy</A>.
+> You can also use the EAC to create retention tags manually (not based on settings in managed folders). For details, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy">Create a Retention Policy</A>.
 
 
 
@@ -296,7 +296,7 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 
 > [!NOTE]
-> You can also use the EAC to create a retention policy and add retention tags to the policy. For details, see <A href="create-a-retention-policy-exchange-2013-help.md">Create a Retention Policy</A>.
+> You can also use the EAC to create a retention policy and add retention tags to the policy. For details, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/create-a-retention-policy">Create a Retention Policy</A>.
 
 
 
@@ -320,7 +320,7 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 
 > [!NOTE]
-> You can also use the EAC to apply a retention policy to users. For details, see <A href="apply-a-retention-policy-to-mailboxes-exchange-2013-help.md">Apply a retention policy to mailboxes</A>.
+> You can also use the EAC to apply a retention policy to users. For details, see <A href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/apply-retention-policy">Apply a retention policy to mailboxes</A>.
 
 
 

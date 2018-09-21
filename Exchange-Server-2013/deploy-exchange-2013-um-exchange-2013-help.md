@@ -29,19 +29,19 @@ Post-deployment tasks for Unified Messaging
 
 Before you deploy Unified Messaging, we recommend that you familiarize yourself with the concepts in the following topics:
 
-  - [UM dial plans](um-dial-plans-exchange-2013-help.md)
+  - [UM dial plans](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-dial-plans)
 
-  - [UM IP gateways](um-ip-gateways-exchange-2013-help.md)
+  - [UM IP gateways](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways)
 
   - [UM services](um-services-exchange-2013-help.md)
 
-  - [UM hunt groups](um-hunt-groups-exchange-2013-help.md)
+  - [UM hunt groups](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-hunt-groups)
 
-  - [Automatically answer and route incoming calls](automatically-answer-and-route-incoming-calls-exchange-2013-help.md)
+  - [Automatically answer and route incoming calls](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/automatically-answer-and-route-calls)
 
-  - [UM mailbox policies](um-mailbox-policies-exchange-2013-help.md)
+  - [UM mailbox policies](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/um-mailbox-policies)
 
-  - [Voice mail for users](voice-mail-for-users-exchange-2013-help.md)
+  - [Voice mail for users](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-for-users)
 
 ## Deploying Unified Messaging
 
@@ -211,7 +211,7 @@ Perform the following procedure to create a new UM IP gateway.
 
 If you've created a UM IP gateway and associated the UM IP gateway with a UM dial plan, a default UM hunt group has been created. You can associate another UM hunt group with the same or a different UM IP gateway, depending on the number of UM IP gateways that you've created.
 
-When you create a UM hunt group, you enable all Mailbox servers that are specified within the UM dial plan to communicate with a VoIP gateway. For details, see [UM hunt groups](um-hunt-groups-exchange-2013-help.md).
+When you create a UM hunt group, you enable all Mailbox servers that are specified within the UM dial plan to communicate with a VoIP gateway. For details, see [UM hunt groups](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-hunt-groups).
 
 ## Create a UM hunt group
 
@@ -307,7 +307,7 @@ After you complete a new installation of the Client Access and Mailbox servers a
 
 ## Enable users for voice mail
 
-After you've deployed your VoIP gateways or IP PBXs, installed the Client Access and Mailbox servers, and created the components required for Unified Messaging, you need to enable your users for Unified Messaging. For details, see [Enable a user for voice mail](enable-a-user-for-voice-mail-exchange-2013-help.md).
+After you've deployed your VoIP gateways or IP PBXs, installed the Client Access and Mailbox servers, and created the components required for Unified Messaging, you need to enable your users for Unified Messaging. For details, see [Enable a user for voice mail](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/enable-a-user-for-voice-mail).
 
 ## Protect voice mail
 
@@ -323,25 +323,25 @@ To use mutual TLS to encrypt SIP and Realtime Transport Protocol (RTP) traffic t
 
   - Import the required certificates on the VoIP gateways and the IP PBX and Client Access and Mailbox servers in your organization.
 
-  - Configure VoIP security on the UM dial plans. For details, see [Configure the VoIP security setting](configure-the-voip-security-setting-exchange-2013-help.md).
+  - Configure VoIP security on the UM dial plans. For details, see [Configure the VoIP security setting](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-voip-security-setting).
 
   - Configure the startup mode on the Client Access and Mailbox servers. For details, see [Configure the startup mode on a Mailbox server](configure-the-startup-mode-on-a-mailbox-server-exchange-2013-help.md) and [Configure the startup mode on a Client Access server](configure-the-startup-mode-on-a-client-access-server-exchange-2013-help.md).
 
-  - Configure the UM IP gateways to listen on port 5061. For details, see [Configure the listening port](configure-the-listening-port-exchange-2013-help.md).
+  - Configure the UM IP gateways to listen on port 5061. For details, see [Configure the listening port](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/configure-listening-port).
 
 ## PIN policies for UM-enabled users
 
-In Unified Messaging, PIN policies are defined and configured on a UM mailbox policy. When you enable a user for Unified Messaging, you associate the user with an existing UM mailbox policy. The UM PIN policies that are configured on the UM mailbox policy should be based on the security requirements of your organization. For more information about how to configure PIN settings for UM-enabled users, see [Set Outlook Voice Access PIN security](set-outlook-voice-access-pin-security-exchange-2013-help.md).
+In Unified Messaging, PIN policies are defined and configured on a UM mailbox policy. When you enable a user for Unified Messaging, you associate the user with an existing UM mailbox policy. The UM PIN policies that are configured on the UM mailbox policy should be based on the security requirements of your organization. For more information about how to configure PIN settings for UM-enabled users, see [Set Outlook Voice Access PIN security](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/set-outlook-voice-access-pin-security).
 
 ## Set up client voice mail features
 
 After you’ve deployed your servers and the required UM components, there are several optional voice mail-related features that you can configure. For more information, see the following:
 
-  - [Setting up Outlook Voice Access](setting-up-outlook-voice-access-exchange-2013-help.md)
+  - [Setting up Outlook Voice Access](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-up-outlook-voice-access)
 
-  - [Allow voice mail users to forward calls](allow-voice-mail-users-to-forward-calls-exchange-2013-help.md)
+  - [Allow voice mail users to forward calls](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-voice-mail-users-to-forward-calls)
 
-  - [Allow users to see a voice mail transcript](allow-users-to-see-a-voice-mail-transcript-exchange-2013-help.md)
+  - [Allow users to see a voice mail transcript](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/allow-users-to-see-a-voice-mail-transcript)
 
   - [Enable voice mail users to receive faxes](enable-voice-mail-users-to-receive-faxes-exchange-2013-help.md)
 

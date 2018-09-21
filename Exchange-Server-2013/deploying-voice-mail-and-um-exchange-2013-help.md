@@ -33,7 +33,7 @@ When you’re deploying Unified Messaging, you have multiple options depending o
 
 
 
-**Telephony Hardware**   Choosing the correct VoIP gateway, IP PBX, or SBC is only the first step in integrating your telephony network with UM. You must configure those devices to work with UM, deploy the required Client Access and Mailbox servers, and create and configure all needed UM components. These components allow you to connect your circuit-based protocol network to your IP data network and enable voice mail for users in your organization. For details, see [Telephony advisor for Exchange 2013](telephony-advisor-for-exchange-2013-exchange-2013-help.md).
+**Telephony Hardware**   Choosing the correct VoIP gateway, IP PBX, or SBC is only the first step in integrating your telephony network with UM. You must configure those devices to work with UM, deploy the required Client Access and Mailbox servers, and create and configure all needed UM components. These components allow you to connect your circuit-based protocol network to your IP data network and enable voice mail for users in your organization. For details, see [Telephony advisor for Exchange 2013](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephony-advisor-for-exchange-2013).
 
 **Microsoft Lync Server**   Unified Messaging can use Microsoft Lync Server to combine voice messaging, instant messaging, enhanced presence, audio/video conferencing, and email into a familiar, integrated communications experience. Integrating UM and Lync Server has the following benefits:
 

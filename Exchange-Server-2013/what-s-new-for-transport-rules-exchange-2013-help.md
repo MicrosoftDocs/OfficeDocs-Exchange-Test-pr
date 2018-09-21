@@ -21,9 +21,9 @@ In Microsoft Exchange Server 2013, several improvements have been made to transp
 
 Data loss prevention (DLP) features in Exchange 2013 can help organizations reduce unintentional disclosure of sensitive data. Transport rules have been updated to support creating rules that accompany and enforce DLP policies. To learn more about DLP support in transport rules, see the following topics:
 
-[Integrating sensitive information rules with transport rules](integrating-sensitive-information-rules-with-transport-rules-exchange-2013-help.md)
+[Integrating sensitive information rules with transport rules](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/integrate-sensitive-information-rules)
 
-[Data loss prevention](technical-overview-of-dlp-data-loss-prevention-in-exchange.md)
+[Data loss prevention](https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention)
 
 ## New predicates and actions
 

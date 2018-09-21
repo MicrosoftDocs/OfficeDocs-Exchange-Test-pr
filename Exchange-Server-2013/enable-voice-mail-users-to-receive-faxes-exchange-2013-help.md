@@ -245,7 +245,7 @@ Return to top
 
 ## Configuring faxing
 
-By default, when you install the Mailbox server, the server isn't configured to allow incoming fax calls to be processed or delivered to a UM-enabled user. To configure UM with a fax partner server, you must configure the UM mailbox policy and configure authentication between the Mailbox server and the fax partner server. For more information, see [Setting up incoming faxing](setting-up-incoming-faxing-exchange-2013-help.md).
+By default, when you install the Mailbox server, the server isn't configured to allow incoming fax calls to be processed or delivered to a UM-enabled user. To configure UM with a fax partner server, you must configure the UM mailbox policy and configure authentication between the Mailbox server and the fax partner server. For more information, see [Setting up incoming faxing](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-client-voice-mail-features/set-up-incoming-faxing).
 
 Return to top
 
@@ -279,7 +279,7 @@ Return to top
 
 ## Multiple DID telephone numbers
 
-When you enable a user for Unified Messaging, you must enter at least a single extension number for that user. You can add multiple extension numbers for a UM-enabled user by using the Exchange Administration Center (EAC). For more information, see [Add an extension number](add-an-extension-number-exchange-2013-help.md).
+When you enable a user for Unified Messaging, you must enter at least a single extension number for that user. You can add multiple extension numbers for a UM-enabled user by using the Exchange Administration Center (EAC). For more information, see [Add an extension number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-extension-number).
 
 Adding multiple extension numbers is useful when a UM-enabled user:
 
@@ -293,7 +293,7 @@ Adding multiple extensions is more complex than using a single extension and may
 
 The benefit of using multiple DID extension numbers is that a UM-enabled user receives voice calls on one DID extension number and fax calls on the another DID extension number. Using separate DID numbers for voice mail and fax calls is easier for the user.
 
-If you configure two DID extension numbers for a specific user, the DID extension numbers can come from separate UM dial plans. To use two DID numbers, you can create a dial plan and use a Mailbox server as a dedicated server that will receive fax calls and forward fax messages to users. For more information, see [Create a UM dial plan](create-a-um-dial-plan-exchange-2013-help.md).
+If you configure two DID extension numbers for a specific user, the DID extension numbers can come from separate UM dial plans. To use two DID numbers, you can create a dial plan and use a Mailbox server as a dedicated server that will receive fax calls and forward fax messages to users. For more information, see [Create a UM dial plan](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/create-um-dial-plan).
 
 You have the following options when you’re configuring multiple DID extension numbers for UM-enabled users:
 

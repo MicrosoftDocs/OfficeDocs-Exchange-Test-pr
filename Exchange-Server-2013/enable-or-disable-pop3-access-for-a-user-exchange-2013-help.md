@@ -23,7 +23,7 @@ You can enable or disable POP3 for a user.
 
 
 
-For additional information related to managing user mailboxes, see [Manage user mailboxes](manage-user-mailboxes-exchange-2013-help.md).
+For additional information related to managing user mailboxes, see [Manage user mailboxes](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes).
 
 For additional information related to POP3 and IMAP4, see [POP3 and IMAP4 in Exchange Server 2013](pop3-and-imap4-in-exchange-server-2013-exchange-2013-help.md).
 

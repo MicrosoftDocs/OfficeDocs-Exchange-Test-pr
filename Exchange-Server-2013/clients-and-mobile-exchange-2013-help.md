@@ -61,7 +61,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn about Outlook Web App, which provides users access to their Exchange 2013 mailbox through a web browser.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="mailtips-exchange-2013-help.md">MailTips</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/mailtips/mailtips">MailTips</a></p></td>
 <td><p>Learn about MailTips, the informative messages displayed to users while they're composing a message.</p></td>
 </tr>
 </tbody>

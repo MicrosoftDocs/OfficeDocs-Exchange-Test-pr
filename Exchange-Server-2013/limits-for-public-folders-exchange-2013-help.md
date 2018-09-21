@@ -45,7 +45,7 @@ The following table lists the limits for public folders in on-premises Exchange 
 <tr class="odd">
 <td><p>Total number of public folder mailboxes</p></td>
 <td><p>100</p></td>
-<td><p>Although you can create more than 100 public folder mailboxes, it isn’t supported. <a href="create-a-public-folder-mailbox-exchange-2013-help.md">Create a public folder mailbox</a></p></td>
+<td><p>Although you can create more than 100 public folder mailboxes, it isn’t supported. <a href="https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder-mailbox">Create a public folder mailbox</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Total public folders in hierarchy</p></td>

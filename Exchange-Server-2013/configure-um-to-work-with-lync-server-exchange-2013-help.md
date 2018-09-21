@@ -21,7 +21,7 @@ When youâ€™re integrating Microsoft Lync Server with Exchange Unified Messaging 
     
 
     > [!IMPORTANT]
-    > The ExchUcUtil.ps1 script creates one or more UM IP gateways. You must disable outgoing calls on all UM IP gateways except one gateway that the script created. This includes disabling outgoing calls on UM IP gateways that were created before you ran the script. To disable outgoing calls on a UM IP gateway, see <A href="disable-outgoing-calls-on-um-ip-gateways-exchange-2013-help.md">Disable outgoing calls on UM IP gateways</A>.
+    > The ExchUcUtil.ps1 script creates one or more UM IP gateways. You must disable outgoing calls on all UM IP gateways except one gateway that the script created. This includes disabling outgoing calls on UM IP gateways that were created before you ran the script. To disable outgoing calls on a UM IP gateway, see <A href="disable-outgoing-calls-on-https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways">Disable outgoing calls on UM IP gateways</A>.
 
 
 
@@ -57,7 +57,7 @@ Run the ExchUcUtil.ps1 script on any Exchange server in your organization thatâ€
 
 
 > [!IMPORTANT]
-> The ExchUcUtil.ps1 script creates one or more UM IP gateways. You must disable outgoing calls on all UM IP gateways except one gateway that the script created. This includes disabling outgoing calls on UM IP gateways that were created before you ran the script. To disable outgoing calls on a UM IP gateway, see <A href="disable-outgoing-calls-on-um-ip-gateways-exchange-2013-help.md">Disable outgoing calls on UM IP gateways</A>.
+> The ExchUcUtil.ps1 script creates one or more UM IP gateways. You must disable outgoing calls on all UM IP gateways except one gateway that the script created. This includes disabling outgoing calls on UM IP gateways that were created before you ran the script. To disable outgoing calls on a UM IP gateway, see <A href="disable-outgoing-calls-on-https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/um-ip-gateways">Disable outgoing calls on UM IP gateways</A>.
 
 
 

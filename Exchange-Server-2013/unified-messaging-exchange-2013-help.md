@@ -253,19 +253,19 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn about UM language packs and language settings.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="telephone-system-integration-with-um-exchange-2013-help.md">Telephone system integration with UM</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/telephone-system-integration-with-um">Telephone system integration with UM</a></p></td>
 <td><p>Learn about integrating your telephony network with UM.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="connect-your-voice-mail-system-to-your-telephone-network-exchange-2013-help.md">Connect your voice mail system to your telephone network</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/connect-voice-mail-system/connect-voice-mail-system">Connect your voice mail system to your telephone network</a></p></td>
 <td><p>Learn how to use and configure UM components to connect your telephony network to Exchange UM.</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="automatically-answer-and-route-incoming-calls-exchange-2013-help.md">Automatically answer and route incoming calls</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/automatically-answer-and-route-calls/automatically-answer-and-route-calls">Automatically answer and route incoming calls</a></p></td>
 <td><p>Learn how to create UM auto attendants and manage settings for navigation menus, greetings, and business and non-business hours.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="set-up-voice-mail-for-users-exchange-2013-help.md">Set up voice mail for users</a></p></td>
+<td><p><a href="set-up-https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/voice-mail-for-users">Set up voice mail for users</a></p></td>
 <td><p>Learn how to create and manage UM mailbox policies and how to enable users for UM.</p></td>
 </tr>
 <tr class="odd">
@@ -273,7 +273,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn how to set up client features to enable users to access and manage their voice mail messages.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="set-outlook-voice-access-pin-security-exchange-2013-help.md">Set Outlook Voice Access PIN security</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-outlook-voice-access-pin-security/set-outlook-voice-access-pin-security">Set Outlook Voice Access PIN security</a></p></td>
 <td><p>Learn how to set PIN requirements for Outlook Voice Access users.</p></td>
 </tr>
 <tr class="odd">
@@ -281,7 +281,7 @@ The following table contains links to topics that will help you learn about and 
 <td><p>Learn how to use UM to protect voice messages.</p></td>
 </tr>
 <tr class="even">
-<td><p><a href="run-reports-for-voice-mail-calls-exchange-2013-help.md">Run reports for voice mail calls</a></p></td>
+<td><p><a href="https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/run-voice-mail-call-reports/run-voice-mail-call-reports">Run reports for voice mail calls</a></p></td>
 <td><p>Learn about UM call reports.</p></td>
 </tr>
 </tbody>

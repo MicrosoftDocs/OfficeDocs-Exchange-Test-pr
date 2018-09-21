@@ -25,7 +25,7 @@ To learn more, see the following topics:
 
   - [Recoverable Items folder](recoverable-items-folder-exchange-2013-help.md)
 
-  - [In-Place Hold and Litigation Hold](in-place-hold-and-litigation-hold-exchange-2013-help.md)
+  - [In-Place Hold and Litigation Hold](https://docs.microsoft.com/en-us/exchange/security-and-compliance/in-place-and-litigation-holds)
 
 ## What do you need to know before you begin?
 

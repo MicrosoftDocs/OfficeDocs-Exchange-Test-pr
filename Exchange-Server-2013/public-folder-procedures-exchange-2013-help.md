@@ -19,33 +19,33 @@ _**Applies to:** Exchange Online, Exchange Server 2013_
 
 Use one or more of the procedures listed below to get your public folder infrastructure up and running, and to perform other necessary tasks for managing public folders.
 
-[Set up public folders in a new organization](set-up-public-folders-in-a-new-organization-exchange-2013-help.md)
+[Set up public folders in a new organization](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-public-folders)
 
-[Configure legacy on-premises public folders for a hybrid deployment](configure-legacy-on-premises-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
+[Configure legacy on-premises public folders for a hybrid deployment](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders)
 
-[Configure Exchange 2013 public folders for a hybrid deployment](configure-exchange-2013-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
+[Configure Exchange 2013 public folders for a hybrid deployment](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-modern-hybrid-public-folders)
 
-[Configure Exchange Online public folders for a hybrid deployment](configure-exchange-online-public-folders-for-a-hybrid-deployment-exchange-2013-help.md)
+[Configure Exchange Online public folders for a hybrid deployment](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-exo-hybrid-public-folders)
 
 [Configure legacy public folders where user mailboxes are on Exchange 2013 servers](configure-legacy-public-folders-where-user-mailboxes-are-on-exchange-2013-servers-exchange-2013-help.md)
 
 [Use batch migration to migrate public folders to Exchange 2013 from previous versions](use-batch-migration-to-migrate-public-folders-to-exchange-2013-from-previous-versions-exchange-2013-help.md)
 
-[Use batch migration to migrate legacy public folders to Office 365 and Exchange Online](use-batch-migration-to-migrate-legacy-public-folders-to-office-365-and-exchange-online-exchange-online-help.md)
+[Use batch migration to migrate legacy public folders to Office 365 and Exchange Online](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/batch-migration-of-legacy-public-folders)
 
-[Use batch migration to migrate Exchange 2013 public folders to Exchange Online](use-batch-migration-to-migrate-exchange-2013-public-folders-to-exchange-online-exchange-online-help.md)
+[Use batch migration to migrate Exchange 2013 public folders to Exchange Online](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/batch-migration-of-exchange-2013-public-folders)
 
-[Create a public folder mailbox](create-a-public-folder-mailbox-exchange-2013-help.md)
+[Create a public folder mailbox](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder-mailbox)
 
-[Create a public folder](create-a-public-folder-exchange-2013-help.md)
+[Create a public folder](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/create-public-folder)
 
-[Mail-enable or mail-disable a public folder](mail-enable-or-mail-disable-a-public-folder-exchange-2013-help.md)
+[Mail-enable or mail-disable a public folder](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/enable-or-disable-mail-for-public-folder)
 
-[Update the public folder hierarchy](update-the-public-folder-hierarchy-exchange-2013-help.md)
+[Update the public folder hierarchy](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/update-public-folder-hierarchy)
 
-[Remove a public folder](remove-a-public-folder-exchange-2013-help.md)
+[Remove a public folder](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/remove-public-folder)
 
-[Use favorite public folders in Outlook on the web](use-favorite-public-folders-in-outlook-on-the-web-exchange-2013-help.md)
+[Use favorite public folders in Outlook on the web](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/use-favorite-public-folders)
 
 [Move a public folder mailbox to a different mailbox database](move-a-public-folder-mailbox-to-a-different-mailbox-database-exchange-2013-help.md)
 
@@ -53,5 +53,5 @@ Use one or more of the procedures listed below to get your public folder infrast
 
 [Restore public folders and public folder mailboxes from failed moves](restore-public-folders-and-public-folder-mailboxes-from-failed-moves-exchange-2013-help.md)
 
-[View statistics for public folders and public folder items](view-statistics-for-public-folders-and-public-folder-items-exchange-2013-help.md)
+[View statistics for public folders and public folder items](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/view-public-folder-statistics)
 

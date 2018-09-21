@@ -17,9 +17,9 @@ _**Applies to:** Exchange Server 2013_
 
 You can use Windows Reliability and Performance Monitor (Perfmon.exe) to select and view performance counters for messaging records management (MRM). By using performance counters, you can monitor the Managed Folder Assistant while it runs resource-intensive MRM processes.
 
-For a list of performance counters for MRM, see [Performance counters for messaging records management](performance-counters-for-messaging-records-management-exchange-2013-help.md).
+For a list of performance counters for MRM, see [Performance counters for messaging records management](performance-counters-for-https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/messaging-records-management).
 
-Looking for other tasks related to monitoring MRM? Check out [Monitoring messaging records management](monitoring-messaging-records-management-exchange-2013-help.md).
+Looking for other tasks related to monitoring MRM? Check out [Monitoring messaging records management](monitoring-https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/messaging-records-management).
 
 ## Use Windows Reliability and Performance Monitor to view performance counters for MRM
 

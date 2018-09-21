@@ -25,7 +25,7 @@ After you disable email for a mail user, you can mail-enable the user again by u
 
 
 
-For additional management tasks related to mail users, see [Manage mail users](manage-mail-users-exchange-2013-help.md).
+For additional management tasks related to mail users, see [Manage mail users](https://docs.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-mail-users).
 
 ## What do you need to know before you begin?
 

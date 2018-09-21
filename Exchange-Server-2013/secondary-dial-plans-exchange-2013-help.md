@@ -108,25 +108,25 @@ When Microsoft Lync Server is used for Enterprise Voice, Unified Messaging can p
 
 For more information about adding, removing, or changing extensions, see one of the following:
 
-  - [Change an extension number](change-an-extension-number-exchange-2013-help.md)
+  - [Change an extension number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-extension-number)
 
-  - [Add an extension number](add-an-extension-number-exchange-2013-help.md)
+  - [Add an extension number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-extension-number)
 
-  - [Remove an extension number](remove-an-extension-number-exchange-2013-help.md)
+  - [Remove an extension number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/remove-extension-number)
 
 If you need to change SIP addresses or E.164 numbers for UM-enabled users, see:
 
-  - [Add a SIP address](add-a-sip-address-exchange-2013-help.md)
+  - [Add a SIP address](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-sip-address)
 
-  - [Change a SIP address](change-a-sip-address-exchange-2013-help.md)
+  - [Change a SIP address](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-sip-address)
 
-  - [Remove a SIP address](remove-a-sip-address-exchange-2013-help.md)
+  - [Remove a SIP address](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/remove-sip-address)
 
-  - [Add an E.164 number](add-an-e-164-number-exchange-2013-help.md)
+  - [Add an E.164 number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/add-e-164-number)
 
-  - [Change an E.164 number](change-an-e-164-number-exchange-2013-help.md)
+  - [Change an E.164 number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/change-e-164-number)
 
-  - [Remove an E.164 number](remove-an-e-164-number-exchange-2013-help.md)
+  - [Remove an E.164 number](https://docs.microsoft.com/en-us/exchange/voice-mail-unified-messaging/set-up-voice-mail/remove-e-164-number)
 
 ## Call answering
 

@@ -166,7 +166,7 @@ In the EAC, in the **Properties of this rule** section, click **Match sender add
 <td><p><em>HasSenderOverride</em></p>
 <p><em>ExceptIfHasSenderOverride</em></p></td>
 <td><p>n/a</p></td>
-<td><p>Messages where the sender has chosen to override a data loss prevention (DLP) policy. For more information about DLP policies, see <a href="technical-overview-of-dlp-data-loss-prevention-in-exchange.md">Data loss prevention</a>.</p></td>
+<td><p>Messages where the sender has chosen to override a data loss prevention (DLP) policy. For more information about DLP policies, see <a href="https://docs.microsoft.com/en-us/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention">Data loss prevention</a>.</p></td>
 <td><p>Exchange 2013 or later</p></td>
 </tr>
 <tr class="odd">

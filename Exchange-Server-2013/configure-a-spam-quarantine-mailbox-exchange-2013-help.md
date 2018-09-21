@@ -57,7 +57,7 @@ To create a dedicated spam quarantine mailbox, follow these steps:
 
   - **Create a dedicated mailbox and user account**   We recommend that you create a dedicated mailbox and Active Directory user account for the spam quarantine mailbox. For more information, see [Create user mailboxes](create-user-mailboxes-exchange-2013-help.md).
     
-    You may apply recipient policies, such as messaging records management, mailbox quotas, and delegation rights, according to your organization's compliance policies and needs. For more information, see [Messaging records management](messaging-records-management-exchange-2013-help.md).
+    You may apply recipient policies, such as messaging records management, mailbox quotas, and delegation rights, according to your organization's compliance policies and needs. For more information, see [Messaging records management](https://docs.microsoft.com/en-us/exchange/security-and-compliance/messaging-records-management/messaging-records-management).
     
 
     > [!NOTE]
