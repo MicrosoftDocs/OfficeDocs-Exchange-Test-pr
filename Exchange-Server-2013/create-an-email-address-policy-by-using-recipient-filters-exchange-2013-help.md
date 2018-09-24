@@ -47,11 +47,15 @@ For additional management tasks related to email address policies, see [Email ad
 
 To create an email address policy by using recipient filters, use the following syntax.
 
+```powershell
     New-EmailAddressPolicy -Name <String> -RecipientFilter <String>
+```
 
 This example creates an email address policy that applies to all executives and for which the local part of the email address consists of the first two letters of their first name and their entire last name.
 
+```powershell
     New-EmailAddressPolicy -Name 'Execs' -EnabledEmailAddressTemplates 'SMTP:%2g%s@contoso.com' -RecipientFilter {((RecipientType -eq 'UserMailbox') -and (Title -like 'executive'))}
+```
 
 For detailed syntax and parameter information, see [New-EmailAddressPolicy](https://technet.microsoft.com/en-us/library/aa996800\(v=exchg.150\)).
 

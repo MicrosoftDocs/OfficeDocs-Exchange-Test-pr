@@ -58,13 +58,13 @@ To add a Windows PowerShell script to an unscoped top-level role, you must add a
 The script must reside in the Scripts directory in the Microsoft Exchange Server 2013 installation path on every server running Exchange 2013 where users might connect to run the script. If a user has access to run a script, but the script isn't located on the Exchange 2013 server the user is connected to, an error occurs. By default, the path to the Scripts directory is C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Scripts.
 
 After you copy the script to the appropriate Exchange 2013 servers and you decide what script parameters should be used, create the role entry using the following syntax.
-
+```powershell
     Add-ManagementRoleEntry <unscoped top-level role name>\<script filename> -Parameters <parameter 1, parameter 2, parameter...> -Type Script -UnscopedTopLevel
-
+```
 This example adds the BulkProvisionUsers.ps1 script to the IT Scripts role with the *Name* and *Location* parameters.
-
+```powershell
     Add-ManagementRoleEntry "IT Scripts\BulkProvisionUsers.ps1" -Parameters Name, Location -Type Script -UnscopedTopLevel
-
+```
 
 > [!NOTE]
 > The <STRONG>Add-ManagementRoleEntry</STRONG> cmdlet performs basic validation to make sure that you add only the parameters that exist in the script. However, no further validation is done after the role entry is added. If parameters are later added or removed, you must manually update the role entries that contain the script.
@@ -80,13 +80,13 @@ To add a non-Exchange cmdlet to an unscoped top-level role, you must add a manag
 If you add non-Exchange cmdlets to the new role, the cmdlets must be installed on every Exchange 2013 server where users might connect to run the cmdlets. To learn how to properly install and register the Windows PowerShell snap-ins that contain the cmdlets you want to use, refer to the documentation for your product.
 
 After you install the Windows PowerShell snap-in that contains the cmdlets on the appropriate the Exchange 2013 servers and you decide what cmdlet parameters should be used, create the role entry using the following syntax.
-
+```powershell
     Add-ManagementRoleEntry <unscoped top-level role name>\<cmdlet name> -PSSnapinName <snap-in name> -Parameters <parameter 1, parameter 2, parameter...> -Type Cmdlet -UnscopedTopLevel
-
+```
 This example adds the **Set-WidgetConfiguration** cmdlet in the Contoso.Admin.Cmdlets snap-in to the Widget Cmdlets role with the *Database* and *Size* parameters.
-
+```powershell
     Add-ManagementRoleEntry "Widget Cmdlets\Set-WidgetConfiguration" -PSSnapinName Contoso.Admin.Cmdlets -Parameters Database, Size -Type Cmdlet -UnscopedTopLevel
-
+```
 
 > [!NOTE]
 > The <STRONG>Add-ManagementRoleEntry</STRONG> cmdlet performs basic validation to make sure that you add only the parameters that exist in the cmdlet. However, no further validation is done after the role entry is added. If the cmdlet is later changed, and parameters are added or removed, you must manually update the role entries that contain the cmdlet.

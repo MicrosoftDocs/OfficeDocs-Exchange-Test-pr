@@ -33,7 +33,9 @@ You can view anti-spam stamps by using Microsoft Outlook. For more information, 
 
 The anti-spam report is a summary report of the anti-spam filter results that have been applied to an email message. The Content Filter agent applies this stamp to the message envelope in the form of an X-header as follows.
 
+```powershell
     X-MS-Exchange-Organization-Antispam-Report: DV:<DATVersion>;CW:CustomList;PCL:PhishingVerdict <verdict>;P100:PhishingBlock;PP:Presolve;SID:SenderIDStatus <status>;TIME:<SendReceiveDelta>;MIME:MimeCompliance 
+```
 
 The following table describes the filter information that can appear in an anti-spam report.
 

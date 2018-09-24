@@ -65,7 +65,9 @@ You can change a single user’s mobile device mailbox policy using the **Set-CA
 
 1.  In the Shell, run the following command.
     
+    ```powershell
         Set-CASMailbox -Identity tony@contoso.com -ActiveSyncMailboxPolicy "Sales" 
+    ```
 
 ## How do you know this worked?
 
@@ -75,7 +77,9 @@ To verify that you’ve successfully changed a user’s mobile device mailbox po
 
 2.  In the Shell, run the following command.
     
+    ```powershell
         Get-CASMailbox -Identity tony@contoso.com 
+    ```
 
 ## Change the mobile device mailbox policy for multiple users at the same time
 
@@ -101,9 +105,10 @@ You can use the Shell to change the mobile device mailbox policy for a filtered 
 
 1.  In the Shell, run the following command.
     
+    ```powershell
         Get-Mailbox | where { $_.CustomAttribute1 -match "Manager"
          } | Set-CASMailbox -activesyncmailboxpolicy(Get-ActiveSyncMailboxPolicy "Contoso").Identity
-    
+    ```
 
     > [!NOTE]
     > You can substitute <CODE>CustomAttribute1</CODE> for any of the properties on the <STRONG>Get-Mailbox</STRONG> object. To view the full list, type: <CODE>Get-Mailbox username |fl</CODE>.
@@ -119,6 +124,6 @@ To verify that you’ve successfully changed a user’s mobile device mailbox po
 2.  In the Shell, run the following command.
     
     ```powershell
-Get-CASMailbox -Identity tony@contoso.com
-```
+    Get-CASMailbox -Identity tony@contoso.com
+    ```
 

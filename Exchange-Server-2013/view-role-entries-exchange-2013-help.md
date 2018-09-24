@@ -57,11 +57,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleEntry](htt
 
 To view a list of role entries on a specific role, use the following syntax.
 
+```powershell
     Get-ManagementRoleEntry <role name>\*
+```
 
 This examples retrieves all the role entries on the `Recipient Administrators` role.
 
+```powershell
     Get-ManagementRole "Recipient Administrators\*"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd335210\(v=exchg.150\)).
 
@@ -69,11 +73,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleEntry](htt
 
 To view a list of all the roles that contain a specific role entry, use the following syntax.
 
+```powershell
     Get-ManagementRoleEntry *\<cmdlet name>
+```
 
 This example retrieves all the roles that contain the **Set-Mailbox** role entry.
 
+```powershell
     Get-ManagementRoleEntry *\Set-Mailbox
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd335210\(v=exchg.150\)).
 
@@ -81,11 +89,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleEntry](htt
 
 To view a list of targeted roles that contain cmdlets with similar names, use the following syntax.
 
+```powershell
     Get-ManagementRoleEntry *<partial role name>*\*<partial cmdlet name>*
+```
 
 This example returns a list of role entries that contain the string `Mailbox` that are on roles that contain the string `Tier 1` in their names.
 
+```powershell
     Get-ManagementRoleEntry "*Tier 1*\*Mailbox*"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd335210\(v=exchg.150\)).
 
@@ -113,11 +125,15 @@ Some role entries have more parameters than can be viewed by piping the results 
 
 To view parameters stored in the **Parameters** property of a role entry object, use the following syntax.
 
+```powershell
     (Get-ManagementRoleEntry <role name>\<cmdlet name>).Parameters
+```
 
 This example retrieves the parameters on the **Set-Mailbox** role entry on the Mail Recipients role.
 
+```powershell
     (Get-ManagementRoleEntry "Mail Recipients\Set-Mailbox").Parameters
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd335210\(v=exchg.150\)).
 

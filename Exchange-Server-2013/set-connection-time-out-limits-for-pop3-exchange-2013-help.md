@@ -92,8 +92,8 @@ Or
 1.  Run the following command in the Shell.
     
     ```powershell
-Get-PopSettings | format-list
-```
+    Get-PopSettings | format-list
+    ```
 
 2.  Verify the connection settings are correct.
 

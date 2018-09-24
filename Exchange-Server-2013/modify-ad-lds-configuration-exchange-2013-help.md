@@ -83,7 +83,9 @@ The parameters in the following table are available for the **ConfigureAdam.ps1*
 
 This example changes the LDAP port used by AD LDS to 5000. The ampersand (&) is part of the command syntax.
 
+```powershell
     & $env:ExchangeInstallPath\Scripts\ConfigureAdam.ps1 -LdapPort:5000
+```
 
 This example makes the following changes to the AD LDS configuration. The ampersand (&) is part of the command syntax. Note the colon (:) used between each parameter and its value:
 
@@ -97,5 +99,7 @@ This example makes the following changes to the AD LDS configuration. The amper
 
 <!-- end list -->
 
+```powershell
     & $env:ExchangeInstallPath\Scripts\ConfigureAdam.ps1 -LdapPort:5000 -SslPort:5001 -LogPath:"D:\Exchange Server\Data\ADLDS" -DataPath:"D:\Exchange Server\Data\ADLDS"
+```
 

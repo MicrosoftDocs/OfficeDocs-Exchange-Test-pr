@@ -68,10 +68,12 @@ To connect to a destination SMTP server by using Telnet on port 25, you must use
     
     The output of the command will resemble the following:
     
+    ```powershell
         fabrikam.com mx preference=10, mail exchanger = mail1.fabrikam.com
         fabrikam.com mx preference=20, mail exchanger = mail2.fabrikam.com
         mail1.fabrikam.com internet address = 192.168.1.10
         mail2 fabrikam.com internet address = 192.168.1.20
+    ```
     
     You can use any of the host names or IP addresses that are associated with the MX records as the destination SMTP server. A lower value of preference indicates a preferred SMTP server. You can use multiple MX records and different values of preference for load balancing and fault tolerance.
 
@@ -126,8 +128,8 @@ In this example, the following values are used:
 8.  Type **DATA** and then press ENTER. You will receive a response that resembles the following:
     
     ```powershell
-354 Start mail input; end with <CLRF>.<CLRF>
-```
+    354 Start mail input; end with <CLRF>.<CLRF>
+    ```
 
 9.  Type **Subject: Test from Contoso** and then press ENTER.
 
@@ -138,14 +140,14 @@ In this example, the following values are used:
 12. Press ENTER, type a period ( **.** ) and then press ENTER. You will receive a response that resembles the following:
     
     ```powershell
-250 2.6.0 <GUID> Queued mail for delivery
-```
+    250 2.6.0 <GUID> Queued mail for delivery
+    ```
 
 13. To disconnect from the destination SMTP server, type **QUIT** and then press ENTER. You will receive a response that resembles the following:
     
     ```powershell
-221 2.0.0 Service closing transmission channel
-```
+    221 2.0.0 Service closing transmission channel
+    ```
 
 14. To close the Telnet session, type **quit** and then press ENTER.
 

@@ -65,7 +65,9 @@ For additional management tasks related to managing certificates for Unified Mes
 
 This example exports the certificate with the Thumbprint A36DE2B9B62980A717EBD0C3052F5F0B08FBFFCC to a file after it prompts you for a user name and password.
 
+```powershell
     $file = Export-ExchangeCertificate -Thumbprint A36DE2B9B62980A717EBD0C3052F5F0B08FBFFCC -BinaryEncoded:$true -Password (Get-Credential).password
+```
 
 This example does the following:
 
@@ -77,11 +79,11 @@ This example does the following:
 
 <!-- end list -->
 
-  ```
+  ```powershell
   $file = Get-ExchangeCertificate -DomainName umcorp.northwindtraders.com | Export-ExchangeCertificate -BinaryEncoded:$true -Password (Get-Credential).password
   ```
 
-  ```
+  ```powershell
   Set-Content -Path "d:\umcerts\selfsigned.pfx" -Value $file.FileData =Encoding Byte
   ```
 
@@ -97,4 +99,6 @@ This example does the following:
 
 This example imports a certificate from the d:\\certificates\\exchange\\SelfSignedUMCert.pfx certificate file after you enter a user name and password.
 
+```powershell
     Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path d:\certificates\exchange\SelfSignedUMCert.pfx -Encoding Byte -ReadCount 0)) -Password:(Get-Credential).password
+```

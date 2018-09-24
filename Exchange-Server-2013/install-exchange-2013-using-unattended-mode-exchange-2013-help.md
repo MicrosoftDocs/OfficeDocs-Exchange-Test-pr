@@ -93,7 +93,7 @@ The following information applies to the Exchange 2013 Edge Transport server rol
     > [!IMPORTANT]
     > If you have User Access Control (UAC) enabled, you must run <CODE>Setup.exe</CODE> from an elevated command prompt.
 
-    
+    ```powershell
         Setup.exe [/Mode:<setup mode>] [/IAcceptExchangeServerLicenseTerms]
         [/Roles:<server roles to install>] [/InstallWindowsComponents] 
         [/OrganizationName:<name for the new Exchange organization>] 
@@ -108,7 +108,8 @@ The following information applies to the Exchange 2013 Edge Transport server rol
         [/MdbName:<mailbox database name>] [/DbFilePath:<Edb file path>] 
         [/LogFolderPath:<log folder path>] [/ActiveDirectorySplitPermissions:<True | False>]
         [/TenantOrganizationConfig:<path>]
-
+    ```
+    
 4.  Setup copies the setup files locally to the computer on which you're installing Exchange 2013.
 
 5.  Setup checks the prerequisites, including all prerequisites specific to the server roles that you're installing. If you haven't met all the prerequisites, Setup fails and returns an error message that explains the reason for the failure. If you've met all the prerequisites, Setup installs Exchange 2013.

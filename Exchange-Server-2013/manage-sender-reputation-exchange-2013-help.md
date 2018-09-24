@@ -60,12 +60,14 @@ To verify that you have successfully enabled or disabled sender reputation, do t
 1.  Verify the Protocol Analysis agent is installed and enabled by running the following command:
     
     ```powershell
-Get-TransportAgent
-```
+    Get-TransportAgent
+    ```
 
 2.  Verify the sender reputation values you configured by running the following command:
     
+    ```powershell
         Get-SenderReputationConfig | Format-List Enabled,*MailEnabled
+    ```
 
 ## Use the Shell to enable or disable sender reputation for internal or external messages
 
@@ -101,7 +103,9 @@ To verify that you have successfully enabled or disabled sender reputation for i
 
 1.  Run the following command:
     
+    ```powershell
         Get-SenderReputationConfig | Format-List Enabled,*MailEnabled
+    ```
 
 2.  Verify the values displayed match the values you configured.
 
@@ -126,8 +130,8 @@ To verify that you have successfully configured the sender reputation properties
 1.  Run the following command:
     
     ```powershell
-Get-SenderReputationConfig
-```
+    Get-SenderReputationConfig
+    ```
 
 2.  Verify the values displayed match the values you configured.
 
@@ -166,11 +170,15 @@ You may need to perform additional steps to allow sender reputation to traverse 
 
 To configure outbound access for the detection of open proxy servers, run the following command:
 
+```powershell
     Set-SenderReputationConfig -ProxyServerName <String> -ProxyServerPort <Port> -ProxyServerType <String>
+```
 
 This example configures sender reputation to use the open proxy server named SERVER01 that uses the HTTP CONNECT protocol on port 80.
 
+```powershell
     Set-SenderReputationConfig - ProxyServerName SERVER01 -ProxyServerPort 80 -ProxyServerType HttpConnect
+```
 
 ## How do you know this worked?
 
@@ -178,7 +186,9 @@ To verify that you have successfully configured outbound access for detection of
 
 1.  Run the following command:
     
+    ```powershell
         Get-SenderReputationConfig | Format-List ProxyServer*
-
+    ```
+    
 2.  Verify the values displayed are the values you configured.
 

@@ -79,7 +79,9 @@ For additional management tasks related to managing certificates for Unified Mes
 
 This example creates a new Exchange certificate request for a Mailbox server named `MyMailboxServer` with a friendly name of `CertUM`.
 
+```powershell
     New-ExchangeCertificate -FriendlyName 'CertUM' -GenerateRequest -PrivateKeyExportable $true -KeySize '2048' -DomainName '*.northwindtraders.com' -SubjectName 'C=US,S=wa,L=redmond,O=northwindtraders,OU=servers,CN= northwindtraders.com' -Server 'MyMailboxServer'
+```
 
 ## Use the EAC to create a self-signed certificate for UM
 
@@ -105,7 +107,9 @@ This example creates a new Exchange certificate request for a Mailbox server nam
 
 This example creates a new Exchange self-signed certificate for a Mailbox server named `MyMailboxServer` with a friendly name of `UMCert`.
 
+```powershell
     New-ExchangeCertificate -Services 'UM, UMCallRouter' -DomainName '*.northwindtraders.com' -FriendlyName 'UMSelfSigned' -SubjectName 'C=US,S=WA,L=Redmond,O=Northwindtraders,OU=Servers,CN= Northwindtraders.com' -PrivateKeyExportable $true
+```
 
 
 > [!TIP]

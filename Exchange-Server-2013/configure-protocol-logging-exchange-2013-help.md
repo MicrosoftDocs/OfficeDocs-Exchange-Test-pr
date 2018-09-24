@@ -87,7 +87,9 @@ To verify that you have successfully used the EAC to configure the protocol log 
 
 To enable or disable protocol logging on a Send connector or a Receive connector, run the following command:
 
+```powershell
     <Set-SendConnector |Set-ReceiveConnector> <ConnectorIdentity> -ProtocolLoggingLevel <Verbose | None>
+```
 
 This example enables protocol logging for the Receive connector named Connection from Contoso.com.
 
@@ -101,9 +103,9 @@ To verify that you have successfully enabled or disabled protocol logging, do th
 
 1.  In the Shell, run the following command:
     
-    ```command line
-<Get-SendConnector |Get-ReceiveConnector> | Format-List Name,ProtocolLoggingLevel
-```
+    ```powershell
+    <Get-SendConnector |Get-ReceiveConnector> | Format-List Name,ProtocolLoggingLevel
+    ```
 
 2.  Verify the values displayed are the values you configured.
 
@@ -111,7 +113,9 @@ To verify that you have successfully enabled or disabled protocol logging, do th
 
 To enable or disable protocol logging on the implicit and invisible intra-organization Send connector that exists in the Transport service on a Mailbox server and in the Front End Transport service on a Client Access server, run the following command:
 
+```powershell
     <Set-TransportService | Set-FrontEndTransportService> -IntraOrgConnectorProtocolLoggingLevel <Verbose | None>
+```
 
 This example enables protocol logging on the intra-organization Send connector in the Transport service on a Mailbox server named Mailbox01.
 
@@ -125,7 +129,9 @@ To verify that you have successfully enabled or disabled protocol logging on the
 
 1.  In the Shell, run the following command:
     
+    ```powershell
         <Get-TransportService | Get-FrontEndTransportService> <ServerIdentity> | Format-List IntraOrgConnectorProtocolLoggingLevel
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -149,7 +155,9 @@ To verify that you have successfully enabled or disabled protocol logging on the
 
 1.  In the Shell, run the following command:
     
+    ```powershell
         Get-MailboxTransportService <ServerIdentity> | Format-List MailboxDeliveryConnectorProtocolLoggingLevel
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -157,7 +165,9 @@ To verify that you have successfully enabled or disabled protocol logging on the
 
 To configure the protocol log settings, run the following command:
 
+```powershell
     <Set-TransportService | Set-MailboxTransportService | Set-FrontEndTransportService> <ServerIdentity> -ReceiveProtocolLogPath <LocalFilePath> -SendProtocolLogPath <LocalFilePath> -ReceiveProtocolLogMaxFileSize <Size> -SendProtocolLogMaxFileSize <Size> -ReceiveProtocolLogMaxDirectorySize <Size> -SendProtocolLogMaxDirectorySize <Size> -ReceiveProtocolLogMaxAge <dd.hh:mm:ss> -SendProtocolLogMaxAge <dd.hh:mm:ss>
+```
 
 This example sets the following protocol log settings in the Transport service on the Mailbox server named Mailbox01:
 
@@ -171,8 +181,9 @@ This example sets the following protocol log settings in the Transport service o
 
 <!-- end list -->
 
+```powershell
     Set-TransportService Mailbox01 -ReceiveProtocolLogPath "D:\Hub Receive SMTP Log" -SendProtocolLogPath "D:\Hub Send SMTP Log" -ReceiveProtocolLogMaxFileSize 20MB -SendProtocolLogMaxFileSize 20MB -ReceiveProtocolLogMaxDirectorySize 400MB -SendProtocolLogMaxDirectorySize 400MB -ReceiveProtocolLogMaxAge 45.00:00:00 -SendProtocolLogMaxAge 45.00:00:00
-
+```
 
 > [!NOTE]
 > <UL>
@@ -191,7 +202,9 @@ To verify that you have successfully configured the protocol log settings, do th
 
 1.  In the Shell, run the following command:
     
+    ```powershell
         <Get-TransportService | Get-MailboxTransportService | Get-FrontEndTransportService> <ServerIdentity> | Format-List SendConnectorProtocolLog*,ReceiveConnectorProtocolLog*
-
+    ```
+    
 2.  Verify the values displayed are the values you configured.
 

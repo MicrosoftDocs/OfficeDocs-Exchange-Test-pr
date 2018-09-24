@@ -72,8 +72,8 @@ To verify that you have successfully configured the external postmaster address,
 1.  Run the following command on a Mailbox server to verify the external postmaster address value:
     
     ```powershell
-Get-TransportConfig | Format-List ExternalPostmasterAddress
-```
+    Get-TransportConfig | Format-List ExternalPostmasterAddress
+    ```
 
 2.  From an external email account, send a message to your Exchange organization that will generate a delivery status notification (DSN). For example, you can configure a transport rule to send a non-delivery report (NDR) for a message from that sender that contains specific keywords. Verify the sender's email address in the DSN matches the value you specified.
 

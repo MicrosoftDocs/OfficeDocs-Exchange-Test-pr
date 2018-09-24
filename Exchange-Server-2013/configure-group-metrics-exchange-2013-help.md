@@ -64,8 +64,8 @@ To verify that you have successfully enabled or disabled group metrics generatio
 1.  Run the following command:
     
     ```powershell
-Get-MailboxServer <ServerIdentity> | Format-List ForceGroupMetricsGeneration
-```
+    Get-MailboxServer <ServerIdentity> | Format-List ForceGroupMetricsGeneration
+    ```
 
 2.  Verify the setting displayed is the setting you configured.
 

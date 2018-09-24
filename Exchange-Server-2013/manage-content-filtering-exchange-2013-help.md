@@ -64,8 +64,8 @@ To verify that you have successfully enabled or disabled content filtering, do t
 1.  Run the following command:
     
     ```powershell
-Get-ContentFilterConfig | Format-List Enabled
-```
+    Get-ContentFilterConfig | Format-List Enabled
+    ```
 
 2.  Verify the value of the *Enabled* property that's displayed.
 
@@ -92,8 +92,8 @@ To verify that you have successfully enabled or disabled content filtering for e
 1.  Run the following command:
     
     ```powershell
-Get-ContentFilterConfig | Format-List ExternalMailEnabled
-```
+    Get-ContentFilterConfig | Format-List ExternalMailEnabled
+    ```
 
 2.  Verify the value of the *ExternalMailEnabled* property that's displayed.
 
@@ -120,8 +120,8 @@ To verify that you have successfully enabled or disabled content filtering for i
 1.  Run the following command:
     
     ```powershell
-Get-ContentFilterConfig | Format-List InternalMailEnabled
-```
+    Get-ContentFilterConfig | Format-List InternalMailEnabled
+    ```
 
 2.  Verify the value of the *InternalMailEnabled* property that's displayed.
 
@@ -129,7 +129,9 @@ Get-ContentFilterConfig | Format-List InternalMailEnabled
 
 To replace the existing values, run the following command:
 
+```powershell
     Set-ContentFilterConfig -BypassedRecipients <recipient1,recipient2...> -BypassedSenders <sender1,sender2...> -BypassedSenderDomains <domain1,domain2...>
+```
 
 This example configures the following exceptions in in content filtering:
 
@@ -141,11 +143,15 @@ This example configures the following exceptions in in content filtering:
 
 <!-- end list -->
 
+```powershell
     Set-ContentFilterConfig -BypassedRecipients laura@contoso.com,julia@contoso.com -BypassedSenders steve@fabrikam.com,cindy@fabrikam.com -BypassedSenderDomains *.nwtraders.com
+```
 
 To add or remove entries without modifying any existing values, run the following command:
 
+```powershell
     Set-ContentFilterConfig -BypassedRecipients @{Add="<recipient1>","<recipient2>"...; Remove="<recipient1>","<recipient2>"...} -BypassedSenders @{Add="<sender1>","<sender2>"...; Remove="<sender1>","<sender2>"...} -BypassedSenderDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
+```
 
 This example configures the following exceptions in content filtering:
 
@@ -159,7 +165,9 @@ This example configures the following exceptions in content filtering:
 
 <!-- end list -->
 
+```powershell
     Set-ContentFilterConfig -BypassedRecipients @{Add="tiffany@contoso.com","chris@contoso.com"} -BypassedSenders @{Add="joe@fabrikam.com","michelle@fabrikam.com"} -BypassedSenderDomains @{Add="blueyonderairlines.com"; Remove="*.woodgrovebank.com"}
+```
 
 ## How do you know this worked?
 
@@ -167,7 +175,9 @@ To verify that you have successfully configured the recipient and sender excepti
 
 1.  Run the following command:
     
+    ```powershell
         Get-ContentFilterConfig | Format-List Bypassed*
+    ```
 
 2.  Verify the values displayed match the settings you specified.
 
@@ -175,7 +185,9 @@ To verify that you have successfully configured the recipient and sender excepti
 
 To add allowed and blocked words and phrases, run the following command:
 
-    Add-ContentFilterPhrase -Influence GoodWord -Phrase <Phrase> -Influence BadWord -Phrase <Phrase>
+```powershell
+Add-ContentFilterPhrase -Influence GoodWord -Phrase <Phrase> -Influence BadWord -Phrase <Phrase>
+```
 
 This example allows all messages that contain the phrase "customer feedback".
 
@@ -208,8 +220,8 @@ To verify that you have successfully configured the allowed and block phrases, d
 1.  Run the following command:
     
     ```powershell
-Get-ContentFilterPhrase | Format-List Influence,Phrase
-```
+    Get-ContentFilterPhrase | Format-List Influence,Phrase
+    ```
 
 2.  Verify the values displayed match the settings you specified.
 
@@ -217,8 +229,9 @@ Get-ContentFilterPhrase | Format-List Influence,Phrase
 
 To configure the spam confidence level (SCL) thresholds and actions, run the following command:
 
+```powershell
     Set-ContentFilterConfig -SCLDeleteEnabled <$true | $false> -SCLDeleteThreshold <Value> -SCLRejectEnabled <$true | $false> -SCLRejectThreshold <Value> -SCLQuarantineEnabled <$true | $false> -SCLQuarantineThreshold <Value>
-
+```
 
 > [!NOTE]
 > The Delete action takes precedence over the Reject action, and the Reject action takes precedence over the Quarantine action. Therefore, the SCL threshold for the Delete action should be greater than the SCL threshold for the Reject action, which in turn should be greater than the SCL threshold for the Quarantine action. Only the Reject action is enabled by default, and it has the SCL threshold value 7.
@@ -235,7 +248,9 @@ This example configures the following values for the SCL thresholds:
 
 <!-- end list -->
 
+```powershell
     Set-ContentFilterConfig -SCLDeleteEnabled $true -SCLDeleteThreshold 9 -SCLRejectEnabled $true -SCLRejectThreshold 8 -SCLQuarantineEnabled $true -SCLQuarantineThreshold 7
+```
 
 ## How do you know this worked?
 
@@ -243,7 +258,9 @@ To verify that you have successfully configured the SCL thresholds, do the follo
 
 1.  Run the following command:
     
+    ```powershell
         Get-ContentFilterConfig | Format-List SCL*
+    ```
 
 2.  Verify the values displayed match the settings you specified.
 
@@ -259,7 +276,9 @@ Set-ContentFilterConfig -RejectionResponse "<Custom Text>"
 
 This example configures the Content Filter agent to send a customized rejection response.
 
+```powershell
     Set-ContentFilterConfig -RejectionResponse "Your message was rejected because it appears to be SPAM."
+```
 
 ## How do you know this worked?
 
@@ -267,7 +286,9 @@ To verify that you have successfully configured the rejection response, do the f
 
 1.  Run the following command:
     
+    ```powershell
         Get-ContentFilterConfig | Format-List *Reject*
+    ```
 
 2.  Verify the values displayed match the settings you specified.
 
@@ -294,8 +315,8 @@ To verify that you have successfully configured Outlook Email Postmarking, do th
 1.  Run the following command:
     
     ```powershell
-Get-ContentFilterConfig | Format-List OutlookEmailPostmarkValidationEnabled
-```
+    Get-ContentFilterConfig | Format-List OutlookEmailPostmarkValidationEnabled
+    ```
 
 2.  Verify the value displayed matches the setting you specified.
 

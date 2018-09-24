@@ -65,7 +65,9 @@ If a distribution group has been created and configured as a super users group i
     
     This example adds the Federation mailbox to the ADRMSSuperUsers distribution group.
     
+    ```powershell
         Add-DistributionGroupMember ADRMSSuperUsers -Member FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042
+    ```
 
 For detailed syntax and parameter information, see [Add-DistributionGroupMember](https://technet.microsoft.com/en-us/library/bb124340\(v=exchg.150\)).
 
@@ -99,8 +101,9 @@ After you have used AD RMS to set up a super users group, you can use the follow
     > [!IMPORTANT]
     > The ADRMSAdmin PowerShell module is available in Windows Server 2008 R2 and later.
 
-    
+    ```powershell
         Import-Module ADRMSAdmin
         New-PSDrive -Name MyRmsAdmin -PsProvider AdRmsAdmin -Root https://localhost 
         Get-ItemProperty -Path MyRmsAdmin:\SecurityPolicy\SuperUser
+    ```
 

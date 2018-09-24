@@ -47,7 +47,9 @@ Interested in scenarios where this procedure is used? See the following topics:
 
 1.  Run the following command to create the Foreign connector:
     
+    ```powershell
         New-ForeignConnector -Name "Contoso Foreign Connector" -AddressSpaces "X400:c=US;a=Fabrikam;P=Contoso;5" -SourceTransportServers Hub01,Hub02
+    ```
     
     In this example, Hub01 and Hub02 are source servers in your organization that you designate to deliver messages to the foreign system. Using more than one source server provides fault tolerance.
 
@@ -72,8 +74,8 @@ You create a directory to use as the Drop directory on your local file system. Y
 1.  Run the following script to specify the Drop directory for your Foreign connector (change the value for the *DropDirectory* parameter to a path appropriate for your environment):
     
     ```powershell
-Set-ForeignConnector "Contoso Foreign Connector" -DropDirectory "C:\Drop Directory"
-```
+    Set-ForeignConnector "Contoso Foreign Connector" -DropDirectory "C:\Drop Directory"
+    ```
 
 ## How do you know this step worked?
 

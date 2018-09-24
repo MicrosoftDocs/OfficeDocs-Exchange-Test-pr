@@ -93,7 +93,9 @@ Complete the steps in [Configure federated sharing](configure-federated-sharing-
         
         To configure the availability address space, on the Exchange 2010 Client Access server in the Exchange 2007 organization, run the following command in the Exchange Management Shell:
         
+        ```powershell
             Add-AvailabilityAddressSpace -AccessMethod InternalProxy -ProxyUrl https://<Exchange 2010 CAS server name>/ews/exchange.asmx -ForestName <SMTP domain of the remote Exchange organization> -UseServiceAccount $True
+        ```
         
         For detailed syntax and parameter information, see [Add-AvailabilityAddressSpace](https://go.microsoft.com/fwlink/p/?linkid=268413)
 

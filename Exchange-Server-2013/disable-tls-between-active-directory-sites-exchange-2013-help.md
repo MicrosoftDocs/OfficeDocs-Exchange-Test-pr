@@ -77,7 +77,9 @@ Set-TransportService Mailbox01 -UseDowngradedExchangeServerAuth $true
 
 To create a Receive connector on the Mailbox server, run the following command:
 
+```powershell
     New-ReceiveConnector -Name <Name> -Server <ServerIdentity> -RemoteIPRanges <IPAddressRange> -Internal
+```
 
 This example creates the Receive connector named WAN on server named Mailbox01 with the following settings:
 

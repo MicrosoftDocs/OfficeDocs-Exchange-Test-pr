@@ -64,8 +64,8 @@ To verify that you have successfully enabled or disabled Sender ID, do the follo
 1.  Run the following command:
     
     ```powershell
-Get-SenderIDConfig | Format-List Enabled
-```
+    Get-SenderIDConfig | Format-List Enabled
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -90,8 +90,8 @@ To verify that you have successfully configured the Sender ID action for spoofed
 1.  Run the following command:
     
     ```powershell
-Get-SenderIDConfig | Format-List SpoofedDomainAction
-```
+    Get-SenderIDConfig | Format-List SpoofedDomainAction
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -118,8 +118,8 @@ To verify that you have successfully configured the Sender ID action for transie
 1.  Run the following command:
     
     ```powershell
-Get-SenderIDConfig | Format-List TempErrorAction
-```
+    Get-SenderIDConfig | Format-List TempErrorAction
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -127,15 +127,21 @@ Get-SenderIDConfig | Format-List TempErrorAction
 
 To replace the existing values, run the following command:
 
+```powershell
     Set-SenderIDConfig -BypassedRecipients <recipient1,recipient2...> -BypassedSenderDomains <domain1,domain2...>
+```
 
 This example configures the Sender ID agent to bypass the Sender ID check for messages sent to kim@contoso.com and john@contoso.com, and to bypass the Sender ID check for messages sent from the fabrikam.com domain.
 
+```powershell
     Set-SenderIDConfig -BypassedRecipients kim@contoso.com,john@contoso.com -BypassedSenderDomains fabrikam.com
+```
 
 To add or remove entries without modifying any existing values, run the following command:
 
+```powershell
     Set-SenderIDConfig -BypassedRecipients @{Add="<recipient1>","<recipient2>"...; Remove="<recipient1>","<recipient2>"...} -BypassedSenderDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
+```
 
 This example configures the Sender ID agent with the following information:
 
@@ -145,7 +151,9 @@ This example configures the Sender ID agent with the following information:
 
 <!-- end list -->
 
+```powershell
     Set-SenderIDConfig -BypassedRecipients @{Add="chris@contoso.com","michelle@contoso.com"} -BypassedSenderDomains @{Remove="tailspintoys.com"}
+```
 
 ## How do you know this worked?
 
@@ -154,8 +162,8 @@ To verify that you have successfully configured recipient and sender domain exce
 1.  Run the following command:
     
     ```powershell
-Get-SenderIDConfig | Format-List BypassedRecipients,BypassedSenderDomains
-```
+    Get-SenderIDConfig | Format-List BypassedRecipients,BypassedSenderDomains
+    ```
 
 2.  Verify the values displayed are the values you configured.
 

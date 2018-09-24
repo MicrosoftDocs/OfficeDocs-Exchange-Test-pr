@@ -58,8 +58,8 @@ To verify that you have successfully created a database, do the following:
   - From the Shell, verify that the database was created on server Mailbox01 by running the following command.
     
     ```powershell
-Get-MailboxDatabase -Server "Mailbox01"
-```
+    Get-MailboxDatabase -Server "Mailbox01"
+    ```
 
 ## Get mailbox database properties
 
@@ -150,8 +150,8 @@ To verify that you have successfully set the attributes, do the following:
   - From the Shell, run the following command to retrieve mailbox database properties.
     
     ```powershell
-Get-MailboxDatabase -Identity MailboxDatabase01 -Status | Format-List
-```
+    Get-MailboxDatabase -Identity MailboxDatabase01 -Status | Format-List
+    ```
 
 ## Move a mailbox database path
 
@@ -184,8 +184,8 @@ To verify that you have successfully mounted the mailbox database, do the follow
   - From the Shell, run the following command to retrieve mailbox database properties for all mailbox databases.
     
     ```powershell
-Get-MailboxDatabase -IncludePreExchange2013
-```
+    Get-MailboxDatabase -IncludePreExchange2013
+    ```
 
 ## Dismount a mailbox database
 
@@ -218,8 +218,8 @@ For detailed syntax and parameter information, see [Remove-MailboxDatabase](http
 1.  Run the following command to remove the mailbox database MyDatabase.
     
     ```powershell
-Remove-MailboxDatabase -Identity "MyDatabase"
-```
+    Remove-MailboxDatabase -Identity "MyDatabase"
+    ```
 
 2.  When you’re prompted about whether you're sure that you want to perform the action, type **Y**.
 

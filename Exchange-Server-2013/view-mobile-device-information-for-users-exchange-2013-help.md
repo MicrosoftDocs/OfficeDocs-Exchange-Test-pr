@@ -50,6 +50,6 @@ You can use the **Get-MobileDevice** cmdlet to view a list of mobile devices for
 1.  Run the following command.
     
     ```powershell
-Get-MobileDevice -Mailbox useralias
-```
+    Get-MobileDevice -Mailbox useralias
+    ```
 

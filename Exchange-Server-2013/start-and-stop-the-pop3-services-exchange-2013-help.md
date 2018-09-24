@@ -58,28 +58,28 @@ To start the POP3 services:
 1.  On the computer running the Client Access server role, from the Shell, run the following command to start the Microsoft Exchange POP3 service.
     
     ```powershell
-Start-service MSExchangePOP3
-```
+    Start-service MSExchangePOP3
+    ```
 
 2.  On the computer running the Mailbox server role, from the Shell, run the following command to start the Microsoft Exchange POP3 Backend service.
     
     ```powershell
-Start-service MSExchangePOP3BE
-```
+    Start-service MSExchangePOP3BE
+    ```
 
 To stop the POP3 services:
 
 1.  On the computer running the Client Access server role, from the Shell, run the following command to stop the Microsoft Exchange POP3 service.
     
     ```powershell
-Stop-service MSExchangePOP3
-```
+    Stop-service MSExchangePOP3
+    ```
 
 2.  On the computer running the Mailbox server role, from the Shell, run the following command to stop the Microsoft Exchange POP3 Backend service.
     
     ```powershell
-Stop-service MSExchangePOP3BE
-```
+    Stop-service MSExchangePOP3BE
+    ```
 
 ## Use net start to start or stop the POP3 services
 
@@ -88,28 +88,28 @@ To start the POP3 services:
 1.  On the computer running the Client Access server role, at the command prompt, run the following command to start the Microsoft Exchange POP3 service.
     
     ```powershell
-Net Start msExchangePOP3
-```
+    Net Start msExchangePOP3
+    ```
 
 2.  On the computer running the Mailbox server role, at the command prompt, run the following command to start the Microsoft Exchange POP3 Backend service.
     
     ```powershell
-Net Start msExchangePOP3BE
-```
+    Net Start msExchangePOP3BE
+    ```
 
 To stop the POP3 services:
 
 1.  On the computer running the Client Access server role, at the command prompt, run the following command to stop the Microsoft Exchange POP3 service.
     
     ```powershell
-Net Stop MSExchangePOP3
-```
+    Net Stop MSExchangePOP3
+    ```
 
 2.  On the computer running the Mailbox server role, at the command prompt, run the following command to stop the Microsoft Exchange POP3 Backend service.
     
     ```powershell
-Net Stop MSExchangePOP3BE
-```
+    Net Stop MSExchangePOP3BE
+    ```
 
 ## How do you know this worked?
 

@@ -515,11 +515,15 @@ You can specify a filter that evaluates multiple expressions by using the **-and
 
 This example displays a list of queues that have a destination to any SMTP domain name that ends in Contoso.com and that currently contain more than 500 messages.
 
+```powershell
     Get-Queue -Filter {Identity -like "*contoso.com*" -and MessageCount -gt 500}
+```
 
 This example displays a list of messages that are sent from any email address in the contoso.com domain that have an SCL that's greater than 5.
 
+```powershell
     Get-Message -Filter {FromAddress -like "*Contoso.com*" -and SCL -gt 5}
+```
 
 Return to top
 
@@ -594,15 +598,20 @@ The following example uses scripting to retrieve the first page of results, sets
 
 1.  Open the Shell and type the following command to retrieve the first page of results.
     
+    ```powershell
         $Results=Get-message -Server mailbox01.contoso.com -ResultSize 500 -SortOrder +FromAddress,-Size
-
+    ```
+    
 2.  To set the bookmark object, type the following command to save the last element of the first page to a variable.
     
+    ```powershell
         $temp=$results[$results.length-1]
-
+    ```
+    
 3.  To retrieve the next 500 objects on the specified server and to exclude the bookmark object, type the following command.
     
+    ```powershell
         Get-message -Server mailbox01.contoso.com -BookmarkObject:$temp -IncludeBookmark $False -ResultSize 500 -SortOrder +FromAddress,-Size
-
+    ```
 Return to top
 

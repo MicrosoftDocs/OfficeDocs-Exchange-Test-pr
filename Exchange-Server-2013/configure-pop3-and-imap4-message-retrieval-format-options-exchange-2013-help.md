@@ -129,8 +129,8 @@ Do the following to verify that you’ve successfully set POP3 message retrieval
 1.  Run the following command in the Shell.
     
     ```powershell
-Get-PopSettings | format-list
-```
+    Get-PopSettings | format-list
+    ```
 
 2.  Verify the *MessageRetrievalMimeFormat* setting is correct.
 
@@ -228,8 +228,8 @@ Do the following to verify that you’ve successfully set IMAP4 message retrieva
 1.  Run the following command in the Shell.
     
     ```powershell
-Get-ImapSettings | format-list
-```
+    Get-ImapSettings | format-list
+    ```
 
 2.  Verify the *MessageRetrievalMimeFormat* setting is correct.
 
@@ -299,8 +299,8 @@ Do the following to verify that you’ve successfully set POP3 message retrieval
 1.  Run the following command in the Shell.
     
     ```powershell
-Get-CAS Mailbox <identity> | format-list
-```
+    Get-CAS Mailbox <identity> | format-list
+    ```
 
 2.  Verify the value for *PopMessagesRetrievalMimeFormat* is correct.
 
@@ -370,8 +370,8 @@ Do the following to verify that you’ve successfully set IMAP4 message retrieva
 1.  Run the following command in the Shell.
     
     ```powershell
-Get-CAS Mailbox <identity> | format-list
-```
+    Get-CAS Mailbox <identity> | format-list
+    ```
 
 2.  Verify the value for *ImapMessagesRetrievalMimeFormat* is correct.
 

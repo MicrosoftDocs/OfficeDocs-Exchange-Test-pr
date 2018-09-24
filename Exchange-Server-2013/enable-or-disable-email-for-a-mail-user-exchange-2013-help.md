@@ -80,16 +80,16 @@ To verify that you've successfully disabled email for a mail user, do one of the
 3.  In the Shell, run the following command.
     
     ```powershell
-Get-MailUser
-```
+    Get-MailUser
+    ```
     
     The mail user that you disabled email for won't be returned in the results because this cmdlet only returns mail-enabled users.
 
 4.  In the Shell, run the following command.
     
     ```powershell
-Get-User
-```
+    Get-User
+    ```
     
     The mail user that you disabled email for is returned in the results because this cmdlet returns all Active Directory user objects.
 
@@ -111,10 +111,13 @@ When you’re mail-enabling users in bulk, you first export the list of users th
 
 1.  Run the following command to export a list of existing users that aren't mail-enabled or don't have a mailbox in your organization to a file on the administrator's desktop named UsersToMailEnable.csv.
     
+    ```powershell
         Get-User | Where { $_.RecipientType -eq "User" } | Out-File "C:\Users\Administrator\Desktop\UsersToMailEnable.csv"
-    
+    ```
+
     The resulting file will be similar to the following file.
     
+    ```powershell
         Name            RecipientType
         ----            -------------
         Guest           User
@@ -127,6 +130,7 @@ When you’re mail-enabling users in bulk, you first export the list of users th
         Spencer Low     User
         Toni Poe        User
         ...
+    ```
 
 2.  Make the following changes to the CSV file:
     
@@ -138,6 +142,7 @@ When you’re mail-enabling users in bulk, you first export the list of users th
     
     The updated CSV file should look similar to the following file.
     
+    ```powershell
         Name,EmailAddress
         David Pelton,davidp@contoso.com
         Kim Akers,kakers@tailspintoys.com
@@ -146,11 +151,14 @@ When you’re mail-enabling users in bulk, you first export the list of users th
         Spencer Low,spencerl@fouthcoffee.com
         Toni Poe,tonip@contoso.com
         ...
+    ```
 
 3.  Run the following command to use the data in the CSV file to mail-enable the users listed in the file.
     
+    ```powershell
         Import-CSV "C:\Users\Administrator\Desktop\UsersToMailEnable.csv" | ForEach-Object {Enable-MailUser -Identity $_.Name -ExternalEmailAddress $_.EmailAddress}
-    
+    ```
+
     The command results display information about the new mail-enabled users.
 
 ## How do you know this worked?
@@ -168,6 +176,6 @@ To verify that you’ve successfully mail-enabled Active Directory users, do one
   - In the Shell, run the following command to display information about new mail users.
     
     ```powershell
-Get-MailUser | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
-```
+    Get-MailUser | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+    ```
 

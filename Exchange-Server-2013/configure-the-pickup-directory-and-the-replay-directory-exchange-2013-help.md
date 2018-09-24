@@ -43,7 +43,9 @@ The Pickup and replay directories are used by the Transport service on Mailbox s
 
 To configure the Pickup directory, use the following syntax.
 
+```powershell
     Set-TransportService <ServerIdentity> -PickupDirectoryPath <LocalFilePath> -PickupDirectoryMaxHeaderSize <Size> -PickupDirectoryMaxRecipientsPerMessage <Integer> -PickupDirectoryMaxMessagesPerMinute <Integer>
+```
 
 This example makes the following changes to the Pickup directory on the Mailbox server named Exchange01:
 
@@ -56,8 +58,9 @@ This example makes the following changes to the Pickup directory on the Mailbox 
   - The maximum rate of message processing for the Pickup and Replay directories is increased to 200 messages per minute.
 
 <!-- end list -->
-
+```powershell
     Set-TransportService Exchange01 -PickupDirectoryPath "D:\Pickup Directory" -PickupDirectoryMaxHeaderSize 96KB -PickupDirectoryMaxRecipientsPerMessage 250 -PickupDirectoryMaxMessagesPerMinute 200
+```
 
 
 > [!NOTE]
@@ -72,8 +75,9 @@ This example makes the following changes to the Pickup directory on the Mailbox 
 ## Use the Shell to configure the Replay directory
 
 To configure the Replay directory, use the following syntax.
-
+```powershell
     Set-TransportService <ServerIdentity> -ReplayDirectoryPath "C:\Replay Directory" <LocalFilePath> -PickupDirectoryMaxMessagesPerMinute <Integer>
+```
 
 This example makes the following changes to the Replay directory on the Mailbox server named Exchange01:
 
@@ -82,9 +86,9 @@ This example makes the following changes to the Replay directory on the Mailbox 
   - The maximum rate of message processing for the Pickup and Replay directories is increased to 200 messages per minute.
 
 <!-- end list -->
-
+```powershell
     Set-TransportService Exchange01 -ReplayDirectoryPath "D:\Replay Directory" -PickupDirectoryMaxMessagesPerMinute 200
-
+```
 
 > [!NOTE]
 > <UL>
@@ -101,7 +105,9 @@ To verify that you have successfully configured the Pickup and Replay directorie
 
 1.  Run the following command:
     
+    ```powershell
         Get-TransportService <ServerIdentity> | Format-List Pickup*,Replay*
-
+    ```
+    
 2.  Verify the values displayed are the values you configured.
 

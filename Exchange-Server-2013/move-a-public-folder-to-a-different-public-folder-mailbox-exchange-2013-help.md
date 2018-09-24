@@ -51,8 +51,9 @@ For additional management tasks related to public folders see [Public folder pro
 
 This example starts the move request for the public folder \\CustomerEnagagements from the public folder mailbox DeveloperReports to DeveloperReports01
 
+```powershell
     New-PublicFolderMoveRequest -Folders \DeveloperReports\CustomerEngagements -TargetMailbox DeveloperReports01
-
+```
 
 > [!NOTE]
 > The target public folder mailbox will be locked while the move request is active.
@@ -65,7 +66,9 @@ For detailed syntax and parameter information, see [New-PublicFolderMoveRequest]
 
 This example begins the move request for public folders under the \\Dev public folder branch to the target public folder mailbox DeveloperReports01. This example doesn’t move the public folder \\Dev.
 
+```powershell
     New-PublicFolderMoveRequest -Folders \Dev\CustomerEngagements,\Dev\RequestsforChange,\Dev\Usability -TargetMailbox DeveloperReports01
+```
 
 
 > [!NOTE]
@@ -79,9 +82,12 @@ For detailed syntax and parameter information, see [New-PublicFolderMoveRequest]
 
 This example uses the `Move-PublicFolderBranch.ps1` script to move a branch of public folders. This starts the move request for the public folder \\Dev and all its subfolders to the public folder mailbox DeveloperReports01. The script is located in the scripts folder and must be run from that location.
 
+```powershell
     CD $env:ExchangeInstallPath\scripts
-    
+```
+```powershell
     .\Move-PublicFolderBranch.ps1 -FolderRoot \Dev -TargetPublicFolderMailbox DeveloperReports01
+```
 
 ## How do you know this worked?
 

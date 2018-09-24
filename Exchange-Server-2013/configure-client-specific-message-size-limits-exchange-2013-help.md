@@ -233,26 +233,32 @@ For all message size limits, you need to set values that are larger than the act
 
 1.  Open the appropriate web.config files in Notepad. For example, to open the web.config files for Exchange Web Services clients, run the following commands:
     
+    ```powershell
         Notepad %ExchangeInstallPath%ClientAccess\exchweb\ews\web.config
         Notepad %ExchangeInstallPath%FrontEnd\HttpProxy\ews\web.config
+    ```
 
 2.  Find the relevant keys in the appropriate web.config files as described in the tables earlier in the topic. For example, for Exchange Web Services clients, find the *maxAllowedContentLength* key in both files and all 14 instances of the value `maxReceivedMessageSize="67108864"` in the `web.config` file on Mailbox servers.
     
+    ```powershell
         <requestLimits maxAllowedContentLength="67108864" />
         ...maxReceivedMessageSize="67108864"...
-    
+    ```
+
     For example, to allow a Base64 encoded maximum message size of approximately 64 MB, change all instances of `67108864` to `89478486` (64\*4/3\*1048756):
     
+    ```powershell
         <requestLimits maxAllowedContentLength="89478486" />
         ...maxReceivedMessageSize="89478486"...
+    ```
 
 3.  When you are finished, save and close the web.config files.
 
 4.  Restart IIS by running the following command:
     
     ```powershell
-IISReset /noforce
-```
+    IISReset /noforce
+    ```
 
 ## Configure client-specific message size limits from the command line
 
@@ -266,14 +272,17 @@ Instead of using Notepad, you can also configure the client-specific message siz
 
 **ActiveSync**
 
+```powershell
     %windir%\system32\inetsrv\appcmd.exe set config "Default Web Site/Microsoft-Server-ActiveSync/" -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:30000000
     %windir%\system32\inetsrv\appcmd.exe set config "Default Web Site/Microsoft-Server-ActiveSync/" -section:system.web/httpRuntime /maxRequestLength:10240
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/Microsoft-Server-ActiveSync/" -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:30000000
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/Microsoft-Server-ActiveSync/" -section:system.web/httpRuntime /maxRequestLength:10240
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/Microsoft-Server-ActiveSync/" -section:appSettings /[key='MaxDocumentDataSize'].value:10240000
+```
 
 **Exchange Web Services**
 
+```powershell
     %windir%\system32\inetsrv\appcmd.exe set config "Default Web Site/ews/" -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:67108864
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/ews/" -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:67108864
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/ews/" -section:system.serviceModel/bindings /customBinding.[name='EWSAnonymousHttpsBinding'].httpsTransport.maxReceivedMessageSize:67108864
@@ -290,9 +299,11 @@ Instead of using Notepad, you can also configure the client-specific message siz
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/ews/" -section:system.serviceModel/bindings /customBinding.[name='EWSWSSecurityX509CertHttpBinding'].httpTransport.maxReceivedMessageSize:67108864
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/ews/" -section:system.serviceModel/bindings /webHttpBinding.[name='EWSStreamingNegotiateHttpsBinding'].maxReceivedMessageSize:67108864
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/ews/" -section:system.serviceModel/bindings /webHttpBinding.[name='EWSStreamingNegotiateHttpBinding'].maxReceivedMessageSize:67108864
+```
 
 **Outlook Web App**
 
+```powershell
     %windir%\system32\inetsrv\appcmd.exe set config "Default Web Site/owa/" -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:35000000
     %windir%\system32\inetsrv\appcmd.exe set config "Default Web Site/owa/" -section:system.web/httpRuntime /maxRequestLength:35000
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/owa/" -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:35000000
@@ -301,6 +312,7 @@ Instead of using Notepad, you can also configure the client-specific message siz
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/owa/" -section:system.serviceModel/bindings /webHttpBinding.[name='httpBinding'].maxReceivedMessageSize:35000000
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/owa/" -section:system.serviceModel/bindings /webHttpBinding.[name='httpsBinding'].readerQuotas.maxStringContentLength:35000000
     %windir%\system32\inetsrv\appcmd.exe set config "Exchange Back End/owa/" -section:system.serviceModel/bindings /webHttpBinding.[name='httpBinding'].readerQuotas.maxStringContentLength:35000000
+```
 
 ## How do you know this worked?
 

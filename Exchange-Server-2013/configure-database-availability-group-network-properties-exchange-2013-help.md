@@ -64,8 +64,8 @@ To verify that you've successfully configured the DAG network, do the following:
   - In the Shell, run the following command to display DAG network configuration settings and verify the DAG network was configured successfully.
     
     ```powershell
-Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
-```
+    Get-DatabaseAvailabilityGroupNetwork <DAGNetworkName> | Format-List
+    ```
 
 ## For more information
 

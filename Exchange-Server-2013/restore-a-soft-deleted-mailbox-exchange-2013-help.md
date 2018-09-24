@@ -39,13 +39,17 @@ To learn more about soft-deleted mailboxes and perform other related management 
 
   - Run the following command to verify that the soft-deleted mailbox that you want to connect a user account still exists in the mailbox database and is not a disabled mailbox.
     
+    ```powershell
         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,DisconnectReason,DisconnectDate
-    
+    ```
+
     The soft-deleted mailbox has to exist in the mailbox database and the value for the *DisconnectReason* property has to be `SoftDeleted`. If the mailbox has been purged from the database, the command won’t return any results.
     
     Alternatively, run the following command to display all soft-deleted mailboxes in your organization.
     
+    ```powershell
         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -eq "SoftDeleted" } | fl DisplayName,DisconnectReason,DisconnectDate
+    ```
 
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
@@ -59,15 +63,21 @@ After a soft-deleted mailbox is restored, the mailbox is retained in the mailbox
 
 To create a mailbox restore request, you have to use the display name, mailbox GUID, or legacy distinguished name (DN) of the soft-deleted mailbox. Use the **Get-MailboxStatistics** cmdlet to display the values of the **DisplayName**, **MailboxGuid**, and **LegacyDN** properties for the soft-deleted mailbox that you want to restore. For example, run the following command to return this information for all disabled and soft-deleted mailboxes in your organization.
 
+```powershell
     Get-MailboxDatabase | Get-MailboxStatistics | Where {$_.DisconnectReason -eq "SoftDeleted"} | fl DisplayName,MailboxGuid,LegacyDN,Database
+```
 
 This example restores a soft-deleted mailbox, which is identified by the display name in the *SourceStoreMailbox* parameter and is located on the MBXDB01 mailbox database, to the target mailbox named Debra Garcia. The *AllowLegacyDNMismatch* parameter is used so the source mailbox can be restored to a mailbox that doesn't have the same legacy DN value as the soft-deleted mailbox.
 
+```powershell
     New-MailboxRestoreRequest -SourceStoreMailbox "Debra Garcia" -SourceDatabase MBXDB01 -TargetMailbox "Debra Garcia" -AllowLegacyDNMismatch
+```
 
 This example restores Pilar Pinilla’s soft-deleted archive mailbox, which is identified by the mailbox GUID, to her current archive mailbox. The *AllowLegacyDNMismatch* parameter isn’t necessary because a primary mailbox and its corresponding archive mailbox have the same legacy DN.
 
+```powershell
     New-MailboxRestoreRequest -SourceStoreMailbox dc35895a-a628-4bba-9aa9-650f5cdb9ae7 -SourceDatabase MBXDB02 -TargetMailbox pilarp@contoso.com -TargetIsArchive
+```
 
 For detailed syntax and parameter information, see [New-MailboxRestoreRequest](https://technet.microsoft.com/en-us/library/ff829875\(v=exchg.150\)).
 

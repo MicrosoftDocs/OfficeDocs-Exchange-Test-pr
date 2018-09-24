@@ -79,9 +79,10 @@ To configure shared permissions on the Organization Management role group, do th
 
 1.  Add delegating role assignments for the Mail Recipient Creation role and Security Group Creation and Membership role to the Organization Management role group using the following commands.
     
+    ```powershell
         New-ManagementRoleAssignment -Role "Mail Recipient Creation" -SecurityGroup "Organization Management" -Delegating
         New-ManagementRoleAssignment -Role "Security Group Creation and Membership" -SecurityGroup "Organization Management" -Delegating
-    
+    ```
 
     > [!NOTE]
     > The role group (in this procedure, the Active Directory Administrators role group) that has delegating role assignments for the Mail Recipient Creation role and Security Group Creation and Membership role must be assigned the Role Management role to run the <STRONG>New-ManagementRoleAssignment</STRONG> cmdlet. The role assignee that can delegate the Role Management role must assign that role to the Active Directory Administrators role group.
@@ -90,12 +91,16 @@ To configure shared permissions on the Organization Management role group, do th
 
 2.  Add regular role assignments for the Mail Recipient Creation role to the Organization Management and Recipient Management role groups using the following commands.
     
+    ```powershell
         New-ManagementRoleAssignment -Role "Mail Recipient Creation" -SecurityGroup "Organization Management"
         New-ManagementRoleAssignment -Role "Security Group Creation and Membership" -SecurityGroup "Recipient Management"
+    ```
 
 3.  Add a regular role assignment for the Security Group Creation and Membership role to the Organization Management role group using the following command.
     
+    ```powershell
         New-ManagementRoleAssignment -Role "Security Group Creation and Membership" -SecurityGroup "Organization Management"
+    ```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -112,13 +117,17 @@ You can optionally remove the permissions granted to Active Directory administra
 To remove Exchange-related split permissions from Active Directory administrators, do the following:
 
 1.  Remove the regular and delegating role assignments that assign the Mail Recipient Creation role to the role group or universal security group (USG) that contains the Active Directory administrators as members using the following command. This command uses the Active Directory Administrators role group as an example. The *WhatIf* switch lets you see what role assignments will be removed. Remove the *WhatIf* switch, and run the command again to remove the role assignments.
-    
+
+    ```powershell
         Get-ManagementRoleAssignment -Role "Mail Recipient Creation" | Where { $_.RoleAssigneeName -EQ "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
-
-2.  Remove the regular and delegating role assignments that assign the Security Group Creation and Membership role to the role group or USG that contains the Active Directory administrators as members using the following command. This command uses the Active Directory Administrators role group as an example. The *WhatIf* switch lets you see what role assignments will be removed. Remove the *WhatIf* switch, and run the command again to remove the role assignments.
+    ```
     
-        Get-ManagementRoleAssignment -Role "Security Group Creation and Membership" | Where { $_.RoleAssigneeName -EQ "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
+2.  Remove the regular and delegating role assignments that assign the Security Group Creation and Membership role to the role group or USG that contains the Active Directory administrators as members using the following command. This command uses the Active Directory Administrators role group as an example. The *WhatIf* switch lets you see what role assignments will be removed. Remove the *WhatIf* switch, and run the command again to remove the role assignments.
 
+    ```powershell
+        Get-ManagementRoleAssignment -Role "Security Group Creation and Membership" | Where { $_.RoleAssigneeName -EQ "Active Directory Administrators" } | Remove-ManagementRoleAssignment -WhatIf
+    ```
+    
 3.  Optional. If you want to remove all Exchange permissions from the Active Directory administrators, you can remove the role group or USG in which they're members. For more information about how to remove a role group, see [Manage role groups](manage-role-groups-exchange-2013-help.md).
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)) or [Remove-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351205\(v=exchg.150\)).
@@ -140,14 +149,16 @@ To switch from Active Directory split permissions to shared permissions, do the 
 1.  From a Windows command shell, run the following command from the Exchange 2013 installation media to disable Active Directory split permissions.
     
     ```powershell
-setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
-```
+        setup.exe /PrepareAD /ActiveDirectorySplitPermissions:false
+    ```
 
 2.  From the Exchange Management Shell, run the following commands to add regular role assignments between the Mail Recipient Creation role and Security Group Creation and Management role and the Organization Management and Recipient Management role groups.
-    
+
+    ```powershell
         New-ManagementRoleAssignment "Mail Recipient Creation_Organization Management" -Role "Mail Recipient Creation" -SecurityGroup "Organization Management"
         New-ManagementRoleAssignment "Security Group Creation and Membership_Org Management" -Role "Security Group Creation and Membership" -SecurityGroup "Organization Management"
         New-ManagementRoleAssignment "Mail Recipient Creation_Recipient Management" -Role "Mail Recipient Creation" -SecurityGroup "Recipient Management"
+    ```
 
 3.  Restart the Exchange 2013 servers in your organization.
     

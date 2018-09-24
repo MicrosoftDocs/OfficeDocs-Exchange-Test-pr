@@ -177,8 +177,9 @@ This example blocks Outlook clients prior to version 12.0.0 from accessing the m
 > The values used with the <EM>BlockedClientVersions</EM> parameter are examples. You can determine the correct client software versions by parsing the RPC Client Access log files located at <CODE>%ExchangeInstallPath%Logging\RPC Client Access</CODE>.
 
 
-
+```powershell
     Set-RpcClientAccess -Server CAS01 -BlockedClientVersions "0.0.0-5.65535.65535;7.0.0;8.02.4-11.65535.65535"
+```
 
 For detailed syntax and parameter definition, see [Set-RpcClientAccess](https://technet.microsoft.com/en-us/library/dd351072\(v=exchg.150\)).
 

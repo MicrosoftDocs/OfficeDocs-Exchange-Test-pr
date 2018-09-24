@@ -98,8 +98,8 @@ To verify that you've successfully activated a mailbox database copy, do one of 
   - In the Shell, run the following command to display status information for a database copy.
     
     ```powershell
-Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
-```
+    Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+    ```
 
 ## For more information
 

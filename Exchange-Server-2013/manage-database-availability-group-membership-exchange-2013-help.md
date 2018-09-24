@@ -86,8 +86,8 @@ To verify that you've successfully managed DAG membership, do one of the followi
   - In the Shell, run the following command to display DAG membership information.
     
     ```powershell
-Get-DatabaseAvailabilityGroup <DAGName> | Format-List Servers
-```
+    Get-DatabaseAvailabilityGroup <DAGName> | Format-List Servers
+    ```
 
 ## For more information
 

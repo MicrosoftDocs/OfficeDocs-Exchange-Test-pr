@@ -81,8 +81,9 @@ For detailed syntax and parameter information, see [Set-Mailbox](https://technet
 
 This example configures a recoverable items warning quota of 12 GB and a recoverable items quota of 15 GB for April Stewart's mailbox.
 
+```powershell
     Set-Mailbox -Identity "April Stewart" -RecoverableItemsWarningQuota 12GB -RecoverableItemsQuota 15GB -UseDatabaseQuotaDefaults $false
-
+```
 
 > [!NOTE]
 > To configure a mailbox to use different recoverable items quotas than the mailbox database in which it resides, you must set the <EM>UseDatabaseQuotaDefaults</EM> parameter to <CODE>$false</CODE>.

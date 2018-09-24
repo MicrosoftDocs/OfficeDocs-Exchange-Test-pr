@@ -104,12 +104,14 @@ You can open the message snapshot files by using Notepad or any text editor.
 
 Each message snapshot file starts with headers that are added to the message contents and list the SMTP event and transport agent that the message snapshot file relates to. These headers start with `X-CreatedBy: MessageSnapshot-Begin injected headers` and end with `X-EndOfInjectedXHeaders: MessageSnapshot-End injected headers`. These headers are replaced in each message snapshot file by each subsequent transport agent and SMTP event. The following is an example of the headers that are added to an email message file:
 
+```powershell
     X-CreatedBy: MessageSnapshot-Begin injected headers
     X-MessageSnapshot-UTC-Time: 2013-01-23T23:20:18.138Z
     X-MessageSnapshot-Record-Id: 21474836486
     X-MessageSnapshot-Source: OnSubmittedMessageX-Sender: michelle@nwtraders.com
     X-Receiver: chris@contoso.com
     X-EndOfInjectedXHeaders: MessageSnapshot-End injected headers
+```
 
 After the message snapshot headers, the file contains the contents of the message including all the original message headers. If a transport agent modifies the contents of the message, the changes appear integrated with the message. As the message is processed by each transport agent, the changes that are made by each agent are applied to the message contents. If a transport agent makes no changes to the message contents, the message snapshot that is created by that agent will be identical to the message snapshot created by the previous transport agent.
 

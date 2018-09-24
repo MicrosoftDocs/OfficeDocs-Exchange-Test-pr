@@ -57,7 +57,9 @@ What happens if you install the available anti-spam agents in the Transport serv
 
 Run the following command:
 
+```powershell
     & $env:ExchangeInstallPath\Scripts\Install-AntiSpamAgents.ps1
+```
 
 ## How do you know this step worked?
 
@@ -98,8 +100,8 @@ To verify that you have successfully specified the IP address of at least one in
 1.  Run the following command:
     
     ```powershell
-Get-TransportConfig | Format-List InternalSMTPServers
-```
+    Get-TransportConfig | Format-List InternalSMTPServers
+    ```
 
 2.  Verify the IP address of at least one valid internal SMTP server is displayed.
 

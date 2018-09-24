@@ -49,7 +49,9 @@ In Microsoft Exchange Server 2013, you can use the Queue Viewer in the Exchange 
 
 To view queues, use the following syntax.
 
+```powershell
     Get-Queue [-Filter <Filter> -Server <ServerIdentity> -Include <Internal | External | Empty | DeliveryType> -Exclude <Internal | External | Empty | DeliveryType>]
+```
 
 This example displays basic information about all non-empty queues on the Exchange 2013 Mailbox server named Mailbox01.
 
@@ -75,7 +77,9 @@ The **Get-QueueDigest** cmdlet provides a high-level, aggregate view of the stat
 
 To view summary information about queues on multiple Exchange servers, run the following command:
 
+```powershell
     Get-QueueDigest <-Server <ServerIdentity1,ServerIdentity2,..> | -Dag <DagIdentity1,DagIdentity2...> | -Site <ADSiteIdentity1,ADSiteIdentity2...> | -Forest> [-Filter <Filter>]
+```
 
 This example displays summary information about the queues on all Exchange 2013 Mailbox servers in the Active Directory site named FirstSite where the message count is greater than 100.
 
@@ -117,7 +121,9 @@ By resuming a queue, you restart outgoing activities on a queue that has a statu
 
 To resume queues, use the following syntax.
 
+```powershell
     Resume-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```
 
 This example resumes all queues on the local server that have a status of Suspended.
 
@@ -167,7 +173,9 @@ When a transport server can't connect to the next hop, the delivery queue is put
 
 To retry queues, use the following syntax.
 
+```powershell
     Retry-Queue <-Identity QueueIdentity | -Filter QueueFilter [-Server ServerIdentity]>
+```
 
 This example retries all queues on the local server with the status of Retry.
 
@@ -203,7 +211,9 @@ Resubmitting a queue is similar to retrying a queue, except the messages are sen
 
 To resubmit messages, use the following syntax.
 
+```powershell
     Retry-Queue <-Identity QueueIdentity | -Filter {Status -eq "Retry"} -Server ServerIdentity> -Resubmit $true
+```
 
 This example resubmits all messages located in any delivery queues with the status of Retry on the server named Mailbox01.
 
@@ -246,20 +256,20 @@ To resubmit a message from the poison message queue, perform the following steps
 1.  Find the identity of the message by running the following command.
     
     ```powershell
-Get-Message -Queue Poison | Format-Table Identity
-```
+    Get-Message -Queue Poison | Format-Table Identity
+    ```
 
 2.  Use the identity of the message from the previous step in the following command.
     
     ```powershell
-Resume-Message <PoisonMessageIdentity>
-```
+    Resume-Message <PoisonMessageIdentity>
+    ```
     
     This example resumes a message from the poison message queue that has the message Identity value of 222.
     
     ```powershell
-Resume-Message 222
-```
+    Resume-Message 222
+    ```
 
 ## How do you know this worked?
 

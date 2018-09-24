@@ -85,14 +85,17 @@ A message file copied to the Pickup directory must meet the following requiremen
 
 This example shows a plain text message that uses acceptable formatting for the Pickup directory.
 
+```powershell
     To: mary@contoso.com
     From: bob@fabrikam.com
     Subject: Message subject
     
     This is the body of the message.
+```
 
 MIME content is also supported in Pickup directory message files. MIME defines a broad range of message content that includes languages that can't be represented in 7-bit ASCII text, HTML, and other multimedia content. A complete description of MIME and its requirements is beyond the scope of this topic. This example shows a simple MIME message that uses acceptable formatting for the Pickup directory.
 
+```powershell
     To: mary@contoso.com
     From: bob@fabrikam.com
     Subject: Message subject
@@ -107,6 +110,7 @@ MIME content is also supported in Pickup directory message files. MIME defines a
     </TABLE>
 
     </BODY></HTML>
+```
 
 Return to top
 
@@ -128,7 +132,9 @@ The Pickup directory removes any of the following message header fields from the
 
 The Pickup directory adds its own `Received` header field to a message as part of the message submission process. The `Received` header field is applied in the following format.
 
+```powershell
     Received: from localhost by Pickup with Microsoft SMTP Server id <ExchangeServerVersion><datetime>
+```
 
 The Pickup directory modifies the following message header fields if they're missing or malformed:
 
@@ -159,8 +165,8 @@ The X-Headers described in the following list are required by messages in the Re
   - **X-Sender**   This X-Header replaces the `From` message header field requirement in a typical SMTP message. One `X-Sender` field that contains one email address must exist. The Replay directory ignores the `From` message header field if it's present, although the recipient's email client displays the value of the `From` message header field as the sender of the message. Other parameters usually exist in the `X-Sender` field, as shown in the following example.
     
     ```powershell
-X-Sender: <bob@fabrikam.com> BODY=7bit RET=HDRS ENVID=12345ABCD auth=<someAuth>
-```
+    X-Sender: <bob@fabrikam.com> BODY=7bit RET=HDRS ENVID=12345ABCD auth=<someAuth>
+    ```
     
 
     > [!NOTE]
@@ -171,8 +177,8 @@ X-Sender: <bob@fabrikam.com> BODY=7bit RET=HDRS ENVID=12345ABCD auth=<someAuth>
   - **X-Receiver**   This X-Header replaces the `To` message header field requirement in a typical SMTP message. At least one `X-Receiver` field that contains one email address must exist. Multiple `X-Receiver` fields are allowed for multiple recipients. The Replay directory ignores the `To` message header fields if they're present, although the recipient's email client displays the values of the `To` message header fields as the recipients of the message. Other optional parameters may exist in the `X-Receiver` fields, as shown in the following example.
     
     ```powershell
-X-Receiver: <mary@contoso.com> NOTIFY=NEVER ORcpt=mary@contoso.com
-```
+    X-Receiver: <mary@contoso.com> NOTIFY=NEVER ORcpt=mary@contoso.com
+    ```
     
 
     > [!NOTE]
@@ -199,16 +205,20 @@ This example shows a plain text message that uses acceptable formatting for the 
 ```powershell
 X-Receiver: <mary@contoso.com> NOTIFY=NEVER ORcpt=mary@contoso.com
 ```
+
+```powershell
     X-Sender: <bob@fabrikam.com> BODY=7bit ENVID=12345AB auth=<someAuth>
     Subject: Optional message subject
     
     This is the body of the message.
-
+```
 MIME content is also supported in Replay directory message files. MIME defines a broad range of message content that includes languages that can't be represented in 7-bit ASCII text, HTML, and other multimedia content. A complete description of MIME and its requirements is beyond the scope of this topic. This example shows a simple MIME message that uses acceptable formatting for the Replay directory.
 
 ```powershell
 X-Receiver: <mary@contoso.com> NOTIFY=NEVER ORcpt=mary@contoso.com
 ```
+
+```powershell
     X-Sender: <bob@fabrikam.com> BODY=7bit ENVID=12345ABCD auth=<someAuth>
     To: mary@contoso.com
     From: bob@fabrikam.com
@@ -224,6 +234,7 @@ X-Receiver: <mary@contoso.com> NOTIFY=NEVER ORcpt=mary@contoso.com
     </TABLE>
 
     </BODY></HTML>
+```
 
 Return to top
 
@@ -233,7 +244,9 @@ The Replay directory deletes the `Bcc` message header field from the message fil
 
 The Replay directory adds its own `Received` message header field to a message as part of the message submission process. The Received message header field is applied in the following format.
 
+```powershell
     Received: from <ReceivingServerName> by Replay with <ExchangeServerVersion><DateTime>
+```
 
 The Replay directory modifies the following message header fields in the message header:
 

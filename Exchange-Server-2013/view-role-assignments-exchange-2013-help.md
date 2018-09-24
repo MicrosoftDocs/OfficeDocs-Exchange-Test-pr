@@ -47,7 +47,9 @@ Looking for other management tasks related to roles? Check out [Advanced permiss
 
 You can view a list of all role assignments configured in your organization by running the **Get-ManagementRoleAssignment** cmdlet. If you want to retrieve a list of role assignments that match a partial string that you specify, use wildcard characters (\*). This example retrieves a list of all the role assignments that start with the string "Tier 1".
 
+```powershell
     Get-ManagementRoleAssignment "Tier 1*"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -105,7 +107,9 @@ For detailed syntax and parameter information, see [Get-ManagementRoleAssignment
 
 To view a list of role assignments that use a specific predefined scope, use the following syntax.
 
+```powershell
     Get-ManagementRoleAssignment -RecipientWriteScope < MyGAL | MyDistributionGroups | Organization | Self | CustomRecipientScope | ExecutiveRecipientScope >
+```
 
 This example retrieves all of the role assignments that use the Organization predefined scope.
 
@@ -125,7 +129,9 @@ Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope <OU>
 
 This example retrieves all of the role assignments that have been scoped to the North America\\Engineering\\Users OU in the contoso.com domain.
 
+```powershell
     Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope "contoso.com/North America/Engineering/Users"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -191,7 +197,9 @@ Get-ManagementRoleAssignment -WritableRecipient "Brian"
 
 You can combine the *WritableRecipient* and *WritableServer* parameters with other parameters, such as the *RoleAssignee* parameter and the *GetEffectiveUsers* switch to refine your query and expand any role groups or USGs. This example retrieves all of the users who can modify the server EX02 and who are assigned the Server Management role group.
 
+```powershell
     Get-ManagementRoleAssignment -WritableServer EX02 -RoleAssignee "Server Management" -GetEffectiveUsers
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 

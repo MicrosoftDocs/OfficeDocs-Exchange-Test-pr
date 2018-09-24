@@ -92,24 +92,30 @@ The location of the queue database and the queue database transaction logs is co
 2.  In a Command prompt window, open the EdgeTransport.exe.config file in Notepad by running the following command:
     
     ```powershell
-Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
-```
+    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 3.  Modify the following keys in the `<appSettings>` section.
     
+    ```powershell
         <add key="QueueDatabasePath" value="<LocalPath>" />
         <add key="QueueDatabaseLoggingPath" value="<LocalPath>" />
-    
+    ```
+
     For example, to create a new queue database in D:\\Queue\\QueueDB and new transaction logs in D:\\Queue\\QueueLogs, use the following values:
     
+    ```powershell
         <add key="QueueDatabasePath" value="D:\Queue\QueueDB" />
         <add key="QueueDatabaseLoggingPath" value="D:\Queue\QueueLogs" />
-
+    ```
+    
 4.  When you are finished, save and close the EdgeTransport.exe.config file.
 
 5.  Restart the Microsoft Exchange Transport service by running the following command:
     
+    ```powershell
         net stop MSExchangeTransport && net start MSExchangeTransport
+    ```
 
 ## How do you know this worked?
 
@@ -138,26 +144,30 @@ Use the following procedure to move the existing queue database and transaction 
 2.  In a Command prompt window, open the EdgeTransport.exe.config file in Notepad by running the following command:
     
     ```powershell
-Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
-```
+    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 3.  Modify the following keys in the `<appSettings>` section:
     
+    ```powershell
         <add key="QueueDatabasePath" value="<LocalPath>" />
         <add key="QueueDatabaseLoggingPath" value="<LocalPath>" />
-    
+    ```
+
     For example, to change the location of the queue database to D:\\Queue\\QueueDB and the transaction logs to D:\\Queue\\QueueLogs, use the following values:
     
+    ```powershell
         <add key="QueueDatabasePath" value="D:\Queue\QueueDB" />
         <add key="QueueDatabaseLoggingPath" value="D:\Queue\QueueLogs" />
+    ```
 
 4.  When you are finished, save and close the EdgeTransport.exe.config file.
 
 5.  Stop the Microsoft Exchange Transport service by running the following command:
     
     ```powershell
-net stop MSExchangeTransport
-```
+    net stop MSExchangeTransport
+    ```
 
 6.  Move the existing database files Mail.que and Trn.chk from the original location to the new location.
 
@@ -166,8 +176,8 @@ net stop MSExchangeTransport
 8.  Start the Microsoft Exchange Transport service by running the following command:
     
     ```powershell
-net start MSExchangeTransport
-```
+    net start MSExchangeTransport
+    ```
 
 ## How do you know this worked?
 

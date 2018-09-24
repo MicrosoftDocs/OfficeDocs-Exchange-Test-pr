@@ -53,11 +53,11 @@ Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPol
 
 You don't need to use the **Set-ThrottlingPolicyAssociation** cmdlet to associate a user with a policy. The following commands show another way to associate tonysmith with the throttling policy ITStaffPolicy.
 
-```
+```powershell
 $b = Get-ThrottlingPolicy ITStaffPolicy
 ```
 
-```
+```powershell
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 
@@ -70,24 +70,24 @@ To verify that you’ve successfully created the Regular throttling policy, do t
 1.  Run the following command.
     
     ```powershell
-Get-ThrottlingPolicy | Format-List
-```
+    Get-ThrottlingPolicy | Format-List
+    ```
 
 2.  Verify that the Regular throttling policy you just created is listed in the column that shows the GlobalThrottlingPolicy object.
 
 3.  Run the following command.
     
     ```powershell
-Get-ThrottlingPolicy | Format-List
-```
+    Get-ThrottlingPolicy | Format-List
+    ```
 
 4.  Verify that the properties for the new Regular policy match the value or values you configured.
 
 5.  Run the following command.
     
     ```powershell
-Get-ThrottlingPolicyAssociation
-```
+    Get-ThrottlingPolicyAssociation
+    ```
 
 6.  Verify that the new Regular policy is associated with the user or users you associated it with.
 

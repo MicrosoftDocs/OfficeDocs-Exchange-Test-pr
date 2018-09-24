@@ -36,8 +36,8 @@ Recipient filtering is provided by the Recipient Filter agent. When recipient fi
   - The *AddressBookEnabled* parameter on the **Set-AcceptedDomain** cmdlet enables or disables recipient filtering for recipients in an accepted domain. By default, recipient filtering is enabled for authoritative domains, and disabled for internal relay domains and external relay domains. To view the status of the *AddressBookEnabled* parameter for the accepted domains in your organization, run the following command:
     
     ```powershell
-Get-AcceptedDomain | Format-List Name,AddressBookEnabled
-```
+    Get-AcceptedDomain | Format-List Name,AddressBookEnabled
+    ```
 
   - If you disable recipient filtering using the procedure in this topic, recipient filtering functionality will be disabled, but the underlying Recipient Filter agent will remain enabled.
 
@@ -78,8 +78,8 @@ To verify that you have successfully enabled or disabled recipient filtering, do
 1.  Run the following command:
     
     ```powershell
-Get-RecipientFilterConfig | Format-List Enabled
-```
+    Get-RecipientFilterConfig | Format-List Enabled
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -104,8 +104,8 @@ To verify that you have successfully enabled or disabled the Recipient Block lis
 1.  Run the following command:
     
     ```powershell
-Get-RecipientFilterConfig | Format-List BlockListEnabled
-```
+    Get-RecipientFilterConfig | Format-List BlockListEnabled
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -125,11 +125,15 @@ Set-RecipientFilterConfig -BlockedRecipients mark@contoso.com,kim@contoso.com
 
 To add or remove entries without modifying any existing values, run the following command:
 
+```powershell
     Set-RecipientFilterConfig -BlockedRecipients @{Add="<recipient1>","<recipient2>"...; Remove="<recipient1>","<recipient2>"...}
+```
 
 This example adds chris@contoso.com to the list of recipients, and removes michelle@contoso.com from the list of recipients in the Recipient Block list:
 
+```powershell
     Set-RecipientFilterConfig -BlockedRecipients @{Add="chris@contoso.com"; Remove="michelle@contoso.com"}
+```
 
 ## How do you know this worked?
 
@@ -138,8 +142,8 @@ To verify that you have successfully configured the Recipient Block list, do the
 1.  Run the following command:
     
     ```powershell
-Get-RecipientFilterConfig | Format-List BlockedRecipients
-```
+    Get-RecipientFilterConfig | Format-List BlockedRecipients
+    ```
 
 2.  Verify the values displayed are the values you configured.
 
@@ -164,8 +168,8 @@ To verify that you have successfully enabled or disabled Recipient Lookup, do th
 1.  Run the following command:
     
     ```powershell
-Get-RecipientFilterConfig | Format-List RecipientValidationEnabled
-```
+    Get-RecipientFilterConfig | Format-List RecipientValidationEnabled
+    ```
 
 2.  Verify the value displayed is the value you configured.
 

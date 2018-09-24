@@ -54,9 +54,9 @@ Message tracking records the SMTP transport activity of all messages transferred
 ## Use the Shell to configure message tracking
 
 To configure message tracking, run the following command:
-
+```powershell
     Set-TransportService <ServerIdentity> -MessageTrackingLogEnabled <$true | $false> -MessageTrackingLogMaxAge <dd.hh:mm:ss> -MessageTrackingLogMaxDirectorySize <Size> -MessageTrackingLogMaxFileSize <Size> -MessageTrackingLogPath <LocalFilePath> -MessageTrackingLogSubjectLoggingEnabled <$true|$false>
-
+```
 This example sets the following message tracking log settings on the Mailbox server named Mailbox01:
 
   -  Sets the location of the message tracking log files to D:\\Message Tracking Log. Note that if the folder doesn't exist, it will be created for you.
@@ -68,9 +68,9 @@ This example sets the following message tracking log settings on the Mailbox ser
   -  Sets the maximum age of a message tracking log file to 45 days.
 
 <!-- end list -->
-
+```powershell
     Set-TransportService Mailbox01 -MessageTrackingLogPath "D:\Hub Message Tracking Log" -MessageTrackingLogMaxFileSize 20MB -MessageTrackingLogMaxDirectorySize 1.5GB -MessageTrackingLogMaxAge 45.00:00:00
-
+```
 
 > [!NOTE]
 > <UL>
@@ -101,7 +101,8 @@ To verify that you have successfully configured message tracking, do the followi
 
 1.  In the Shell, run the following command:
     
+    ```powershell
         Get-TransportService <ServerIdentity> | Format-List MessageTrackingLog*
-
+    ```
 2.  Verify that the values displayed are the values you configured.
 

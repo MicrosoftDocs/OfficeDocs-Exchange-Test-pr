@@ -89,12 +89,15 @@ The script must reside in the `RemoteScripts` directory in the Microsoft Exchang
 
 After you copy the script to the appropriate Exchange 2013 servers and you decide what script parameters should be used, create the role entry using the following syntax.
 
+```powershell
     Add-ManagementRoleEntry <unscoped top-level role name>\<script filename> -Parameters <parameter 1, parameter 2, parameter...> -Type Script -UnscopedTopLevel
+```
 
 This example adds the BulkProvisionUsers.ps1 script to the IT Scripts role with the *Name* and *Location* parameters.
 
+```powershell
     Add-ManagementRoleEntry "IT Scripts\BulkProvisionUsers.ps1" -Parameters Name, Location -Type Script -UnscopedTopLevel
-
+```
 
 > [!NOTE]
 > The <STRONG>Add-ManagementRoleEntry</STRONG> cmdlet performs basic validation to make sure that you add only the parameters that exist in the script. However, no further validation is done after the role entry is added. If parameters are later added or removed, you must manually update the role entries that contain the script.
@@ -111,12 +114,15 @@ If you add non-Exchange cmdlets to the new role, the cmdlets must be installed o
 
 After you install the Windows PowerShell snap-in that contains the cmdlets on the appropriate Exchange 2013 servers and you decide what cmdlet parameters should be used, create the role entry using the following syntax.
 
+```powershell
     Add-ManagementRoleEntry <unscoped top-level role name>\<cmdlet name> -PSSnapinName <snap-in name> -Parameters <parameter 1, parameter 2, parameter...> -Type Cmdlet -UnscopedTopLevel
+```
 
 This example adds the **Set-WidgetConfiguration** cmdlet in the Contoso.Admin.Cmdlets snap-in to the Widget Cmdlets role with the *Database* and *Size* parameters.
 
+```powershell
     Add-ManagementRoleEntry "Widget Cmdlets\Set-WidgetConfiguration" -PSSnapinName Contoso.Admin.Cmdlets -Parameters Database, Size -Type Cmdlet -UnscopedTopLevel
-
+```
 
 > [!NOTE]
 > The <STRONG>Add-ManagementRoleEntry</STRONG> cmdlet performs basic validation to make sure that you add only the parameters that exist in the cmdlet. However, no further validation is done after the role entry is added. If the cmdlet is later changed, and parameters are added or removed, you must manually update the role entries that contain the cmdlet.
@@ -157,7 +163,9 @@ New, unscoped child roles can be based on existing unscoped roles. When you crea
 
 Use the following syntax to create the new role.
 
+```powershell
     New-ManagementRole -Parent <existing unscoped role to copy> -Name <name of new unscoped role>
+```
 
 This example copies the IT Global Scripts role and its management role entries to the Diagnostic IT Scripts role.
 

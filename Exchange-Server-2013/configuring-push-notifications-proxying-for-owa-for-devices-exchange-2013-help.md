@@ -66,7 +66,7 @@ In order to configure server-to-server authentication for an on-premises impleme
         > [!WARNING]  
         > Copying and pasting the code into a text editor like Notepad and saving it with a .ps1 extension makes it easier to run Shell scripts.
 
-        ```
+        ```powershell
         # Make sure to update the following $tenantDomain with your Office 365 tenant domain.
         
         $tenantDomain = "Fabrikam.com"
@@ -130,7 +130,7 @@ In order to configure server-to-server authentication for an on-premises impleme
 
         The expected result should be similar to the following output.
 
-``` 
+```powershell
 Configured Certificate Thumbprint is: 7595DBDEA83DACB5757441D44899BCDB9911253C
 Exporting certificate...
 Complete.
@@ -144,7 +144,7 @@ Complete.
   -  **Step 2 – Configure Office 365 to communicate with Exchange 2013 on-premises.** Configure the Office 365 server that Exchange Server 2013 will communicate with to be a partner application. For example, if Exchange Server 2013 on-premises needs to communicate with Office 365, you need to configure Exchange on-premises to be a partner application. A partner application is any application that Exchange 2013 can directly exchange security tokens with, without having to go through a third-party security token server. An on-premises Exchange 2013 administrator must use the following Exchange Management Shell script to configure the Office 365 tenant that Exchange 2013 will communicate with to be a partner application. During execution, there will be a prompt to enter the administrator user name and password of the Office 365 tenant domain—for example, administrator@fabrikam.com. Make sure to update the value of *$CertFile* to the location of the certificate if not created from the previous script. To do this, copy and paste the following code.
     
 
-        ```
+        ```powershell
         # Make sure to update the following $CertFile with the path to the cert if not using the previous script.
         
         $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
@@ -179,7 +179,7 @@ Complete.
 
         The expected result should be as follows.
 
-        ```
+        ```powershell
         Please enter the administrator user name and password of the Office 365 tenant domain...
         Adding a key to Service Principal...
         Complete.
@@ -190,13 +190,14 @@ Complete.
 
 After OAuth authentication has been successfully set up following the preceding steps, an on-premises admin must enable push notification proxying by using the following script. Make sure to update the value of *$tenantDomain* to be the name of your domain. To do this, copy and paste the following code.
 
-```
+```powershell
 $tenantDomain = "Fabrikam.com"
 Enable-PushNotificationProxy -Organization:$tenantDomain
 ```
 
 The expected result should be similar to the following output.
 
+```powershell
     RunspaceId        : 4f2eb5cc-b696-482f-92bb-5b254cd19d60
     DisplayName       : On Premises Proxy app
     Enabled           : True
@@ -218,6 +219,7 @@ The expected result should be similar to the following output.
     OrganizationId    :
     OriginatingServer : server.fabrikam.com
     ObjectState       : Unchanged
+```
 
 ## Verify that push notifications are working
 
@@ -235,6 +237,7 @@ After the preceding steps have been completed, push notifications can be tested 
 
   - **Enabling monitoring.** An alternate method to test push notifications, or to investigate why notifications are failing, is to enable monitoring on a mailbox server in your organization. An on-premises Exchange 2013 server admin must invoke push notification proxy monitoring by using the following script. To do this, copy and paste the following code.
     
+    ```powershell
         # Send a push notification to verify connectivity.
         
         $s = Get-ExchangeServer | ?{$_.ServerRole -match "Mailbox"}
@@ -256,10 +259,12 @@ After the preceding steps have been completed, push notifications can be tested 
         {
             Write-Error "Cannot find a Mailbox server in the current site."
         }
-    
+    ```
+
     The expected result should be similar to the following output.
     
+    ```powershell
         ResultType : Succeeded
         Error      :
         Exception  :
-
+    ```

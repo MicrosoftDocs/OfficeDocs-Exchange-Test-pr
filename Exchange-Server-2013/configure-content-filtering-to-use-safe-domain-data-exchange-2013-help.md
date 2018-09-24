@@ -44,21 +44,23 @@ We recommend that you don't modify the default setting in most cases. However, y
 1.  In the Command Prompt window, open the MSExchangeMailboxAssistants.exe.config file in Notepad by running the following command:
     
     ```powershell
-Notepad %ExchangeInstallPath%Bin\MSExchangeMailboxAssistants.exe.config
-```
+    Notepad %ExchangeInstallPath%Bin\MSExchangeMailboxAssistants.exe.config
+    ```
 
 2.  Locate the *\</appsettings\>* key at the end of the file, and paste the following key before the *\</appsettings\>* key:
     
     ```command line
-<add key="IncludeSafeDomains" value="true" />
-```
+    <add key="IncludeSafeDomains" value="true" />
+    ```
 
 3.  When you are finished, save and close the MSExchangeMailboxAssistants.exe.config file.
 
 4.  Restart the Microsoft Exchange Mailbox Assistants service by running the following command:
     
+    ```powershell
         net stop MSExchangeMailboxAssistants && net start MSExchangeMailboxAssistants
-
+    ```
+    
 ## How do you know this worked?
 
 To verify that you have successfully configured content filtering to use safe domain data, do the following:

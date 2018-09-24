@@ -63,11 +63,15 @@ For more information about management scope filters, see [Understanding manageme
 
 Use the following syntax to create a domain restriction filter scope with a base OU.
 
+```powershell
     New-ManagementScope -Name <scope name> -RecipientRestrictionFilter <filter query> [-RecipientRoot <OU>]
+```
 
 This example creates a scope that includes all mailboxes within the contoso.com/Sales OU.
 
+```powershell
     New-ManagementScope -Name "Mailboxes in Sales OU" -RecipientRestrictionFilter { RecipientType -eq 'UserMailbox' } -RecipientRoot "contoso.com/Sales OU"
+```
 
 
 > [!NOTE]
@@ -91,7 +95,9 @@ New-ManagementScope -Name <scope name> -ServerRestrictionFilter <filter query>
 
 This example creates a scope that includes all the servers within the 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com' AD (Active Directory) site.
 
+```powershell
     New-ManagementScope -Name "Servers in Seattle AD site" -ServerRestrictionFilter { ServerSite -eq 'CN=Redmond,CN=Sites,CN=Configuration,DC=contoso,DC=com' }
+```
 
 For detailed syntax and parameter information, see [New-ManagementScope](https://technet.microsoft.com/en-us/library/dd335137\(v=exchg.150\)).
 
@@ -133,7 +139,9 @@ New-ManagementScope -Name <scope name> -DatabaseRestrictionFilter <filter query>
 
 This example creates a scope that includes all the databases that contain the string "Executive" in the **Name** property of the database.
 
+```powershell
     New-ManagementScope -Name "Executive Databases" -DatabaseRestrictionFilter { Name -Like '*Executive*' }
+```
 
 For detailed syntax and parameter information, see [New-ManagementScope](https://technet.microsoft.com/en-us/library/dd335137\(v=exchg.150\)).
 
@@ -173,11 +181,15 @@ Any scope that you create with the **New-ManagementScope** cmdlet can be designa
 
 This example creates an exclusive recipient filter-based scope that matches any user in the Executives department.
 
+```powershell
     New-ManagementScope "Executive Users Exclusive Scope" -RecipientRestrictionFilter { Department -Eq "Executives" } -Exclusive
+```
 
 By default, when an exclusive scope is created, you're required to acknowledge that you created an exclusive scope and that you're aware of the impact that an exclusive scope has on existing role assignments that aren't exclusive. If you want to suppress the warning, you can use the *Force* switch. This example creates the same scope as the previous example, but without a warning.
 
+```powershell
     New-ManagementScope "Executive Users Exclusive Scope" -RecipientRestrictionFilter { Department -Eq "Executives" } -Exclusive -Force
+```
 
 For detailed syntax and parameter information, see [New-ManagementScope](https://technet.microsoft.com/en-us/library/dd335137\(v=exchg.150\)).
 

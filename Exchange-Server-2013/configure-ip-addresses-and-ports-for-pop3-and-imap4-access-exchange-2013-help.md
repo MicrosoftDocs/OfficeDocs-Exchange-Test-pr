@@ -92,8 +92,8 @@ Do the following to verify that you have changed POP3 IP address and port settin
 1.  Run the following command in the Shell.
     
     ```powershell
-Get-PopSettings | format-list
-```
+    Get-PopSettings | format-list
+    ```
 
 2.  Verify the *UnencryptedOrTLSBindings* and *SSLBindings* settings are correct.
 
@@ -133,7 +133,9 @@ Set-ImapSettings -SSLBindings: IPaddress:Port
 
 This example sets the IP address and port for communicating with Exchange by using IMAP4 with no encryption or TLS encryption.
 
+```powershell
     Set-ImapSettings -UnencryptedOrTLSBindings IPaddress:Port 
+```
 
 After you've set the IP address and port settings for IMAP4, you must restart the IMAP4 service for the settings to take effect. For information about how to restart the IMAP4 service, see [Start and stop the IMAP4 services](start-and-stop-the-imap4-services-exchange-2013-help.md).
 
@@ -146,8 +148,8 @@ Do the following to verify that you have changed IMAP4 IP address and port setti
 1.  Run the following command in the Shell.
     
     ```powershell
-Get-ImapSettings | format-list
-```
+    Get-ImapSettings | format-list
+    ```
 
 2.  Verify the *UnencryptedOrTLSBindings* and *SSLBindings* settings are correct.
 

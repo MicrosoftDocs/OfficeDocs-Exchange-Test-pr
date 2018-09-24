@@ -54,6 +54,6 @@ For additional management tasks related to Client Access servers, see [UM servic
 2.  In the **Open** box, type the following command, and then press Enter.
     
     ```powershell
-net stop MSExchangeUMCR
-```
+    net stop MSExchangeUMCR
+    ```
 

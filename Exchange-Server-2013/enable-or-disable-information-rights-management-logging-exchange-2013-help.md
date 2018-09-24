@@ -73,5 +73,7 @@ To verify that you have successfully enabled or disbled IRM logging on a server,
 
 This example retrieves all IRM logging properties on the server EXCH01.
 
+```powershell
     Get-TransportService -Identity EXCH01 | Format-List IRMLog*
+```
 

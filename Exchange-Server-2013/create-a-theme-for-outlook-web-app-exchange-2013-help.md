@@ -165,7 +165,9 @@ To force all users to use the default theme, you must disable theme selection in
 
 This example sets the default theme for Outlook Web App, where the server name is `fourthcoffee`, the virtual directory name is `owa`, the website name is `default web site`, and the theme is in the folder named `Custom`.
 
+```powershell
     set-owavirtualdirectory -identity "fourthcoffee\owa (default web site)" -defaulttheme Custom 
+```
 
 For detailed syntax and parameter information, see [Set-OwaVirtualDirectory](https://technet.microsoft.com/en-us/library/bb123515\(v=exchg.150\)).
 
@@ -173,11 +175,15 @@ For detailed syntax and parameter information, see [Set-OwaVirtualDirectory](htt
 
 This example disables theme selection in Outlook Web App, where the server name is `fourthcoffee`, the virtual directory name is `owa`, and the website name is `default web site`.
 
+```powershell
     set-owavirtualdirectory -identity "fourthcoffee\owa (default web site)" -themeselectionenabled $false 
+```
 
 You can also complete both commands at the same time as shown in the following example:
 
+```powershell
     set-owavirtualdirectory -identity "fourthcoffee\owa (default web site)" -defaulttheme Custom -themeselectionenabled $false
+```
 
 For detailed syntax and parameter information, see [Set-OwaVirtualDirectory](https://technet.microsoft.com/en-us/library/bb123515\(v=exchg.150\)).
 

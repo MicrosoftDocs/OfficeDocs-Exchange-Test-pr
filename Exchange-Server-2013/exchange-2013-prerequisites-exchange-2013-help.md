@@ -84,14 +84,14 @@ After you've installed the software listed above, complete the following steps t
       - On a Windows Server 2012 R2 or Windows Server 2012 computer, run the following command.
         
         ```powershell
-Install-WindowsFeature RSAT-ADDS
-```
+        Install-WindowsFeature RSAT-ADDS
+        ```
     
       - On a Windows Server 2008 R2 SP1 computer, run the following command.
         
         ```powershell
-Add-WindowsFeature RSAT-ADDS
-```
+        Add-WindowsFeature RSAT-ADDS
+        ```
 
 ## Windows Server 2012 R2 and Windows Server 2012 prerequisites
 
@@ -113,7 +113,9 @@ Do the following to install the required Windows roles and features:
 
 2.  Run the following command to install the required Windows components.
     
+    ```powershell
         Install-WindowsFeature AS-HTTP-Activation, Desktop-Experience, NET-Framework-45-Features, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Clustering-CmdInterface, RSAT-Clustering-Mgmt, RSAT-Clustering-PowerShell, Web-Mgmt-Console, WAS-Process-Model, Web-Asp-Net45, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Lgcy-Mgmt-Console, Web-Metabase, Web-Mgmt-Console, Web-Mgmt-Service, Web-Net-Ext45, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, Windows-Identity-Foundation, RSAT-ADDS
+    ```
 
 After you've installed the operating system roles and features, install the following software in the order shown:
 
@@ -140,8 +142,8 @@ Do the following to install the required Windows roles and features:
 2.  Run the following command to install the required Windows components.
     
     ```powershell
-Install-WindowsFeature ADLDS
-```
+    Install-WindowsFeature ADLDS
+    ```
 
 Install the version of Microsoft .NET Framework that corresponds to the version of Exchange 2013 you're installing:
 
@@ -176,13 +178,15 @@ Do the following to install the required Windows roles and features:
 2.  Run the following command to load the Server Manager module.
     
     ```powershell
-Import-Module ServerManager
-```
+    Import-Module ServerManager
+    ```
 
 3.  Run the following command to install the required Windows components.
     
+    ```powershell
         Add-WindowsFeature Desktop-Experience, NET-Framework, NET-HTTP-Activation, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Web-Server, WAS-Process-Model, Web-Asp-Net, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Lgcy-Mgmt-Console, Web-Metabase, Web-Mgmt-Console, Web-Mgmt-Service, Web-Net-Ext, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, RSAT-ADDS
-
+    ```
+    
 After you've installed the operating system roles and features, install the following software in the order shown:
 
 1.  [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?linkid=808659)
@@ -220,14 +224,14 @@ Do the following to install the required Windows roles and features:
 2.  Run the following command to load the Server Manager module.
     
     ```powershell
-Import-Module ServerManager
-```
+    Import-Module ServerManager
+    ```
 
 3.  Run the following command to install the required Windows components.
     
     ```powershell
-Add-WindowsFeature NET-Framework, ADLDS
-```
+    Add-WindowsFeature NET-Framework, ADLDS
+    ```
 
 After you've installed the operating system roles and features, install the following software in the order shown:
 

@@ -71,25 +71,28 @@ The Microsoft Exchange 2010 UM Troubleshooting Tool is an Exchange Management Sh
 
 3.  At the Windows PowerShell command prompt, go to the folder where the UM Troubleshooting Tool was installed and run the following.
     
+    ```powershell
         C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -psconsolefile .\Microsoft.Exchange.UM.TroubleshootingToolsnapin.psc1 -noexit -command ". '.\Microsoft.Exchange.UM.TroubleshootingTool.ps1' "
+    ```
 
 4.  If you're running the UM Troubleshooting Tool on Windows Vista, Windows 7, or Windows 8, at the Windows PowerShell command prompt, run the following.
     
     ```powershell
-Set-ExecutionPolicy RemoteSigned
-```
+    Set-ExecutionPolicy RemoteSigned
+    ```
 
 5.  From the **Start** menu, open the **Microsoft Exchange 2010 UM Troubleshooting Tool**.
 
 6.  In the **Microsoft Exchange 2010 UM Troubleshooting Tool** window, at the prompt, type the following and press Enter.
     
     ```powershell
-$cred=Get-Credential
-```
+    $cred=Get-Credential
+    ```
 
 7.  In the **Windows PowerShell Credential Request** window, type the domain\\user name and password, and then click **OK**.
 
 8.  In the **Microsoft Exchange 2010 UM Troubleshooting Tool** window, specify the necessary cmdlet parameters to test for call flow. For example:
     
+    ```powershell
         Test-ExchangeUMCallFlow -Mode SIPClient -CallingParty tonysmith@contoso.com - CalledParty jamiestark@contoso.com NextHop ocsfe.contoso.com -Credential $cred
-
+    ```

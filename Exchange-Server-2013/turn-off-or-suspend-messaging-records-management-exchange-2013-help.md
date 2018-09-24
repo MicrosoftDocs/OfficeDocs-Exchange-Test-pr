@@ -55,9 +55,11 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 This Shell example unlinks the retention tag Delete - 3 Days from the retention policy Corp-Users.
 
+```powershell
     $tags = (Get-RetentionPolicy "Corp-Users").RetentionPolicyTagLinks
     $tags -= "Deleted Items - 3 Days"
     Set-RetentionPolicy "Corp-Users" -RetentionPolicyTagLinks $tags
+```
 
 For detailed syntax and parameter information, see [Get-RetentionPolicy](https://technet.microsoft.com/en-us/library/dd298086\(v=exchg.150\)) and [Set-RetentionPolicy](https://technet.microsoft.com/en-us/library/dd335196\(v=exchg.150\)).
 
@@ -75,11 +77,15 @@ Set-Mailbox jpeoples -RetentionPolicy $null.
 
 This Shell example removes the retention policy from all mailboxes in the Exchange organization.
 
+```powershell
     Get-Mailbox -ResultSize unlimited -Filter {RetentionPolicy -ne $null} | Set-Mailbox -RetentionPolicy $null
+```
 
 This Shell example removes the retention policy Corp-Finance from all mailbox users who have the policy applied.
 
+```powershell
     Get-Mailbox -ResultSize unlimited -Filter {RetentionPolicy -eq "Corp-Finance"} | Set-Mailbox -RetentionPolicy $null
+```
 
 For detailed syntax and parameter information, see [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)) and [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)).
 
@@ -103,11 +109,15 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 This example removes all delete tags from an Exchange organization except the Never Delete tag, which is used in the ArbitrationMailbox policy created by Exchange Setup.
 
+```powershell
     Get-RetentionPolicyTag | ? {$_.RetentionAction -ne "MoveToArchive" -and $_.Name -ne "Never Delete"} | Remove-RetentionPolicyTag
+```
 
 This example removes all retention tags except the Never Delete tag.
 
+```powershell
     Get-RetentionPolicyTag | ? {$_.Name -ne "Never Delete"} | Remove-RetentionPolicyTag
+```
 
 This command removes the Corp-Users retention policy from an Exchange organization.
 
