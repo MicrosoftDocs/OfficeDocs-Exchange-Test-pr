@@ -301,7 +301,9 @@ If you suspend the Unreachable queue, items won't be resubmitted to the categori
 
 To suspend a queue, use the following syntax.
 
-    Suspend-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```powershell
+Suspend-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```
 
 This example suspends all queues on the local server that have a message count equal to or greater than 1,000 and that have a status of Retry.
 

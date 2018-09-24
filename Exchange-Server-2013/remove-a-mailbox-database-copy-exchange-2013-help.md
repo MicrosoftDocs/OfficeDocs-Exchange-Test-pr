@@ -72,8 +72,8 @@ To verify that you've successfully removed a mailbox database copy, do one of th
   - In the Shell, run the following command to verify removal of the copy.
     
     ```powershell
-Get-MailboxDatabase <DatabaseName> | Format-List DatabaseCopies
-```
+    Get-MailboxDatabase <DatabaseName> | Format-List DatabaseCopies
+    ```
     
     The removed passive copy is no longer listed.
 

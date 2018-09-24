@@ -75,11 +75,23 @@ Modifying multivalued properties is similar to modifying single-valued propertie
 <tbody>
 <tr class="odd">
 <td><p>Add one or more values to a multivalued property</p></td>
-<td><pre><code>@{Add=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}</code></pre></td>
+<td>
+
+```
+@{Add=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Remove one or more values from a multivalued property</p></td>
-<td><pre><code>@{Remove=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}</code></pre></td>
+<td>
+
+```
+@{Remove=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}
+```
+
+</td>
 </tr>
 </tbody>
 </table>

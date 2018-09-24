@@ -20,7 +20,7 @@ You can use the EAC or the Shell to assign a self-signed, internal public key in
 Different services have different certificate requirements. For example, some services may only require a server name in the **Subject Name** or **Subject Alternative Name** boxes of a certificate and other services may require a fully qualified domain name (FQDN). Make sure that the certificate name can support the uses required by the services you enable it for.
 
 
-> [!WARNING]
+> [!WARNING]  
 > Self-signed certificates can’t be used when you’re integrating Unified Messaging (UM) with Microsoft Lync Server.
 
 
@@ -36,7 +36,7 @@ For additional management tasks related to managing certificates for Unified Mes
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
 
-> [!TIP]
+> [!TIP]  
 > Having problems? Ask for help in the Exchange forums. Visit the forums at <A href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</A>, <A href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</A>, or <A href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</A>..
 
 
@@ -57,5 +57,7 @@ For additional management tasks related to managing certificates for Unified Mes
 
 This example assigns a certificate to the Unified Messaging and UM Call Router services.
 
-    Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -Services 'UM, UMCallRouter'
+```powershell
+Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -Services 'UM, UMCallRouter'
+```
 

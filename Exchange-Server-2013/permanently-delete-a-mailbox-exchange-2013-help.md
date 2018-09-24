@@ -10,8 +10,6 @@ mtps_version: v=EXCHG.150
 
 # Permanently delete a mailbox
 
- 
-
 _**Applies to:** Exchange Online, Exchange Server 2013_
 
 
@@ -30,10 +28,8 @@ To learn more about disconnected mailboxes and perform other related management 
   - [Connect or restore a deleted mailbox](connect-or-restore-a-deleted-mailbox-exchange-2013-help.md)
 
 
-> [!NOTE]
+> [!NOTE]  
 > You can't use the EAC to permanently delete an active mailbox or a disconnected mailbox.
-
-
 
 ## What do you need to know before you begin?
 
@@ -44,7 +40,7 @@ To learn more about disconnected mailboxes and perform other related management 
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
 
-> [!TIP]
+> [!TIP]  
 > Having problems? Ask for help in the Exchange forums. Visit the forums at <A href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</A>, <A href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</A>, or <A href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</A>..
 
 
@@ -61,8 +57,7 @@ Run the following command to permanently delete an active mailbox and the associ
 Remove-Mailbox -Identity <identity> -Permanent $true
 ```
 
-
-> [!NOTE]
+> [!NOTE]  
 > If you don’t include the <EM>Permanent</EM> parameter, the deleted mailbox is retained in the mailbox database for 30 days, by default, before it’s permanently deleted.
 
 
@@ -94,7 +89,7 @@ There are two types of disconnected mailboxes: disabled and soft-deleted. You mu
 Run the following command to determine whether a disconnected mailbox is disabled or soft-deleted.
 
 ```powershell
-    Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,MailboxGuid,Database,DisconnectReason
+Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,MailboxGuid,Database,DisconnectReason
 ```
 
 The value for the *DisconnectReason* property for disconnected mailboxes will be either `Disabled` or `SoftDeleted`.
@@ -102,17 +97,17 @@ The value for the *DisconnectReason* property for disconnected mailboxes will be
 You can run the following command to display the type for all disconnected mailboxes in your organization.
 
 ```powershell
-    Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -ne $null } | fl DisplayName,MailboxGuid,Database,DisconnectReason
+Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -ne $null } | fl DisplayName,MailboxGuid,Database,DisconnectReason
 ```
 
-> [!WARNING]
+> [!WARNING]  
 > When you use the <STRONG>Remove-StoreMailbox</STRONG> cmdlet to permanently delete a disconnected mailbox, all its contents are purged from the mailbox database and the data loss is permanent.
-
-
 
 This example permanently deletes the disabled mailbox with the GUID 2ab32ce3-fae1-4402-9489-c67e3ae173d3 from mailbox database MBD01.
 
-    Remove-StoreMailbox -Database MBD01 -Identity "2ab32ce3-fae1-4402-9489-c67e3ae173d3" -MailboxState Disabled
+```powershell
+Remove-StoreMailbox -Database MBD01 -Identity "2ab32ce3-fae1-4402-9489-c67e3ae173d3" -MailboxState Disabled
+```
 
 This example permanently deletes the soft-deleted mailbox for Dan Jump from mailbox database MBD01.
 
@@ -123,7 +118,7 @@ Remove-StoreMailbox -Database MBD01 -Identity "Dan Jump" -MailboxState SoftDelet
 This example permanently deletes all soft-deleted mailboxes from mailbox database MBD01.
 
 ```powershell
-    Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | ForEach {Remove-StoreMailbox -Database $_.Database -Identity $_.MailboxGuid -MailboxState SoftDeleted}
+Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | ForEach {Remove-StoreMailbox -Database $_.Database -Identity $_.MailboxGuid -MailboxState SoftDeleted}
 ```
 
 For detailed syntax and parameter information, see [Remove-StoreMailbox](https://technet.microsoft.com/en-us/library/ff829913\(v=exchg.150\)) and [Get-MailboxStatistics](https://technet.microsoft.com/en-us/library/bb124612\(v=exchg.150\)).
@@ -137,4 +132,3 @@ Get-MailboxDatabase | Get-MailboxStatistics | Where {     Get-MailboxDatabase | 
 ```
 
 If you successfully purged the mailbox, the command won’t return any results. If the mailbox wasn’t purged, the command will return information about the mailbox.
-

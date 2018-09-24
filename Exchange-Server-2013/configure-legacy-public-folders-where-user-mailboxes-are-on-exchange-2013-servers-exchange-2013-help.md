@@ -42,7 +42,7 @@ Users whose mailboxes are on Exchange Server 2013 or Exchange Server 2016 won’
     For Exchange 2010, run the following command. This command excludes the mailbox database from the mailbox provisioning load balancer. This prevents new mailboxes from automatically being added to this database.
     
     ```powershell
-        New-MailboxDatabase -Server <PFServerName_with_CASRole> -Name <NewMDBforPFs> -IsExcludedFromProvisioning $true 
+    New-MailboxDatabase -Server <PFServerName_with_CASRole> -Name <NewMDBforPFs> -IsExcludedFromProvisioning $true 
     ```
     
     For Exchange 2007, run the following command:
@@ -52,14 +52,14 @@ Users whose mailboxes are on Exchange Server 2013 or Exchange Server 2016 won’
     ```
     
 
-    > [!NOTE]
+    > [!NOTE]  
     > We recommend that the only mailbox that you add to this database is the proxy mailbox that you’ll create in step&nbsp;3. No other mailboxes should be created on this mailbox database.
 
 
 
 3.  Create a proxy mailbox within the new mailbox database and hide the mailbox from the address book. The SMTP of this mailbox will be returned by AutoDiscover as the *DefaultPublicFolderMailbox* SMTP, so that by resolving this SMTP the client can reach the legacy exchange server for public folder access.
     
-    ```
+    ```powershell
     New-Mailbox -Name <PFMailbox1> -Database <NewMDBforPFs> 
     ```
 
@@ -118,4 +118,3 @@ Log on to Outlook for a user whose mailbox is on an Exchange Server 2013 CU5 or 
       - Create and delete public folders.
     
       - Post content to and delete content from a public folder.
-

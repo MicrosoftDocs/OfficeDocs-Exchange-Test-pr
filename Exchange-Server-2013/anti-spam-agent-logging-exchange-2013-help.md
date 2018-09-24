@@ -30,7 +30,7 @@ Agent logs record the actions performed on a message by specific anti-spam agent
   - Sender ID agent
 
 
-> [!NOTE]
+> [!NOTE]  
 > The Connection Filtering agent and the Edge Rules agent aren't available on Mailbox servers.
 
 
@@ -272,7 +272,9 @@ Cd $env:ExchangeInstallPath\Scripts
 
 To run the script in the Scripts folder, use the following syntax:
 
-    .\Get-AntiSpamFilteringReport.ps1 -report <ReportValue> [<OptionalParameters>]
+```powershell
+.\Get-AntiSpamFilteringReport.ps1 -report <ReportValue> [<OptionalParameters>]
+```
 
 For details about using the script, run the following command:
 
