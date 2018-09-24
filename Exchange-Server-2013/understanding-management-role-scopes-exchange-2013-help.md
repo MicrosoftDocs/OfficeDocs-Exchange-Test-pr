@@ -962,7 +962,9 @@ Some cmdlets may use configuration scopes that aren't immediately obvious. The f
 
 Database scopes were first introduced in Microsoft Exchange 2010 Service Pack 1 (SP1) and continue to be supported in Exchange 2013. Versions of Exchange prior to Exchange 2010 SP1 support only recipient scopes and server configuration scopes. When you create a new database scope on an Exchange 2010 SP1 or later server, you'll receive the following warning:
 
-    WARNING: Database management scopes will only be applied when a user connects to a server running Exchange 2010 SP1 or later. Servers running a version of Exchange prior to Exchange 2010 SP1 won't apply any roles from a role assignment linked to a database scope. Database management scopes also won't be visible to the Get-ManagementScope cmdlet when it's run from a pre-Exchange 2010 SP1 server.
+```powershell
+WARNING: Database management scopes will only be applied when a user connects to a server running Exchange 2010 SP1 or later. Servers running a version of Exchange prior to Exchange 2010 SP1 won't apply any roles from a role assignment linked to a database scope. Database management scopes also won't be visible to the Get-ManagementScope cmdlet when it's run from a pre-Exchange 2010 SP1 server.
+```
 
 When you create a database scope, it's only applied to users who connect to servers running Exchange 2010 SP1 or later. Users who connect to pre-Exchange 2010 SP1 servers won't have any role assignments associated with database scopes applied to them. This means that any permissions provided by these role assignments won't be granted to users when they connect to pre-Exchange 2010 SP1 servers. Database scopes can't be created, removed, modified, or viewed from pre-Exchange 2010 SP1 servers.
 

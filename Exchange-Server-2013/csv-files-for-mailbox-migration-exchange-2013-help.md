@@ -18,25 +18,25 @@ _**Applies to:** Exchange Online, Exchange Server 2013_
 You can use a CSV file to bulk migrate a large number of user mailboxes. You can specify a CSV file when you use the Exchange admin center (EAC) or the **New-MigrationBatch** cmdlet in the Exchange Management Shell to create a migration batch. Using a CSV to specify multiple users to migrate in a migration batch is supported in the following migration scenarios:
 
   - **Moves in on-premises Exchange organizations**
-    
-      - **Local move:** A local move is where you move mailboxes from one mailbox database to another. A local move occurs within a single forest.
-    
-      - **Cross-forest enterprise move:** In a cross-forest enterprise move, mailboxes are moved to a different forest. Cross-forest moves are initiated either from the target forest, which is the forest that you want to move the mailboxes to, or from the source forest, which is the forest that currently hosts the mailboxes.
+
+  - **Local move:** A local move is where you move mailboxes from one mailbox database to another. A local move occurs within a single forest.
+
+  - **Cross-forest enterprise move:** In a cross-forest enterprise move, mailboxes are moved to a different forest. Cross-forest moves are initiated either from the target forest, which is the forest that you want to move the mailboxes to, or from the source forest, which is the forest that currently hosts the mailboxes.
 
   - **Onboarding and offboarding in Exchange Online**
-    
-      - **Onboarding remote move migration:** In an Exchange hybrid deployment, you can move mailboxes from an on-premises Exchange organization to Exchange Online. This is also known as an *onboarding* remote move migration because you onboard mailboxes to Exchange Online.
-    
-      - **Offboarding remote move migration:** You can also perform an *offboarding* remote move migration, where you migrate Exchange Online mailboxes to your on-premises Exchange organization.
-        
 
-        > [!NOTE]
-        > Both onboarding and offboarding remote move migrations are initiated from your Exchange Online organization.
+  - **Onboarding remote move migration:** In an Exchange hybrid deployment, you can move mailboxes from an on-premises Exchange organization to Exchange Online. This is also known as an *onboarding* remote move migration because you onboard mailboxes to Exchange Online.
 
-    
-      - **Staged Exchange migration:** You can also migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. This is another type of onboarding migration. You can migrate only Exchange 2003 and Exchange 2007 mailboxes using a staged Exchange migration. Migrating Exchange 2010 and Exchange 2013 mailboxes isn't supported using a staged migration. Prior to running a staged migration, you have to use directory synchronization or some other method to provision mail users in your Exchange Online organization.
-    
-      - **IMAP migration:** This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must provision mailboxes in Exchange Online before you can migrate mailbox data.
+  - **Offboarding remote move migration:** You can also perform an *offboarding* remote move migration, where you migrate Exchange Online mailboxes to your on-premises Exchange organization.
+
+
+> [!NOTE]
+> Both onboarding and offboarding remote move migrations are initiated from your Exchange Online organization.
+
+
+  - **Staged Exchange migration:** You can also migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. This is another type of onboarding migration. You can migrate only Exchange 2003 and Exchange 2007 mailboxes using a staged Exchange migration. Migrating Exchange 2010 and Exchange 2013 mailboxes isn't supported using a staged migration. Prior to running a staged migration, you have to use directory synchronization or some other method to provision mail users in your Exchange Online organization.
+
+  - **IMAP migration:** This onboarding migration type migrates mailbox data from an IMAP server (including Exchange) to Exchange Online. For an IMAP migration, you must provision mailboxes in Exchange Online before you can migrate mailbox data.
 
 
 > [!NOTE]
@@ -388,8 +388,9 @@ Attribute values in the CSV file override the value of the corresponding paramet
 
 For example, let’s say you create a batch in the Exchange Management Shell for a cross-forest enterprise move to move users’ primary and archive mailboxes to the target forest with the following Exchange Management Shell command.
 
-    New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint ForestEndpoint1 -TargetDeliveryDomain forest2.contoso.com -TargetDatabases @(EXCH-MBX-02,EXCH-MBX-03) -TargetArchiveDatabases @(EXCH-MBX-A02,EXCH-MBX-A03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")) -AutoStart
-
+```powershell
+New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint ForestEndpoint1 -TargetDeliveryDomain forest2.contoso.com -TargetDatabases @(EXCH-MBX-02,EXCH-MBX-03) -TargetArchiveDatabases @(EXCH-MBX-A02,EXCH-MBX-A03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv")) -AutoStart
+```
 
 > [!NOTE]
 > Because the default is to move primary and archive mailboxes, you don’t have to explicitly specify it in the Exchange Management Shell command.
@@ -398,26 +399,32 @@ For example, let’s say you create a batch in the Exchange Management Shell for
 
 A portion of the CrossForestBatch1.csv file for this migration batch looks like this:
 
-    EmailAddress,TargetDatabase,TargetArchiveDatabase
-    user1@contoso.com,EXCH-MBX-01,EXCH-MBX-A01
-    user2@contoso.com,,
-    user3@contoso.com,EXCH-MBX-01,
-    ...
+```powershell
+EmailAddress,TargetDatabase,TargetArchiveDatabase
+user1@contoso.com,EXCH-MBX-01,EXCH-MBX-A01
+user2@contoso.com,,
+user3@contoso.com,EXCH-MBX-01,
+...
+```
 
 Because the values in the CSV file override the values for the migration batch, the primary and archive mailboxes for user1 are moved to EXCH-MBX-01 and EXCH-MBX-A01, respectively, in the target forest. The primary and archive mailboxes for user2 are moved to either EXCH-MBX-02 or EXCH-MBX-03. The primary mailbox for user3 is moved to EXCH-MBX-01 and the archive mailbox is moved to either EXCH-MBX-A02 or EXCH-MBX-A03.
 
 In another example, let’s say you create a batch for an onboarding remote move migration in a hybrid deployment to move archive mailboxes to Exchange Online with the following command.
 
-    New-MigrationBatch -Name OnBoarding1 -SourceEndpoint RemoteEndpoint1 -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\OnBoarding1.csv")) -MailboxType ArchiveOnly -AutoStart
+```powershell
+New-MigrationBatch -Name OnBoarding1 -SourceEndpoint RemoteEndpoint1 -TargetDeliveryDomain cloud.contoso.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\OnBoarding1.csv")) -MailboxType ArchiveOnly -AutoStart
+```
 
 But you also want to move the primary mailboxes for selected users, so a portion of the OnBoarding1.csv file for this migration batch would look like this:
 
-    EmailAddress,MailboxType
-    user1@contoso.com,
-    user2@contoso.com,
-    user3@cloud.contoso.com,PrimaryAndArchive
-    user4@cloud.contoso.com,PrimaryAndArchive
-    ...
+```powershell
+EmailAddress,MailboxType
+user1@contoso.com,
+user2@contoso.com,
+user3@cloud.contoso.com,PrimaryAndArchive
+user4@cloud.contoso.com,PrimaryAndArchive
+...
+```
 
 Because the value for mailbox type in the CSV file overrides the values for the *MailboxType* parameter in the command to create the batch, only the archive mailbox for user1 and user2 is migrated to Exchange Online. But the primary and archive mailboxes for user3 and user4 are moved to Exchange Online.
 

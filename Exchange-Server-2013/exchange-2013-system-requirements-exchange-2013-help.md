@@ -281,9 +281,12 @@ The following table lists the supported operating systems for Exchange 2013.
 > <LI>
 > <P><STRONG>Windows Server 2008 R2</STRONG>&nbsp;&nbsp;&nbsp;Reinstall Windows Server and select the <STRONG>Full Installation</STRONG> option.</P>
 > <LI>
-> <P><STRONG>Windows Server 2012 R2</STRONG> or <STRONG>Windows Server 2012</STRONG>&nbsp;&nbsp;&nbsp;Convert your Windows Server Core mode server to a full installation by running the following command.</P><PRE><CODE>Install-WindowsFeature Server-Gui-Mgmt-Infra, Server-Gui-Shell -Restart</CODE></PRE></LI></UL>
-
-
+> <P><STRONG>Windows Server 2012 R2</STRONG> or <STRONG>Windows Server 2012</STRONG>&nbsp;&nbsp;&nbsp;Convert your Windows Server Core mode server to a full installation by running the following command.</P>
+>
+> ```Powershells
+> Install-WindowsFeature Server-Gui-Mgmt-Infra, Server-Gui-Shell -Restart
+> ```
+> </LI></UL>
 
 **Supported operating systems for Exchange 2013**
 

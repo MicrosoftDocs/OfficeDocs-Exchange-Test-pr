@@ -107,7 +107,12 @@ In this example, the following values are used:
 > <LI>
 > <P>The commands in Telnet Client are not case-sensitive. The SMTP command verbs are capitalized for clarity.</P>
 > <LI>
-> <P>You can't use the backspace key after you have connected to the destination SMTP server within the Telnet session. If you make a mistake as you type an SMTP command, you must press ENTER and then type the command again. Unrecognized SMTP commands or syntax errors result in an error message that resembles the following:</P><PRE><CODE>500 5.3.3 Unrecognized command</CODE></PRE></LI></UL>
+> <P>You can't use the backspace key after you have connected to the destination SMTP server within the Telnet session. If you make a mistake as you type an SMTP command, you must press ENTER and then type the command again. Unrecognized SMTP commands or syntax errors result in an error message that resembles the following:</P>
+> 
+> ```powershell
+> 500 5.3.3 Unrecognized command
+> ```
+> </LI></UL>
 
 
 

@@ -32,7 +32,7 @@ This configuration requires a multi-site VPN. It has always been possible to con
 In June 2014, Microsoft Azure introduced multi-site VPN support, which enabled organizations to connect multiple datacenters to the same Azure virtual network. This change also made it possible for organizations with two datacenters to leverage Microsoft Azure as a third location to place their DAG witness servers. To learn more about the multi-site VPN feature in Azure, see [Configure a Multi-Site VPN](https://go.microsoft.com/fwlink/?linkid=522621).
 
 
-> [!NOTE]
+> [!NOTE]  
 > This configuration leverages Azure virtual machines and a multi-site VPN for deploying the witness server and does not use the Azure Cloud Witness.
 
 
@@ -42,7 +42,7 @@ In June 2014, Microsoft Azure introduced multi-site VPN support, which enabled o
 The following diagram is an overview of using a Microsoft Azure file server VM as a DAG witness. You need an Azure virtual network, a multi-site VPN that connects your datacenters to your Azure virtual network, and a domain controller and a file server deployed on Azure virtual machines.
 
 
-> [!NOTE]
+> [!NOTE]  
 > It is technically possible to use a single Azure VM for this purpose and place the file witness share on the domain controller. However, this will result in an unnecessary elevation of privileges. Therefore, it is not a recommended configuration.
 
 
@@ -64,7 +64,7 @@ After you have your Azure subscription, you need to do the following in order:
 4.  Configure the DAG witness
 
 
-> [!NOTE]
+> [!NOTE]  
 > A significant portion of the guidance in this article involves Microsoft Azure configuration. Therefore, links to Azure documentation is used whenever applicable.
 
 
@@ -100,7 +100,7 @@ Do the following to register your DNS servers:
 4.  Repeat steps 1 through 3 for any other DNS servers you want to add.
     
 
-    > [!NOTE]
+    > [!NOTE]  
     > The DNS servers you register are not used in a round robin fashion. Azure VMs will use the first DNS server listed and will only use any additional servers if the first one is not available.
 
 
@@ -174,7 +174,7 @@ When creating your virtual gateway, note that you already specified that it will
 To establish the VPN gateway on the Azure side, follow the instructions in the [Start the virtual network gateway](https://msdn.microsoft.com/en-us/library/azure/jj156210.aspx#bkmk_startgateway) section of [Configure a Virtual Network Gateway in the Management Portal](https://msdn.microsoft.com/en-us/library/azure/jj156210.aspx).
 
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Only perform the steps in the "Start the virtual network gateway" section of the article, and do not continue to the subsequent sections.
 
 
@@ -187,17 +187,20 @@ The Azure management portal doesn't currently allow you to configure a multi-sit
 
 Open the file you exported in any XML editor. The gateway connections to your on-premises sites are listed in the "ConnectionsToLocalNetwork" section. Search for that term in the XML file to locate the section. This section in the configuration file will look like the following (assuming the site name you created for your local site is "Site A").
 
-    <ConnectionsToLocalNetwork>
-    
-        <LocalNetworkSiteRef name="Site A">
-    
-            <Connection type="IPsec" />
-    
-    </LocalNetworkSiteRef>
+```powershell
+<ConnectionsToLocalNetwork>
+
+    <LocalNetworkSiteRef name="Site A">
+
+        <Connection type="IPsec" />
+
+</LocalNetworkSiteRef>
+```
 
 To configure your second site, add another "LocalNetworkSiteRef" section under the "ConnectionsToLocalNetwork" section. The section in the updated configuration file will look like the following (assuming the site name for your second local site is "Site B").
 
-    <ConnectionsToLocalNetwork>
+```powershell
+<ConnectionsToLocalNetwork>
     
         <LocalNetworkSiteRef name="Site A">
     
@@ -208,6 +211,7 @@ To configure your second site, add another "LocalNetworkSiteRef" section under t
             <Connection type="IPsec" />
     
     </LocalNetworkSiteRef>
+```    
 
 Save the updated configuration settings file.
 
@@ -225,9 +229,11 @@ You need to use PowerShell to get the pre-shared keys. If you aren't familiar wi
 
 Use the [Get-AzureVNetGatewayKey](https://msdn.microsoft.com/en-us/library/azure/dn495198.aspx) cmdlet to extract the pre-shared keys. Run this cmdlet once for each tunnel. The following example shows the commands you need to run to extract the keys for tunnels between the virtual network "Azure Site" and sites "Site A" and "Site B." In this example, the outputs are saved into separate files. Alternatively, you can pipeline these keys to other PowerShell cmdlets or use them in a script.
 
-    Get-AzureVNETGatewayKey -VNetName "Azure Site" -LocalNetworkSiteName "Site A" > C:\Keys\KeysForTunnelToSiteA.txt 
-    
-    Get-AzureVNETGatewayKey -VNetName "Azure Site" -LocalNetworkSiteName "Site B" > C:\Keys\KeysForTunnelToSiteB.txt
+```powershell
+Get-AzureVNETGatewayKey -VNetName "Azure Site" -LocalNetworkSiteName "Site A" > C:\Keys\KeysForTunnelToSiteA.txt 
+
+Get-AzureVNETGatewayKey -VNetName "Azure Site" -LocalNetworkSiteName "Site B" > C:\Keys\KeysForTunnelToSiteB.txt
+```
 
 ## Configure on-premises VPN devices
 
@@ -263,17 +269,21 @@ Other devices might require additional verifications. For example, the configura
 
 At this point, both of your sites are connected to your Azure virtual network through the VPN gateways. You can validate the status of the multi-site VPN by running the following command in PowerShell.
 
-    Get-AzureVnetConnection -VNetName "Azure Site" | Format-Table LocalNetworkSiteName, ConnectivityState
+```powershell
+Get-AzureVnetConnection -VNetName "Azure Site" | Format-Table LocalNetworkSiteName, ConnectivityState
+```
 
 If both tunnels are up and running, the output of this command will look like the following.
 
-    LocalNetworkSiteName    ConnectivityState
-    
-    --------------------    -----------------
-    
-    Site A                  Connected
-    
-    Site B                  Connected
+```powershell
+LocalNetworkSiteName    ConnectivityState
+
+--------------------    -----------------
+
+Site A                  Connected
+
+Site B                  Connected
+```
 
 You can also verify connectivity by viewing the virtual network dashboard in the Azure management portal. The **STATUS** column for both sites will show as **Connected**.
 
@@ -291,15 +301,15 @@ You need to create a minimum of two virtual machines in Microsoft Azure for this
 
 2.  Specify preferred IP addresses for both the domain controller and the file server using Azure PowerShell. When you specify a preferred IP address for a VM, it needs to be updated, which will require restarting the VM. The following example sets the IP addresses for Azure-DC and Azure-FSW to 10.0.0.10 and 10.0.0.11 respectively.
     
-        Get-AzureVM Azure-DC | Set-AzureStaticVNetIP -IPAddress 10.0.0.10 | Update-AzureVM
-        
-        Get-AzureVM Azure-FSW | Set-AzureStaticVNetIP -IPAddress 10.0.0.11 | Update-AzureVM
+    ```powershell
+    Get-AzureVM Azure-DC | Set-AzureStaticVNetIP -IPAddress 10.0.0.10 | Update-AzureVM
+
+    Get-AzureVM Azure-FSW | Set-AzureStaticVNetIP -IPAddress 10.0.0.11 | Update-AzureVM
+    ```
     
 
-    > [!NOTE]
+    > [!NOTE]  
     > A VM with a preferred IP address will attempt to use that address. However, if that address has been assigned to a different VM, the VM with the preferred IP address configuration will not start. To avoid this situation, make sure that the IP address you use isn't assigned to another VM. See <A href="https://msdn.microsoft.com/library/azure/dn630228.aspx">Configure a Static Internal IP Address for a VM</A> for more information.
-
-
 
 3.  Provision the domain controller VM on Azure using the standards used by your organization.
 
@@ -328,8 +338,8 @@ Finally, you need to configure your DAG to use the new witness server. By defaul
 2.  Run the following command to configure the witness server for your DAGs.
     
     ```powershell
-Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessServer Azure-FSW
-```
+    Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessServer Azure-FSW
+    ```
 
 See the following topics for more information:
 
@@ -343,21 +353,23 @@ At this point, you have configured your DAG to use the file server on Azure as y
 
 1.  Validate the DAG configuration by running the following command.
     
-        Get-DatabaseAvailabilityGroup -Identity DAG1 -Status | Format-List Name, WitnessServer, WitnessDirectory, WitnessShareInUse
+    ```powershell
+    Get-DatabaseAvailabilityGroup -Identity DAG1 -Status | Format-List Name, WitnessServer, WitnessDirectory, WitnessShareInUse
+    ```
     
     Verify that the *WitnessServer* parameter is set to the file server on Azure, the *WitnessDirectory* parameter is set to the correct path, and the *WitnessShareInUse* parameter shows **Primary**.
 
 2.  If the DAG has an even number of nodes, the file share witness will be configured. Validate the file share witness setting in cluster properties by running the following command. The value for the *SharePath* parameter should point to the file server and display the correct path.
     
     ```powershell
-Get-ClusterResource -Cluster MBX1 | Get-ClusterParameter | Format-List
-```
+    Get-ClusterResource -Cluster MBX1 | Get-ClusterParameter | Format-List
+    ```
 
 3.  Next, verify the status of the "File Share Witness" cluster resource by running the following command. The *State* of the cluster resource should display **Online**.
     
     ```powershell
-Get-ClusterResource -Cluster MBX1
-```
+    Get-ClusterResource -Cluster MBX1
+    ```
 
 4.  Lastly, verify that the share is successfully created on the file server by reviewing the folder in File Explorer and the shares in Server Manager.
 
@@ -367,4 +379,3 @@ Get-ClusterResource -Cluster MBX1
 [Planning for high availability and site resilience](planning-for-high-availability-and-site-resilience-exchange-2013-help.md)  
 [Switchovers and Failovers](switchovers-and-failovers-exchange-2013-help.md)  
 [Managing database availability groups](managing-database-availability-groups-exchange-2013-help.md)
-

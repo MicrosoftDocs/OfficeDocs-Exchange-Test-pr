@@ -11,7 +11,6 @@ mtps_version: v=EXCHG.150
 # Manage Connection Filtering on Edge Transport Servers
 
  
-
 _**Applies to:** Exchange Server 2013_
 
 
@@ -38,7 +37,7 @@ Each of these features can be enabled or disabled separately.
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
 
-> [!TIP]
+> [!TIP]  
 > Having problems? Ask for help in the Exchange forums. Visit the forums at <A href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</A>, <A href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</A>, or <A href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</A>.
 
 
@@ -85,7 +84,9 @@ Use the **IPBlockListConfig** cmdlets to view and configure how connection filte
 
 To view the configuration of the IP Block list, run the following command:
 
-    Get-IPBlockListConfig | Format-List *Enabled,*Response
+```powershell
+Get-IPBlockListConfig | Format-List *Enabled,*Response
+```
 
 ## Use the Shell to enable or disable the IP Block list
 
@@ -113,7 +114,9 @@ Get-IPBlockListConfig | Format-List Enabled
 
 To configure the IP Block list, use the following syntax:
 
-    Set-IPBlockListConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false> -MachineEntryRejectionResponse "<Custom response text>"] [-StaticEntryRejectionResponse "<Custom response text>"]
+```powershell
+Set-IPBlockListConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false> -MachineEntryRejectionResponse "<Custom response text>"] [-StaticEntryRejectionResponse "<Custom response text>"]
+```
 
 This example configures the IP Block list with the settings as follows:
 
@@ -125,13 +128,17 @@ This example configures the IP Block list with the settings as follows:
 
 <!-- end list -->
 
-    Set-IPBlockListConfig -InternalMailEnabled $true -MachineEntryRejectionResponse "Connection from IP address {0} was rejected by sender reputation." -StaticEntryRejectionResponse "Connection from IP address {0} was rejected by connection filtering."
+```powershell
+Set-IPBlockListConfig -InternalMailEnabled $true -MachineEntryRejectionResponse "Connection from IP address {0} was rejected by sender reputation." -StaticEntryRejectionResponse "Connection from IP address {0} was rejected by connection filtering."
+```
 
 ## How do you know this worked?
 
 To verify that you successfully configured the IP Block list, run the following command and verify that the values displayed are the values you configured.
 
-    Get-IPBlockListConfig | Format-List *MailEnabled,*Response
+```powershell
+Get-IPBlockListConfig | Format-List *MailEnabled,*Response
+```
 
 ## Use the Shell to view IP Block list entries
 
@@ -159,13 +166,13 @@ Get-IPBlockListEntry -IPAddress 192.168.1.13
 > [!NOTE]
 > When you use the <EM>IPAddress</EM> parameter, the resulting IP Block list entry can be an individual IP address, an IP address range, or a Classless InterDomain Routing (CIDR) IP. To use the <EM>Identity</EM> parameter, you specify the integer value that's assigned to the IP Block list entry.
 
-
-
 ## Use the Shell to add IP Block list entries
 
 To add IP Block list entries, use the following syntax:
 
-    Add-IPBlockListEntry <-IPAddress IPAddress | -IPRange IP range or CIDR IP> [-ExpirationTime <DateTime>] [-comment "<Descriptive Comment>"]
+```powershell
+Add-IPBlockListEntry <-IPAddress IPAddress | -IPRange IP range or CIDR IP> [-ExpirationTime <DateTime>] [-comment "<Descriptive Comment>"]
+```
 
 The following example adds the IP Block list entry for the IP address range 192.168.1.10 through 192.168.1.15 and configures the IP Block list entry to expire on July 4, 2014 at 15:00.
 
@@ -219,7 +226,9 @@ Use the **IPBlockListProvidersConfig** cmdlets to view and configure how connect
 
 To view how connection filtering uses all IP Block List providers, run the following command:
 
-    Get-IPBlockListProvidersConfig | Format-List *Enabled,Bypassed*
+```powershell
+Get-IPBlockListProvidersConfig | Format-List *Enabled,Bypassed*
+```
 
 ## Use the Shell to enable or disable all IP Block List providers
 
@@ -247,7 +256,9 @@ Get-IPBlockListProvidersConfig | Format-List Enabled
 
 To configure how connection filtering uses all IP Block List providers, use the following syntax:
 
-    Set-IPBlockListProvidersConfig [-BypassedRecipients <recipient1,recipient2...>] [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>]
+```powershell
+Set-IPBlockListProvidersConfig [-BypassedRecipients <recipient1,recipient2...>] [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>]
+```
 
 The following example configures all IP Block List providers with the following settings:
 
@@ -265,7 +276,9 @@ For more information, see [Set-IPBlockListProvidersConfig](https://technet.micro
 
 To verify that you successfully configured all IP Block List providers, run the following command and verify that the values displayed are the values you configured.
 
-    Get-IPBlockListProvidersConfig | Format-List *MailEnabled,Bypassed*
+```powershell
+Get-IPBlockListProvidersConfig | Format-List *MailEnabled,Bypassed*
+```
 
 ## Use the Shell to view IP Block List providers
 
@@ -283,13 +296,17 @@ Get-IPBlockListProvider <IPBlockListProviderIdentity>
 
 The following example show the details of the provider named Contoso IP Block List Provider.
 
-    Get-IPBlockListProvider "Contoso IP Block List Provider" | Format-List Name,Enabled,Priority,LookupDomain,*Match,*Response
+```powershell
+Get-IPBlockListProvider "Contoso IP Block List Provider" | Format-List Name,Enabled,Priority,LookupDomain,*Match,*Response
+```
 
 ## Use the Shell to add an IP Block List provider
 
 To add an IP Block List provider, use the following syntax:
 
-    Add-IPBlockListProvider -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-Enabled <$true | $false>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>] [-RejectionResponse "<Custom Text>"]
+```powershell
+Add-IPBlockListProvider -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-Enabled <$true | $false>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>] [-RejectionResponse "<Custom Text>"]
+```
 
 This example creates an IP Block List provider named "Contoso IP Block List Provider" with the following options:
 
@@ -299,13 +316,12 @@ This example creates an IP Block List provider named "Contoso IP Block List Prov
 
 <!-- end list -->
 
-    Add-IPBlockListProvider -Name "Contoso IP Block List Provider" -LookupDomain rbl.contoso.com -BitmaskMatch 127.0.0.1
+```powershell
+Add-IPBlockListProvider -Name "Contoso IP Block List Provider" -LookupDomain rbl.contoso.com -BitmaskMatch 127.0.0.1
+```
 
-
-> [!NOTE]
+> [!NOTE]  
 > When you add a new IP Block List provider, it's enabled by default (the value of <EM>Enabled</EM> is <CODE>$true</CODE>), and the priority value is incremented (the first entry has the <EM>Priority</EM> value 1).
-
-
 
 For more information, see [Add-IPBlockListProvider](https://technet.microsoft.com/en-us/library/bb124358\(v=exchg.150\)).
 
@@ -415,7 +431,9 @@ Use the **IPAllowListConfig** cmdlets to view and configure how connection filte
 
 To view the configuration of the IP Allow list, run the following command.
 
-    Get-IPAllowListConfig | Format-List *Enabled
+```powershell
+Get-IPAllowListConfig | Format-List *Enabled
+```
 
 ## Use the Shell to enable or disable the IP Allow list
 
@@ -443,7 +461,9 @@ Get-IPAllowListConfig | Format-List *Enabled
 
 To configure the IP Allow list, use the following syntax:
 
-    Set-IPAllowListConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>
+```powershell
+Set-IPAllowListConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>
+```
 
 This example configures the IP Allow list to filter incoming connections from internal and external mail servers. By default, connections are filtered from external mail servers only (*ExternalMailEnabled* is set to `$true`, and *InternalMailEnabled* is set to `$false`). Non-authenticated connections and authenticated connections from external partners are considered external.
 
@@ -455,7 +475,9 @@ Set-IPAllowListConfig -InternalMailEnabled $true
 
 To verify that you successfully configured the IP Allow list, run the following command and verify that the values displayed are the values you configured.
 
-    Get-IPAllowListConfig | Format-List *MailEnabled
+```powershell
+Get-IPAllowListConfig | Format-List *MailEnabled
+```
 
 ## Use the Shell to view IP Allow list entries
 
@@ -479,17 +501,16 @@ For example, to view the IP Allow list entry that contains the IP address 192.16
 Get-IPAllowListEntry -IPAddress 192.168.1.13
 ```
 
-
 > [!NOTE]
 > When you use the <EM>IPAddress</EM> parameter, the resulting IP Allow list entry can be an individual IP address, an IP address range, or a Classless InterDomain Routing (CIDR) IP. To use the <EM>Identity</EM> parameter, you specify the integer value that's assigned to the IP Allow list entry.
-
-
 
 ## Use the Shell to add IP Allow list entries
 
 To add IP Allow list entries, use the following syntax:
 
-    Add-IPAllowListEntry <-IPAddress IPAddress | -IPRange IP range or CIDR IP> [-ExpirationTime <DateTime>] [-Comment "<Descriptive Comment>"]
+```powershell
+Add-IPAllowListEntry <-IPAddress IPAddress | -IPRange IP range or CIDR IP> [-ExpirationTime <DateTime>] [-Comment "<Descriptive Comment>"]
+```
 
 This example adds the IP Allow list entry for the IP address range 192.168.1.10 through 192.168.1.15 and configures the IP Allow list entry to expire on July 4, 2014 at 15:00.
 
@@ -543,7 +564,9 @@ Use the **IPAllowListProvidersConfig** cmdlets to view and configure how connect
 
 To view how connection filtering uses all IP Allow List providers, run the following command:
 
-    Get-IPAllowListProvidersConfig | Format-List *Enabled
+```powershell
+Get-IPAllowListProvidersConfig | Format-List *Enabled
+```
 
 ## Use the Shell to enable or disable all IP Allow List providers
 
@@ -571,7 +594,9 @@ Get-IPAllowListProvidersConfig | Format-List Enabled
 
 To configure how connection filtering uses all IP Allow List providers, use the following syntax:
 
-    Set-IPAllowListProvidersConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>]
+```powershell
+Set-IPAllowListProvidersConfig [-ExternalMailEnabled <$true | $false>] [-InternalMailEnabled <$true | $false>]
+```
 
 This example configures all IP Allow List providers to filter incoming connections from internal and external mail servers. By default, connections are filtered from external mail servers only (*ExternalMailEnabled* is set to `$true`, and *InternalMailEnabled* is set to `$false`). Non-authenticated connections and authenticated connections from external partners are considered external.
 
@@ -585,7 +610,9 @@ For more information, see [Set-IPBlockListProvidersConfig](https://technet.micro
 
 To verify that you successfully configured all IP Allow List providers, run the following command and verify that the values displayed are the values you configured.
 
-    Get-IPAllowListProvidersConfig | Format-List *MailEnabled
+```powershell
+Get-IPAllowListProvidersConfig | Format-List *MailEnabled
+```
 
 ## Use the Shell to view IP Allow List providers
 
@@ -603,13 +630,17 @@ Get-IPAllowListProvider <IPAllowListProviderIdentity>
 
 This example show the details of the provider named Contoso IP Allow List Provider.
 
-    Get-IPAllowListProvider "Contoso IP Allow List Provider" | Format-List Name,Enabled,Priority,LookupDomain,*Match
+```powershell
+Get-IPAllowListProvider "Contoso IP Allow List Provider" | Format-List Name,Enabled,Priority,LookupDomain,*Match
+```
 
 ## Use the Shell to add an IP Allow List provider
 
 To add an IP Allow List provider, use the following syntax:
 
-    Add-IPAllowListProvider -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-Enabled <$true | $false>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>]
+```powershell
+Add-IPAllowListProvider -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-Enabled <$true | $false>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>]
+```
 
 This example creates an IP Allow List provider named "Contoso IP Allow List Provider" with the following options:
 
@@ -619,13 +650,12 @@ This example creates an IP Allow List provider named "Contoso IP Allow List Prov
 
 <!-- end list -->
 
-    Add-IPAllowListProvider -Name "Contoso IP Allow List Provider" -LookupDomain allow.contoso.com -BitmaskMatch 127.0.0.1
+```powershell
+Add-IPAllowListProvider -Name "Contoso IP Allow List Provider" -LookupDomain allow.contoso.com -BitmaskMatch 127.0.0.1
+```
 
-
-> [!NOTE]
+> [!NOTE]  
 > When you add a new IP Allow List provider, it's enabled by default (the value of <EM>Enabled</EM> is <CODE>$true</CODE>), and the priority value is incremented (the first entry has the <EM>Priority</EM> value 1).
-
-
 
 For more information, see [Add-IPBlockListProvider](https://technet.microsoft.com/en-us/library/bb124358\(v=exchg.150\)).
 
@@ -671,7 +701,9 @@ The configuration options that are available on the **Set-IPAllowListProvider** 
 
 To configure an existing IP Allow List provider, use the following syntax:
 
-    Set-IPAllowListProvider <IPAllowListProviderIdentity> -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>]
+```powershell
+Set-IPAllowListProvider <IPAllowListProviderIdentity> -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>]
+```
 
 For example, to add the IP address status code 127.0.0.1 to the list of existing status codes for the provider named Contoso IP Allow List Provider, run the following command:
 
@@ -724,4 +756,3 @@ To verify that you successfully removed an IP Allow List provider, run the follo
 ```powershell
 Get-IPAllowListProvider
 ```
-

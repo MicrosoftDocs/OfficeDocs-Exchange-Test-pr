@@ -28,7 +28,7 @@ For additional information related to IMAP4, see [POP3 and IMAP4 in Exchange Ser
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
 
 
-> [!TIP]
+> [!TIP]  
 > Having problems? Ask for help in the Exchange forums. Visit the forums at <A href="https://go.microsoft.com/fwlink/p/?linkid=60612">Exchange Server</A>, <A href="https://go.microsoft.com/fwlink/p/?linkid=267542">Exchange Online</A>, or <A href="https://go.microsoft.com/fwlink/p/?linkid=285351">Exchange Online Protection</A>..
 
 
@@ -92,8 +92,8 @@ Or
 1.  Run the following command in the Shell.
     
     ```powershell
-Get-ImapSettings | format-list
-```
+    Get-ImapSettings | format-list
+    ```
 
 2.  Verify the connection settings are correct.
 
@@ -104,4 +104,3 @@ After you set authentication time-out limits for IMAP4, you may also want to:
 [Enable IMAP4 in Exchange 2013](enable-imap4-in-exchange-2013-exchange-2013-help.md)
 
 [Set connection limits for IMAP4](set-connection-limits-for-imap4-exchange-2013-help.md)
-

@@ -45,7 +45,9 @@ Administrator audit logging in Microsoft Exchange Server 2013 enables you to cre
 
 By default, audit logging creates a log entry for every cmdlet that's run. If you're enabling audit logging for the first time and want this behavior, you don't have to change the cmdlet audit list. If you've previously specified cmdlets to audit and now want to audit all cmdlets, you can audit all cmdlets by specifying the asterisk (\*) wildcard character with the *AdminAuditLogCmdlets* parameter on the **Set-AdminAuditLogConfig** cmdlet, as shown in the following command.
 
-    Set-AdminAuditLogConfig -AdminAuditLogCmdlets *
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogCmdlets *
+```
 
 You can specify which cmdlets to audit by providing a list of cmdlets using the *AdminAuditLogCmdlets* parameter. When you provide the list of cmdlets to audit, you can provide single cmdlets, cmdlets with the asterisk (\*) wildcard characters, or a mix of both. Each entry in the list is separated by commas. The following values are all valid:
 
@@ -59,7 +61,9 @@ You can specify which cmdlets to audit by providing a list of cmdlets using the 
 
 This example audits the cmdlets specified in the preceding list.
 
-    Set-AdminAuditLogConfig -AdminAuditLogCmdlets New-Mailbox, *TransportRule, *Management*, Set-Transport*
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogCmdlets New-Mailbox, *TransportRule, *Management*, Set-Transport*
+```
 
 For detailed syntax and parameter information, see [Set-AdminAuditLogConfig](https://technet.microsoft.com/en-us/library/dd298169\(v=exchg.150\)).
 
@@ -67,7 +71,9 @@ For detailed syntax and parameter information, see [Set-AdminAuditLogConfig](htt
 
 By default, audit logging creates a log entry for every cmdlet that's run, regardless of the parameters specified. If you're enabling audit logging for the first time and want this behavior, you don't have to change the parameter audit list. If you've previously specified parameters to audit and now want to audit all parameters, you can do so by specifying the asterisk (\*) wildcard character with the *AdminAuditLogParameters* parameter on the **Set-AdminAuditLogConfig** cmdlet, as shown in the following command.
 
-    Set-AdminAuditLogConfig -AdminAuditLogParameters *
+  ```powershell
+  Set-AdminAuditLogConfig -AdminAuditLogParameters *
+  ```
 
 You can specify which parameters you want to audit by using the *AdminAuditLogParameters* parameter. When you provide the list of parameters to audit, you can provide single parameters, parameters with the asterisk (\*) wildcard characters, or a mix of both. Each entry in the list is separated by commas. The following values are all valid:
 
@@ -80,14 +86,14 @@ You can specify which parameters you want to audit by using the *AdminAuditLogPa
   - `*Region`
 
 
-> [!NOTE]
+> [!NOTE]  
 > For an audit log entry to be created when a command is run, the command must include at least one or more parameters that exist on at least one or more cmdlets specified with the <EM>AdminAuditLogCmdlets</EM> parameter.
-
-
 
 This example audits the parameters specified in the preceding list.
 
-    Set-AdminAuditLogConfig -AdminAuditLogParameters Database, *Address*, Custom*, *Region
+```powershell
+Set-AdminAuditLogConfig -AdminAuditLogParameters Database, *Address*, Custom*, *Region
+```
 
 For detailed syntax and parameter information, see [Set-AdminAuditLogConfig](https://technet.microsoft.com/en-us/library/dd298169\(v=exchg.150\)).
 
@@ -105,11 +111,8 @@ You can specify the number of days, hours, minutes, and seconds that audit log e
 
   - **ss**   Number of seconds to keep the audit log entry
 
-
-> [!WARNING]
+> [!WARNING]  
 > You can set the audit log age limit to a value that's less than the current age limit. If you do this, any audit log entry whose age exceeds the new age limit will be deleted.<BR>If you set the age limit to 0, Exchange deletes all the entries in the audit log.<BR>We recommend that you grant permissions to configure the audit log age limit only to highly trusted users.
-
-
 
 This example specifies an age limit of two years and six months.
 

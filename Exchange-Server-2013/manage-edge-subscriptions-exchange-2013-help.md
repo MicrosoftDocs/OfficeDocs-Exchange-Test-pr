@@ -133,7 +133,9 @@ A manual EdgeSync resets the EdgeSync synchronization schedule. The next automat
 
 To manually run EdgeSync, use the following syntax.
 
-    Start-EdgeSynchronization [-Server <MailboxServerIdentity>] [-TargetServer <EdgeTransportServerIdentity> [-ForceFullSync]
+```powershell
+Start-EdgeSynchronization [-Server <MailboxServerIdentity>] [-TargetServer <EdgeTransportServerIdentity> [-ForceFullSync]
+```
 
 The following example starts EdgeSync with the following options:
 

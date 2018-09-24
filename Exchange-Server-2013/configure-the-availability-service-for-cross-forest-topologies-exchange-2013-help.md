@@ -57,13 +57,16 @@ To enable GAL synchronization, you create management agents that import mail-ena
 
 This example configures the Availability service to retrieve per-user free/busy information on a Mailbox server in the target forest.
 
-    Get-MailboxServer | Add-ADPermission -Accessrights Extendedright -Extendedrights "ms-Exch-
-    EPI-Token-Serialization" -User "<Remote Forest Domain>\Exchange servers"
+```powershell
+Get-MailboxServer | Add-ADPermission -Accessrights Extendedright -Extendedrights "ms-Exch-
+EPI-Token-Serialization" -User "<Remote Forest Domain>\Exchange servers"
+```
 
 This example defines the free/busy access method that the Availability service uses on the local Mailbox server in the source forest. The local Mailbox server is configured to access free/busy information from the forest ContosoForest.com on a per-user basis. This example uses the service account to retrieve free/busy information.
 
-    Add-AvailabilityAddressSpace -Forestname ContosoForest.com -AccessMethod PerUserFB -UseServiceAccount:$true
-
+```powershell
+Add-AvailabilityAddressSpace -Forestname ContosoForest.com -AccessMethod PerUserFB -UseServiceAccount:$true
+```
 
 > [!NOTE]
 > To configure bidirectional cross-forest availability, repeat these steps in the target forest.
@@ -76,7 +79,7 @@ If you choose to configure cross-forest availability with trust, and also choose
 
 This example configures trusted cross-forest availability with a service account.
 
-    Get-MailboxServer | Add-ADPermission -Accessrights Extendedright -Extendedright "ms-Exch-EPI-Token-Serialization" -User "<Remote Forest Domain>\Exchange servers"
+Get-MailboxServer | Add-ADPermission -Accessrights Extendedright -Extendedright "ms-Exch-EPI-Token-Serialization" -User "<Remote Forest Domain>\Exchange servers"
 
 For detailed information about syntax and parameters, see the following topics:
 
@@ -98,6 +101,7 @@ Set-AvailabilityConfig -OrgWideAccount "Contoso.com\User"
 
 This example adds the Availability address space configuration object for the source forest.
 
-    $a = Get-Credential (Enter the credentials for organization-wide user in Contoso.com domain)
-    Add-AvailabilityAddressspace -Forestname Contoso.com -Accessmethod OrgWideFB -Credential:$a
-
+```powershell
+$a = Get-Credential (Enter the credentials for organization-wide user in Contoso.com domain)
+Add-AvailabilityAddressspace -Forestname Contoso.com -Accessmethod OrgWideFB -Credential:$a
+```
