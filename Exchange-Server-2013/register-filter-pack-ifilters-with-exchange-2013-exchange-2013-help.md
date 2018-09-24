@@ -76,8 +76,8 @@ Deploying the Office 2010 Filter Pack consists of two main steps:
 3.  Start Registry Editor and locate the following registry subkey:
     
     ```powershell
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
-```
+    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
+    ```
 
 4.  Under **CLSID**, add a subkey for OneNote files as follows:
     
@@ -106,8 +106,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
 6.  Locate the following registry key:
     
     ```powershell
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\filters
-```
+    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\filters
+    ```
 
 7.  Under **filters**, add a subkey for .one extensions as follows.
     
@@ -180,8 +180,8 @@ This procedure shows how to deploy the [Adobe PDF IFilter](https://www.adobe.com
 2.  Start Registry Editor and locate the following subkey:
     
     ```powershell
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
-```
+    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
+    ```
 
 3.  Under **CLSID**, add a subkey for PDF files as follows:
     
@@ -199,8 +199,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\CLSID
 4.  Locate the following registry key:
     
     ```powershell
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\filters
-```
+    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExchangeServer\v15\HubTransportRole\filters
+    ```
 
 5.  Under **filters**, add a subkey for .pdf extensions as follows:
     

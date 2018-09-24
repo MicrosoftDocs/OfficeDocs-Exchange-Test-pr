@@ -137,7 +137,9 @@ This example creates a new user account and mailbox for Pilar Pinilla with the f
 
 <!-- end list -->
 
+```powershell
     New-Mailbox -Alias pilarp -Name "Pilar Pinilla" -FirstName Pilar -LastName Pinilla -DisplayName "Pilar Pinilla" -UserPrincipalName pilarp@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
+```
 
 For syntax and parameter information, see [New-Mailbox](https://technet.microsoft.com/en-us/library/aa997663\(v=exchg.150\)).
 
@@ -150,8 +152,8 @@ To verify that you’ve successfully created a user mailbox, do one of the follo
   - In the Shell, run the following command to display information about the new user mailbox.
     
     ```powershell
-Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
-```
+    Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+    ```
 
 ## Create a mailbox for an existing user
 
@@ -228,8 +230,8 @@ To verify that you’ve successfully created a mailbox for an existing user, do 
   - In the Shell, run the following command to display information about the new mailbox-enabled user.
     
     ```powershell
-Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
-```
+    Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+    ```
     
     Note that value for the *RecipientTypeDetails* property is `UserMailbox`.
 

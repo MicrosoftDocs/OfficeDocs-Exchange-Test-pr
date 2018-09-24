@@ -39,17 +39,23 @@ Microsoft Exchange Server 2013 administrators can manually download anti-malwar
 
 To download engine and definition updates, run the following command:
 
+```powershell
     & $env:ExchangeInstallPath\Scripts\Update-MalwareFilteringServer.ps1 -Identity <FQDN of server>
+```
 
 This example manually downloads the engine and definition updates on the Exchange server named mailbox01.contoso.com:
 
+```powershell
     & $env:ExchangeInstallPath\Scripts\Update-MalwareFilteringServer.ps1 -Identity mailbox01.contoso.com
+```
 
 Optionally, you can use the *EngineUpdatePath* parameter to download updates from somewhere other than the default location of `http://forefrontdl.microsoft.com/server/scanengineupdate`. You can use this parameter to specify an alternate HTTP address or a UNC path. If you specify a UNC path, the network service must have access to the path.
 
 This example manually downloads engine and definition updates on the Exchange server named mailbox01.contoso.com from the UNC path `\\FileServer01\Data\MalwareUpdates`:
 
+```powershell
     & $env:ExchangeInstallPath\Scripts\Update-MalwareFilteringServer.ps1 -Identity mailbox01.contoso.com -EngineUpdatePath \\FileServer01\Data\MalwareUpdates
+```
 
 ## How do you know this worked?
 
@@ -86,18 +92,20 @@ To configure the proxy server settings for anti-malware updates, perform the fol
 1.  Run the following command:
     
     ```powershell
-Add-PsSnapin Microsoft.Forefront.Filtering.Management.Powershell
-```
+    Add-PsSnapin Microsoft.Forefront.Filtering.Management.Powershell
+    ```
 
 2.  Use the **Get-ProxySettings** and **Set-ProxySettings** cmdlets to view and configure the proxy server settings that are used to download anti-malware updates. The **Set-ProxySettings** cmdlet uses the following syntax:
     
+    ```powershell
         Set-ProxySettings -Enabled <$true | $false> -Server <Name or IP address of proxy server> -Port <TCP port of proxy server>
-    
+    ```
+
     For example, to configure anti-malware updates to use the proxy server at address 172.17.17.10 on TCP port 80, run the following command.
     
     ```powershell
-Set-ProxySettings -Enabled $true -Server 172.17.17.10 -Port 80
-```
+    Set-ProxySettings -Enabled $true -Server 172.17.17.10 -Port 80
+    ```
     
     To verify the proxy server settings, run the **Get-ProxySettings** cmdlet.
 

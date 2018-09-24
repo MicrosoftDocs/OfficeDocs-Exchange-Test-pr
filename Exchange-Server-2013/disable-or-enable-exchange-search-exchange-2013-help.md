@@ -51,11 +51,15 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 This command disables Exchange Search for a mailbox database named EXCH01.
 
+```powershell
     Set-MailboxDatabase "Mailbox Database (EXCH01)" -IndexEnabled $false
+```
 
 This command enables Exchange Search for a mailbox database named EXCH01.
 
+```powershell
     Set-MailboxDatabase "Mailbox Database (EXCH01)" -IndexEnabled $true
+```
 
 For detailed syntax and parameter information, see [Set-MailboxDatabase](https://technet.microsoft.com/en-us/library/bb123971\(v=exchg.150\)).
 
@@ -87,21 +91,21 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 Run the following commands to stop and disable the Microsoft Exchange Search service.
 
-```
+```powershell
 Stop-Service MSExchangeFastSearch
 ```
 
-```
+```powershell
 Set-Service MSExchangeFastSearch -StartupType Disabled
 ```
 
 Run the following commands to configure the Exchange Search service to start automatically and then start the service.
 
-```
+```powershell
 Set-Service MSExchangeFastSearch -StartupType Automatic
 ```
 
-```
+```powershell
 Start-Service MSExchangeFastSearch
 ```
 

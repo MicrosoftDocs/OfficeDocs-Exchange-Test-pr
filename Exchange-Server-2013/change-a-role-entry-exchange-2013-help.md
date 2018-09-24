@@ -61,11 +61,15 @@ To add parameters to a role entry, you need to specify the parameters you want t
 
 To add parameters to a role entry, use the following syntax.
 
+```powershell
     Set-ManagementRoleEntry <role name>\<cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -AddParameter
+```
 
 This example adds the *EmailAddresses* and *Type* parameters to the **Set-Mailbox** cmdlet on the Recipient Administrators role.
 
+```powershell
     Set-ManagementRoleEntry "Recipient Administrators\Set-Mailbox" -Parameters EmailAddresses, Type -AddParameter
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 
@@ -75,11 +79,15 @@ To remove parameters from a role entry, you need to specify the parameters you w
 
 To remove parameters from a role entry, use the following syntax.
 
+```powershell
     Set-ManagementRoleEntry <role name>\<cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -RemoveParameter
+```
 
 This example removes the *Port*, *ProtocolLoggingLevel*, and *SmartHostAuthMechanism* parameters from the **Set-SendConnector** cmdlet on the Tier 1 Server Administrators role.
 
+```powershell
     Set-ManagementRoleEntry "Tier 1 Server Administrators\Set-SendConnector" -Parameters Port, ProtocolLoggingLevel, SmartHostAuthMechanism -RemoveParameter
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 
@@ -97,11 +105,15 @@ Removing all the parameters from a role entry is most useful when you want to ma
 
 To remove all the parameters from a role entry, use the following syntax.
 
+```powershell
     Set-ManagementRoleEntry <role name>\<cmdlet> -Parameters $Null 
+```
 
 This example removes all the parameters from the **Set-CASMailbox** cmdlet on the Recipient Administrators role.
 
+```powershell
     Set-ManagementRoleEntry "Recipient Administrators\Set-CASMailbox" -Parameters $Null 
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 
@@ -111,11 +123,15 @@ If you want only a specific set of parameters to be included on a role entry, sp
 
 To specify a specific set of parameters, use the following syntax.
 
+```powershell
     Set-ManagementRoleEntry <role name>\<cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...>
+```
 
 This example includes only the *Identity*, *DisplayName*, *MissedCallNotificationEnabled*, and *PersonalAuthAttendantEnabled* parameters on the **Set-UMMailbox** cmdlet on the Seattle Mail Recipients role.
 
+```powershell
     Set-ManagementRoleEntry "Seattle Mail Recipients\Set-UMMailbox" -Parameters Identity, DisplayName, MissedCallNotificationEnabled, PersonalAutoAttendantEnabled
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 

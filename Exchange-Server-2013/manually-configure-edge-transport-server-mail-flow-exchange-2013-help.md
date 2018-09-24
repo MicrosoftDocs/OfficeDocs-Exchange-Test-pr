@@ -63,11 +63,15 @@ If you decide to partition the inbound and outbound mail processing between two 
 
   - For the outbound Edge Transport server, run the following command on the Mailbox server.
     
+    ```powershell
         New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0)) -Site "Site-A" -CreateInboundSendConnector $false -CreateInternetSendConnector $true
+    ```
 
   - For the inbound Edge Transport server, run the following command on the Mailbox server.
     
+    ```powershell
         New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0)) -Site "Site-A" -CreateInboundSendConnector $true -CreateInternetSendConnector $false
+    ```
 
 ## Route outbound email to a smart host
 
@@ -75,14 +79,17 @@ If your Exchange organization routes all outbound email through a smart host, th
 
 Run the following command on the Mailbox server to suppress automatic creation of the Send connector to the Internet.
 
+```powershell
     New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0)) -Site "Site-A" -CreateInternetSendConnector $false
+```
 
 After the Edge Subscription process is complete, manually create a Send connector to the Internet. Create the Send connector inside the Exchange organization, and select the Edge Subscription as the source server for the connector. Select the `Custom` usage type and configure one or more smart hosts. This new Send connector will be replicated to the AD LDS instance on the Edge Transport server the next time EdgeSync synchronizes configuration data. You can force immediate EdgeSync synchronization by running the **Start-EdgeSynchronization** cmdlet on a Mailbox server.
 
 Example: Using the Shell to configure a Send connector for a subscribed Edge Transport server to route messages for all Internet address spaces through a smart host. Run this task on a Mailbox server inside the Exchange organization, not on the Edge Transport server.
 
+```powershell
     New-SendConnector -Name "EdgeSync - Site-A to Internet" -Usage Custom -AddressSpaces SMTP:*;100 -DNSRoutingEnabled $false -SmartHosts 192.168.10.1 -SmartHostAuthMechanism None -SourceTransportServers EdgeSubscriptionName
-
+```
 
 > [!IMPORTANT]
 > This example doesn't specify any smart host authentication mechanism. Make sure you configure the correct authentication mechanism and provide all necessary credentials when you create a smart host connector in your own Exchange organization.

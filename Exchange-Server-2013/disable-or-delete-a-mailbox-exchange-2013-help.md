@@ -139,15 +139,15 @@ When you run this command, a message is displayed that asks you to confirm that 
 
 Here are some examples of commands for disabling mailboxes.
 
-```
+```powershell
 Disable-Mailbox danj
 ```
 
-```
+```powershell
 Disable-Mailbox "Conf Room 31/1234 (12)"
 ```
 
-```
+```powershell
 Disable-Mailbox sharedmbx@contoso.com
 ```
 
@@ -161,8 +161,10 @@ To verify that you’ve successfully disabled a mailbox, do one of the following
 
   - In the Shell, run the following command.
     
+    ```powershell
         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisconnectReason,DisconnectDate
-    
+    ```
+
     The `Disabled` value in the *DisconnectReason* property indicates that the mailbox is disabled.
     
 
@@ -174,8 +176,8 @@ To verify that you’ve successfully disabled a mailbox, do one of the following
   - In the Shell, run the following command.
     
     ```powershell
-Get-User <identity>
-```
+    Get-User <identity>
+    ```
     
     Note that that value for the *RecipientType* property is `User`, instead of `UserMailbox`, which is the value for users with enabled mailboxes. This also verifies that the mailbox is disabled, but the user account is retained.
 
@@ -207,15 +209,15 @@ When you run this command, a message is displayed that asks you to confirm that 
 
 Here are some examples of commands for deleting mailboxes.
 
-```
+```powershell
 Remove-Mailbox pilarp@contoso.com
 ```
 
-```
+```powershell
 Remove-Mailbox "Fleet Van (16)"
 ```
 
-```
+```powershell
 Remove-Mailbox corpprint
 ```
 
@@ -231,8 +233,10 @@ Or
 
 1.  Run the following command to verify that the mailbox has been deleted.
     
+    ```powershell
         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisconnectReason,DisconnectDate
-    
+    ```
+
     The `Disabled` value in the *DisconnectReason* property indicates that the mailbox has been deleted.
     
 
@@ -244,8 +248,8 @@ Or
 2.  Run the following command to verify that Active Directory user account has been deleted.
     
     ```powershell
-Get-User <identity>
-```
+    Get-User <identity>
+    ```
     
     The command will return an error stating that user couldn’t be found, verifying that the account was deleted.
 

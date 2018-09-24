@@ -81,17 +81,19 @@ Start-MailboxSearch "Fabrikam Investigation"
 
 If you used the *EstimateOnly* switch to get an estimate of the search results, you have to remove the switch before you can copy the search results. You also have to specify a discovery mailbox to copy to search results to. For example, say you created an estimate-only search by using the following command:
 
+```powershell
     New-MailboxSearch "FY13 Q2 Financial Results" -StartDate "04/01/2013" -EndDate "06/30/2013" -SourceMailboxes "DG-Finance" -SearchQuery '"Financial" AND "Fabrikam"' -EstimateOnly -IncludeUnsearchableItems
+```
 
 To copy the results of this search to a discovery mailbox, you would run the following commands:
 
-  ```
+```powershell
   Set-MailboxSearch "FY13 Q2 Financial Results" -EstimateOnly $false -TargetMailbox "Discovery Search Mailbox"
-  ```
+```
 
-  ```
+```powershell
   Start-MailboxSearch "FY13 Q2 Financial Results"
-  ```
+```
 
 ## More information about copying search results
 

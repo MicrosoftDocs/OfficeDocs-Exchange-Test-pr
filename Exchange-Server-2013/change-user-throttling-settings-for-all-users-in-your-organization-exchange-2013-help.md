@@ -54,16 +54,16 @@ To verify that you’ve successfully created the Organization throttling policy,
 1.  Run the following command.
     
     ```powershell
-Get-ThrottlingPolicy | Format-List
-```
+    Get-ThrottlingPolicy | Format-List
+    ```
 
 2.  Verify that the Organization throttling policy you just created is listed in the column that shows the GlobalThrottlingPolicy object.
 
 3.  Run the following command.
     
     ```powershell
-Get-ThrottlingPolicy | Format-List
-```
+    Get-ThrottlingPolicy | Format-List
+    ```
 
 4.  Verify that the properties for the new Organization policy match the value or values you configured.
 

@@ -62,8 +62,8 @@ To verify that you've successfully removed the DAG, do one of the following:
   - In the Shell, run the following command to see if the DAG still exists:
     
     ```powershell
-Get-DatabaseAvailabilityGroup <DAGName>
-```
+    Get-DatabaseAvailabilityGroup <DAGName>
+    ```
     
     If the DAG was successfully deleted, the preceding command will produce an error message indicating the object could not be found.
 

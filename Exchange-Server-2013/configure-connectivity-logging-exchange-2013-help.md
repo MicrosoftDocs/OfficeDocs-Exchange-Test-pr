@@ -55,7 +55,9 @@ Connectivity logging records the outbound connection activity that's used to tra
 
 To configure connectivity logging, run the following command:
 
+```powershell
     <Set-TransportService | Set-MailboxTransportService | Set-FrontEndTransportService> <ServerIdentity> -ConnectivityLogEnabled <$true | $false> -ConnectivityLogMaxAge <dd.hh:mm:ss> -ConnectivityLogMaxDirectorySize <Size> -ConnectivityLogMaxFileSize <Size> -ConnectivityLogPath <LocalFilePath>
+```
 
 This example sets the following connectivity log settings in the Transport service on the Mailbox server named Mailbox01:
 
@@ -69,8 +71,9 @@ This example sets the following connectivity log settings in the Transport servi
 
 <!-- end list -->
 
+```powershell
     Set-TransportService Mailbox01 -ConnectivityLogPath "D:\Hub Connectivity Log" -ConnectivityLogMaxFileSize 20MB -ConnectivityLogMaxDirectorySize 1.5GB -ConnectivityLogMaxAge 45.00:00:00
-
+```
 
 > [!NOTE]
 > <UL>
@@ -89,7 +92,9 @@ To verify that you have successfully configured connectivity logging, do the fol
 
 1.  In the Shell, run the following command:
     
+    ```powershell
         <Get-TransportService | Get-FrontEndTransportService | Get-MailboxTransportService> <ServerIdentity> | Format-List ConnectivityLog*
-
+    ```
+    
 2.  Verify the values displayed are the values you configured.
 

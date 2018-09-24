@@ -64,19 +64,27 @@ Get-SystemMessage En\Internal\5.1.2 | Format-List
 
 Run the following command:
 
+```powershell
     New-SystemMessage -Internal <$true | $false> -Language <Locale> -DSNCode <x.y.z> -Text "<DSN text>"
+```
 
 This example creates a custom plain text DSN message for the DSN code 5.1.2 that's sent to internal senders in English.
 
+```powershell
     New-SystemMessage -Internal $true -Language En -DSNCode 5.1.2 -Text "You tried to send a message to a disabled mailbox that's no longer accepting messages. Please contact the Help Desk at extension 123 for assistance."
+```
 
 This example creates a custom plain text DSN message for the DSN code 5.1.2 that's sent to external senders in English.
 
+```powershell
     New-SystemMessage -Internal $false -Language En -DSNCode 5.1.2 -Text "You tried to send a message to a disabled mailbox that's no longer accepting messages. Please contact your System Administrator for more information."
+```
 
 This example creates a custom HTML DSN message for the DSN code 5.1.2 that's sent to internal senders in English.
 
+```powershell
     New-SystemMessage -DSNCode 5.1.2 -Internal $true -Language En -Text 'You tried to send a message to a <B>disabled</B> mailbox. Please visit <A HREF="http://it.contoso.com">Internal Support</A> or contact &quot;InfoSec&quot; for more information.'
+```
 
 ## How do you know this worked?
 
@@ -85,8 +93,8 @@ To verify that you have successfully created a custom DNS message, do the follow
 1.  Run the following command:
     
     ```powershell
-Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
-```
+    Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
+    ```
 
 2.  Verify the values you see are the values you configured.
 
@@ -96,11 +104,15 @@ Get-SystemMessge -DSNCode <x.y.z> | Format-List Name,Internal,Text,Language
 
 To change the text of a custom DSN message the following command:
 
+```powershell
     Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> -Text "<DSN text>"
+```
 
 This example changes the text assigned to the custom DSN message for DSN code 5.1.2 that's sent to internal senders in English.
 
+```powershell
     Set-SystemMessage En\Internal\5.1.2 -Text "The mailbox you tried to send an e-mail message to is disabled and is no longer accepting messages. Please contact the Help Desk at extension 123 for assistance."
+```
 
 ## How do you know this worked?
 
@@ -109,8 +121,8 @@ To verify that you have successfully changed the text of a custom DNS message, d
 1.  Run the following command: `Get-SystemMessage`.
     
     ```powershell
-Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> | Format-List -Text
-```
+    Set-SystemMessage <Locale>\<Internal | External>\<DSNcode> | Format-List -Text
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -149,14 +161,14 @@ To assign a mailbox to the Exchange recipient, perform the following steps:
 2.  Run the following command:
     
     ```powershell
-Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient <MailboxIdentity>
-```
+    Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient <MailboxIdentity>
+    ```
     
     For example, to assign the existing mailbox named "Contoso System Mailbox" to the Exchange recipient, run the following command:
     
     ```powershell
-Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient "Contoso System Mailbox"
-```
+    Set-OrganizationConfig -MicrosoftExchangeRecipientReplyRecipient "Contoso System Mailbox"
+    ```
 
 ## Step 2: Specify the DSN codes you want to monitor
 
@@ -182,7 +194,9 @@ Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
 
 To add or remove entries without modifying any existing values, run the following command:
 
+```powershell
     Set-TransportConfig -GenerateCopyOfDSNFor @{Add="<x.y.z>","<x.y.z>"...; Remove="<x.y.z>","<x.y.z>"...}
+```
 
 This example adds the DSN code 5.7.5 and removes the DSN code 5.7.1 from the existing list of DSN messages that are forwarded to the Exchange recipient.
 

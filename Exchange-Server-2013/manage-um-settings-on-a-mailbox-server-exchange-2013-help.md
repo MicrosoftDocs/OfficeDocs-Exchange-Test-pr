@@ -55,11 +55,15 @@ Set-UMService -Identity MyMailboxServer -DialPlans $null
 
 This example adds the Mailbox server named `MyMailboxServer` to a UM SIP dial plan named `MySIPDialPlanName` and also sets the maximum number of incoming voice calls.
 
+```powershell
     Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlanName -MaxCalls 150 
+```
 
 This example sets the startup mode to Dual mode on a Mailbox server named `MyUMServer`.
 
+```powershell
     Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlanName -UMStartUpMode -Dual 
+```
 
 ## Use the Shell to view Mailbox server properties
 

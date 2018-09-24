@@ -73,5 +73,6 @@ To verify that you’ve successfully enabled an on-premises archive for an exist
 
   - In the Shell, run the following command to display quota information about the archive.
     
+    ```powershell
         Get-Mailbox <Name> | FL Name,Archive*Quota
-
+    ```

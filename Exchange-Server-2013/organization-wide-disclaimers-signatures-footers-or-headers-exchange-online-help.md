@@ -194,6 +194,7 @@ You can format your disclaimer as needed. Here’s what can be included in your 
 
 For example, here’s an example of an HTML disclaimer that includes a signature, an `IMG` tag, and embedded CSS.
 
+```HTML
     <div style="font-size:9pt;  font-family: 'Calibri',sans-serif;">
     %%displayname%%</br>
     %%title%%</br>
@@ -207,6 +208,7 @@ For example, here’s an example of an HTML disclaimer that includes a signature
     <p style="font-size:8pt; line-height:10pt; font-family: 'Cambria','times roman',serif;">This message contains confidential information and is intended only for the individual(s) addressed in the message. If you are not the named addressee, you should not disseminate, distribute, or copy this e-mail. If you are not the intended recipient, you are notified that disclosing, distributing, or copying this e-mail is strictly prohibited.  </p>
     <span style="padding-top:10px; font-weight:bold; color:#CC0000; font-size:10pt; font-family: 'Calibri',Arial,sans-serif; "><a href="http://www.fabrikam.com">Fabrikam, Inc. </a></span></br></br>
     </div>
+```
 
 ## Fallback options if the disclaimer can’t be added
 

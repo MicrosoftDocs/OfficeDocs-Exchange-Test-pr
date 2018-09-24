@@ -43,8 +43,9 @@ For additional management tasks related to IRM, see [Information Rights Manageme
 
 This example creates the Outlook protection rule Project Contoso. The rule protects messages sent to the ContosoPMs distribution group with the AD RMS template Business Critical.
 
+```powershell
     New-OutlookProtectionRule -Name "Project Contoso" -SentTo "DL-ContosoPMs@contoso.com" -ApplyRightsProtectionTemplate "Business Critical"
-
+```
 
 > [!NOTE]
 > When you use the <CODE>SentTo</CODE> predicate for an Outlook protection rule and specify a distribution group, only messages addressed to the distribution group in the To, Cc, or Bcc fields are IRM-protected. IRM protection isn't applied to messages addressed to individual members of the distribution group.

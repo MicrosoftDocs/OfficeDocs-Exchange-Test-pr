@@ -83,7 +83,9 @@ You can change or add a predefined relative scope on a role assignment. If you a
 
 To change or add a predefined scope on a role assignment, use the following syntax.
 
+```powershell
     Set-ManagementRoleAssignment <assignment name> -RecipientRelativeWriteScope < MyDistributionGroups | Organization | Self >
+```
 
 This example changes the predefined scope on the John's Assignment role assignment to MyDistributionGroups.
 
@@ -99,11 +101,15 @@ You can either specify a new recipient filter-based scope or change the recipien
 
 To specify a new recipient filter-based scope or replace an existing one, use the following syntax.
 
+```powershell
     Set-ManagementRoleAssignment <assignment name> -CustomRecipientWriteScope <role scope name>
+```
 
 This example adds or changes the recipient filter-based scope to Redmond Recipients.
 
+```powershell
     Set-ManagementRoleAssignment "Redmond Recipient Administrators Assignment" -CustomRecipientWriteScope "Redmond Recipients"
+```
 
 If you want to keep the same recipient filter-based scope that's applied to the role assignment but change the recipient filter used to match recipient objects, you need to change the recipient filter on the scope itself. For more information about how to change scopes, see [Change a role scope](change-a-role-scope-exchange-2013-help.md).
 
@@ -121,7 +127,9 @@ Set-ManagementRoleAssignment <assignment name> -CustomConfigWriteScope <role sco
 
 This example adds or changes the configuration scope to Redmond Servers.
 
+```powershell
     Set-ManagementRoleAssignment "Redmond Administrators Assignment" -CustomConfigWriteScope "Redmond Servers"
+```
 
 If you want to keep the same configuration scope that's applied to the role assignment but change the server filter or server list on the scope, you need to change the configuration scope itself. For more information about how to change scopes, see [Change a role scope](change-a-role-scope-exchange-2013-help.md).
 
@@ -159,7 +167,9 @@ Set-ManagementRoleAssignment <assignment name> -RecipientOrganizationalUnitScope
 
 This example adds the Engineering\\Users OU in the contoso.com domain to the Engineering Help Desk role assignment.
 
+```powershell
     Set-ManagementRoleAssignment "Engineering Help Desk" -RecipientOrganizationalUnitScope contoso.com/Engineering/Users
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335173\(v=exchg.150\)).
 
@@ -175,7 +185,9 @@ As with regular recipient and configuration scopes, if you add or change an excl
 
 This example changes an exclusive recipient write scope.
 
+```powershell
     Set-ManagementRoleAssignment "Exclusive Executive Users" -ExclusiveRecipientWriteScope "Exclusive Executives"
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335173\(v=exchg.150\)).
 

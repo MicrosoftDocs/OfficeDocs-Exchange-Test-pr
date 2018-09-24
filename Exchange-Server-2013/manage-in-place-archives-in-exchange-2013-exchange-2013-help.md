@@ -81,8 +81,10 @@ In-Place Archiving helps you regain control of your organization’s messaging d
 
 This example creates the user Chris Ashton in Active Directory, creates the mailbox on mailbox database DB01, and enables an archive. The password must be reset at the next logon. To set the initial value of the password, this example creates a variable ($password), prompts you to enter a password, and assigns that password to the variable as a SecureString object.
 
+```powershell
     $password = Read-Host "Enter password" -AsSecureString
     New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Archive -Database "DB01" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" 
+```
 
 For detailed syntax and parameter information, see [New-Mailbox](https://technet.microsoft.com/en-us/library/aa997663\(v=exchg.150\)).
 
@@ -94,8 +96,10 @@ To verify that you’ve successfully created a user mailbox with an on-premises 
 
   - In the Shell, run the following command to display information about the new user mailbox and archive.
     
+    ```powershell
         Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress,*Archive*
-
+    ```
+    
   - In the Shell, use the **Test-ArchiveConnectivity** cmdlet to test connectivity to the archive. For an example of how to test archive connectivity, see the Examples section in [Test-ArchiveConnectivity](https://technet.microsoft.com/en-us/library/hh529914\(v=exchg.150\)).
 
 ## Enable an on-premises archive for existing mailbox
@@ -128,7 +132,9 @@ Enable-Mailbox "Tony Smith" -Archive
 
 This example retrieves mailboxes in database DB01 that don’t have an on-premises or cloud-based archive enabled and don’t have a name starting with DiscoverySearchMailbox. It pipes the result to the **Enable-Mailbox** cmdlet to enable the archive for all mailboxes on mailbox database DB01.
 
+```powershell
     Get-Mailbox -Database DB01 -Filter {ArchiveGuid -Eq $null -AND ArchiveDomain -eq $null -AND Name -NotLike "DiscoverySearchMailbox*"} | Enable-Mailbox -Archive
+```
 
 For detailed syntax and parameter information, see [Enable-Mailbox](https://technet.microsoft.com/en-us/library/aa998251\(v=exchg.150\)) and [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)).
 
@@ -140,8 +146,10 @@ To verify that you’ve successfully enabled an on-premises archive for an exist
 
   - In the Shell, run the following command to display information about the new archive.
     
+    ```powershell
         Get-Mailbox <Name> | FL Name,*Archive*
-
+    ```
+    
   - In the Shell, use the **Test-ArchiveConnectivity** cmdlet to test connectivity to the archive. For an example of how to test archive connectivity, see Examples in [Test-ArchiveConnectivity](https://technet.microsoft.com/en-us/library/hh529914\(v=exchg.150\)).
 
 ## Disable an on-premises archive
@@ -188,7 +196,9 @@ To verify that you have successfully disabled an archive, do the following:
 
   - In the Shell, run the following command to check the archive properties for the mailbox user.
     
+    ```powershell
         Get-Mailbox -Identity "Chris Ashton" | Format-List *Archive*
+    ```
     
     If the archive is disabled, the following values are returned for archive-related properties.
     
@@ -245,12 +255,16 @@ When you disable an archive mailbox, it becomes disconnected. A disconnected arc
 
 1.  If you don't know the name of the archive, you can view it in the Shell by running the following command. This example retrieves the mailbox database DB01, pipes it to the **Get-MailboxStatistics** cmdlet to retrieve mailbox statistics for all mailboxes on the database, and then uses the **Where-Object** cmdlet to filter the results and retrieve a list of disconnected archives. The command displays additional information about each archive such as the GUID and item count.
     
+    ```powershell
         Get-MailboxDatabase "DB01" | Get-MailboxStatistics | Where {($_.DisconnectDate -ne $null) -and ($_.IsArchiveMailbox -eq $true)} | Format-List
-
+    ```
+    
 2.  Connect the archive to the primary mailbox. This example connects Chris Ashton's archive to Chris Ashton's primary mailbox and uses the GUID as the archive's identity.
     
+    ```powershell
         Enable-Mailbox -ArchiveGuid "8734c04e-981e-4ccf-a547-1c1ac7ebf3e2" -ArchiveDatabase "DB01" -Identity "Chris Ashton"
-
+    ```
+    
 For detailed syntax and parameter information, see the following topics:
 
   - [Get-MailboxDatabase](https://technet.microsoft.com/en-us/library/bb124924\(v=exchg.150\))
@@ -263,5 +277,7 @@ For detailed syntax and parameter information, see the following topics:
 
 To verify that you have successfully connected a disconnected archive to a mailbox user, run the following Shell command to retrieve the mailbox user’s archive properties and verify the values returned for the *ArchiveGuid* and *ArchiveDatabase* properties.:
 
+```powershell
     Get-Mailbox -Identity "Chris Ashton" | Format-List *Archive*
+```
 

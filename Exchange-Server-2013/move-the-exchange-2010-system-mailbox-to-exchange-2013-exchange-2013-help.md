@@ -40,8 +40,8 @@ For more information about upgrading to Exchange 2013, see the following topics:
   - Run the following command in Exchange 2013 to obtain the identity and version of the Exchange servers and mailbox databases that contain the system mailboxes in your organization.
     
     ```powershell
-Get-Mailbox -Arbitration | FL Name,DisplayName,ServerName,Database,AdminDisplayVersion
-```
+    Get-Mailbox -Arbitration | FL Name,DisplayName,ServerName,Database,AdminDisplayVersion
+    ```
     
     The **AdminDisplayVersion** property indicates the version of Exchange that the server is running. The value `Version 14.x` indicates Exchange 2010; the value `Version 15.x` indicates Exchange 2013.
 
@@ -89,13 +89,17 @@ Get-MailboxDatabase -IncludePreExchange2013 | FL Name,Server,AdminDisplayVersion
 
 After you identify the name of the mailbox databases in your organization, run the following command in Exchange 2013 to move the Microsoft Exchange system mailbox to a mailbox database located on an Exchange 2013 server.
 
+```powershell
     Get-Mailbox -Arbitration -Identity "SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9}" | New-MoveRequest -TargetDatabase <name of Exchange 2013 database>
+```
 
 ## How do you know this worked?
 
 To verify that you’ve successfully moved the Microsoft Exchange system mailbox to a mailbox database located on an Exchange 2013 server, run the following command in the Shell.
 
+```powershell
     Get-Mailbox -Arbitration -Identity "SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9}" | FL Database,ServerName,AdminDisplayVersion
+```
 
 If the value of the **AdminDisplayVersion** property is **Version 15.x (Build xxx.x)**, this verifies that the system mailbox resides on a mailbox database that is located on an Exchange 2013 server.
 

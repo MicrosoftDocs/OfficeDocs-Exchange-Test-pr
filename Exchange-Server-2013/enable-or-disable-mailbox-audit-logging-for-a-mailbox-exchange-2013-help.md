@@ -101,5 +101,7 @@ To verify that you have successfully enabled mailbox audit logging for a mailbox
 
 This example retrieves Ben Smith’s mailbox settings and pipes the specified audit settings, including the audit log age limit, to the **Format-List** cmdlet.
 
+```powershell
     Get-Mailbox "Ben Smith" | Format-List *audit*
+```
 

@@ -74,16 +74,16 @@ To verify that you’ve successfully disabled email for a mail contact, do one o
 3.  In the Shell, run the following command.
     
     ```powershell
-Get-MailContact
-```
+    Get-MailContact
+    ```
     
     The contact that you disabled email for won't be returned in the results because this cmdlet only returns mail-enabled contacts.
 
 4.  In the Shell, run the following command.
     
     ```powershell
-Get-Contact
-```
+    Get-Contact
+    ```
     
     The contact that you disabled email for is returned in the results because this cmdlet returns all Active Directory contact objects.
 
@@ -105,10 +105,13 @@ When you’re mail-enabling contacts in bulk, you first export the list of conta
 
 1.  Run the following command to export a list of existing contacts that aren't mail-enabled to a file on the administrator's desktop named Contacts.csv.
     
+    ```powershell
         Get-Contact | Where { $_.RecipientType -eq "Contact" } | Out-File "C:\Users\Administrator\Desktop\Contacts.csv"
+    ```
     
     The resulting file will be similar to the following file.
     
+    ```powershell
         Name
         Walter Harp
         James Alvord
@@ -116,9 +119,11 @@ When you’re mail-enabling contacts in bulk, you first export the list of conta
         Susan Burk
         Ian Tien
         ...
-
+    ```
+    
 2.  Add a column heading named **EmailAddress** and then add an email address for each contact in the file. The name and external email address for each contact must be separated by a comma. The updated CSV file should look similar to the following file.
     
+    ```powershell
         Name,EmailAddress
         James Alvord,james@contoso.com
         Susan Burk,sburk@tailspintoys.com
@@ -126,11 +131,14 @@ When you’re mail-enabling contacts in bulk, you first export the list of conta
         Ian Tien,iant@tailspintoys.com
         Rainer Witt,rainerw@fourthcoffee.com
         ...
-
+    ```
+    
 3.  Run the following command to use the data in the CSV file to mail-enable the contacts listed in the file.
     
+    ```powershell
         Import-CSV C:\Users\Administrator\Desktop\Contacts.csv | ForEach-Object {Enable-MailContact -Identity $_.Name -ExternalEmailAddress $_.EmailAddress}
-    
+    ```
+
     The command results display information about the new mail-enabled contacts.
 
 ## How do you know this worked?
@@ -148,6 +156,6 @@ To verify that you’ve successfully mail-enabled Active Directory contacts, do 
   - In the Shell, run the following command to display information about new mail contacts.
     
     ```powershell
-Get-MailContact | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
-```
+    Get-MailContact | Format-Table Name,RecipientTypeDetails,ExternalEmailAddress
+    ```
 

@@ -66,21 +66,24 @@ When the DAG isn't in DAC mode, the specific actions to terminate any surviving 
 1.  The DAG members in the primary datacenter must be forcibly evicted from the DAG's underlying cluster by running the following commands on each member:
     
     ```powershell
-net stop clussvc
-```
+    net stop clussvc
+    ```
+
+    ```powershell
         cluster <DAGName> node <DAGMemberName> /forcecleanup
+    ```
 
 2.  The DAG members in the second datacenter must now be restarted and then used to complete the eviction process from the second datacenter. Stop the Cluster service on each DAG member in the second datacenter by running the following command on each member:
     
     ```powershell
-net stop clussvc
-```
+    net stop clussvc
+    ```
 
 3.  On a DAG member in the second datacenter, force a quorum start of the Cluster service by running the following command:
     
     ```powershell
-net start clussvc /forcequorum
-```
+    net start clussvc /forcequorum
+    ```
 
 4.  Open the Failover Cluster Management tool and connect to the DAG's underlying cluster. Expand the cluster, and then expand **Nodes**. Right-click each node in the primary datacenter, select **More Actions**, and then select **Evict**. When you're done evicting the DAG members in the primary datacenter, close the Failover Cluster Management tool.
 
@@ -111,30 +114,32 @@ When the DAG isn't in DAC mode, the steps to complete activation of the mailbox 
     1.  If there's an odd number of DAG members, change the DAG quorum model from a Node a File Share Majority to a Node Majority quorum by running the following command:
         
         ```powershell
-cluster <DAGName> /quorum /nodemajority
-```
+        cluster <DAGName> /quorum /nodemajority
+        ```
     
     2.  If there's an even number of DAG members, reconfigure the witness server and directory by running the following command in the Exchange Management Shell:
         
         ```powershell
-Set-DatabaseAvailabilityGroup <DAGName> -WitnessServer <ServerName>
-```
+        Set-DatabaseAvailabilityGroup <DAGName> -WitnessServer <ServerName>
+        ```
 
 2.  Start the Cluster service on any remaining DAG members in the second datacenter by running the following command:
     
     ```powershell
-net start clussvc
-```
+    net start clussvc
+    ```
 
 3.  Perform server switchovers to activate the mailbox databases in the DAG by running the following command for each DAG member:
     
+    ```powershell
         Move-ActiveMailboxDatabase -Server <DAGMemberinPrimarySite> -ActivateOnServer <DAGMemberinSecondSite>
+    ```
 
 4.  Mount the mailbox databases on each DAG member in the second site by running the following command:
     
     ```powershell
-Get-MailboxDatabase <DAGMemberinSecondSite> | Mount-Database
-```
+    Get-MailboxDatabase <DAGMemberinSecondSite> | Mount-Database
+    ```
 
 Return to top
 

@@ -45,7 +45,9 @@ You can configure the maximum number of safe senders and blocked senders a user 
 
 To configure the maximum number of safe senders and blocked senders, run the following command:
 
+```powershell
     Set-Mailbox <MailboxIdentity> -MaxSafeSenders <Integer> -MaxBlockedSenders <Integer>
+```
 
 This example configures the mailbox john@contoso.com to have a maximum of 2,000 safe senders and 200 blocked senders.
 
@@ -59,7 +61,9 @@ To verify that you have successfully configured the mailbox safelist collection 
 
 1.  Run the following command:
     
+    ```powershell
         Get-Mailbox <Identity> | Format-List Name,Max*Senders
+    ```
 
 2.  Verify the values displayed match the values you configured.
 
@@ -84,14 +88,14 @@ To verify that you have successfully configured safelist aggregation, perform th
 1.  Run the following command:
     
     ```powershell
-Get-ContentFilterConfig | Format-List Enabled
-```
+    Get-ContentFilterConfig | Format-List Enabled
+    ```
 
 2.  If the output shows the *Enabled* parameter to be `True`, content filtering is enabled. If it isn't, run the following command to enable content filtering and the Content Filter agent on the Exchange server:
     
     ```powershell
-Set-ContentFilterConfig -Enabled $true
-```
+    Set-ContentFilterConfig -Enabled $true
+    ```
 
 ## Step 2: (Optional) Use ADSI Edit to verify replication of the safelist aggregation data to Edge Transport servers
 

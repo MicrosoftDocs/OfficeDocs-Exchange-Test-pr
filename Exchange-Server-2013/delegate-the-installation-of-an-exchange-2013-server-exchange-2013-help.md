@@ -66,22 +66,22 @@ The command that you need to use to provision the server depends on whether you'
 3.  Change directories to where you downloaded and expanded the Exchange 2013 install files. If the install files are located in `C:\Downloads\Exchange 2013`, use the following command.
     
     ```powershell
-CD "C:\Downloads\Exchange 2013"
-```
+    CD "C:\Downloads\Exchange 2013"
+    ```
 
 4.  Choose the command that matches where you're running Setup:
     
       - **If you're running Setup on the computer that's being provisioned**, run the following command:
         
         ```powershell
-Setup.exe /NewProvisionedServer /IAcceptExchangeServerLicenseTerms
-```
+        Setup.exe /NewProvisionedServer /IAcceptExchangeServerLicenseTerms
+        ```
     
       - **If you're running Setup on another computer**, run the following command:
         
         ```powershell
-Setup.exe /NewProvisionedServer:<ComputerName> /IAcceptExchangeServerLicenseTerms
-```
+        Setup.exe /NewProvisionedServer:<ComputerName> /IAcceptExchangeServerLicenseTerms
+        ```
 
 5.  After you provision the server, you need to make sure that you've added the users who should be able to install Exchange on provisioned servers to the Delegated Setup role group. To see how to add users to a role group, see [Manage Role Group Members](manage-role-group-members-exchange-2013-help.md).
 

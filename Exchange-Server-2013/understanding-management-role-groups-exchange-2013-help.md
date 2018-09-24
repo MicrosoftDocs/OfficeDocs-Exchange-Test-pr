@@ -255,7 +255,9 @@ For more information about how to manage role group membership, see [Manage role
 
 As mentioned previously, a role group is made up of several layers. To help you understand what happens when a role group is created, consider the following example, which creates a new role group.
 
+```powershell
     New-RoleGroup -Name "Seattle Recipient Management" -Roles "Mail Recipients", "Distribution Groups", "Move Mailboxes", "UM Mailboxes" -CustomRecipientWriteScope "Seattle Users", -ManagedBy "Brian", "David", "Katie" -Members "Ray", "Jenn", "Maria", "Chris", "Maija", "Carter", "Jenny", "Sam", "Lukas", "Isabel", "Katie"
+```
 
 When the preceding command is run, the following happens:
 

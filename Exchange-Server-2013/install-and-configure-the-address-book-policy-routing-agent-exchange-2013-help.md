@@ -45,7 +45,9 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 Install the ABP Routing agent by running the following command. This is the exact command and syntax you’ll need to use.
 
+```powershell
     Install-TransportAgent -Name "ABP Routing Agent" -TransportAgentFactory "Microsoft.Exchange.Transport.Agent.AddressBookPolicyRoutingAgent.AddressBookPolicyRoutingAgentFactory" -AssemblyPath $env:ExchangeInstallPath\TransportRoles\agents\AddressBookPolicyRoutingAgent\Microsoft.Exchange.Transport.Agent.AddressBookPolicyRoutingAgent.dll
+```
 
 You’ll get a warning that the Transport service needs to be restarted for your changes to take effect, but perform Step 2 first so you only have to restart the Transport service once.
 
@@ -70,14 +72,14 @@ You need to be assigned permissions before you can perform this procedure or pro
 1.  Restart the Transport service by running the following command.
     
     ```powershell
-Restart-Service MSExchangeTransport
-```
+    Restart-Service MSExchangeTransport
+    ```
 
 2.  After the service has restarted, verify that the ABP Routing agent is installed and enabled by running the following cmdlet.
     
     ```powershell
-Get-TransportAgent
-```
+    Get-TransportAgent
+    ```
     
     If the ABP Routing agent is listed, the agent has been correctly installed.
 

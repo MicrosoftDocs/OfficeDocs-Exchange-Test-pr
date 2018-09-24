@@ -49,13 +49,17 @@ After configuring OAuth authentication from Exchange, the partner application ca
 
 This example configures OAuth authentication for SharePoint 2013.
 
+```powershell
     Cd C:\Program Files\Microsoft\Exchange Server\V15\Scripts
     Configure-EnterprisePartnerApplication.ps1 -AuthMetaDataUrl https://sharepoint.contoso.com/_layouts/15/metadata/json/1 -ApplicationType SharePoint
+```
 
 This example configures OAuth authentication for Lync Server 2013.
 
+```powershell
     Cd C:\Program Files\Microsoft\Exchange Server\V15\Scripts
     Configure-EnterprisePartnerApplication.ps1 -AuthMetaDataUrl https://lync.contoso.com/metadata/json/1 -ApplicationType Lync
+```
 
 ## How do you know this worked?
 

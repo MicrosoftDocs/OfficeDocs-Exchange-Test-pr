@@ -85,7 +85,9 @@ To verify that you've successfully backed up the data, do any of the following:
 
   - Run the following command in the Exchange Management Shell to verify that each database on the selected volume(s) was backed up successfully:
     
+    ```powershell
         Get-MailboxDatabase -Server <ServerName> -Status | fl Name,*FullBackup
+    ```
     
     The *SnapshotLastFullBackup* and *LastFullBackup* properties of the database indicate when the last successful backup was taken, and if it was a VSS full backup.
 

@@ -71,11 +71,15 @@ For other management tasks related to address lists, see [Address list procedure
 
 This example creates the address list MyAddressList by using the *RecipientFilter* parameter and includes recipients that are mailbox users and have `StateOrProvince` set to `Washington` or `Oregon`.
 
+```powershell
     New-AddressList -Name MyAddressList -RecipientFilter {((RecipientType -eq 'UserMailbox') -and ((StateOrProvince -eq 'Washington') -or (StateOrProvince -eq 'Oregon')))}
+```
 
 This example creates the child address list Building 34 Meeting Rooms in the All Rooms parent container, using built-in conditions.
 
+```powershell
     New-AddressList -Name "Building 34 Meeting Rooms" -Container "\All Rooms" -IncludedRecipients Resources -ConditionalCustomAttribute1 "Building 34"
+```
 
 For detailed syntax and parameter information, see [New-AddressList](https://technet.microsoft.com/en-us/library/aa996912\(v=exchg.150\)).
 

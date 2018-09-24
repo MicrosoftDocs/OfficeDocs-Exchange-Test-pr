@@ -47,9 +47,7 @@ For additional management tasks related to email address policies, see [Email ad
 
 2.  In the list view, select the email address policy you want to change, and then click **Edit** ![Edit icon](images/JJ218640.6f53ccb2-1f13-4c02-bea0-30690e6ea71d(EXCHG.150).gif "Edit icon").
 
-3.  
-    
-    In **Email Address Policy**, click **Apply to** and modify the settings.
+3.  In **Email Address Policy**, click **Apply to** and modify the settings.
 
 ## Use the EAC to change the email address policy’s priority
 
@@ -63,8 +61,9 @@ A user can have multiple proxy email addresses for the same email account (for e
 
 This example edits the email address policy South East Offices that currently includes recipients in Georgia, Alabama, and Louisiana to also include recipients in Texas.
 
+```powershell
     Set-EmailAddressPolicy -Identity "South East Offices" -ConditionalStateorProvince "Georgia","Alabama","Louisiana","Texas"
-
+```
 
 > [!NOTE]
 > Although the email address policy is already applied to recipients in Georgia, Alabama, and Louisiana, you must include them in the parameter because the parameter overwrites values; it doesn't append values to existing ones.

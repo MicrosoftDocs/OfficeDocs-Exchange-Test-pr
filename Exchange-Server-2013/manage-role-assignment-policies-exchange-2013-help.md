@@ -65,7 +65,9 @@ New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign>
 
 This example creates the explicit assignment policy Limited Mailbox Configuration and assigns the `MyBaseOptions`, `MyAddressInformation`, and `MyDisplayName` roles to it.
 
+```powershell
     New-RoleAssignmentPolicy "Limited Mailbox Configuration" -Roles MyBaseOptions, MyAddressInformation, MyDisplayName
+```
 
 For detailed syntax and parameter information, see [New-RoleAssignmentPolicy](https://technet.microsoft.com/en-us/library/dd638101\(v=exchg.150\)).
 
@@ -79,7 +81,9 @@ New-RoleAssignmentPolicy <assignment policy name> -Roles <roles to assign> -IsDe
 
 This example creates the default assignment policy Limited Mailbox Configuration and assigns the `MyBaseOptions`, `MyAddressInformation`, and `MyDisplayName` roles to it.
 
+```powershell
     New-RoleAssignmentPolicy "Limited Mailbox Configuration" -Roles MyBaseOptions, MyAddressInformation, MyDisplayName -IsDefault
+```
 
 For detailed syntax and parameter information, see [New-RoleAssignmentPolicy](https://technet.microsoft.com/en-us/library/dd638101\(v=exchg.150\)).
 
@@ -273,11 +277,15 @@ For detailed syntax and parameter information, see [Set-RoleAssignmentPolicy](ht
 
 To create a management role assignment between a role and an assignment policy, use the following syntax.
 
+```powershell
     New-ManagementRoleAssignment -Name <role assignment name> -Role <role name> -Policy <assignment policy name>
+```
 
 This example creates the role assignment Seattle Users - Voicemail between the MyVoicemail role and the Seattle Users assignment policy.
 
+```powershell
     New-ManagementRoleAssignment -Name "Seattle Users - Voicemail" -Role MyVoicemail -Policy "Seattle Users"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -305,11 +313,15 @@ This procedure uses pipelining. For more information about pipelining, see [Pipe
 
 To remove a role from an assignment policy, use the following syntax.
 
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee <assignment policy name> -Role <role name> | Remove-ManagementRoleAssignment
+```
 
 This example removes the MyVoicemail management role, which enables users to manage their voice mail options, from the Seattle Users assignment policy.
 
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee "Seattle Users" -Role MyVoicemail | Remove-ManagementRoleAssignment
+```
 
 For detailed syntax and parameter information, see [Remove-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351205\(v=exchg.150\)).
 

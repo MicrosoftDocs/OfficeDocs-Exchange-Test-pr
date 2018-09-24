@@ -32,8 +32,8 @@ Do the following to install the Windows feature on this computer. If the feature
 2.  Run the following command to install the required Windows feature.
     
     ```powershell
-Install-WindowsFeature RSAT-Clustering-CmdInterface
-```
+    Install-WindowsFeature RSAT-Clustering-CmdInterface
+    ```
 
 Having problems? Ask for help in the Exchange forums. Visit the forums at [Exchange Server](https://go.microsoft.com/fwlink/p/?linkid=60612), [Exchange Online](https://go.microsoft.com/fwlink/p/?linkid=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkid=285351).
 

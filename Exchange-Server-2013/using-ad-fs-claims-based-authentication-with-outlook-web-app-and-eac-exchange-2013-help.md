@@ -252,11 +252,15 @@ To configure Active Directory Federation Services:
 
 6.  Run the following command.
     
+    ```powershell
         Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
+    ```
 
 7.  This example creates a new GMSA account named FsGmsa for the Federation Service named adfs.contoso.com. The Federation Service name is the value that's visible to clients.
     
+    ```powershell
         New-ADServiceAccount FsGmsa -DNSHostName adfs.contoso.com -ServicePrincipalNames http/adfs.contoso.com
+    ```
 
 8.  On the **Specify Configuration Database** page, select **Create a database on this server using Windows Internal Database**, and then click **Next**.
 
@@ -270,11 +274,11 @@ To configure Active Directory Federation Services:
 
 The following Windows PowerShell commands do the same thing as the preceding steps.
 
-```
+```powershell
 Import-Module ADFS
 ```
 
-```
+```powershell
 Install-AdfsFarm -CertificateThumbprint 0E0C205D252002D535F6D32026B6AB074FB840E7 -FederationServiceDisplayName "Contoso Corporation" -FederationServiceName adfs.contoso.com -GroupServiceAccountIdentifier "contoso\FSgmsa`$"
 ```
 
@@ -348,7 +352,9 @@ To add the required claims rules:
 
 6.  On the **Configure Rule** page, in the **Choose Rule Type** step, under **Claim rule name**, enter the name for the claim rule. Use a descriptive name for the claim rule—for example, **ActiveDirectoryUserSID**. Under **Custom rule**, enter the following claim rule language syntax for this rule:
     
+    ```powershell
         c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"] => issue(store = "Active Directory", types = ("http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"), query = ";objectSID;{0}", param = c.Value);
+    ```
 
 7.  On the **Configure Rule** page, click **Finish**.
 
@@ -358,7 +364,9 @@ To add the required claims rules:
 
 10. On the **Configure Rule** page, on the **Choose Rule Type** step, under **Claim rule name**, enter the name for the claim rule. Use a descriptive name for the claim rule—for example, **ActiveDirectoryUPN**. Under **Custom rule**, enter the following claim rule language syntax for this rule:
     
+    ```powershell
         c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"] => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"), query = ";userPrincipalName;{0}", param = c.Value);
+    ```
 
 11. Click **Finish**.
 
@@ -376,16 +384,23 @@ Alternatively, you can create relaying party trusts and claim rules by using Win
 
 **IssuanceAuthorizationRules.txt contains:**
 
+```powershell
     @RuleTemplate = "AllowAllAuthzRule" => issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");
+```
 
 **IssuanceTransformRules.txt contains:**
 
+```powershell
     @RuleName = "ActiveDirectoryUserSID" c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"] => issue(store = "Active Directory", types = ("http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"), query = ";objectSID;{0}", param = c.Value); 
-    
+```
+
+```powershell
     @RuleName = "ActiveDirectoryUPN" c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"] => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"), query = ";userPrincipalName;{0}", param = c.Value);
+```
 
 **Run the following commands:**
 
+```powershell
     [string]$IssuanceAuthorizationRules=Get-Content -Path C:\IssuanceAuthorizationRules.txt
     
     [string]$IssuanceTransformRules=Get-Content -Path c:\IssuanceTransformRules.txt
@@ -393,6 +408,7 @@ Alternatively, you can create relaying party trusts and claim rules by using Win
     Add-ADFSRelyingPartyTrust -Name "Outlook Web App" -Enabled $true -Notes "This is a trust for https://mail.contoso.com/owa/" -WSFedEndpoint https://mail.contoso.com/owa/ -Identifier https://mail.contoso.com/owa/ -IssuanceTransformRules $IssuanceTransformRules -IssuanceAuthorizationRules $IssuanceAuthorizationRules
     
     Add-ADFSRelyingPartyTrust -Name "Exchange Admin Center (EAC)" -Enabled $true -Notes "This is a trust for https://mail.contoso.com/ecp/" -WSFedEndpoint https://mail.contoso.com/ecp/ -Identifier https://mail.contoso.com/ecp/ -IssuanceTransformRules $IssuanceTransformRules -IssuanceAuthorizationRules $IssuanceAuthorizationRules
+```
 
 ## Step 4 – Install the Web Application Proxy role service (optional)
 
@@ -462,7 +478,9 @@ To configure the Web Application role service:
 
 The following Windows PowerShell cmdlet does the same thing as the preceding steps.
 
+```powershell
     Install-WebApplicationProxy -CertificateThumprint 1a2b3c4d5e6f1a2b3c4d5e6f1a2b3c4d5e6f1a2b -FederationServiceName adfs.contoso.com
+```
 
 ## Step 6 – Publish Outlook Web App and EAC by using Web Application Proxy (optional)
 
@@ -502,11 +520,15 @@ To publish Outlook Web App and EAC by using Web Application Proxy:
 
 The following Windows PowerShell cmdlet performs the same tasks as the preceding procedure for Outlook Web App.
 
+```powershell
     Add-WebApplicationProxyApplication -BackendServerUrl 'https://mail.contoso.com/owa/' -ExternalCertificateThumbprint 'E9D5F6CDEA243E6E62090B96EC6DE873AF821983' -ExternalUrl 'https://external.contoso.com/owa/' -Name 'OWA' -ExternalPreAuthentication ADFS -ADFSRelyingPartyName 'Outlook Web App'
+```
 
 The following Windows PowerShell cmdlet performs the same tasks as the preceding procedure for EAC.
 
+```powershell
     Add-WebApplicationProxyApplication -BackendServerUrl 'https://mail.contoso.com/ecp/' -ExternalCertificateThumbprint 'E9D5F6CDEA243E6E62090B96EC6DE873AF821983' -ExternalUrl 'https://external.contoso.com/ecp/' -Name 'EAC' -ExternalPreAuthentication ADFS -ADFSRelyingPartyName 'Exchange Admin Center'
+```
 
 After you complete these steps, Web Application Proxy will perform AD FS authentication for Outlook Web App and EAC clients, and it will also proxy the connections to Exchange on their behalf. You do not need to configure Exchange itself for AD FS authentication, so proceed to step 10 to test your configuration.
 
@@ -522,9 +544,10 @@ When you are configuring AD FS to be used for claims-based authentication with O
 
 Run the following commands in the Exchange Management Shell.
 
+```powershell
     $uris = @(" https://mail.contoso.com/owa/","https://mail.contoso.com/ecp/")
     Set-OrganizationConfig -AdfsIssuer "https://adfs.contoso.com/adfs/ls/" -AdfsAudienceUris $uris -AdfsSignCertificateThumbprint "88970C64278A15D642934DC2961D9CCA5E28DA6B"
-
+```
 
 > [!NOTE]
 > The <EM>-AdfsEncryptCertificateThumbprint</EM> parameter isn’t supported for these scenarios.
@@ -545,12 +568,15 @@ For the OWA and ECP virtual directories, enable AD FS authentication as the only
 
 Configure the ECP virtual directory by using the Exchange Management Shell. In the Shell window, run the following command.
 
+```powershell
     Get-EcpVirtualDirectory | Set-EcpVirtualDirectory -AdfsAuthentication $true -BasicAuthentication $false -DigestAuthentication $false -FormsAuthentication $false -WindowsAuthentication $false
+```
 
 Configure the OWA virtual directory by using the Exchange Management Shell. In the Shell window, run the following command.
 
+```powershell
     Get-OwaVirtualDirectory | Set-OwaVirtualDirectory -AdfsAuthentication $true -BasicAuthentication $false -DigestAuthentication $false -FormsAuthentication $false -WindowsAuthentication $false -OAuthAuthentication $false
-
+````
 
 > [!NOTE]
 > The preceding Exchange Management Shell commands configure the OWA and ECP virtual directories on every Client Access server in your organization. If you don’t want to apply these settings to all Client Access servers, use the <EM>-Identity</EM> parameter and specify the Client Access server. It’s likely you will want to apply these settings only to the Client Access servers in your organization that are Internet facing.
@@ -566,8 +592,8 @@ After you have completed all of the required steps, including making changes to 
   - Using Windows PowerShell:
     
     ```powershell
-Restart-Service W3SVC,WAS -noforce
-```
+    Restart-Service W3SVC,WAS -noforce
+    ```
 
   - Using a command line: Click **Start**, click **Run**, type `IISReset /noforce`, and then click **OK**.
 

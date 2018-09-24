@@ -112,9 +112,11 @@ To use the Shell to verify that you’ve successfully licensed the server as Sta
 
 2.  Run the following command to view the licensing status of a specific Exchange server.
     
+    ```powershell
         Get-ExchangeServer ExServer01 | Format-Table Edition,*Trial*
-
+    ```
 3.  (Optional) Run the following command to view the licensing status of all Exchange servers in your organization.
     
+    ```powershell
         Get-ExchangeServer | Format-Table Name, Edition, *Trial* -Auto
-
+    ```

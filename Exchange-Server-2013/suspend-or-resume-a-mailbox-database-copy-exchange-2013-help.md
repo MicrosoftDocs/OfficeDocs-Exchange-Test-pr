@@ -96,6 +96,6 @@ To verify that you have successfully suspended or resumed a mailbox database cop
   - In the Shell, run the following command to display status information for a database copy.
     
     ```powershell
-Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
-```
+    Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List
+    ```
 

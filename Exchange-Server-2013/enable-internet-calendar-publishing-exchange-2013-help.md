@@ -91,7 +91,9 @@ Get-ExchangeServer | format-list
 
 This example enables the publishing virtual directory on Client Access server CAS01.
 
+```powershell
     Set-OwaVirtualDirectory -Identity "CAS01\owa (Default Web Site)" -ExternalUrl "<URL for CAS01>" -CalendarEnabled $true
+```
 
 Where the identity `CAS01\owa (Default Web Site)` is both the server name and the Outlook Web App virtual directory.
 
@@ -147,7 +149,9 @@ If you want to create a sharing policy specifically for Internet calendar publis
 
 This example creates an Internet calendar publishing sharing policy named Internet and configures the policy to share only availability information. The policy is enabled.
 
+```powershell
     New-SharingPolicy -Name "Internet" -Domains 'Anonymous: CalendarSharingFreeBusySimple' -Enabled $true
+```
 
 This example adds the sharing policy Internet to a user mailbox.
 
@@ -201,7 +205,9 @@ If you want to configure the default sharing policy for Internet calendar publis
 
 This example updates the Default Sharing Policy and configures the policy to share only availability information. The policy is enabled.
 
+```powershell
     Set-SharingPolicy -Name "Default Sharing Policy" -Domains 'Anonymous: CalendarSharingFreeBusySimple' -Enabled $true
+```
 
 For detailed syntax and parameter information, see [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)).
 

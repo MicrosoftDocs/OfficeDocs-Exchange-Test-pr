@@ -132,9 +132,7 @@ For detailed instructions about how to create an email address policy, see the f
     
       - **Specify the types of recipients this email address will apply to**
 
-3.  
-    
-    Click **Add a rule** to further restrict the recipients that this policy will apply to. This creates a Boolean **And** statement.
+3.  Click **Add a rule** to further restrict the recipients that this policy will apply to. This creates a Boolean **And** statement.
     
 
     > [!CAUTION]
@@ -144,9 +142,7 @@ For detailed instructions about how to create an email address policy, see the f
 
 4.  Click **Preview recipients the policy applies to** to view the recipients that policy will apply to.
 
-5.  
-    
-    Click **Save** to save your changes and create the policy.
+5.  Click **Save** to save your changes and create the policy.
 
 6.  You’ll get a warning that the email address policy won’t be applied until you update it. After it’s created, select it, and then, in the details pane, click **Apply**.
 
@@ -154,7 +150,9 @@ For detailed instructions about how to create an email address policy, see the f
 
 This example creates an email address policy that includes mailbox users in the Southeast offices who will have email addresses that include their last name combined with the first two letters of their first name.
 
+```powershell
     New-EmailAddressPolicy -Name "southeast offices" -IncludedRecipients MailboxUsers -ConditionalStateorProvince "Georgia","Alabama","Louisiana" -EnabledEmailAddressTemplates "SMTP:%s%2g@southeast.contoso.com"
+```
 
 For detailed syntax and parameter information, see [New-EmailAddressPolicy](https://technet.microsoft.com/en-us/library/aa996800\(v=exchg.150\)).
 

@@ -62,8 +62,8 @@ For additional management tasks related to Messaging Records Management, see [Me
 1.  Run this Exchange Management Shell command to change directory to the **Scripts** subdirectory in your Exchange installation path.
     
     ```powershell
-Cd $Env:ExchangeInstallPath\Scripts
-```
+    Cd $Env:ExchangeInstallPath\Scripts
+    ```
 
 2.  Run the Export-RetentionTags.ps1 script to export retention tags to an XML file.
     
@@ -73,8 +73,8 @@ Cd $Env:ExchangeInstallPath\Scripts
 
     
     ```powershell
-.\Export-RetentionTags.ps1 "c:\docs\ExportedRetentionTags.xml"
-```
+    .\Export-RetentionTags.ps1 "c:\docs\ExportedRetentionTags.xml"
+    ```
 
 ## How do you know this worked?
 
@@ -89,8 +89,8 @@ To verify that you have successfully exported retention tags and retention polic
 1.  Run this Exchange Management Shell command to change the directory to the **Scripts** subdirectory in your Exchange installation path.
     
     ```powershell
-Cd $Env:ExchangeInstallPath\Scripts
-```
+    Cd $Env:ExchangeInstallPath\Scripts
+    ```
 
 2.  Run the Import-RetentionTags.ps1 script to import retention tags from a previously exported XML file.
     
@@ -105,8 +105,8 @@ Cd $Env:ExchangeInstallPath\Scripts
 
     
     ```powershell
-.\Import-RetentionTags.ps1 "c:\docs\ExportedRetentionTags.xml"
-```
+    .\Import-RetentionTags.ps1 "c:\docs\ExportedRetentionTags.xml"
+    ```
 
 ## How do you know this worked?
 

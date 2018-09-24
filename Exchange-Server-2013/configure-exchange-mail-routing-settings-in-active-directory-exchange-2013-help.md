@@ -41,7 +41,7 @@ Determine the name of the Active Directory IP site link for which you want to se
 
 To set an Exchange-specific cost on an Active Directory site link, run the following command:
 
-``` 
+```powershell
  Set-AdSiteLink <ADSiteLinkIdentity> -ExchangeCost <Integer | $null>
 ```
 
@@ -64,8 +64,8 @@ To verify that you have successfully set an Exchange cost on an Active Directory
 1.  Run the following command:
     
     ```powershell
-Get-AdSiteLink | Format-List Name,ExchangeCost
-```
+    Get-AdSiteLink | Format-List Name,ExchangeCost
+    ```
 
 2.  Verify the Exchange cost is configured on the Active Directory site link.
 
@@ -98,8 +98,8 @@ To verify that you have successfully configured an Active Directory site as a hu
 1.  Run the following command:
     
     ```powershell
-Get-AdSite | Format-List Name,HubSiteEnabled
-```
+    Get-AdSite | Format-List Name,HubSiteEnabled
+    ```
 
 2.  Verify the *HubSiteEnabled* value is `True` for the Active Directory site.
 

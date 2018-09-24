@@ -52,16 +52,16 @@ To perform any of the Transport Agent procedures described in this topic in the 
 1.  On the Client Access server, open Windows PowerShell and run the following command:
     
     ```powershell
-Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
-```
+    Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
+    ```
 
 2.  Run the command as described, but add the following value to the command: `-TransportService FrontEnd`.
     
     For example, to view the transport agents in the Front End Transport service on a Client Access server, run the following command:
     
     ```powershell
-Get-TransportAgent -TransportService FrontEnd
-```
+    Get-TransportAgent -TransportService FrontEnd
+    ```
 
 ## Use the Shell to install a transport agent
 
@@ -73,11 +73,15 @@ Transport agents are installed in a disabled state to make sure mail flow isn't 
 
 Use the following syntax to install a transport agent.
 
+```powershell
     Install-TransportAgent -Name <TransportAgentIdentity> -TransportAgentFactory <"TransportAgentFactory"> -AssemblyPath <"FilePath">
+```
 
 This example installs a fictitious transport agent named Contoso Transport Agent in the Transport service on a Mailbox server.
 
+```powershell
     Install-TransportAgent -Name "Contoso Transport Agent" -TransportAgentFactory "vendor.exchange.ContosoTransportAgentfactory" -AssemblyPath "C:\Program Files\Vendor\TransportAgent\ContosoTransportAgentFactory.dll"
+```
 
 ## How do you know this worked?
 

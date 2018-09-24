@@ -42,14 +42,14 @@ You need to be assigned permissions before you can perform this procedure or pro
 1.  Run the following command to verify the Content Filter agent is installed and enabled on the Exchange server:
     
     ```powershell
-Get-TransportAgent "Content Filter Agent"
-```
+    Get-TransportAgent "Content Filter Agent"
+    ```
 
 2.  Run the following command to verify content filtering is enabled:
     
     ```powershell
-Get-ContentFilterConfig | Format-List Enabled
-```
+    Get-ContentFilterConfig | Format-List Enabled
+    ```
 
 For more information, see [Manage content filtering](manage-content-filtering-exchange-2013-help.md).
 
@@ -94,8 +94,8 @@ To verify that you have successfully specified the spam quarantine mailbox, do t
 1.  Run the following command:
     
     ```powershell
-Get-ContentFilterConfig | Format-List QuarantineMailbox
-```
+    Get-ContentFilterConfig | Format-List QuarantineMailbox
+    ```
 
 2.  Verify the value displayed is the value you configured.
 

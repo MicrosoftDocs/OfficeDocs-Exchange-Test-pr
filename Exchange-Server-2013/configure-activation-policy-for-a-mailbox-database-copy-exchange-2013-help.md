@@ -37,15 +37,11 @@ Looking for other management tasks related to mailbox database copies? Check out
 
 ## Use the EAC to configure the activation policy for a mailbox database copy
 
-1.  
-    
-    In the EAC, go to **Servers** \> **Databases**.
+1.  In the EAC, go to **Servers** \> **Databases**.
 
 2.  Select the database that you want to configure.
 
-3.  
-    
-    In the Details pane, under **Database Copies**, locate the database copy you want to configure and click **Suspend**.
+3.  In the Details pane, under **Database Copies**, locate the database copy you want to configure and click **Suspend**.
 
 4.  Optionally, add a comment, and select the check box that says **This copy can only be activated by manual intervention**.
 
@@ -96,12 +92,12 @@ To verify that you've successfully configured the activation policy, do one of t
   - In the Shell, run the following command to verify activation settings for a database copy.
     
     ```powershell
-Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List ActivationSuspended
-```
+    Get-MailboxDatabaseCopyStatus <DatabaseCopyName> | Format-List ActivationSuspended
+    ```
 
   - In the Shell, run the following command to verify activation settings for a DAG member.
     
     ```powershell
-Get-MailboxServer <ServerName> | Format-List DatabaseCopyAutoActivationPolicy
-```
+    Get-MailboxServer <ServerName> | Format-List DatabaseCopyAutoActivationPolicy
+    ```
 

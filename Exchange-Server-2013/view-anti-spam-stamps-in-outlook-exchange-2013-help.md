@@ -41,9 +41,11 @@ You can use Microsoft Outlook to view the anti-spam stamps that Microsoft Exchan
 
 3.  In the **Properties** dialog box, in the **Internet headers** section, use the scroll bar to view the anti-spam stamps as shown in the following example.
     
+    ```powershell
         X-MS-Exchange-Organization-PCL:7
         X-MS-Exchange-Organization-SCL:6
         X-MS-Exchange-Organization-Antispam-Report: DV:3.1.3924.1409;SID:SenderIDStatus Fail;PCL:PhishingLevel SUSPICIOUS;CW:CustomList;PP:Presolved;TIME:TimeBasedFeatures
+    ```
 
 ## Use Outlook 2007 to view anti-spam stamps
 
@@ -53,7 +55,9 @@ You can use Microsoft Outlook to view the anti-spam stamps that Microsoft Exchan
 
 3.  In the **Message Options** dialog box, in the **Internet headers** section, use the scroll bar to view the anti-spam stamps as shown in the following example.
     
+    ```powershell
         X-MS-Exchange-Organization-PCL:7
         X-MS-Exchange-Organization-SCL:6
         X-MS-Exchange-Organization-Antispam-Report: DV:3.1.3924.1409;SID:SenderIDStatus Fail;PCL:PhishingLevel SUSPICIOUS;CW:CustomList;PP:Presolved;TIME:TimeBasedFeatures
-
+    ```
+    

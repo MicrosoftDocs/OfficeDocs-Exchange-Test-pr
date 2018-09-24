@@ -60,26 +60,26 @@ On the computer running the Mailbox server role:
 1.  Set the Microsoft Exchange POP3 service to start automatically.
     
     ```powershell
-Set-service msExchangePOP3 -startuptype automatic
-```
+    Set-service msExchangePOP3 -startuptype automatic
+    ```
 
 2.  Start the Microsoft Exchange POP3 service.
     
     ```powershell
-Start-service msExchangePOP3
-```
+    Start-service msExchangePOP3
+    ```
 
 3.  Set the Microsoft Exchange POP3 Backend service to start automatically.
     
     ```powershell
-Set-service msExchangePOP3BE -startuptype automatic
-```
+    Set-service msExchangePOP3BE -startuptype automatic
+    ```
 
 4.  Start the Microsoft Exchange POP3 Backend service.
     
     ```powershell
-Start-service msExchangePOP3BE
-```
+    Start-service msExchangePOP3BE
+    ```
 
 ## How do you know this worked?
 

@@ -46,20 +46,20 @@ Using dial tone portability, users can have a temporary mailbox for sending and 
 2.  Use the [New-MailboxDatabase](https://technet.microsoft.com/en-us/library/aa997976\(v=exchg.150\)) cmdlet to create a dial tone database, as shown in this example.
     
     ```powershell
-New-MailboxDatabase -Name DTDB1 -EdbFilePath D:\DialTone\DTDB1.EDB
-```
+    New-MailboxDatabase -Name DTDB1 -EdbFilePath D:\DialTone\DTDB1.EDB
+    ```
 
 3.  Use the [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)) cmdlet to rehome the user mailboxes hosted on the database being recovered, as shown in this example.
     
     ```powershell
-Get-Mailbox -Database DB1 | Set-Mailbox -Database DTDB1
-```
+    Get-Mailbox -Database DB1 | Set-Mailbox -Database DTDB1
+    ```
 
 4.  Use the [Mount-Database](https://technet.microsoft.com/en-us/library/aa998871\(v=exchg.150\)) cmdlet to mount the database so client computers can access the database and send and receive messages, as shown in this example.
     
     ```powershell
-Mount-Database -Identity DTDB1
-```
+    Mount-Database -Identity DTDB1
+    ```
 
 5.  Create a recovery database (RDB) and restore or copy the database and log files containing the data you want to recover into the RDB. For detailed steps, see [Create a recovery database](create-a-recovery-database-exchange-2013-help.md).
 
@@ -68,51 +68,53 @@ Mount-Database -Identity DTDB1
 7.  Mount the RDB, and then use the [Dismount-Database](https://technet.microsoft.com/en-us/library/bb124936\(v=exchg.150\)) cmdlet to dismount it, as shown in this example.
     
     ```powershell
-Mount-Database -Identity RDB1
-```
-        Dismount-Database -Identity RDB1
+    Mount-Database -Identity RDB1
+    ```
+    ```powershell
+    Dismount-Database -Identity RDB1
+    ```
 
 8.  After the RDB is dismounted, move the current database and log files within the RDB folder to a safe location. This is done in preparation for swapping the recovered database with the dial tone database.
 
 9.  Dismount the dial tone database, as shown in this example. Note that your end users will experience an interruption in service when you dismount this database.
     
     ```powershell
-Dismount-Database -Identity DTDB1
-```
+    Dismount-Database -Identity DTDB1
+    ```
 
 10. Move the database and log files from the dial tone database folder into the RDB folder.
 
 11. Move the database and log files from the safe location containing the recovered database into the dial tone database folder, and then mount the database, as shown in this example.
     
     ```powershell
-Mount-Database -Identity DTDB1
-```
+    Mount-Database -Identity DTDB1
+    ```
     
     This ends the service interruption for your end users. They will be able to access their original production database and send and receive messages.
 
 12. Mount the RDB, as shown in this example.
     
     ```powershell
-Mount-Database -Identity RDB1
-```
+    Mount-Database -Identity RDB1
+    ```
 
 13. Use the [Get-Mailbox](https://technet.microsoft.com/en-us/library/bb123685\(v=exchg.150\)) and [New-MailboxRestoreRequest](https://technet.microsoft.com/en-us/library/ff829875\(v=exchg.150\)) cmdlets to export the data from the RDB and import it into the recovered database, as shown in this example. This will import all the messages sent and received using the dial tone database into the production database.
     
-    ```
-```powershell
-$mailboxes = Get-Mailbox -Database DTDB1
-```
+    ```powershell
+    $mailboxes = Get-Mailbox -Database DTDB1
     ```
 
-    ```
+    ```powershell
     $mailboxes | %{ New-MailboxRestoreRequest -SourceStoreMailbox $_.ExchangeGuid -SourceDatabase RDB1 -TargetMailbox $_ }
     ```
 
 14. After the restore operation is complete, you can dismount and remove the RDB, as shown in this example.
     
+    ```powershell
         Dismount-Database -Identity RDB1
         Remove-MailboxDatabase -Identity RDB1
-
+    ```
+    
 For detailed syntax and parameter information, see the following topics:
 
   - [New-MailboxDatabase](https://technet.microsoft.com/en-us/library/aa997976\(v=exchg.150\))

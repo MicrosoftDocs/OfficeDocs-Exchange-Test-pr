@@ -61,23 +61,30 @@ For additional management tasks related to UM auto attendants, see [UM auto atte
 
 This example imports the welcome greeting file named welcomegreeting.wav from d:\\UMPrompts into the UM dial plan `MyUMDialPlan`.
 
+```powershell
     [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
     Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+```
 
 This example imports the welcome greeting file named welcomegreeting.wav from d:\\UMPrompts into the UM auto attendant `MyUMAutoAttendant`.
 
+```powershell
     [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
     Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+```
 
 ## Use the Shell to export custom greetings, announcements, menus, and prompts from UM dial plans and auto attendants
 
 This example exports the welcome greeting for the UM dial plan `MyUMDialPlan` and saves it as the file named welcomegreeting.wav.
 
+```powershell
     $prompt = Export-UMPrompt -PromptFileName "customgreeting.wav�? -UMDialPlan MyUMDialPlan
     set-content -Path "d:\DialPlanPrompts\welcomegreeting.wav" -Value $prompt.AudioData -Encoding Byte
+```
 
 This example exports the business hours welcome greeting for the UM auto attendant `MYUMAutoAttendant` and saves it as the file named BusinessHoursWelcomeGreeting.wav.
 
+```powershell
     $prompt = Export-UMPrompt -BusinessHoursWelcomeGreeting -UMAutoAttendant MyUMAutoAttendant
     set-content -Path "d:\UMPrompts\BusinessHoursWelcomeGreeting.wav" -Value $prompt.AudioData -Encoding Byte
-
+```

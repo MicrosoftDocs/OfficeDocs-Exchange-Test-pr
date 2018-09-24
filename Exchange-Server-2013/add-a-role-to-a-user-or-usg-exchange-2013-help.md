@@ -67,11 +67,15 @@ You can create a role assignment with no scope. When you do this, the implicit r
 
 Use the following syntax to assign a role to a USG without any scope.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup <USG> -Role <role name>
+```
 
 This example assigns the Exchange Servers role to the SeattleAdmins USG.
 
+```powershell
     New-ManagementRoleAssignment -Name "Exchange Servers_SeattleAdmins" -SecurityGroup SeattleAdmins -Role "Exchange Servers"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -81,11 +85,15 @@ If a predefined relative scope meets your business requirements, you can apply t
 
 Use the following syntax to assign a role to a USG with a predefined scope.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup < USG> -Role <role name> -RecipientRelativeWriteScope < MyDistributionGroups | Organization | Self >
+```
 
 This example assigns the Exchange Servers role to the SeattleAdmins USG and applies the Organization predefined scope.
 
+```powershell
     New-ManagementRoleAssignment -Name "Exchange Servers_SeattleAdmins" -SecurityGroup SeattleAdmins -Role "Exchange Servers" -RecipientRelativeWriteScope Organization
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -97,11 +105,15 @@ Before you can add a scope to a role assignment, you need to create one. For mor
 
 Use the following syntax to assign a role to a USG with a recipient filter-based scope.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup < USG> -Role <role name> -CustomRecipientWriteScope <role scope name>
+```
 
 This example assigns the Mail Recipients role to the Seattle Recipient Admins USG and applies the Seattle Recipients scope.
 
+```powershell
     New-ManagementRoleAssignment -Name "Mail Recipients_Seattle Recipient Admins" -SecurityGroup "Seattle Recipient Admins" -Role "Mail Recipients" -CustomRecipientWriteScope "Seattle Recipients"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -113,11 +125,15 @@ Before you can add a scope to a role assignment, you need to create one. For mor
 
 Use the following syntax to assign a role to a USG with a configuration scope.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup <USG> -Role <role name> -CustomConfigWriteScope <role scope name>
+```
 
 This example assigns the Exchange Servers role to the MailboxAdmins USG and applies the Mailbox Servers scope.
 
+```powershell
     New-ManagementRoleAssignment -Name "Exchange Servers_MailboxAdmins" -SecurityGroup MailboxAdmins -Role "Exchange Servers" -CustomConfigWriteScope "Mailbox Servers"
+```
 
 The preceding example shows how to add a role assignment with a server configuration scope. The syntax to add a database configuration scope is the same. You specify the name of a database scope instead of a server scope.
 
@@ -129,11 +145,15 @@ If you want to scope a role's write scope to an organizational unit (OU), you ca
 
 Use the following syntax to assign a role to a USG and restrict the write scope of a role to a specific OU.
 
+```powershell
     New-ManagementRoleAssignment -Name <assignment name> -SecurityGroup <USG> -Role <role name> -RecipientOrganizationalUnitScope <OU>
+```
 
 This example assigns the Mail Recipients role to the SalesRecipientAdmins USG and scopes the assignment to the sales/users OU in the contoso.com domain.
 
+```powershell
     New-ManagementRoleAssignment -Name "Mail Recipients_SalesRecipientAdmins" -SecurityGroup SalesRecipientAdmins -Role "Mail Recipients" -RecipientOrganizationalUnitScope contoso.com/sales/users
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -151,7 +171,9 @@ You can't create a role assignment with both exclusive and regular scopes.
 
 This example assigns the Mail Recipients role to the Protected User Admins USG and applies the Protected Users exclusive scope.
 
+```powershell
     New-ManagementRoleAssignment -Name "Mail Recipients_Protected User Admins" -SecurityGroup "Protected User Admins" -Role "Mail Recipients" -ExclusiveRecipientWriteScope "Protected Users"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 

@@ -260,6 +260,7 @@ There are two methods you can use for this step:
 
 This example creates retention tags based on the corresponding managed content settings shown in the Contoso managed folder mailbox policy.
 
+```powershell
     New-RetentionPolicyTag Corp-DeletedItems -ManagedFolderToUpgrade Corp-DeletedItems
     New-RetentionPolicyTag Corp-SentItems -ManagedFolderToUpgrade Corp-SentItems
     New-RetentionPolicyTag Corp-JunkMail -ManagedFolderToUpgrade Corp-JunkMail
@@ -267,6 +268,7 @@ This example creates retention tags based on the corresponding managed content s
     New-RetentionPolicyTag 30Days -ManagedFolderToUpgrade 30Days
     New-RetentionPolicyTag 5Years -ManagedFolderToUpgrade 5Years
     New-RetentionPolicyTag NeverExpire -ManagedFolderToUpgrade NeverExpire
+```
 
 For detailed syntax and parameter information, see [New-RetentionPolicyTag](https://technet.microsoft.com/en-us/library/dd335226\(v=exchg.150\)).
 
@@ -280,6 +282,7 @@ For detailed syntax and parameter information, see [New-RetentionPolicyTag](http
 
 This example creates retention tags based on the managed folders and corresponding managed content settings shown in the Contoso managed folder mailbox policy. The retention settings are specified manually without using the *ManagedFolderToUpgrade* parameter.
 
+```powershell
     New-RetentionPolicyTag Corp-DeletedItems -Type DeletedItems -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction DeleteAndAllowRecovery
     New-RetentionPolicyTag Corp-SentItems -Type SentItems -RetentionEnabled $true -AgeLimitforRetention 1825 -RetentionAction MoveToDeletedItems
     New-RetentionPolicyTag Corp-JunkMail -Type JunkMail -RetentionEnabled $true -AgeLimitforRetention 30 -RetentionAction PermanentlyDelete
@@ -287,6 +290,7 @@ This example creates retention tags based on the managed folders and correspondi
     New-RetentionPolicyTag 30Days -Type Personal -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction MoveToDeletedItems
     New-RetentionPolicyTag 5Years -Type Personal -RetentionEnabled $true -AgeLimitForRetention 1825 -RetentionAction MoveToDeletedItems
     New-RetentionPolicyTag NeverExpire -Type Personal -RetentionEnabled $false
+```
 
 For detailed syntax and parameter information, see [New-RetentionPolicyTag](https://technet.microsoft.com/en-us/library/dd335226\(v=exchg.150\)).
 
@@ -302,7 +306,9 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 This example creates the retention policy RP-Corp and links the newly created retention tags to the policy.
 
+```powershell
     New-RetentionPolicy RP-Corp -RetentionPolicyTagLinks Corp-DeletedItems,Corp-SentItems,Corp-JunkMail,Corp-EntireMailbox,30Days,NeverExpire
+```
 
 For detailed syntax and parameter information, see [New-RetentionPolicy](https://technet.microsoft.com/en-us/library/dd297970\(v=exchg.150\)).
 
@@ -342,13 +348,15 @@ To verify that you have migrated from managed folders to retention policies, do 
     
     This command retrieves the retention policy applied to all mailboxes in an organization, and their retention hold status.
     
+    ```powershell
         Get-Mailbox -ResultSize unlimited -Filter {Name -NotLike "DiscoverySearch*�?} | Format-Table Name,RetentionPolicy,RetentionHoldEnabled -Auto
+    ```
 
   - After the Managed Folder Assistant has processed a mailbox with a retention policy, use the [Get-RetentionPolicyTag](https://technet.microsoft.com/en-us/library/dd298009\(v=exchg.150\)) cmdlet to retrieve the retention tags provisioned in the user mailbox.
     
     This command retrieves the retention tags actually applied to April Stewart's mailbox.
     
     ```powershell
-Get-RetentionPolicyTag -Mailbox astewart
-```
+    Get-RetentionPolicyTag -Mailbox astewart
+    ```
 

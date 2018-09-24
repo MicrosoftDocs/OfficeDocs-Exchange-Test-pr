@@ -80,8 +80,8 @@ To verify that you’ve permanently deleted an active mailbox, do the following:
 3.  Run the following command to verify that the mailbox was successfully purged from the Exchange mailbox database.
     
     ```powershell
-Get-MailboxDatabase | Get-MailboxStatistics | Where {         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }.DisplayName -eq "<display name>" }
-```
+    Get-MailboxDatabase | Get-MailboxStatistics | Where {         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" }.DisplayName -eq "<display name>" }
+    ```
     
     If you successfully purged the mailbox, the command won’t return any results. If the mailbox wasn’t purged, the command will return information about the mailbox.
 
@@ -93,14 +93,17 @@ There are two types of disconnected mailboxes: disabled and soft-deleted. You mu
 
 Run the following command to determine whether a disconnected mailbox is disabled or soft-deleted.
 
+```powershell
     Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,MailboxGuid,Database,DisconnectReason
+```
 
 The value for the *DisconnectReason* property for disconnected mailboxes will be either `Disabled` or `SoftDeleted`.
 
 You can run the following command to display the type for all disconnected mailboxes in your organization.
 
+```powershell
     Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisconnectReason -ne $null } | fl DisplayName,MailboxGuid,Database,DisconnectReason
-
+```
 
 > [!WARNING]
 > When you use the <STRONG>Remove-StoreMailbox</STRONG> cmdlet to permanently delete a disconnected mailbox, all its contents are purged from the mailbox database and the data loss is permanent.
@@ -119,7 +122,9 @@ Remove-StoreMailbox -Database MBD01 -Identity "Dan Jump" -MailboxState SoftDelet
 
 This example permanently deletes all soft-deleted mailboxes from mailbox database MBD01.
 
+```powershell
     Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | ForEach {Remove-StoreMailbox -Database $_.Database -Identity $_.MailboxGuid -MailboxState SoftDeleted}
+```
 
 For detailed syntax and parameter information, see [Remove-StoreMailbox](https://technet.microsoft.com/en-us/library/ff829913\(v=exchg.150\)) and [Get-MailboxStatistics](https://technet.microsoft.com/en-us/library/bb124612\(v=exchg.150\)).
 

@@ -45,7 +45,9 @@ Pipeline tracing captures copies of email messages as they move through the tran
 
 Use the following syntax to configure the pipeline tracing sender address.
 
+```powershell
     <Set-TransportService | Set-MailboxTransportService> <ServerIdentity> -PipelineTracingSenderAddress <SMTPAddress | "<>">
+```
 
 This example configures pipeline tracing to capture snapshots of all messages sent by the sender chris@contoso.com in the Transport service on the Mailbox server named Mailbox01.
 
@@ -71,7 +73,9 @@ The default pipeline tracing folder doesn't exist until after you enable pipelin
 
 Use the following syntax to configure the pipeline tracing folder.
 
+```powershell
     <Set-TransportService | Set-MailboxTransportService> <ServerIdentity> -PipelineTracingPath <LocalFilePath>
+```
 
 This example sets the pipeline tracing folder for the Transport service on the Mailbox server named Mailbox01 to D:\\Hub\\Pipeline Tracing.
 
@@ -85,7 +89,9 @@ By default, pipeline tracing is disabled on all Exchange servers. When you enabl
 
 Use the following syntax to enable pipeline tracing.
 
+```powershell
     <Set-TransportService | Set-MailboxTransportService> <ServerIdentity> -PipelineTracingEnabled $true
+```
 
 This example enables pipeline tracing in the Transport service on the Mailbox server named Mailbox01.
 
@@ -99,7 +105,9 @@ To verify that you have successfully configured pipeline tracing, do the followi
 
 1.  Run the following command:
     
+    ```powershell
         <Get-TransportService | Get-MailboxTransportService> <ServerIdentity> | Format-List PipelineTracing*
+    ```
 
 2.  Verify the values displayed are the values you configured.
 
@@ -111,7 +119,9 @@ Because of the disk space and security concerns associated with pipeline tracing
 
 Use the following syntax to disable pipeline tracing.
 
+```powershell
     <Set-TransportService | Set-MailboxTransportService> <ServerIdentity> -PipelineTracingEnabled $false
+```
 
 This example disables pipeline tracing in the Transport service on the Mailbox server named Mailbox01.
 
@@ -125,8 +135,9 @@ To verify that you have successfully disabled pipeline tracing, do the following
 
 1.  Run the following command:
     
+    ```powershell
         <Get-TransportService | Get-MailboxTransportService> <ServerIdentity> | Format-List PipelineTracingEnabled
-
+    ```
 2.  Verify the value of the *PipelineTracingEnabled* parameter is $false.
 
 3.  Check the pipeline tracing folder, and verify message snapshot files are no longer being created in the folder.

@@ -45,7 +45,9 @@ This topic shows you how to configure server-to-server authentication between Ex
 
 Run the following command to create Exchange 2013 as a trusted security token issuer in SharePoint 2013.
 
+```powershell
     New-SPTrustedSecurityTokenIssuer -Name Exchange -MetadataEndPoint https://<Exchange Server Name or FQDN>/autodiscover/metadata/json/1
+```
 
 ## Step 2: Configure server-to-server authentication for SharePoint 2013 on a server running Exchange 2013
 
@@ -53,8 +55,10 @@ Perform this step on an Exchange 2013 server. You need to be assigned permission
 
 Run this command to configure the SharePoint partner application.
 
+```powershell
     cd c:\'Program Files'\Microsoft\'Exchange Server'\V15\Scripts
     .\Configure-EnterprisePartnerApplication.ps1 -AuthMetadataUrl <path to SharePoint AuthMetadataUrl> -ApplicationType SharePoint
+```
 
 ## Step 3: Add authorized users to the Discovery Management role group
 

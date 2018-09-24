@@ -82,8 +82,8 @@ To verify that you have successfully completed your migration, do the following:
   - From the Shell, run the following command to retrieve mailbox move information.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -109,11 +109,11 @@ log in to the EAC and perform the following steps:
 
 This example creates a migration batch for a local move, where the mailboxes in the specified .csv file are moved to a different mailbox database. This .csv file contains a single column that contains the email address for each of the mailboxes that will be moved. The header for this column must be named **EmailAddress**. The migration batch in this example must be started manually by using the **Start-MigrationBatch** cmdlet or the Exchange Administration Center (EAC). Alternatively, you can use the *AutoStart* parameter to start the migration batch automatically.
 
-```
+```powershell
 New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2 -TimeZone "Pacific Standard Time"
 ```
 
-```
+```powershell
 Start-MigrationBatch -Identity LocalMove1
 ```
 
@@ -128,8 +128,8 @@ To verify that you have successfully completed your migration, do the following:
   - From the Shell, run the following command to retrieve mailbox move information.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -166,8 +166,8 @@ To verify that you have successfully completed your migration, do the following:
   - From the Shell, run the following command to retrieve mailbox move information.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -175,7 +175,7 @@ For more information, see [Get-MigrationUserStatistics](https://technet.microsof
 
 This example configures the migration endpoint, and then creates a cross-forest batch move from the source forest to the target forest using a .csv file.
 
-```
+```powershell
 New-MigrationEndpoint -Name Fabrikam -ExchangeRemote -Autodiscover -EmailAddress tonysmith@fabrikam.com -Credentials (Get-Credential fabrikam\tonysmith) 
 
 $csvData=[System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\batch.csv")
@@ -199,8 +199,8 @@ To verify that you have successfully completed your migration, do the following:
   - From the Shell, run the following command to retrieve mailbox move information.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -231,8 +231,8 @@ To verify that you have successfully completed your migration, do the following:
   - From the Shell, run the following command to retrieve mailbox move information.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -240,7 +240,9 @@ For more information, see [Get-MigrationUserStatistics](https://technet.microsof
 
 This example moves Ayla's primary mailbox and archive mailbox to separate databases. The primary database is moved to DB01, and the archive is moved to DB03.
 
+```powershell
     New-MoveRequest -Identity 'ayla@humongousinsurance.com' -TargetDatabase DB01 -ArchiveTargetDatabase -DB03
+```
 
 For detailed syntax and parameter information, see [New-MigrationBatch](https://technet.microsoft.com/en-us/library/jj219166\(v=exchg.150\)) and [New-MoveRequest](https://technet.microsoft.com/en-us/library/dd351123\(v=exchg.150\)).
 
@@ -251,8 +253,8 @@ To verify that you have successfully completed your migration, do the following:
   - From the Shell, run the following command to retrieve mailbox move information.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 
@@ -272,7 +274,9 @@ For more information, see [Get-MigrationUserStatistics](https://technet.microsof
 
 This example moves Lisa's primary mailbox to mailbox database DB01 and sets the bad item limit to `100`. To set a large bad item limit, you must use the *AcceptLargeDataLoss* parameter.
 
+```powershell
     New-MoveRequest -Identity 'Lisa' -PrimaryOnly -TargetDatabase "DB01" -BadItemLimit 100 -AcceptLargeDataLoss
+```
 
 For detailed syntax and parameter information, see [New-MigrationBatch](https://technet.microsoft.com/en-us/library/jj219166\(v=exchg.150\)) and [New-MoveRequest](https://technet.microsoft.com/en-us/library/dd351123\(v=exchg.150\)).
 
@@ -283,8 +287,8 @@ To verify that you have successfully completed your migration, do the following:
   - From the Shell, run the following command to retrieve mailbox move information.
     
     ```powershell
-Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
-```
+    Get-MigrationUserStatistics -Identity BatchName -Status | Format-List
+    ```
 
 For more information, see [Get-MigrationUserStatistics](https://technet.microsoft.com/en-us/library/jj218695\(v=exchg.150\)).
 

@@ -96,17 +96,21 @@ If you have a role group that contains the permissions you want to grant to user
 1.  Store the role group that you want to copy in a variable using the following syntax.
     
     ```powershell
-$RoleGroup = Get-RoleGroup <name of role group to copy>
-```
+    $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```
 
 2.  Create the new role group, and also add members to the role group and specify who can delegate the new role group to other users, using the following syntax.
     
+    ```powershell
         New-RoleGroup <name of new role group> -Roles $RoleGroup.Roles -Members <member1, member2, member3...> -ManagedBy <user1, user2, user3...>
+    ```
 
 For example, the following commands copy the Organization Management role group, and name the new role group "Limited Organization Management". It adds the members Isabelle, Carter, and Lukas and can be delegated by Jenny and Katie.
 
+```powershell
     $RoleGroup = Get-RoleGroup "Organization Management"
     New-RoleGroup "Limited Organization Management" -Roles $RoleGroup.Roles -Members Isabelle, Carter, Lukas -ManagedBy Jenny, Katie
+```
 
 After the new role group is created, you can add or remove roles, change the scope of role assignments on the role, and more.
 
@@ -117,17 +121,19 @@ For detailed syntax and parameter information, see [Get-RoleGroup](https://techn
 1.  Store the role group that you want to copy in a variable using the following syntax.
     
     ```powershell
-$RoleGroup = Get-RoleGroup <name of role group to copy>
-```
+    $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```
 
 2.  Create the new role group with a custom scope using the following syntax.
-    
+    ```powershell
         New-RoleGroup <name of new role group> -Roles $RoleGroup.Roles -CustomRecipientWriteScope <recipient scope name> -CustomConfigWriteScope <configuraiton scope name>
-
+    ```
+    
 For example, the following commands copy the Organization Management role group and create a new role group called Vancouver Organization Management with the Vancouver Users recipient scope and Vancouver Servers configuration scope.
-
+```powershell
     $RoleGroup = Get-RoleGroup "Organization Management"
     New-RoleGroup "Vancouver Organization Management" -Roles $RoleGroup.Roles -CustomRecipientWriteScope "Vancouver Users" -CustomConfigWriteScope "Vancouver Servers"
+```
 
 You can also add members to the role group when you create it by using the *Members* parameter as shown in Use the Shell to copy a role group with no scope earlier in this topic. For more information about management scopes, see [Understanding management role scopes](understanding-management-role-scopes-exchange-2013-help.md).
 
@@ -140,18 +146,20 @@ For detailed syntax and parameter information, see [Get-RoleGroup](https://techn
 1.  Store the role group that you want to copy in a variable using the following syntax.
     
     ```powershell
-$RoleGroup = Get-RoleGroup <name of role group to copy>
-```
+    $RoleGroup = Get-RoleGroup <name of role group to copy>
+    ```
 
 2.  Create the new role group with a custom scope using the following syntax.
-    
+
+    ```powershell
         New-RoleGroup <name of new role group> -Roles $RoleGroup.Roles -RecipientOrganizationalUnitScope <OU name>
-
+    ```
 For example, the following commands copy the Recipient Management role group and create a new role group called Toronto Recipient Management that allows management of only users in the Toronto Users OU.
-
+    
+```powershell
     $RoleGroup = Get-RoleGroup "Recipient Management"
     New-RoleGroup "Toronto Recipient Management" -Roles $RoleGroup.Roles -RecipientOrganizationalUnitScope "contoso.com/Toronto Users"
-
+```
 You can also add members to the role group when you create it by using the *Members* parameter as shown in Use the Shell to copy a role group with no scope earlier in this topic. For more information about management scopes, see [Understanding management role scopes](understanding-management-role-scopes-exchange-2013-help.md).
 
 After the new role group is created, you can add or remove roles, change the scope of role assignments on the role, and more.
@@ -244,11 +252,15 @@ For more information about role assignments, see [Understanding management role 
 
 Use the following syntax to assign a role to a role group with a predefined scope. A role assignment name is created automatically if you don't specify one.
 
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -RecipientRelativeWriteScope < MyGAL | MyDistributionGroups | Organization | Self >
+```
 
 This example assigns the Message Tracking role to the Enterprise Support role group and applies the Organization predefined scope.
 
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Enterprise Support" -Role "Message Tracking" -RecipientRelativeWriteScope Organization
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -266,11 +278,15 @@ For more information about role assignments and scopes, see the following topics
 
 Use the following syntax to assign a role to a role group with a recipient filter-based scope. A role assignment name is created automatically if you don't specify one.
 
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -CustomRecipientWriteScope <role scope name>
+```
 
 This example assigns the Message Tracking role to the Seattle Recipient Admins role group and applies the Seattle Recipients scope.
 
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Seattle Recipient Admins" -Role "Message Tracking" -CustomRecipientWriteScope "Seattle Recipients"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -288,11 +304,15 @@ For more information about role assignments and management scopes, see the follo
 
 Use the following syntax to assign a role to a role group with a configuration scope. A role assignment name is created automatically if you don't specify one.
 
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -CustomConfigWriteScope <role scope name>
+```
 
 This example assigns the Databases role to the Seattle Server Admins role group and applies the Seattle Servers scope.
 
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Seattle Server Admins" -Role "Databases" -CustomConfigWriteScope "Seattle Servers"
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -308,11 +328,15 @@ For more information about role assignments and management scopes, see the follo
 
 Use the following command to assign a role to a role group and restrict the write scope of a role to a specific OU. A role assignment name is created automatically if you don't specify one.
 
+```powershell
     New-ManagementRoleAssignment -SecurityGroup <role group name> -Role <role name> -RecipientOrganizationalUnitScope <OU>
+```
 
 This example assigns the Mail Recipients role to the Seattle Recipient Admins role group and scopes the assignment to the Sales\\Users OU in the Contoso.com domain.
 
+```powershell
     New-ManagementRoleAssignment -SecurityGroup "Seattle Recipient Admins" -Role "Mail Recipients" -RecipientOrganizationalUnitScope contoso.com/sales/users
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 
@@ -360,11 +384,15 @@ This procedure uses pipelining. For more information about pipelining, see [Pipe
 
 To remove a role from a role group, use the following syntax.
 
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee <role group name> -Role <role name> -Delegating <$true | $false> | Remove-ManagementRoleAssignment
+```
 
 This example removes the Distribution Groups role, which enables administrators to manage distribution groups, from the Seattle Recipient Administrators role group. Because we want to remove the role assignment that provides permissions to manage distribution groups, the *Delegating* parameter is set to `$False`, which returns only regular role assignments.
 
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee "Seattle Recipient Administrators" -Role "Distribution Groups" -Delegating $false | Remove-ManagementRoleAssignment
+```
 
 For detailed syntax and parameter information, see [Remove-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351205\(v=exchg.150\)).
 
@@ -426,12 +454,15 @@ This procedure uses the concepts of pipelining and the *WhatIf* switch. For more
 
 To set the scope on all of the role assignments on a role group at the same time, use the following syntax.
 
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee <name of role group> | Set-ManagementRoleAssignment -CustomRecipientWriteScope <recipient scope name> -CustomConfigWriteScope <configuration scope name> -RecipientRelativeScopeWriteScope < MyDistributionGroups | Organization | Self> -ExclusiveRecipientWriteScope <exclusive recipient scope name> -ExclusiveConfigWriteScope <exclusive configuration scope name> -RecipientOrganizationalUnitScope <organizational unit>
+```
 
 You use only the parameters you need to configure the scope you want to use. For example, if you want to change the recipient scope for all role assignments on the Sales Recipient Management role group to Direct Sales Employees, use the following command.
 
+```powershell
     Get-ManagementRoleAssignment -RoleAssignee "Sales Recipient Management" | Set-ManagementRoleAssignment -CustomRecipientWriteScope "Direct Sales Employees"
-
+```
 
 > [!NOTE]
 > You can use the <EM>WhatIf</EM> switch to verify that only the role assignments you want to change are changed. Run the preceding command with the <EM>WhatIf</EM> switch to verify the results, and then remove the <EM>WhatIf</EM> switch to apply the changes.
@@ -459,18 +490,22 @@ To change the scope on a role assignment between a role group and a management r
 1.  To find the names of all the role assignments on a role group, use the following command. By piping the management role assignments to the **Format-List** cmdlet, you can view the full name of the assignment.
     
     ```powershell
-Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
-```
+    Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-List Name
+    ```
 
 2.  Find the name of the role assignment you want to change. Use the name of the role assignment in the next step.
 
 3.  To set the scope on an individual assignment, use the following syntax.
     
+    ```powershell
         Set-ManagementRoleAssignment <role assignment name> -CustomRecipientWriteScope <recipient scope name> -CustomConfigWriteScope <configuration scope name> -RecipientRelativeScopeWriteScope < MyDistributionGroups | Organization | Self> -ExclusiveRecipientWriteScope <exclusive recipient scope name> -ExclusiveConfigWriteScope <exclusive configuration scope name> -RecipientOrganizationalUnitScope <organizational unit>
+    ```
 
 You use only the parameters you need to configure the scope you want to use. For example, if you want to change the recipient scope for the Mail Recipients\_Sales Recipient Management role assignment to All Sales Employees, use the following command.
 
+```powershell
     Set-ManagementRoleAssignment "Mail Recipients_Sales Recipient Management" -CustomRecipientWriteScope "All Sales Employees"
+```
 
 For more information about changing management role assignments, see [Change a role assignment](change-a-role-assignment-exchange-2013-help.md).
 
@@ -490,8 +525,10 @@ To verify that you have successfully changed the scope of a role assignment on a
     
     1.  Run the following command in the Shell.
         
+        ```powershell
             Get-ManagementRoleAssignment -RoleAssignee <role group name> | Format-Table *WriteScope
-    
+        ```
+
     2.  Verify that the write scope on the role assignments has been changed to the scope you specified.
 
 ## Add or remove a role group delegate
@@ -517,13 +554,14 @@ To change the list of delegates on a role group, you use the *ManagedBy* paramet
 1.  Store the role group in a variable using the following command.
     
     ```powershell
-$RoleGroup = Get-RoleGroup <role group name>
-```
+    $RoleGroup = Get-RoleGroup <role group name>
+    ```
 
 2.  Add the delegate to the role group stored in the variable using the following command.
     
+    ```powershell
         $RoleGroup.ManagedBy += (Get-User <user to add>).Identity
-    
+    ```
 
     > [!NOTE]
     > Use the <STRONG>Get-Group</STRONG> cmdlet if you want to add a USG.
@@ -535,14 +573,16 @@ $RoleGroup = Get-RoleGroup <role group name>
 4.  Apply the new list of delegates to the actual role group using the following command.
     
     ```powershell
-Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
-```
+    Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+    ```
 
 This example adds the user David Strome as a delegate on the Organization Management role group.
 
+```powershell
     $RoleGroup = Get-RoleGroup "Organization Management"
     $RoleGroup.ManagedBy += (Get-User "David Strome").Identity
     Set-RoleGroup "Organization Management" -ManagedBy $RoleGroup.ManagedBy
+```
 
 For detailed syntax and parameter information, see [Set-RoleGroup](https://technet.microsoft.com/en-us/library/dd638182\(v=exchg.150\)).
 
@@ -553,13 +593,14 @@ To change the list of delegates on a role group, you use the *ManagedBy* paramet
 1.  Store the role group in a variable using the following command.
     
     ```powershell
-$RoleGroup = Get-RoleGroup <role group name>
-```
+    $RoleGroup = Get-RoleGroup <role group name>
+    ```
 
 2.  Remove the delegate from the role group stored in the variable using the following command.
     
+    ```powershell
         $RoleGroup.ManagedBy -= (Get-User <user to remove>).Identity
-    
+    ```
 
     > [!NOTE]
     > Use the <STRONG>Get-Group</STRONG> cmdlet if you want to remove a USG.
@@ -571,14 +612,16 @@ $RoleGroup = Get-RoleGroup <role group name>
 4.  Apply the new list of delegates to the actual role group using the following command.
     
     ```powershell
-Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
-```
+    Set-RoleGroup <role group name> -ManagedBy $RoleGroup.ManagedBy
+    ```
 
 This example removes the user David Strome as a delegate on the Organization Management role group.
 
+```powershell
     $RoleGroup = Get-RoleGroup "Organization Management"
     $RoleGroup.ManagedBy -= (Get-User "David Strome").Identity
     Set-RoleGroup "Organization Management" -ManagedBy $RoleGroup.ManagedBy
+```
 
 For detailed syntax and parameter information, see [Set-RoleGroup](https://technet.microsoft.com/en-us/library/dd638182\(v=exchg.150\)).
 
@@ -589,8 +632,8 @@ To verify that you have successfully changed the delegate list on a role group, 
 1.  In the Shell, run the following command.
     
     ```powershell
-Get-RoleGroup <role group name> | Format-List ManagedBy
-```
+    Get-RoleGroup <role group name> | Format-List ManagedBy
+    ```
 
 2.  Verify that the delegates listed on the *ManagedBy* property include only the delegates that should be able to manage the role group.
 

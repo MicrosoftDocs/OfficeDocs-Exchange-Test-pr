@@ -56,8 +56,8 @@ To verify that you have successfully removed the organization relationship, do o
   - Run the following Shell command to verify the organization relationship information is removed.
     
     ```powershell
-Get-OrganizationRelationship | Format-List
-```
+    Get-OrganizationRelationship | Format-List
+    ```
 
 
 > [!TIP]

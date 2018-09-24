@@ -41,13 +41,15 @@ Users whose mailboxes are on Exchange Server 2013 or Exchange Server 2016 won’
     
     For Exchange 2010, run the following command. This command excludes the mailbox database from the mailbox provisioning load balancer. This prevents new mailboxes from automatically being added to this database.
     
+    ```powershell
         New-MailboxDatabase -Server <PFServerName_with_CASRole> -Name <NewMDBforPFs> -IsExcludedFromProvisioning $true 
+    ```
     
     For Exchange 2007, run the following command:
     
     ```powershell
-New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBforPFs>
-```
+    New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBforPFs>
+    ```
     
 
     > [!NOTE]
@@ -61,17 +63,16 @@ New-MailboxDatabase -StorageGroup "<PFServerName>\StorageGroup>" -Name <NewMDBfo
     New-Mailbox -Name <PFMailbox1> -Database <NewMDBforPFs> 
     ```
 
+    ```powershell
+    Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
     ```
-```powershell
-Set-Mailbox -Identity <PFMailbox1> -HiddenFromAddressListsEnabled $true
-```
-    ```
+    
 
 4.  For Exchange 2010, enable AutoDiscover to return the proxy public folder mailboxes. This step isn’t necessary for Exchange 2007.
     
     ```powershell
-Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CASRole>
-```
+    Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CASRole>
+    ```
 
 5.  Repeat the preceding steps for every public folder server in your organization.
 
@@ -80,9 +81,10 @@ Set-MailboxDatabase <NewMDBforPFs> -RPCClientAccessServer <PFServerName_with_CAS
 The final step in this procedure is to configure the user mailboxes to allow access to the legacy on-premises public folders.
 
 Enable the Exchange Server 2013 on-premises users to access the legacy public folders. You will point to all of the proxy public folder mailboxes that you created in [Step 1: Make the Exchange 2010 public folders discoverable](https://docs.microsoft.com/en-us/exchange/collaboration-exo/public-folders/set-up-legacy-hybrid-public-folders). Run the following command from an Exchange 2013 server with the CU5 or higher update.
-
+    
+```powershell
     Set-OrganizationConfig -PublicFoldersEnabled Remote -RemotePublicFolderMailboxes ProxyMailbox1,ProxyMailbox2,ProxyMailbox3
-
+```
 
 > [!NOTE]
 > You must wait until ActiveDirectory synchronization has completed to see the changes. This process may take several hours.

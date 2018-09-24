@@ -66,8 +66,8 @@ To verify that you have successfully removed the federation trust, do one of the
   - In the Shell, run the following command to verify that federation trust information isn’t returned for your Exchange organization.
     
     ```powershell
-Get-FederationTrust
-```
+    Get-FederationTrust
+    ```
     
     For detailed syntax and parameter information, see [Get-FederationTrust](https://technet.microsoft.com/en-us/library/dd351262\(v=exchg.150\)).
 

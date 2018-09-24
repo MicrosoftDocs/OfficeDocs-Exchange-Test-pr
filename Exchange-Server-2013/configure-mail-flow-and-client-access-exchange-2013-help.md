@@ -335,11 +335,12 @@ For more information about internal and external URLs on virtual directories, se
 2.  Store the host name of your Client Access server in a variable that will be used in the next step. For example, Ex2013CAS.
     
     ```powershell
-$HostName = "Ex2013CAS"
-```
+    $HostName = "Ex2013CAS"
+    ```
 
 3.  Run each of the following commands in the Shell to configure each internal URL to match the virtual directory’s external URL.
     
+    ```powershell
         Set-EcpVirtualDirectory "$HostName\ECP (Default Web Site)" -InternalUrl ((Get-EcpVirtualDirectory "$HostName\ECP (Default Web Site)").ExternalUrl)
         
         Set-WebServicesVirtualDirectory "$HostName\EWS (Default Web Site)" -InternalUrl ((get-WebServicesVirtualDirectory "$HostName\EWS (Default Web Site)").ExternalUrl)
@@ -351,11 +352,14 @@ $HostName = "Ex2013CAS"
         Set-OwaVirtualDirectory "$HostName\OWA (Default Web Site)" -InternalUrl ((Get-OwaVirtualDirectory "$HostName\OWA (Default Web Site)").ExternalUrl)
         
         Set-PowerShellVirtualDirectory "$HostName\PowerShell (Default Web Site)" -InternalUrl ((Get-PowerShellVirtualDirectory "$HostName\PowerShell (Default Web Site)").ExternalUrl)
-
+    ```
+    
 4.  While we're in the Shell, let's also configure the Offline Address Book (OAB) to allow Autodiscover to select the right virtual directory for distributing the OAB. Run the following commands to do this.
     
+    ```powershell
         Get-OfflineAddressBook | Set-OfflineAddressBook -GlobalWebDistributionEnabled $True -VirtualDirectories $Null
-
+    ```
+    
 After you've configured the internal URL on the Client Access server virtual directories, you need to configure your private DNS records for Outlook Web App, and other connectivity. Depending on your configuration, you’ll need to configure your private DNS records to point to the internal or external IP address or fully qualified domain name (FQDN) of your Client Access server. The following are examples of recommended DNS records that you should create to enable internal client connectivity.
 
 
@@ -476,8 +480,10 @@ To verify that you have successfully configured your private DNS records, do the
 
 8.  Finally, we need to open the Shell and configure the Offline Address Book (OAB) to allow Autodiscover to select the right virtual directory for distributing the OAB. Run the following commands to do this.
     
+    ```powershell
         Get-OfflineAddressBook | Set-OfflineAddressBook -GlobalWebDistributionEnabled $True -VirtualDirectories $Null
-
+    ```
+    
 After you've configured the internal URL on the Client Access server virtual directories, you need to configure your private DNS records for Outlook Web App, and other connectivity. Depending on your configuration, you’ll need to configure your private DNS records to point to the internal or external IP address or FQDN of your Client Access server. The following is an example of recommended DNS record that you should create to enable internal client connectivity if you’ve configured your virtual directory internal URLs to use internal.contoso.com.
 
 
