@@ -228,7 +228,7 @@ On MBX1, run the following commands.
 ```
 
 On MBX2, run the following commands.
-``powershell
+```powershell
     Add-MailboxDatabaseCopy -Identity DB2 -MailboxServer MBX1
     Add-MailboxDatabaseCopy -Identity DB2 -MailboxServer MBX3
     Add-MailboxDatabaseCopy -Identity DB2 -MailboxServer MBX4 -ReplayLagTime 3.00:00:00 -SeedingPostponed
