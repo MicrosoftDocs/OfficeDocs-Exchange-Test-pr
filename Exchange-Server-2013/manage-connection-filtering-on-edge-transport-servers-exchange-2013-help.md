@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Manage Connection Filtering on Edge Transport Servers: Exchange 2013 Help'
 TOCTitle: Manage Connection Filtering on Edge Transport Servers
 ms:assetid: baebc865-ec3e-48ca-ac48-7aac8b34c003
@@ -268,7 +268,9 @@ The following example configures all IP Block List providers with the following 
 
 <!-- end list -->
 
+```powershell
     Set-IPBlockListProvidersConfig -BypassedRecipients chris@fabrikam.com,michelle@fabrikam.com -InternalMailEnabled $true
+```
 
 For more information, see [Set-IPBlockListProvidersConfig](https://technet.microsoft.com/en-us/library/aa998543\(v=exchg.150\)).
 
@@ -367,7 +369,9 @@ The configuration options that are available on the **Set-IPBlockListProvider** 
 
 To configure an existing IP Block List provider, use the following syntax:
 
+```powershell
     Set-IPBlockListProvider <IPBlockListProviderIdentity> -Name "<Descriptive Name>" -LookupDomain <FQDN> [-Priority <Integer>] [-AnyMatch <$true | $false>] [-BitmaskMatch <IPAddress>] [-IPAddressesMatch <IPAddressStatusCode1,IPAddressStatusCode2...>] [-RejectionResponse "<Custom Text>"]
+```
 
 For example, to add the IP address status code 127.0.0.1 to the list of existing status codes for the provider named Contoso IP Block List Provider, run the following command:
 
