@@ -47,7 +47,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {All -like &#39;*Ayla*&#39;}
+-ContentFilter {All -like '*Ayla*'}
 ```
 
 </td>
@@ -60,7 +60,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {Attachment -like &#39;*.jpg&#39;}
+-ContentFilter {Attachment -like '*.jpg'}
 ```
 
 </td>
@@ -76,7 +76,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {(BCC -eq &#39;ayla@contoso.com&#39;) -or (BCC -eq &#39;tony@contoso.com&#39;)}
+-ContentFilter {(BCC -eq 'ayla@contoso.com') -or (BCC -eq 'tony@contoso.com')}
 ```
 
 </td>
@@ -89,7 +89,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {Body -like &#39;*prospectus*&#39;}
+-ContentFilter {Body -like '*prospectus*'}
 ```
 
 </td>
@@ -102,7 +102,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {Category -like &#39;*Blue*&#39;}
+-ContentFilter {Category -like '*Blue*'}
 ```
 
 </td>
@@ -118,7 +118,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {(CC -eq &#39;ayla@contoso.com&#39;) -or (CC -eq &#39;tony@contoso.com&#39;)}
+-ContentFilter {(CC -eq 'ayla@contoso.com') -or (CC -eq 'tony@contoso.com')}
 ```
 
 </td>
@@ -130,7 +130,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {Expires -lt &#39;01/01/2013&#39;}
+-ContentFilter {Expires -lt '01/01/2013'}
 ```
 
 </td>
@@ -157,7 +157,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {Importance -eq &#39;high&#39;}
+-ContentFilter {Importance -eq 'high'}
 ```
 
 
@@ -212,13 +212,13 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {MessageKind -eq &#39;Calendar&#39;}
+-ContentFilter {MessageKind -eq 'Calendar'}
 ```
 
 
 
 ```powershell
--ContentFilter {MessageKind -ne &#39;Email&#39;}
+-ContentFilter {MessageKind -ne 'Email'}
 ```
 
 </td>
@@ -230,13 +230,13 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {MessageLocale -ne &#39;en-US&#39;}
+-ContentFilter {MessageLocale -ne 'en-US'}
 ```
 
 
 
 ```powershell
--ContentFilter {MessageLocale -eq &#39;tr-TR&#39;}
+-ContentFilter {MessageLocale -eq 'tr-TR'}
 ```
 
 </td>
@@ -252,7 +252,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {(Participants -eq &#39;ayla@contoso.com&#39;) -or (Participants -eq &#39;tony@contoso.com&#39;)}
+-ContentFilter {(Participants -eq 'ayla@contoso.com') -or (Participants -eq 'tony@contoso.com')}
 ```
 
 </td>
@@ -266,7 +266,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {PolicyTag -ne &#39;00000000-0000-0000-0000-000000000000&#39;}
+-ContentFilter {PolicyTag -ne '00000000-0000-0000-0000-000000000000'}
 ```
 
 </td>
@@ -278,13 +278,13 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
--ContentFilter {Received -lt &#39;01/01/2013 9:00&#39;}
+-ContentFilter {Received -lt '01/01/2013 9:00'}
 ```
 
 
 
 ```powershell
--ContentFilter {(Received -lt &#39;01/01/2013&#39;) -and (Received -gt &#39;01/01/2012&#39;)}
+-ContentFilter {(Received -lt '01/01/2013') -and (Received -gt '01/01/2012')}
 ```
 
 </td>
@@ -300,7 +300,7 @@ The following table contains a list of the filterable properties for the *Conten
 <td>
 
 ```powershell
-ContentFilter {Sender -eq &#39;tony&#39;}
+ContentFilter {Sender -eq 'tony'}
 ```
 
 </td>
@@ -312,13 +312,13 @@ ContentFilter {Sender -eq &#39;tony&#39;}
 <td>
 
 ```powershell
--ContentFilter {Sent -lt &#39;01/01/2013 9:00&#39;}
+-ContentFilter {Sent -lt '01/01/2013 9:00'}
 ```
 
 
 
 ```powershell
--ContentFilter {(Sent -lt &#39;01/01/2013&#39;) -and (Sent -gt &#39;01/01/2012&#39;)}
+-ContentFilter {(Sent -lt '01/01/2013') -and (Sent -gt '01/01/2012')}
 ```
 
 </td>
@@ -332,7 +332,7 @@ ContentFilter {Sender -eq &#39;tony&#39;}
 <td>
 
 ```powershell
--ContentFilter {Size -gt &#39;10KB&#39;}
+-ContentFilter {Size -gt '10KB'}
 ```
 
 </td>
@@ -345,7 +345,7 @@ ContentFilter {Sender -eq &#39;tony&#39;}
 <td>
 
 ```powershell
--ContentFilter {Subject -like &#39;*meeting*&#39;}
+-ContentFilter {Subject -like '*meeting*'}
 ```
 
 </td>
@@ -361,7 +361,7 @@ ContentFilter {Sender -eq &#39;tony&#39;}
 <td>
 
 ```powershell
--ContentFilter {To -eq &#39;aylakol&#39;}
+-ContentFilter {To -eq 'aylakol'}
 ```
 
 </td>
