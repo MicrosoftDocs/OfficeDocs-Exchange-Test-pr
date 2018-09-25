@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Modifying multivalued properties: Exchange 2013 Help'
 TOCTitle: Modifying multivalued properties
 ms:assetid: dc2c1062-ad79-404b-8da3-5b5798dbb73b
@@ -77,8 +77,8 @@ Modifying multivalued properties is similar to modifying single-valued propertie
 <td><p>Add one or more values to a multivalued property</p></td>
 <td>
 
-```
-@{Add=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}
+```powershell
+@{Add="<value1>", "<value2>", "<value3>"}
 ```
 
 </td>
@@ -87,8 +87,8 @@ Modifying multivalued properties is similar to modifying single-valued propertie
 <td><p>Remove one or more values from a multivalued property</p></td>
 <td>
 
-```
-@{Remove=&quot;&lt;value1&gt;&quot;, &quot;&lt;value2&gt;&quot;, &quot;&lt;value3&gt;&quot;}
+```powershell
+@{Remove="<value1>", "<value2>", "<value3>"}
 ```
 
 </td>
