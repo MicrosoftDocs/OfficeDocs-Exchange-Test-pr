@@ -41,8 +41,10 @@ To learn more about disconnected mailboxes and perform other related management 
 
   - Run the following command to verify that the disabled mailbox that you want to connect a user account to exists in the mailbox database and isn’t a soft-deleted mailbox.
     
+    ```powershell
         Get-MailboxDatabase | Get-MailboxStatistics | Where { $_.DisplayName -eq "<display name>" } | fl DisplayName,Database,DisconnectReason
-    
+    ```
+
     To be able to connect a disabled mailbox, the mailbox has to exist in the mailbox database and the value for the *DisconnectReason* property has to be `Disabled`. If the mailbox has been purged from the database, the command won’t return any results.
 
   - For information about keyboard shortcuts that may apply to the procedures in this topic, see [Keyboard shortcuts in the Exchange admin center](keyboard-shortcuts-in-the-exchange-admin-center-exchange-online-protection-help.md).
@@ -83,16 +85,21 @@ Use the **Connect-Mailbox** cmdlet in the Shell to connect a user account to a d
 
 This example connects a user mailbox. The *Identity* parameter specifies the disconnected mailbox in the Exchange database. The *User* parameter specifies the Active Directory user account to reconnect the mailbox to.
 
-    Connect-Mailbox -Identity "Jeffrey Zeng" -Database MBXDB01 -User "Jeffrey Zeng"
+```powershell
+Connect-Mailbox -Identity "Jeffrey Zeng" -Database MBXDB01 -User "Jeffrey Zeng"
+```
 
 This example connects a linked mailbox. The *Identity* parameter specifies the disconnected mailbox in the Exchange database. The *LinkedMasterAccount* parameter specifies the Active Directory user account in the account forest that you want to reconnect the mailbox to. The *Alias* parameter specifies the alias, which is the portion of the email address on the left side of the at (@) symbol, for the reconnected mailbox.
 
+```powershell
     Connect-Mailbox -Identity "Kai Axford" -Database MBXDB02 -LinkedDomainController FabrikamDC01 -LinkedMasterAccount kai.axford@fabrikam.com -Alias kaia
+```
 
 This example connects a shared mailbox.
 
+```powershell
     Connect-Mailbox -Identity "Corporate Shared Mailbox" -Database "Mailbox Database 03" -User "Corporate Shared Mailbox" -Alias corpshared -Shared
-
+```
 
 > [!NOTE]
 > If you don’t include the <EM>Alias</EM> parameter when you run the <STRONG>Connect-Mailbox</STRONG> cmdlet, the value specified in the <EM>User</EM> or <EM>LinkedMasterAccount</EM> parameter is used to create the email address alias for the reconnected mailbox.
@@ -111,7 +118,9 @@ To verify that you’ve successfully connected a disabled mailbox to a user acco
 
   - In the Shell, run the following command.
     
-        Get-User <identity>
+    ```powershell
+    Get-User <identity>
+    ```
     
     The **UserMailbox** value for the *RecipientType* property indicates that the user account and the mailbox are connected. You can also run the **Get-Mailbox** cmdlet to verify that the mailbox exists.
 

@@ -40,7 +40,9 @@ However, if the Discovery system mailbox is deleted accidentally, discovery mana
     
     To re-create the Discovery system mailbox, run the following command:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 ## How do I know this worked?
 

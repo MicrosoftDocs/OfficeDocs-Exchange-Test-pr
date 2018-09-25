@@ -45,6 +45,7 @@ By default, you can't select these fields in Microsoft Outlook. Before you can a
 
 1.  Open Notepad, and copy the following code into the document.
     
+    ```powershell
         [Description]
         MessageClass=IPM.Note
         CLSID={00020D31-0000-0000-C000-000000000046}
@@ -115,7 +116,8 @@ By default, you can't select these fields in Microsoft Outlook. Before you can a
         NmidPropset={00020D0C-0000-0000-C000-000000000046}
         NmidInteger=1
         Value=1000000000000000
-
+    ```
+    
 2.  Save the file in your Office Forms folder using the following values:
     
       - **Path**   *\<Office Install Path\>*\\\<*OfficeVersion\>*\\Forms\\*\<LCID\>*
@@ -130,8 +132,9 @@ By default, you can't select these fields in Microsoft Outlook. Before you can a
     
     For example, for a 32-bit US English version of Outlook 2013 installed on a 64-bit version of Windows, save the file as:
     
+    ```powershell
         "C:\Program Files (x86)\Microsoft Office\Office15\Forms\1033\QTNE.cfg"
-    
+    ```
 
     > [!NOTE]
     > If Windows User Access Control (UAC) prevents you from saving the file in the correct location, save it first to a temporary location, and then copy it.

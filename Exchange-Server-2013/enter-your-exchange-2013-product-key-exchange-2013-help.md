@@ -84,7 +84,9 @@ This example uses the **set-ExchangeServer** cmdlet to enter the product key.
 
 
 
-    Set-ExchangeServer ExServer01 -ProductKey aaaaa-aaaaa-aaaaa-aaaaa-aaaaa
+```powershell
+Set-ExchangeServer ExServer01 -ProductKey aaaaa-aaaaa-aaaaa-aaaaa-aaaaa
+```
 
 For detailed syntax and parameter information, see [Set-ExchangeServer](https://technet.microsoft.com/en-us/library/bb123716\(v=exchg.150\)).
 
@@ -110,9 +112,11 @@ To use the Shell to verify that you’ve successfully licensed the server as Sta
 
 2.  Run the following command to view the licensing status of a specific Exchange server.
     
+    ```powershell
         Get-ExchangeServer ExServer01 | Format-Table Edition,*Trial*
-
+    ```
 3.  (Optional) Run the following command to view the licensing status of all Exchange servers in your organization.
     
+    ```powershell
         Get-ExchangeServer | Format-Table Name, Edition, *Trial* -Auto
-
+    ```

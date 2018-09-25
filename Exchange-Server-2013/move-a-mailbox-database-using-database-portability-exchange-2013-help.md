@@ -42,7 +42,9 @@ You can use database portability to move a Microsoft Exchange Server 2013 mailbo
     
     To commit all uncommitted log files to the database, from a command prompt, run the following command.
     
-        ESEUTIL /R <Enn>
+    ```powershell
+    ESEUTIL /R <Enn>
+    ```
     
 
     > [!NOTE]
@@ -52,25 +54,35 @@ You can use database portability to move a Microsoft Exchange Server 2013 mailbo
 
 2.  Create a database on a server using the following syntax:
     
+    ```powershell
         New-MailboxDatabase -Name <DatabaseName> -Server <ServerName> -EdbFilePath <DatabaseFileNameandPath> -LogFolderPath <LogFilesPath>
-
+    ```
+    
 3.  Set the *This database can be over written by restore* attribute using the following syntax:
     
-        Set-MailboxDatabase <DatabaseName> -AllowFileRestore $true
+    ```powershell
+    Set-MailboxDatabase <DatabaseName> -AllowFileRestore $true
+    ```
 
 4.  Move the original database files (.edb file, log files, and Exchange Search catalog) to the database folder you specified when you created the new database above.
 
 5.  Mount the database using the following syntax:
     
-        Mount-Database <DatabaseName>
+    ```powershell
+    Mount-Database <DatabaseName>
+    ```
 
 6.  After the database is mounted, modify the user account settings with the [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)) cmdlet so that the account points to the mailbox on the new mailbox server. To move all of the users from the old database to the new database, use the following syntax.
     
+    ```powershell
         Get-Mailbox -Database <SourceDatabase> |where {$_.ObjectClass -NotMatch '(SystemAttendantMailbox|ExOleDbSystemMailbox)'}| Set-Mailbox -Database <TargetDatabase>
+    ```
 
 7.  Trigger delivery of any messages remaining in queues using the following syntax.
     
-        Get-Queue <QueueName> | Retry-Queue -Resubmit $true
+    ```powershell
+    Get-Queue <QueueName> | Retry-Queue -Resubmit $true
+    ```
 
 After Active Directory replication is complete, all users can access their mailboxes on the new Exchange server. Most clients are redirected via Autodiscover. Microsoft Office Outlook Web App users are also automatically redirected.
 

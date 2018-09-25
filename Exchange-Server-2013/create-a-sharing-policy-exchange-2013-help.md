@@ -107,26 +107,35 @@ You can edit the default sharing policy to allow all of your users to share full
 
   - This example creates the sharing policy Contoso for the external federated domain contoso.com. This policy allows users in the contoso.com domain to see your user's detailed calendar availability (free/busy) information. By default, this policy is enabled.
     
-        New-SharingPolicy -Name "Contoso" -Domains contoso.com: CalendarSharingFreeBusyDetail
+    ```powershell
+    New-SharingPolicy -Name "Contoso" -Domains contoso.com: CalendarSharingFreeBusyDetail
+    ```
 
   - This example creates the sharing policy ContosoWoodgrove for two different federated domains (contoso.com and woodgrovebank.com) with different sharing actions configured for each domain. The policy is disabled.
     
+    ```powershell
         New-SharingPolicy -Name "ContosoWoodgrove" -Domains 'contoso.com: CalendarSharingFreeBusySimple', 'woodgrovebank.com: CalendarSharingFreeBusyDetail -Enabled $false
+    ```
 
   - This example creates the sharing policy Anonymous for an Exchange organization with the Client Access server CAS01 and the Mailbox server MAIL01 with the sharing action configured for limited calendar availability information. This policy allows users in your Exchange organization to invite users with Internet access to view their calendar availability information by sending them a link. The policy is enabled.
     
     1.  Set the Web proxy URL for MAIL01.
         
-            Set-ExchangeServer -Identity "Mail01" -InternetWebProxy "<Webproxy URL>"
+        ```powershell
+        Set-ExchangeServer -Identity "Mail01" -InternetWebProxy "<Webproxy URL>"
+        ```
     
     2.  Enable the publishing virtual directory on CAS01.
         
+        ```powershell
             Set-OwaVirtualDirectory -Identity "CAS01" -ExternalURL "<URL for CAS01>" -CalendarPublishingEnabled $true
-    
+        ```
+
     3.  Create the sharing policy Anonymous and configure limited calendar information sharing.
         
+        ```powershell
             New-SharingPolicy -Name "Anonymous" -Domains 'Anonymous: CalendarSharingFreeBusySimple' -Enabled $true
-
+        ```
 For detailed syntax and parameter information, see the following topics:
 
   - [New-SharingPolicy](https://technet.microsoft.com/en-us/library/dd298186\(v=exchg.150\))
@@ -139,7 +148,9 @@ For detailed syntax and parameter information, see the following topics:
 
 To verify that you have successfully created the sharing policy, run the following Shell command to verify the sharing policy information.
 
-    Get-SharingPolicy <policy name> | format-list
+```powershell
+Get-SharingPolicy <policy name> | format-list
+```
 
 
 > [!TIP]

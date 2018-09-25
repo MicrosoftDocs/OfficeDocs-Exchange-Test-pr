@@ -31,7 +31,9 @@ To address this issue, either reinstall just the failed server role(s), or remov
 
 2.  Run the following command:
     
-        Setup /roles:<Failed Server Role>
+    ```powershell
+    Setup /roles:<Failed Server Role>
+    ```
     
     Select from one or more of the following roles, in a comma-separated list:
     

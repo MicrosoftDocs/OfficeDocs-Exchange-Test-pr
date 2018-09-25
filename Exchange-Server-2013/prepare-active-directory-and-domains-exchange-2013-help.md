@@ -85,7 +85,9 @@ When you're ready, do the following to extend your Active Directory schema. If y
 
 3.  Run the following command to extend the schema.
     
-        Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    Setup.exe /PrepareSchema /IAcceptExchangeServerLicenseTerms
+    ```
 
 After Setup finishes extending the schema, you'll need to wait while Active Directory replicates the changes to all of your domain controllers. If you want to check on how replication is going, you can use the `repadmin` tool. `Repadmin` is included as part of the Active Directory Domain Services Tools feature in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2. For more information about how to use it, see [Repadmin](https://go.microsoft.com/fwlink/p/?linkid=257879).
 
@@ -120,7 +122,7 @@ When you're ready, do the following to prepare Active Directory for Exchange. If
 1.  Open a Windows Command Prompt window and go to where you downloaded the Exchange installation files.
 
 2.  Run the following command:
-    ```
+    ```powershell
         Setup.exe /PrepareAD /OrganizationName:"<organization name>" /IAcceptExchangeServerLicenseTerms
     ```
 
@@ -151,7 +153,9 @@ When you're ready, do the following to prepare all of the domains in your Active
 
 2.  Run the following command:
     
-        Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    Setup.exe /PrepareAllDomains /IAcceptExchangeServerLicenseTerms
+    ```
 
 ## Let me choose which Active Directory domains I want to prepare
 
@@ -177,8 +181,10 @@ When you're ready, do the following to prepare an individual domain in your Acti
 
 2.  Run the following command. Include the FQDN of the domain you want to prepare. If you want to prepare the domain you're running the command in, you don't have to include the FQDN.
     
+    ```powershell
         Setup.exe /PrepareDomain:<FQDN of the domain you want to prepare> /IAcceptExchangeServerLicenseTerms
-
+    ```
+    
 3.  Repeat the steps for each Active Directory domain where you'll install an Exchange server or where mail-enabled users will be located.
 
 ## How do you know this worked?

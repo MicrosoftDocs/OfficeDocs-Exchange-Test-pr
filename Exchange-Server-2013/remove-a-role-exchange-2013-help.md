@@ -43,11 +43,15 @@ Looking for other management tasks related to roles? Check out [Advanced permiss
 
 To remove a role with no child roles, use the following syntax.
 
-    Remove-ManagementRole <role name>
+```powershell
+Remove-ManagementRole <role name>
+```
 
 This example removes the Seattle Server Administrators role.
 
-    Remove-ManagementRole "Seattle Server Administrators"
+```powershell
+Remove-ManagementRole "Seattle Server Administrators"
+```
 
 For detailed syntax and parameter information, see [Remove-ManagementRole](https://technet.microsoft.com/en-us/library/dd351170\(v=exchg.150\)).
 
@@ -63,13 +67,17 @@ If a role that you want to remove has child roles, you must remove all the child
 
 To make sure that you remove only the roles that you want to remove, use the *WhatIf* switch with your command to verify that it's correct. Use the following syntax.
 
-    Remove-ManagementRole <role name> -Recurse -WhatIf
+```powershell
+Remove-ManagementRole <role name> -Recurse -WhatIf
+```
 
 The *WhatIf* switch performs the command without committing any changes and reports which roles it would have removed. For more information about the *WhatIf* switch, see [WhatIf, Confirm, and ValidateOnly switches](whatif-confirm-and-validateonly-switches-exchange-2013-help.md).
 
 After you confirm that only the roles you want to remove will be removed, run the same command without the *WhatIf* switch. This example removes the London Administrators role and all its child roles.
 
-    Remove-ManagementRole "London Administrators" -Recurse
+```powershell
+Remove-ManagementRole "London Administrators" -Recurse
+```
 
 For detailed syntax and parameter information, see [Remove-ManagementRole](https://technet.microsoft.com/en-us/library/dd351170\(v=exchg.150\)).
 
@@ -77,7 +85,9 @@ For detailed syntax and parameter information, see [Remove-ManagementRole](https
 
 To remove an unscoped role, the same procedures provided in Remove a management role with no child roles and Remove a management role with child roles earlier in this topic can be used. The only difference is that when you remove an unscoped role, you must specify the *UnScopedTopLevel* switch when you run the command. This example removes an unscoped role and all its child roles.
 
-    Remove-ManagementRole "Custom IT Scripts" -Recurse -UnScopedTopLevel
+```powershell
+Remove-ManagementRole "Custom IT Scripts" -Recurse -UnScopedTopLevel
+```
 
 As with removing other roles, you should use the *WhatIf* switch to verify that you're removing the correct roles.
 

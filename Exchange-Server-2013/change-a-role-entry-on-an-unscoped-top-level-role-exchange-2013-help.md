@@ -61,11 +61,15 @@ To add parameters to an unscoped top-level role entry, you need to do the follow
 
 To add parameters to a role entry, use the following syntax.
 
+```powershell
     Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -AddParameter -UnscopedTopLevel
+```
 
 This example adds the *EmailAddress* and *City* parameters to the **CreateUsers.ps1** script on the Recipient Administrators unscoped role.
 
+```powershell
     Set-ManagementRoleEntry "Recipient Administrators\CreateUsers.ps1" -Parameters EmailAddress, City -AddParameter -UnscopedTopLevel
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 
@@ -87,11 +91,15 @@ To remove parameters from a role entry, you need to do the following:
 
 To remove parameters from a role entry, use the following syntax.
 
+```powershell
     Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -RemoveParameter -UnscopedTopLevel
+```
 
 This example removes the *Delay*, *Force*, and *Credential* parameters from the **Start-Widget** non-Exchange cmdlet on the Tier 1 Server Administrators role.
 
+```powershell
     Set-ManagementRoleEntry "Tier 1 Server Administrators\Start-Widget" -Parameters Delay, Force, Credential -RemoveParameter -UnscopedTopLevel
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 
@@ -115,11 +123,15 @@ If you don't want the role to have access to a script or non-Exchange cmdlet, re
 
 To remove all the parameters from a role entry, use the following syntax.
 
+```powershell
     Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters $Null -UnscopedTopLevel
+```
 
 This example removes all the parameters from the FindMailboxesOverQuota.ps1 script on the Recipient Administrators role.
 
+```powershell
     Set-ManagementRoleEntry "Recipient Administrators\FindMailboxesOverQuota.ps1" -Parameters $Null -UnscopedTopLevel
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 
@@ -139,11 +151,15 @@ If you want only a specific set of parameters to be included on a role entry, yo
 
 To specify a specific set of parameters, use the following syntax.
 
+```powershell
     Set-ManagementRoleEntry <role name>\<script or non-Exchange cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...> -UnscopedTopLevel
+```
 
 This example includes only the *Alias*, *DisplayName*, *WidgetConfig*, and *Enabled* parameters on the **Set-Widget** cmdlet on the Seattle Mail Recipient Admins role.
 
+```powershell
     Set-ManagementRoleEntry "Seattle Mail Recipient Admins\Set-UMMailbox" -Parameters Alias, DisplayName, WidgetConfig, Enabled -UnscopedTopLevel
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 

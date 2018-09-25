@@ -114,24 +114,45 @@ Here are some examples of the conditions and exceptions you can use.
 <td><p>Outside your organization, if the original message doesn’t include text from your disclaimer, such as “CONTOSO LEGAL NOTICE”</p></td>
 <td><p>Condition: <strong>The recipient is located</strong> &gt; <strong>Outside the organization</strong></p>
 <p>Exception: <strong>The subject or body</strong> &gt; <strong>Subject or body matches these text patterns</strong> &gt; <strong>CONTOSO LEGAL NOTICE</strong></p></td>
-<td><pre><code>-FromScope NotInOrganization -ExceptIf -SubjectOrBodyMatches &quot;CONTOSO LEGAL NOTICE&quot;</code></pre></td>
+<td>
+
+```powershell
+-FromScope NotInOrganization -ExceptIf -SubjectOrBodyMatches "CONTOSO LEGAL NOTICE"
+```
+
+</td>
 </tr>
 <tr class="even">
 <td><p>Incoming messages with executable attachments</p></td>
 <td><p>Condition 1: <strong>The sender is located</strong> &gt; <strong>Outside the organization</strong></p>
 <p>Condition 2: <strong>Any attachment</strong> &gt; <strong>has executable content</strong></p></td>
-<td><pre><code>-FromScope NotInOrganization -AttachmentHasExecutableContent</code></pre></td>
+<td>
+
+```powershell
+-FromScope NotInOrganization -AttachmentHasExecutableContent
+```
+</td>
 </tr>
 <tr class="odd">
 <td><p>Sender is in the marketing department</p></td>
 <td><p>Condition: <strong>The sender</strong> &gt; <strong>is a member of this group</strong> &gt; <strong>group name</strong></p></td>
-<td><pre><code>-FromMemberOf &quot;Marketing Team&quot;</code></pre></td>
+<td>
+
+```powershell
+-FromMemberOf "Marketing Team"
+```
+</td>
 </tr>
 <tr class="even">
 <td><p>Every message that comes from an external sender to the sales discussion group</p></td>
 <td><p>Condition 1: <strong>The sender is located</strong> &gt; <strong>Outside the organization</strong></p>
 <p>Condition 2: <strong>The message</strong> &gt; <strong>To or Cc box contains this person</strong> &gt; <strong>group name</strong></p></td>
-<td><pre><code>-FromScope NotInOrganization -SentTo &quot;Sales Discussion Group&quot; -PrependSubject &quot;Sent to Sales Discussion Group: &quot;</code></pre></td>
+<td>
+
+```powershell
+-FromScope NotInOrganization -SentTo "Sales Discussion Group" -PrependSubject "Sent to Sales Discussion Group: "
+```
+</td>
 </tr>
 <tr class="odd">
 <td><p>Prepend an advertisement to outgoing messages for one month</p></td>
@@ -194,6 +215,7 @@ You can format your disclaimer as needed. Here’s what can be included in your 
 
 For example, here’s an example of an HTML disclaimer that includes a signature, an `IMG` tag, and embedded CSS.
 
+```HTML
     <div style="font-size:9pt;  font-family: 'Calibri',sans-serif;">
     %%displayname%%</br>
     %%title%%</br>
@@ -207,6 +229,7 @@ For example, here’s an example of an HTML disclaimer that includes a signature
     <p style="font-size:8pt; line-height:10pt; font-family: 'Cambria','times roman',serif;">This message contains confidential information and is intended only for the individual(s) addressed in the message. If you are not the named addressee, you should not disseminate, distribute, or copy this e-mail. If you are not the intended recipient, you are notified that disclosing, distributing, or copying this e-mail is strictly prohibited.  </p>
     <span style="padding-top:10px; font-weight:bold; color:#CC0000; font-size:10pt; font-family: 'Calibri',Arial,sans-serif; "><a href="http://www.fabrikam.com">Fabrikam, Inc. </a></span></br></br>
     </div>
+```
 
 ## Fallback options if the disclaimer can’t be added
 
@@ -235,4 +258,3 @@ The following list describes each fallback action:
 [Mail flow or transport rules](https://technet.microsoft.com/en-us/library/jj919238\(v=exchg.150\)) (Exchange Online)
 
 [Transport rules](https://technet.microsoft.com/en-us/library/dn271424\(v=exchg.150\)) (Exchange Online Protection)
-

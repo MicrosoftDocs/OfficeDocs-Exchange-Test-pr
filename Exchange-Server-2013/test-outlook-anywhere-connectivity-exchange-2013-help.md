@@ -41,8 +41,9 @@ To use the Shell to test Outlook Anywhere connectivity, use the **Test-OutlookCo
 
 Run the following command.
 
+```powershell
     Test-OutlookConnectivity -ProbeIdentity 'OutlookMailboxDeepTestProbe' -MailboxId tony@contoso.com -Hostname contoso.com
-
+```
 
 > [!NOTE]
 > The <EM>OutlookMailboxDeepTestProbe</EM> parameter value tests connectivity from the Mailbox server. To test connectivity from the Client Access server, use <EM>OutlookMailboxCTPProbe</EM> for the <EM>ProbeIdentity</EM> parameter value.

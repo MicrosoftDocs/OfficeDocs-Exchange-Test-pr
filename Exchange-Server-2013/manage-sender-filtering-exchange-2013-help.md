@@ -43,14 +43,18 @@ When sender filtering functionality is enabled on an Exchange server, sender fil
 
 To disable sender filtering, run the following command:
 
-    Set-SenderFilterConfig -Enabled $false
+```powershell
+Set-SenderFilterConfig -Enabled $false
+```
 
 To enable sender filtering, run the following command:
 
-    Set-SenderFilterConfig -Enabled $true
+```powershell
+Set-SenderFilterConfig -Enabled $true
+```
 
 
-> [!NOTE]
+> [!NOTE]  
 > When you disable sender filtering, the underlying Sender Filter agent is still enabled. To disable the Sender Filter agent, run the command: <CODE>Disable-TransportAgent "Sender Filter Agent"</CODE>.
 
 
@@ -61,7 +65,9 @@ To verify that you have successfully enabled or disabled sender filtering, do th
 
 1.  Run the following command:
     
-        Get-SenderFilterConfig | Format-List Enabled
+    ```powershell
+    Get-SenderFilterConfig | Format-List Enabled
+    ```
 
 2.  Verify the value displayed is the value you configured.
 
@@ -69,15 +75,21 @@ To verify that you have successfully enabled or disabled sender filtering, do th
 
 To replace the existing values, run the following command:
 
-    Set-SenderFilterConfig -BlockedSenders <sender1,sender2...> -BlockedDomains <domain1,domain2...> -BlockedDomainsAndSubdomains <domain1,domain2...>
+```powershell
+Set-SenderFilterConfig -BlockedSenders <sender1,sender2...> -BlockedDomains <domain1,domain2...> -BlockedDomainsAndSubdomains <domain1,domain2...>
+```
 
 This example configures the Sender Filter agent to block messages from kim@contoso.com and john@contoso.com, messages from the fabrikam.com domain, and messages from northwindtraders.com and all its subdomains.
 
-    Set-SenderFilterConfig -BlockedSenders kim@contoso.com,john@contoso.com -BlockedDomains fabrikam.com -BlockedDomainsAndSubdomains northwindtraders.com
+```powershell
+Set-SenderFilterConfig -BlockedSenders kim@contoso.com,john@contoso.com -BlockedDomains fabrikam.com -BlockedDomainsAndSubdomains northwindtraders.com
+```
 
 To add or remove entries without modifying any existing values, run the following command:
 
-    Set-SenderFilterConfig -BlockedSenders @{Add="<sender1>","<sender2>"...; Remove="<sender1>","<sender2>"...} -BlockedDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...} -BlockedDomainsAndSubdomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
+```powershell
+Set-SenderFilterConfig -BlockedSenders @{Add="<sender1>","<sender2>"...; Remove="<sender1>","<sender2>"...} -BlockedDomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...} -BlockedDomainsAndSubdomains @{Add="<domain1>","<domain2>"...; Remove="<domain1>","<domain2>"...}
+```
 
 This example configures the Sender Filter agent with the following information:
 
@@ -89,7 +101,9 @@ This example configures the Sender Filter agent with the following information:
 
 <!-- end list -->
 
-    Set-SenderFilterConfig -BlockedSenders @{Add="chris@contoso.com","michelle@contoso.com"} -BlockedDomains @{Remove="tailspintoys.com"} -BlockedDomainsAndSubdomains @{Add="blueyonderairlines.com"}
+```powershell
+Set-SenderFilterConfig -BlockedSenders @{Add="chris@contoso.com","michelle@contoso.com"} -BlockedDomains @{Remove="tailspintoys.com"} -BlockedDomainsAndSubdomains @{Add="blueyonderairlines.com"}
+```
 
 ## How do you know this worked?
 
@@ -97,7 +111,9 @@ To verify that you have successfully configured blocked senders, do the followin
 
 1.  Run the following command:
     
-        Get-SenderFilterConfig | Format-List BlockedSenders,BlockedDomains,BlockedDomainsAndSubdomains
+    ```powershell
+    Get-SenderFilterConfig | Format-List BlockedSenders,BlockedDomains,BlockedDomainsAndSubdomains
+    ```
 
 2.  Verify the values displayed are the values you configured.
 
@@ -105,11 +121,15 @@ To verify that you have successfully configured blocked senders, do the followin
 
 To enable or disable blocking message with blank senders, run the following command:
 
-    Set-SenderFilterConfig -BlankSenderBlockingenabled <$true | $false>
+```powershell
+Set-SenderFilterConfig -BlankSenderBlockingenabled <$true | $false>
+```
 
 This example configures the Sender Filter agent to block messages that don't specify a sender in the MAIL FROM: SMTP command:
 
-    Set-SenderFilterConfig -BlankSenderBlockingEnabled $true
+```powershell
+Set-SenderFilterConfig -BlankSenderBlockingEnabled $true
+```
 
 ## How do you know this worked?
 
@@ -117,7 +137,8 @@ To verify that you have successfully enabled or disabled blocking messages with 
 
 1.  Run the following command:
     
-        Get-SenderFilterConfig | Format-List BlankSenderBlockingEnabled
+    ```powershell
+    Get-SenderFilterConfig | Format-List BlankSenderBlockingEnabled
+    ```
 
 2.  Verify the value displayed is the value you configured.
-

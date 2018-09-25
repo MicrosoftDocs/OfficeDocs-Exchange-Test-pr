@@ -59,7 +59,9 @@ You can add UM language packs by using the setup.exe command or by running the *
 
 This example uses setup.exe to install the Japanese (ja-JP) UM language pack.
 
-    setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```powershell
+setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```
 
 ## Step 2: Move the Exchange 2010 system mailbox used for UM custom greetings, announcements, menus, and prompts to Exchange 2013
 
@@ -69,11 +71,15 @@ By default, system mailboxes aren't visible in the Exchange admin center (EAC). 
 
 This command returns a list of all the system mailboxes.
 
-    Get-Mailbox -Arbitration
+```powershell
+Get-Mailbox -Arbitration
+```
 
 This command returns a list of system mailboxes and their individual properties or settings.
 
-    Get-Mailbox -Arbitration |fl
+```powershell
+Get-Mailbox -Arbitration |fl
+```
 
 By using this system mailbox, custom greetings, announcements, menus, and prompts can be backed up and restored along with other mailboxes in a database. This reduces the amount of resources that are needed. Storing custom greetings, announcements, menus, and prompts in a system mailbox removes any possible inconsistencies that may have occurred. To learn more about mailbox moves, see [Mailbox moves in Exchange 2013](mailbox-moves-in-exchange-2013-exchange-2013-help.md).
 
@@ -91,23 +97,31 @@ When you’re exporting and importing custom greetings, announcements, menus, an
 
 This example exports the welcome greeting for the UM dial plan `MyUMDialPlan` and saves it as the file `welcomegreeting.wav`.
 
+```powershell
     $prompt = Export-UMPrompt -PromptFileName "customgreeting.wav" -UMDialPlan MyUMDialPlan
     set-content -Path "d:\DialPlanPrompts\welcomegreeting.wav" -Value $prompt.AudioData -Encoding Byte
+```
 
 This example imports the welcome greeting `welcomegreeting.wav` from d:\\UMPrompts into the UM dial plan `MyUMDialPlan`.
 
+```powershell
     [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
     Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+```
 
 This example exports a custom greeting for the UM auto attendant `MyUMAutoAttendant` and saves it to the file `welcomegreetingbackup.wav`.
 
+```powershell
     Export-UMPrompt -PromptFileName "welcomegreeting.wav" -UMAutoAttendant MyUMAutoAttendant
     set-content -Path "e:\UMPromptsBackup\welcomegreeting.wav" -Value $prompt.AudioData -Encoding Byte
+```
 
 This example imports the welcome greeting `welcomegreeting.wav` from d:\\UMPrompts into the UM auto attendant `MyUMAutoAttendant`.
 
+```powershell
     [byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
     Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+```
 
 To learn more about custom prompts for UM, see:
 
@@ -156,8 +170,9 @@ To enable UM to encrypt data that's sent between your Exchange 2013 servers and 
     
     Create an Exchange self-signed certificate by running the following command in the Shell.
     
+    ```powershell
         New-ExchangeCertificate -Services 'UM, UMCallRouter' -DomainName '*.northwindtraders.com' -FriendlyName 'UMSelfSigned' -SubjectName 'C=US,S=WA,L=Redmond,O=Northwindtraders,OU=Servers,CN= Northwindtraders.com' -PrivateKeyExportable $true
-    
+    ```
 
     > [!NOTE]
     > If you specify the services you want to enable by using the <EM>Services</EM> parameter, you will be prompted to enable the services for the certificate you created. In this example, you will be prompted to enable the certificate for the Unified Messaging and Unified Messaging Call Router services. For more information about how to enable a certificate for services, see <A href="assign-a-certificate-to-the-um-and-um-call-router-services-exchange-2013-help.md">Assign a certificate to the UM and UM Call Router services</A>.
@@ -176,7 +191,9 @@ To enable UM to encrypt data that's sent between your Exchange 2013 servers and 
     
     Enable an Exchange self-signed certificate by running the following command in the Shell.
     
+    ```powershell
         Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -Services 'UM, UMCallRouter'
+    ```
 
   - Configure any new or existing UM dial plans as SIP secured or Secured.
 
@@ -212,7 +229,9 @@ Configure the UM startup mode on an Exchange 2013 Client Access server by using 
 
 Configure the UM startup mode on an Exchange 2013 Client Access server by running the following command in the Shell.
 
-    Set-UMCallRouterSettings -Server MyUMCallRouter.northwindtraders.com -UMStartupMode Dual
+```powershell
+Set-UMCallRouterSettings -Server MyUMCallRouter.northwindtraders.com -UMStartupMode Dual
+```
 
 ## Step 6: Configure the UM startup mode on all Exchange 2013 Mailbox servers
 
@@ -238,7 +257,9 @@ Configure the UM startup mode on an Exchange 2013 Mailbox server by using the EA
 
 Configure the UM startup mode on an Exchange 2013 Mailbox server by running the following command in the Shell.
 
+```powershell
     Set-UMService -Identity MyUMServer -ExternalHostFqdn host.external.contoso.com -IPAddressFamily Any -UMStartupMode Dual
+```
 
 ## Step 7: Create or configure existing UM dial plans
 
@@ -289,7 +310,9 @@ If required, you can create a UM dial plan by using the EAC:
 
 If required, you can create a UM dial plan by running the following command in the Shell.
 
-    New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Secured
+```powershell
+New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Secured
+```
 
 If required, you can configure an existing UM dial plan by using the EAC, as follows:
 
@@ -301,7 +324,9 @@ If required, you can configure an existing UM dial plan by using the EAC, as fol
 
 If required, you can configure an existing UM dial plan by using the Shell:
 
+```powershell
     Set-UMDialplan -Identity MyDialPlan -AccessTelephoneNumbers 4255551234 -AudioCodec Wma -CallAnsweringRulesEnabled $false -OutsideLineAccessCode 9 -VoIPSecurity SIPSecured
+```
 
 When you deployed Exchange 2010 Unified Messaging, you were required to add a Unified Messaging server to a UM dial plan for it to answer incoming calls. This is no longer required. In Exchange 2013, Client Access and Mailbox servers can’t be linked with a Telephone extension or E.164 dial plan, but must be linked to SIP URI dial plans. Client Access and Mailbox servers will answer all incoming calls for all types of dial plans.
 
@@ -333,7 +358,9 @@ If required, you can create a UM IP gateway by using the EAC, as follows:
 
 If required, you can create a UM IP gateway by run the following command.
 
-    New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
+```powershell
+New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
+```
 
 To configure an existing UM IP gateway by using the EAC:
 
@@ -343,7 +370,9 @@ To configure an existing UM IP gateway by using the EAC:
 
 To configure an existing UM IP gateway in the Shell, running the following command in the Shell.
 
+```powershell
     Set-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
+```
 
 ## Step 9: Create a UM hunt group
 
@@ -369,8 +398,9 @@ If required, you can To create a UM hunt group by using the EAC, as follows:
 
 If required, you can create a UM hunt group by running the following command in the Shell.
 
+```powershell
     New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 5551234,55555 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
-
+```
 
 > [!TIP]
 > You can’t configure or change settings for a UM hunt group. If you want to change the configuration settings for a UM hunt group, you must delete it and add a new UM hunt group with the correct settings.
@@ -407,7 +437,9 @@ If required, you can create a UM auto attendant by using the EAC, as follows:
 
 If required, you can create a UM auto attendant by running the following command in the Shell.
 
+```powershell
     New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 56000,56100 -SpeechEnabled $true -Status Enabled
+```
 
 If required, you can configure an existing auto attendant by using the EAC, as follows:
 
@@ -417,7 +449,9 @@ If required, you can configure an existing auto attendant by using the EAC, as f
 
 If required, you can configure an existing auto attendant by running the following command in the Shell.
 
+```powershell
     Set-UMAutoAttendant -Identity MySpeechEnabledAA -DTMFFallbackAutoAttendant MyDTMFAA -OperatorExtension 50100 -AfterHoursTransferToOperatorEnabled $true -StaroutToDialPlanEnabled $true
+```
 
 ## Step 11: Create or configure UM mailbox policies
 
@@ -447,7 +481,9 @@ If required, you can create a UM mailbox policy by using the EAC:
 
 If required, you can create a UM mailbox policy by running for following command in the Shell.
 
-    New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
+```powershell
+New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
+```
 
 If required, you can configure an existing UM mailbox policy by using the EAC:
 
@@ -457,7 +493,9 @@ If required, you can configure an existing UM mailbox policy by using the EAC:
 
 If required, you can configure an existing UM mailbox policy by running the following command in the Shell.
 
+```powershell
     Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
+```
 
 ## Step 12: Move existing UM-enabled mailboxes to Exchange 2013
 
@@ -485,7 +523,9 @@ To move an Exchange 2010 mailbox to an Exchange 2013 Mailbox server by using the
 
 To move an Exchange 2010 mailbox to an Exchange 2013 Mailbox server by using the Shell, run the following command.
 
-    New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
+```powershell
+New-MoveRequest -Identity 'tony@alpineskihouse.com' -TargetDatabase "DB01"
+```
 
 ## Step 13: Enable new users for UM or configure settings for an existing UM-enabled user
 
@@ -523,7 +563,9 @@ To enable a user for Unified Messaging by using the EAC:
 
 To enable a user for Unified Messaging by using the Shell, run the following command.
 
+```powershell
     Enable-UMMailbox -Identity tonysmith@contoso.com -UMMailboxPolicy MyUMMailboxPolicy -Extensions 51234 -PIN 5643892 -NotifyEmail administrator@contoso.com -PINExpired $true
+```
 
 If required, you can configure a user that’s been enabled for UM by using the EAC:
 
@@ -553,7 +595,9 @@ If required, you can configure a user that’s been enabled for UM by using the 
 
 If required, you can configure a user that’s been enabled for UM in the Shell by running the following command.
 
+```powershell
     Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
+```
 
 ## Step 14: Configure your VoIP gateways, IP PBXs, and SIP-enabled PBXs to send all incoming calls to the Exchange 2013 Client Access servers
 
@@ -591,7 +635,9 @@ To disable Unified Messaging on an Exchange 2010 UM server by using the Exchange
 
 To disable Unified Messaging on an Exchange 2010 UM server by using the Shell, run the following command.:
 
-    Disable-UMServer -Identity MyUMServer -Immediate $true
+```powershell
+Disable-UMServer -Identity MyUMServer -Immediate $true
+```
 
 
 > [!TIP]
@@ -619,18 +665,24 @@ To remove an Exchange 2010 UM server from a dial plan by using the Exchange Mana
 
 To remove an Exchange 2010 UM server from a dial plan using the Shell, run the following command.
 
+```powershell
     $dp= Get-UMDialPlan "MySIPDialPlan"
     $s=Get-UMServer -id MyUMServer
     $s.dialplans-=$dp.identity
     Set-UMServer -id MyUMServer -dialplans:$s.dialplans
+```
 
 In this example, there are three SIP URI dial plans: SipDP1, SipDP2 and SipDP3. This example removes the UM server named `MyUMServer` from the SipDP3 dial plan.
 
-    Set-UMServer -id MyUMServer -DialPlans SipDP1,SipDP2
+```powershell
+Set-UMServer -id MyUMServer -DialPlans SipDP1,SipDP2
+```
 
 In this example, there are two SIP URI dial plans: SipDP1 and SipDP2. This example removes the UM server named `MyUMServer` from the SipDP2 dial plan.
 
-    Set-UMServer -id MyUMServer -DialPlans SipDP1
+```powershell
+Set-UMServer -id MyUMServer -DialPlans SipDP1
+```
 
 
 > [!TIP]

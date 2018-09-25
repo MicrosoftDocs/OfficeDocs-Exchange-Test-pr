@@ -89,7 +89,9 @@ When the lifecycle application in SharePoint closes a site mailbox, the site mai
 
 You can use the following command to search for and remove site mailboxes that have been marked for deletion.
 
+```powershell
     Get-Mailbox MDEL:* | ?{$_.RecipientTypeDetails -eq "TeamMailbox"} | Remove-Mailbox -Confirm:$false
+```
 
 Site mailboxes don’t support retention at the item-level. Retention works on a project-level for site mailboxes, so when the entire site mailbox is deleted, the retained items will be deleted.
 

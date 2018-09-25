@@ -65,11 +65,15 @@ The Client Access server on which to enable the MRS Proxy endpoint depends on th
 
 The following command enables the MRS Proxy endpoint on a Client Access server named EXCH-SRV-01.
 
+```powershell
     Set-WebServicesVirtualDirectory -Identity "EXCH-SRV-01\EWS (Default Web Site)" -MRSProxyEnabled $true
+```
 
 The following command enables the MRS Proxy endpoint on all Client Access servers in your Exchange organization.
 
-    Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory -MRSProxyEnabled $true
+```powershell
+Get-WebServicesVirtualDirectory | Set-WebServicesVirtualDirectory -MRSProxyEnabled $true
+```
 
 
 > [!IMPORTANT]
@@ -91,7 +95,9 @@ Or
 
 Run the following command in the Shell:
 
-    Get-WebServicesVirtualDirectory | FL Identity,MRSProxyEnabled
+```powershell
+Get-WebServicesVirtualDirectory | FL Identity,MRSProxyEnabled
+```
 
 Verify that the *MRSProxyEnabled* parameter is set to `True`.
 
@@ -99,11 +105,11 @@ Another way to verify that the MRS Proxy endpoint is enabled is to use the **Tes
 
 The following example tests the connection to a server in the corp.contoso.com forest.
 
-```
+```powershell
 $Credentials = Get-Credential
 ```
 
-```
+```powershell
 Test-MigrationServerAvailability -ExchangeRemoteMove -Autodiscover -EmailAddress administrator@corp.contoso.com -Credentials $Credentials
 ```
 

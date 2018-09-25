@@ -61,11 +61,11 @@ If you didn’t select a self-signed certificate, you’ll need to send the cert
 
 Run the following commands.
 
-  ```
+  ```powershell
   $reqfile = New-ExchangeCertificate -GenerateRequest -SubjectName "C=US,o=Contoso,cn=contosotocert" -DomainName "contoso.com" -PrivateKeyExportable $true
   ```
 
-  ```
+  ```powershell
   $reqfile | out-file c:\certreq.txt
   ```
 

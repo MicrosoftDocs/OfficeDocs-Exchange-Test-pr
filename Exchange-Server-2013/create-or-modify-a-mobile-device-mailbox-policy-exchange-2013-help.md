@@ -75,7 +75,9 @@ You create a new mobile device mailbox policy using the New-MobileDeviceMailboxP
 
 1.  In the Shell, run the following command.
     
+    ```powershell
         New-MobileDeviceMailboxPolicy -Name:"Management" -AllowBluetooth:$true -AllowBrowser:$true -AllowCamera:$true -AllowPOPIMAPEmail:$false -PasswordEnabled:$true -AlphanumericPasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:10 -AllowWiFi:$true -AllowStorageCard:$true -AllowPOPIMAPEmail:$false
+    ```
 
 ## How do you know this worked?
 
@@ -84,8 +86,10 @@ To verify that you’ve successfully created a mobile device mailbox policy, use
 1.  In the EAC, click **Mobile** \> **Mobile Device mailbox policies**, and verify that your new policy is displayed in the List view.
 
 2.  In the Shell, run the following command.
-    
+
+    ```powershell
         Get-MobileDeviceMailboxPolicy -Identity <PolicyName> 
+    ```
 
 ## Edit an existing mobile device mailbox policy
 
@@ -123,8 +127,10 @@ You can use the Shell to edit a mobile device mailbox policy.
 
 1.  In the Shell, run the following command.
     
+    ```powershell
         Set-MobileDeviceMailboxPolicy -Identity:Default -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:ThreeDays -AllowWiFi:$false -AllowStorageCard:$true -AllowPOPIMAPEmail:$false -IsDefault:$true -AllowTextMessaging:$true -Confirm:$true
-
+    ```
+    
 ## How do you know this worked?
 
 To verify that you’ve successfully edited a mobile device mailbox policy, do one of the following:
@@ -133,5 +139,7 @@ To verify that you’ve successfully edited a mobile device mailbox policy, do o
 
 2.  In the Shell, run the following command.
     
+    ```powershell
         Get-MobileDeviceMailboxPolicy -Identity <PolicyName>
+    ```
 

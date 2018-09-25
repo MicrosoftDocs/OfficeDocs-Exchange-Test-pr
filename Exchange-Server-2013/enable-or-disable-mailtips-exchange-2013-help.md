@@ -37,7 +37,9 @@ You can use the Exchange Management Shell to configure various settings that def
 
 You use the **Set-OrganizationConfig** cmdlet to enable or disable MailTips in your organization. MailTips are enabled by default when you install a new Exchange organization. This example shows how to enable MailTips in your organization.
 
-    Set-OrganizationConfig -MailTipsAllTipsEnabled $true
+```powershell
+Set-OrganizationConfig -MailTipsAllTipsEnabled $true
+```
 
 For detailed syntax and parameter information, see [Set-OrganizationConfig](https://technet.microsoft.com/en-us/library/aa997443\(v=exchg.150\)).
 

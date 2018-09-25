@@ -49,7 +49,9 @@ For additional management tasks related to address lists, see [Address list proc
 
 This example removes the address list Sales Department, which doesn't contain child address lists.
 
-    Remove-AddressList -Identity "Sales Department"
+```powershell
+Remove-AddressList -Identity "Sales Department"
+```
 
 Type **Y** to confirm that you want to remove this address list, and then press ENTER.
 
@@ -59,7 +61,9 @@ For detailed syntax and parameter information, see [Remove-AddressList](https://
 
 This example removes the parent address list Departments and all its child address lists.
 
-    Remove-AddressList -Identity Departments -Recursive
+```powershell
+Remove-AddressList -Identity Departments -Recursive
+```
 
 Type **Y** to confirm that you want to remove the parent address list and its child address lists, and then press ENTER.
 

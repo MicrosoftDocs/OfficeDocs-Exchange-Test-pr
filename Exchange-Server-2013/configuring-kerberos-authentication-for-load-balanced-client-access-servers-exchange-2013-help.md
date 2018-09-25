@@ -51,25 +51,35 @@ When you set up the ASA credential, keep these guidelines in mind:
     
     Use the **Import-Module** cmdlet to import the Active Directory module.
     
-        Import-Module ActiveDirectory
+    ```powershell
+    Import-Module ActiveDirectory
+    ```
 
 2.  Use the **New-ADComputer** cmdlet to create a new Active Directory computer account using this cmdlet syntax:
     
+    ```powershell
         New-ADComputer [-Name] <string> [-AccountPassword <SecureString>] [-AllowReversiblePasswordEncryption <System.Nullable[boolean]>] [-Description <string>] [-Enabled <System.Nullable[bool]>]
-    
+    ```
+
     **Example:**
     
+    ```powershell
         New-ADComputer -Name EXCH2013ASA -AccountPassword (Read-Host 'Enter password' -AsSecureString) -Description 'Alternate Service Account credentials for Exchange' -Enabled:$True -SamAccountName EXCH2013ASA
-    
+    ```
+
     Where *EXCH2013ASA* is the name of the account, the description *Alternate Service Account credentials for Exchange* is whatever you want it to be, and the value for the *SamAccountName* parameter, in this case *EXCH2013ASA*, need to be unique in your directory.
 
 3.  Use the **Set-ADComputer** cmdlet to enable the AES 256 encryption cipher support used by Kerberos using this cmdlet syntax:
     
+    ```powershell
         Set-ADComputer [-Name] <string> [-add @{<attributename>="<value>"]
-    
+    ```
+
     **Example:**
     
-        Set-ADComputer EXCH2013ASA -add @{"msDS-SupportedEncryptionTypes"="28"}
+    ```powershell
+    Set-ADComputer EXCH2013ASA -add @{"msDS-SupportedEncryptionTypes"="28"}
+    ```
     
     Where *EXCH2013ASA* is the name of the account and the attribute to be modified is *msDS-SupportedEncryptionTypes* with a decimal value of 28, which enables the following ciphers: RC4-HMAC, AES128-CTS-HMAC-SHA1-96, AES256-CTS-HMAC-SHA1-96.
 
@@ -143,12 +153,15 @@ The only supported method for deploying the ASA credential is to use the RollAlt
 
 3.  Run the following command to deploy the ASA credential to the first Exchange 2013 Client Access server:
     
+    ```powershell
         .\RollAlternateServiceAccountPassword.ps1 -ToSpecificServer cas-1.corp.tailspintoys.com -GenerateNewPasswordFor tailspin\EXCH2013ASA$
+    ```
 
 4.  When you're asked if you want to change the password for the alternate service account, answer **Yes**.
 
 The following is an example of the output that's shown when you run the RollAlternateServiceAccountPassword.ps1 script.
 
+```powershell
     ========== Starting at 01/12/2015 10:17:47 ==========
     Creating a new session for implicit remoting of "Get-ExchangeServer" command...
     Destination servers that will be updated:
@@ -198,6 +211,7 @@ The following is an example of the output that's shown when you run the RollAlte
     ========== Finished at 01/12/2015 10:20:00 ==========
     
             THE SCRIPT HAS SUCCEEDED
+```
 
 ## Deploy the ASA credential to another Exchange 2013 Client Access server
 
@@ -207,12 +221,15 @@ The following is an example of the output that's shown when you run the RollAlte
 
 3.  Run the following command to deploy the ASA credential to another Exchange 2013 Client Access server:
     
+    ```powershell
         .\RollAlternateServiceAccountPassword.ps1 -ToSpecificServer cas-2.corp.tailspintoys.com -CopyFrom cas-1.corp.tailspintoys.com
+    ```
 
 4.  Repeat Step 3 for each Client Access server you want to deploy the ASA credential to.
 
 The following is an example of the output that's shown when you run the RollAlternateServiceAccountPassword.ps1 script.
 
+```powershell
     ========== Starting at 01/12/2015 10:34:35 ==========
     Destination servers that will be updated:
     
@@ -253,30 +270,37 @@ The following is an example of the output that's shown when you run the RollAlte
     ========== Finished at 01/12/2015 10:38:13 ==========
     
             THE SCRIPT HAS SUCCEEDED
+```
 
 ## Verify the deployment of the ASA credential
 
   - Open the Exchange Management Shell on an Exchange 2013 server.
 
   - Run the following command to check the settings on a Client Access server:
-    
+
+    ```powershell    
         Get-ClientAccessServer CAS-3 -IncludeAlternateServiceAccountCredentialStatus | Format-List Name, AlternateServiceAccountConfiguration
+    ```
 
   - Repeat Step 2 on each Client Access server where you want to verify the deployment of the ASA credential.
 
 The following is an example of the output that's shown when you run the Get-ClientAccessServer command above and no previous ASA credential was set.
 
+```powershell
     Name                                 : CAS-1
     AlternateServiceAccountConfiguration : Latest: 1/12/2015 10:19:22 AM, tailspin\EXCH2013ASA$
                                            Previous: <Not set>
                                                ...
+```
 
 The following is an example of the output that's shown when you run the Get-ClientAccessServer command above and an ASA credential was previously set. The previous ASA credential and the date and time it was set are returned.
 
+```powershell
     Name                                 : CAS-3
     AlternateServiceAccountConfiguration : Latest: 1/12/2015 10:19:22 AM, tailspin\EXCH2013ASA$
                                            Previous: 7/15/2014 12:58:35 PM, tailspin\oldSharedServiceAccountName$
                                                ...
+```
 
 ## Associate Service Principal Names (SPNs) with the ASA credential
 
@@ -294,11 +318,15 @@ Before you associate the SPNs with the ASA credential, you need to verify that t
 
 2.  At the command prompt, type the following command:
     
-        setspn -F -Q <SPN>
+    ```powershell
+    setspn -F -Q <SPN>
+    ```
     
     Where \<SPN\> is the SPN you want to associate with the ASA credential. For example:
     
-        setspn -F -Q http/mail.corp.tailspintoys.com
+    ```powershell
+    setspn -F -Q http/mail.corp.tailspintoys.com
+    ```
     
     The command should return nothing. If it returns something, another account is already associated with the SPN. Repeat this step once for each SPN you want to associate with the ASA credential.
 
@@ -308,11 +336,15 @@ Before you associate the SPNs with the ASA credential, you need to verify that t
 
 2.  At the command prompt, type the following command:
     
-        setspn -S <SPN> <Account>$
+    ```powershell
+    setspn -S <SPN> <Account>$
+    ```
     
     Where \<SPN\> is the SPN you want to associate with the ASA credential and \<Account\> is the account associated with the ASA credential. For example:
     
-        setspn -S http/mail.corp.tailspintoys.com tailspin\EXCH2013ASA$
+    ```powershell
+    setspn -S http/mail.corp.tailspintoys.com tailspin\EXCH2013ASA$
+    ```
     
     Run this command once for each SPN you want to associate with the ASA credential.
 
@@ -322,11 +354,15 @@ Before you associate the SPNs with the ASA credential, you need to verify that t
 
 2.  At the command prompt, type the following command:
     
-        setspn -L <Account>$
+    ```powershell
+    setspn -L <Account>$
+    ```
     
     Where \<Account\> is the account associated with the ASA credential. For example:
     
-        setspn -L tailspin\EXCH2013ASA$
+    ```powershell
+    setspn -L tailspin\EXCH2013ASA$
+    ```
     
     You only need to run this command once.
 
@@ -336,11 +372,15 @@ Before you associate the SPNs with the ASA credential, you need to verify that t
 
 2.  To enable Kerberos authentication for Outlook Anywhere clients, run the following command on your Client Access server:
     
+    ```powershell
         Get-OutlookAnywhere -server CAS-1 | Set-OutlookAnywhere -InternalClientAuthenticationMethod  Negotiate
+    ```
 
 3.  To enable Kerberos authentication for MAPI over HTTP clients, run the following on your Exchange 2013 Client Access server:
     
+    ```powershell
         Get-MapiVirtualDirectory -Server CAS-1 | Set-MapiVirtualDirectory -IISAuthenticationMethods Ntlm, Negotiate
+    ```
 
 4.  Repeat steps 2 and 3 for each Exchange 2013 Client Access server where you want to enable Kerberos authentication.
 
@@ -367,13 +407,17 @@ When you configured the ASA credential on each Client Access server, you ran the
 **To validate that Kerberos is working correctly by using the HttpProxy log file**
 
 1.  In a text editor, browse to the folder where the HttpProxy log is stored. By default, the log is stored in the following folder:
-    
-    %ExchangeInstallPath%\\Logging\\HttpProxy\\RpcHttp
+
+    ```powershell
+        %ExchangeInstallPath%\\Logging\\HttpProxy\\RpcHttp
+    ```
 
 2.  Open the most recent log file and look for the word **Negotiate**. The line in the log file will look something like the following example:
     
+    ```powershell
         2014-02-19T13:30:49.219Z,e19d08f4-e04c-42da-a6be-b7484b396db0,15,0,775,22,,RpcHttp,mail.corp.tailspintoys.com,/rpc/rpcproxy.dll,,Negotiate,True,tailspin\Wendy,tailspintoys.com,MailboxGuid~ad44b1e0-e44f-4a16-9396-3a437f594f88,MSRPC,192.168.1.77,EXCH1,200,200,,RPC_OUT_DATA,Proxy,exch2.tailspintoys.com,15.00.0775.000,IntraForest,MailboxGuidWithDomain,,,,76,462,1,,1,1,,0,,0,,0,0,16272.3359,0,0,3,0,23,0,25,0,16280,1,16274,16230,16233,16234,16282,?ad44b1e0-e44f-4a16-9396-3a437f594f88@tailspintoys.com:6001,,BeginRequest=2014-02-19T13:30:32.946Z;BeginGetRequestStream=2014-02-19T13:30:32.946Z;OnRequestStreamReady=2014-02-19T13:30:32.946Z;BeginGetResponse=2014-02-19T13:30:32.946Z;OnResponseReady=2014-02-19T13:30:32.977Z;EndGetResponse=2014-02-19T13:30:32.977Z;,PossibleException=IOException;
-    
+    ```
+
     If you see the **AuthenticationType** value is **Negotiate**, then the server is successfully creating Kerberos authenticated connections.
 
 ## Maintain the ASA credential
@@ -388,7 +432,9 @@ To configure your Client Access server so that it doesn't use Kerberos, disassoc
 
 1.  Open the Exchange Management Shell on an Exchange 2013 server and run the following command:
     
-        Set-ClientAccessServer CAS-1 -RemoveAlternateServiceAccountCredentials
+    ```powershell
+    Set-ClientAccessServer CAS-1 -RemoveAlternateServiceAccountCredentials
+    ```
 
 2.  Although you don’t have to do this immediately, you should eventually restart all client computers to clear the Kerberos ticket cache from the computer.
 

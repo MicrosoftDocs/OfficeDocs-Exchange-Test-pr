@@ -39,7 +39,9 @@ By default, only members of the Organization Management role group can add or re
 
 You can use the following command to view a list of users or USGs that are members of this role group.
 
-    Get-RoleGroupMember "Organization Management"
+```powershell
+Get-RoleGroupMember "Organization Management"
+```
 
 For more information about the members of a role group, see [Manage role groups](manage-role-groups-exchange-2013-help.md).
 

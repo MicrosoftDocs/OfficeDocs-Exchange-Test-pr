@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Anti-spam stamps: Exchange 2013 Help'
 TOCTitle: Anti-spam stamps
 ms:assetid: 28d3a5c2-8509-4b25-9876-763536e77c27
@@ -33,7 +33,9 @@ You can view anti-spam stamps by using Microsoft Outlook. For more information, 
 
 The anti-spam report is a summary report of the anti-spam filter results that have been applied to an email message. The Content Filter agent applies this stamp to the message envelope in the form of an X-header as follows.
 
+```powershell
     X-MS-Exchange-Organization-Antispam-Report: DV:<DATVersion>;CW:CustomList;PCL:PhishingVerdict <verdict>;P100:PhishingBlock;PP:Presolve;SID:SenderIDStatus <status>;TIME:<SendReceiveDelta>;MIME:MimeCompliance 
+```
 
 The following table describes the filter information that can appear in an anti-spam report.
 
@@ -70,7 +72,8 @@ The following table describes the filter information that can appear in an anti-
 <li><p><strong>PermError</strong>   The DNS record is invalid, such as an error in the record format.</p></li>
 </ul>
 <p>The Sender ID stamp is displayed as an X-Header in the message envelope as follows:</p>
-<pre><code>X-MS-Exchange-Organization-SenderIdResult:&lt;status&gt;</code></pre>
+
+<code>X-MS-Exchange-Organization-SenderIdResult:\<status\></code>
 <p>For more information about Sender ID, see <a href="sender-id-exchange-2013-help.md">Sender ID</a>.</p></td>
 </tr>
 <tr class="even">
@@ -95,13 +98,14 @@ The following table describes the filter information that can appear in an anti-
 <p>The PCL value can range from 1 through 8. A PCL rating from 1 through 3 returns a status of <code>Neutral</code>. This means that the message's content isn't likely to be phishing. A PCL rating from 4 through 8 returns a status of <code>Suspicious</code>. This means that the message is likely to be phishing.</p>
 <p>The values are used to determine what action Outlook takes on messages. Outlook uses the PCL stamp to block the content of suspicious messages.</p>
 <p>The PCL stamp is displayed as an X-header in the message envelope as follows:</p>
-<pre><code>X-MS-Exchange-Organization-PCL:&lt;status&gt;</code></pre></td>
+<code>X-MS-Exchange-Organization-PCL:\<status\></code>
+</td>
 </tr>
 <tr class="even">
 <td><p>SCL</p></td>
 <td><p>The spam confidence level (SCL) stamp of the message displays the rating of the message based on its content. The Content Filter agent uses Microsoft SmartScreen technology to assess the contents of a message and to assign an SCL rating to each message. The SCL value is from 0 through 9, where 0 is considered less likely to be spam, and 9 is considered more likely to be spam. The actions that Exchange and Outlook take depend on your SCL threshold settings.</p>
 <p>The SCL stamp is displayed as an X-header in the message envelope as follows:</p>
-<pre><code>X-MS-Exchange-Organization-SCL:&lt;status&gt;</code></pre>
+<code>X-MS-Exchange-Organization-SCL:\<status\></code>
 <p>For more information about SCL thresholds and actions, see <a href="spam-confidence-level-threshold-exchange-2013-help.md">Spam Confidence Level Threshold</a>.</p></td>
 </tr>
 <tr class="odd">

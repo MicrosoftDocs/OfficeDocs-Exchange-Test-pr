@@ -53,11 +53,15 @@ Looking for other management tasks related to roles? Check out [Advanced permiss
 
 You can add a role entry to a role exactly as it appears on the parent role by using the following syntax.
 
-    Add-ManagementRoleEntry <child role name>\<cmdlet>
+```powershell
+Add-ManagementRoleEntry <child role name>\<cmdlet>
+```
 
 This example adds the **Set-Mailbox** cmdlet to the Recipient Administrators role.
 
-    Add-ManagementRoleEntry "Recipient Administrators\Set-Mailbox"
+```powershell
+Add-ManagementRoleEntry "Recipient Administrators\Set-Mailbox"
+```
 
 This command checks the parent role, and if the role entry exists, adds it to the child role. If the role entry already exists on the child role, you can include the *Overwrite* parameter to overwrite the existing role entry.
 
@@ -67,11 +71,15 @@ For detailed syntax and parameter information, see [Add-ManagementRoleEntry](htt
 
 If you want to add a role entry from a parent role, but you want to include only specific parameters in the role entry on the child role, use the following syntax.
 
+```powershell
     Add-ManagementRoleEntry <child role name>\<cmdlet> -Parameters <parameter 1>, <parameter 2>, <parameter...>
+```
 
 This example adds the **Set-Mailbox** cmdlet to the Help Desk role, but includes only the *DisplayName* and *EmailAddresses* parameters in the entry on the child role.
 
-    Add-ManagementRoleEntry "Help Desk\Set-Mailbox" -Parameters DisplayName, EmailAddresses
+```powershell
+Add-ManagementRoleEntry "Help Desk\Set-Mailbox" -Parameters DisplayName, EmailAddresses
+```
 
 This command checks the parent role, and if the role entry exists, adds it to the child role. If the role entry already exists on the child role, you can include the *Overwrite* parameter to overwrite the existing role entry.
 
@@ -83,11 +91,15 @@ If you want to add more than one role entry to a role, you need to retrieve a li
 
 To add multiple entries from a parent role to a child role, use the following syntax.
 
+```powershell
     Get-ManagementRoleEntry <parent role name>\*<partial cmdlet name>* | Add-ManagementRoleEntry -Role <child role name>
+```
 
 This example adds all the role entries that contain the string `Mailbox` in the cmdlet name on the Mail Recipients parent role to the Seattle Mail Recipients child role.
 
+```powershell
     Get-ManagementRoleEntry "Mail Recipients\*Mailbox*" | Add-ManagementRoleEntry -Role "Seattle Mail Recipients"
+```
 
 If the role entries already exist on the child role, you can include the *Overwrite* parameter to overwrite the existing role entries.
 

@@ -61,15 +61,21 @@ Looking for other management tasks related to DAGs? Check out [Managing database
 
 This example adds the Mailbox server MBX1 to the DAG DAG1.
 
-    Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```powershell
+Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```
 
 This example removes the Mailbox server MBX1 from the DAG DAG1. Before running this command, make sure that no replicated databases exist on the Mailbox server.
 
-    Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```powershell
+Remove-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
+```
 
 This example removes the configuration settings for the Mailbox server MBX4 from the DAG DAG2. MBX4 is expected to be offline for an extended period, so its configuration is being removed from the DAG while it's offline to establish quorum with the remaining online DAG members.
 
-    Remove-DatabaseAvailabilityGroupServer -Identity DAG2 -MailboxServer MBX4 -ConfigurationOnly
+```powershell
+Remove-DatabaseAvailabilityGroupServer -Identity DAG2 -MailboxServer MBX4 -ConfigurationOnly
+```
 
 ## How do you know this worked?
 
@@ -79,7 +85,9 @@ To verify that you've successfully managed DAG membership, do one of the followi
 
   - In the Shell, run the following command to display DAG membership information.
     
-        Get-DatabaseAvailabilityGroup <DAGName> | Format-List Servers
+    ```powershell
+    Get-DatabaseAvailabilityGroup <DAGName> | Format-List Servers
+    ```
 
 ## For more information
 

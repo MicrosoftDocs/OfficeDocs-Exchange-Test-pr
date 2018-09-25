@@ -47,7 +47,9 @@ Looking for other management tasks related to roles? Check out [Advanced permiss
 
 You can view a list of all role assignments configured in your organization by running the **Get-ManagementRoleAssignment** cmdlet. If you want to retrieve a list of role assignments that match a partial string that you specify, use wildcard characters (\*). This example retrieves a list of all the role assignments that start with the string "Tier 1".
 
+```powershell
     Get-ManagementRoleAssignment "Tier 1*"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -55,11 +57,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleAssignment
 
 You can view the details of a role assignment by piping the results of the **Get-ManagementRoleAssignment** cmdlet to the **Format-List** cmdlet. Use the following syntax.
 
-    Get-ManagementRoleAssignment <assignment name> | Format-List
+```powershell
+Get-ManagementRoleAssignment <assignment name> | Format-List
+```
 
 This example retrieves the details of the Help Desk Assignment role assignment.
 
-    Get-ManagementRoleAssignment "Help Desk Assignment" | Format-List
+```powershell
+Get-ManagementRoleAssignment "Help Desk Assignment" | Format-List
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -67,11 +73,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleAssignment
 
 To view a list of role assignments associated with a management role group, role, or role assignment policy, or associated with a user or universal security group (USG), use the following syntax.
 
-    Get-ManagementRoleAssignment -RoleAssignee <role assignee name>
+```powershell
+Get-ManagementRoleAssignment -RoleAssignee <role assignee name>
+```
 
 This example retrieves all of the role assignments associated with the Server Management role group.
 
-    Get-ManagementRoleAssignment -RoleAssignee "Server Management"
+```powershell
+Get-ManagementRoleAssignment -RoleAssignee "Server Management"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -81,11 +91,15 @@ Each role can have multiple role assignments. You can use the **Get-ManagementRo
 
 To view a list of role assignments associated with a specified role, use the following syntax.
 
-    Get-ManagementRoleAssignment -Role <role name>
+```powershell
+Get-ManagementRoleAssignment -Role <role name>
+```
 
 This example retrieves all of the role assignments associated with the Mail Recipients role.
 
-    Get-ManagementRoleAssignment -Role "Mail Recipients"
+```powershell
+Get-ManagementRoleAssignment -Role "Mail Recipients"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -93,11 +107,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleAssignment
 
 To view a list of role assignments that use a specific predefined scope, use the following syntax.
 
+```powershell
     Get-ManagementRoleAssignment -RecipientWriteScope < MyGAL | MyDistributionGroups | Organization | Self | CustomRecipientScope | ExecutiveRecipientScope >
+```
 
 This example retrieves all of the role assignments that use the Organization predefined scope.
 
-    Get-ManagementRoleAssignment -RecipientWriteScope Organization
+```powershell
+Get-ManagementRoleAssignment -RecipientWriteScope Organization
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -105,11 +123,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleAssignment
 
 To view a list of role assignments that have been scoped to a specific organizational unit (OU), use the following syntax.
 
-    Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope <OU>
+```powershell
+Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope <OU>
+```
 
 This example retrieves all of the role assignments that have been scoped to the North America\\Engineering\\Users OU in the contoso.com domain.
 
+```powershell
     Get-ManagementRoleAssignment -RecipientOrganizationalUnitScope "contoso.com/North America/Engineering/Users"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -129,11 +151,15 @@ The syntax for each parameter is the same. Specify the name of the scope with th
 
 This example retrieves all of the role assignments that use the Vancouver Recipients recipient scope.
 
-    Get-ManagementRoleAssignment -CustomRecipientWriteScope "Vancouver Recipients"
+```powershell
+Get-ManagementRoleAssignment -CustomRecipientWriteScope "Vancouver Recipients"
+```
 
 This example retrieves all of the role assignments that use the Seattle AD Site exclusive configuration scope.
 
-    Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Seattle AD Site"
+```powershell
+Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Seattle AD Site"
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -141,15 +167,21 @@ For detailed syntax and parameter information, see [Get-ManagementRoleAssignment
 
 To view a list of exclusive or regular role assignments, use the following syntax.
 
-    Get-ManagementRoleAssignment -Exclusive < $True | $False >
+```powershell
+Get-ManagementRoleAssignment -Exclusive < $True | $False >
+```
 
 For example, to view a list of exclusive scopes, run the following command:
 
-    Get-ManagementRoleAssignment -Exclusive $True
+```powershell
+Get-ManagementRoleAssignment -Exclusive $True
+```
 
 This example retrieves a list of regular scopes without any exclusive scopes.
 
-    Get-ManagementRoleAssignment -Exclusive $False
+```powershell
+Get-ManagementRoleAssignment -Exclusive $False
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -159,11 +191,15 @@ To view a list of role assignments that can modify a specific recipient or serve
 
 This example retrieves a list of role assignments that can modify the recipient Brian.
 
-    Get-ManagementRoleAssignment -WritableRecipient "Brian"
+```powershell
+Get-ManagementRoleAssignment -WritableRecipient "Brian"
+```
 
 You can combine the *WritableRecipient* and *WritableServer* parameters with other parameters, such as the *RoleAssignee* parameter and the *GetEffectiveUsers* switch to refine your query and expand any role groups or USGs. This example retrieves all of the users who can modify the server EX02 and who are assigned the Server Management role group.
 
+```powershell
     Get-ManagementRoleAssignment -WritableServer EX02 -RoleAssignee "Server Management" -GetEffectiveUsers
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 
@@ -171,11 +207,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleAssignment
 
 To view a list of users that receive permissions from a role assignment, use the following syntax.
 
-    Get-ManagementRoleAssignment <assignment name> -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment <assignment name> -GetEffectiveUsers
+```
 
 This example retrieves a list of users in the Help Desk Assignment role assignment.
 
-    Get-ManagementRoleAssignment "Help Desk Assignment" -GetEffectiveUsers
+```powershell
+Get-ManagementRoleAssignment "Help Desk Assignment" -GetEffectiveUsers
+```
 
 You can also combine the *GetEffectiveUsers* switch with several other parameters on the **Get-ManagementRoleAssignment** cmdlet to expand the role groups and USGs that the role assignments are assigned to. For an example of how the *GetEffectiveUsers* switch is used with other parameters, see "View who can modify a specific recipient or server" earlier in this topic.
 
@@ -185,11 +225,15 @@ For detailed syntax and parameter information, see [Get-ManagementRoleAssignment
 
 To view a list of role assignments that are enabled or disabled, use the following syntax.
 
-    Get-ManagementRoleAssignment -Enabled < $True | $False >
+```powershell
+Get-ManagementRoleAssignment -Enabled < $True | $False >
+```
 
 This example retrieves a list of role assignments that are disabled.
 
-    Get-ManagementRoleAssignment -Enabled $False
+```powershell
+Get-ManagementRoleAssignment -Enabled $False
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd351024\(v=exchg.150\)).
 

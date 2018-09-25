@@ -57,13 +57,17 @@ For this procedure, you have to specify a verified domain for your Exchange Onli
 
 Run the following command in the Exchange Management Shell (the Exchange PowerShell) in your on-premises Exchange organization.
 
+```powershell
     New-AuthServer -Name "WindowsAzureACS" -AuthMetadataUrl https://accounts.accesscontrol.windows.net/<your verified domain>/metadata/json/1
+```
 
 ## Step 2: Enable the partner application for your Exchange Online organization
 
 Run the following command in the Exchange PowerShell in your on-premises Exchange organization.
 
+```powershell
     Get-PartnerApplication |  ?{$_.ApplicationIdentifier -eq "00000002-0000-0ff1-ce00-000000000000" -and $_.Realm -eq ""} | Set-PartnerApplication -Enabled $true
+```
 
 ## Step 3: Export the on-premises authorization certificate
 
@@ -71,6 +75,7 @@ In this step, you have to run a PowerShell script to export the on-premises auth
 
 1.  Save the following text to a PowerShell script file named, for example, **ExportAuthCert.ps1**.
     
+    ```powershell
         $thumbprint = (Get-AuthConfig).CurrentCertificateThumbprint
          
         if((test-path $env:SYSTEMDRIVE\OAuthConfig) -eq $false)
@@ -84,10 +89,13 @@ In this step, you have to run a PowerShell script to export the on-premises auth
         $certBytes = $oAuthCert.Export($certType)
         $CertFile = "$env:SYSTEMDRIVE\OAuthConfig\OAuthCert.cer"
         [System.IO.File]::WriteAllBytes($CertFile, $certBytes)
+    ```
 
 2.  In Exchange PowerShell in your on-premises Exchange organization, run the PowerShell script that you created in the previous step. For example:
     
-        .\ExportAuthCert.ps1
+    ```powershell
+    .\ExportAuthCert.ps1
+    ```
 
 ## Step 4: Upload the on-premises authorization certificate to Azure Active Directory ACS
 
@@ -97,6 +105,7 @@ Next, you have to use Windows PowerShell to upload the on-premises authorization
 
 2.  Save the following text to a PowerShell script file named, for example, **UploadAuthCert.ps1**.
     
+    ```powershell
         Connect-MsolService;
         Import-Module msonlineextended;
         
@@ -114,10 +123,13 @@ Next, you have to use Windows PowerShell to upload the on-premises authorization
         
         $p = Get-MsolServicePrincipal -ServicePrincipalName $ServiceName
         New-MsolServicePrincipalCredential -AppPrincipalId $p.AppPrincipalId -Type asymmetric -Usage Verify -Value $credValue
+    ```
 
 3.  Run the PowerShell script that you created in the previous step. For example:
     
-        .\UploadAuthCert.ps1
+    ```powershell
+    .\UploadAuthCert.ps1
+    ```
 
 4.  After you start the script, a credentials dialog box is displayed. Enter the credentials for the tenant administrator account in your Microsoft Online Azure AD organization. After running the script, leave the Windows PowerShell for Azure AD session open. You will use this to run a PowerShell script in the next step.
 
@@ -127,7 +139,9 @@ You have to run the script in this step for each endpoint in your on-premises Ex
 
 If you are not sure of the external Exchange endpoints in your on-premises Exchange organization, you can get a list of the external configured Web services endpoints by running the following command in Exchange PowerShell in your on-premises Exchange organization:
 
-    Get-WebServicesVirtualDirectory | FL ExternalUrl
+```powershell
+Get-WebServicesVirtualDirectory | FL ExternalUrl
+```
 
 
 > [!NOTE]
@@ -137,6 +151,7 @@ If you are not sure of the external Exchange endpoints in your on-premises Excha
 
 1.  Save the following text to a PowerShell script file named, for example, **RegisterEndpoints.ps1**. This example uses a wildcard to register all endpoints for contoso.com. Replace **contoso.com** with a hostname authority for your on-premises Exchange organization.
     
+    ```powershell
         $externalAuthority="*.contoso.com"
          
         $ServiceName = "00000002-0000-0ff1-ce00-000000000000";
@@ -147,10 +162,13 @@ If you are not sure of the external Exchange endpoints in your on-premises Excha
         $p.ServicePrincipalNames.Add($spn);
          
         Set-MsolServicePrincipal -ObjectID $p.ObjectId -ServicePrincipalNames $p.ServicePrincipalNames;
+    ```
 
 2.  In Windows PowerShell for Azure Active Directory, run the Windows PowerShell script that you created in the previous step. For example:
     
-        .\RegisterEndpoints.ps1
+    ```powershell
+    .\RegisterEndpoints.ps1
+    ```
 
 ## Step 6: Create an IntraOrganizationConnector from your on-premises organization to Office 365
 
@@ -158,7 +176,9 @@ You must define a target address for your mailboxes that are hosted in Exchange 
 
 Using Exchange PowerShell, run the following cmdlet in your on-premises organization:
 
+```powershell
     New-IntraOrganizationConnector -name ExchangeHybridOnPremisesToOnline -DiscoveryEndpoint https://outlook.office365.com/autodiscover/autodiscover.svc -TargetAddressDomains <your service target address>
+```
 
 ## Step 7: Create an IntraOrganizationConnector from your Office 365 tenant to your on-premises Exchange organization
 
@@ -178,6 +198,7 @@ You must also define the external Autodiscover endpoint for your on-premises org
 
 Using Windows PowerShell, run the following cmdlet:
 
+```powershell
     $UserCredential = Get-Credential
     
     $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
@@ -185,6 +206,7 @@ Using Windows PowerShell, run the following cmdlet:
     Import-PSSession $Session
     
     New-IntraOrganizationConnector -name ExchangeHybridOnlineToOnPremises -DiscoveryEndpoint <your on-premises Autodiscover endpoint> -TargetAddressDomains <your on-premises SMTP domain>
+```
 
 ## Step 8: Configure an AvailabilityAddressSpace for any pre-Exchange 2013 SP1 servers
 
@@ -210,7 +232,9 @@ Before you complete the following step, make sure:
 
 An *AvailabilityAddressSpace* must be configured on pre-Exchange 2013 Client Access servers that points to the Exchange Web Services endpoint of your on-premises Exchange 2013 SP1 Client Access server(s). This endpoint is the same endpoint as previously outlined in Step 5 or can be determined by running the following cmdlet on your on-premises Exchange 2013 SP1 Client Access server:
 
-    Get-WebServicesVirtualDirectory | FL AdminDisplayVersion,ExternalUrl
+```powershell
+Get-WebServicesVirtualDirectory | FL AdminDisplayVersion,ExternalUrl
+```
 
 
 > [!NOTE]
@@ -220,7 +244,9 @@ An *AvailabilityAddressSpace* must be configured on pre-Exchange 2013 Client Acc
 
 To configure the *AvailabilityAddressSpace*, use Exchange PowerShell and run the following cmdlet in your on-premises organization:
 
+```powershell
     Add-AvailabilityAddressSpace -AccessMethod InternalProxy -ProxyUrl <your on-premises External Web Services URL> -ForestName <your Office 365 service target address> -UseServiceAccount $True
+```
 
 ## How do you know this worked?
 
@@ -234,11 +260,15 @@ You can verify that the OAuth configuration is correct by using the [Test-OAuthC
 
 To verify that your on-premises Exchange organization can successfully connect to Exchange Online, run the following command in Exchange PowerShell in your on-premises organization:
 
+```powershell
     Test-OAuthConnectivity -Service EWS -TargetUri https://outlook.office365.com/ews/exchange.asmx -Mailbox <On-Premises Mailbox> -Verbose | fl
+```
 
 To verify that your Exchange Online organization can successfully connect to your on-premises Exchange organization, use the [Remote PowerShell](https://technet.microsoft.com/en-us/library/jj984289\(v=exchg.150\)) to connect to your Exchange Online organization and run the following command:
 
+```powershell
     Test-OAuthConnectivity -Service EWS -TargetUri <external hostname authority of your Exchange On-Premises deployment>/metadata/json/1 -Mailbox <Exchange Online Mailbox> -Verbose | fl
+```
 
 So, as an example, Test-OAuthConnectivity -Service EWS -TargetUri https://lync.contoso.com/metadata/json/1 -Mailbox ExchangeOnlineBox1 -Verbose | fl
 

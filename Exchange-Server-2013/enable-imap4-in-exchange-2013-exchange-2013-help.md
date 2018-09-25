@@ -59,19 +59,27 @@ On the computer running the Mailbox server role:
 
 1.  Set the Microsoft Exchange IMAP4 service to start automatically.
     
-        Set-service msExchangeIMAP4 -startuptype automatic
+    ```powershell
+    Set-service msExchangeIMAP4 -startuptype automatic
+    ```
 
 2.  Start the Microsoft Exchange IMAP4 service.
     
-        Start-service msExchangeIMAP4
+    ```powershell
+    Start-service msExchangeIMAP4
+    ```
 
 3.  Set the Microsoft Exchange IMAP4 Backend service to start automatically.
     
-        Set-service msExchangeIMAP4BE -startuptype automatic
+    ```powershell
+    Set-service msExchangeIMAP4BE -startuptype automatic
+    ```
 
 4.  Start the Microsoft Exchange IMAP4 Backend service.
     
-        Start-service msExchangeIMAP4BE
+    ```powershell
+    Start-service msExchangeIMAP4BE
+    ```
 
 ## How do you know this worked?
 

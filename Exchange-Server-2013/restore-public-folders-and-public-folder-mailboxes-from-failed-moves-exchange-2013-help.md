@@ -52,16 +52,16 @@ For additional management tasks related to public folders, see [Public folder pr
 ## Restore a soft-deleted public folder
 
 This example restores the public folder \\Dev\\CustomerEnagagements to the target public folder mailbox Development01.
-
+```powershell
     New-MailboxRestoreRequest -SourceStoreMailbox Development -SourceDatabase MBX_DB01 -TargetMailbox Development01 -AllowLegacyDNMismatch -IncludeFolders \Dev\CustomerEngagements
-
+```
 For detailed syntax and parameter information, see [New-MailboxRestoreRequest](https://technet.microsoft.com/en-us/library/ff829875\(v=exchg.150\)).
 
 ## Restore a soft-deleted public folder mailbox
 
 This example restores the public folder mailbox PF\_Singapore to the new public folder mailbox PF\_Singapore\_Restore.
-
+```powershell
     New-MailboxRestoreRequest -SourceStoreMailbox PF_Singapore -SourceDatabase MBX_DB01 -TargetMailbox PF_Singapore_Restore -AllowLegacyDNMismatch
-
+```
 For detailed syntax and parameter information, see [New-MailboxRestoreRequest](https://technet.microsoft.com/en-us/library/ff829875\(v=exchg.150\)).
 

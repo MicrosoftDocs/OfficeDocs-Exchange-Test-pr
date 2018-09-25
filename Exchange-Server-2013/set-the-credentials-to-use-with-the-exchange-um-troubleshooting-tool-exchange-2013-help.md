@@ -57,11 +57,14 @@ By default, when you're running the UM Troubleshooting Tool, it uses the credent
 
 2.  In the **Microsoft Exchange 2010 UM Troubleshooting Tool** window, at the prompt, type the following and press Enter.
     
-        $cred=Get-Credential
+    ```powershell
+    $cred=Get-Credential
+    ```
 
 3.  In the **Windows PowerShell Credential Request** window, type the domain\\user name and password, and then click **OK**.
 
 4.  In the **Microsoft Exchange 2010 UM Troubleshooting Tool** window, specify the necessary cmdlet parameters to test for call flow. For example:
     
+    ```powershell
         Test-ExchangeUMCallFlow -Mode SIPClient -CallingParty tonysmith@contoso.com - CalledParty jamiestark@contoso.com NextHop ocsfe.contoso.com -Credential $cred
-
+    ```

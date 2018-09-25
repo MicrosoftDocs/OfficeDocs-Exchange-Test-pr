@@ -57,21 +57,29 @@ To start the IMAP4 services:
 
 1.  On the computer running the Client Access server role, from the Shell, run the following command to start the Microsoft Exchange IMAP4 service.
     
-        Start-service msExchangeIMAP4
+    ```powershell
+    Start-service msExchangeIMAP4
+    ```
 
 2.  On the computer running the Mailbox server role, from the Shell, run the following command to start the Microsoft Exchange IMAP4 Backend service.
     
-        Start-service msExchangeIMAP4BE
+    ```powershell
+    Start-service msExchangeIMAP4BE
+    ```
 
 To stop the IMAP4 services:
 
 1.  On the computer running the Client Access server role, from the Shell, run the following command to stop the Microsoft Exchange IMAP4 service.
     
-        Stop-service msExchangeIMAP4
+    ```powershell
+    Stop-service msExchangeIMAP4
+    ```
 
 2.  On the computer running the Mailbox server role, from the Shell, run the following command to stop the Microsoft Exchange IMAP4 Backend service.
     
-        Stop-service msExchangeIMAP4BE
+    ```powershell
+    Stop-service msExchangeIMAP4BE
+    ```
 
 ## Use net start to start or stop the IMAP4 services
 
@@ -79,21 +87,29 @@ To start the IMAP4 services:
 
 1.  On the computer running the Client Access server role, at the command prompt, run the following command to start the Microsoft Exchange IMAP4 service.
     
-        net start msExchangeIMAP4
+    ```powershell
+    net start msExchangeIMAP4
+    ```
 
 2.  On the computer running the Mailbox server role, at the command prompt, run the following command to start the Microsoft Exchange IMAP4 Backend service.
     
-        net start msExchangeIMAP4BE
+    ```powershell
+    net start msExchangeIMAP4BE
+    ```
 
 To stop the IMAP4 services:
 
 1.  On the computer running the Client Access server role, at the command prompt, run the following command to stop the Microsoft Exchange IMAP4 service.
     
-        Net Stop MSExchangeIMAP4
+    ```powershell
+    Net Stop MSExchangeIMAP4
+    ```
 
 2.  On the computer running the Mailbox server role, at the command prompt, run the following command to stop the Microsoft Exchange IMAP4 Backend service.
     
-        Net Stop MSExchangeIMAP4BE
+    ```powershell
+    Net Stop MSExchangeIMAP4BE
+    ```
 
 ## How do you know this worked?
 

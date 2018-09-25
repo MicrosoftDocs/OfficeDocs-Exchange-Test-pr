@@ -59,7 +59,9 @@ To learn more about In-Place Archives, see [In-Place Archiving in Exchange 2013]
 
 This example sets Chris Ashton’s mailbox archive quota to 10 gigabyte (GB), at which time the user will receive a warning message that the In-Place Archive is full and he will no longer be able to move items to the archive. This example also sets the archive warning quota to 9.5 GB, at which time the user will receive a warning message that the In-Place Archive is almost full.
 
-    Set-Mailbox -Identity "Chris Ashton" -ArchiveQuota 10GB -ArchiveWarningQuota 9.5GB
+```powershell
+Set-Mailbox -Identity "Chris Ashton" -ArchiveQuota 10GB -ArchiveWarningQuota 9.5GB
+```
 
 For detailed syntax and parameter information, see [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)).
 
@@ -71,5 +73,6 @@ To verify that you’ve successfully enabled an on-premises archive for an exist
 
   - In the Shell, run the following command to display quota information about the archive.
     
+    ```powershell
         Get-Mailbox <Name> | FL Name,Archive*Quota
-
+    ```

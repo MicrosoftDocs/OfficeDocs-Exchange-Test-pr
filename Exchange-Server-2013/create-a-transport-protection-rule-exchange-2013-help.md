@@ -74,7 +74,9 @@ For additional management tasks related to Information Rights Management (IRM), 
 
   - To create a transport protection rule, you must have existing RMS templates in your AD RMS deployment. This example retrieves the available templates from your AD RMS cluster.
     
-        Get-RMSTemplate | format-list
+    ```powershell
+    Get-RMSTemplate | format-list
+    ```
     
     For detailed syntax and parameter information, see [Get-RMSTemplate](https://technet.microsoft.com/en-us/library/dd297960\(v=exchg.150\)).
 
@@ -84,8 +86,9 @@ For additional management tasks related to Information Rights Management (IRM), 
     > [!NOTE]
     > The <CODE>SubjectContainsWords</CODE> predicate is used in this example. You can use any combination of transport rule predicates to form the conditions and exceptions for the rule. For information about the available predicates, see <A href="mail-flow-rule-conditions-and-exceptions-predicates-in-exchange-2013-exchange-2013-help.md">Transport rule conditions (predicates)</A>.
 
-    
+    ```powershell
         New-TransportRule -Name "Protect-BusinessCriticalProject" -SubjectContainsWords "Business Critical" -ApplyRightsProtectionTemplate "Do Not Forward"
+    ```
     
     For detailed syntax and parameter information, see [New-TransportRule](https://technet.microsoft.com/en-us/library/bb125138\(v=exchg.150\)).
 

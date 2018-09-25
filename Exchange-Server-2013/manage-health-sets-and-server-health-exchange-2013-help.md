@@ -46,21 +46,26 @@ You can use the Shell to get a summary of the health of a server running Exchang
 ## Use the Shell to View Server Health
 
 Run either of the following commands to view the health sets and health information on a server running Exchange 2013.
-```
-    Get-HealthReport -Identity <ServerName>
-```
-```
-    Get-ServerHealth -Identity <ServerName> | Format-Table Server,CurrentHealthSetState,Name,HealthSetName,AlertValue,HealthGroupName -Auto
+
+```powershell
+Get-HealthReport -Identity <ServerName>
 ```
 
+```powershell
+    Get-ServerHealth -Identity <ServerName> | Format-Table Server,CurrentHealthSetState,Name,HealthSetName,AlertValue,HealthGroupName -Auto
+    ```
+
 Run any of the following commands to view the health sets on a server or database availability group running Exchange 2013.
+
+```powershell
+Get-ExchangeServer | Get-HealthReport -RollupGroup
 ```
-    Get-ExchangeServer | Get-HealthReport -RollupGroup
+
+```powershell
+Get-ExchangeServer | Get-HealthReport -RollupGroup -HealthSetName <HealthSet>
 ```
-```
-    Get-ExchangeServer | Get-HealthReport -RollupGroup -HealthSetName <HealthSet>
-```
-```
+
+```powershell
     (Get-DatabaseAvailabiltyGroup <DAGName>).Servers | Get-HealthReport -RollupGroup
 ```
 
@@ -72,7 +77,9 @@ A health set is a group of monitors, probes and responders for a component that 
 
 Run the following command to view the health sets on a server running Exchange 2013.
 
-    Get-HealthReport -Server <ServerName>
+```powershell
+Get-HealthReport -Server <ServerName>
+```
 
 ## View the Probes, Monitors and Responders for a Health Set
 
@@ -82,7 +89,9 @@ A health set is a group of monitors, probes and responders for a component that 
 
 Run the following command to view the probes, monitors and responders associated with a health set on a server running Exchange 2013.
 
+```powershell
     Get-MonitoringItemIdentity -Server <ServerName> -Identity <HealthSetName> | Format-Table Identity,ItemType,Name -Auto
+```
 
 ## View a List of Monitors and Their Current Health
 
@@ -92,5 +101,7 @@ The health of a monitor is reported by using the “worst of” monitors in the 
 
 Run the following command to view a list of the monitors and their current health on a server running Exchange 2013.
 
+```powershell
     Get-ServerHealth -HealthSet <HealthSetName> -Server <ServerName> | Format-Table Name, AlertValue -Auto
+```
 

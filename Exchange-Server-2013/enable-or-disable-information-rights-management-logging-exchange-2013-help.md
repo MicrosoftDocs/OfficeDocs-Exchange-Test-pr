@@ -51,7 +51,9 @@ For additional management tasks related to IRM, see [Information Rights Manageme
 
 This example enables IRM log on a Mailbox server.
 
-    Set-TransportService -Identity EXCH01 -IRMLogEnabled $true
+```powershell
+Set-TransportService -Identity EXCH01 -IRMLogEnabled $true
+```
 
 For detailed syntax and parameter information, see [Set-TransportService](https://technet.microsoft.com/en-us/library/jj215682\(v=exchg.150\)).
 
@@ -59,7 +61,9 @@ For detailed syntax and parameter information, see [Set-TransportService](https:
 
 This example disables IRM logging on a Mailbox server.
 
-    Set-TransportService -Identity EXCH01 -IRMLogEnabled $false
+```powershell
+Set-TransportService -Identity EXCH01 -IRMLogEnabled $false
+```
 
 For detailed syntax and parameter information, see [Set-TransportService](https://technet.microsoft.com/en-us/library/jj215682\(v=exchg.150\)).
 
@@ -69,5 +73,7 @@ To verify that you have successfully enabled or disbled IRM logging on a server,
 
 This example retrieves all IRM logging properties on the server EXCH01.
 
+```powershell
     Get-TransportService -Identity EXCH01 | Format-List IRMLog*
+```
 

@@ -43,11 +43,15 @@ When you remove a role entry from a role, you remove the ability for users assig
 
 Use the following syntax to remove an entire management role entry from a role.
 
-    Remove-ManagementRoleEntry <management role>\<management role entry>
+```powershell
+Remove-ManagementRoleEntry <management role>\<management role entry>
+```
 
 This example removes the **Enable-MailUser** cmdlet from the Seattle Server Administrators role.
 
-    Remove-ManagementRoleEntry "Seattle Server Administrators\Enable-MailUser"
+```powershell
+Remove-ManagementRoleEntry "Seattle Server Administrators\Enable-MailUser"
+```
 
 For detailed syntax and parameter information, see [Remove-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351187\(v=exchg.150\)).
 
@@ -57,15 +61,21 @@ When you remove multiple role entries from a role, you remove the ability for us
 
 To remove multiple role entries from a role, you need to retrieve the list of role entries to remove using the **Get-ManagementRoleEntry** cmdlet. Then you need to pipe the output to the **Remove-ManagementRoleEntry** cmdlet. You can use wildcard characters with the **Get-ManagementRoleEntry** cmdlet to match multiple role entries. It's a good idea to use the *WhatIf* switch to verify that you're removing the correct role entries. Use the following syntax.
 
+```powershell
     Get-ManagementRoleEntry <management role>\<role entry with wildcard character> | Remove-ManagementRoleEntry -WhatIf
+```
 
 This example removes all the role entries that contain the word journal from the Seattle Server Administrators role.
 
+```powershell
     Get-ManagementRoleEntry "Seattle Server Administrators\*Journal*" | Remove-ManagementRoleEntry -WhatIf
+```
 
 When you run the command with the *WhatIf* switch, the cmdlet returns a list of all the role entries that would be removed. If the list looks correct, run the command again without the *WhatIf* switch to remove the role entries.
 
+```powershell
     Get-ManagementRoleEntry "Seattle Server Administrators\*Journal*" | Remove-ManagementRoleEntry
+```
 
 For detailed syntax and parameter information, see [Get-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd335210\(v=exchg.150\)) and [Remove-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351187\(v=exchg.150\)).
 
@@ -75,11 +85,15 @@ When you remove parameters from a role entry on a role, those parameters are no 
 
 Use the following syntax to remove parameters from a role entry.
 
+```powershell
     Set-ManagementRoleEntry <management role>\<role entry> -Parameters <parameter 1>,<parameter 2...> -RemoveParameter
+```
 
 This example removes the *MaxSafeSenders*, *MaxSendSize*, *SecondaryAddress*, and *UseDatabaseQuotaDefaults* parameters from the **Set-Mailbox** role entry on the Seattle Server Administrators role.
 
+```powershell
     Set-ManagementRoleEntry "Seattle Server Administrators\Set-Mailbox" -Parameters MaxSafeSenders,MaxSendSize,SecondaryAddress,UseDatabaseQuotaDefaults -RemoveParameter
+```
 
 For detailed syntax and parameter information, see [Set-ManagementRoleEntry](https://technet.microsoft.com/en-us/library/dd351162\(v=exchg.150\)).
 

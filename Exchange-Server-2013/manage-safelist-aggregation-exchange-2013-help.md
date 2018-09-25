@@ -45,11 +45,15 @@ You can configure the maximum number of safe senders and blocked senders a user 
 
 To configure the maximum number of safe senders and blocked senders, run the following command:
 
+```powershell
     Set-Mailbox <MailboxIdentity> -MaxSafeSenders <Integer> -MaxBlockedSenders <Integer>
+```
 
 This example configures the mailbox john@contoso.com to have a maximum of 2,000 safe senders and 200 blocked senders.
 
-    Set-Mailbox john@contoso.com -MaxSafeSenders 2000 -MaxBlockedSenders 200
+```powershell
+Set-Mailbox john@contoso.com -MaxSafeSenders 2000 -MaxBlockedSenders 200
+```
 
 ## How do you know this worked?
 
@@ -57,7 +61,9 @@ To verify that you have successfully configured the mailbox safelist collection 
 
 1.  Run the following command:
     
+    ```powershell
         Get-Mailbox <Identity> | Format-List Name,Max*Senders
+    ```
 
 2.  Verify the values displayed match the values you configured.
 
@@ -67,7 +73,9 @@ In Exchange 2013, safelist aggregation is done automatically, so you don't need 
 
 This example writes the safe senders list for the mailbox john@contoso.com to Active Directory.
 
-    Update-Safelist john@contoso.com -Type SafeSenders
+```powershell
+Update-Safelist john@contoso.com -Type SafeSenders
+```
 
 For detailed syntax and parameter information, see [Update-SafeList](https://technet.microsoft.com/en-us/library/bb125034\(v=exchg.150\)).
 
@@ -79,11 +87,15 @@ To verify that you have successfully configured safelist aggregation, perform th
 
 1.  Run the following command:
     
-        Get-ContentFilterConfig | Format-List Enabled
+    ```powershell
+    Get-ContentFilterConfig | Format-List Enabled
+    ```
 
 2.  If the output shows the *Enabled* parameter to be `True`, content filtering is enabled. If it isn't, run the following command to enable content filtering and the Content Filter agent on the Exchange server:
     
-        Set-ContentFilterConfig -Enabled $true
+    ```powershell
+    Set-ContentFilterConfig -Enabled $true
+    ```
 
 ## Step 2: (Optional) Use ADSI Edit to verify replication of the safelist aggregation data to Edge Transport servers
 

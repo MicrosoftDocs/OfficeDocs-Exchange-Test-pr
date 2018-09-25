@@ -47,11 +47,15 @@ You can enable or disable group metrics generation on a Mailbox server.
 
 To enable or disable group metrics generation on a Mailbox server, run the following command:
 
-    Set-MailboxServer <ServerIdentity> -ForceGroupMetricsGeneration <$true | $false>
+```powershell
+Set-MailboxServer <ServerIdentity> -ForceGroupMetricsGeneration <$true | $false>
+```
 
 This example enables group metrics generation on a Mailbox server named MBX1.
 
-    Set-MailboxServer MBX1 -ForceGroupMetricsGeneration $true
+```powershell
+Set-MailboxServer MBX1 -ForceGroupMetricsGeneration $true
+```
 
 ## How do you know this worked?
 
@@ -59,7 +63,9 @@ To verify that you have successfully enabled or disabled group metrics generatio
 
 1.  Run the following command:
     
-        Get-MailboxServer <ServerIdentity> | Format-List ForceGroupMetricsGeneration
+    ```powershell
+    Get-MailboxServer <ServerIdentity> | Format-List ForceGroupMetricsGeneration
+    ```
 
 2.  Verify the setting displayed is the setting you configured.
 

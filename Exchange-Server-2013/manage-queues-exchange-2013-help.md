@@ -49,15 +49,21 @@ In Microsoft Exchange Server 2013, you can use the Queue Viewer in the Exchange 
 
 To view queues, use the following syntax.
 
+```powershell
     Get-Queue [-Filter <Filter> -Server <ServerIdentity> -Include <Internal | External | Empty | DeliveryType> -Exclude <Internal | External | Empty | DeliveryType>]
+```
 
 This example displays basic information about all non-empty queues on the Exchange 2013 Mailbox server named Mailbox01.
 
-    Get-Queue -Server Mailbox01 -Exclude Empty
+```powershell
+Get-Queue -Server Mailbox01 -Exclude Empty
+```
 
 This example displays detailed information for all queues that contain more than 100 messages on the Mailbox server on which the command is run.
 
-    Get-Queue -Filter {MessageCount -gt 100} | Format-List
+```powershell
+Get-Queue -Filter {MessageCount -gt 100} | Format-List
+```
 
 ## Use the Shell to view queue summary information on multiple Exchange servers
 
@@ -71,15 +77,21 @@ The **Get-QueueDigest** cmdlet provides a high-level, aggregate view of the stat
 
 To view summary information about queues on multiple Exchange servers, run the following command:
 
+```powershell
     Get-QueueDigest <-Server <ServerIdentity1,ServerIdentity2,..> | -Dag <DagIdentity1,DagIdentity2...> | -Site <ADSiteIdentity1,ADSiteIdentity2...> | -Forest> [-Filter <Filter>]
+```
 
 This example displays summary information about the queues on all Exchange 2013 Mailbox servers in the Active Directory site named FirstSite where the message count is greater than 100.
 
-    Get-QueueDigest -Site FirstSite -Filter {MessageCount -gt 100}
+```powershell
+Get-QueueDigest -Site FirstSite -Filter {MessageCount -gt 100}
+```
 
 This example displays summary information about the queues on all Exchange 2013 Mailbox servers in the database availability group (DAG) named DAG01 where the queue status has the value **Retry**.
 
-    Get-QueueDigest -Dag DAG01 -Filter {Status -eq "Retry"}
+```powershell
+Get-QueueDigest -Dag DAG01 -Filter {Status -eq "Retry"}
+```
 
 ## Resume queues
 
@@ -109,15 +121,21 @@ By resuming a queue, you restart outgoing activities on a queue that has a statu
 
 To resume queues, use the following syntax.
 
+```powershell
     Resume-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```
 
 This example resumes all queues on the local server that have a status of Suspended.
 
-    Resume-Queue -Filter {Status -eq "Suspended"}
+```powershell
+Resume-Queue -Filter {Status -eq "Suspended"}
+```
 
 This example resumes the suspended delivery queue named contoso.com on the server named Mailbox01.
 
-    Resume-Queue -Identity Mailbox01\contoso.com
+```powershell
+Resume-Queue -Identity Mailbox01\contoso.com
+```
 
 ## How do you know this worked?
 
@@ -155,15 +173,21 @@ When a transport server can't connect to the next hop, the delivery queue is put
 
 To retry queues, use the following syntax.
 
+```powershell
     Retry-Queue <-Identity QueueIdentity | -Filter QueueFilter [-Server ServerIdentity]>
+```
 
 This example retries all queues on the local server with the status of Retry.
 
-    Retry-Queue -Filter {status -eq "retry"}
+```powershell
+Retry-Queue -Filter {status -eq "retry"}
+```
 
 This example retries the queue named contoso.com that's in the `Retry` state on the server named Mailbox01.
 
-    Retry-Queue -Identity Mailbox01\contoso.com
+```powershell
+Retry-Queue -Identity Mailbox01\contoso.com
+```
 
 ## How do you know this worked?
 
@@ -187,15 +211,21 @@ Resubmitting a queue is similar to retrying a queue, except the messages are sen
 
 To resubmit messages, use the following syntax.
 
+```powershell
     Retry-Queue <-Identity QueueIdentity | -Filter {Status -eq "Retry"} -Server ServerIdentity> -Resubmit $true
+```
 
 This example resubmits all messages located in any delivery queues with the status of Retry on the server named Mailbox01.
 
-    Retry-Queue -Filter {Status -eq "Retry"} -Server Mailbox01 -Resubmit $true
+```powershell
+Retry-Queue -Filter {Status -eq "Retry"} -Server Mailbox01 -Resubmit $true
+```
 
 This example resubmits all messages located in the Unreachable queue on the server Mailbox01.
 
-    Retry-Queue -Identity Mailbox01\Unreachable -Resubmit $true
+```powershell
+Retry-Queue -Identity Mailbox01\Unreachable -Resubmit $true
+```
 
 ## Resubmit messages in the poison message queue
 
@@ -225,15 +255,21 @@ To resubmit a message from the poison message queue, perform the following steps
 
 1.  Find the identity of the message by running the following command.
     
-        Get-Message -Queue Poison | Format-Table Identity
+    ```powershell
+    Get-Message -Queue Poison | Format-Table Identity
+    ```
 
 2.  Use the identity of the message from the previous step in the following command.
     
-        Resume-Message <PoisonMessageIdentity>
+    ```powershell
+    Resume-Message <PoisonMessageIdentity>
+    ```
     
     This example resumes a message from the poison message queue that has the message Identity value of 222.
     
-        Resume-Message 222
+    ```powershell
+    Resume-Message 222
+    ```
 
 ## How do you know this worked?
 
@@ -265,15 +301,21 @@ If you suspend the Unreachable queue, items won't be resubmitted to the categori
 
 To suspend a queue, use the following syntax.
 
-    Suspend-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```powershell
+Suspend-Queue <-Identity QueueIdentity | -Filter {QueueFilter} [-Server ServerIdentity]>
+```
 
 This example suspends all queues on the local server that have a message count equal to or greater than 1,000 and that have a status of Retry.
 
-    Suspend-Queue -Filter {MessageCount -ge 1000 -and Status -eq "Retry"}
+```powershell
+Suspend-Queue -Filter {MessageCount -ge 1000 -and Status -eq "Retry"}
+```
 
 This example suspends the queue named contoso.com on the server named Mailbox01.
 
-    Suspend-Queue -Identity Mailbox01\contoso.com
+```powershell
+Suspend-Queue -Identity Mailbox01\contoso.com
+```
 
 ## How do you know this worked?
 

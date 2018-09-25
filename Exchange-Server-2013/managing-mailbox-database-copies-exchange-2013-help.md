@@ -163,7 +163,9 @@ Page patching is available for lagged copies through this automatic play down fe
 
 Lagged copy play down behavior is disabled by default, and can be enabled by running the following command.
 
-    Set-DatabaseAvailabilityGroup <DAGName> -ReplayLagManagerEnabled $true
+```powershell
+Set-DatabaseAvailabilityGroup <DAGName> -ReplayLagManagerEnabled $true
+```
 
 After being enabled, play down occurs when there are fewer than three copies. You can change the default value of 3, by modifying the following DWORD registry value.
 
@@ -612,15 +614,21 @@ The following table lists the available parameters for the RedistributeActiveDat
 
 This example shows the current database distribution for a DAG, including preference count list.
 
-    RedistributeActiveDatabases.ps1 -DagName DAG1 -ShowDatabaseDistributionByServer | Format-Table
+```powershell
+RedistributeActiveDatabases.ps1 -DagName DAG1 -ShowDatabaseDistributionByServer | Format-Table
+```
 
 This example redistributes and balances the active mailbox database copies in a DAG using activation preference without prompting for input.
 
-    RedistributeActiveDatabases.ps1 -DagName DAG1 -BalanceDbsByActivationPreference -Confirm:$False
+```powershell
+RedistributeActiveDatabases.ps1 -DagName DAG1 -BalanceDbsByActivationPreference -Confirm:$False
+```
 
 This example redistributes and balances the active mailbox database copies in a DAG using activation preference, and produces a summary of the distribution.
 
+```powershell
     RedistributeActiveDatabases.ps1 -DagName DAG1 -BalanceDbsByActivationPreference -ShowFinalDatabaseDistribution
+```
 
 ## Monitoring database copies
 

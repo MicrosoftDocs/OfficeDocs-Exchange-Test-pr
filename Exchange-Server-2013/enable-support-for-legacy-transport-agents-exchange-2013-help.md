@@ -110,20 +110,26 @@ Use the following procedure to enable support for legacy transport agents:
 
 1.  In a Command prompt window, on the Exchange 2013 server where you want to configure the legacy transport agent support, open the appropriate application configuration file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\<AppConfigFile>
+    ```powershell
+    Notepad %ExchangeInstallPath%Bin\<AppConfigFile>
+    ```
     
     For example, to open the EdgeTransport.exe.config file on a Mailbox server, run the following command:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 2.  Locate the *\</configuration\>* key at the end of the file, and paste the following keys before the *\</configuration\>* key:
     
+    ```powershell
         <startup useLegacyV2RuntimeActivationPolicy="true">
            <supportedRuntime version="v4.0" />
            <supportedRuntime version="v3.5" />
            <supportedRuntime version="v3.0" />
            <supportedRuntime version="v2.0" />
         </startup>
+    ```
 
 3.  When you are finished, save and close the application configuration file.
 
@@ -131,17 +137,23 @@ Use the following procedure to enable support for legacy transport agents:
 
 5.  Restart the associated Windows service by running the following command:
     
+    ```powershell
         net stop <service> && net start <service>
+    ```
     
     For example, if you modified the EdgeTransport.exe.config file, you need to restart the Microsoft Exchange Transport service by running the following command:
     
+    ```powershell
         net stop MSExchangeTransport && net start MSExchangeTransport
-
+    ```
+    
 6.  Repeat Step 5 to restart services associated with the other modified application configuration files.
 
 ## How do you know this worked?
 
 You'll know this procedure works if the legacy transport agent installs successfully. If you try to install a legacy transport agent without performing the procedures in this topic, you'll receive an error that's similar to the following:
 
-    Mixed mode assembly is built against version '<version>' of the runtime and cannot be loaded in the 4.0 runtime without additional configuration information.
+```powershell
+Mixed mode assembly is built against version '<version>' of the runtime and cannot be loaded in the 4.0 runtime without additional configuration information.
+```
 

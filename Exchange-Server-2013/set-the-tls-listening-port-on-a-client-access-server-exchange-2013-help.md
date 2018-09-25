@@ -65,5 +65,7 @@ For additional tasks related to Unified Messaging and Client Access servers, see
 
 This example sets the TLS listening port on a Client Access server named `MyClientAccessServer` to 5561.
 
-    Set-UMCallRouterSettings -Server MyClientAccessServer -SipTlsListeningPort 5561
+```powershell
+Set-UMCallRouterSettings -Server MyClientAccessServer -SipTlsListeningPort 5561
+```
 

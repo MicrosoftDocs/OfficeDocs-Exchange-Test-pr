@@ -49,39 +49,50 @@ You can configure specific anti-spam settings on individual mailboxes that are d
 
 To configure the anti-spam settings on a single mailbox, use the following syntax.
 
+```powershell
     Set-Mailbox <MailboxIdentity> -AntispamBypassEnabled <$true | $false> -RequireSenderAuthenticationEnabled <$true | $false> -SCLDeleteEnabled <$true | $false | $null> -SCLDeleteThreshold <0-9 | $null> -SCLJunkEnabled <$true | $false | $null > -SCLJunkThreshold <0-9 | $null> -SCLQuarantineEnabled <$true | $false | $null > -SCLQuarantineThreshold <0-9 | $null> -SCLRejectEnabled <$true | $false | $null > -SCLRejectThreshold <0-9 | $null>
+```
 
 This example configures the mailbox of a user named Jeff Phillips to bypass all the anti-spam filters and to have messages that meet or exceed a Junk Email folder SCL threshold of 5 delivered to his Junk Email folder in Microsoft Outlook.
 
-    Set-Mailbox "Jeff Phillips" -AntispamBypassEnabled $true -SCLJunkEnabled $true -SCLJunkThreshold 4
+```powershell
+Set-Mailbox "Jeff Phillips" -AntispamBypassEnabled $true -SCLJunkEnabled $true -SCLJunkThreshold 4
+```
 
 ## How do you know this worked?
 
 To verify that you have successfully configured the anti-spam features on a single mailbox, do the following:
 
 1.  Run the following command:
-    
-        Get-Mailbox <MailboxIdentity> | Format-List SCL*,Bypass*,*SenderAuth*
 
+    ```powershell    
+        Get-Mailbox <MailboxIdentity> | Format-List SCL*,Bypass*,*SenderAuth*
+    ```
 2.  Verify the value displayed is the value you configured.
 
 ## Use the Shell to configure anti-spam features on multiple mailboxes
 
 To configure all the anti-spam settings on multiple mailboxes, use the following syntax.
 
+```powershell
     Get-Mailbox [<Filter>]| Set-Mailbox <Anti-Spam Settings>
+```
 
 This example enables the SCL quarantine threshold with a value of 7 on all mailboxes in the Users container in the Contoso.com domain.
 
+```powershell
     Get-Mailbox -OrganizationalUnit Contoso.com/Users | Set-Mailbox -SCLQuarantineEnabled $true -SCLQuarantineThreshold 7
+```
 
 ## How do you know this worked?
 
 To verify that you have successfully configured the anti-spam features on multiple mailboxes, do the following:
 
 1.  Run the following command:
-    
+
+    ```powershell    
         Get-Mailbox [<Filter>] | Format-List Name,SCL*,*SenderAuth*
+    ```
 
 2.  Verify the values displayed are the values you configured.
 
@@ -89,11 +100,15 @@ To verify that you have successfully configured the anti-spam features on multip
 
 Run the following command:
 
-    Set-OrganizationConfig -SCLJunkThreshold <Integer>
+```powershell
+Set-OrganizationConfig -SCLJunkThreshold <Integer>
+```
 
 This example sets the organization's junk email threshold to 5.
 
-    Set-OrganizationConfig -SCLJunkThreshold 5
+```powershell
+Set-OrganizationConfig -SCLJunkThreshold 5
+```
 
 ## How do you know this worked?
 
@@ -101,7 +116,9 @@ To verify that you have successfully configured the junk email threshold for all
 
 1.  Run the following command:
     
-        Get-OrganizationConfig | Format-List SCLJunkThreshold
+    ```powershell
+    Get-OrganizationConfig | Format-List SCLJunkThreshold
+    ```
 
 2.  Verify the value displayed is the value you configured.
 

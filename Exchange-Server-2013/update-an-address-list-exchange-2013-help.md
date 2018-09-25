@@ -51,11 +51,15 @@ For information about keyboard shortcuts that may apply to the procedures in thi
 
 This example updates the address list Washington State.
 
-    Update-AddressList "Washington State"
+```powershell
+Update-AddressList "Washington State"
+```
 
 If you have more than one address list with the same name, you must specify the full path to the address list you want to update. For example, if you want to update the address list Sales under North America but there is also a Sales address list under Europe, use the following command:
 
-    Update-AddressList "North America\Sales"
+```powershell
+Update-AddressList "North America\Sales"
+```
 
 For detailed syntax and parameter information, see [Update-AddressList](https://technet.microsoft.com/en-us/library/aa997982\(v=exchg.150\)).
 

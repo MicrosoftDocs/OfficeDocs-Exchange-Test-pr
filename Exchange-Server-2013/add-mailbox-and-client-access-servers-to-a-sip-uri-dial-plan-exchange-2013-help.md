@@ -55,7 +55,9 @@ For additional management tasks related to UM dial plans, see [UM dial plan proc
 
 This example adds the Mailbox server named `MyMailboxServer` to a SIP URI dial plan named `MySIPDialPlan` and prevents it from accepting new calls. It also sets the startup mode to Dual mode, which enables the Mailbox server to accept TCP and TLS requests.
 
-    Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlan -Status Disabled -UMStartupMode Dual
+```powershell
+Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlan -Status Disabled -UMStartupMode Dual
+```
 
 This example adds the Mailbox server named `MyMailboxServer` to two SIP dial plans, named `MySIPDialPlan` and `MySIPDialPlan2`, and sets the following:
 
@@ -67,7 +69,9 @@ This example adds the Mailbox server named `MyMailboxServer` to two SIP dial pla
 
 <!-- end list -->
 
-    Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlan, MySIPDialPlan2 -IPAddressFamily Any -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com
+```powershell
+Set-UMService -Identity MyMailboxServer -DialPlans MySIPDialPlan, MySIPDialPlan2 -IPAddressFamily Any -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com
+```
 
 ## Use the EAC to add a Client Access server to a SIP URI dial plan
 
@@ -85,9 +89,13 @@ This example adds the Mailbox server named `MyMailboxServer` to two SIP dial pla
 
 This example adds the Client Access server named `MyClientAccessServer` to a SIP URI dial plan named `MySIPDialPlan`. It also sets the startup mode to Dual mode, which enables the Client Access server to accept TCP and TLS requests.
 
-    Set-UMCallRouterSettings -DialPlans MySIPDialPlan -Server MyClientAccessServer -UMStartupMode Dual
+```powershell
+Set-UMCallRouterSettings -DialPlans MySIPDialPlan -Server MyClientAccessServer -UMStartupMode Dual
+```
 
 This example adds the Client Access server named `MyClientAccessServer` to two SIP dial plans, named `MySIPDialPlan` and `MySIPDialPlan2`, and allows the server to use both IPv4 and IPv6 addresses.
 
-    Set-UMCallRouterSettings -DialPlans MySIPDialPlan, MySIPDialPlan2 -IPAddressFamily Any -Server MyClientAccessServer
+```powershell
+Set-UMCallRouterSettings -DialPlans MySIPDialPlan, MySIPDialPlan2 -IPAddressFamily Any -Server MyClientAccessServer
+```
 

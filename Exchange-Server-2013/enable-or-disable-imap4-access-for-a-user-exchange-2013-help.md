@@ -63,11 +63,15 @@ For additional information related to POP3 and IMAP4, see [POP3 and IMAP4 in Exc
 
 This example enables IMAP4 for the user John Smith.
 
-    Set-CASMailbox -Identity "John Smith" -IMAPEnabled $true
+```powershell
+Set-CASMailbox -Identity "John Smith" -IMAPEnabled $true
+```
 
 This example disables IMAP4 for the user John Smith.
 
-    Set-CASMailbox -Identity "John Smith" -IMAPEnabled $false
+```powershell
+Set-CASMailbox -Identity "John Smith" -IMAPEnabled $false
+```
 
 ## How do you know this worked?
 

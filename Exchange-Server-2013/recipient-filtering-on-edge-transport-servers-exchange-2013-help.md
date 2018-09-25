@@ -67,7 +67,9 @@ If tarpitting isn't configured, the Exchange server immediately returns a `550 
 
 To configure the delay before SMTP returns the `550 5.1.1 User unknown` error, you set the tarpitting interval using the *TarpitInterval* parameter on the **Set-ReceiveConnector** cmdlet. The syntax is:
 
-    Set-ReceiveConnector <Receive Connector> -TarpitInterval <00:00:00 to 00:10:00>
+```powershell
+Set-ReceiveConnector <Receive Connector> -TarpitInterval <00:00:00 to 00:10:00>
+```
 
 The default value is `00:00:05` or 5 seconds. The name of the default Receive connector on an Edge Transport server is `Default internal receive connector <server name>`.
 

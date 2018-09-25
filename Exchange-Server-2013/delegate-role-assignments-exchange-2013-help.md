@@ -67,11 +67,15 @@ You can create delegating role assignments using the same predefined scopes, rec
 
 This example creates a delegating role assignment to enable members of the Senior Admins role group to assign the Mail Recipients role to any role assignee in the Exchange organization.
 
+```powershell
     New-ManagementRoleAssignment -Role "Mail Recipients" -SecurityGroup "Senior Admins" -Name "Mail Recipients_Senior Admin - Delegate" -Delegating
+```
 
 This example creates a delegating role assignment to enable members of the Senior Admins role group to assign the Mail Recipients role only to users in the Sales/Users OU in the contoso.com domain.
 
+```powershell
     New-ManagementRoleAssignment -Role "Mail Recipients" -SecurityGroup "Senior Admins" -Name "Mail Recipients_Senior Admins - Delegate" -RecipientOrganizationalUnitScope contoso.com/sales/users -Delegating
+```
 
 For detailed syntax and parameter information, see [New-ManagementRoleAssignment](https://technet.microsoft.com/en-us/library/dd335193\(v=exchg.150\)).
 

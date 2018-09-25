@@ -68,10 +68,12 @@ To connect to a destination SMTP server by using Telnet on port 25, you must use
     
     The output of the command will resemble the following:
     
+    ```powershell
         fabrikam.com mx preference=10, mail exchanger = mail1.fabrikam.com
         fabrikam.com mx preference=20, mail exchanger = mail2.fabrikam.com
         mail1.fabrikam.com internet address = 192.168.1.10
         mail2 fabrikam.com internet address = 192.168.1.20
+    ```
     
     You can use any of the host names or IP addresses that are associated with the MX records as the destination SMTP server. A lower value of preference indicates a preferred SMTP server. You can use multiple MX records and different values of preference for load balancing and fault tolerance.
 
@@ -105,7 +107,12 @@ In this example, the following values are used:
 > <LI>
 > <P>The commands in Telnet Client are not case-sensitive. The SMTP command verbs are capitalized for clarity.</P>
 > <LI>
-> <P>You can't use the backspace key after you have connected to the destination SMTP server within the Telnet session. If you make a mistake as you type an SMTP command, you must press ENTER and then type the command again. Unrecognized SMTP commands or syntax errors result in an error message that resembles the following:</P><PRE><CODE>500 5.3.3 Unrecognized command</CODE></PRE></LI></UL>
+> <P>You can't use the backspace key after you have connected to the destination SMTP server within the Telnet session. If you make a mistake as you type an SMTP command, you must press ENTER and then type the command again. Unrecognized SMTP commands or syntax errors result in an error message that resembles the following:</P>
+> 
+> ```powershell
+> 500 5.3.3 Unrecognized command
+> ```
+> </LI></UL>
 
 
 
@@ -125,7 +132,9 @@ In this example, the following values are used:
 
 8.  Type **DATA** and then press ENTER. You will receive a response that resembles the following:
     
-        354 Start mail input; end with <CLRF>.<CLRF>
+    ```powershell
+    354 Start mail input; end with <CLRF>.<CLRF>
+    ```
 
 9.  Type **Subject: Test from Contoso** and then press ENTER.
 
@@ -135,11 +144,15 @@ In this example, the following values are used:
 
 12. Press ENTER, type a period ( **.** ) and then press ENTER. You will receive a response that resembles the following:
     
-        250 2.6.0 <GUID> Queued mail for delivery
+    ```powershell
+    250 2.6.0 <GUID> Queued mail for delivery
+    ```
 
 13. To disconnect from the destination SMTP server, type **QUIT** and then press ENTER. You will receive a response that resembles the following:
     
-        221 2.0.0 Service closing transmission channel
+    ```powershell
+    221 2.0.0 Service closing transmission channel
+    ```
 
 14. To close the Telnet session, type **quit** and then press ENTER.
 

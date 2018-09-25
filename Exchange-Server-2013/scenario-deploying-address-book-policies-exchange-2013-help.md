@@ -229,7 +229,9 @@ Consider the following when using ABPs in your organization:
 
   - Deploying ABPs doesn't prevent users in one virtual organization from sending email to users in another virtual organization. If you want to prevent users from sending email across organizations, we recommend that you create a transport rule. For example, to create a transport rule that prevents Contoso users from receiving messages from Fabrikam users, but still allows Fabrikam’s senior leadership team to send messages to Contoso users, run the following Shell command:
     
+    ```powershell
         New-TransportRule -Name "StopFabrikamtoContosoMail" -FromMemberOf "AllFabrikamEmployees" -SentToMemberOf "AllContosoEmployees" -DeleteMessage -ExceptIfFrom seniorleadership@fabrikam.com
+    ```
 
   - If you want to enforce a feature similar to ABP in the Lync client, you can set the `msRTCSIP-GroupingID` attribute on specific user objects. For details, see [PartitionByOU Replaced with msRTCSIP-GroupingID](https://go.microsoft.com/fwlink/p/?linkid=232306) topic.
 
@@ -285,21 +287,29 @@ In creating the ABP, you will create multiple address lists based on how you wan
 
 This example creates the address list AL\_TAIL\_Users\_DGs. The address list contains all users and distribution groups where CustomAttribute15 equals TAIL.
 
+```powershell
     New-AddressList -Name "AL_TAIL_Users_DGs" -RecipientFilter {((RecipientType -eq 'UserMailbox') -or (RecipientType -eq "MailUniversalDistributionGroup") -or (RecipientType -eq "DynamicDistributionGroup")) -and (CustomAttribute15 -eq "TAIL")}
+```
 
 For more information about creating address lists by using recipient filters, see [Create an address list by using recipient filters](https://docs.microsoft.com/en-us/exchange/address-books/address-lists/use-recipient-filters-to-create-an-address-list).
 
 In order to create an ABP, you have to provide a room address list. If your organization doesn't have resource mailboxes such as room or equipment mailboxes, we suggest that you create a blank room address list. The following example creates a blank room address list because there are no room mailboxes in the organization.
 
+```powershell
     New-AddressList -Name AL_BlankRoom -RecipientFilter {(Alias -ne $null) -and ((RecipientDisplayType -eq 'ConferenceRoomMailbox') -or (RecipientDisplayType -eq 'SyncedConferenceRoomMailbox'))}
+```
 
 However, in this scenario, Fabrikam and Contoso both have room mailboxes. This example creates room list for Fabrikam by using a recipient filter where CustomAttribute15 equals FAB.
 
+```powershell
     New-AddressList -Name AL_FAB_Room -RecipientFilter {(Alias -ne $null) -and (CustomAttribute15 -eq "FAB")-and (RecipientDisplayType -eq 'ConferenceRoomMailbox') -or (RecipientDisplayType -eq 'SyncedConferenceRoomMailbox')}
+```
 
 The global address list used in an ABP must be a superset of the address lists. Do not create a GAL with fewer objects than exists in any or all of the address lists in the ABP. This example creates the global address list for Tailspin Toys that includes all of the recipients that exists in the address lists and room address list.
 
+```powershell
     New-GlobalAddressList -Name "GAL_TAIL" -RecipientFilter {(CustomAttribute15 -eq "TAIL")}
+```
 
 For more information, see [Create a global address list](https://docs.microsoft.com/en-us/exchange/address-books/address-lists/create-global-address-list).
 
@@ -307,7 +317,9 @@ When you create the OAB you should include the appropriate GAL when providing th
 
 This example creates the OAB for Fabrikam named OAB\_FAB.
 
-    New-OfflineAddressBook -Name "OAB_FAB" -AddressLists "GAL_FAB"
+```powershell
+New-OfflineAddressBook -Name "OAB_FAB" -AddressLists "GAL_FAB"
+```
 
 For more information, see [Create an offline address book](https://docs.microsoft.com/en-us/exchange/address-books/offline-address-books/create-offline-address-book).
 
@@ -315,7 +327,9 @@ For more information, see [Create an offline address book](https://docs.microsof
 
 After you've created all of the required objects you can then create the ABP. This example creates the ABP named ABP\_TAIL.
 
+```powershell
     New-AddressBookPolicy -Name "ABP_TAIL" -AddressLists "AL_TAIL_Users_DGs"," AL_TAIL_Contacts" -OfflineAddressBook "\OAB_TAIL" -GlobalAddressList "\GAL_TAIL" -RoomList "\AL_TAIL_Rooms"
+```
 
 For more information, see [Create an address book policy](https://docs.microsoft.com/en-us/exchange/address-books/address-book-policies/create-an-address-book-policy).
 
@@ -325,7 +339,9 @@ Assigning the ABP to the user is the last step in the process. ABPs take effect 
 
 This example assigns ABP\_FAB to all mailboxes where CustomAttribute15 equals "FAB".
 
+```powershell
     Get-Mailbox -resultsize unlimited | where {$_.CustomAttribute15 -eq "TAIL"} | Set-Mailbox -AddressBookPolicy "ABP_TAIL"
+```
 
 For more information, see [Assign an address book policy to mail users](https://docs.microsoft.com/en-us/exchange/address-books/address-book-policies/assign-an-address-book-policy-to-mail-users).
 

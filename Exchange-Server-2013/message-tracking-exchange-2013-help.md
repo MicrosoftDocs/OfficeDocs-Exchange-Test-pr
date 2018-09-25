@@ -554,6 +554,7 @@ An uneventful message sent between two users generates several entries in the me
 
 This is a condensed example of the message tracking log entries created when the user chris@contoso.com successfully sends a test message to the user michelle@contoso.com. Both users have mailboxes on the same server.
 
+```powershell
     EventId    Source      Sender            Recipients             MessageSubject
     -------    ------      ------            ----------             --------------
     NOTIFYMAPI STOREDRIVER                   {}
@@ -564,6 +565,7 @@ This is a condensed example of the message tracking log entries created when the
     AGENTINFO  AGENT       chris@contoso.com {michelle@contoso.com} test
     SEND       SMTP        chris@contoso.com {michelle@contoso.com} test
     DELIVER    STOREDRIVER chris@contoso.com {michelle@contoso.com} test
+```
 
 Return to top
 

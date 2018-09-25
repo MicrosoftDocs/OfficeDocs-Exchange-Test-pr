@@ -49,7 +49,9 @@ For security purposes, some organizations may want to restrict access to the Exc
 
 This example turns off the access to the EAC on server CAS01.
 
+```powershell
     Set-ECPVirtualDirectory -Identity "CAS01\ecp (default web site)" -AdminEnabled $false
+```
 
 For detailed syntax and parameter information, see [Set-EcpVirtualDirectory](https://technet.microsoft.com/en-us/library/dd297991\(v=exchg.150\)).
 

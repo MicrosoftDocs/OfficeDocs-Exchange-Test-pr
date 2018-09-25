@@ -59,21 +59,13 @@ For more information about managing Exchange 2013, see [Exchange admin center in
 
 4.  On the **Check for Updates** page, choose whether you want Setup to connect to the Internet and download product and security updates for Exchange 2013. If you select **Connect to the Internet and check for updates**, Setup will download updates and apply them prior to continuing. If you select **Don't check for updates right now**, you can download and install updates manually later. We recommend that you download and install updates now. Click **Next** to continue.
 
-5.  
-    
-    The **Introduction** page begins the process of installing Exchange into your organization. It will guide you through the installation. Several links to helpful deployment content are listed. We recommend that you visit these links prior to continuing setup. Click **Next** to continue.
+5.  The **Introduction** page begins the process of installing Exchange into your organization. It will guide you through the installation. Several links to helpful deployment content are listed. We recommend that you visit these links prior to continuing setup. Click **Next** to continue.
 
-6.  
-    
-    On the **License Agreement** page, review the software license terms. If you agree to the terms, select **I accept the terms in the license agreement**, and then click **Next**.
+6.  On the **License Agreement** page, review the software license terms. If you agree to the terms, select **I accept the terms in the license agreement**, and then click **Next**.
 
-7.  
-    
-    On the **Recommended settings** page, select whether you want to use the recommended settings. If you select **Use recommended settings**, Exchange will automatically send error reports and information about your computer hardware and how you use Exchange to Microsoft. If you select **Don't use recommended settings**, these settings remain disabled but you can enable them at any time after Setup completes. For more information about these settings and how information sent to Microsoft is used, click **?**.
+7.  On the **Recommended settings** page, select whether you want to use the recommended settings. If you select **Use recommended settings**, Exchange will automatically send error reports and information about your computer hardware and how you use Exchange to Microsoft. If you select **Don't use recommended settings**, these settings remain disabled but you can enable them at any time after Setup completes. For more information about these settings and how information sent to Microsoft is used, click **?**.
 
-8.  
-    
-    On the **Server Role Selection** page, verify that **Management Tools** is selected.
+8.  On the **Server Role Selection** page, verify that **Management Tools** is selected.
     
     Select **Automatically install Windows Server roles and features that are required to install Exchange Server** to have the Setup wizard install required Windows prerequisites. You may need to reboot the computer to complete the installation of some Windows features. If you don't select this option, you must install the Windows features manually.
     
@@ -86,9 +78,7 @@ For more information about managing Exchange 2013, see [Exchange admin center in
 
 9.  On the **Installation Space and Location** page, either accept the default installation location or click **Browse** to choose a new location. Make sure that you have enough disk space available in the location where you want to install Exchange. Click **Next** to continue.
 
-10. 
-    
-    If this is the first time you’ve run Exchange 2013 Setup in your organization, on the **Exchange Organization** page, type a name for your Exchange organization. The Exchange organization name can contain only the following characters:
+10. If this is the first time you’ve run Exchange 2013 Setup in your organization, on the **Exchange Organization** page, type a name for your Exchange organization. The Exchange organization name can contain only the following characters:
     
       - A through Z
     
@@ -114,13 +104,9 @@ For more information about managing Exchange 2013, see [Exchange admin center in
     
     Click **Next** to continue.
 
-11. 
-    
-    On the **Readiness Checks** page, view the status to determine if the organization and server role prerequisite checks completed successfully. If they haven't completed successfully, you must resolve any reported errors before you can install Exchange 2013. You don't need to exit Setup when resolving some of the prerequisite errors. After resolving a reported error, click **back** and then click **Next** to run the prerequisite check again. Be sure to also review any warnings that are reported. If all readiness checks have completed successfully, click **Next** to install Exchange 2013.
+11. On the **Readiness Checks** page, view the status to determine if the organization and server role prerequisite checks completed successfully. If they haven't completed successfully, you must resolve any reported errors before you can install Exchange 2013. You don't need to exit Setup when resolving some of the prerequisite errors. After resolving a reported error, click **back** and then click **Next** to run the prerequisite check again. Be sure to also review any warnings that are reported. If all readiness checks have completed successfully, click **Next** to install Exchange 2013.
 
-12. 
-    
-    On the **Completion** page, click **Finish**.
+12. On the **Completion** page, click **Finish**.
 
 13. Restart the computer after Exchange 2013 has completed.
 
@@ -137,7 +123,9 @@ For more information about managing Exchange 2013, see [Exchange admin center in
     > If you have User Access Control (UAC) enabled, you must run <CODE>Setup.exe</CODE> from an elevated command prompt.
 
     
-        Setup.exe /Role:ManagementTools /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    Setup.exe /Role:ManagementTools /IAcceptExchangeServerLicenseTerms
+    ```
 
 For more information, see [Install Exchange 2013 using unattended mode](install-exchange-2013-using-unattended-mode-exchange-2013-help.md).
 

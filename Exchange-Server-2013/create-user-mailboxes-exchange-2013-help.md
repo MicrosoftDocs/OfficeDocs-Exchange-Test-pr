@@ -137,7 +137,9 @@ This example creates a new user account and mailbox for Pilar Pinilla with the f
 
 <!-- end list -->
 
+```powershell
     New-Mailbox -Alias pilarp -Name "Pilar Pinilla" -FirstName Pilar -LastName Pinilla -DisplayName "Pilar Pinilla" -UserPrincipalName pilarp@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
+```
 
 For syntax and parameter information, see [New-Mailbox](https://technet.microsoft.com/en-us/library/aa997663\(v=exchg.150\)).
 
@@ -149,7 +151,9 @@ To verify that you’ve successfully created a user mailbox, do one of the follo
 
   - In the Shell, run the following command to display information about the new user mailbox.
     
-        Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+    ```powershell
+    Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+    ```
 
 ## Create a mailbox for an existing user
 
@@ -201,13 +205,17 @@ You can also create user mailboxes for existing users that have an Active Direct
 
 This example creates a mailbox for the existing user estherv@contoso.com on the Exchange database named UsersMailboxDatabase.
 
-    Enable-Mailbox estherv@contoso.com -Database UsersMailboxDatabase
+```powershell
+Enable-Mailbox estherv@contoso.com -Database UsersMailboxDatabase
+```
 
 You can also use the **Enable-Mailbox** cmdlet to mail-enable multiple users. You can do this by piping the results of the **Get-User** cmdlet to the **Enable-Mailbox** cmdlet. When you run the **Get-User** cmdlet, you must return only users that aren't already mail-enabled. To do this, you need to specify the value User with the *RecipientTypeDetails* parameter. You can also limit the results returned by using the *Filter* parameter to request only users that meet the criteria you specify. You then pipe the results to the **Enable-Mailbox** cmdlet.
 
 For example, the following command mailbox-enables users who aren't already mail-enabled and that have a value in the **UserPrincipalName** property, which helps ensure that you don’t inadvertently convert a system account to a mailbox.
 
-    Get-User -RecipientTypeDetails User -Filter { UserPrincipalName -ne $Null } | Enable-Mailbox
+```powershell
+Get-User -RecipientTypeDetails User -Filter { UserPrincipalName -ne $Null } | Enable-Mailbox
+```
 
 For syntax and parameter information, see [Enable-Mailbox](https://technet.microsoft.com/en-us/library/aa998251\(v=exchg.150\)) and [Get-User](https://technet.microsoft.com/en-us/library/aa996896\(v=exchg.150\)).
 
@@ -221,7 +229,9 @@ To verify that you’ve successfully created a mailbox for an existing user, do 
 
   - In the Shell, run the following command to display information about the new mailbox-enabled user.
     
-        Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+    ```powershell
+    Get-Mailbox <Name> | FL Name,RecipientTypeDetails,PrimarySmtpAddress
+    ```
     
     Note that value for the *RecipientTypeDetails* property is `UserMailbox`.
 

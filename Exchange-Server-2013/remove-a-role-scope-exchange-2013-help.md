@@ -39,9 +39,13 @@ Management role scopes determine what objects are made available to a user who c
 
 To remove a scope, use the following syntax.
 
-    Remove-ManagementScope <scope name>
+```powershell
+Remove-ManagementScope <scope name>
+```
 
 For example, to remove the "Dublin Servers" scope, use the following command.
 
-    Remove-ManagementScope "Dublin Servers"
+```powershell
+Remove-ManagementScope "Dublin Servers"
+```
 

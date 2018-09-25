@@ -115,7 +115,9 @@ You can use the Queue Viewer in the Exchange Toolbox to view the properties of a
 
 You use the **Get-Message** cmdlet to view the properties of a message that is currently queued for delivery. The following example tabulates the sender address, recipients, subject, and received date information for all messages that are currently in retry state:
 
+```powershell
     Get-Message -IncludeRecipientInfo -Filter {Status -eq "Retry"} | Format-Table FromAddress,Recipients,Subject,DateReceived
+```
 
 For detailed syntax and parameter information, see [Get-Message](https://technet.microsoft.com/en-us/library/bb124738\(v=exchg.150\)).
 

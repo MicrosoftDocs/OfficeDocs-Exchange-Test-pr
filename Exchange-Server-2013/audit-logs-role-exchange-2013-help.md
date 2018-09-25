@@ -35,7 +35,9 @@ This role is assigned to one or more role groups by default. For more informatio
 
 If you want to view a list of role groups, users, or USGs assigned to this role, use the following command.
 
-    Get-ManagementRoleAssignment -Role "<role name>"
+```powershell
+Get-ManagementRoleAssignment -Role "<role name>"
+```
 
 ## Regular and delegating role assignments
 

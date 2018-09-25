@@ -59,7 +59,9 @@ For additional management tasks related to IRM, see [Information Rights Manageme
 
 This example enables transport decryption for the Exchange 2013 organization. Messages that can't be decrypted are rejected and an NDR is returned to the sender.
 
-    Set-IRMConfiguration -TransportDecryptionSetting Mandatory
+```powershell
+Set-IRMConfiguration -TransportDecryptionSetting Mandatory
+```
 
 For detailed syntax and parameter information, see [Set-IRMConfiguration](https://technet.microsoft.com/en-us/library/dd979792\(v=exchg.150\)).
 
@@ -67,7 +69,9 @@ For detailed syntax and parameter information, see [Set-IRMConfiguration](https:
 
 This example disables transport decryption for the Exchange 2013 organization.
 
-    Set-IRMConfiguration -TransportDecryptionSetting Disabled
+```powershell
+Set-IRMConfiguration -TransportDecryptionSetting Disabled
+```
 
 For detailed syntax and parameter information, see [Set-IRMConfiguration](https://technet.microsoft.com/en-us/library/dd979792\(v=exchg.150\)).
 

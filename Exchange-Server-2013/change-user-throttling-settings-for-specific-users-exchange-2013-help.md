@@ -41,19 +41,23 @@ To customize throttling settings to apply only to specific users in your organiz
 
 This example creates a non-default user throttling policy named ITStaffPolicy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy. After you create this policy, you must associate it with specific users.
 
-    New-ThrottlingPolicy -Name ITStaffPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
+```powershell
+New-ThrottlingPolicy -Name ITStaffPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
+```
 
 This example associates a user with the user name tonysmith with the throttling policy ITStaffPolicy (which has higher limits).
 
-    Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
+```powershell
+Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
+```
 
 You don't need to use the **Set-ThrottlingPolicyAssociation** cmdlet to associate a user with a policy. The following commands show another way to associate tonysmith with the throttling policy ITStaffPolicy.
 
-```
+```powershell
 $b = Get-ThrottlingPolicy ITStaffPolicy
 ```
 
-```
+```powershell
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 
@@ -65,19 +69,25 @@ To verify that you’ve successfully created the Regular throttling policy, do t
 
 1.  Run the following command.
     
-        Get-ThrottlingPolicy | Format-List
+    ```powershell
+    Get-ThrottlingPolicy | Format-List
+    ```
 
 2.  Verify that the Regular throttling policy you just created is listed in the column that shows the GlobalThrottlingPolicy object.
 
 3.  Run the following command.
     
-        Get-ThrottlingPolicy | Format-List
+    ```powershell
+    Get-ThrottlingPolicy | Format-List
+    ```
 
 4.  Verify that the properties for the new Regular policy match the value or values you configured.
 
 5.  Run the following command.
     
-        Get-ThrottlingPolicyAssociation
+    ```powershell
+    Get-ThrottlingPolicyAssociation
+    ```
 
 6.  Verify that the new Regular policy is associated with the user or users you associated it with.
 

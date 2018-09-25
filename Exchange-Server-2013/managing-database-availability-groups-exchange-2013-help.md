@@ -421,7 +421,9 @@ In dual network adapter configurations, one network is typically dedicated for r
 
 In Exchange 2010, manual configuration of DAG networks was necessary in many scenarios. By default in Exchange 2013, DAG networks are automatically configured by the system. Before you can create or modify DAG networks, you must first enable manual DAG network control by running the following command:
 
-    Set-DatabaseAvailabilityGroup <DAGName> -ManualDagNetworkConfiguration $true
+```powershell
+Set-DatabaseAvailabilityGroup <DAGName> -ManualDagNetworkConfiguration $true
+```
 
 After you've enabled manual DAG network configuration, you can use the **New-DatabaseAvailabilityGroupNetwork** cmdlet in the Shell to create a DAG network. For detailed steps about how to create a DAG network, see [Create a database availability group network](create-a-database-availability-group-network-exchange-2013-help.md).
 
@@ -529,7 +531,9 @@ In the following configuration, there are two subnets configured in the DAG: 192
 
 To complete the configuration of ReplicationDagNetwork01 as the dedicated replication network, disable replication for MapiDagNetwork by running the following command.
 
-    Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\MapiDagNetwork -ReplicationEnabled:$false
+```powershell
+Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\MapiDagNetwork -ReplicationEnabled:$false
+```
 
 After replication is disabled for MapiDagNetwork, the Microsoft Exchange Replication service uses ReplicationDagNetwork01 for continuous replication. If ReplicationDagNetwork01 experiences a failure, the Microsoft Exchange Replication service reverts to using MapiDagNetwork for continuous replication. This is done intentionally by the system to maintain high availability.
 
@@ -627,7 +631,9 @@ In the following configuration, there are four subnets configured in the DAG: 19
 
 By default, DAGs perform discovery of all networks detected and configured for use by the underlying cluster. This includes any Internet SCSI (iSCSI) networks in use as a result of using iSCSI storage for one or more DAG members. As a best practice, iSCSI storage should use dedicated networks and network adapters. These networks shouldn't be managed by the DAG or its cluster, or used as DAG networks (MAPI or replication). Instead, these networks should be manually disabled from use by the DAG, so they can be dedicated to iSCSI storage traffic. To disable iSCSI networks from being detected and used as DAG networks, configure the DAG to ignore any currently detected iSCSI networks using the [Set-DatabaseAvailabilityGroupNetwork](https://technet.microsoft.com/en-us/library/dd298008\(v=exchg.150\)) cmdlet, as shown in this example:
 
+```powershell
     Set-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -ReplicationEnabled:$false -IgnoreNetwork:$true
+```
 
 This command will also disable the network for use by the cluster. Although the iSCSI networks will continue to appear as DAG networks, they won't be used for MAPI or replication traffic after running the above command.
 
@@ -659,7 +665,9 @@ The default value is `GoodAvailability`. If you specify either `BestAvailability
 
 The following example configures a Mailbox server with an *AutoDatabaseMountDial* setting of `GoodAvailability`.
 
-    Set-MailboxServer -Identity EX1 -AutoDatabaseMountDial GoodAvailability
+```powershell
+Set-MailboxServer -Identity EX1 -AutoDatabaseMountDial GoodAvailability
+```
 
 ## Database copy automatic activation policy
 
@@ -675,7 +683,9 @@ The *DatabaseCopyAutoActivationPolicy* parameter specifies the type of automatic
 
 The following example configures a Mailbox server with a *DatabaseCopyAutoActivationPolicy* setting of `Blocked`.
 
-    Set-MailboxServer -Identity EX1 -DatabaseCopyAutoActivationPolicy Blocked
+```powershell
+Set-MailboxServer -Identity EX1 -DatabaseCopyAutoActivationPolicy Blocked
+```
 
 ## Maximum active databases
 
@@ -687,7 +697,9 @@ The *MaximumActiveDatabases* parameter is configured with a whole number numeric
 
 The following example configures a Mailbox server to support a maximum of 20 active databases.
 
-    Set-MailboxServer -Identity EX1 -MaximumActiveDatabases 20
+```powershell
+Set-MailboxServer -Identity EX1 -MaximumActiveDatabases 20
+```
 
 Return to top
 

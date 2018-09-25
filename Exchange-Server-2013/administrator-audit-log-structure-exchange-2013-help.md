@@ -174,6 +174,7 @@ The following is an example of a typical audit log entry. Based on the informati
 
 <!-- end list -->
 
+```XML
     <?xml version="1.0" encoding="utf-8"?>
     <SearchResults>
     
@@ -187,4 +188,4 @@ The following is an example of a typical audit log entry. Based on the informati
         </ModifiedProperties>
       </Event>
     </SearchResults>
-
+```

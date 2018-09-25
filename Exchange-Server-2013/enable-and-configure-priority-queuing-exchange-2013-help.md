@@ -41,10 +41,13 @@ _**Applies to:** Exchange Server 2013_
 
 1.  In a Command prompt window, open the EdgeTransport.exe.config application configuration file in Notepad by running the following command:
     
-        Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```powershell
+    Notepad %ExchangeInstallPath%Bin\EdgeTransport.exe.config
+    ```
 
 2.  Find the following keys in the `<appSettings>` section.
     
+    ```powershell
         <add key="PriorityQueuingEnabled" value="false" />
         <add key="MaxPerDomainHighPriorityConnections" value="3" />
         <add key="MaxPerDomainNormalPriorityConnections" value="15" />
@@ -56,10 +59,13 @@ _**Applies to:** Exchange Server 2013_
         <add key="NormalPriorityDelayNotificationTimeout" value="4:00:00" />
         <add key="LowPriorityDelayNotificationTimeout" value="8:00:00" />
         <add key="MaxHighPriorityMessageSize" value="250KB" />
-    
+    ```
+
     To enable priority queuing in the Transport service on the Mailbox server, use the following value:
     
-        <add key="PriorityQueuingEnabled" value="true" />
+    ```powershell
+    <add key="PriorityQueuingEnabled" value="true" />
+    ```
     
     Configure the remaining priority queuing values, or leave them at their default values.
 
@@ -67,8 +73,10 @@ _**Applies to:** Exchange Server 2013_
 
 4.  Restart the Microsoft Exchange Transport service by running the following command:
     
+    ```powershell
         net stop MSExchangeTransport && net start MSExchangeTransport
-
+    ```
+    
 ## How do you know this worked?
 
 To verify that you have successfully enabled and configured priority queuing, do the following:

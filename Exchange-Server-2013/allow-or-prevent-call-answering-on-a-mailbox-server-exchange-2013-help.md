@@ -53,9 +53,13 @@ For additional management tasks related to Mailbox servers, see [UM services pro
 
 This example enables a Mailbox server `UMMBXr-05x.contoso.com` to answer incoming voice, fax, auto attendant, and Outlook Voice Access calls from VoIP gateways, IP PBXs, SIP-enabled PBXs, and SBCs, and writes the change to the registry on the UMMBX-05x server.
 
+```powershell
     Set-ServerComponentState -Component UnifiedMessaging -Identity UMMBX-05x.contoso.com -Requester Maintenance -State Active -LocalOnly
+```
 
 This example prevents a Mailbox server `UMMBX-05x.contoso.com` from answering incoming voice, fax, auto attendant, and Outlook Voice Access calls from VoIP gateways, IP PBXs, SIP-enabled PBXs, and SBCs, and writes the change only to Active Directory.
 
+```powershell
     Set-ServerComponentState -Component UnifiedMessaging -Identity UMMBX-05x.contoso.com -Requester Maintenance -State Inactive -RemoteOnly
+```
 

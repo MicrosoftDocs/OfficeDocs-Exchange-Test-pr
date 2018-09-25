@@ -59,11 +59,15 @@ You can use the Shell to enable or disable mailbox audit logging for a mailbox. 
 
 This example enables mailbox audit logging for Ben Smith's mailbox.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditEnabled $true
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditEnabled $true
+```
 
 This example disables mailbox audit logging for Ben Smith's mailbox.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditEnabled $false
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditEnabled $false
+```
 
 For detailed syntax and parameter information, see [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)).
 
@@ -73,15 +77,21 @@ When mailbox audit logging is enabled for a mailbox, only the administrator, del
 
 This example specifies that the `SendAs` or `SendOnBehalf` actions performed by delegate users will be logged for Ben Smith's mailbox.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditDelegate SendAs,SendOnBehalf -AuditEnabled $true
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditDelegate SendAs,SendOnBehalf -AuditEnabled $true
+```
 
 This example specifies that the `MessageBind` and `FolderBind` actions performed by administrators will be logged for Ben Smith's mailbox.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditAdmin MessageBind,FolderBind -AuditEnabled $true
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditAdmin MessageBind,FolderBind -AuditEnabled $true
+```
 
 This example specifies that the `HardDelete` action performed by the mailbox owner will be logged for Ben Smith's mailbox.
 
-    Set-Mailbox -Identity "Ben Smith" -AuditOwner HardDelete -AuditEnabled $true
+```powershell
+Set-Mailbox -Identity "Ben Smith" -AuditOwner HardDelete -AuditEnabled $true
+```
 
 For detailed syntax and parameter information, see [Set-Mailbox](https://technet.microsoft.com/en-us/library/bb123981\(v=exchg.150\)).
 
@@ -91,5 +101,7 @@ To verify that you have successfully enabled mailbox audit logging for a mailbox
 
 This example retrieves Ben Smith’s mailbox settings and pipes the specified audit settings, including the audit log age limit, to the **Format-List** cmdlet.
 
+```powershell
     Get-Mailbox "Ben Smith" | Format-List *audit*
+```
 

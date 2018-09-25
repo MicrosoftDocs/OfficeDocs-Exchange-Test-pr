@@ -41,7 +41,9 @@ Before you can share calendars with another organization, you have to set up an 
 
 This example removes the organization relationship Contoso from the Exchange organization
 
-    Remove-OrganizationRelationship -Identity "Contoso"
+```powershell
+Remove-OrganizationRelationship -Identity "Contoso"
+```
 
 For detailed syntax and parameter information, see [Remove-OrganizationRelationship](https://technet.microsoft.com/en-us/library/ee332362\(v=exchg.150\)).
 
@@ -53,7 +55,9 @@ To verify that you have successfully removed the organization relationship, do o
 
   - Run the following Shell command to verify the organization relationship information is removed.
     
-        Get-OrganizationRelationship | Format-List
+    ```powershell
+    Get-OrganizationRelationship | Format-List
+    ```
 
 
 > [!TIP]

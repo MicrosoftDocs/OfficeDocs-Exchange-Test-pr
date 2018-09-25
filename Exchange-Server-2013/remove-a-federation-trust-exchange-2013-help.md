@@ -51,7 +51,9 @@ For additional management tasks related to federation trusts, see [Federation pr
 
 This example removes the federation trust.
 
-    Remove-FederationTrust
+```powershell
+Remove-FederationTrust
+```
 
 For detailed syntax and parameter information, see [Remove-FederationTrust](https://technet.microsoft.com/en-us/library/dd351153\(v=exchg.150\)).
 
@@ -63,7 +65,9 @@ To verify that you have successfully removed the federation trust, do one of the
 
   - In the Shell, run the following command to verify that federation trust information isn’t returned for your Exchange organization.
     
-        Get-FederationTrust
+    ```powershell
+    Get-FederationTrust
+    ```
     
     For detailed syntax and parameter information, see [Get-FederationTrust](https://technet.microsoft.com/en-us/library/dd351262\(v=exchg.150\)).
 

@@ -83,25 +83,33 @@ For additional management tasks related to federation, see [Federation procedure
 
   - This example adds the domain name service.contoso.com to the organization relationship Contoso.
     
+    ```powershell
         $domains = (Get-OrganizationRelationship Contoso).DomainNames
         $domains += 'service.contoso.com'
         Set-OrganizationRelationship -Identity Contoso -DomainNames $domains
+    ```
 
   - This example disables the organization relationship Contoso.
     
-        Set-OrganizationRelationship -Identity Contoso -Enabled $false
+    ```powershell
+    Set-OrganizationRelationship -Identity Contoso -Enabled $false
+    ```
 
   - This example enables calendar availability information access for the organization relationship WoodgroveBank and sets the access level to `AvailabilityOnly` (calendar free/busy information with time only).
     
+    ```powershell
         Set-OrganizationRelationship -Identity Contoso -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly
-
+    ```
+    
 For detailed syntax and parameter information, see [Get-OrganizationRelationship](https://technet.microsoft.com/en-us/library/ee332343\(v=exchg.150\)) and [Set-OrganizationRelationship](https://technet.microsoft.com/en-us/library/ee332326\(v=exchg.150\)).
 
 ## How do you know this worked?
 
 To verify that you have successfully updated the organization relationship, run the following Shell command and verify the organization relationship information.
 
-    Get-OrganizationRelationship | format-list
+```powershell
+Get-OrganizationRelationship | format-list
+```
 
 
 > [!TIP]

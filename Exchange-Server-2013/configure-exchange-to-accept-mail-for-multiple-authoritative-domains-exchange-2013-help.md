@@ -71,11 +71,15 @@ The following examples are scenarios in which your Exchange organization may hav
 
 To create a new authoritative domain, use the following syntax.
 
+```powershell
     New-AcceptedDomain -Name "<Unique Name>" -DomainName <SMTP domain> -DomainType Authoritative
+```
 
 For example, to create a new authoritative domain named "Fourth Coffee subsidiary" for the domain fourthcoffee.com, run the following command:
 
+```powershell
     New-AcceptedDomain -Name "Fourth Coffee subsidiary" -DomainName fourthcoffee.com -DomainType Authoritative
+```
 
 ## How do you know this step worked?
 
@@ -117,11 +121,15 @@ In the Shell, you use two separate commands: one command to modify the existing 
 
 To change the existing primary email address, and keep the old primary email address as a proxy address, run the following command:
 
+```powershell
     Set-EmailAddressPolicy <EmailAddressPolicyIdentity> -EnabledEmailAddressTemplates SMTP:<NewPrimaryEmailAddress>,smtp:<OldPrimaryEmailAddress>
+```
 
 For example, suppose the email address policy in your organization uses the email addresses format *useralias*`@contoso.com`. This example changes the domain of primary (reply to) address in the email address policy named "Default Policy" to `@fourthcoffee.com`, and keeps the old primary reply address in the `@contoso.com` domain as a proxy (secondary) address.
 
+```powershell
     Set-EmailAddressPolicy "Default Policy" -EnabledEmailAddressTemplates SMTP:@fourthcoffee.com,smtp:@contoso.com
+```
 
 
 > [!NOTE]
@@ -131,11 +139,15 @@ For example, suppose the email address policy in your organization uses the emai
 
 To apply the updated email address policy to recipients, use the following syntax.
 
-    Update-EmailAddressPolicy <EamilAddressPolicyIdentity>
+```powershell
+Update-EmailAddressPolicy <EamilAddressPolicyIdentity>
+```
 
 For example, to apply the updated email address policy named "Default Policy", run the following command:
 
-    Update-EmailAddressPolicy "Default Policy"
+```powershell
+Update-EmailAddressPolicy "Default Policy"
+```
 
 ## Replace the existing primary email address for a filtered set of recipients
 
@@ -187,15 +199,21 @@ To create additional email addresses that will be used as the primary email addr
 
 To replace the primary email address for a filtered set of recipients, use the following command:
 
+```powershell
     New-EmailAddressPolicy -Name <Policy Name> -Priority <Integer> -IncludedRecipients <RecipientTypes> <Conditional Recipient Properties> -EnabledEmailAddressTemplates SMTP:@<NewPrimaryEmailAddress>
+```
 
 This example creates an email address policy named "Fourth Coffee Recipients", assigns that policy to mailbox users in the Fourth Coffee department, and sets the highest priority for that email address policy so the policy is applied first. Note that the old primary email address isn't preserved for these recipients, so they can't receive email at their old primary email address.
 
+```powershell
     New-EmailAddressPolicy -Name "Fourth Coffee Recipients" -Priority 1 -IncludedRecipients MailboxUsers -ConditionalDepartment "Fourth Coffee" -EnabledEmailAddressTemplates SMTP:@fourthcoffee.com
+```
 
 To apply the new email address policy to the affected recipients, run the following command:.
 
-    Update-EmailAddressPolicy "Fourth Coffee Recipients"
+```powershell
+Update-EmailAddressPolicy "Fourth Coffee Recipients"
+```
 
 ## How do you know this step worked?
 

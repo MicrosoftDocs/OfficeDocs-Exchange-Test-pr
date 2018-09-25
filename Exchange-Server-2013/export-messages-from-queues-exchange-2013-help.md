@@ -51,36 +51,47 @@ When you export a message from a queue to a file, the message isn't removed from
 
 To export a specific message from a specific queue, run the following command:
 
+```powershell
     Export-Message -Identity <MessageIdentity> | AssembleMessage -Path <FilePath>\<FileName>.eml
+```
 
 This example exports a copy of a message that has the **InternalMessageID** value 1234 that's located in the contoso.com delivery queue on the server named Mailbox01 to the file named export.eml in the path D:\\Contoso Export.
 
+```powershell
     Export-Message -Identity Exchange01\Contoso.com\1234 | AssembleMessage -Path "D:\Contoso Export\export.eml"
+```
 
 ## Use the Shell to export all messages from a specific queue
 
 To export all messages from a specific queue and use the **InternetMessageID** value of each message as the file name, use the following syntax.
 
+```powershell
     Get-Message -Queue <QueueIdentity> | ForEach-Object {$Temp=<Path>+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
+```
 
 Note that the **InternetMessageID** value contains angled brackets (\> and \<), which need to be removed because they aren't allowed in file names.
 
 This example exports a copy of all the messages from the contoso.com delivery queue on the server named Mailbox01 to the local directory named D:\\Contoso Export.
 
+```powershell
     Get-Message -Queue Mailbox01\Contoso.com | ForEach-Object {$Temp="D:\Contoso Export\"+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
+```
 
 ## Use the Shell to export specific messages from all the queues on a server
 
 To export specific messages from all queues on a server and use the **InternetMessageID** value of each message as the file name, use the following syntax.
 
+```powershell
     Get-Message -Filter {<MessageFilter>} [-Server <ServerIdentity>] | ForEach-Object {$Temp=<Path>+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
+```
 
 Note that the **InternetMessageID** value contains angled brackets (\> and \<), which need to be removed because they aren't allowed in file names.
 
 This example exports a copy of all the messages from senders in the contoso.com domain from all queues on the server named Mailbox01 to the local directory named D:\\Contoso Export.
 
+```powershell
     Get-Message -Filter {FromAddress -like "*@contoso.com"} -Server Mailbox01 | ForEach-Object {$Temp="D:\Contoso Export\"+$_.InternetMessageID+".eml";$Temp=$Temp.Replace("<","_");$Temp=$Temp.Replace(">","_");Export-Message $_.Identity | AssembleMessage -Path $Temp}
-
+```
 
 > [!NOTE]
 > If you omit the <EM>Server</EM> parameter, the command operates on the local server.

@@ -57,21 +57,29 @@ You can use the **Get-MessageTrackingLog** cmdlet in the Exchange Management She
 
 To search the message tracking log entries for specific events, use the following syntax.
 
+```powershell
     Get-MessageTrackingLog [-Server <ServerIdentity.] [-ResultSize <Integer> | Unlimited] [-Start <DateTime>] [-End <DateTime>] [-EventId <EventId>] [-InternalMessageId <InternalMessageId>] [-MessageId <MessageId>] [-MessageSubject <Subject>] [-Recipients <RecipientAddress1,RecipientAddress2...>] [-Reference <Reference>] [-Sender <SenderAddress>]
+```
 
 To view the 1000 most recent message tracking log entries on the server, run the following command:
 
-    Get-MessageTrackingLog
+```powershell
+Get-MessageTrackingLog
+```
 
 This example searches the message tracking logs on the local server for all entries from 3/28/2013 8:00 AM to 3/28/2013 5:00 PM for all **FAIL** events where the message sender was pat@contoso.com.
 
+```powershell
     Get-MessageTrackingLog -ResultSize Unlimited -Start "3/28/2013 8:00AM" -End "3/28/2013 5:00PM" -EventId "Fail" -Sender "pat@contoso.com"
+```
 
 ## Use the Shell to control the output of a message tracking log search
 
 Use the following syntax.
 
+```powershell
     Get-MessageTrackingLog <SearchFilters> | <Format-Table | Format-List> [<FieldNames>] [<OutputFileOptions>]
+```
 
 This example searches the message tracking logs using the following search criteria:
 
@@ -85,7 +93,9 @@ This example searches the message tracking logs using the following search crite
 
 <!-- end list -->
 
+```powershell
     Get-MessageTrackingLog -EventId Send | Format-List Send*,Recipient* > "D:\Send Search.txt"
+```
 
 ## Use the Shell to search the message tracking logs for message entries on multiple servers
 
@@ -93,7 +103,9 @@ Typically, the value in the **MessageID:** header field remains constant as the 
 
 To search all message tracking log entries for a specific message across all Mailbox servers, use the following syntax.
 
+```powershell
     Get-ExchangeServer | where {$_.isHubTransportServer -eq $true -or $_.isMailboxServer -eq $true} | Get-MessageTrackingLog -MessageId <MessageID> | Select-Object <CommaSeparatedFieldNames> | Sort-Object -Property <FieldName>
+```
 
 This example searches the message tracking logs on all Exchange 2013 Mailbox servers using the following search criteria:
 
@@ -105,7 +117,9 @@ This example searches the message tracking logs on all Exchange 2013 Mailbox ser
 
 <!-- end list -->
 
+```powershell
     Get-ExchangeServer | where {$_.isHubTransportServer -eq $true -or $_.isMailboxServer -eq $true} | Get-MessageTrackingLog -MessageId ba18339e-8151-4ff3-aeea-87ccf5fc9796@mailbox01.contoso.com | Select-Object Timestamp,ServerHostname,ClientHostname,Source,EventId,Recipients | Sort-Object -Property Timestamp
+```
 
 ## Use the EAC to search the message tracking logs
 

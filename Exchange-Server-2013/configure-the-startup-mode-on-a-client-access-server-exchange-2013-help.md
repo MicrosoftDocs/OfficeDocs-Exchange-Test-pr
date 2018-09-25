@@ -65,9 +65,13 @@ For additional management tasks related to Unified Messaging and Client Access s
 
 This example sets the startup mode for a Client Access server named `UMCallRouter1` to Dual mode.
 
-    Set-UMCallRouterSettings -Server UMCallRouter1 -UMStartUpMode Dual
+```powershell
+Set-UMCallRouterSettings -Server UMCallRouter1 -UMStartUpMode Dual
+```
 
 This example sets the startup mode for a Client Access server named `UMCallRouter1` to TLS mode.
 
-    Set-UMCallRouterSettings -Server UMCallRouter1 -UMStartUpMode TLS
+```powershell
+Set-UMCallRouterSettings -Server UMCallRouter1 -UMStartUpMode TLS
+```
 

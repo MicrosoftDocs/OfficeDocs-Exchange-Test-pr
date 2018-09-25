@@ -39,9 +39,13 @@ You can use the **Set-RemoteDomain** cmdlet to configure the properties of a rem
 
 This example allows automatic replies to the remote domain named Contoso. This setting is disabled by default.
 
-    Set-RemoteDomain Contoso -AutoReplyEnabled $true
+```powershell
+Set-RemoteDomain Contoso -AutoReplyEnabled $true
+```
 
 This example allows automatic forwards to the remote domain. This setting is disabled by default.
 
-    Set-RemoteDomain Contoso -AutoForwardEnabled $true
+```powershell
+Set-RemoteDomain Contoso -AutoForwardEnabled $true
+```
 

@@ -72,7 +72,9 @@ Looking for other management tasks related to backing up and restoring data? Che
 
 6.  Navigate to the Exchange 2013 installation files, and run the following command.
     
-        Setup /m:RecoverServer /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    Setup /m:RecoverServer /IAcceptExchangeServerLicenseTerms
+    ```
 
 7.  After Setup has completed, but before the recovered server is put into production, reconfigure any custom settings that were previously present on the server, and then restart the server.
 

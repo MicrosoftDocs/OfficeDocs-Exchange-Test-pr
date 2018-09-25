@@ -47,12 +47,15 @@ For additional management tasks related to managed availability, see [Manage hea
 
 To create a local override for a specific duration, use the following syntax.
 
+```powershell
     Add-ServerMonitoringOverride -Server <ServerName> -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertyName> -PropertyValue <Value> -Duration <dd.hh:mm:ss>
+```
 
 To create a local override for a specific version of Exchange, use the following syntax.
 
+```powershell
     Add-ServerMonitoringOverride -Server <ServerName> -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertyName> -PropertyValue <Value> -Version <15.01.xxxx.xxx>
-
+```
 
 > [!NOTE]
 > When you create the override, the values used in the <EM>Identity</EM> parameter are case-sensitive.
@@ -61,13 +64,17 @@ To create a local override for a specific version of Exchange, use the following
 
 This example adds a local override that disables the responder `ActiveDirectoryConnectivityConfigDCServerReboot` on the server named EXCH03 for 20 days.
 
+```powershell
     Add-ServerMonitoringOverride -Server EXCH03 -Identity "AD\ActiveDirectoryConnectivityConfigDCServerReboot" -ItemType Responder -PropertyName Enabled -PropertyValue 0 -Duration 20.00:00:00
+```
 
 ## How do you know this worked?
 
 To verify that you have successfully created a local override, use the **Get-ServerMonitoringOverride** cmdlet to view the list of local overrides:
 
+```powershell
     Get-ServerMonitoringOverride  -Server <ServerIdentity> | Format-List
+```
 
 The override should appear in the list.
 
@@ -75,17 +82,23 @@ The override should appear in the list.
 
 To remove a local override, use the following syntax.
 
+```powershell
     Remove-ServerMonitoringOverride -Server <ServerName> -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <ExistingItemTypeValue> -PropertyName <PropertytoRemove>
+```
 
 This example removes the existing local override of the `ActiveDirectoryConnectivityConfigDCServerReboot` responder in the Exchange health set from server EXCH01.
 
+```powershell
     Remove-ServerMonitoringOverride -Server EXCH01 -Identity Exchange\ActiveDirectoryConnectivityConfigDCServerReboot -ItemType Responder -PropertyName Enabled
+```
 
 ## How do you know this worked?
 
 To verify that you have successfully removed a local override, use the **Get-ServerMonitoringOverride** cmdlet to view the list of local overrides:
 
+```powershell
     Get-ServerMonitoringOverride  -Server <ServerIdentity> | Format-List
+```
 
 The removed override should not appear in the list.
 
@@ -93,12 +106,15 @@ The removed override should not appear in the list.
 
 To create a global override for a specific duration, use the following syntax.
 
+```powershell
     Add-GlobalMonitoringOverride -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertytoOverride> -PropertyValue <NewPropertyValue> -Duration <dd.hh:mm:ss>
+```
 
 To create a global override for a specific version of Exchange, use the following syntax.
 
+```powershell
     Add-GlobalMonitoringOverride -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <Probe | Monitor | Responder | Maintenance> -PropertyName <PropertytoOverride> -PropertyValue <NewPropertyValue> -ApplyVersion <15.01.xxxx.xxx>
-
+```
 
 > [!NOTE]
 > When you create the override, the values used in the <EM>Identity</EM> parameter are case-sensitive.
@@ -107,17 +123,23 @@ To create a global override for a specific version of Exchange, use the followin
 
 This example adds a global override that disables the `OnPremisesInboundProxy` probe for 30 days.
 
+```powershell
     Add-GlobalMonitoringOverride -Identity "FrontendTransport\OnPremisesInboundProxy" -ItemType Probe -PropertyName Enabled -PropertyValue 0 -Duration 30.00:00:00
+```
 
 This example adds a global override that disables the `StorageLogicalDriveSpaceEscalate` responder for all servers running Exchange version 15.01.0225.042.
 
+```powershell
     Add-GlobalMonitoringOverride -Identity "MailboxSpace\StorageLogicalDriveSpaceEscalate" -PropertyName Enabled -PropertyValue 0 -ItemType Responder -ApplyVersion "15.01.0225.042"
+```
 
 ## How do you know this worked?
 
 To verify that you have successfully created a global override, use the **Get-GlobalMonitoringOverride** cmdlet to view the list of global overrides:
 
-    Get-GlobalMonitoringOverride
+```powershell
+Get-GlobalMonitoringOverride
+```
 
 The override should appear in the list.
 
@@ -125,17 +147,23 @@ The override should appear in the list.
 
 To remove a global override, use the following syntax.
 
+```powershell
     Remove-GlobalMonitoringOverride -Identity <HealthSetName>\<MonitoringItemName>[\<TargetResource>] -ItemType <ExistingItemTypeValue> -PropertyName <OverriddenProperty>
+```
 
 This example removes the existing global override of the `ExtensionAttributes` property of the `OnPremisesInboundProxy` probe in the `FrontEndTransport` health set.
 
+```powershell
     Remove-GlobalMonitoringOverride -Identity FrontEndTransport\OnPremisesInboundProxy -ItemType Probe -PropertyName ExtensionAttributes
+```
 
 ## How do you know this worked?
 
 To verify that you have successfully removed a global override, use the **Get-GlobalMonitoringOverride** cmdlet to view the list of global overrides:
 
-    Get-GlobalMonitoringOverride
+```powershell
+Get-GlobalMonitoringOverride
+```
 
 The removed override should not appear in the list.
 

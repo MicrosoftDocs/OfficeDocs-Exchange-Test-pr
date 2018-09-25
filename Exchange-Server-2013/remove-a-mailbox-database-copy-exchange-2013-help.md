@@ -59,7 +59,9 @@ Looking for other management tasks related to mailbox database copies? Check out
 
 This example removes a copy of the mailbox database DB1 from the Mailbox server MBX1.
 
-    Remove-MailboxDatabaseCopy -Identity DB1\MBX1 -Confirm:$False
+```powershell
+Remove-MailboxDatabaseCopy -Identity DB1\MBX1 -Confirm:$False
+```
 
 ## How do you know this worked?
 
@@ -69,7 +71,9 @@ To verify that you've successfully removed a mailbox database copy, do one of th
 
   - In the Shell, run the following command to verify removal of the copy.
     
-        Get-MailboxDatabase <DatabaseName> | Format-List DatabaseCopies
+    ```powershell
+    Get-MailboxDatabase <DatabaseName> | Format-List DatabaseCopies
+    ```
     
     The removed passive copy is no longer listed.
 

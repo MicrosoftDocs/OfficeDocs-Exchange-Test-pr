@@ -51,13 +51,9 @@ For additional tasks related to UM languages, see [UM languages, prompts, and gr
 
 2.  Double-click the UMLanguagePack.*\<CultureCode\>.exe* file. For example, for the German UM language pack, you would download the file named UMLanguagePack.de-DE.exe.
 
-3.  
-    
-    In the Exchange 2013 Setup wizard, on the **License Agreement** page, read the terms of the agreement, select **I accept the terms in the license agreement**, and then click **Next**.
+3.  In the Exchange 2013 Setup wizard, on the **License Agreement** page, read the terms of the agreement, select **I accept the terms in the license agreement**, and then click **Next**.
 
-4.  
-    
-    On the **Unified Messaging Language Pack** page, verify that the correct language is listed in the **The following Unified Messaging Language Pack(s) will be installed** window, and then click **Install**.
+4.  On the **Unified Messaging Language Pack** page, verify that the correct language is listed in the **The following Unified Messaging Language Pack(s) will be installed** window, and then click **Install**.
 
 5.  Click **Finish** to complete the installation of the UM language pack.
 
@@ -65,12 +61,15 @@ For additional tasks related to UM languages, see [UM languages, prompts, and gr
 
 This example installs the Japanese (ja-JP) UM language pack that's been downloaded to the D:\\Exchange\\UMLanguagePacks folder on a Mailbox server.
 
-    setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```powershell
+setup.exe /AddUmLanguagePack:ja-JP /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
+```
 
 This example installs the Mexican Spanish (es-MX) and German (de-DE) UM language packs that have been downloaded to the D:\\Exchange\\UMLanguagePacks folder on a Mailbox server.
 
+```powershell
     setup.exe /AddUmLanguagePack:es-MX,de-DE /s:d:\Exchange\UMLanguagePacks /IAcceptExchangeServerLicenseTerms
-
+```
 
 > [!WARNING]
 > If you don’t use the /IAcceptExchangeServerLicenseTerms parameter, you’ll see the following error: Welcome to Microsoft Exchange Server 2013 Unattended Setup. You need to accept the license terms to install Microsoft Exchange Server 2013. To read the license agreement, visit http://go.microsoft.com/fwlink/p/?LinkId=150127. To accept the license agreement, add the /IAcceptExchangeServerLicenseTerms parameter to the command you're running. For more information, run setup /?.

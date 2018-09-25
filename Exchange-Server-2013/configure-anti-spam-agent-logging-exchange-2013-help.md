@@ -39,7 +39,9 @@ Agent logging records the actions performed by specific Exchange anti-spam agent
 
 Run the following command:
 
+```powershell
     Set-TransportService <ServerIdentity> -AgentLogEnabled <$true | $false> -AgentLogMaxAge <dd.hh:mm:ss> -AgentLogMaxDirectorySize <Size> -AgentLogMaxFileSize <Size> -AgentLogPath <LocalFilePath>
+```
 
 This example sets the following agent log settings on the Mailbox server named Mailbox01:
 
@@ -53,7 +55,9 @@ This example sets the following agent log settings on the Mailbox server named M
 
 <!-- end list -->
 
+```powershell
     Set-TransportService Mailbox01 -AgentLogPath "D:\Anti-Spam Agent Log" -AgentLogMaxFileSize 20MB -AgentLogMaxDirectorySize 400MB -AgentLogMaxAge 14.00:00:00
+```
 
 
 > [!NOTE]
@@ -73,7 +77,9 @@ To verify that you have successfully configured anti-spam agent logging, do the 
 
 1.  In the Shell, run the following command:
     
+    ```powershell
         Get-TransportService <ServerIdentity> | Format-List AgentLog*
-
+    ```
+    
 2.  Verify the values displayed are the values you configured.
 

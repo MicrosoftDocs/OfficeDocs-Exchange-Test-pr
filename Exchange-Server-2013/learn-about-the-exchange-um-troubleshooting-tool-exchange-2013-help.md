@@ -189,7 +189,9 @@ The UM Troubleshooting Tool can help you troubleshoot, diagnose, and repair conf
 
 In the following example, Gateway mode is used to test call flow in an environment that doesn't include Office Communications Server 2007 R2 or Lync Server. This example tests the telephony equipment, including VoIP gateways, PBXs and IP PBXs, and the Unified Messaging components. This example sets the Voice over IP (VoIP) security mode to Unsecured, uses the IP address 10.1.1.1 as the next hop, and includes an extension number in the diversion information.
 
-    Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Unsecured -NextHop 10.1.1.1 -Diversion 12345
+```powershell
+Test-ExchangeUMCallFlow -Mode Gateway -VoIPSecurity Unsecured -NextHop 10.1.1.1 -Diversion 12345
+```
 
 Return to top
 
@@ -197,7 +199,9 @@ Return to top
 
 The UM Troubleshooting Tool can be used in on-premises or cross-premises deployments that include Office Communications Server 2007 R2 or Microsoft Lync Server when SIPClient mode is set. The following example uses SIPClient mode and tests the call flow with a secured UM dial plan in an environment that contains Office Communications Server 2007 R2 or Lync Server servers. By default, when you run the UM Troubleshooting Tool, it uses the credentials of the user who is currently logged on to the computer. When you run the following example, you’ll be prompted for the credentials you want to use when you run the UM Troubleshooting Tool. For details, see [Set the credentials to use with the Exchange UM Troubleshooting Tool](set-the-credentials-to-use-with-the-exchange-um-troubleshooting-tool-exchange-2013-help.md).
 
+```powershell
     Test-ExchangeUMCallFlow -Mode SIPClient -VoIPSecurity Secured -CallingParty tony@contoso.com -CalledParty david@contoso.com -Credential $get
+```
 
 ## Installing the UM Troubleshooting Tool
 

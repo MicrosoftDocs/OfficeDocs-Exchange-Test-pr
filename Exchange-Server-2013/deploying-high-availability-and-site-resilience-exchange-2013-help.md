@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Deploying high availability and site resilience: Exchange 2013 Help'
 TOCTitle: Deploying high availability and site resilience
 ms:assetid: 4c4e00a4-1f57-4fdb-b9b2-2779abf381a9
@@ -136,11 +136,15 @@ As shown in the preceding table, adapters used for Replication networks don't us
 
 To configure routing for the Replication network adapters on MBX1 and MBX2, the following command was run on each server.
 
-    netsh interface ipv4 add route 10.0.2.0/24 <NetworkName> 10.0.1.254
+```powershell
+netsh interface ipv4 add route 10.0.2.0/24 <NetworkName> 10.0.1.254
+```
 
 To configure routing for the Replication network adapters on MBX3 and MBX4, the following command was run on each server.
 
-    netsh interface ipv4 add route 10.0.1.0/24 <NetworkName> 10.0.2.254
+```powershell
+netsh interface ipv4 add route 10.0.1.0/24 <NetworkName> 10.0.2.254
+```
 
 The following additional network settings have also been configured:
 
@@ -165,12 +169,14 @@ The administrator has decided to create a Windows PowerShell command-line interf
   - It uses the [Set-DatabaseAvailabilityGroup](https://technet.microsoft.com/en-us/library/dd297934\(v=exchg.150\)) cmdlet to configure the DAG for DAC mode. For more information about DAC mode, see [Datacenter Activation Coordination mode](datacenter-activation-coordination-mode-exchange-2013-help.md).
 
 The following are the commands used in the script:
-
+```powershell
     New-DatabaseAvailabilityGroup -Name DAG1 -WitnessServer CAS1 -WitnessDirectory C:\DAGWitness\DAG1.contoso.com -DatabaseAvailabilityGroupIPAddresses 192.168.1.8,192.168.2.8
+```
 
 The preceding command creates the DAG DAG1, configures CAS1 to act as the witness server, configures a specific witness directory (C:\\DAGWitness\\DAG1.contoso.com), and configures two IP addresses for the DAG (one for each subnet on the MAPI network).
-
+```powershell
     Set-DatabaseAvailabilityGroup -Identity DAG1 -AlternateWitnessDirectory C:\DAGWitness\DAG1.contoso.com -AlternateWitnessServer CAS4
+```
 
 The preceding command configures DAG1 to use an alternate witness server of CAS4 and an alternate witness directory on CAS4 that uses the same path that was configured on CAS1.
 
@@ -179,15 +185,18 @@ The preceding command configures DAG1 to use an alternate witness server of CAS4
 > Using the same path isn't required; Contoso has chosen to do this to standardize their configuration.
 
 
-
+```powershell
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX3
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX2
     Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX4
+```
 
 The preceding commands add each of the Mailbox servers, one at a time, to the DAG. The commands also install the Windows Failover Clustering component on each Mailbox server (if it isn't already installed), create a failover cluster, and join each Mailbox server to the newly created cluster.
 
+```powershell
     Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
+```
 
 The preceding command enables DAC mode for the DAG.
 
@@ -209,39 +218,44 @@ To create this configuration, the administrator runs several commands.
 
 On MBX1, run the following commands.
 
+```powershell
     Add-MailboxDatabaseCopy -Identity DB1 -MailboxServer MBX2
     Add-MailboxDatabaseCopy -Identity DB1 -MailboxServer MBX4
     Add-MailboxDatabaseCopy -Identity DB1 -MailboxServer MBX3 -ReplayLagTime 3.00:00:00 -SeedingPostponed
     Suspend-MailboxDatabaseCopy -Identity DB1\MBX3 -SuspendComment "Seed from MBX4" -Confirm:$False
     Update-MailboxDatabaseCopy -Identity DB1\MBX3 -SourceServer MBX4
     Suspend-MailboxDatabaseCopy -Identity DB1\MBX3 -ActivationOnly
+```
 
 On MBX2, run the following commands.
-
+```powershell
     Add-MailboxDatabaseCopy -Identity DB2 -MailboxServer MBX1
     Add-MailboxDatabaseCopy -Identity DB2 -MailboxServer MBX3
     Add-MailboxDatabaseCopy -Identity DB2 -MailboxServer MBX4 -ReplayLagTime 3.00:00:00 -SeedingPostponed
     Suspend-MailboxDatabaseCopy -Identity DB2\MBX4 -SuspendComment "Seed from MBX3" -Confirm:$False
     Update-MailboxDatabaseCopy -Identity DB2\MBX4 -SourceServer MBX3
     Suspend-MailboxDatabaseCopy -Identity DB2\MBX4 -ActivationOnly
+```
 
 On MBX3, run the following commands.
-
+```powershell
     Add-MailboxDatabaseCopy -Identity DB3 -MailboxServer MBX4
     Add-MailboxDatabaseCopy -Identity DB3 -MailboxServer MBX2
     Add-MailboxDatabaseCopy -Identity DB3 -MailboxServer MBX1 -ReplayLagTime 3.00:00:00 -SeedingPostponed
     Suspend-MailboxDatabaseCopy -Identity DB3\MBX1 -SuspendComment "Seed from MBX2" -Confirm:$False
     Update-MailboxDatabaseCopy -Identity DB3\MBX1 -SourceServer MBX2
     Suspend-MailboxDatabaseCopy -Identity DB3\MBX1 -ActivationOnly
+```
 
 On MBX4, run the following commands.
-
+```powershell
     Add-MailboxDatabaseCopy -Identity DB4 -MailboxServer MBX3
     Add-MailboxDatabaseCopy -Identity DB4 -MailboxServer MBX1
     Add-MailboxDatabaseCopy -Identity DB4 -MailboxServer MBX2 -ReplayLagTime 3.00:00:00 -SeedingPostponed
     Suspend-MailboxDatabaseCopy -Identity DB4\MBX2 -SuspendComment "Seed from MBX1" -Confirm:$False
     Update-MailboxDatabaseCopy -Identity DB4\MBX2 -SourceServer MBX1
     Suspend-MailboxDatabaseCopy -Identity DB4\MBX2 -ActivationOnly
+```
 
 In the preceding examples for the **Add-MailboxDatabaseCopy** cmdlet, the *ActivationPreference* parameter wasn't specified. The task automatically increments the activation preference number with each copy that's added. The original database always has a preference number of 1. The first copy added with the **Add-MailboxDatabaseCopy** cmdlet is automatically assigned a preference number of 2. Assuming no copies are removed, the next copy added is automatically assigned a preference number of 3, and so forth. Thus, in the preceding examples, the passive copy in the same datacenter as the active copy has an activation preference number of 2; the non-lagged passive copy in the remote datacenter has an activation preference number of 3, and the lagged passive copy in the remote datacenter has an activation preference number of 4.
 

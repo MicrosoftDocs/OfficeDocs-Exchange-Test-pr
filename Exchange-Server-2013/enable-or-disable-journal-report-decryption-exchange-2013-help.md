@@ -47,7 +47,9 @@ For additional management tasks related to Information Rights Management (IRM), 
 
 This example enables journal report decryption for the Exchange organization.
 
-    Set-IRMConfiguration -JournalReportDecryptionEnabled $true
+```powershell
+Set-IRMConfiguration -JournalReportDecryptionEnabled $true
+```
 
 For detailed syntax and parameter information, see [Set-IRMConfiguration](https://technet.microsoft.com/en-us/library/dd979792\(v=exchg.150\)).
 
@@ -55,7 +57,9 @@ For detailed syntax and parameter information, see [Set-IRMConfiguration](https:
 
 This example disables journal report decryption for the Exchange organization.
 
-    Set-IRMConfiguration -JournalReportDecryptionEnabled $false
+```powershell
+Set-IRMConfiguration -JournalReportDecryptionEnabled $false
+```
 
 For detailed syntax and parameter information, see [Set-IRMConfiguration](https://technet.microsoft.com/en-us/library/dd979792\(v=exchg.150\)).
 

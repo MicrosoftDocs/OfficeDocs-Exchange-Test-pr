@@ -49,33 +49,40 @@ You can also specify a wildcard character "\*" with a partial property name. If 
 
 The following examples show the different ways that you can view the same data returned by the **Get-Mailbox** cmdlet.
 
+```powershell
     Get-Mailbox TestUser1
     
     Name                      Alias                ServerName       ProhibitSendQuo
                                                                     ta
     ----                      -----                ----------       ---------------
     TestUser1                 TestUser1            mbx              unlimited
+```
 
 In the first example, the **Get-Mailbox** cmdlet is called without specific formatting so the default output is in table format and contains a predetermined set of properties.
 
+```powershell
     Get-Mailbox TestUser1 | Format-List -Property Name,Alias,EmailAddresses
     
     Name           : TestUser1
     Alias          : TestUser1
     EmailAddresses : {SMTP:TestUser1@contoso.com}
+```
 
 In the second example, the output of the **Get-Mailbox** cmdlet is piped to the **Format-List** cmdlet, together with specific properties. As you can see, the format and content of the output is significantly different.
 
+```powershell
     Get-Mailbox TestUser1 | Format-List -Property Name, Alias, Email*
     Name                      : Test User
     Alias                     : TestUser1
     EmailAddresses            : {SMTP:TestUser1@contoso.com}
     EmailAddressPolicyEnabled : True
+```
 
 In the last example, the output of the **Get-Mailbox** cmdlet is piped to the **Format-List** cmdlet as in the second example. However, in the last example, a wildcard character is used to match all properties that start with `Email`.
 
 If more than one object is passed to the **Format-List** cmdlet, all specified properties for an object are displayed and grouped by object. The display order depends on the default parameter for the cmdlet. The default parameter is most frequently the *Name* parameter or the *Identity* parameter. For example, when the **Get-Childitem** cmdlet is called, the default display order is file names in alphabetical order. To change this behavior, you must call the **Format-List** cmdlet, together with the *GroupBy* parameter, and the name of a property value by which you want to group the output. For example, the following command lists all files in a directory and then groups these files by extension.
 
+```powershell
     Get-Childitem | Format-List Name,Length -GroupBy Extension
     
         Extension: .xml
@@ -103,6 +110,7 @@ If more than one object is passed to the **Format-List** cmdlet, all specified p
     
     Name   : Text_02.txt
     Length : 9835
+```
 
 In this example, the **Format-List** cmdlet has grouped the items by the *Extension* property that is specified by the *GroupBy* parameter. You can use the *GroupBy* parameter with any valid property for the objects in the pipeline stream.
 
@@ -114,14 +122,17 @@ The **Format-Table** cmdlet also uses the *Wrap* parameter. This parameter enabl
 
 In the first example, when the **Get-Command** cmdlet is used to display command information about the **Get-Process** cmdlet, the information for the *Definition* property is truncated.
 
+```powershell
     Get-Command Get-Process | Format-Table Name,Definition
     
     Name                                    Definition
     ----                                    ----------
     get-process                             get-process [[-ProcessName] String[]...
+```
 
 In the second example, the *Wrap* parameter is added to the command to force the complete contents of the *Definition* property to display.
 
+```powershell
     Get-Command Get-Process | Format-Table Name,Definition -Wrap
     
     Get-Process                             Get-Process [[-Name] <String[]>] [-Comp
@@ -147,6 +158,7 @@ In the second example, the *Wrap* parameter is added to the command to force the
                                             ble <String>] [-WarningVariable <String
                                             >] [-OutVariable <String>] [-OutBuffer
                                             <Int32>]
+```
 
 As with the **Format-List** cmdlet, you can also specify a wildcard character "`*`" with a partial property name. By including a wildcard character, you can match multiple properties without typing each property name individually.
 
@@ -156,6 +168,7 @@ The **Format-Wide** cmdlet provides a much simpler output control than the other
 
 In the most basic usage, calling the **Format-Wide** cmdlet without any parameters arranges the output in as many columns as will fit the page. For example, if you run the **Get-Childitem** cmdlet and pipe its output to the **Format-Wide** cmdlet, you will see the following display of information:
 
+```powershell
     Get-ChildItem | Format-Wide
     
         Directory: FileSystem::C:\WorkingFolder
@@ -174,9 +187,11 @@ In the most basic usage, calling the **Format-Wide** cmdlet without any paramete
     Text_08.txt                             Text_09.txt
     Text_10.txt                             Text_11.txt
     Text_12.txt
+```
 
 Generally, calling the **Get-Childitem** cmdlet without any parameters displays the names of all files in the directory in a table of properties. In this example, by piping the output of the **Get-Childitem** cmdlet to the **Format-Wide** cmdlet, the output was displayed in two columns of names. Notice that only one property type can be displayed at a time, specified by a property name that follows the **Format-Wide** cmdlet. If you add the *Autosize* parameter, the output is changed from two columns to as many columns as can fit the screen width.
 
+```powershell
     Get-ChildItem | Format-Wide -AutoSize
     
         Directory: FileSystem::C:\WorkingFolder
@@ -187,9 +202,11 @@ Generally, calling the **Get-Childitem** cmdlet without any parameters displays 
     Text_01.txt     Text_02.txt     Text_03.txt     Text_04.txt     Text_05.txt
     Text_06.txt     Text_07.txt     Text_08.txt     Text_09.txt     Text_10.txt
     Text_11.txt     Text_12.txt
+```
 
 In this example, the table is arranged in five columns, instead of two columns. The *Column* parameter offers more control by letting you specify the maximum number of columns to display information as follows:
 
+```powershell
     Get-ChildItem | Format-Wide -Column 4
     
         Directory: FileSystem::C:\WorkingFolder
@@ -201,6 +218,7 @@ In this example, the table is arranged in five columns, instead of two columns. 
     Text_02.txt         Text_03.txt         Text_04.txt         Text_05.txt
     Text_06.txt         Text_07.txt         Text_08.txt         Text_09.txt
     Text_10.txt         Text_11.txt         Text_12.txt
+```
 
 In this example, the number of columns is forced to four by using the *Column* parameter.
 
@@ -210,11 +228,15 @@ In this example, the number of columns is forced to four by using the *Column* p
 
 The **Out-Host** cmdlet is an unseen default cmdlet at the end of the pipeline. After all formatting is applied, the **Out-Host** cmdlet sends the final output to the console window for display. You don't have to explicitly call the **Out-Host** cmdlet, because it's the default output. You can override sending the output to the console window by calling the **Out-File** cmdlet as the last cmdlet in the command. The **Out-File** cmdlet then writes the output to the file that you specify in the command as in the following example:
 
-    Get-ChildItem | Format-Wide -Column 4 | Out-File c:\OutputFile.txt
+```powershell
+Get-ChildItem | Format-Wide -Column 4 | Out-File c:\OutputFile.txt
+```
 
 In this example, the **Out-File** cmdlet writes the information that is displayed in the **Get-ChildItem | Format-Wide -Column 4** command to a file that is named `OutputFile.txt`. You can also redirect pipeline output to a file by using the redirection operator, which is the right-angle bracket ( `>` ). To append pipeline output of a command to an existing file without replacing the original file, use the double right-angle brackets ( `>>` ), as in the following example:
 
-    Get-ChildItem | Format-Wide -Column 4 >> C:\OutputFile.txt
+```powershell
+Get-ChildItem | Format-Wide -Column 4 >> C:\OutputFile.txt
+```
 
 In this example, the output from the **Get-Childitem** cmdlet is piped to the **Format-Wide** cmdlet for formatting and then is written to the end of the `OutputFile.txt` file. Notice that if the `OutputFile.txt` file didn't exist, use of the double right-angle brackets ( `>>` ) would create the file.
 
@@ -228,7 +250,7 @@ Because of the flexibility and ease of scripting in the Exchange Management Shel
 
 The following example shows how you can use a simple script to output the data that is returned by a command and display it in Internet Explorer. This script takes the objects that are passed through the pipeline, opens an Internet Explorer window, and then displays the data in Internet Explorer:
 
-```
+```powershell
     $Ie = New-Object -Com InternetExplorer.Application
     $Ie.Navigate("about:blank")
     While ($Ie.Busy) { Sleep 1 }
@@ -249,7 +271,9 @@ To use this script, save it to the `C:\Program Files\Microsoft\Exchange Server\V
 
 The `Out-Ie` script assumes that the data it receives is valid HTML. To convert the data that you want to view into HTML, you must pipe the results of your command to the **ConvertTo-Html** cmdlet. You can then pipe the results of that command to the `Out-Ie` script. The following example shows how to view a directory listing in an Internet Explorer window:
 
-    Get-ChildItem | Select Name,Length | ConvertTo-Html | Out-Ie
+```powershell
+Get-ChildItem | Select Name,Length | ConvertTo-Html | Out-Ie
+```
 
 ## How to filter data
 
@@ -329,12 +353,14 @@ As data passes through the pipeline, the **Where** cmdlet receives the data from
 
 The **Clear-Host** cmdlet is used to clear the console window. In this example, you can find all the defined aliases for the **Clear-Host** cmdlet if you run the following command:
 
+```powershell
     Get-Alias | Where {$_.Definition -eq "Clear-Host"}
     
     CommandType     Name                            Definition
     -----------     ----                            ----------
     Alias           clear                           clear-host
     Alias           cls                             clear-host
+```
 
 The **Get-Alias** cmdlet and the **Where** command work together to return the list of aliases that are defined for the **Clear-Host** cmdlet and no other cmdlets. The following table outlines each element of the **Where** command that is used in the example.
 

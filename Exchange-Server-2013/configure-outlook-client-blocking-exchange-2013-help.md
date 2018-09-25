@@ -154,11 +154,15 @@ You need to be assigned permissions before you can perform this procedure or pro
 
 This example blocks all Outlook versions earlier than 11.8010.8036.
 
-    Set-CASMailbox -Identity adam@contoso.com -MAPIBlockOutlookVersions "-11.8010.8036"
+```powershell
+Set-CASMailbox -Identity adam@contoso.com -MAPIBlockOutlookVersions "-11.8010.8036"
+```
 
 This example restores access to a mailbox that's blocked by a version of Outlook.
 
-    Set-CASMailbox -Identity adam@contoso.com -MAPIBlockOutlookVersions $null
+```powershell
+Set-CASMailbox -Identity adam@contoso.com -MAPIBlockOutlookVersions $null
+```
 
 For detailed syntax and parameter information, see [Set-CASMailbox](https://technet.microsoft.com/en-us/library/bb125264\(v=exchg.150\)).
 
@@ -173,8 +177,9 @@ This example blocks Outlook clients prior to version 12.0.0 from accessing the m
 > The values used with the <EM>BlockedClientVersions</EM> parameter are examples. You can determine the correct client software versions by parsing the RPC Client Access log files located at <CODE>%ExchangeInstallPath%Logging\RPC Client Access</CODE>.
 
 
-
+```powershell
     Set-RpcClientAccess -Server CAS01 -BlockedClientVersions "0.0.0-5.65535.65535;7.0.0;8.02.4-11.65535.65535"
+```
 
 For detailed syntax and parameter definition, see [Set-RpcClientAccess](https://technet.microsoft.com/en-us/library/dd351072\(v=exchg.150\)).
 

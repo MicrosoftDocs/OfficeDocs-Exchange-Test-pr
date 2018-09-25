@@ -131,7 +131,9 @@ If you use the EAC to view the properties of an Outlook Web App virtual director
 
 This example enables forms-based authentication on the default Outlook Web App virtual directory on the server Contoso.
 
+```powershell
     set-OwaVirtualDirectory -Identity "Contoso\owa (default web site)" -FormsAuthentication $true
+```
 
 For more information about syntax and parameters, see [Set-OwaVirtualDirectory](https://technet.microsoft.com/en-us/library/bb123515\(v=exchg.150\)).
 
@@ -139,19 +141,27 @@ For more information about syntax and parameters, see [Set-OwaVirtualDirectory](
 
 This example lets you view the properties for all Outlook Web App virtual directories in all Internet Information Services (IIS) websites on all computers that have the Client Access server role installed in an Exchange organization.
 
-    Get-OWAVirtualDirectory
+```powershell
+Get-OWAVirtualDirectory
+```
 
 This example lets you view the properties for an Outlook Web App virtual directory on the default IIS website on the local Exchange server.
 
+```powershell
     Get-OWAVirtualDirectory -identity "<Exchange Server Name>\owa (default web site)"
+```
 
 This example lets you view the properties for all Outlook Web App virtual directories on an IIS website on a specific Exchange server.
 
-    Get-OWAVirtualDirectory -server <Exchange Server Name>
+```powershell
+Get-OWAVirtualDirectory -server <Exchange Server Name>
+```
 
 This example lets you view the values of the properties for every Outlook Web App virtual directory in all IIS websites on all Client Access servers in an Exchange organization.
 
-    Get-OWAVirtualDirectory | format-list
+```powershell
+Get-OWAVirtualDirectory | format-list
+```
 
 For more information about syntax and parameters, see [Get-OwaVirtualDirectory](https://technet.microsoft.com/en-us/library/aa998588\(v=exchg.150\)).
 

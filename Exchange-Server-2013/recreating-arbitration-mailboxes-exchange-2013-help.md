@@ -95,11 +95,15 @@ To re-create the arbitration mailbox FederatedEmail.4c1f4d8b-8179-4148-93bf-00a9
 
 1.  If any arbitration mailboxes are missing, run the following command:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 2.  In Exchange Management Shell, run the following:
     
-        Enable-Mailbox -Arbitration -Identity "FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042"
+    ```powershell
+    Enable-Mailbox -Arbitration -Identity "FederatedEmail.4c1f4d8b-8179-4148-93bf-00a95fa1e042"
+    ```
 
 ## Re-create the Microsoft Exchange Approval Assistant mailbox
 
@@ -107,11 +111,15 @@ To re-create the arbitration mailbox SystemMailbox{1f05a927-9350-4efe-a823-5529c
 
 1.  If any arbitration mailboxes are missing, run the following command:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 2.  In Exchange Management Shell, run the following:
     
+    ```powershell
         Get-User | Where-Object {$_.Name -like "SystemMailbox{1f05a927-7709-4e35-9dbe-d0f608fb781a}"} | Enable-Mailbox -Arbitration
+    ```
 
 ## Re-create the Microsoft Exchange Migration mailbox
 
@@ -119,15 +127,21 @@ To re-create the arbitration mailbox Migration.8f3e7716-2011-43e4-96b1-aba62d229
 
 1.  If any arbitration mailboxes are missing, run the following command:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 2.  In Exchange Management Shell, run the following:
     
-        Enable-Mailbox -Arbitration -Identity "Migration.8f3e7716-2011-43e4-96b1-aba62d229136"
+    ```powershell
+    Enable-Mailbox -Arbitration -Identity "Migration.8f3e7716-2011-43e4-96b1-aba62d229136"
+    ```
 
 3.  In Exchange Management Shell, set the Persisted Capabilities (msExchCapabilityIdentifiers) by running the following command:
     
-        Set-Mailbox "Migration.8f3e7716-2011-43e4-96b1-aba62d229136" -Arbitration -Management:$True -Force
+    ```powershell
+    Set-Mailbox "Migration.8f3e7716-2011-43e4-96b1-aba62d229136" -Arbitration -Management:$True -Force
+    ```
 
 ## Re-create the Microsoft Exchange Discovery system mailbox
 
@@ -135,7 +149,9 @@ To re-create the arbitration mailbox SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29
 
 1.  Run the following command:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 ## Re-create the Microsoft Exchange organization mailbox for OABs
 
@@ -143,25 +159,35 @@ To re-create the arbitration mailbox SystemMailbox{bb558c35-97f1-4cb9-8ff7-d5374
 
 1.  If any arbitration mailboxes are missing, run the following command:
     
-        .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```powershell
+    .\Setup /preparead /IAcceptExchangeServerLicenseTerms
+    ```
 
 2.  In Exchange Management Shell, run the following:
     
-        Enable-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}"
+    ```powershell
+    Enable-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}"
+    ```
 
 3.  In Exchange Management Shell, set the Persisted Capabilities (msExchCapabilityIdentifiers) by running the following command:
     
+    ```powershell
         Get-Mailbox "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -Arbitration | Set-Mailbox -Arbitration -UMGrammar:$True -OABGen:$True -GMGen:$True -ClientExtensions:$True -MessageTracking:$True -PstProvider:$True -MaxSendSize 1GB -Force
+    ```
 
 When finished, if you run the command `$OABMBX = Get-Mailbox "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -Arbitration (Get-ADUser $OABMBX.SamAccountName -Properties *).msExchCapabilityIdentifiers` you will see that 46, 47, and 51 are missing. Run the following command to add all of the capabilities back:
 
+```powershell
     Set-ADUser $OABMBX.SamAccountName -Add @{"msExchCapabilityIdentifiers"="40","42","43","44","47","51","52","46"}
+```
 
 ## How do I know this worked?
 
 To verify that you have successfully re-created the arbitration mailbox, use the **Get-Mailbox** cmdlet with the *Arbitration* switch to retrieve system mailboxes.
 
-    Get-Mailbox -Arbitration | Format-Table Name, DisplayName
+```powershell
+Get-Mailbox -Arbitration | Format-Table Name, DisplayName
+```
 
 View the results of the command to verify that appropriate system mailbox, either by Name or Display Name from the above table, has been re-created.
 

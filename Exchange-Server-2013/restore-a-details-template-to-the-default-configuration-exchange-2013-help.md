@@ -49,7 +49,9 @@ To learn more about details templates, see [Details templates](details-templates
 
 This example restores the United States English contacts details template.
 
-    Restore-DetailsTemplate -Identity "en-US\Contact"
+```powershell
+Restore-DetailsTemplate -Identity "en-US\Contact"
+```
 
 For detailed syntax and parameter information, see [Restore-DetailsTemplate](https://technet.microsoft.com/en-us/library/bb125188\(v=exchg.150\)).
 
