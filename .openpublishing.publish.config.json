@@ -17,22 +17,6 @@
       "template_folder": "_themes"
     },
     {
-      "docset_name": "OfficeDocs-Exchange-MP-Health",
-      "build_source_folder": "exchange-2013-health-management-pack",
-      "build_output_subfolder": "exchange-2013-health-management-pack",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
       "docset_name": "OfficeITPro-Exchange-Articles-2013",
       "build_source_folder": "Exchange-Articles-2013",
       "build_output_subfolder": "Exchange-Articles-2013",
@@ -83,7 +67,7 @@
   ],
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
-   "branches_to_filter": [],
+  "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/OfficeDocs-Exchange-Test-pr",
   "git_repository_branch_open_to_public_contributors": "migration",
   "skip_source_output_uploading": false,
